@@ -4,12 +4,10 @@
    сайт пересоберёт витрину автоматически.
    ============================================================ */
 
-// ЗАМЕНИТЕ на свои контакты
 const CONTACTS = {
-  telegram: "https://t.me/your_nickname",
-  telegramLabel: "@your_nickname",
-  email: "you@example.com",
-  phone: "+7 (900) 000-00-00",
+  telegram: "https://t.me/AndyCorw",
+  telegramLabel: "@AndyCorw",
+  email: "k8rvin@yandex.ru",
 };
 
 // path — путь к папке лендинга относительно корня сайта

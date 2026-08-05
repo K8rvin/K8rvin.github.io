@@ -6,7 +6,7 @@
 document.getElementById("contact-telegram").href = CONTACTS.telegram;
 document.getElementById("contact-telegram-label").textContent = CONTACTS.telegramLabel;
 document.getElementById("contact-email").href = "mailto:" + CONTACTS.email;
-document.getElementById("contact-phone").textContent = CONTACTS.phone;
+document.getElementById("contact-email-label").textContent = CONTACTS.email;
 document.getElementById("year").textContent = new Date().getFullYear();
 
 // --- Рендер карточек работ ---
