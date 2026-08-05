@@ -8,6 +8,7 @@ const CONTACTS = {
   telegram: "https://t.me/AndyCorw",
   telegramLabel: "@AndyCorw",
   email: "k8rvin@yandex.ru",
+  phone: "+7 (909) 394-00-58",
 };
 
 // path — путь к папке лендинга относительно корня сайта

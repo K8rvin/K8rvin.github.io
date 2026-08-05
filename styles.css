@@ -380,6 +380,12 @@ body {
   color: var(--text-dim);
   font-size: 15px;
 }
+.contact-lines a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.contact-lines a:hover { color: var(--text); }
 
 /* --- Футер --- */
 .footer {
