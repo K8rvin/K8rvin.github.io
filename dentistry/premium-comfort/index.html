@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ART DENT — Премиальная стоматология в Волгограде | Искусство здоровой улыбки</title>
+  <meta name="description" content="Премиальная стоматология в Волгограде. Индивидуальный подход, безупречный результат. Профгигиена, лечение, протезирование, эстетическая реставрация.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Кастомный курсор -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- Плавающие декоративные элементы -->
+  <div class="decor-layer" aria-hidden="true">
+    <span class="decor decor-line-1" data-speed="0.15"></span>
+    <span class="decor decor-line-2" data-speed="0.3"></span>
+    <span class="decor decor-circle-1" data-speed="0.2"></span>
+    <span class="decor decor-circle-2" data-speed="0.4"></span>
+    <span class="decor decor-square-1" data-speed="0.25"></span>
+    <span class="decor decor-diamond-1" data-speed="0.35"></span>
+    <span class="decor decor-line-3" data-speed="0.1"></span>
+    <span class="decor decor-circle-3" data-speed="0.5"></span>
+  </div>
+
+  <!-- Шапка -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#hero" class="logo">
+        <span class="logo__mark">A</span>
+        <span class="logo__text">ART&nbsp;DENT<small>премиальная стоматология</small></span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#services" class="nav__link">Услуги</a>
+        <a href="#doctors" class="nav__link">Врачи</a>
+        <a href="#works" class="nav__link">Работы</a>
+        <a href="#reviews" class="nav__link">Отзывы</a>
+        <a href="#booking" class="nav__link">Запись</a>
+        <a href="#contacts" class="nav__link">Контакты</a>
+      </nav>
+      <div class="header__contacts">
+        <a href="tel:+78442255555" class="header__phone">+7 (8442) 25-55-55</a>
+        <a href="#booking" class="btn btn--outline btn--sm">Записаться</a>
+      </div>
+      <button class="burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" id="heroBg" aria-hidden="true">
+        <!-- Стилизованный «интерьер в тёплом свете»: слои градиентов + свечение -->
+        <div class="hero__glow hero__glow--1"></div>
+        <div class="hero__glow hero__glow--2"></div>
+        <div class="hero__light-beam"></div>
+        <svg class="hero__smile" viewBox="0 0 600 300" fill="none" aria-hidden="true">
+          <path d="M80 120 Q300 320 520 120" stroke="#C9A96E" stroke-width="2.5" stroke-linecap="round" opacity="0.55"/>
+          <path d="M140 118 Q300 260 460 118" stroke="#E8D5B7" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+          <circle cx="300" cy="60" r="3" fill="#C9A96E" opacity="0.6"/>
+          <circle cx="240" cy="70" r="2" fill="#E8D5B7" opacity="0.4"/>
+          <circle cx="365" cy="72" r="2" fill="#E8D5B7" opacity="0.4"/>
+        </svg>
+      </div>
+      <div class="container hero__content">
+        <p class="hero__eyebrow reveal">Волгоград · ул. Ерёменко, 25</p>
+        <h1 class="hero__title reveal">Искусство<br>здоровой улыбки</h1>
+        <p class="hero__subtitle reveal">
+          <span class="typewriter" id="typewriter" data-phrases="Премиальная стоматология в Волгограде.|Индивидуальный подход.|Безупречный результат.|Комфорт на каждом этапе."></span><span class="typewriter-caret"></span>
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#booking" class="btn btn--gold btn--glow">Записаться на консультацию</a>
+          <a href="#services" class="btn btn--ghost">Наши услуги</a>
+        </div>
+      </div>
+      <a href="#philosophy" class="hero__scroll" aria-label="Прокрутить вниз">
+        <span></span>
+      </a>
+    </section>
+
+    <div class="divider"><span></span></div>
+
+    <!-- ФИЛОСОФИЯ -->
+    <section class="philosophy section" id="philosophy">
+      <div class="container philosophy__grid">
+        <div class="philosophy__text reveal">
+          <p class="section__label">Философия клиники</p>
+          <blockquote class="quote">
+            <span class="quote__mark quote__mark--open">«</span>
+            <p>Мы не лечим зубы — мы заботимся о человеке. Каждая улыбка, которую мы создаём, — это история доверия, внимания к деталям и безупречного качества. Наш пациент должен чувствовать себя гостем, а не клиентом.</p>
+            <span class="quote__mark quote__mark--close">»</span>
+          </blockquote>
+          <div class="quote__author">
+            <span class="quote__name">Петрова Ирина Владимировна</span>
+            <span class="quote__role">главный врач, стоматолог-терапевт первой категории, стаж 19 лет</span>
+          </div>
+        </div>
+        <div class="philosophy__video reveal">
+          <!-- Плейсхолдер видео-интервью -->
+          <div class="video-card" id="videoCard" role="button" tabindex="0" aria-label="Смотреть видео-интервью с главным врачом">
+            <div class="video-card__bg">
+              <svg viewBox="0 0 200 240" class="video-card__portrait" aria-hidden="true">
+                <defs>
+                  <linearGradient id="vg1" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#1B3A5C"/><stop offset="1" stop-color="#0A1929"/>
+                  </linearGradient>
+                </defs>
+                <rect width="200" height="240" fill="url(#vg1)"/>
+                <circle cx="100" cy="86" r="38" fill="#E8D5B7" opacity="0.9"/>
+                <path d="M62 80 Q100 34 138 80 Q138 52 100 48 Q62 52 62 80Z" fill="#3A3A3A"/>
+                <path d="M40 240 Q40 160 100 160 Q160 160 160 240Z" fill="#F5F0EB" opacity="0.95"/>
+                <path d="M84 166 L100 190 L116 166 L100 160Z" fill="#C9A96E" opacity="0.8"/>
+              </svg>
+            </div>
+            <div class="video-card__overlay">
+              <button class="video-card__play" aria-label="Воспроизвести видео">
+                <svg viewBox="0 0 24 24" width="26" height="26"><path d="M8 5.5v13l11-6.5-11-6.5z" fill="currentColor"/></svg>
+              </button>
+              <div class="video-card__caption">
+                <strong>Видео-интервью с главным врачом</strong>
+                <span>Ирина Владимировна о философии клиники · 2 мин</span>
+              </div>
+            </div>
+            <div class="video-card__note" id="videoNote">Видео-интервью скоро появится здесь</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider divider--light"><span></span></div>
+
+    <!-- УСЛУГИ -->
+    <section class="services section section--light" id="services">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__label">Наши услуги</p>
+          <h2 class="section__title">Премиальная забота<br>о вашей улыбке</h2>
+        </div>
+        <div class="services__grid">
+          <article class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M24 6c-6 0-10 4-10 11 0 5 2 8 3 12l2.5 9c.5 2 1.5 3 2.5 3s1.8-1 2-3v-9c0-.6.4-1 1-1s1 .4 1 1v9c.2 2 1 3 2 3s2-1 2.5-3l2.5-9c1-4 3-7 3-12 0-7-4-11-10-11z"/>
+                <path d="M18 20c2 1.5 4 2 6 2s4-.5 6-2"/>
+              </svg>
+            </div>
+            <h3>Профгигиена</h3>
+            <p>Деликатная чистка Air Flow, ультразвук, полировка и реминерализация эмали. Ваша улыбка сияет уже после первого визита.</p>
+            <div class="service-card__price">от 6 500 ₽</div>
+            <a href="#booking" class="service-card__link" data-service="Профгигиена">Записаться
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M24 6c-6 0-10 4-10 11 0 5 2 8 3 12l2.5 9c.5 2 1.5 3 2.5 3s1.8-1 2-3v-9c0-.6.4-1 1-1s1 .4 1 1v9c.2 2 1 3 2 3s2-1 2.5-3l2.5-9c1-4 3-7 3-12 0-7-4-11-10-11z"/>
+                <path d="M30 14l-8 8M22 14l8 8"/>
+              </svg>
+            </div>
+            <h3>Лечение</h3>
+            <p>Лечение кариеса и каналов под микроскопом, без боли и стресса. Микроинвазивные технологии сохраняют максимум здоровых тканей.</p>
+            <div class="service-card__price">от 8 900 ₽</div>
+            <a href="#booking" class="service-card__link" data-service="Лечение">Записаться
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M24 8c-6 0-10 4-10 11 0 5 2 8 3 12l2.5 9c.5 2 1.5 3 2.5 3s1.8-1 2-3v-9c0-.6.4-1 1-1s1 .4 1 1v9c.2 2 1 3 2 3s2-1 2.5-3l2.5-9c1-4 3-7 3-12 0-7-4-11-10-11z"/>
+                <path d="M14 18h20" stroke-dasharray="2 3"/>
+                <path d="M17 26h14" stroke-dasharray="2 3"/>
+              </svg>
+            </div>
+            <h3>Протезирование</h3>
+            <p>Коронки из диоксида циркония и керамики E-max, имплантация премиум-систем. Цифровое моделирование результата до начала лечения.</p>
+            <div class="service-card__price">от 32 000 ₽</div>
+            <a href="#booking" class="service-card__link" data-service="Протезирование">Записаться
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M24 6l4 8 9 1-6.5 6 1.5 9-8-4.5L16 30l1.5-9L11 15l9-1 4-8z"/>
+                <path d="M36 34l3 3M40 30l3 3M32 38l3 3"/>
+              </svg>
+            </div>
+            <h3>Эстетическая реставрация</h3>
+            <p>Художественная реставрация, виниры, отбеливание. Ювелирная работа над формой, оттенком и гармонией вашей улыбки.</p>
+            <div class="service-card__price">от 14 500 ₽</div>
+            <a href="#booking" class="service-card__link" data-service="Эстетическая реставрация">Записаться
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"><span></span></div>
+
+    <!-- ВРАЧИ -->
+    <section class="doctors section" id="doctors">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__label">Команда</p>
+          <h2 class="section__title">Врачи, которым<br>доверяют улыбку</h2>
+        </div>
+        <div class="doctors__grid">
+          <article class="doctor-card reveal">
+            <div class="doctor-card__photo">
+              <svg viewBox="0 0 200 250" aria-hidden="true">
+                <defs><linearGradient id="dg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#173252"/><stop offset="1" stop-color="#0A1929"/></linearGradient></defs>
+                <rect width="200" height="250" fill="url(#dg1)"/>
+                <circle cx="150" cy="40" r="60" fill="#C9A96E" opacity="0.08"/>
+                <circle cx="100" cy="92" r="40" fill="#E8D5B7"/>
+                <path d="M60 86 Q100 38 140 86 Q142 50 100 46 Q58 50 60 86Z" fill="#2E2E2E"/>
+                <path d="M64 92 Q100 130 136 92 Q128 118 100 118 Q72 118 64 92Z" fill="#2E2E2E" opacity="0.85"/>
+                <path d="M38 250 Q38 168 100 168 Q162 168 162 250Z" fill="#F5F0EB"/>
+                <path d="M86 174 L100 198 L114 174 L100 168Z" fill="#C9A96E" opacity="0.75"/>
+              </svg>
+            </div>
+            <div class="doctor-card__info">
+              <h3 class="doctor-card__name">Петрова Ирина Владимировна</h3>
+              <p class="doctor-card__spec">Главный врач · стоматолог-терапевт</p>
+              <ul class="doctor-card__facts">
+                <li>Первая квалификационная категория</li>
+                <li>Стаж 19 лет</li>
+                <li>Эксперт эстетической реставрации</li>
+              </ul>
+              <a href="#booking" class="btn btn--outline btn--sm doctor-card__btn">Записаться к доктору</a>
+            </div>
+          </article>
+          <article class="doctor-card reveal">
+            <div class="doctor-card__photo">
+              <svg viewBox="0 0 200 250" aria-hidden="true">
+                <defs><linearGradient id="dg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1C3A5E"/><stop offset="1" stop-color="#0A1929"/></linearGradient></defs>
+                <rect width="200" height="250" fill="url(#dg2)"/>
+                <circle cx="45" cy="45" r="55" fill="#C9A96E" opacity="0.08"/>
+                <circle cx="100" cy="92" r="40" fill="#E8D5B7"/>
+                <path d="M60 84 Q100 40 140 84 Q140 48 100 46 Q60 48 60 84Z" fill="#4A4A4A"/>
+                <path d="M72 128 Q100 150 128 128 Q120 156 100 156 Q80 156 72 128Z" fill="#4A4A4A" opacity="0.5"/>
+                <path d="M38 250 Q38 168 100 168 Q162 168 162 250Z" fill="#F5F0EB"/>
+                <rect x="92" y="170" width="16" height="34" rx="4" fill="#C9A96E" opacity="0.75"/>
+              </svg>
+            </div>
+            <div class="doctor-card__info">
+              <h3 class="doctor-card__name">Соколов Андрей Михайлович</h3>
+              <p class="doctor-card__spec">Хирург-имплантолог · ортопед</p>
+              <ul class="doctor-card__facts">
+                <li>Высшая квалификационная категория</li>
+                <li>Стаж 16 лет</li>
+                <li>Более 3 000 установленных имплантатов</li>
+              </ul>
+              <a href="#booking" class="btn btn--outline btn--sm doctor-card__btn">Записаться к доктору</a>
+            </div>
+          </article>
+          <article class="doctor-card reveal">
+            <div class="doctor-card__photo">
+              <svg viewBox="0 0 200 250" aria-hidden="true">
+                <defs><linearGradient id="dg3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#152F4E"/><stop offset="1" stop-color="#0A1929"/></linearGradient></defs>
+                <rect width="200" height="250" fill="url(#dg3)"/>
+                <circle cx="160" cy="200" r="70" fill="#C9A96E" opacity="0.08"/>
+                <circle cx="100" cy="92" r="40" fill="#E8D5B7"/>
+                <path d="M58 90 Q100 34 142 90 Q144 52 100 46 Q56 52 58 90Z" fill="#3A3A3A"/>
+                <path d="M58 90 Q56 128 74 140 Q62 108 66 96Z" fill="#3A3A3A"/>
+                <path d="M142 90 Q144 128 126 140 Q138 108 134 96Z" fill="#3A3A3A"/>
+                <path d="M38 250 Q38 168 100 168 Q162 168 162 250Z" fill="#F5F0EB"/>
+                <circle cx="100" cy="186" r="5" fill="#C9A96E" opacity="0.85"/>
+              </svg>
+            </div>
+            <div class="doctor-card__info">
+              <h3 class="doctor-card__name">Миронова Елена Сергеевна</h3>
+              <p class="doctor-card__spec">Стоматолог-ортодонт</p>
+              <ul class="doctor-card__facts">
+                <li>Первая квалификационная категория</li>
+                <li>Стаж 12 лет</li>
+                <li>Сертифицированный специалист элайнеров</li>
+              </ul>
+              <a href="#booking" class="btn btn--outline btn--sm doctor-card__btn">Записаться к доктору</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ВАШ КОМФОРТ -->
+    <section class="comfort section section--dark-2">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__label">Ваш комфорт</p>
+          <h2 class="section__title">Каждая деталь —<br>для вашего спокойствия</h2>
+        </div>
+        <div class="comfort__grid">
+          <div class="comfort__item reveal">
+            <div class="comfort__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                <path d="M24 42s-16-9.5-16-21a9 9 0 0 1 16-5.6A9 9 0 0 1 40 21c0 11.5-16 21-16 21z"/>
+                <path d="M14 22h6l2-4 3 8 2-4h7"/>
+              </svg>
+            </div>
+            <h3>Без боли и стресса</h3>
+            <p>Бережный протокол лечения и заботливая поддержка на каждом этапе.</p>
+          </div>
+          <div class="comfort__item reveal">
+            <div class="comfort__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M30 6l12 12-6 2-12-12 6-2z"/>
+                <path d="M24 12L10 26l6 6 14-14"/>
+                <path d="M10 26l-4 12 12-4"/>
+                <path d="M36 30v8M32 34h8"/>
+              </svg>
+            </div>
+            <h3>Современная анестезия</h3>
+            <p>Компьютерная анестезия — точно, деликатно и совершенно незаметно.</p>
+          </div>
+          <div class="comfort__item reveal">
+            <div class="comfort__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 22L24 8l16 14"/>
+                <path d="M12 20v18h24V20"/>
+                <path d="M20 38V28h8v10"/>
+              </svg>
+            </div>
+            <h3>Уютная атмосфера</h3>
+            <p>Тёплый свет, аромат кофе, мягкие кресла и тишина приватных кабинетов.</p>
+          </div>
+          <div class="comfort__item reveal">
+            <div class="comfort__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="10" y="6" width="28" height="36" rx="3"/>
+                <path d="M17 15h14M17 22h14M17 29h9"/>
+                <path d="M18 38l4-4 3 3 6-7"/>
+              </svg>
+            </div>
+            <h3>Индивидуальный план</h3>
+            <p>План лечения составляется под вас: сроки, бюджет и приоритеты.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"><span></span></div>
+
+    <!-- ДО / ПОСЛЕ -->
+    <section class="works section" id="works">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__label">Галерея работ</p>
+          <h2 class="section__title">До / После</h2>
+        </div>
+        <div class="ba-slider reveal" id="baSlider">
+          <div class="ba-slider__track" id="baTrack">
+
+            <div class="ba-slide">
+              <div class="ba-compare" data-compare>
+                <div class="ba-compare__before">
+                  <svg viewBox="0 0 600 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                    <defs><radialGradient id="b1" cx="0.5" cy="0.45" r="0.8"><stop offset="0" stop-color="#23364d"/><stop offset="1" stop-color="#0A1929"/></radialGradient></defs>
+                    <rect width="600" height="360" fill="url(#b1)"/>
+                    <path d="M120 170 Q300 300 480 170 Q300 210 120 170Z" fill="#8a7f6a"/>
+                    <path d="M120 170 Q300 40 480 170 Q300 130 120 170Z" fill="#a3987f"/>
+                    <g fill="#d8d2c2">
+                      <rect x="170" y="150" width="40" height="55" rx="12" transform="rotate(-6 190 178)"/>
+                      <rect x="222" y="142" width="42" height="66" rx="12" transform="rotate(-3 243 175)"/>
+                      <rect x="278" y="140" width="42" height="68" rx="12"/>
+                      <rect x="334" y="142" width="42" height="64" rx="12" transform="rotate(3 355 174)"/>
+                      <rect x="388" y="150" width="40" height="54" rx="12" transform="rotate(7 408 177)"/>
+                    </g>
+                    <path d="M236 160 l14 10 M296 150 l10 14 M352 158 l-12 12" stroke="#8a7f6a" stroke-width="4" stroke-linecap="round"/>
+                    <text x="40" y="60" fill="#C9A96E" font-size="26" font-family="Playfair Display, serif" letter-spacing="4">ДО</text>
+                  </svg>
+                </div>
+                <div class="ba-compare__after">
+                  <svg viewBox="0 0 600 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                    <defs><radialGradient id="a1" cx="0.5" cy="0.45" r="0.8"><stop offset="0" stop-color="#2a4362"/><stop offset="1" stop-color="#0A1929"/></radialGradient></defs>
+                    <rect width="600" height="360" fill="url(#a1)"/>
+                    <path d="M120 170 Q300 300 480 170 Q300 210 120 170Z" fill="#b06a6a"/>
+                    <path d="M120 170 Q300 40 480 170 Q300 130 120 170Z" fill="#c97f7f"/>
+                    <g fill="#fdfcf8">
+                      <rect x="170" y="148" width="42" height="58" rx="12"/>
+                      <rect x="222" y="142" width="42" height="66" rx="12"/>
+                      <rect x="278" y="140" width="42" height="68" rx="12"/>
+                      <rect x="334" y="142" width="42" height="66" rx="12"/>
+                      <rect x="388" y="148" width="42" height="58" rx="12"/>
+                    </g>
+                    <path d="M250 155 l6 6 M310 152 l6 6 M370 156 l6 6" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+                    <text x="480" y="60" fill="#C9A96E" font-size="26" font-family="Playfair Display, serif" letter-spacing="4">ПОСЛЕ</text>
+                  </svg>
+                </div>
+                <div class="ba-compare__handle"><span></span></div>
+              </div>
+              <p class="ba-slide__caption">Эстетическая реставрация фронтальной группы · 4 визита</p>
+            </div>
+
+            <div class="ba-slide">
+              <div class="ba-compare" data-compare>
+                <div class="ba-compare__before">
+                  <svg viewBox="0 0 600 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                    <defs><radialGradient id="b2" cx="0.5" cy="0.45" r="0.8"><stop offset="0" stop-color="#22344c"/><stop offset="1" stop-color="#0A1929"/></radialGradient></defs>
+                    <rect width="600" height="360" fill="url(#b2)"/>
+                    <path d="M120 170 Q300 300 480 170 Q300 210 120 170Z" fill="#8a7f6a"/>
+                    <path d="M120 170 Q300 40 480 170 Q300 130 120 170Z" fill="#a3987f"/>
+                    <g fill="#cdc6b4">
+                      <rect x="170" y="150" width="40" height="54" rx="12"/>
+                      <rect x="222" y="144" width="42" height="62" rx="12"/>
+                      <rect x="278" y="142" width="42" height="64" rx="12"/>
+                    </g>
+                    <rect x="334" y="150" width="42" height="52" rx="12" fill="#7a7261"/>
+                    <path d="M340 158 l30 34 M370 158 l-30 34" stroke="#5c5546" stroke-width="4" stroke-linecap="round"/>
+                    <rect x="388" y="150" width="40" height="54" rx="12" fill="#cdc6b4"/>
+                    <text x="40" y="60" fill="#C9A96E" font-size="26" font-family="Playfair Display, serif" letter-spacing="4">ДО</text>
+                  </svg>
+                </div>
+                <div class="ba-compare__after">
+                  <svg viewBox="0 0 600 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                    <defs><radialGradient id="a2" cx="0.5" cy="0.45" r="0.8"><stop offset="0" stop-color="#2a4362"/><stop offset="1" stop-color="#0A1929"/></radialGradient></defs>
+                    <rect width="600" height="360" fill="url(#a2)"/>
+                    <path d="M120 170 Q300 300 480 170 Q300 210 120 170Z" fill="#b06a6a"/>
+                    <path d="M120 170 Q300 40 480 170 Q300 130 120 170Z" fill="#c97f7f"/>
+                    <g fill="#fdfcf8">
+                      <rect x="170" y="148" width="42" height="58" rx="12"/>
+                      <rect x="222" y="142" width="42" height="66" rx="12"/>
+                      <rect x="278" y="140" width="42" height="68" rx="12"/>
+                      <rect x="334" y="142" width="42" height="66" rx="12"/>
+                      <rect x="388" y="148" width="42" height="58" rx="12"/>
+                    </g>
+                    <text x="480" y="60" fill="#C9A96E" font-size="26" font-family="Playfair Display, serif" letter-spacing="4">ПОСЛЕ</text>
+                  </svg>
+                </div>
+                <div class="ba-compare__handle"><span></span></div>
+              </div>
+              <p class="ba-slide__caption">Коронка E-max на имплантате · безметалловая керамика</p>
+            </div>
+
+            <div class="ba-slide">
+              <div class="ba-compare" data-compare>
+                <div class="ba-compare__before">
+                  <svg viewBox="0 0 600 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                    <defs><radialGradient id="b3" cx="0.5" cy="0.45" r="0.8"><stop offset="0" stop-color="#23364d"/><stop offset="1" stop-color="#0A1929"/></radialGradient></defs>
+                    <rect width="600" height="360" fill="url(#b3)"/>
+                    <path d="M120 170 Q300 300 480 170 Q300 210 120 170Z" fill="#8a7f6a"/>
+                    <path d="M120 170 Q300 40 480 170 Q300 130 120 170Z" fill="#a3987f"/>
+                    <g fill="#cfc3a1">
+                      <rect x="176" y="150" width="36" height="52" rx="11" transform="rotate(-9 194 176)"/>
+                      <rect x="226" y="146" width="38" height="58" rx="11" transform="rotate(-5 245 175)"/>
+                      <rect x="280" y="142" width="40" height="62" rx="11"/>
+                      <rect x="336" y="146" width="38" height="58" rx="11" transform="rotate(5 355 175)"/>
+                      <rect x="388" y="150" width="36" height="52" rx="11" transform="rotate(9 406 176)"/>
+                    </g>
+                    <text x="40" y="60" fill="#C9A96E" font-size="26" font-family="Playfair Display, serif" letter-spacing="4">ДО</text>
+                  </svg>
+                </div>
+                <div class="ba-compare__after">
+                  <svg viewBox="0 0 600 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                    <defs><radialGradient id="a3" cx="0.5" cy="0.45" r="0.8"><stop offset="0" stop-color="#2a4362"/><stop offset="1" stop-color="#0A1929"/></radialGradient></defs>
+                    <rect width="600" height="360" fill="url(#a3)"/>
+                    <path d="M120 170 Q300 300 480 170 Q300 210 120 170Z" fill="#b06a6a"/>
+                    <path d="M120 170 Q300 40 480 170 Q300 130 120 170Z" fill="#c97f7f"/>
+                    <g fill="#fdfcf8">
+                      <rect x="170" y="148" width="42" height="58" rx="12"/>
+                      <rect x="222" y="142" width="42" height="66" rx="12"/>
+                      <rect x="278" y="140" width="42" height="68" rx="12"/>
+                      <rect x="334" y="142" width="42" height="66" rx="12"/>
+                      <rect x="388" y="148" width="42" height="58" rx="12"/>
+                    </g>
+                    <text x="480" y="60" fill="#C9A96E" font-size="26" font-family="Playfair Display, serif" letter-spacing="4">ПОСЛЕ</text>
+                  </svg>
+                </div>
+                <div class="ba-compare__handle"><span></span></div>
+              </div>
+              <p class="ba-slide__caption">Виниры на 10 зубов · идеальная геометрия улыбки</p>
+            </div>
+
+          </div>
+          <div class="ba-slider__controls">
+            <button class="ba-slider__btn" id="baPrev" aria-label="Предыдущая работа">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+            </button>
+            <div class="ba-slider__dots" id="baDots"></div>
+            <button class="ba-slider__btn" id="baNext" aria-label="Следующая работа">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+          <p class="ba-slider__hint">Потяните золотую линию, чтобы сравнить «до» и «после»</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider divider--light"><span></span></div>
+
+    <!-- ОТЗЫВЫ -->
+    <section class="reviews section section--light" id="reviews">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__label">Отзывы пациентов</p>
+          <h2 class="section__title">Истории, которые<br>нас вдохновляют</h2>
+        </div>
+        <div class="reviews__grid">
+          <figure class="review-card reveal">
+            <div class="review-card__stars" aria-label="Оценка 5 из 5">
+              <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8L12 2z" fill="#C9A96E"/></svg>
+              <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8L12 2z" fill="#C9A96E"/></svg>
+              <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8L12 2z" fill="#C9A96E"/></svg>
+              <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8L12 2z" fill="#C9A96E"/></svg>
+              <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8L12 2z" fill="#C9A96E"/></svg>
+            </div>
+            <blockquote>«Впервые вышла из стоматологии с ощущением, что побывала в спа. Виниры сделали идеально — на свадьбе дочери улыбалась без остановки».</blockquote>
+            <figcaption>
+              <span class="review-card__avatar" aria-hidden="true">МК</span>
+              <span><strong>Марина К.</strong><small>эстетическая реставрация</small></span>
+            </figcaption>
+          </figure>
+          <figure class="review-card reveal">
+            <div class="review-card__stars" aria-label="Оценка 5 из 5">
+              <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8L12 2z" fill="#C9A96E"/></svg>
+              <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8L12 2z" fill="#C9A96E"/></svg>
+              <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8L12 2z" fill="#C9A96E"/></svg>
+              <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8L12 2z" fill="#C9A96E"/></svg>
+              <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8L12 2z" fill="#C9A96E"/></svg>
+            </div>
+            <blockquote>«Боялся имплантации годами. Андрей Михайлович всё объяснил, показал 3D-план — и страх ушёл. Два имплантата, ни одной болезненной минуты».</blockquote>
+            <figcaption>
+              <span class="review-card__avatar" aria-hidden="true">ДВ</span>
+              <span><strong>Дмитрий В.</strong><small>имплантация</small></span>
+            </figcaption>
+          </figure>
+          <figure class="review-card reveal">
+            <div class="review-card__stars" aria-label="Оценка 5 из 5">
+              <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8L12 2z" fill="#C9A96E"/></svg>
+              <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8L12 2z" fill="#C9A96E"/></svg>
+              <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8L12 2z" fill="#C9A96E"/></svg>
+              <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8L12 2z" fill="#C9A96E"/></svg>
+              <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8L12 2z" fill="#C9A96E"/></svg>
+            </div>
+            <blockquote>«Сервис уровня хорошего отеля: напоминают о визите, встречают с кофе, никогда не задерживают приём. Лечимся всей семьёй третий год».</blockquote>
+            <figcaption>
+              <span class="review-card__avatar" aria-hidden="true">ОС</span>
+              <span><strong>Ольга С.</strong><small>семейное наблюдение</small></span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ГАРАНТИИ -->
+    <section class="guarantees section section--dark-2" id="guarantees">
+      <div class="container guarantees__grid">
+        <div class="guarantees__text reveal">
+          <p class="section__label">Гарантии</p>
+          <h2 class="section__title">Мы отвечаем<br>за результат</h2>
+          <ul class="guarantees__list">
+            <li>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+              <div><strong>Гарантия на лечение — до 3 лет</strong><span>на пломбы и терапевтические работы</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+              <div><strong>Гарантия на протезирование — до 5 лет</strong><span>на коронки, виниры и работу на имплантатах</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+              <div><strong>Только оригинальные материалы</strong><span>Швейцария, Германия, Япония — с сертификатами</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+              <div><strong>Фиксированная смета</strong><span>стоимость не меняется после подписания плана</span></div>
+            </li>
+          </ul>
+        </div>
+        <div class="guarantees__license reveal">
+          <!-- Стилизованная SVG-рамка лицензии -->
+          <div class="license-frame">
+            <svg viewBox="0 0 320 420" aria-hidden="true">
+              <defs>
+                <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C9A96E"/><stop offset="1" stop-color="#8f7440"/></linearGradient>
+              </defs>
+              <rect x="8" y="8" width="304" height="404" rx="6" fill="#F5F0EB"/>
+              <rect x="8" y="8" width="304" height="404" rx="6" fill="none" stroke="url(#lg1)" stroke-width="5"/>
+              <rect x="20" y="20" width="280" height="380" rx="3" fill="none" stroke="#C9A96E" stroke-width="1.5"/>
+              <text x="160" y="72" text-anchor="middle" font-family="Playfair Display, serif" font-size="26" fill="#2D2D2D" letter-spacing="3">ЛИЦЕНЗИЯ</text>
+              <text x="160" y="98" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="11" fill="#6b6b6b" letter-spacing="1.5">НА МЕДИЦИНСКУЮ ДЕЯТЕЛЬНОСТЬ</text>
+              <line x1="70" y1="116" x2="250" y2="116" stroke="#C9A96E" stroke-width="1.5"/>
+              <g stroke="#b9b2a6" stroke-width="3" stroke-linecap="round">
+                <line x1="60" y1="150" x2="260" y2="150"/>
+                <line x1="60" y1="172" x2="260" y2="172"/>
+                <line x1="60" y1="194" x2="220" y2="194"/>
+                <line x1="60" y1="230" x2="260" y2="230"/>
+                <line x1="60" y1="252" x2="240" y2="252"/>
+                <line x1="60" y1="274" x2="260" y2="274"/>
+              </g>
+              <circle cx="245" cy="340" r="34" fill="none" stroke="#C9A96E" stroke-width="2.5"/>
+              <circle cx="245" cy="340" r="24" fill="none" stroke="#C9A96E" stroke-width="1" stroke-dasharray="3 3"/>
+              <path d="M232 340l9 9 17-19" stroke="#C9A96E" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M56 352 Q76 332 92 350 Q106 366 122 348" stroke="#2D2D2D" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <text x="160" y="392" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="9" fill="#8a8a8a" letter-spacing="1">ЛО-34-01-003456 · выдана 12.03.2019</text>
+            </svg>
+          </div>
+          <p class="guarantees__note">Клиника работает по лицензии на медицинскую деятельность. Оригинал доступен в клинике по запросу.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"><span></span></div>
+
+    <!-- ДЛЯ ОСОБЫХ СЛУЧАЕВ -->
+    <section class="special section" id="special">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__label">Для особых случаев</p>
+          <h2 class="section__title">Улыбка к важному<br>событию</h2>
+          <p class="section__sub">Свадьба, юбилей, деловая встреча, фотосессия — подготовим вашу улыбку к событию точно в срок.</p>
+        </div>
+        <div class="special__grid">
+          <article class="special-card reveal">
+            <div class="special-card__num">01</div>
+            <h3>Виниры</h3>
+            <p>Ультратонкие керамические накладки E-max. Голливудская улыбка за 2–3 визита, с примеркой цифрового макета до старта.</p>
+          </article>
+          <article class="special-card reveal">
+            <div class="special-card__num">02</div>
+            <h3>Экспресс-реставрация</h3>
+            <p>Художественная коррекция формы и оттенка зубов за один визит — когда событие уже на следующей неделе.</p>
+          </article>
+          <article class="special-card reveal">
+            <div class="special-card__num">03</div>
+            <h3>Программа «К событию»</h3>
+            <p>Персональный тайминг: гигиена, отбеливание, реставрация — распланируем этапы так, чтобы к дате всё было безупречно.</p>
+            <a href="#booking" class="service-card__link" data-service="Программа «К событию»">Обсудить дату
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider divider--light"><span></span></div>
+
+    <!-- ФОРМА ЗАПИСИ -->
+    <section class="booking section section--dark-2" id="booking">
+      <div class="container booking__grid">
+        <div class="booking__intro reveal">
+          <p class="section__label">Запись на приём</p>
+          <h2 class="section__title">Начните<br>с консультации</h2>
+          <p class="booking__text">Оставьте заявку — администратор перезвонит в течение 15 минут в рабочее время и подберёт удобное время. Первая консультация включает осмотр и план лечения.</p>
+          <ul class="booking__perks">
+            <li>✓ Консультация и план лечения — 0 ₽</li>
+            <li>✓ Напоминание о визите за день</li>
+            <li>✓ Парковка у входа для пациентов</li>
+          </ul>
+        </div>
+        <form class="booking__form reveal" id="bookingForm" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="fName">Ваше имя</label>
+              <input type="text" id="fName" name="name" placeholder="Ирина" autocomplete="name">
+              <span class="form-error" data-error="name"></span>
+            </div>
+            <div class="form-field">
+              <label for="fPhone">Телефон</label>
+              <input type="tel" id="fPhone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel">
+              <span class="form-error" data-error="phone"></span>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="fService">Услуга</label>
+            <select id="fService" name="service">
+              <option value="Консультация">Консультация</option>
+              <option value="Профгигиена">Профгигиена</option>
+              <option value="Лечение">Лечение</option>
+              <option value="Протезирование">Протезирование</option>
+              <option value="Эстетическая реставрация">Эстетическая реставрация</option>
+              <option value="Программа «К событию»">Программа «К событию»</option>
+            </select>
+          </div>
+
+          <!-- Встроенный календарь -->
+          <div class="calendar" id="calendar">
+            <div class="calendar__head">
+              <button type="button" class="calendar__nav" id="calPrev" aria-label="Предыдущий месяц">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg>
+              </button>
+              <span class="calendar__title" id="calTitle"></span>
+              <button type="button" class="calendar__nav" id="calNext" aria-label="Следующий месяц">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+            <div class="calendar__weekdays">
+              <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span>
+            </div>
+            <div class="calendar__days" id="calDays"></div>
+            <div class="calendar__times" id="calTimes">
+              <p class="calendar__times-label">Выберите время</p>
+              <div class="calendar__slots" id="calSlots"></div>
+            </div>
+            <input type="hidden" id="fDate" name="date">
+            <input type="hidden" id="fTime" name="time">
+            <span class="form-error" data-error="datetime"></span>
+          </div>
+
+          <button type="submit" class="btn btn--gold btn--gradient btn--full">Записаться на приём</button>
+          <p class="form-note">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных</p>
+
+          <div class="form-success" id="formSuccess" hidden>
+            <svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12.5l2.5 2.5L16 9"/></svg>
+            <h3>Заявка отправлена</h3>
+            <p id="successText">Спасибо! Администратор свяжется с вами в течение 15 минут.</p>
+            <button type="button" class="btn btn--outline btn--sm" id="successReset">Записать ещё</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- КАРТА -->
+    <section class="map section" id="contacts">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__label">Как нас найти</p>
+          <h2 class="section__title">Волгоград,<br>ул. Ерёменко, 25</h2>
+        </div>
+        <div class="map__grid reveal">
+          <div class="map__canvas">
+            <!-- Стилизованная SVG-карта с маршрутом -->
+            <svg viewBox="0 0 640 420" class="map-svg" role="img" aria-label="Стилизованная карта: маршрут от проспекта Ленина до клиники на ул. Ерёменко, 25">
+              <defs>
+                <linearGradient id="mg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#122a44"/><stop offset="1" stop-color="#0A1929"/></linearGradient>
+              </defs>
+              <rect width="640" height="420" fill="url(#mg1)" rx="10"/>
+              <!-- кварталы -->
+              <g fill="#1a3450" opacity="0.8">
+                <rect x="40" y="40" width="130" height="90" rx="6"/>
+                <rect x="200" y="40" width="150" height="90" rx="6"/>
+                <rect x="380" y="40" width="110" height="90" rx="6"/>
+                <rect x="40" y="160" width="130" height="110" rx="6"/>
+                <rect x="380" y="160" width="110" height="110" rx="6"/>
+                <rect x="200" y="300" width="150" height="80" rx="6"/>
+                <rect x="40" y="300" width="130" height="80" rx="6"/>
+                <rect x="380" y="300" width="220" height="80" rx="6"/>
+                <rect x="520" y="40" width="80" height="230" rx="6"/>
+              </g>
+              <!-- река Волга -->
+              <path d="M640 300 Q560 330 520 420 L640 420Z" fill="#1d4d6e" opacity="0.7"/>
+              <text x="585" y="385" fill="#7fb2d4" font-size="14" font-family="Montserrat, sans-serif" letter-spacing="3" transform="rotate(-35 585 385)">ВОЛГА</text>
+              <!-- улицы -->
+              <g stroke="#2c4a6b" stroke-width="10" stroke-linecap="round">
+                <line x1="20" y1="145" x2="620" y2="145"/>
+                <line x1="185" y1="20" x2="185" y2="400"/>
+                <line x1="365" y1="20" x2="365" y2="400"/>
+                <line x1="20" y1="285" x2="620" y2="285"/>
+              </g>
+              <text x="430" y="138" fill="#8fa8c0" font-size="12" font-family="Montserrat, sans-serif" letter-spacing="2">ПР. ЛЕНИНА</text>
+              <text x="192" y="250" fill="#8fa8c0" font-size="12" font-family="Montserrat, sans-serif" letter-spacing="2" transform="rotate(-90 192 250)">УЛ. МИРА</text>
+              <text x="372" y="230" fill="#c9a96e" font-size="12" font-family="Montserrat, sans-serif" letter-spacing="2" transform="rotate(-90 372 230)">УЛ. ЕРЁМЕНКО</text>
+              <!-- маршрут -->
+              <path class="map-route" d="M70 90 L185 145 L185 285 L365 285 L365 205" fill="none" stroke="#C9A96E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 8"/>
+              <circle cx="70" cy="90" r="8" fill="none" stroke="#E8D5B7" stroke-width="3"/>
+              <text x="52" y="72" fill="#E8D5B7" font-size="12" font-family="Montserrat, sans-serif">Остановка</text>
+              <!-- метка клиники -->
+              <g class="map-pin">
+                <circle cx="365" cy="190" r="26" fill="#C9A96E" opacity="0.18">
+                  <animate attributeName="r" values="20;30;20" dur="2.4s" repeatCount="indefinite"/>
+                  <animate attributeName="opacity" values="0.3;0.05;0.3" dur="2.4s" repeatCount="indefinite"/>
+                </circle>
+                <path d="M365 168c-12 0-20 9-20 20 0 14 20 32 20 32s20-18 20-32c0-11-8-20-20-20z" fill="#C9A96E"/>
+                <circle cx="365" cy="188" r="7" fill="#0A1929"/>
+              </g>
+              <text x="365" y="245" text-anchor="middle" fill="#ffffff" font-size="14" font-family="Playfair Display, serif" letter-spacing="2">ART DENT</text>
+              <text x="365" y="265" text-anchor="middle" fill="#C9A96E" font-size="11" font-family="Montserrat, sans-serif" letter-spacing="1">ул. Ерёменко, 25</text>
+            </svg>
+          </div>
+          <div class="map__info">
+            <div class="map__info-item">
+              <strong>Адрес</strong>
+              <span>Волгоград, ул. Ерёменко, 25<br>ТЦ «Европа Сити Молл», 2 этаж</span>
+            </div>
+            <div class="map__info-item">
+              <strong>Часы работы</strong>
+              <span>Пн–Сб: 9:00 — 21:00<br>Вс: 10:00 — 18:00</span>
+            </div>
+            <div class="map__info-item">
+              <strong>Телефон</strong>
+              <a href="tel:+78442255555">+7 (8442) 25-55-55</a>
+            </div>
+            <div class="map__info-item">
+              <strong>E-mail</strong>
+              <a href="mailto:care@artdent-vlg.ru">care@artdent-vlg.ru</a>
+            </div>
+            <a href="#booking" class="btn btn--gold btn--sm">Построить визит</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ФУТЕР -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#hero" class="logo">
+          <span class="logo__mark">A</span>
+          <span class="logo__text">ART&nbsp;DENT<small>премиальная стоматология</small></span>
+        </a>
+        <p>Искусство здоровой улыбки.<br>Волгоград, ул. Ерёменко, 25</p>
+      </div>
+      <div class="footer__contacts">
+        <a href="tel:+78442255555" class="footer__phone">+7 (8442) 25-55-55</a>
+        <a href="mailto:care@artdent-vlg.ru">care@artdent-vlg.ru</a>
+        <span>Пн–Сб 9:00–21:00 · Вс 10:00–18:00</span>
+      </div>
+      <div class="footer__nav">
+        <a href="#services">Услуги</a>
+        <a href="#doctors">Врачи</a>
+        <a href="#guarantees">Гарантии</a>
+        <a href="#booking">Запись</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <span>© 2026 ART DENT. Лицензия ЛО-34-01-003456</span>
+        <span>Имеются противопоказания. Необходима консультация специалиста.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Плавающая кнопка записи -->
+  <a href="#booking" class="fab" id="fab" aria-label="Записаться на приём">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 11h18"/><path d="M9.5 16l2 2 3.5-4"/></svg>
+    <span>Записаться</span>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

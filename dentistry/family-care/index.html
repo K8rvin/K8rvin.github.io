@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Семейная улыбка — стоматология в Волгограде | Лечим зубы всей семьёй уже 29 лет</title>
+  <meta name="description" content="Семейная стоматология в Волгограде. Врачи с опытом от 14 лет, современная анестезия, гарантия на все работы. Запись на консультацию за 900 ₽.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%231D3557' d='M16 4c-3-2-7-2.5-9.5-.5C3.7 5.8 4 10 5.5 13.5 7 17 8 22 9 27c.3 1.4 2.3 1.5 2.7.1.9-3.4 1.4-7.1 4.3-7.1s3.4 3.7 4.3 7.1c.4 1.4 2.4 1.3 2.7-.1 1-5 2-10 3.5-13.5C28 10 28.3 5.8 25.5 3.5 23 1.5 19 2 16 4z'/%3E%3C/svg%3E">
+</head>
+<body>
+
+  <!-- ======================= ШАПКА ======================= -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="Семейная улыбка — на главную">
+        <svg class="logo__icon" viewBox="0 0 32 32" width="36" height="36" aria-hidden="true">
+          <path fill="#1D3557" d="M16 4c-3-2-7-2.5-9.5-.5C3.7 5.8 4 10 5.5 13.5 7 17 8 22 9 27c.3 1.4 2.3 1.5 2.7.1.9-3.4 1.4-7.1 4.3-7.1s3.4 3.7 4.3 7.1c.4 1.4 2.4 1.3 2.7-.1 1-5 2-10 3.5-13.5C28 10 28.3 5.8 25.5 3.5 23 1.5 19 2 16 4z"/>
+          <path fill="#A8DADC" d="M12.5 11.5c1 1.6 2.2 2.4 3.5 2.4s2.5-.8 3.5-2.4" stroke="#A8DADC" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+        </svg>
+        <span class="logo__text">Семейная <b>улыбка</b></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#services" class="nav__link">Услуги</a>
+        <a href="#doctors" class="nav__link">Врачи</a>
+        <a href="#works" class="nav__link">Работы</a>
+        <a href="#reviews" class="nav__link">Отзывы</a>
+        <a href="#faq" class="nav__link">Вопросы</a>
+        <a href="#contacts" class="nav__link">Контакты</a>
+      </nav>
+      <div class="header__contacts">
+        <a href="tel:+78442290029" class="header__phone">+7 (8442) 29-00-29</a>
+        <button class="btn btn--small" data-scroll-to="#booking">Записаться</button>
+      </div>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ======================= HERO ======================= -->
+  <section class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <div class="hero__content reveal">
+        <span class="hero__badge">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.3h4C15 6.1 16.4 5 18.4 5c3.4 0 5.3 3.6 3.7 6.7C19.5 16.4 12 21 12 21z" transform="scale(.9) translate(1.3 1.3)"/></svg>
+          Семейная стоматология в Волгограде
+        </span>
+        <h1 class="hero__title">Лечим зубы <span class="hero__title-accent">всей семьёй</span> уже 29 лет</h1>
+        <p class="hero__subtitle">Врачи с опытом от 14 лет. Современная анестезия. Гарантия на все работы.</p>
+        <div class="hero__actions">
+          <button class="btn btn--big" data-scroll-to="#booking">Записаться на консультацию за 900 ₽</button>
+          <a href="tel:+78442290029" class="hero__phone-link">или позвоните: +7 (8442) 29-00-29</a>
+        </div>
+        <ul class="hero__points">
+          <li><span class="check">✓</span> Приём в день обращения</li>
+          <li><span class="check">✓</span> Детский врач с 6 лет</li>
+          <li><span class="check">✓</span> Рассрочка 0%</li>
+        </ul>
+      </div>
+
+      <div class="hero__illustration reveal" aria-label="Иллюстрация: улыбающаяся семья в кабинете стоматолога" role="img">
+        <!-- Тёплая SVG-иллюстрация: семья в кабинете стоматолога -->
+        <svg viewBox="0 0 520 420" class="hero-svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="heroBg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#FFF7E8"/>
+              <stop offset="1" stop-color="#E4F4F3"/>
+            </linearGradient>
+            <linearGradient id="chairGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#A8DADC"/>
+              <stop offset="1" stop-color="#7FC4C7"/>
+            </linearGradient>
+            <linearGradient id="lampGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#FFE9B8"/>
+              <stop offset="1" stop-color="#FFD97A"/>
+            </linearGradient>
+          </defs>
+          <rect x="10" y="10" width="500" height="400" rx="36" fill="url(#heroBg)"/>
+          <!-- мягкие круги -->
+          <circle cx="70" cy="70" r="34" fill="#A8DADC" opacity=".35"/>
+          <circle cx="455" cy="80" r="22" fill="#F4A988" opacity=".35"/>
+          <circle cx="470" cy="340" r="40" fill="#A8DADC" opacity=".25"/>
+          <circle cx="60" cy="350" r="18" fill="#FFD97A" opacity=".45"/>
+          <!-- окно -->
+          <rect x="360" y="50" width="110" height="90" rx="14" fill="#fff" opacity=".85"/>
+          <path d="M415 50v90M360 95h110" stroke="#DCEBEA" stroke-width="5"/>
+          <circle cx="395" cy="75" r="12" fill="#FFE9B8"/>
+          <!-- лампа -->
+          <path d="M180 40 q40 40 20 92" stroke="#9AB3B8" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <ellipse cx="205" cy="140" rx="34" ry="16" fill="url(#lampGrad)" transform="rotate(-18 205 140)"/>
+          <path d="M190 158 q-16 26 -26 44" stroke="#FFF3D6" stroke-width="30" fill="none" stroke-linecap="round" opacity=".55"/>
+          <!-- кресло -->
+          <g>
+            <rect x="140" y="300" width="26" height="60" rx="10" fill="#8FB8BB"/>
+            <rect x="110" y="352" width="90" height="16" rx="8" fill="#7FA9AC"/>
+            <path d="M150 310 q-60 -8 -78 -70 q-6 -24 20 -26 l150 -8 q34 -2 30 30 l-6 40 q-4 30 -44 32 z" fill="url(#chairGrad)"/>
+            <rect x="66" y="196" width="70" height="34" rx="17" fill="#8FCACD" transform="rotate(-14 100 210)"/>
+          </g>
+          <!-- папа (стоит слева) -->
+          <g>
+            <circle cx="96" cy="140" r="26" fill="#F6C9A0"/>
+            <path d="M70 138 a26 26 0 0 1 52 -4 q-14 -12 -26 -10 q-16 2 -26 14z" fill="#5B4A3A"/>
+            <path d="M86 148 q10 10 20 0" stroke="#B25B41" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+            <circle cx="88" cy="138" r="2.6" fill="#3A2E24"/>
+            <circle cx="105" cy="138" r="2.6" fill="#3A2E24"/>
+            <path d="M64 260 q-6 -92 32 -96 q40 4 34 96 z" fill="#4E7FA8"/>
+            <path d="M74 176 q-22 22 -18 50" stroke="#F6C9A0" stroke-width="12" fill="none" stroke-linecap="round"/>
+          </g>
+          <!-- мама (справа у кресла) -->
+          <g>
+            <circle cx="350" cy="170" r="24" fill="#F6C9A0"/>
+            <path d="M326 176 q-4 -34 24 -34 q28 0 24 34 q-2 -16 -12 -20 q-4 10 -18 10 q-12 0 -18 10z" fill="#8A5A2E"/>
+            <path d="M340 178 q10 9 20 0" stroke="#B25B41" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+            <circle cx="342" cy="168" r="2.4" fill="#3A2E24"/>
+            <circle cx="358" cy="168" r="2.4" fill="#3A2E24"/>
+            <path d="M322 290 q-4 -84 28 -88 q34 4 30 88 z" fill="#E88D7B"/>
+            <path d="M330 216 q-20 16 -24 42" stroke="#F6C9A0" stroke-width="11" fill="none" stroke-linecap="round"/>
+          </g>
+          <!-- ребёнок в кресле -->
+          <g>
+            <path d="M160 280 q30 -26 84 -20 q30 4 26 30 l-4 18 q-50 10 -96 0 q-14 -14 -10 -28z" fill="#F1FAEE"/>
+            <circle cx="212" cy="232" r="21" fill="#FBD3AC"/>
+            <path d="M191 230 q2 -20 21 -20 q20 0 21 20 q-10 -10 -21 -8 q-12 2 -21 8z" fill="#C98B3F"/>
+            <path d="M203 238 q9 8 18 0" stroke="#B25B41" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <circle cx="205" cy="230" r="2.3" fill="#3A2E24"/>
+            <circle cx="220" cy="230" r="2.3" fill="#3A2E24"/>
+            <path d="M258 258 q16 -8 22 -24" stroke="#FBD3AC" stroke-width="10" fill="none" stroke-linecap="round"/>
+            <path d="M281 232 l6 -6" stroke="#FBD3AC" stroke-width="7" stroke-linecap="round"/>
+          </g>
+          <!-- врач -->
+          <g>
+            <circle cx="425" cy="240" r="22" fill="#F6C9A0"/>
+            <path d="M403 238 a22 22 0 0 1 44 -2 q-10 -10 -22 -9 q-14 1 -22 11z" fill="#37424E"/>
+            <path d="M416 246 q9 8 18 0" stroke="#B25B41" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <circle cx="417" cy="238" r="2.3" fill="#3A2E24"/>
+            <circle cx="432" cy="238" r="2.3" fill="#3A2E24"/>
+            <path d="M398 356 q-2 -86 27 -90 q30 4 28 90 z" fill="#fff"/>
+            <path d="M414 268 l11 16 l11 -16" stroke="#A8DADC" stroke-width="4" fill="none"/>
+            <path d="M404 288 q-18 10 -26 26" stroke="#fff" stroke-width="12" fill="none" stroke-linecap="round"/>
+          </g>
+          <!-- парящий зуб с улыбкой -->
+          <g class="hero-svg__tooth">
+            <path fill="#fff" stroke="#A8DADC" stroke-width="4" d="M295 90c-9-6-21-7.5-28.5-1.5-8.3 6.9-7.5 19.5-4.5 30 3 10.5 7.5 25.5 10.5 40.5.9 4.2 6.9 4.5 8.1.3 2.7-10.2 4.2-21.3 12.9-21.3s10.2 11.1 12.9 21.3c1.2 4.2 7.2 3.9 8.1-.3 3-15 7.5-30 10.5-40.5 3-10.5 3.8-23.1-4.5-30-7.5-6-19.5-4.5-25.5 1.5z" transform="translate(120 0) scale(.62)"/>
+            <path d="M196 66 q7 7 14 0" stroke="#1D3557" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <circle cx="198" cy="58" r="2.2" fill="#1D3557"/>
+            <circle cx="208" cy="58" r="2.2" fill="#1D3557"/>
+          </g>
+          <!-- сердечки -->
+          <path d="M150 90 c-6 -8 -18 -2 -14 7 c3 7 14 13 14 13 s11 -6 14 -13 c4 -9 -8 -15 -14 -7z" fill="#F4A988" opacity=".8"/>
+          <path d="M340 120 c-4 -6 -13 -1 -10 5 c2 5 10 9 10 9 s8 -4 10 -9 c3 -6 -6 -11 -10 -5z" fill="#A8DADC" opacity=".9"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= ПОЛОСА ДОВЕРИЯ ======================= -->
+  <section class="trust" aria-label="Наши преимущества в цифрах">
+    <div class="container trust__inner">
+      <div class="trust__item reveal"><span class="check">✓</span> <b>29 лет</b> опыта</div>
+      <div class="trust__item reveal"><span class="check">✓</span> <b>68+</b> отзывов на ПроДокторов</div>
+      <div class="trust__item reveal"><span class="check">✓</span> <b>Гарантия</b> на все работы</div>
+      <div class="trust__item reveal"><span class="check">✓</span> Семейная скидка <b>10%</b></div>
+    </div>
+  </section>
+
+  <!-- ======================= УСЛУГИ ======================= -->
+  <section class="section services" id="services">
+    <div class="container">
+      <h2 class="section__title reveal">Наши услуги</h2>
+      <p class="section__subtitle reveal">Всё, что нужно для здоровья вашей улыбки — в одной клинике</p>
+      <div class="services__grid">
+        <article class="service-card reveal" data-modal="modal-hygiene" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="service-card__icon service-card__icon--mint" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="44" height="44">
+              <rect x="20" y="6" width="8" height="26" rx="4" fill="#1D3557"/>
+              <rect x="21.5" y="2" width="5" height="8" rx="2.5" fill="#A8DADC"/>
+              <path d="M14 12 q-4 4 0 8 M34 12 q4 4 0 8" stroke="#A8DADC" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+              <rect x="17" y="32" width="14" height="10" rx="5" fill="#A8DADC"/>
+              <circle cx="24" cy="37" r="2.2" fill="#1D3557"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Профессиональная гигиена</h3>
+          <p class="service-card__text">Бережная чистка Air Flow, ультразвук и полировка. Улыбка свежее уже после первого визита.</p>
+          <div class="service-card__price">от 3 500 ₽</div>
+          <span class="service-card__more">Подробнее →</span>
+        </article>
+
+        <article class="service-card reveal" data-modal="modal-treatment" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="service-card__icon service-card__icon--peach" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="44" height="44">
+              <path fill="#1D3557" d="M24 6c-4.5-3-10.5-3.8-14.3-.8C5.6 8.7 6.4 15 8.6 20.2c2.3 5.3 3.8 12.8 5.3 20.3.5 2.1 3.5 2.3 4.1.2 1.4-5.1 2.1-10.7 6.5-10.7s5.1 5.6 6.5 10.7c.6 2.1 3.6 1.9 4.1-.2 1.5-7.5 3-15 5.3-20.3 2.2-5.2 3-11.5-1.1-15C34.5 2.2 28.5 3 24 6z"/>
+              <path d="M17 17 q7 7 14 0" stroke="#A8DADC" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+              <circle cx="18.5" cy="13.5" r="1.8" fill="#A8DADC"/>
+              <circle cx="29.5" cy="13.5" r="1.8" fill="#A8DADC"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Лечение зубов</h3>
+          <p class="service-card__text">Лечение кариеса и пульпита без боли — под микроскопом и с современной анестезией.</p>
+          <div class="service-card__price">от 4 200 ₽</div>
+          <span class="service-card__more">Подробнее →</span>
+        </article>
+
+        <article class="service-card reveal" data-modal="modal-prosthetics" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="service-card__icon service-card__icon--gold" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="44" height="44">
+              <path fill="#1D3557" d="M10 14 l7 8 l7 -12 l7 12 l7 -8 l-3 20 q-1 6 -7 6 h-8 q-6 0 -7 -6 z"/>
+              <circle cx="10" cy="12" r="3" fill="#A8DADC"/>
+              <circle cx="24" cy="8" r="3" fill="#A8DADC"/>
+              <circle cx="38" cy="12" r="3" fill="#A8DADC"/>
+              <path d="M17 30 h14" stroke="#A8DADC" stroke-width="2.6" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Протезирование</h3>
+          <p class="service-card__text">Коронки, виниры и съёмные протезы. Вернём возможность улыбаться и есть с удовольствием.</p>
+          <div class="service-card__price">от 12 000 ₽</div>
+          <span class="service-card__more">Подробнее →</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= ВРАЧИ ======================= -->
+  <section class="section doctors" id="doctors">
+    <div class="container">
+      <h2 class="section__title reveal">Врачи, которым доверяют семьи</h2>
+      <p class="section__subtitle reveal">Мы сами лечим здесь своих детей и родителей</p>
+      <div class="doctors__grid">
+
+        <article class="doctor-card reveal">
+          <div class="doctor-card__photo doctor-card__photo--mint" role="img" aria-label="Иллюстрация: Елена Сергеевна за работой">
+            <svg viewBox="0 0 200 200" aria-hidden="true">
+              <rect width="200" height="200" rx="24" fill="#E9F7F5"/>
+              <circle cx="170" cy="40" r="26" fill="#A8DADC" opacity=".4"/>
+              <circle cx="30" cy="170" r="20" fill="#FFD97A" opacity=".4"/>
+              <circle cx="100" cy="78" r="38" fill="#F6C9A0"/>
+              <path d="M62 84 q-6 -46 38 -46 q44 0 38 46 q-4 -20 -18 -26 q-6 12 -22 12 q-22 0 -36 14z" fill="#8A5A2E"/>
+              <path d="M86 88 q14 12 28 0" stroke="#B25B41" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <circle cx="86" cy="76" r="3.4" fill="#3A2E24"/>
+              <circle cx="114" cy="76" r="3.4" fill="#3A2E24"/>
+              <path d="M52 200 q0 -70 48 -72 q48 2 48 72z" fill="#fff"/>
+              <path d="M84 132 l16 22 l16 -22" stroke="#A8DADC" stroke-width="5" fill="none"/>
+              <path d="M120 150 q16 8 22 22" stroke="#fff" stroke-width="14" fill="none" stroke-linecap="round"/>
+              <path d="M142 170 l10 -6" stroke="#9AB3B8" stroke-width="5" stroke-linecap="round"/>
+              <rect x="146" y="158" width="8" height="18" rx="4" fill="#1D3557" transform="rotate(30 150 167)"/>
+            </svg>
+          </div>
+          <h3 class="doctor-card__name">Елена Сергеевна Ковалёва</h3>
+          <p class="doctor-card__spec">Стоматолог-терапевт, к.м.н.</p>
+          <p class="doctor-card__exp">Стаж 24 года · принимает взрослых и детей</p>
+          <button class="btn btn--outline doctor-card__btn" data-doctor="Елена Сергеевна Ковалёва">Записаться к этому врачу</button>
+        </article>
+
+        <article class="doctor-card reveal">
+          <div class="doctor-card__photo doctor-card__photo--peach" role="img" aria-label="Иллюстрация: Андрей Викторович улыбается">
+            <svg viewBox="0 0 200 200" aria-hidden="true">
+              <rect width="200" height="200" rx="24" fill="#FDF1E7"/>
+              <circle cx="35" cy="42" r="24" fill="#F4A988" opacity=".35"/>
+              <circle cx="172" cy="168" r="22" fill="#A8DADC" opacity=".4"/>
+              <circle cx="100" cy="78" r="38" fill="#F6C9A0"/>
+              <path d="M63 72 a37 37 0 0 1 74 0 q-16 -16 -37 -14 q-24 2 -37 14z" fill="#4A3B2E"/>
+              <path d="M84 90 q16 14 32 0" stroke="#B25B41" stroke-width="4.4" fill="none" stroke-linecap="round"/>
+              <circle cx="85" cy="76" r="3.4" fill="#3A2E24"/>
+              <circle cx="115" cy="76" r="3.4" fill="#3A2E24"/>
+              <path d="M52 200 q0 -70 48 -72 q48 2 48 72z" fill="#fff"/>
+              <path d="M84 132 l16 22 l16 -22" stroke="#F4A988" stroke-width="5" fill="none"/>
+              <path d="M62 150 q-14 12 -16 26" stroke="#fff" stroke-width="14" fill="none" stroke-linecap="round"/>
+              <path d="M48 178 l14 10" stroke="#F6C9A0" stroke-width="9" stroke-linecap="round"/>
+              <path d="M60 186 l6 -6" stroke="#F6C9A0" stroke-width="6" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="doctor-card__name">Андрей Викторович Савельев</h3>
+          <p class="doctor-card__spec">Стоматолог-ортопед</p>
+          <p class="doctor-card__exp">Стаж 17 лет · коронки, виниры, протезы</p>
+          <button class="btn btn--outline doctor-card__btn" data-doctor="Андрей Викторович Савельев">Записаться к этому врачу</button>
+        </article>
+
+        <article class="doctor-card reveal">
+          <div class="doctor-card__photo doctor-card__photo--gold" role="img" aria-label="Иллюстрация: Марина Александровна с ребёнком">
+            <svg viewBox="0 0 200 200" aria-hidden="true">
+              <rect width="200" height="200" rx="24" fill="#FFF8E8"/>
+              <circle cx="168" cy="46" r="24" fill="#FFD97A" opacity=".45"/>
+              <circle cx="28" cy="160" r="22" fill="#A8DADC" opacity=".4"/>
+              <circle cx="106" cy="72" r="36" fill="#FBD3AC"/>
+              <path d="M70 78 q-6 -42 36 -42 q42 0 36 42 q-2 -18 -16 -24 q-4 10 -20 10 q-20 0 -36 14z" fill="#37424E"/>
+              <path d="M94 82 q12 11 24 0" stroke="#B25B41" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <circle cx="94" cy="70" r="3.2" fill="#3A2E24"/>
+              <circle cx="118" cy="70" r="3.2" fill="#3A2E24"/>
+              <path d="M60 200 q0 -66 46 -68 q46 2 46 68z" fill="#fff"/>
+              <path d="M92 128 l14 20 l14 -20" stroke="#FFD97A" stroke-width="5" fill="none"/>
+              <circle cx="52" cy="140" r="18" fill="#FBD3AC"/>
+              <path d="M36 138 a18 18 0 0 1 32 -4 q-8 -7 -16 -6 q-10 1 -16 10z" fill="#C98B3F"/>
+              <path d="M46 144 q6 6 12 0" stroke="#B25B41" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+              <path d="M70 154 q10 -6 16 -2" stroke="#fff" stroke-width="11" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="doctor-card__name">Марина Александровна Громова</h3>
+          <p class="doctor-card__spec">Детский стоматолог</p>
+          <p class="doctor-card__exp">Стаж 14 лет · лечение без слёз и страха</p>
+          <button class="btn btn--outline doctor-card__btn" data-doctor="Марина Александровна Громова">Записаться к этому врачу</button>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= ПОЧЕМУ МЫ ======================= -->
+  <section class="section why" id="why">
+    <div class="container">
+      <h2 class="section__title reveal">Почему нас выбирают</h2>
+      <div class="why__grid">
+        <div class="why__item reveal">
+          <div class="why__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="40" height="40">
+              <circle cx="24" cy="24" r="20" fill="#A8DADC" opacity=".35"/>
+              <path d="M24 10 q10 0 10 9 q0 8 -6 12 l-1.5 5 q-.5 2 -2.5 2 t-2.5 -2 L20 31 q-6 -4 -6 -12 q0 -9 10 -9z" fill="#1D3557"/>
+              <path d="M18 21 q6 5 12 0" stroke="#A8DADC" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+              <path d="M14 8 l4 4 M34 8 l-4 4" stroke="#A8DADC" stroke-width="2.6" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Без боли</h3>
+          <p>Компьютерная анестезия — вы почувствуете только лёгкое прикосновение</p>
+        </div>
+        <div class="why__item reveal">
+          <div class="why__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="40" height="40">
+              <circle cx="24" cy="24" r="20" fill="#F4A988" opacity=".3"/>
+              <rect x="10" y="14" width="28" height="22" rx="5" fill="#1D3557"/>
+              <circle cx="24" cy="25" r="6" fill="#A8DADC"/>
+              <path d="M24 21 v8 M21.5 23 q2.5 -2.5 5 0 M21.5 27 q2.5 2.5 5 0" stroke="#1D3557" stroke-width="1.6" fill="none"/>
+              <path d="M13 19 h4 M31 31 h4" stroke="#F1FAEE" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Честные цены</h3>
+          <p>Смета до начала лечения. Никаких «а вот это ещё дополнительно»</p>
+        </div>
+        <div class="why__item reveal">
+          <div class="why__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="40" height="40">
+              <circle cx="24" cy="24" r="20" fill="#FFD97A" opacity=".35"/>
+              <circle cx="17" cy="17" r="6" fill="#1D3557"/>
+              <circle cx="31" cy="17" r="6" fill="#1D3557"/>
+              <path d="M9 38 q0 -11 8 -11 q6 0 7 5 q1 -5 7 -5 q8 0 8 11z" fill="#1D3557"/>
+              <path d="M20 31 q4 4 8 0" stroke="#A8DADC" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Семейные скидки</h3>
+          <p>Двое на одно время — минус 10% каждому. Лечиться вместе выгодно</p>
+        </div>
+        <div class="why__item reveal">
+          <div class="why__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="40" height="40">
+              <circle cx="24" cy="24" r="20" fill="#A8DADC" opacity=".35"/>
+              <path d="M24 8 l12 5 v10 q0 10 -12 17 q-12 -7 -12 -17 v-10 z" fill="#1D3557"/>
+              <path d="M18 24 l4 4 l8 -8" stroke="#A8DADC" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Современные материалы</h3>
+          <p>Пломбы и коронки европейских брендов с гарантией от клиники</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= ДО / ПОСЛЕ ======================= -->
+  <section class="section works" id="works">
+    <div class="container">
+      <h2 class="section__title reveal">Работы наших врачей</h2>
+      <p class="section__subtitle reveal">До и после — листайте и смотрите сами</p>
+    </div>
+    <div class="works__slider reveal" id="worksSlider">
+      <button class="slider-arrow slider-arrow--prev" id="worksPrev" aria-label="Предыдущая работа">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M15 5 l-7 7 l7 7" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="works__viewport">
+        <div class="works__track" id="worksTrack">
+
+          <!-- шаблон карточки: пара до/после -->
+          <figure class="work-card">
+            <div class="work-card__pair">
+              <div class="work-card__half">
+                <svg viewBox="0 0 120 110" aria-hidden="true">
+                  <rect width="120" height="110" rx="14" fill="#FDF6E3"/>
+                  <path d="M60 18c-11-7-26-9-35-2-10 8-9 24-5 37 4 13 9 31 13 49 1 5 8 5 10 0 3-12 5-26 16-26s13 14 16 26c2 5 9 5 10 0 4-18 9-36 13-49 4-13 5-29-5-37-9-7-24-5-33 2z" fill="#E8D9A0" transform="translate(0 -6) scale(.9) translate(6 4)"/>
+                  <path d="M48 34 l8 8 M62 30 l-6 10 M70 38 l8 6" stroke="#B9A35E" stroke-width="2.4" stroke-linecap="round"/>
+                  <ellipse cx="42" cy="52" rx="5" ry="7" fill="#C9B476"/>
+                </svg>
+                <figcaption>До</figcaption>
+              </div>
+              <div class="work-card__half">
+                <svg viewBox="0 0 120 110" aria-hidden="true">
+                  <rect width="120" height="110" rx="14" fill="#E9F7F5"/>
+                  <path d="M60 18c-11-7-26-9-35-2-10 8-9 24-5 37 4 13 9 31 13 49 1 5 8 5 10 0 3-12 5-26 16-26s13 14 16 26c2 5 9 5 10 0 4-18 9-36 13-49 4-13 5-29-5-37-9-7-24-5-33 2z" fill="#FFFFFF" stroke="#A8DADC" stroke-width="2" transform="translate(0 -6) scale(.9) translate(6 4)"/>
+                  <path d="M84 22 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2z" fill="#FFD97A"/>
+                  <path d="M34 26 l1.6 4 4 1.6 -4 1.6 -1.6 4 -1.6 -4 -4 -1.6 4 -1.6z" fill="#A8DADC"/>
+                </svg>
+                <figcaption>После</figcaption>
+              </div>
+            </div>
+            <figcaption class="work-card__caption">Реставрация передних зубов</figcaption>
+          </figure>
+
+          <figure class="work-card">
+            <div class="work-card__pair">
+              <div class="work-card__half">
+                <svg viewBox="0 0 120 110" aria-hidden="true">
+                  <rect width="120" height="110" rx="14" fill="#FDF6E3"/>
+                  <path d="M60 18c-11-7-26-9-35-2-10 8-9 24-5 37 4 13 9 31 13 49 1 5 8 5 10 0 3-12 5-26 16-26s13 14 16 26c2 5 9 5 10 0 4-18 9-36 13-49 4-13 5-29-5-37-9-7-24-5-33 2z" fill="#E3D3A8" transform="translate(0 -6) scale(.9) translate(6 4)"/>
+                  <path d="M40 30 q20 -8 40 0" stroke="#A08C4F" stroke-width="3" fill="none"/>
+                  <path d="M46 30 l-4 12 M74 30 l4 12" stroke="#A08C4F" stroke-width="2.4" stroke-linecap="round"/>
+                </svg>
+                <figcaption>До</figcaption>
+              </div>
+              <div class="work-card__half">
+                <svg viewBox="0 0 120 110" aria-hidden="true">
+                  <rect width="120" height="110" rx="14" fill="#E9F7F5"/>
+                  <path d="M60 18c-11-7-26-9-35-2-10 8-9 24-5 37 4 13 9 31 13 49 1 5 8 5 10 0 3-12 5-26 16-26s13 14 16 26c2 5 9 5 10 0 4-18 9-36 13-49 4-13 5-29-5-37-9-7-24-5-33 2z" fill="#fff" stroke="#A8DADC" stroke-width="2" transform="translate(0 -6) scale(.9) translate(6 4)"/>
+                  <path d="M40 32 q20 10 40 0" stroke="#DCEBEA" stroke-width="2.6" fill="none"/>
+                  <path d="M88 26 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2z" fill="#FFD97A"/>
+                </svg>
+                <figcaption>После</figcaption>
+              </div>
+            </div>
+            <figcaption class="work-card__caption">Керамические коронки E-max</figcaption>
+          </figure>
+
+          <figure class="work-card">
+            <div class="work-card__pair">
+              <div class="work-card__half">
+                <svg viewBox="0 0 120 110" aria-hidden="true">
+                  <rect width="120" height="110" rx="14" fill="#FDF6E3"/>
+                  <g fill="#E8D9A0">
+                    <rect x="22" y="30" width="16" height="34" rx="8"/>
+                    <rect x="52" y="30" width="16" height="34" rx="8"/>
+                    <rect x="82" y="30" width="16" height="34" rx="8"/>
+                  </g>
+                  <path d="M18 74 q42 14 84 0" stroke="#B9A35E" stroke-width="3" fill="none"/>
+                  <rect x="36" y="34" width="18" height="14" rx="6" fill="#FDF6E3"/>
+                </svg>
+                <figcaption>До</figcaption>
+              </div>
+              <div class="work-card__half">
+                <svg viewBox="0 0 120 110" aria-hidden="true">
+                  <rect width="120" height="110" rx="14" fill="#E9F7F5"/>
+                  <g fill="#fff" stroke="#A8DADC" stroke-width="2">
+                    <rect x="18" y="28" width="18" height="38" rx="9"/>
+                    <rect x="38" y="28" width="18" height="38" rx="9"/>
+                    <rect x="58" y="28" width="18" height="38" rx="9"/>
+                    <rect x="78" y="28" width="18" height="38" rx="9"/>
+                  </g>
+                  <path d="M84 70 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2z" fill="#FFD97A"/>
+                </svg>
+                <figcaption>После</figcaption>
+              </div>
+            </div>
+            <figcaption class="work-card__caption">Виниры — новая улыбка за 2 визита</figcaption>
+          </figure>
+
+          <figure class="work-card">
+            <div class="work-card__pair">
+              <div class="work-card__half">
+                <svg viewBox="0 0 120 110" aria-hidden="true">
+                  <rect width="120" height="110" rx="14" fill="#FDF6E3"/>
+                  <path d="M60 18c-11-7-26-9-35-2-10 8-9 24-5 37 4 13 9 31 13 49 1 5 8 5 10 0 3-12 5-26 16-26s13 14 16 26c2 5 9 5 10 0 4-18 9-36 13-49 4-13 5-29-5-37-9-7-24-5-33 2z" fill="#D9C691" transform="translate(0 -6) scale(.9) translate(6 4)"/>
+                  <circle cx="60" cy="40" r="10" fill="#8F7A3F"/>
+                  <path d="M52 52 l-8 10 M68 52 l8 10" stroke="#A08C4F" stroke-width="2.4" stroke-linecap="round"/>
+                </svg>
+                <figcaption>До</figcaption>
+              </div>
+              <div class="work-card__half">
+                <svg viewBox="0 0 120 110" aria-hidden="true">
+                  <rect width="120" height="110" rx="14" fill="#E9F7F5"/>
+                  <path d="M60 18c-11-7-26-9-35-2-10 8-9 24-5 37 4 13 9 31 13 49 1 5 8 5 10 0 3-12 5-26 16-26s13 14 16 26c2 5 9 5 10 0 4-18 9-36 13-49 4-13 5-29-5-37-9-7-24-5-33 2z" fill="#fff" stroke="#A8DADC" stroke-width="2" transform="translate(0 -6) scale(.9) translate(6 4)"/>
+                  <ellipse cx="60" cy="42" rx="9" ry="7" fill="#F1FAEE"/>
+                  <path d="M86 24 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2z" fill="#FFD97A"/>
+                </svg>
+                <figcaption>После</figcaption>
+              </div>
+            </div>
+            <figcaption class="work-card__caption">Лечение глубокого кариеса</figcaption>
+          </figure>
+
+          <figure class="work-card">
+            <div class="work-card__pair">
+              <div class="work-card__half">
+                <svg viewBox="0 0 120 110" aria-hidden="true">
+                  <rect width="120" height="110" rx="14" fill="#FDF6E3"/>
+                  <g fill="#E3D3A8">
+                    <rect x="20" y="34" width="15" height="30" rx="7" transform="rotate(-8 27 49)"/>
+                    <rect x="42" y="30" width="15" height="34" rx="7" transform="rotate(6 49 47)"/>
+                    <rect x="64" y="32" width="15" height="32" rx="7" transform="rotate(-5 71 48)"/>
+                    <rect x="86" y="34" width="15" height="30" rx="7" transform="rotate(9 93 49)"/>
+                  </g>
+                </svg>
+                <figcaption>До</figcaption>
+              </div>
+              <div class="work-card__half">
+                <svg viewBox="0 0 120 110" aria-hidden="true">
+                  <rect width="120" height="110" rx="14" fill="#E9F7F5"/>
+                  <g fill="#fff" stroke="#A8DADC" stroke-width="2">
+                    <rect x="20" y="30" width="16" height="36" rx="8"/>
+                    <rect x="40" y="30" width="16" height="36" rx="8"/>
+                    <rect x="60" y="30" width="16" height="36" rx="8"/>
+                    <rect x="80" y="30" width="16" height="36" rx="8"/>
+                  </g>
+                  <path d="M18 30 q42 -10 84 0" stroke="#7FC4C7" stroke-width="2" fill="none" opacity=".6"/>
+                  <path d="M88 66 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2z" fill="#FFD97A"/>
+                </svg>
+                <figcaption>После</figcaption>
+              </div>
+            </div>
+            <figcaption class="work-card__caption">Элайнеры: ровные зубы за 8 месяцев</figcaption>
+          </figure>
+
+          <figure class="work-card">
+            <div class="work-card__pair">
+              <div class="work-card__half">
+                <svg viewBox="0 0 120 110" aria-hidden="true">
+                  <rect width="120" height="110" rx="14" fill="#FDF6E3"/>
+                  <path d="M60 18c-11-7-26-9-35-2-10 8-9 24-5 37 4 13 9 31 13 49 1 5 8 5 10 0 3-12 5-26 16-26s13 14 16 26c2 5 9 5 10 0 4-18 9-36 13-49 4-13 5-29-5-37-9-7-24-5-33 2z" fill="#CDB87F" transform="translate(0 -6) scale(.9) translate(6 4)"/>
+                  <path d="M30 34 q30 -12 60 0 M32 46 q28 -10 56 0" stroke="#8F7A3F" stroke-width="2.6" fill="none"/>
+                </svg>
+                <figcaption>До</figcaption>
+              </div>
+              <div class="work-card__half">
+                <svg viewBox="0 0 120 110" aria-hidden="true">
+                  <rect width="120" height="110" rx="14" fill="#E9F7F5"/>
+                  <path d="M60 18c-11-7-26-9-35-2-10 8-9 24-5 37 4 13 9 31 13 49 1 5 8 5 10 0 3-12 5-26 16-26s13 14 16 26c2 5 9 5 10 0 4-18 9-36 13-49 4-13 5-29-5-37-9-7-24-5-33 2z" fill="#fff" stroke="#A8DADC" stroke-width="2" transform="translate(0 -6) scale(.9) translate(6 4)"/>
+                  <path d="M40 40 q20 8 40 0" stroke="#F1FAEE" stroke-width="4" fill="none"/>
+                  <path d="M30 22 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2z" fill="#A8DADC"/>
+                  <path d="M88 30 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2z" fill="#FFD97A"/>
+                </svg>
+                <figcaption>После</figcaption>
+              </div>
+            </div>
+            <figcaption class="work-card__caption">Профгигиена + отбеливание</figcaption>
+          </figure>
+
+        </div>
+      </div>
+      <button class="slider-arrow slider-arrow--next" id="worksNext" aria-label="Следующая работа">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M9 5 l7 7 l-7 7" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+    <div class="slider-dots" id="worksDots" role="tablist" aria-label="Навигация по работам"></div>
+  </section>
+
+  <!-- ======================= ОТЗЫВЫ ======================= -->
+  <section class="section reviews" id="reviews">
+    <div class="container">
+      <h2 class="section__title reveal">Отзывы пациентов</h2>
+      <div class="reviews__rating reveal">
+        <span class="reviews__stars" aria-label="Рейтинг 5 из 5">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path fill="#F4B942" d="M12 2 l3 6.6 7 .8 -5.2 4.8 1.4 7 -6.2 -3.6 -6.2 3.6 1.4 -7 L2 9.4 l7 -.8z"/></svg>
+          <svg viewBox="0 0 24 24" width="26" height="26"><path fill="#F4B942" d="M12 2 l3 6.6 7 .8 -5.2 4.8 1.4 7 -6.2 -3.6 -6.2 3.6 1.4 -7 L2 9.4 l7 -.8z"/></svg>
+          <svg viewBox="0 0 24 24" width="26" height="26"><path fill="#F4B942" d="M12 2 l3 6.6 7 .8 -5.2 4.8 1.4 7 -6.2 -3.6 -6.2 3.6 1.4 -7 L2 9.4 l7 -.8z"/></svg>
+          <svg viewBox="0 0 24 24" width="26" height="26"><path fill="#F4B942" d="M12 2 l3 6.6 7 .8 -5.2 4.8 1.4 7 -6.2 -3.6 -6.2 3.6 1.4 -7 L2 9.4 l7 -.8z"/></svg>
+          <svg viewBox="0 0 24 24" width="26" height="26"><path fill="#F4B942" d="M12 2 l3 6.6 7 .8 -5.2 4.8 1.4 7 -6.2 -3.6 -6.2 3.6 1.4 -7 L2 9.4 l7 -.8z"/></svg>
+        </span>
+        <b>5.0</b> — по 68 отзывам на ПроДокторов
+      </div>
+
+      <div class="reviews__carousel reveal" id="reviewsCarousel">
+        <button class="slider-arrow slider-arrow--prev" id="revPrev" aria-label="Предыдущий отзыв">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M15 5 l-7 7 l7 7" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="reviews__viewport">
+          <div class="reviews__track" id="reviewsTrack">
+            <blockquote class="review-card">
+              <p class="review-card__text">«Боялась стоматологов 10 лет. Елена Сергеевна всё объяснила, лечила так бережно, что я чуть не уснула в кресле. Теперь ходим всей семьёй — и муж, и сын-первоклассник».</p>
+              <footer class="review-card__meta">
+                <span class="review-card__avatar" style="--avatar-bg:#A8DADC" aria-hidden="true">ОК</span>
+                <div><b>Ольга К.</b><span>12 марта 2025 · ПроДокторов</span></div>
+                <span class="review-card__stars">★★★★★</span>
+              </footer>
+            </blockquote>
+            <blockquote class="review-card">
+              <p class="review-card__text">«Ставил две коронки у Андрея Викторовича. Смету озвучили сразу, ни рубля сверху. Сроки выдержали день в день. Чувствуется, что человек на своём месте».</p>
+              <footer class="review-card__meta">
+                <span class="review-card__avatar" style="--avatar-bg:#F4A988" aria-hidden="true">ДМ</span>
+                <div><b>Дмитрий М.</b><span>28 февраля 2025 · ПроДокторов</span></div>
+                <span class="review-card__stars">★★★★★</span>
+              </footer>
+            </blockquote>
+            <blockquote class="review-card">
+              <p class="review-card__text">«Дочка (6 лет) раньше плакала при слове "стоматолог". Марина Александровна превратила лечение в игру — теперь ребёнок сам спрашивает, когда мы снова пойдём. Спасибо!»</p>
+              <footer class="review-card__meta">
+                <span class="review-card__avatar" style="--avatar-bg:#FFD97A" aria-hidden="true">НВ</span>
+                <div><b>Наталья В.</b><span>15 февраля 2025 · ПроДокторов</span></div>
+                <span class="review-card__stars">★★★★★</span>
+              </footer>
+            </blockquote>
+            <blockquote class="review-card">
+              <p class="review-card__text">«Записались с женой на одно время по семейной акции — получили скидку 10% и не пришлось дважды ехать. Чистка прошла отлично, всё честно и без навязывания услуг».</p>
+              <footer class="review-card__meta">
+                <span class="review-card__avatar" style="--avatar-bg:#A8DADC" aria-hidden="true">СП</span>
+                <div><b>Сергей и Ирина П.</b><span>30 января 2025 · ПроДокторов</span></div>
+                <span class="review-card__stars">★★★★★</span>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+        <button class="slider-arrow slider-arrow--next" id="revNext" aria-label="Следующий отзыв">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M9 5 l7 7 l-7 7" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+      <div class="slider-dots" id="reviewsDots" role="tablist" aria-label="Навигация по отзывам"></div>
+    </div>
+  </section>
+
+  <!-- ======================= СЕМЕЙНАЯ СКИДКА ======================= -->
+  <section class="section family" id="family">
+    <div class="container family__inner reveal">
+      <div class="family__content">
+        <h2 class="family__title">Семейная скидка −10%</h2>
+        <p class="family__text">Два члена семьи на одно время — и <b>каждый получает скидку 10%</b> на лечение и профгигиену. Меньше поездок, больше поводов улыбаться вместе.</p>
+        <button class="btn btn--big btn--light" data-scroll-to="#booking">Записаться вдвоём</button>
+        <p class="family__note">Акция действует для супругов, родителей с детьми и бабушек с внуками</p>
+      </div>
+      <div class="family__art" aria-hidden="true">
+        <svg viewBox="0 0 260 220">
+          <circle cx="130" cy="110" r="96" fill="#fff" opacity=".14"/>
+          <circle cx="96" cy="86" r="34" fill="#F1FAEE"/>
+          <path d="M62 84 a34 34 0 0 1 68 0 q-16 -16 -34 -14 q-22 2 -34 14z" fill="#1D3557" opacity=".85"/>
+          <path d="M82 96 q14 12 28 0" stroke="#E88D7B" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <circle cx="82" cy="82" r="3" fill="#1D3557"/>
+          <circle cx="110" cy="82" r="3" fill="#1D3557"/>
+          <circle cx="170" cy="100" r="26" fill="#F1FAEE"/>
+          <path d="M144 98 a26 26 0 0 1 52 0 q-12 -12 -26 -11 q-17 1 -26 11z" fill="#C98B3F"/>
+          <path d="M160 108 q10 9 20 0" stroke="#E88D7B" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+          <circle cx="160" cy="96" r="2.6" fill="#1D3557"/>
+          <circle cx="180" cy="96" r="2.6" fill="#1D3557"/>
+          <g transform="translate(112 128)">
+            <path fill="#fff" d="M18 0c-4.5-3-10.5-3.6-14-.7C.6 2.3 1.2 8.4 3 13.3c2.2 5.2 3.7 12.4 5.2 19.7.5 2 3.3 2.2 4 .2C13.5 28.3 14.2 22.8 18 22.8s4.9 5.5 6.2 10.4c.6 2 3.4 1.8 4-.2 1.4-7.3 3-14.5 5.2-19.7C35.2 8.4 35.4 2.3 32-.7 28.5-3.6 22.5-3 18 0z" transform="scale(1.15)"/>
+            <path d="M14 18 q7 6 14 0" stroke="#A8DADC" stroke-width="2.6" fill="none" stroke-linecap="round" transform="translate(0 1)"/>
+          </g>
+          <text x="130" y="204" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="800" font-size="30" fill="#fff">−10%</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= FAQ ======================= -->
+  <section class="section faq" id="faq">
+    <div class="container container--narrow">
+      <h2 class="section__title reveal">Частые вопросы</h2>
+      <div class="faq__list">
+        <div class="faq__item reveal">
+          <button class="faq__question" aria-expanded="false">
+            <span>Больно ли лечить?</span>
+            <svg class="faq__chevron" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 9 l6 6 l6 -6" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq__answer">
+            <p>Нет. Мы используем компьютерную анестезию — укол практически не чувствуется, а заморозка действует точно в зоне лечения. Если вам всё равно тревожно, скажите врачу: сделаем паузу, всё объясним и подберём комфортный темп.</p>
+          </div>
+        </div>
+        <div class="faq__item reveal">
+          <button class="faq__question" aria-expanded="false">
+            <span>Сколько стоит консультация?</span>
+            <svg class="faq__chevron" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 9 l6 6 l6 -6" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq__answer">
+            <p>Первичная консультация — 900 ₽. В неё входят осмотр, фотопротокол и подробный план лечения со сметой. Если начинаете лечение у нас в течение месяца — консультация бесплатна.</p>
+          </div>
+        </div>
+        <div class="faq__item reveal">
+          <button class="faq__question" aria-expanded="false">
+            <span>Можно ли оплатить картой?</span>
+            <svg class="faq__chevron" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 9 l6 6 l6 -6" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq__answer">
+            <p>Да, принимаем карты всех банков, наличные и оплату по СБП. На лечение от 30 000 ₽ доступна рассрочка 0% без переплат — оформляется за 10 минут прямо в клинике.</p>
+          </div>
+        </div>
+        <div class="faq__item reveal">
+          <button class="faq__question" aria-expanded="false">
+            <span>Вы принимаете детей?</span>
+            <svg class="faq__chevron" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 9 l6 6 l6 -6" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq__answer">
+            <p>Конечно! Детский врач принимает с 6 лет. Первый визит — адаптационный: знакомимся, считаем зубки, катаемся на кресле. Без слёз и принуждения — дети уходят с подарками и без страха.</p>
+          </div>
+        </div>
+        <div class="faq__item reveal">
+          <button class="faq__question" aria-expanded="false">
+            <span>Какая гарантия на лечение?</span>
+            <svg class="faq__chevron" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 9 l6 6 l6 -6" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq__answer">
+            <p>На пломбы — 1 год, на коронки — до 5 лет, на имплантаты — 10 лет. Гарантия прописывается в договоре. Единственное условие — регулярные профилактические осмотры раз в полгода.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= ЗАПИСЬ + КОНТАКТЫ ======================= -->
+  <section class="section booking" id="booking">
+    <div class="container booking__grid">
+      <div class="booking__form-wrap reveal">
+        <h2 class="section__title">Записаться на приём</h2>
+        <p class="section__subtitle">Перезвоним в течение 15 минут и подберём удобное время</p>
+        <form class="form" id="bookingForm" novalidate>
+          <div class="form__field">
+            <label for="fName">Ваше имя</label>
+            <input type="text" id="fName" name="name" placeholder="Например, Анна" autocomplete="name">
+            <span class="form__error" data-error-for="fName"></span>
+          </div>
+          <div class="form__field">
+            <label for="fPhone">Телефон</label>
+            <input type="tel" id="fPhone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel">
+            <span class="form__error" data-error-for="fPhone"></span>
+          </div>
+          <div class="form__field">
+            <label for="fService">Услуга</label>
+            <select id="fService" name="service">
+              <option value="" selected disabled>Выберите услугу</option>
+              <option>Консультация терапевта</option>
+              <option>Консультация ортопеда</option>
+              <option>Профгигиена</option>
+              <option>Лечение</option>
+              <option>Другое</option>
+            </select>
+            <span class="form__error" data-error-for="fService"></span>
+          </div>
+          <div class="form__field" id="doctorField" hidden>
+            <label for="fDoctor">Врач</label>
+            <input type="text" id="fDoctor" name="doctor" readonly>
+          </div>
+          <button type="submit" class="btn btn--big form__submit">Записаться</button>
+          <p class="form__privacy">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных</p>
+        </form>
+        <div class="form__success" id="formSuccess" hidden>
+          <svg viewBox="0 0 64 64" width="64" height="64" aria-hidden="true">
+            <circle cx="32" cy="32" r="30" fill="#A8DADC"/>
+            <path d="M20 33 l8 8 l16 -17" stroke="#1D3557" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3>Заявка отправлена!</h3>
+          <p>Спасибо! Администратор перезвонит вам в течение 15 минут в рабочее время (Пн–Пт 9:00–19:00).</p>
+        </div>
+      </div>
+
+      <div class="booking__contacts reveal" id="contacts">
+        <div class="contact-card">
+          <h3 class="contact-card__title">Как нас найти</h3>
+          <ul class="contact-card__list">
+            <li>
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="#1D3557" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+              <span>Волгоград, ул. Еременко, 25<br><small>вход со двора, 2 этаж</small></span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="#1D3557" d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+              <a href="tel:+78442290029">+7 (8442) 29-00-29</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="#1D3557" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 5h-2v6l5 3 1-1.6-4-2.4z"/></svg>
+              <span>Пн–Пт: 9:00–19:00<br><small>Сб–Вс: выходной</small></span>
+            </li>
+          </ul>
+          <div class="contact-card__map">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?text=%D0%92%D0%BE%D0%BB%D0%B3%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%95%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BA%D0%BE%2C%2025&z=16"
+              width="100%" height="300" frameborder="0" loading="lazy"
+              title="Карта проезда: Волгоград, ул. Еременко, 25"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= ФУТЕР ======================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <a href="#top" class="logo logo--footer">
+          <svg class="logo__icon" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
+            <path fill="#F1FAEE" d="M16 4c-3-2-7-2.5-9.5-.5C3.7 5.8 4 10 5.5 13.5 7 17 8 22 9 27c.3 1.4 2.3 1.5 2.7.1.9-3.4 1.4-7.1 4.3-7.1s3.4 3.7 4.3 7.1c.4 1.4 2.4 1.3 2.7-.1 1-5 2-10 3.5-13.5C28 10 28.3 5.8 25.5 3.5 23 1.5 19 2 16 4z"/>
+          </svg>
+          <span class="logo__text">Семейная <b>улыбка</b></span>
+        </a>
+        <p class="footer__about">Семейная стоматология в Волгограде. Лечим так, как лечили бы своих близких.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Контакты</h4>
+        <p>ул. Еременко, 25, Волгоград</p>
+        <p><a href="tel:+78442290029">+7 (8442) 29-00-29</a></p>
+        <p><a href="mailto:privet@family-smile34.ru">privet@family-smile34.ru</a></p>
+      </div>
+      <div class="footer__col">
+        <h4>График работы</h4>
+        <p>Пн–Пт: 9:00–19:00</p>
+        <p>Сб–Вс: выходной</p>
+      </div>
+      <div class="footer__col">
+        <h4>Мы в соцсетях</h4>
+        <div class="footer__social">
+          <a href="#" aria-label="ВКонтакте">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12.7 18c-5 0-7.9-3.4-8-9.2h2.5c.1 4.2 2 6 3.5 6.3V8.8h2.4v3.6c1.5-.2 3-1.8 3.5-3.6h2.3c-.3 2.3-1.6 4-2.8 5 1.2.9 2.9 2.6 3.4 4.2h-2.6c-.4-1.3-1.5-2.8-3.1-3.6v3.6z"/></svg>
+          </a>
+          <a href="#" aria-label="Телеграм">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M21 4.5 3.6 11.3c-.8.3-.8 1.4.1 1.6l4.3 1.3 1.6 5c.2.7 1 .9 1.5.4l2.2-2.1 4.4 3.2c.6.4 1.5.1 1.7-.6l2.8-14.2c.2-.8-.6-1.5-1.2-1.4zM8.7 13.6l8.8-5.6c.3-.2.6.2.3.4l-7.3 6.6-.3 3-1.5-4.4z"/></svg>
+          </a>
+          <a href="#" aria-label="Одноклассники">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 3a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm0 2.2a2.3 2.3 0 1 1 0 4.6 2.3 2.3 0 0 1 0-4.6zM5.5 14.2c.9 0 2 .6 3.1 1 1.3.4 2.2.6 3.4.6s2.1-.2 3.4-.6c1.1-.4 2.2-1 3.1-1 .9 0 1.3 1.1.3 1.9-1.1.9-3 1.5-4.6 1.7l3 3c.7.7-.3 1.9-1 1.2L12 18.6 10.2 22c-.7.7-1.7-.5-1-1.2l3-3c-1.6-.2-3.5-.8-4.6-1.7-1-.8-.6-1.9-.1-1.9z" transform="translate(0 -1)"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">© 1996–2025 Стоматология «Семейная улыбка», Волгоград. Лицензия № ЛО-34-01-002345.</div>
+    </div>
+  </footer>
+
+  <!-- ======================= МОДАЛЬНЫЕ ОКНА УСЛУГ ======================= -->
+  <div class="modal" id="modal-hygiene" role="dialog" aria-modal="true" aria-labelledby="modal-hygiene-title" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__box">
+      <button class="modal__close" data-close-modal aria-label="Закрыть окно">×</button>
+      <h3 id="modal-hygiene-title">Профессиональная гигиена</h3>
+      <p>Комплексная чистка — лучшая профилактика кариеса и кровоточивости дёсен. Рекомендуем проходить раз в полгода.</p>
+      <ul class="modal__list">
+        <li><span class="check">✓</span> Снятие налёта Air Flow</li>
+        <li><span class="check">✓</span> Ультразвуковое удаление камня</li>
+        <li><span class="check">✓</span> Полировка и покрытие реминерализующим гелем</li>
+        <li><span class="check">✓</span> Подбор домашнего ухода</li>
+      </ul>
+      <div class="modal__price">от 3 500 ₽ · 60 минут</div>
+      <button class="btn btn--big modal__cta" data-scroll-to="#booking" data-close-modal>Записаться на чистку</button>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-treatment" role="dialog" aria-modal="true" aria-labelledby="modal-treatment-title" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__box">
+      <button class="modal__close" data-close-modal aria-label="Закрыть окно">×</button>
+      <h3 id="modal-treatment-title">Лечение зубов</h3>
+      <p>Лечим кариес, пульпит и периодонтит под микроскопом — сохраняем даже «безнадёжные» зубы.</p>
+      <ul class="modal__list">
+        <li><span class="check">✓</span> Компьютерная анестезия без боли</li>
+        <li><span class="check">✓</span> Лечение под дентальным микроскопом</li>
+        <li><span class="check">✓</span> Световые пломбы японских и немецких брендов</li>
+        <li><span class="check">✓</span> Гарантия на пломбу — 1 год</li>
+      </ul>
+      <div class="modal__price">от 4 200 ₽ · от 40 минут</div>
+      <button class="btn btn--big modal__cta" data-scroll-to="#booking" data-close-modal>Записаться на лечение</button>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-prosthetics" role="dialog" aria-modal="true" aria-labelledby="modal-prosthetics-title" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__box">
+      <button class="modal__close" data-close-modal aria-label="Закрыть окно">×</button>
+      <h3 id="modal-prosthetics-title">Протезирование</h3>
+      <p>Восстанавливаем зубы любой сложности: от одиночной коронки до полного протезирования.</p>
+      <ul class="modal__list">
+        <li><span class="check">✓</span> Коронки E-max и диоксид циркония</li>
+        <li><span class="check">✓</span> Виниры с примеркой до фиксации</li>
+        <li><span class="check">✓</span> Съёмные и бюгельные протезы</li>
+        <li><span class="check">✓</span> Гарантия на коронки — до 5 лет</li>
+      </ul>
+      <div class="modal__price">от 12 000 ₽ · 2–3 визита</div>
+      <button class="btn btn--big modal__cta" data-scroll-to="#booking" data-close-modal>Записаться на консультацию ортопеда</button>
+    </div>
+  </div>
+
+  <!-- ======================= ВИДЖЕТ ОБРАТНОГО ЗВОНКА ======================= -->
+  <div class="callback" id="callbackWidget">
+    <button class="callback__toggle" id="callbackToggle" aria-label="Заказать обратный звонок" aria-expanded="false">
+      <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+    </button>
+    <div class="callback__panel" id="callbackPanel" hidden>
+      <div class="callback__head">
+        <b>Перезвоним за 5 минут</b>
+        <span>Оставьте номер — ответим на любые вопросы</span>
+      </div>
+      <form id="callbackForm" novalidate>
+        <input type="tel" id="cbPhone" placeholder="+7 (___) ___-__-__" autocomplete="tel">
+        <span class="form__error" data-error-for="cbPhone"></span>
+        <button type="submit" class="btn">Жду звонка</button>
+      </form>
+      <div class="callback__success" id="callbackSuccess" hidden>
+        <span class="check">✓</span> Спасибо! Перезвоним в течение 5 минут.
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================= ПЛАВАЮЩАЯ КНОПКА ======================= -->
+  <button class="fab" id="fab" data-scroll-to="#booking" aria-label="Записаться на приём">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V10h14zM7.5 12.5h4v4h-4z"/></svg>
+    Записаться
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

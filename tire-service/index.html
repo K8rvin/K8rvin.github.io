@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ШиноМастер — шиномонтаж в Москве | Перебортовка, балансировка, ремонт шин</title>
+  <meta name="description" content="Профессиональный шиномонтаж: перебортовка, балансировка, ремонт проколов и боковых порезов, сезонное хранение шин. Запись онлайн за 1 минуту.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='44' fill='%23ffb800'/><circle cx='50' cy='50' r='26' fill='%23111116'/><circle cx='50' cy='50' r='8' fill='%23ffb800'/></svg>">
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="logo" aria-label="ШиноМастер — на главную">
+        <svg class="logo__icon" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="10"/>
+          <circle cx="50" cy="50" r="14" fill="currentColor"/>
+          <g stroke="currentColor" stroke-width="8">
+            <line x1="50" y1="6" x2="50" y2="28"/>
+            <line x1="50" y1="72" x2="50" y2="94"/>
+            <line x1="6" y1="50" x2="28" y2="50"/>
+            <line x1="72" y1="50" x2="94" y2="50"/>
+          </g>
+        </svg>
+        <span>Шино<em>Мастер</em></span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#services" class="nav__link">Услуги</a>
+        <a href="#prices" class="nav__link">Цены</a>
+        <a href="#advantages" class="nav__link">Преимущества</a>
+        <a href="#reviews" class="nav__link">Отзывы</a>
+        <a href="#contacts" class="nav__link">Контакты</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="tel:+74951234567" class="header__phone">+7 (495) 123-45-67</a>
+        <a href="#booking" class="btn btn--sm">Записаться</a>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__badge reveal">Работаем ежедневно с 8:00 до 22:00</p>
+          <h1 class="hero__title reveal">Шиномонтаж <span>за 30 минут</span> без очередей</h1>
+          <p class="hero__text reveal">Перебортовка, балансировка и ремонт шин любой сложности.
+             Современное оборудование, опытные мастера и честные цены — записывайтесь онлайн и приезжайте к своему времени.</p>
+          <div class="hero__cta reveal">
+            <a href="#booking" class="btn">Записаться онлайн</a>
+            <a href="#prices" class="btn btn--ghost">Смотреть цены</a>
+          </div>
+          <ul class="hero__stats reveal">
+            <li><strong>12 лет</strong><span>на рынке</span></li>
+            <li><strong>40 000+</strong><span>обслуженных авто</span></li>
+            <li><strong>4,9</strong><span>рейтинг на картах</span></li>
+          </ul>
+        </div>
+        <div class="hero__visual reveal" aria-hidden="true">
+          <div class="hero__wheel">
+            <svg viewBox="0 0 200 200">
+              <circle cx="100" cy="100" r="92" fill="none" stroke="#2a2a33" stroke-width="16"/>
+              <circle cx="100" cy="100" r="60" fill="none" stroke="#3a3a45" stroke-width="10"/>
+              <circle cx="100" cy="100" r="20" fill="#ffb800"/>
+              <g stroke="#ffb800" stroke-width="12" stroke-linecap="round">
+                <line x1="100" y1="34" x2="100" y2="74"/>
+                <line x1="100" y1="126" x2="100" y2="166"/>
+                <line x1="34" y1="100" x2="74" y2="100"/>
+                <line x1="126" y1="100" x2="166" y2="100"/>
+                <line x1="53" y1="53" x2="81" y2="81"/>
+                <line x1="119" y1="119" x2="147" y2="147"/>
+                <line x1="147" y1="53" x2="119" y2="81"/>
+                <line x1="81" y1="119" x2="53" y2="147"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Services ===== -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__label">Услуги</p>
+          <h2 class="section__title">Всё для ваших колёс</h2>
+          <p class="section__subtitle">Полный цикл работ — от сезонной переобувки до сложного ремонта. Работаем с легковыми авто, кроссоверами и микроавтобусами.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.2 2.2M16.2 16.2l2.2 2.2M18.4 5.6l-2.2 2.2M7.8 16.2l-2.2 2.2"/></svg>
+            </div>
+            <h3>Перебортовка</h3>
+            <p>Сезонная замена шин на 4 колёсах с проверкой давления и состояния протектора. Комплект — от 30 минут.</p>
+            <span class="card__price">от 1 600 ₽</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 7v5l3.5 2"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/></svg>
+            </div>
+            <h3>Балансировка</h3>
+            <p>Точная балансировка на стенде Hunter — убираем вибрацию руля и продлеваем жизнь подвеске и резине.</p>
+            <span class="card__price">от 400 ₽/колесо</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.1-.7-.7-2.1 2.4-2.8z"/></svg>
+            </div>
+            <h3>Ремонт проколов</h3>
+            <p>Ремонт жгутом или грибком с гарантией герметичности. Устраняем боковые порезы методом горячей вулканизации.</p>
+            <span class="card__price">от 500 ₽</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg>
+            </div>
+            <h3>Хранение шин</h3>
+            <p>Сезонное хранение комплекта в сухом отапливаемом складе. Мойка, маркировка и фотоотчёт включены.</p>
+            <span class="card__price">от 2 500 ₽/сезон</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l2.5 2.5L16 9"/></svg>
+            </div>
+            <h3>Правка дисков</h3>
+            <p>Устраняем вмятины и «восьмёрки» на стальных и литых дисках. Проверка геометрии на стенде перед выдачей.</p>
+            <span class="card__price">от 800 ₽</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h-2v-6l2-5h10l4 5h3v6h-2"/><circle cx="7.5" cy="17.5" r="2"/><circle cx="16.5" cy="17.5" r="2"/><path d="M9.5 17.5h5"/></svg>
+            </div>
+            <h3>Выездной сервис</h3>
+            <p>Приедем к дому или офису на мобильном посту: замена колёс и подкачка прямо у вашего подъезда.</p>
+            <span class="card__price">от 2 000 ₽</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Prices ===== -->
+    <section class="section section--dark" id="prices">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__label">Цены</p>
+          <h2 class="section__title">Прозрачный прайс</h2>
+          <p class="section__subtitle">Выберите диаметр колёс — покажем стоимость полного комплекта работ.</p>
+        </div>
+
+        <div class="price-tabs reveal" role="tablist" aria-label="Диаметр колёс">
+          <button class="price-tab is-active" data-radius="13-16" role="tab" aria-selected="true">R13–R16</button>
+          <button class="price-tab" data-radius="17-18" role="tab" aria-selected="false">R17–R18</button>
+          <button class="price-tab" data-radius="19-20" role="tab" aria-selected="false">R19–R20</button>
+          <button class="price-tab" data-radius="21-22" role="tab" aria-selected="false">R21–R22</button>
+        </div>
+
+        <div class="price-grid reveal">
+          <div class="price-card">
+            <h3>Комплекс «Стандарт»</h3>
+            <p class="price-card__desc">Снятие/установка, перебортовка, балансировка 4 колёс</p>
+            <p class="price-card__value" data-prices="1600|2100|2700|3400">1 600 ₽</p>
+            <ul class="price-card__list">
+              <li>Мойка колёс</li>
+              <li>Проверка давления</li>
+              <li>Новые вентили — в подарок</li>
+            </ul>
+          </div>
+
+          <div class="price-card price-card--accent">
+            <span class="price-card__badge">Популярный</span>
+            <h3>Комплекс «Комфорт»</h3>
+            <p class="price-card__desc">«Стандарт» + диагностика и хранение старого комплекта</p>
+            <p class="price-card__value" data-prices="3100|3800|4600|5600">3 100 ₽</p>
+            <ul class="price-card__list">
+              <li>Всё из «Стандарта»</li>
+              <li>Диагностика протектора и дисков</li>
+              <li>Хранение 1 месяц бесплатно</li>
+              <li>Напоминание о сезонной замене</li>
+            </ul>
+          </div>
+
+          <div class="price-card">
+            <h3>Отдельные работы</h3>
+            <p class="price-card__desc">Если нужен не полный комплекс</p>
+            <ul class="price-card__rows">
+              <li><span>Снятие/установка колеса</span><b data-prices="100|130|170|220">100 ₽</b></li>
+              <li><span>Перебортовка колеса</span><b data-prices="200|270|350|450">200 ₽</b></li>
+              <li><span>Балансировка колеса</span><b data-prices="100|130|160|200">100 ₽</b></li>
+              <li><span>Ремонт прокола</span><b>от 500 ₽</b></li>
+              <li><span>Правка диска</span><b>от 800 ₽</b></li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="prices-note reveal">Точную стоимость для вашего авто уточнит мастер — звоните <a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+      </div>
+    </section>
+
+    <!-- ===== Advantages ===== -->
+    <section class="section" id="advantages">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__label">Почему мы</p>
+          <h2 class="section__title">Приезжают один раз — возвращаются каждый сезон</h2>
+        </div>
+
+        <div class="adv-grid">
+          <div class="adv reveal">
+            <span class="adv__num">01</span>
+            <h3>Запись к точному времени</h3>
+            <p>Никаких «живых очередей»: бронируете слот онлайн — и мастер ждёт именно вас.</p>
+          </div>
+          <div class="adv reveal">
+            <span class="adv__num">02</span>
+            <h3>Оборудование Hunter</h3>
+            <p>Стенды последнего поколения бережно работают с низкопрофильной резиной и дорогими дисками.</p>
+          </div>
+          <div class="adv reveal">
+            <span class="adv__num">03</span>
+            <h3>Гарантия на работы</h3>
+            <p>90 дней гарантии на балансировку и ремонт. Если что-то не так — исправим бесплатно.</p>
+          </div>
+          <div class="adv reveal">
+            <span class="adv__num">04</span>
+            <h3>Честный прайс</h3>
+            <p>Цена называется до начала работ и не меняется в процессе. Без скрытых доплат «за грузики».</p>
+          </div>
+          <div class="adv reveal">
+            <span class="adv__num">05</span>
+            <h3>Зона ожидания</h3>
+            <p>Кофе, Wi-Fi и наглядное остекление бокса — видно, как работают с вашей машиной.</p>
+          </div>
+          <div class="adv reveal">
+            <span class="adv__num">06</span>
+            <h3>Оплата как удобно</h3>
+            <p>Наличные, карта, СБП и оплата по QR-коду. Чек и гарантийный талон — сразу на телефон.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Steps ===== -->
+    <section class="section section--dark">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__label">Как это работает</p>
+          <h2 class="section__title">4 шага до новых колёс</h2>
+        </div>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__num">1</span>
+            <h3>Записываетесь</h3>
+            <p>Оставляете заявку на сайте или звоните — подберём удобное время.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">2</span>
+            <h3>Приезжаете</h3>
+            <p>Мастер встречает, осматривает колёса и подтверждает стоимость.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">3</span>
+            <h3>Ждёте 30 минут</h3>
+            <p>Пьёте кофе в зоне ожидания, пока мы работаем с вашими колёсами.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">4</span>
+            <h3>Уезжаете довольным</h3>
+            <p>Получаете чек, гарантийный талон и напоминание о следующей замене.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Reviews ===== -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__label">Отзывы</p>
+          <h2 class="section__title">Что говорят клиенты</h2>
+        </div>
+
+        <div class="reviews">
+          <figure class="review reveal">
+            <div class="review__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            <blockquote>Записался на 10:00, в 10:35 уже выезжал. Ни одной царапины на литых дисках — раньше в других местах постоянно коцали. Теперь только сюда.</blockquote>
+            <figcaption>
+              <span class="review__avatar">ДК</span>
+              <span><b>Дмитрий К.</b><i>KIA Rio, комплекс «Комфорт»</i></span>
+            </figcaption>
+          </figure>
+
+          <figure class="review reveal">
+            <div class="review__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            <blockquote>Поймала саморез на трассе, думала — всё, новая шина. Мастера поставили грибок, с тех пор полгода — давление держит идеально. Спасибо!</blockquote>
+            <figcaption>
+              <span class="review__avatar">АС</span>
+              <span><b>Анна С.</b><i>Hyundai Solaris, ремонт прокола</i></span>
+            </figcaption>
+          </figure>
+
+          <figure class="review reveal">
+            <div class="review__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            <blockquote>Сдаю шины на хранение уже третий сезон. Привозишь грязные — забираешь чистые, в мешках, с бирками. И не надо таскать на балкон.</blockquote>
+            <figcaption>
+              <span class="review__avatar">МВ</span>
+              <span><b>Михаил В.</b><i>Toyota Camry, хранение шин</i></span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Booking ===== -->
+    <section class="section section--accent" id="booking">
+      <div class="container booking">
+        <div class="booking__info reveal">
+          <h2 class="section__title">Запишитесь за 1 минуту</h2>
+          <p>Оставьте заявку — администратор перезвонит в течение 10 минут в рабочее время и подтвердит слот.</p>
+          <ul class="booking__perks">
+            <li>Без предоплаты</li>
+            <li>Перенос записи — бесплатно</li>
+            <li>Напомним по SMS за 2 часа</li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="bookingForm" novalidate>
+          <div class="form__row">
+            <label class="form__field">
+              <span>Ваше имя</span>
+              <input type="text" name="name" placeholder="Иван" required minlength="2" autocomplete="name">
+            </label>
+            <label class="form__field">
+              <span>Телефон</span>
+              <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
+            </label>
+          </div>
+          <div class="form__row">
+            <label class="form__field">
+              <span>Услуга</span>
+              <select name="service" required>
+                <option value="" disabled selected>Выберите услугу</option>
+                <option>Комплекс «Стандарт»</option>
+                <option>Комплекс «Комфорт»</option>
+                <option>Балансировка</option>
+                <option>Ремонт прокола</option>
+                <option>Правка дисков</option>
+                <option>Хранение шин</option>
+                <option>Выездной сервис</option>
+              </select>
+            </label>
+            <label class="form__field">
+              <span>Желаемая дата</span>
+              <input type="date" name="date" required>
+            </label>
+          </div>
+          <label class="form__field">
+            <span>Комментарий (необязательно)</span>
+            <textarea name="comment" rows="3" placeholder="Марка авто, диаметр колёс, пожелания…"></textarea>
+          </label>
+          <button type="submit" class="btn btn--dark form__submit">Отправить заявку</button>
+          <p class="form__privacy">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+          <p class="form__success" id="formSuccess" hidden>Заявка отправлена! Мы перезвоним вам в течение 10 минут в рабочее время.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== Contacts ===== -->
+    <section class="section" id="contacts">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__label">Контакты</p>
+          <h2 class="section__title">Как нас найти</h2>
+        </div>
+        <div class="contacts">
+          <div class="contacts__info reveal">
+            <div class="contacts__item">
+              <h3>Адрес</h3>
+              <p>г. Москва, ул. Гаражная, 12, стр. 3<br>Заезд с ул. Проездной</p>
+            </div>
+            <div class="contacts__item">
+              <h3>Телефон</h3>
+              <p><a href="tel:+74951234567">+7 (495) 123-45-67</a><br><a href="tel:+79161234567">+7 (916) 123-45-67</a> (WhatsApp)</p>
+            </div>
+            <div class="contacts__item">
+              <h3>Режим работы</h3>
+              <p>Пн–Вс: 8:00 – 22:00<br>Без перерывов и выходных</p>
+            </div>
+            <div class="contacts__item">
+              <h3>Почта</h3>
+              <p><a href="mailto:info@shinomaster.ru">info@shinomaster.ru</a></p>
+            </div>
+          </div>
+          <div class="contacts__map reveal">
+            <iframe
+              src="https://www.openstreetmap.org/export/embed.html?bbox=37.55%2C55.72%2C37.65%2C55.78&layer=mapnik&marker=55.75%2C37.6"
+              title="Карта проезда до шиномонтажа ШиноМастер" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#" class="logo logo--footer">
+        <svg class="logo__icon" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="10"/>
+          <circle cx="50" cy="50" r="14" fill="currentColor"/>
+        </svg>
+        <span>Шино<em>Мастер</em></span>
+      </a>
+      <p class="footer__copy">© <span id="year"></span> ШиноМастер. Все права защищены.</p>
+      <a href="tel:+74951234567" class="footer__phone">+7 (495) 123-45-67</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

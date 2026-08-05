@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Стоматология без сюрпризов — клиника в Волгограде</title>
+  <meta name="description" content="Стоматология в Волгограде: фиксированные цены, современное оборудование, врачи с опытом 14–30 лет. Прозрачная смета и гарантия результата.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Прогресс-бар скролла -->
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+
+  <!-- Шапка -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo">
+        <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+          <path fill="currentColor" d="M12 2C8.5 2 6 4 6 7.2c0 1.9.7 3.1 1.1 5.3.3 1.7.6 4.1 1 6.3.2 1.2 1.9 1.3 2.2.1.4-1.6.5-4.4 1.7-4.4s1.3 2.8 1.7 4.4c.3 1.2 2 1.1 2.2-.1.4-2.2.7-4.6 1-6.3.4-2.2 1.1-3.4 1.1-5.3C18 4 15.5 2 12 2z"/>
+        </svg>
+        <span>Прозрачная Стоматология</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#services">Услуги и цены</a>
+        <a href="#approach">Наш подход</a>
+        <a href="#doctors">Врачи</a>
+        <a href="#tech">Технологии</a>
+        <a href="#gallery">Работы</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <div class="header__actions">
+        <a href="tel:+78442000000" class="header__phone">+7 (8442) 00-00-00</a>
+        <button class="btn btn--sm btn--primary" data-open-modal="booking">Записаться</button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Переключить тёмную тему" title="Тёмная тема">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 17a5 5 0 100-10 5 5 0 000 10zm0-15v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M21 12.8A9 9 0 0111.2 3 7 7 0 1021 12.8z"/></svg>
+        </button>
+        <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <p class="hero__badge">
+            <svg viewBox="0 0 24 24" width="16" height="16"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20 6L9 17l-5-5"/></svg>
+            Клиника в Волгограде · ул. Еременко, 25
+          </p>
+          <h1>Стоматология<br>без сюрпризов</h1>
+          <p class="hero__subtitle">Фиксированные цены. Современное оборудование. Врачи с опытом 14–30 лет.</p>
+          <div class="hero__cta">
+            <button class="btn btn--primary btn--lg" data-open-modal="booking">Записаться на приём</button>
+            <a href="#calc" class="btn btn--ghost btn--lg">Рассчитать стоимость</a>
+          </div>
+          <div class="hero__stats">
+            <div class="stat">
+              <span class="stat__num" data-counter="29">0</span>
+              <span class="stat__label">лет опыта</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num"><span data-counter="68">0</span>+</span>
+              <span class="stat__label">отзывов</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num"><span data-counter="1000">0</span>+</span>
+              <span class="stat__label">пациентов</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero__media reveal" data-parallax="0.08">
+          <!-- Стилизованный кабинет -->
+          <svg class="hero__art" viewBox="0 0 560 440" role="img" aria-label="Современный стоматологический кабинет">
+            <defs>
+              <linearGradient id="heroBg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#E3F2FD"/><stop offset="1" stop-color="#F8F9FA"/>
+              </linearGradient>
+              <linearGradient id="heroChair" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#BBDEFB"/><stop offset="1" stop-color="#90CAF9"/>
+              </linearGradient>
+              <linearGradient id="heroLamp" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#2196F3"/><stop offset="1" stop-color="#1976D2"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="560" height="440" rx="28" fill="url(#heroBg)"/>
+            <circle cx="470" cy="70" r="90" fill="#FFFFFF" opacity="0.55"/>
+            <circle cx="90" cy="380" r="60" fill="#FFFFFF" opacity="0.45"/>
+            <!-- Окно -->
+            <rect x="40" y="50" width="180" height="150" rx="14" fill="#FFFFFF" opacity="0.9"/>
+            <line x1="130" y1="50" x2="130" y2="200" stroke="#E3F2FD" stroke-width="6"/>
+            <line x1="40" y1="125" x2="220" y2="125" stroke="#E3F2FD" stroke-width="6"/>
+            <!-- Стоматологическое кресло -->
+            <g>
+              <rect x="150" y="300" width="240" height="34" rx="17" fill="url(#heroChair)"/>
+              <rect x="330" y="225" width="52" height="110" rx="24" fill="url(#heroChair)" transform="rotate(18 356 280)"/>
+              <rect x="120" y="285" width="70" height="30" rx="15" fill="url(#heroChair)"/>
+              <rect x="255" y="334" width="24" height="60" rx="10" fill="#90CAF9"/>
+              <rect x="215" y="392" width="105" height="12" rx="6" fill="#64B5F6"/>
+            </g>
+            <!-- Светильник -->
+            <g>
+              <line x1="450" y1="30" x2="420" y2="130" stroke="#90A4AE" stroke-width="8" stroke-linecap="round"/>
+              <ellipse cx="410" cy="150" rx="42" ry="26" fill="url(#heroLamp)" transform="rotate(30 410 150)"/>
+              <ellipse cx="410" cy="155" rx="30" ry="14" fill="#E3F2FD" opacity="0.9" transform="rotate(30 410 155)"/>
+            </g>
+            <!-- Монитор -->
+            <g>
+              <rect x="455" y="215" width="70" height="48" rx="8" fill="#212121"/>
+              <path d="M463 245 q8 -14 16 0 q8 -14 16 0" stroke="#4CAF50" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <rect x="484" y="263" width="10" height="22" fill="#90A4AE"/>
+            </g>
+            <!-- Зуб-акцент -->
+            <path d="M70 250c-16 0-26 10-26 25 0 9 3 15 5 25 1.5 8 3 20 5 30 1 6 9 6.5 10.5.5 2-8 2.5-21 8-21s6 13 8 21c1.5 6 9.5 5.5 10.5-.5 2-10 3.5-22 5-30 2-10 5-16 5-25 0-15-10-25-26-25z" fill="#FFFFFF" stroke="#BBDEFB" stroke-width="4"/>
+          </svg>
+          <div class="hero__card-float">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path fill="none" stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div><strong>Гарантия по договору</strong><span>до 10 лет на работы</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- УСЛУГИ И ЦЕНЫ -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Прозрачный прайс</span>
+          <h2>Услуги и цены</h2>
+          <p>Нажмите на услугу — увидите, что входит в стоимость. Никаких скрытых доплат.</p>
+        </div>
+        <div class="services">
+          <div class="service-card reveal" data-service>
+            <button class="service-card__head" aria-expanded="false">
+              <div class="service-card__icon">
+                <svg viewBox="0 0 24 24" width="26" height="26"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 3c-2.6 0-4.4 1.5-4.4 3.9 0 1.4.5 2.3.8 3.9.3 1.3.4 3 .7 4.6.2 1 1.5 1.1 1.7.1.3-1.2.4-3.2 1.2-3.2s.9 2 1.2 3.2c.2 1 1.5.9 1.7-.1.3-1.6.4-3.3.7-4.6.3-1.6.8-2.5.8-3.9C16.4 4.5 14.6 3 12 3z"/><path stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 5l1.5 1M20 5l-1.5 1M12 3V1.5"/></svg>
+              </div>
+              <div class="service-card__title">
+                <h3>Профгигиена</h3>
+                <p>Air Flow, ультразвук, полировка</p>
+              </div>
+              <div class="service-card__price">от 7 300 ₽</div>
+              <span class="service-card__chevron"><svg viewBox="0 0 24 24" width="20" height="20"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 9l6 6 6-6"/></svg></span>
+            </button>
+            <div class="service-card__body">
+              <div class="service-card__body-inner">
+                <p>Профессиональная чистка полости рта за один визит около 60 минут. Снимаем налёт и камень, полируем эмаль, обучаем индивидуальной гигиене.</p>
+                <ul class="check-list">
+                  <li>Осмотр и окрашивание налёта</li>
+                  <li>Снятие камня ультразвуком</li>
+                  <li>Чистка Air Flow (порошок на глицине)</li>
+                  <li>Полировка и укрепляющий гель</li>
+                </ul>
+                <div class="service-card__meta"><span>Длительность: ~60 мин</span><strong>7 300 ₽ — финальная цена</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card reveal" data-service>
+            <button class="service-card__head" aria-expanded="false">
+              <div class="service-card__icon">
+                <svg viewBox="0 0 24 24" width="26" height="26"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 3c-2.6 0-4.4 1.5-4.4 3.9 0 1.4.5 2.3.8 3.9.3 1.3.4 3 .7 4.6.2 1 1.5 1.1 1.7.1.3-1.2.4-3.2 1.2-3.2s.9 2 1.2 3.2c.2 1 1.5.9 1.7-.1.3-1.6.4-3.3.7-4.6.3-1.6.8-2.5.8-3.9C16.4 4.5 14.6 3 12 3z"/><path stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M9 7h6M12 4.5V9.5"/></svg>
+              </div>
+              <div class="service-card__title">
+                <h3>Лечение</h3>
+                <p>Кариес, пульпит, лечение под микроскопом</p>
+              </div>
+              <div class="service-card__price">от 5 800 ₽</div>
+              <span class="service-card__chevron"><svg viewBox="0 0 24 24" width="20" height="20"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 9l6 6 6-6"/></svg></span>
+            </button>
+            <div class="service-card__body">
+              <div class="service-card__body-inner">
+                <p>Лечим без боли: анестезия компьютерным методом, работа под микроскопом, фотополимерные пломбы премиум-класса.</p>
+                <ul class="check-list">
+                  <li>Анестезия и изоляция коффердамом</li>
+                  <li>Препарирование под микроскопом</li>
+                  <li>Эстетическая реставрация пломбой</li>
+                  <li>Контроль через 6 месяцев — бесплатно</li>
+                </ul>
+                <div class="service-card__meta"><span>Длительность: 40–90 мин</span><strong>от 5 800 ₽ за зуб</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card reveal" data-service>
+            <button class="service-card__head" aria-expanded="false">
+              <div class="service-card__icon">
+                <svg viewBox="0 0 24 24" width="26" height="26"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 8c2-2 5-3 8-3s6 1 8 3M6 8v4c0 1 .8 1.8 1.7 1.6 1-.2 1.4-1.1 1.6-2.2.1-.7.2-1.4.7-1.4s.6.7.7 1.4c.2 1.1.6 2 1.6 2.2.9.2 1.7-.6 1.7-1.6V8M14 8v4c0 1 .8 1.8 1.7 1.6 1-.2 1.4-1.1 1.6-2.2.1-.7.2-1.4.7-1.4"/></svg>
+              </div>
+              <div class="service-card__title">
+                <h3>Протезирование</h3>
+                <p>Коронки, виниры, имплантация</p>
+              </div>
+              <div class="service-card__price">от 15 000 ₽</div>
+              <span class="service-card__chevron"><svg viewBox="0 0 24 24" width="20" height="20"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 9l6 6 6-6"/></svg></span>
+            </button>
+            <div class="service-card__body">
+              <div class="service-card__body-inner">
+                <p>Цифровое протезирование: 3D-скан вместо слепков, примерка до изготовления, собственная зуботехническая лаборатория.</p>
+                <ul class="check-list">
+                  <li>3D-сканирование и цифровой дизайн</li>
+                  <li>Коронка из диоксида циркония</li>
+                  <li>Временная коронка на период изготовления</li>
+                  <li>Гарантия на коронку — до 10 лет</li>
+                </ul>
+                <div class="service-card__meta"><span>Срок: 5–10 дней</span><strong>от 15 000 ₽ за единицу</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- НАШ ПОДХОД -->
+    <section class="section section--alt" id="approach">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Как мы работаем</span>
+          <h2>Наш подход</h2>
+          <p>Три понятных шага между вами и здоровой улыбкой.</p>
+        </div>
+        <div class="steps">
+          <div class="steps__line" aria-hidden="true"><span id="stepsLineFill"></span></div>
+          <div class="step reveal">
+            <div class="step__num">1</div>
+            <div class="step__icon">
+              <svg viewBox="0 0 24 24" width="30" height="30"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M10 4a6 6 0 104.5 10L20 19.5M10 7v6M7 10h6"/></svg>
+            </div>
+            <h3>Диагностика и план лечения</h3>
+            <p>Полный осмотр, цифровые снимки и фотопротокол. Вы видите состояние каждого зуба на экране.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step__num">2</div>
+            <div class="step__icon">
+              <svg viewBox="0 0 24 24" width="30" height="30"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M6 3h9l4 4v14H6zM15 3v4h4M9 12h6M9 16h6M9 8h2"/></svg>
+            </div>
+            <h3>Фиксированная смета</h3>
+            <p>Цена фиксируется в договоре до начала лечения и не меняется. Подписали — значит, финально.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step__num">3</div>
+            <div class="step__icon">
+              <svg viewBox="0 0 24 24" width="30" height="30"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M9 11.5l2 2 4-4.5"/></svg>
+            </div>
+            <h3>Гарантия результата</h3>
+            <p>Гарантия на пломбы — до 3 лет, на коронки — до 10 лет. Всё прописано в договоре.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ВРАЧИ -->
+    <section class="section" id="doctors">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Команда</span>
+          <h2>Наши врачи</h2>
+          <p>Опыт от 14 лет. Регулярное повышение квалификации в России и Европе.</p>
+        </div>
+        <div class="doctors">
+          <article class="doctor-card reveal">
+            <div class="doctor-card__photo">
+              <svg viewBox="0 0 200 220" aria-label="Фото врача">
+                <defs><linearGradient id="docBg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F0F0F0"/><stop offset="1" stop-color="#D9D9D9"/></linearGradient></defs>
+                <rect width="200" height="220" fill="url(#docBg1)"/>
+                <circle cx="100" cy="88" r="38" fill="#8A8A8A"/>
+                <path d="M62 78c2-24 20-36 38-36s36 12 38 36c-6-14-20-20-38-20s-32 6-38 20z" fill="#5A5A5A"/>
+                <rect x="78" y="118" width="44" height="18" rx="9" fill="#8A8A8A"/>
+                <path d="M100 136c-38 0-58 18-62 44v40h124v-40c-4-26-24-44-62-44z" fill="#707070"/>
+                <path d="M86 142l14 12 14-12" stroke="#F0F0F0" stroke-width="4" fill="none"/>
+                <rect x="118" y="160" width="34" height="14" rx="7" fill="#BDBDBD"/>
+              </svg>
+            </div>
+            <div class="doctor-card__info">
+              <h3>Александр Смирнов</h3>
+              <p class="doctor-card__spec">Главный врач, ортопед</p>
+              <p class="doctor-card__exp">Стаж 30 лет</p>
+              <button class="btn btn--outline btn--sm" data-open-modal="booking" data-doctor="Александр Смирнов">Записаться</button>
+            </div>
+          </article>
+          <article class="doctor-card reveal">
+            <div class="doctor-card__photo">
+              <svg viewBox="0 0 200 220" aria-label="Фото врача">
+                <defs><linearGradient id="docBg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F0F0F0"/><stop offset="1" stop-color="#D9D9D9"/></linearGradient></defs>
+                <rect width="200" height="220" fill="url(#docBg2)"/>
+                <circle cx="100" cy="88" r="38" fill="#9A9A9A"/>
+                <path d="M64 92c-4-34 14-52 36-52s40 18 36 52c-2 10-6 18-10 24 4-22 2-42-26-42s-30 20-26 42c-4-6-8-14-10-24z" fill="#4A4A4A"/>
+                <rect x="78" y="118" width="44" height="18" rx="9" fill="#9A9A9A"/>
+                <path d="M100 136c-38 0-58 18-62 44v40h124v-40c-4-26-24-44-62-44z" fill="#787878"/>
+                <path d="M86 142l14 12 14-12" stroke="#F0F0F0" stroke-width="4" fill="none"/>
+                <circle cx="140" cy="168" r="8" fill="#BDBDBD"/>
+              </svg>
+            </div>
+            <div class="doctor-card__info">
+              <h3>Мария Ковалёва</h3>
+              <p class="doctor-card__spec">Терапевт, эндодонтист</p>
+              <p class="doctor-card__exp">Стаж 14 лет</p>
+              <button class="btn btn--outline btn--sm" data-open-modal="booking" data-doctor="Мария Ковалёва">Записаться</button>
+            </div>
+          </article>
+          <article class="doctor-card reveal">
+            <div class="doctor-card__photo">
+              <svg viewBox="0 0 200 220" aria-label="Фото врача">
+                <defs><linearGradient id="docBg3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F0F0F0"/><stop offset="1" stop-color="#D9D9D9"/></linearGradient></defs>
+                <rect width="200" height="220" fill="url(#docBg3)"/>
+                <circle cx="100" cy="88" r="38" fill="#858585"/>
+                <path d="M62 80c0-26 18-40 38-40s38 14 38 40c-4-18-18-26-38-26s-34 8-38 26z" fill="#333"/>
+                <rect x="78" y="118" width="44" height="18" rx="9" fill="#858585"/>
+                <path d="M100 136c-38 0-58 18-62 44v40h124v-40c-4-26-24-44-62-44z" fill="#6A6A6A"/>
+                <path d="M86 142l14 12 14-12" stroke="#F0F0F0" stroke-width="4" fill="none"/>
+                <path d="M124 162h22M135 151v22" stroke="#BDBDBD" stroke-width="5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="doctor-card__info">
+              <h3>Дмитрий Орлов</h3>
+              <p class="doctor-card__spec">Хирург-имплантолог</p>
+              <p class="doctor-card__exp">Стаж 19 лет</p>
+              <button class="btn btn--outline btn--sm" data-open-modal="booking" data-doctor="Дмитрий Орлов">Записаться</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- О НАС + ВИДЕО -->
+    <section class="section section--alt" id="about">
+      <div class="container about__grid">
+        <div class="about__text reveal">
+          <span class="section__tag">О клинике</span>
+          <h2>Технологии, которые видно</h2>
+          <p>Мы открылись в Волгограде, чтобы доказать: стоматология может быть честной. Открытые кабинеты, снимки на экране, смета до лечения — вы всегда понимаете, за что платите.</p>
+          <ul class="check-list">
+            <li>Кабинеты с открытой планировкой — никаких «закрытых дверей»</li>
+            <li>Все снимки и план лечения остаются у вас</li>
+            <li>Работаем по протоколам доказательной медицины</li>
+          </ul>
+        </div>
+        <div class="about__video reveal">
+          <div class="video-placeholder" id="videoPlaceholder" role="button" tabindex="0" aria-label="Смотреть видео-обзор клиники">
+            <svg class="video-placeholder__bg" viewBox="0 0 640 400" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="vidBg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#1976D2"/><stop offset="1" stop-color="#2196F3"/>
+                </linearGradient>
+              </defs>
+              <rect width="640" height="400" fill="url(#vidBg)"/>
+              <circle cx="540" cy="70" r="120" fill="#FFFFFF" opacity="0.08"/>
+              <circle cx="90" cy="330" r="90" fill="#FFFFFF" opacity="0.08"/>
+              <rect x="60" y="70" width="220" height="120" rx="12" fill="#FFFFFF" opacity="0.14"/>
+              <rect x="60" y="210" width="140" height="90" rx="12" fill="#FFFFFF" opacity="0.1"/>
+              <rect x="320" y="230" width="260" height="110" rx="12" fill="#FFFFFF" opacity="0.12"/>
+              <path d="M400 150c-14 0-22 9-22 21 0 8 2 12 4 21 1.4 7 2.6 17 4.3 25 .9 5 7.7 5.4 9 .4 1.7-6.8 2.2-17.7 7-17.7s5.3 10.9 7 17.7c1.3 5 8.1 4.6 9-.4 1.7-8 2.9-18 4.3-25 2-9 4-13 4-21 0-12-8-21-22-21z" fill="#FFFFFF" opacity="0.9"/>
+            </svg>
+            <button class="video-placeholder__play" aria-label="Воспроизвести">
+              <svg viewBox="0 0 24 24" width="30" height="30"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+            </button>
+            <span class="video-placeholder__label">Видео-обзор клиники · 30 сек</span>
+          </div>
+          <p class="video-placeholder__note" id="videoNote" hidden>Здесь будет размещён видео-обзор клиники (30 секунд).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ТЕХНОЛОГИИ -->
+    <section class="section" id="tech">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Оборудование</span>
+          <h2>Технологии</h2>
+          <p>Инвестируем в оборудование, а не в рекламу.</p>
+        </div>
+        <div class="tech-grid">
+          <div class="tech-card reveal">
+            <div class="tech-card__icon">
+              <svg viewBox="0 0 24 24" width="32" height="32"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M6 3h9l4 4v6M9 3v4h4M12 13v4M8 21h8M12 17v4M9 13h6"/><circle cx="12" cy="13" r="2.5"/></svg>
+            </div>
+            <h3>Дентальный микроскоп</h3>
+            <p>Увеличение до 25×: видим каналы и трещины, невидимые глазу. Точнее лечение — дольше служит пломба.</p>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-card__icon">
+              <svg viewBox="0 0 24 24" width="32" height="32"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 8l8-5 8 5v8l-8 5-8-5zM4 8l8 5 8-5M12 13v8"/></svg>
+            </div>
+            <h3>3D-сканер</h3>
+            <p>Цифровой слепок за 3 минуты вместо ложки с массой. Модель зубов — на экране, коронки садятся точнее.</p>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-card__icon">
+              <svg viewBox="0 0 24 24" width="32" height="32"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M12 3c3 4 5 6.5 5 9.5a5 5 0 01-10 0C7 9.5 9 7 12 3zM4 18c1 1 2 1.5 3 1.5M20 18c-1 1-2 1.5-3 1.5"/></svg>
+            </div>
+            <h3>Air Flow</h3>
+            <p>Деликатное снятие налёта струёй воды с порошком на глицине. Безопасно для эмали и дёсен.</p>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-card__icon">
+              <svg viewBox="0 0 24 24" width="32" height="32"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M3 5h18v12H3zM7 21h10M12 17v4"/><circle cx="12" cy="11" r="3.5"/><path d="M12 8v-1M12 15v-1M9 11H8M16 11h-1"/></svg>
+            </div>
+            <h3>Цифровой рентген</h3>
+            <p>Лучевая нагрузка до 90% ниже плёночного. Снимок на экране за 5 секунд — сразу обсуждаем с вами.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- КАЛЬКУЛЯТОР -->
+    <section class="section section--alt" id="calc">
+      <div class="container calc__grid">
+        <div class="calc__text reveal">
+          <span class="section__tag">Калькулятор</span>
+          <h2>Примерная стоимость за 30 секунд</h2>
+          <p>Выберите услугу и укажите количество — сразу увидите ориентировочный бюджет.</p>
+          <p class="calc__disclaimer">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 8v5m0 3.5v.5M12 22a10 10 0 110-20 10 10 0 010 20z"/></svg>
+            Точная цена — после диагностики. Смета фиксируется в договоре и не меняется.
+          </p>
+        </div>
+        <div class="calc reveal">
+          <label class="calc__field">
+            <span>Услуга</span>
+            <select id="calcService">
+              <option value="7300" data-label="Профгигиена (комплекс)">Профгигиена (комплекс) — 7 300 ₽</option>
+              <option value="5800" data-label="Лечение кариеса">Лечение кариеса — 5 800 ₽</option>
+              <option value="9500" data-label="Лечение пульпита">Лечение пульпита — 9 500 ₽</option>
+              <option value="15000" data-label="Коронка (металлокерамика)">Коронка (металлокерамика) — 15 000 ₽</option>
+              <option value="24000" data-label="Коронка (диоксид циркония)">Коронка (диоксид циркония) — 24 000 ₽</option>
+              <option value="35000" data-label="Имплантация (под ключ)">Имплантация (под ключ) — 35 000 ₽</option>
+            </select>
+          </label>
+          <label class="calc__field">
+            <span>Количество (зубов / единиц)</span>
+            <div class="calc__qty">
+              <button type="button" id="calcMinus" aria-label="Уменьшить">−</button>
+              <input type="number" id="calcQty" value="1" min="1" max="32" inputmode="numeric">
+              <button type="button" id="calcPlus" aria-label="Увеличить">+</button>
+            </div>
+          </label>
+          <div class="calc__result">
+            <span>Примерная стоимость</span>
+            <strong id="calcTotal">7 300 ₽</strong>
+            <em id="calcNote">Профгигиена (комплекс), 1 шт.</em>
+          </div>
+          <button class="btn btn--primary btn--block" data-open-modal="booking">Записаться на диагностику</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ГАЛЕРЕЯ ДО/ПОСЛЕ -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Работы</span>
+          <h2>До / После</h2>
+          <p>Реальные случаи с указанием стоимости. Нажмите, чтобы рассмотреть.</p>
+        </div>
+        <div class="gallery">
+          <figure class="gallery__item reveal" data-lightbox tabindex="0" role="button"
+                  data-title="Лечение кариеса, 2 260 ₽" data-desc="Кариес 14 зуба. Один визит, фотополимерная реставрация.">
+            <div class="ba">
+              <svg viewBox="0 0 320 180" class="ba__img">
+                <rect width="160" height="180" fill="#FFF3E0"/>
+                <rect x="160" width="160" height="180" fill="#E8F5E9"/>
+                <path d="M80 55c-22 0-34 14-34 33 0 13 5 19 7 32 2 11 4 26 6 39 1.4 8 12 8.6 14 .7 2.6-10 3.4-27.7 11-27.7s8.4 17.7 11 27.7c2 7.9 12.6 7.3 14-.7 2-13 4-28 6-39 2-13 7-19 7-32 0-19-12-33-34-33z" fill="#FFE0B2" stroke="#EF9A9A" stroke-width="3"/>
+                <circle cx="68" cy="72" r="9" fill="#EF9A9A"/>
+                <circle cx="92" cy="80" r="6" fill="#EF9A9A"/>
+                <path d="M240 55c-22 0-34 14-34 33 0 13 5 19 7 32 2 11 4 26 6 39 1.4 8 12 8.6 14 .7 2.6-10 3.4-27.7 11-27.7s8.4 17.7 11 27.7c2 7.9 12.6 7.3 14-.7 2-13 4-28 6-39 2-13 7-19 7-32 0-19-12-33-34-33z" fill="#FFFFFF" stroke="#81C784" stroke-width="3"/>
+                <rect x="149" width="22" height="180" fill="#212121" opacity="0.12"/>
+              </svg>
+              <span class="ba__tag ba__tag--before">До</span>
+              <span class="ba__tag ba__tag--after">После</span>
+            </div>
+            <figcaption>Лечение кариеса · <strong>2 260 ₽</strong></figcaption>
+          </figure>
+          <figure class="gallery__item reveal" data-lightbox tabindex="0" role="button"
+                  data-title="Профгигиена Air Flow, 7 300 ₽" data-desc="Комплексная чистка: ультразвук + Air Flow + полировка.">
+            <div class="ba">
+              <svg viewBox="0 0 320 180" class="ba__img">
+                <rect width="160" height="180" fill="#FFF8E1"/>
+                <rect x="160" width="160" height="180" fill="#E3F2FD"/>
+                <g fill="#FFECB3" stroke="#FFB74D" stroke-width="2.5">
+                  <path d="M40 95c0-14 10-22 20-22s20 8 20 22c0 8-2 12-3.5 19-1.2 6-2 15-3.4 22-1 5.5-8 6-9.5.5-1.8-6.5-2.3-16.5-6.6-16.5s-4.8 10-6.6 16.5c-1.5 5.5-8.5 5-9.5-.5-1.4-7-2.2-16-3.4-22-1.5-7-3.5-11-3.5-19z"/>
+                  <path d="M85 95c0-14 10-22 20-22s20 8 20 22c0 8-2 12-3.5 19-1.2 6-2 15-3.4 22-1 5.5-8 6-9.5.5-1.8-6.5-2.3-16.5-6.6-16.5s-4.8 10-6.6 16.5c-1.5 5.5-8.5 5-9.5-.5-1.4-7-2.2-16-3.4-22-1.5-7-3.5-11-3.5-19z"/>
+                </g>
+                <g fill="#FFFFFF" stroke="#64B5F6" stroke-width="2.5">
+                  <path d="M195 95c0-14 10-22 20-22s20 8 20 22c0 8-2 12-3.5 19-1.2 6-2 15-3.4 22-1 5.5-8 6-9.5.5-1.8-6.5-2.3-16.5-6.6-16.5s-4.8 10-6.6 16.5c-1.5 5.5-8.5 5-9.5-.5-1.4-7-2.2-16-3.4-22-1.5-7-3.5-11-3.5-19z"/>
+                  <path d="M240 95c0-14 10-22 20-22s20 8 20 22c0 8-2 12-3.5 19-1.2 6-2 15-3.4 22-1 5.5-8 6-9.5.5-1.8-6.5-2.3-16.5-6.6-16.5s-4.8 10-6.6 16.5c-1.5 5.5-8.5 5-9.5-.5-1.4-7-2.2-16-3.4-22-1.5-7-3.5-11-3.5-19z"/>
+                </g>
+                <path d="M258 60l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#BBDEFB"/>
+                <rect x="149" width="22" height="180" fill="#212121" opacity="0.12"/>
+              </svg>
+              <span class="ba__tag ba__tag--before">До</span>
+              <span class="ba__tag ba__tag--after">После</span>
+            </div>
+            <figcaption>Профгигиена Air Flow · <strong>7 300 ₽</strong></figcaption>
+          </figure>
+          <figure class="gallery__item reveal" data-lightbox tabindex="0" role="button"
+                  data-title="Коронка на импланте, 58 000 ₽" data-desc="Имплантация с коронкой из диоксида циркония, под ключ.">
+            <div class="ba">
+              <svg viewBox="0 0 320 180" class="ba__img">
+                <rect width="160" height="180" fill="#FCE4EC"/>
+                <rect x="160" width="160" height="180" fill="#E8F5E9"/>
+                <path d="M20 70h120" stroke="#F8BBD0" stroke-width="10" stroke-linecap="round"/>
+                <g fill="#FFFFFF" stroke="#F48FB1" stroke-width="2.5">
+                  <path d="M32 60c0-12 9-19 17-19s17 7 17 19c0 7-1.6 10-3 16-1 5-1.7 13-2.9 19-.9 4.7-6.8 5.2-8.1.5-1.6-5.6-2-14.3-5.6-14.3s-4 8.7-5.6 14.3c-1.3 4.7-7.2 4.2-8.1-.5-1.2-6-1.9-14-2.9-19-1.4-6-3-9-3-16z"/>
+                  <path d="M94 60c0-12 9-19 17-19s17 7 17 19c0 7-1.6 10-3 16-1 5-1.7 13-2.9 19-.9 4.7-6.8 5.2-8.1.5-1.6-5.6-2-14.3-5.6-14.3s-4 8.7-5.6 14.3c-1.3 4.7-7.2 4.2-8.1-.5-1.2-6-1.9-14-2.9-19-1.4-6-3-9-3-16z"/>
+                </g>
+                <rect x="71" y="50" width="18" height="40" rx="9" fill="#F8BBD0" stroke="#F48FB1" stroke-width="2" stroke-dasharray="4 3"/>
+                <path d="M180 70h120" stroke="#C8E6C9" stroke-width="10" stroke-linecap="round"/>
+                <g>
+                  <path d="M192 60c0-12 9-19 17-19s17 7 17 19c0 7-1.6 10-3 16-1 5-1.7 13-2.9 19-.9 4.7-6.8 5.2-8.1.5-1.6-5.6-2-14.3-5.6-14.3s-4 8.7-5.6 14.3c-1.3 4.7-7.2 4.2-8.1-.5-1.2-6-1.9-14-2.9-19-1.4-6-3-9-3-16z" fill="#FFFFFF" stroke="#81C784" stroke-width="2.5"/>
+                  <path d="M254 60c0-12 9-19 17-19s17 7 17 19c0 7-1.6 10-3 16-1 5-1.7 13-2.9 19-.9 4.7-6.8 5.2-8.1.5-1.6-5.6-2-14.3-5.6-14.3s-4 8.7-5.6 14.3c-1.3 4.7-7.2 4.2-8.1-.5-1.2-6-1.9-14-2.9-19-1.4-6-3-9-3-16z" fill="#FFFFFF" stroke="#81C784" stroke-width="2.5"/>
+                  <path d="M231 62c0-11 8-18 16-18s16 7 16 18c0 6.5-1.5 9.4-2.8 15-1 4.7-1.6 12.2-2.7 17.8-.8 4.4-6.4 4.9-7.6.5-1.5-5.3-1.9-13.5-5.3-13.5s-3.8 8.2-5.3 13.5c-1.2 4.4-6.8 3.9-7.6-.5-1.1-5.6-1.7-13.1-2.7-17.8-1.3-5.6-2.8-8.5-2.8-15z" fill="#F1F8E9" stroke="#66BB6A" stroke-width="2.5"/>
+                  <rect x="243" y="82" width="8" height="26" rx="3" fill="#B0BEC5"/>
+                </g>
+                <rect x="149" width="22" height="180" fill="#212121" opacity="0.12"/>
+              </svg>
+              <span class="ba__tag ba__tag--before">До</span>
+              <span class="ba__tag ba__tag--after">После</span>
+            </div>
+            <figcaption>Коронка на импланте · <strong>58 000 ₽</strong></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ОТЗЫВЫ -->
+    <section class="section section--alt" id="reviews">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Отзывы</span>
+          <h2>Что говорят пациенты</h2>
+          <p>68+ отзывов на независимых площадках, средняя оценка 4,9.</p>
+        </div>
+        <div class="reviews reveal">
+          <div class="reviews__track" id="reviewsTrack">
+            <article class="review-card">
+              <div class="review-card__stars" data-stars="5" aria-label="Оценка 5 из 5"></div>
+              <p>«Первый раз в жизни не боялась ценника. Смету показали до лечения, всё сошлось до рубля. Пломба стоит третий год.»</p>
+              <footer><strong>Ольга К.</strong><span>12 мая 2025</span></footer>
+            </article>
+            <article class="review-card">
+              <div class="review-card__stars" data-stars="5" aria-label="Оценка 5 из 5"></div>
+              <p>«Лечили пульпит под микроскопом. Всё показывали на экране и объясняли. Ни одного лишнего пункта в чеке.»</p>
+              <footer><strong>Игорь С.</strong><span>28 марта 2025</span></footer>
+            </article>
+            <article class="review-card">
+              <div class="review-card__stars" data-stars="4" aria-label="Оценка 4 из 5"></div>
+              <p>«Записался через сайт вечером — перезвонили за 10 минут. Чистка Air Flow прошла деликатно, рекомендую.»</p>
+              <footer><strong>Наталья В.</strong><span>9 февраля 2025</span></footer>
+            </article>
+            <article class="review-card">
+              <div class="review-card__stars" data-stars="5" aria-label="Оценка 5 из 5"></div>
+              <p>«Поставили коронку из циркония за неделю. Примерка цифровая, без слепков — вообще другой уровень сервиса.»</p>
+              <footer><strong>Сергей П.</strong><span>17 января 2025</span></footer>
+            </article>
+          </div>
+          <div class="reviews__controls">
+            <button class="reviews__btn" id="reviewPrev" aria-label="Предыдущий отзыв">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M15 6l-6 6 6 6"/></svg>
+            </button>
+            <div class="reviews__dots" id="reviewDots"></div>
+            <button class="reviews__btn" id="reviewNext" aria-label="Следующий отзыв">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M9 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ЛИЦЕНЗИЯ И ГАРАНТИИ -->
+    <section class="section" id="license">
+      <div class="container license__grid">
+        <div class="license__doc reveal">
+          <div class="license__frame">
+            <svg viewBox="0 0 300 400" aria-label="Лицензия на медицинскую деятельность">
+              <defs><linearGradient id="licBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F8F9FA"/></linearGradient></defs>
+              <rect x="8" y="8" width="284" height="384" rx="10" fill="url(#licBg)" stroke="#E0E0E0" stroke-width="2"/>
+              <rect x="20" y="20" width="260" height="360" rx="6" fill="none" stroke="#2196F3" stroke-width="1.5" stroke-dasharray="6 4"/>
+              <text x="150" y="62" text-anchor="middle" font-family="Poppins, sans-serif" font-size="17" font-weight="700" fill="#212121">ЛИЦЕНЗИЯ</text>
+              <text x="150" y="84" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#757575">на медицинскую деятельность</text>
+              <text x="150" y="112" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#2196F3">ЛО-34-01-004321</text>
+              <g stroke="#BDBDBD" stroke-width="3" stroke-linecap="round">
+                <line x1="50" y1="140" x2="250" y2="140"/>
+                <line x1="50" y1="158" x2="230" y2="158"/>
+                <line x1="50" y1="176" x2="250" y2="176"/>
+                <line x1="50" y1="194" x2="210" y2="194"/>
+                <line x1="50" y1="212" x2="250" y2="212"/>
+                <line x1="50" y1="230" x2="190" y2="230"/>
+                <line x1="50" y1="248" x2="240" y2="248"/>
+              </g>
+              <g>
+                <path d="M70 300c10-12 30 4 20 14-8 8-24-2-12-14" fill="none" stroke="#2196F3" stroke-width="2.5" stroke-linecap="round"/>
+                <text x="60" y="335" font-family="Inter, sans-serif" font-size="9" fill="#757575">М.П.</text>
+                <circle cx="220" cy="312" r="34" fill="none" stroke="#4CAF50" stroke-width="3"/>
+                <path d="M206 312l10 10 20-22" fill="none" stroke="#4CAF50" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="license__text reveal">
+          <span class="section__tag">Документы</span>
+          <h2>Лицензия и гарантии</h2>
+          <p>Медицинская лицензия ЛО-34-01-004321, выдана Министерством здравоохранения Волгоградской области. Оригинал — в холле клиники.</p>
+          <ul class="check-list">
+            <li>Гарантия на пломбы — до 3 лет</li>
+            <li>Гарантия на коронки и виниры — до 10 лет</li>
+            <li>Гарантия на импланты — пожизненная от производителя</li>
+            <li>Бесплатные контрольные осмотры каждые 6 месяцев</li>
+            <li>Страхование ответственности клиники</li>
+          </ul>
+          <p class="license__note">Все гарантийные обязательства прописаны в договоре на оказание медицинских услуг.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ФОРМА ЗАПИСИ -->
+    <section class="section section--alt" id="booking">
+      <div class="container booking__grid">
+        <div class="booking__text reveal">
+          <span class="section__tag">Запись</span>
+          <h2>Запишитесь на приём</h2>
+          <p>Оставьте заявку — администратор перезвонит в течение 15 минут в рабочее время и подберёт удобное окно.</p>
+          <div class="booking__contacts">
+            <a href="tel:+78442000000" class="booking__contact">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.9.6 2.8.7a2 2 0 011.7 2z"/></svg>
+              +7 (8442) 00-00-00
+            </a>
+            <span class="booking__contact">
+              <svg viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 7v5l3.5 2"/></svg>
+              Ежедневно 9:00–20:00
+            </span>
+          </div>
+        </div>
+        <form class="form reveal" id="bookingForm" novalidate>
+          <div class="form__field">
+            <label for="fName">Имя</label>
+            <input type="text" id="fName" name="name" placeholder="Как к вам обращаться" required minlength="2">
+            <span class="form__error">Введите имя (минимум 2 символа)</span>
+          </div>
+          <div class="form__field">
+            <label for="fPhone">Телефон</label>
+            <input type="tel" id="fPhone" name="phone" placeholder="+7 (___) ___-__-__" required>
+            <span class="form__error">Введите корректный номер телефона</span>
+          </div>
+          <div class="form__field">
+            <label for="fService">Услуга</label>
+            <select id="fService" name="service" required>
+              <option value="">Выберите услугу</option>
+              <option>Профгигиена</option>
+              <option>Лечение</option>
+              <option>Протезирование</option>
+              <option>Консультация / диагностика</option>
+            </select>
+            <span class="form__error">Выберите услугу</span>
+          </div>
+          <div class="form__field">
+            <label for="fTime">Удобное время</label>
+            <select id="fTime" name="time" required>
+              <option value="">Выберите время</option>
+              <option>Утро (9:00–12:00)</option>
+              <option>День (12:00–16:00)</option>
+              <option>Вечер (16:00–20:00)</option>
+            </select>
+            <span class="form__error">Выберите удобное время</span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--lg btn--block">Записаться</button>
+          <p class="form__policy">Нажимая кнопку, вы соглашаетесь с <a href="#" id="policyLink">политикой конфиденциальности</a></p>
+          <div class="form__success" id="formSuccess" hidden>
+            <svg viewBox="0 0 24 24" width="40" height="40"><circle cx="12" cy="12" r="11" fill="#4CAF50"/><path fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M7 12.5l3.2 3.2L17 9"/></svg>
+            <strong>Заявка отправлена!</strong>
+            <p>Мы перезвоним в течение 15 минут в рабочее время.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- КАРТА -->
+    <section class="section" id="contacts">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Как добраться</span>
+          <h2>Мы на карте</h2>
+          <p>Волгоград, ул. Еременко, 25. Остановка «Улица Еременко» — 2 минуты пешком.</p>
+        </div>
+        <div class="map reveal">
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?text=%D0%92%D0%BE%D0%BB%D0%B3%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%95%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BA%D0%BE%2C%2025&z=16"
+            width="100%" height="420" frameborder="0" allowfullscreen loading="lazy"
+            title="Карта: Волгоград, ул. Еременко, 25"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ФУТЕР -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <a href="#top" class="logo logo--footer">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <path fill="currentColor" d="M12 2C8.5 2 6 4 6 7.2c0 1.9.7 3.1 1.1 5.3.3 1.7.6 4.1 1 6.3.2 1.2 1.9 1.3 2.2.1.4-1.6.5-4.4 1.7-4.4s1.3 2.8 1.7 4.4c.3 1.2 2 1.1 2.2-.1.4-2.2.7-4.6 1-6.3.4-2.2 1.1-3.4 1.1-5.3C18 4 15.5 2 12 2z"/>
+          </svg>
+          <span>Прозрачная Стоматология</span>
+        </a>
+        <p>Честные цены и современные технологии в Волгограде.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Контакты</h4>
+        <a href="tel:+78442000000">+7 (8442) 00-00-00</a>
+        <a href="mailto:hello@smile-vlg.ru">hello@smile-vlg.ru</a>
+        <span>Волгоград, ул. Еременко, 25</span>
+      </div>
+      <div class="footer__col">
+        <h4>Режим работы</h4>
+        <span>Пн–Пт: 9:00–20:00</span>
+        <span>Сб–Вс: 10:00–18:00</span>
+      </div>
+      <div class="footer__col">
+        <h4>Документы</h4>
+        <a href="#" id="policyLinkFooter">Политика конфиденциальности</a>
+        <span>Лицензия ЛО-34-01-004321</span>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© 2026 Прозрачная Стоматология, Волгоград. Имеются противопоказания, необходима консультация специалиста.</span>
+    </div>
+  </footer>
+
+  <!-- Модальное окно записи -->
+  <div class="modal" id="modalBooking" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__box">
+      <button class="modal__close" data-close-modal aria-label="Закрыть">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <h3 id="modalTitle">Записаться на приём</h3>
+      <p class="modal__subtitle">Перезвоним за 15 минут и подберём время.</p>
+      <form id="modalForm" novalidate>
+        <div class="form__field">
+          <label for="mName">Имя</label>
+          <input type="text" id="mName" name="name" placeholder="Ваше имя" required minlength="2">
+          <span class="form__error">Введите имя (минимум 2 символа)</span>
+        </div>
+        <div class="form__field">
+          <label for="mPhone">Телефон</label>
+          <input type="tel" id="mPhone" name="phone" placeholder="+7 (___) ___-__-__" required>
+          <span class="form__error">Введите корректный номер телефона</span>
+        </div>
+        <div class="form__field" id="modalDoctorField" hidden>
+          <label for="mDoctor">Врач</label>
+          <input type="text" id="mDoctor" name="doctor" readonly>
+        </div>
+        <button type="submit" class="btn btn--primary btn--block">Отправить заявку</button>
+      </form>
+      <div class="form__success" id="modalSuccess" hidden>
+        <svg viewBox="0 0 24 24" width="40" height="40"><circle cx="12" cy="12" r="11" fill="#4CAF50"/><path fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M7 12.5l3.2 3.2L17 9"/></svg>
+        <strong>Готово!</strong>
+        <p>Заявка принята, ждите звонка.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Модальное окно политики -->
+  <div class="modal" id="modalPolicy" role="dialog" aria-modal="true" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__box modal__box--wide">
+      <button class="modal__close" data-close-modal aria-label="Закрыть">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <h3>Политика конфиденциальности</h3>
+      <div class="modal__text">
+        <p>Оставляя заявку на сайте, вы соглашаетесь на обработку персональных данных (имя, телефон) в целях записи на приём и обратной связи.</p>
+        <p>Данные не передаются третьим лицам, хранятся в защищённой системе и удаляются по первому запросу. Запрос можно направить на hello@smile-vlg.ru.</p>
+        <p>Обработка осуществляется в соответствии с Федеральным законом № 152-ФЗ «О персональных данных».</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Лайтбокс -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" hidden>
+    <div class="lightbox__backdrop" data-close-lightbox></div>
+    <div class="lightbox__box">
+      <button class="lightbox__close" data-close-lightbox aria-label="Закрыть">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <div class="lightbox__media" id="lightboxMedia"></div>
+      <h3 id="lightboxTitle"></h3>
+      <p id="lightboxDesc"></p>
+    </div>
+  </div>
+
+  <!-- Чат-бот -->
+  <div class="chat" id="chat">
+    <button class="chat__fab" id="chatFab" aria-label="Открыть чат" aria-expanded="false">
+      <svg class="chat__icon-open" viewBox="0 0 24 24" width="26" height="26"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M21 12a8 8 0 01-8 8H5l-2 2V12a8 8 0 018-8h2a8 8 0 018 8z"/><circle cx="9" cy="12" r="1.2" fill="currentColor"/><circle cx="13" cy="12" r="1.2" fill="currentColor"/><circle cx="17" cy="12" r="1.2" fill="currentColor"/></svg>
+      <svg class="chat__icon-close" viewBox="0 0 24 24" width="22" height="22"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div class="chat__panel" id="chatPanel" hidden>
+      <div class="chat__header">
+        <div class="chat__avatar">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2C8.5 2 6 4 6 7.2c0 1.9.7 3.1 1.1 5.3.3 1.7.6 4.1 1 6.3.2 1.2 1.9 1.3 2.2.1.4-1.6.5-4.4 1.7-4.4s1.3 2.8 1.7 4.4c.3 1.2 2 1.1 2.2-.1.4-2.2.7-4.6 1-6.3.4-2.2 1.1-3.4 1.1-5.3C18 4 15.5 2 12 2z"/></svg>
+        </div>
+        <div><strong>Ассистент клиники</strong><span>онлайн · отвечает мгновенно</span></div>
+      </div>
+      <div class="chat__messages" id="chatMessages"></div>
+      <div class="chat__quick" id="chatQuick">
+        <button data-q="prices">Цены</button>
+        <button data-q="hours">Режим работы</button>
+        <button data-q="address">Адрес</button>
+        <button data-q="booking">Записаться</button>
+      </div>
+      <form class="chat__input" id="chatForm">
+        <input type="text" id="chatText" placeholder="Напишите вопрос…" autocomplete="off" maxlength="200">
+        <button type="submit" aria-label="Отправить">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M3 11l18-8-8 18-2.5-7.5z"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Плавающая кнопка «Наверх» -->
+  <button class="to-top" id="toTop" aria-label="Наверх">
+    <svg viewBox="0 0 24 24" width="22" height="22"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

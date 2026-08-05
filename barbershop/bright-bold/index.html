@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ДЁРЗО — салон красоты | Твой стиль. Твои правила.</title>
+  <meta name="description" content="ДЁРЗО — дерзкий салон красоты: стрижки, окрашивание, маникюр и педикюр. Твой стиль. Твои правила.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Плавающий декор -->
+  <div class="decor" aria-hidden="true">
+    <svg class="decor__item decor__item--star1" data-speed="0.12" viewBox="0 0 40 40" width="40" height="40"><path d="M20 0l4.5 15.5L40 20l-15.5 4.5L20 40l-4.5-15.5L0 20l15.5-4.5z" fill="#C8FF2E"/></svg>
+    <svg class="decor__item decor__item--star2" data-speed="-0.08" viewBox="0 0 40 40" width="26" height="26"><path d="M20 0l4.5 15.5L40 20l-15.5 4.5L20 40l-4.5-15.5L0 20l15.5-4.5z" fill="#FF2E8B"/></svg>
+    <svg class="decor__item decor__item--star3" data-speed="0.18" viewBox="0 0 40 40" width="32" height="32"><path d="M20 0l4.5 15.5L40 20l-15.5 4.5L20 40l-4.5-15.5L0 20l15.5-4.5z" fill="#6C2BD9"/></svg>
+    <svg class="decor__item decor__item--blob1" data-speed="-0.14" viewBox="0 0 120 120" width="120" height="120"><path d="M60 8c22 0 46 14 50 38s-14 48-36 58S24 114 12 92 4 40 22 22s24-14 38-14z" fill="none" stroke="#FF2E8B" stroke-width="3"/></svg>
+    <svg class="decor__item decor__item--blob2" data-speed="0.1" viewBox="0 0 120 120" width="90" height="90"><circle cx="60" cy="60" r="46" fill="none" stroke="#C8FF2E" stroke-width="3" stroke-dasharray="10 8"/></svg>
+    <svg class="decor__item decor__item--line1" data-speed="-0.06" viewBox="0 0 200 40" width="180" height="36"><path d="M2 20 Q 30 2 60 20 T 118 20 T 176 20 T 198 20" fill="none" stroke="#6C2BD9" stroke-width="4" stroke-linecap="round"/></svg>
+    <svg class="decor__item decor__item--line2" data-speed="0.2" viewBox="0 0 200 40" width="140" height="28"><path d="M2 20 Q 30 2 60 20 T 118 20 T 176 20 T 198 20" fill="none" stroke="#FF2E8B" stroke-width="4" stroke-linecap="round"/></svg>
+  </div>
+
+  <!-- Шапка -->
+  <header class="header" id="header">
+    <a class="header__logo" href="#hero" aria-label="ДЁРЗО — на главную">ДЁРЗО<span>.</span></a>
+    <nav class="header__nav" aria-label="Основная навигация">
+      <a href="#services">Услуги</a>
+      <a href="#look">Образы</a>
+      <a href="#gallery">Работы</a>
+      <a href="#masters">Мастера</a>
+      <a href="#prices">Цены</a>
+    </nav>
+    <a class="header__cta" href="#booking">Записаться</a>
+    <button class="header__burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Мобильная навигация">
+    <a href="#services">Услуги</a>
+    <a href="#look">Образы</a>
+    <a href="#gallery">Работы</a>
+    <a href="#masters">Мастера</a>
+    <a href="#prices">Цены</a>
+    <a href="#booking" class="mobile-nav__cta">Записаться</a>
+  </nav>
+
+  <main>
+    <!-- 1. HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__inner">
+        <div class="hero__content">
+          <p class="hero__tag reveal-up">салон красоты · москва</p>
+          <h1 class="hero__title">
+            <span id="typewriter" aria-live="polite"></span><span class="hero__cursor" aria-hidden="true"></span>
+          </h1>
+          <p class="hero__text reveal-up">Стрижки, окрашивание, маникюр и педикюр без шаблонов и занудства. Приходи как есть — уйдёшь как звезда.</p>
+          <div class="hero__actions reveal-up">
+            <a href="#booking" class="btn btn--neon">Хочу так же</a>
+            <a href="#gallery" class="btn btn--ghost">Смотреть работы</a>
+          </div>
+        </div>
+        <div class="hero__visual reveal-right" role="img" aria-label="Стилизованная иллюстрация: мастер делает стрижку клиенту">
+          <svg class="hero__scene" viewBox="0 0 480 560" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#6C2BD9"/><stop offset="1" stop-color="#FF2E8B"/>
+              </linearGradient>
+              <linearGradient id="hg2" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#FF2E8B"/><stop offset="1" stop-color="#C8FF2E"/>
+              </linearGradient>
+              <radialGradient id="hg3" cx="0.5" cy="0.35" r="0.8">
+                <stop offset="0" stop-color="#8b46f0"/><stop offset="1" stop-color="#1A1A2E"/>
+              </radialGradient>
+            </defs>
+            <rect x="0" y="0" width="480" height="560" rx="28" fill="url(#hg3)"/>
+            <circle cx="240" cy="200" r="150" fill="none" stroke="#FF2E8B" stroke-width="2" stroke-dasharray="6 10" opacity="0.7"/>
+            <circle cx="240" cy="200" r="118" fill="none" stroke="#C8FF2E" stroke-width="2" opacity="0.5"/>
+            <!-- клиент: голова с длинными волосами -->
+            <g>
+              <path d="M240 96c-52 0-84 38-84 92 0 34 10 66 2 104-6 28-22 44-22 44s30 10 52-2c-6 26-2 42-2 42h108s4-16-2-42c22 12 52 2 52 2s-16-16-22-44c-8-38 2-70 2-104 0-54-32-92-84-92z" fill="url(#hg1)"/>
+              <ellipse cx="240" cy="196" rx="46" ry="52" fill="#F2C9A8"/>
+              <path d="M196 176c6-40 88-40 88 0 0-30-16-58-44-58s-44 28-44 58z" fill="#2a1b4a"/>
+              <circle cx="222" cy="196" r="4.5" fill="#1A1A2E"/>
+              <circle cx="258" cy="196" r="4.5" fill="#1A1A2E"/>
+              <path d="M228 224q12 10 24 0" stroke="#c25e6e" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <path d="M204 190q10-8 22-4M276 190q-10-8-22-4" stroke="#1A1A2E" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+            </g>
+            <!-- плечи клиента -->
+            <path d="M150 380c10-52 46-78 90-78s80 26 90 78l6 60H144z" fill="#1f1440"/>
+            <path d="M150 380c10-52 46-78 90-78s80 26 90 78" fill="none" stroke="#C8FF2E" stroke-width="3"/>
+            <!-- рука мастера с ножницами -->
+            <g class="hero__scissors">
+              <path d="M392 300l-66-58" stroke="#F2C9A8" stroke-width="22" stroke-linecap="round"/>
+              <g transform="translate(318 236) rotate(24)">
+                <circle cx="-14" cy="10" r="10" fill="none" stroke="#C8FF2E" stroke-width="5"/>
+                <circle cx="10" cy="16" r="10" fill="none" stroke="#C8FF2E" stroke-width="5"/>
+                <path d="M-8 2L46-34M6 8L52-16" stroke="#e8e8f2" stroke-width="6" stroke-linecap="round"/>
+              </g>
+            </g>
+            <!-- пряди, которые «отрезаются» -->
+            <path d="M300 150q30 8 44 34" stroke="url(#hg2)" stroke-width="8" fill="none" stroke-linecap="round" class="hero__strand hero__strand--1"/>
+            <path d="M182 130q-26 16-30 44" stroke="url(#hg2)" stroke-width="8" fill="none" stroke-linecap="round" class="hero__strand hero__strand--2"/>
+            <!-- звёзды -->
+            <path class="hero__spark hero__spark--1" d="M96 110l5 15 15 5-15 5-5 15-5-15-15-5 15-5z" fill="#C8FF2E"/>
+            <path class="hero__spark hero__spark--2" d="M398 120l4 12 12 4-12 4-4 12-4-12-12-4 12-4z" fill="#FF2E8B"/>
+            <path class="hero__spark hero__spark--3" d="M370 430l5 14 14 5-14 5-5 14-5-14-14-5 14-5z" fill="#C8FF2E"/>
+            <text x="30" y="520" font-family="Unbounded, sans-serif" font-size="26" font-weight="800" fill="#ffffff" opacity="0.9">EST. 2017</text>
+          </svg>
+          <div class="hero__visual-overlay" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <div class="hero__stats">
+        <div class="stat reveal-up">
+          <span class="stat__num"><span class="counter" data-target="5000">0</span>+</span>
+          <span class="stat__label">довольных клиентов</span>
+        </div>
+        <div class="stat reveal-up">
+          <span class="stat__num counter" data-target="12">0</span>
+          <span class="stat__label">мастеров</span>
+        </div>
+        <div class="stat reveal-up">
+          <span class="stat__num counter" data-target="8">0</span>
+          <span class="stat__label">лет опыта</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Бегущая строка -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>СТРИЖКА • ОКРАШИВАНИЕ • МАНИКЮР • ПЕДИКЮР • УКЛАДКА •&nbsp;</span>
+        <span>СТРИЖКА • ОКРАШИВАНИЕ • МАНИКЮР • ПЕДИКЮР • УКЛАДКА •&nbsp;</span>
+        <span>СТРИЖКА • ОКРАШИВАНИЕ • МАНИКЮР • ПЕДИКЮР • УКЛАДКА •&nbsp;</span>
+      </div>
+    </div>
+    <div class="marquee marquee--reverse" aria-hidden="true">
+      <div class="marquee__track">
+        <span>ТВОЙ СТИЛЬ • ТВОИ ПРАВИЛА • БЕЗ ШАБЛОНОВ • ДЁРЗО •&nbsp;</span>
+        <span>ТВОЙ СТИЛЬ • ТВОИ ПРАВИЛА • БЕЗ ШАБЛОНОВ • ДЁРЗО •&nbsp;</span>
+        <span>ТВОЙ СТИЛЬ • ТВОИ ПРАВИЛА • БЕЗ ШАБЛОНОВ • ДЁРЗО •&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- 3. Услуги -->
+    <section class="services section" id="services">
+      <h2 class="section__title reveal-left">Что мы <span class="grad-text">умеем</span></h2>
+      <p class="section__sub reveal-up">Полный цикл: от стрижки до идеальных ногтей.</p>
+      <div class="services__grid">
+        <article class="service-card service-card--purple reveal-up">
+          <svg viewBox="0 0 64 64" width="56" height="56" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><circle cx="20" cy="46" r="7"/><circle cx="44" cy="46" r="7"/><path d="M23 39L46 10M41 39L18 10"/></g></svg>
+          <h3>Стрижки</h3>
+          <p>Женские, мужские, креативные. Подберём форму под твоё лицо и характер.</p>
+          <span class="service-card__price">от 1 500 ₽</span>
+        </article>
+        <article class="service-card service-card--pink reveal-up">
+          <svg viewBox="0 0 64 64" width="56" height="56" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M32 6c10 12 18 20 18 32a18 18 0 11-36 0c0-12 8-20 18-32z"/><path d="M24 40a8 8 0 008 8"/></g></svg>
+          <h3>Окрашивание</h3>
+          <p>Балаяж, airtouch, тотал блонд и безумные неоновые цвета — без страха.</p>
+          <span class="service-card__price">от 4 000 ₽</span>
+        </article>
+        <article class="service-card service-card--lime reveal-up">
+          <svg viewBox="0 0 64 64" width="56" height="56" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><path d="M18 30V14a5 5 0 0110 0v14M28 28V10a5 5 0 0110 0v18M38 30V16a5 5 0 0110 0v22c0 12-8 20-18 20S12 50 12 40v-4a6 6 0 0112 0"/></g></svg>
+          <h3>Маникюр</h3>
+          <p>Классика, гель-лак, дизайн любой сложности. Держится до 4 недель.</p>
+          <span class="service-card__price">от 1 800 ₽</span>
+        </article>
+        <article class="service-card service-card--dark reveal-up">
+          <svg viewBox="0 0 64 64" width="56" height="56" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 10h22v14a11 11 0 01-22 0z"/><path d="M20 44h10M25 36v8M40 14h8a6 6 0 010 12h-8"/></g></svg>
+          <h3>Педикюр</h3>
+          <p>Медицинский подход, стерильность и идеальное покрытие.</p>
+          <span class="service-card__price">от 2 500 ₽</span>
+        </article>
+        <article class="service-card service-card--purple reveal-up">
+          <svg viewBox="0 0 64 64" width="56" height="56" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><path d="M10 44c8-4 8-12 0-16M22 48c10-5 10-15 0-20M34 52c12-6 12-18 0-24M46 54c14-7 14-21 0-28"/></g></svg>
+          <h3>Укладки</h3>
+          <p>Локоны, гладь, объём — на вечер, фотосессию или просто так.</p>
+          <span class="service-card__price">от 1 200 ₽</span>
+        </article>
+        <article class="service-card service-card--pink reveal-up">
+          <svg viewBox="0 0 64 64" width="56" height="56" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M32 8l6 14 16 2-12 11 4 16-14-9-14 9 4-16L10 24l16-2z"/></g></svg>
+          <h3>Уход и ботокс</h3>
+          <p>Восстановление, кератин, SPA-ритуалы для волос после экспериментов.</p>
+          <span class="service-card__price">от 3 000 ₽</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. Подбери образ -->
+    <section class="look section" id="look">
+      <h2 class="section__title reveal-right">Подбери <span class="grad-text grad-text--lime">образ</span></h2>
+      <p class="section__sub reveal-up">Выбери услугу — покажем, что можем.</p>
+      <div class="tabs reveal-up" role="tablist" aria-label="Тип услуги">
+        <button class="tab is-active" role="tab" aria-selected="true" data-tab="hair">Волосы</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="color">Окрашивание</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="nails">Маникюр</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="pedi">Педикюр</button>
+      </div>
+      <div class="look__panels reveal-up">
+        <div class="look__panel is-active" data-panel="hair" role="tabpanel">
+          <div class="look__tile tile tile--h1"><span>Каре «графит»</span></div>
+          <div class="look__tile tile tile--h2"><span>Шегги с чёлкой</span></div>
+          <div class="look__tile tile tile--h3"><span>Пикси неон</span></div>
+          <div class="look__tile tile tile--h4"><span>Длинные слои</span></div>
+        </div>
+        <div class="look__panel" data-panel="color" role="tabpanel" hidden>
+          <div class="look__tile tile tile--c1"><span>Тотал блонд</span></div>
+          <div class="look__tile tile tile--c2"><span>Розовый кварц</span></div>
+          <div class="look__tile tile tile--c3"><span>Лаймовые пряди</span></div>
+          <div class="look__tile tile tile--c4"><span>Фиолетовый омбре</span></div>
+        </div>
+        <div class="look__panel" data-panel="nails" role="tabpanel" hidden>
+          <div class="look__tile tile tile--n1"><span>Неоновый френч</span></div>
+          <div class="look__tile tile tile--n2"><span>Хром-хвоя</span></div>
+          <div class="look__tile tile tile--n3"><span>Граффити-дизайн</span></div>
+          <div class="look__tile tile tile--n4"><span>Молочный минимализм</span></div>
+        </div>
+        <div class="look__panel" data-panel="pedi" role="tabpanel" hidden>
+          <div class="look__tile tile tile--p1"><span>Летний лайм</span></div>
+          <div class="look__tile tile tile--p2"><span>Классический красный</span></div>
+          <div class="look__tile tile tile--p3"><span>Графика в горох</span></div>
+          <div class="look__tile tile tile--p4"><span>Жемчужный глянец</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Галерея -->
+    <section class="gallery section" id="gallery">
+      <h2 class="section__title reveal-left">Наши <span class="grad-text">работы</span></h2>
+      <p class="section__sub reveal-up">Кликни, чтобы рассмотреть поближе.</p>
+      <div class="gallery__masonry reveal-up">
+        <figure class="tile tile--g1" tabindex="0" role="button" aria-label="Открыть: Асимметричное каре"><figcaption>Асимметричное каре</figcaption></figure>
+        <figure class="tile tile--g2" tabindex="0" role="button" aria-label="Открыть: Неоновый балаяж"><figcaption>Неоновый балаяж</figcaption></figure>
+        <figure class="tile tile--g3" tabindex="0" role="button" aria-label="Открыть: Дизайн ногтей «космос»"><figcaption>Дизайн ногтей «космос»</figcaption></figure>
+        <figure class="tile tile--g4" tabindex="0" role="button" aria-label="Открыть: Мужской фейд"><figcaption>Мужской фейд</figcaption></figure>
+        <figure class="tile tile--g5" tabindex="0" role="button" aria-label="Открыть: Голливудская волна"><figcaption>Голливудская волна</figcaption></figure>
+        <figure class="tile tile--g6" tabindex="0" role="button" aria-label="Открыть: Френч с лаймом"><figcaption>Френч с лаймом</figcaption></figure>
+        <figure class="tile tile--g7" tabindex="0" role="button" aria-label="Открыть: Кудрявый метод"><figcaption>Кудрявый метод</figcaption></figure>
+        <figure class="tile tile--g8" tabindex="0" role="button" aria-label="Открыть: Педикюр «вечерний город»"><figcaption>Педикюр «вечерний город»</figcaption></figure>
+        <figure class="tile tile--g9" tabindex="0" role="button" aria-label="Открыть: Пикси с выбритым виском"><figcaption>Пикси с выбритым виском</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- 6. Мастера -->
+    <section class="masters section" id="masters">
+      <h2 class="section__title reveal-right">Наши <span class="grad-text grad-text--lime">мастера</span></h2>
+      <p class="section__sub reveal-up">Листай вбок — знакомься с командой.</p>
+      <div class="masters__wrap reveal-up">
+        <button class="masters__arrow masters__arrow--prev" id="mastersPrev" aria-label="Предыдущие мастера">←</button>
+        <div class="masters__scroll" id="mastersScroll" tabindex="0" aria-label="Список мастеров, горизонтальная прокрутка">
+          <article class="master-card">
+            <div class="master-card__photo master-card__photo--1" role="img" aria-label="Портрет мастера Алины">
+              <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="42" r="20" fill="#F2C9A8"/><path d="M28 44c-4-26 48-26 44 0 2-18-8-30-22-30S26 26 28 44z" fill="#FF2E8B"/><path d="M20 100c2-22 16-32 30-32s28 10 30 32z" fill="#1f1440"/><path d="M20 100c2-22 16-32 30-32s28 10 30 32" fill="none" stroke="#C8FF2E" stroke-width="2"/></svg>
+            </div>
+            <h3>Алина</h3>
+            <p class="master-card__role">Топ-стилист</p>
+            <p class="master-card__exp">Опыт 9 лет · креативные стрижки</p>
+            <div class="master-card__socials">
+              <a href="#" aria-label="Алина в Instagram">IG</a>
+              <a href="#" aria-label="Алина в Telegram">TG</a>
+              <a href="#" aria-label="Алина ВКонтакте">VK</a>
+            </div>
+          </article>
+          <article class="master-card">
+            <div class="master-card__photo master-card__photo--2" role="img" aria-label="Портрет мастера Макса">
+              <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="42" r="20" fill="#D9A679"/><path d="M30 38c0-16 40-16 40 0v-6c0-12-9-20-20-20s-20 8-20 20z" fill="#1A1A2E"/><path d="M38 62q12 8 24 0v8q-12 6-24 0z" fill="#1A1A2E"/><path d="M20 100c2-22 16-32 30-32s28 10 30 32z" fill="#2d1b57"/></svg>
+            </div>
+            <h3>Макс</h3>
+            <p class="master-card__role">Барбер</p>
+            <p class="master-card__exp">Опыт 7 лет · фейды и борода</p>
+            <div class="master-card__socials">
+              <a href="#" aria-label="Макс в Instagram">IG</a>
+              <a href="#" aria-label="Макс в Telegram">TG</a>
+              <a href="#" aria-label="Макс ВКонтакте">VK</a>
+            </div>
+          </article>
+          <article class="master-card">
+            <div class="master-card__photo master-card__photo--3" role="img" aria-label="Портрет мастера Сони">
+              <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="42" r="20" fill="#F2C9A8"/><path d="M27 46c-6-30 52-30 46 0 4-14-2-34-23-34S23 32 27 46z" fill="#C8FF2E"/><circle cx="26" cy="52" r="6" fill="#C8FF2E"/><circle cx="74" cy="52" r="6" fill="#C8FF2E"/><path d="M20 100c2-22 16-32 30-32s28 10 30 32z" fill="#3a1060"/></svg>
+            </div>
+            <h3>Соня</h3>
+            <p class="master-card__role">Колорист</p>
+            <p class="master-card__exp">Опыт 6 лет · сложные окрашивания</p>
+            <div class="master-card__socials">
+              <a href="#" aria-label="Соня в Instagram">IG</a>
+              <a href="#" aria-label="Соня в Telegram">TG</a>
+              <a href="#" aria-label="Соня ВКонтакте">VK</a>
+            </div>
+          </article>
+          <article class="master-card">
+            <div class="master-card__photo master-card__photo--4" role="img" aria-label="Портрет мастера Киры">
+              <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="42" r="20" fill="#E8B08A"/><path d="M29 40c-2-24 44-24 42 0 4-20-6-32-21-32S25 20 29 40z" fill="#6C2BD9"/><path d="M20 100c2-22 16-32 30-32s28 10 30 32z" fill="#1f1440"/><path d="M36 30l-6-8M64 30l6-8" stroke="#FF2E8B" stroke-width="3" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Кира</h3>
+            <p class="master-card__role">Nail-мастер</p>
+            <p class="master-card__exp">Опыт 5 лет · дизайн любой сложности</p>
+            <div class="master-card__socials">
+              <a href="#" aria-label="Кира в Instagram">IG</a>
+              <a href="#" aria-label="Кира в Telegram">TG</a>
+              <a href="#" aria-label="Кира ВКонтакте">VK</a>
+            </div>
+          </article>
+          <article class="master-card">
+            <div class="master-card__photo master-card__photo--5" role="img" aria-label="Портрет мастера Даши">
+              <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="42" r="20" fill="#F2C9A8"/><path d="M28 44c-4-28 48-28 44 0 2-16-10-28-22-28S26 28 28 44z" fill="#0f0f1a"/><path d="M30 56q-4 10 2 16M70 56q4 10-2 16" stroke="#0f0f1a" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M20 100c2-22 16-32 30-32s28 10 30 32z" fill="#2d1b57"/></svg>
+            </div>
+            <h3>Даша</h3>
+            <p class="master-card__role">Подолог / педикюр</p>
+            <p class="master-card__exp">Опыт 8 лет · медицинский педикюр</p>
+            <div class="master-card__socials">
+              <a href="#" aria-label="Даша в Instagram">IG</a>
+              <a href="#" aria-label="Даша в Telegram">TG</a>
+              <a href="#" aria-label="Даша ВКонтакте">VK</a>
+            </div>
+          </article>
+          <article class="master-card">
+            <div class="master-card__photo master-card__photo--6" role="img" aria-label="Портрет мастера Лёши">
+              <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="42" r="20" fill="#D9A679"/><path d="M31 36c0-14 38-14 38 0 2-12-8-22-19-22S29 24 31 36z" fill="#FF2E8B"/><path d="M40 62h20v6q-10 4-20 0z" fill="#1A1A2E"/><path d="M20 100c2-22 16-32 30-32s28 10 30 32z" fill="#3a1060"/></svg>
+            </div>
+            <h3>Лёша</h3>
+            <p class="master-card__role">Стилист-универсал</p>
+            <p class="master-card__exp">Опыт 4 года · укладки и уход</p>
+            <div class="master-card__socials">
+              <a href="#" aria-label="Лёша в Instagram">IG</a>
+              <a href="#" aria-label="Лёша в Telegram">TG</a>
+              <a href="#" aria-label="Лёша ВКонтакте">VK</a>
+            </div>
+          </article>
+        </div>
+        <button class="masters__arrow masters__arrow--next" id="mastersNext" aria-label="Следующие мастера">→</button>
+      </div>
+    </section>
+
+    <!-- 7. Цены -->
+    <section class="prices section" id="prices">
+      <h2 class="section__title reveal-left">Цены без <span class="grad-text">мелкого шрифта</span></h2>
+      <div class="prices__table reveal-up" role="table" aria-label="Прайс-лист">
+        <div class="prices__row prices__row--head" role="row">
+          <span role="columnheader">Услуга</span><span role="columnheader">Мастер</span><span role="columnheader">Топ-мастер</span>
+        </div>
+        <div class="prices__row" role="row"><span role="cell">Женская стрижка</span><span role="cell" class="price">1 500 ₽</span><span role="cell" class="price">2 500 ₽</span></div>
+        <div class="prices__row" role="row"><span role="cell">Мужская стрижка</span><span role="cell" class="price">1 200 ₽</span><span role="cell" class="price">2 000 ₽</span></div>
+        <div class="prices__row" role="row"><span role="cell">Окрашивание в один тон</span><span role="cell" class="price">4 000 ₽</span><span role="cell" class="price">6 000 ₽</span></div>
+        <div class="prices__row" role="row"><span role="cell">Сложное окрашивание</span><span role="cell" class="price">7 000 ₽</span><span role="cell" class="price">10 000 ₽</span></div>
+        <div class="prices__row" role="row"><span role="cell">Укладка</span><span role="cell" class="price">1 200 ₽</span><span role="cell" class="price">2 000 ₽</span></div>
+        <div class="prices__row" role="row"><span role="cell">Маникюр + гель-лак</span><span role="cell" class="price">1 800 ₽</span><span role="cell" class="price">2 600 ₽</span></div>
+        <div class="prices__row" role="row"><span role="cell">Педикюр + покрытие</span><span role="cell" class="price">2 500 ₽</span><span role="cell" class="price">3 500 ₽</span></div>
+        <div class="prices__row" role="row"><span role="cell">Дизайн ногтей (1 ноготь)</span><span role="cell" class="price">от 100 ₽</span><span role="cell" class="price">от 150 ₽</span></div>
+      </div>
+      <p class="prices__note reveal-up">Точная стоимость — после консультации. Консультация бесплатная и ни к чему не обязывает.</p>
+    </section>
+
+    <!-- 8. Форма записи -->
+    <section class="booking section" id="booking">
+      <div class="booking__inner">
+        <div class="booking__intro reveal-left">
+          <h2 class="section__title">Запишись <span class="grad-text grad-text--lime">прямо сейчас</span></h2>
+          <p>Оставь контакты — перезвоним за 15 минут, подберём мастера и время. Или жми на неоновую кнопку в углу и пиши нам напрямую.</p>
+          <ul class="booking__facts">
+            <li>м. Чистые пруды, 5 минут пешком</li>
+            <li>Ежедневно 10:00–22:00</li>
+            <li>+7 (900) 123-45-67</li>
+          </ul>
+        </div>
+        <form class="booking__form reveal-right" id="bookingForm" novalidate>
+          <div class="field">
+            <label for="fName">Имя</label>
+            <input type="text" id="fName" name="name" placeholder="Как к тебе обращаться?" autocomplete="name" required>
+            <span class="field__error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="fPhone">Телефон</label>
+            <input type="tel" id="fPhone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+            <span class="field__error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="fService">Услуга</label>
+            <select id="fService" name="service" required>
+              <option value="" selected disabled>Выбери услугу</option>
+              <option value="cut">Стрижка</option>
+              <option value="color">Окрашивание</option>
+              <option value="style">Укладка</option>
+              <option value="manicure">Маникюр</option>
+              <option value="pedicure">Педикюр</option>
+              <option value="care">Уход / ботокс</option>
+            </select>
+            <span class="field__error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="fDate">Желаемая дата</label>
+            <input type="date" id="fDate" name="date" required>
+            <span class="field__error" aria-live="polite"></span>
+          </div>
+          <button type="submit" class="btn btn--gradient">Записаться</button>
+          <p class="booking__success" id="formSuccess" role="status" hidden>Готово! Мы получили заявку и скоро перезвоним. Держи телефон рядом.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__logo">ДЁРЗО<span>.</span></p>
+    <p>Салон красоты · Москва, Мясницкая 13с2 · ежедневно 10:00–22:00</p>
+    <p class="footer__small">© 2026 ДЁРЗО. Сделано с дерзостью.</p>
+  </footer>
+
+  <!-- Лайтбокс -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр работы" hidden>
+    <button class="lightbox__close" id="lightboxClose" aria-label="Закрыть">×</button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Предыдущая работа">←</button>
+    <div class="lightbox__content" id="lightboxContent"></div>
+    <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Следующая работа">→</button>
+  </div>
+
+  <!-- Виджет мессенджеров -->
+  <div class="chat-widget" id="chatWidget">
+    <div class="chat-widget__links" id="chatLinks" hidden>
+      <a class="chat-widget__link chat-widget__link--wa" href="https://wa.me/79001234567" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.5 14.2c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.6.8-.4 1.1.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.3z"/></svg>
+        WhatsApp
+      </a>
+      <a class="chat-widget__link chat-widget__link--tg" href="https://t.me/derzo_salon" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M21.9 4.6L2.7 11.7c-1.3.5-1.3 1.3-.2 1.6l4.9 1.5 1.9 5.8c.2.6.4.8.9.8.4 0 .6-.2 1-.5l2.4-2.3 4.9 3.6c.9.5 1.5.2 1.8-.8l3.2-15.2c.3-1.3-.5-1.9-1.6-1.6zM7.6 13.9l11-6.9c.5-.3 1-.1.6.2l-9.4 8.5-.4 3.8-1.8-5.6z"/></svg>
+        Telegram
+      </a>
+    </div>
+    <button class="chat-widget__btn" id="chatBtn" aria-expanded="false" aria-controls="chatLinks" aria-label="Быстрая запись в мессенджере">
+      <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M4 3h16a2 2 0 012 2v11a2 2 0 01-2 2H8l-5 4V5a2 2 0 012-2zm3 5h10v2H7zm0 4h7v2H7z"/></svg>
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

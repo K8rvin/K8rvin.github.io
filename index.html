@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LandingWorks — лендинги, которые приводят клиентов</title>
+  <meta name="description" content="Разработка продающих лендингов для локального бизнеса: стоматология, салоны красоты, шиномонтаж. Смотрите живые примеры работ.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="bg-glow" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#top" class="logo">Landing<span>Works</span></a>
+      <nav class="nav">
+        <a href="#works">Работы</a>
+        <a href="#process">Как заказать</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <a href="#contacts" class="btn btn-sm">Обсудить проект</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <p class="hero-tag reveal">Разработка лендингов для локального бизнеса</p>
+        <h1 class="hero-title reveal">
+          Лендинги, которые<br>
+          <span class="grad">приводят клиентов</span>
+        </h1>
+        <p class="hero-sub reveal">
+          Смотрите живые примеры работ ниже — каждый макет можно открыть
+          и пощупать вживую. Найдёте стиль под вашу нишу или закажем
+          индивидуальный дизайн.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#works" class="btn">Смотреть работы</a>
+          <a href="#contacts" class="btn btn-ghost">Заказать лендинг</a>
+        </div>
+        <div class="hero-stats reveal">
+          <div class="stat"><b data-count="8">0</b><span>готовых макетов</span></div>
+          <div class="stat"><b data-count="3">0</b><span>тематики бизнеса</span></div>
+          <div class="stat"><b>3–7</b><span>дней на запуск</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKS -->
+    <section class="section" id="works">
+      <div class="container">
+        <h2 class="section-title reveal">Примеры работ</h2>
+        <p class="section-sub reveal">Живые превью — наведите курсор и откройте лендинг во весь экран</p>
+        <div class="filters reveal" id="filters"></div>
+        <div class="grid" id="works-grid"></div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section" id="process">
+      <div class="container">
+        <h2 class="section-title reveal">Как заказать</h2>
+        <p class="section-sub reveal">От заявки до запущенного сайта — прозрачный процесс</p>
+        <div class="steps">
+          <div class="step reveal">
+            <div class="step-num">01</div>
+            <h3>Заявка</h3>
+            <p>Напишите в Telegram, расскажите о бизнесе. Обсудим задачи и подберём стиль.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step-num">02</div>
+            <h3>Дизайн</h3>
+            <p>За 2–3 дня готовлю макет главного экрана. Правки — до полного попадания.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step-num">03</div>
+            <h3>Разработка</h3>
+            <p>Вёрстка, анимации, адаптация под мобильные, подключение форм заявок.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step-num">04</div>
+            <h3>Запуск</h3>
+            <p>Размещаю сайт на хостинге, подключаю домен. Сайт принимает заявки.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTS -->
+    <section class="section" id="contacts">
+      <div class="container">
+        <div class="contact-card reveal">
+          <h2>Обсудим ваш проект?</h2>
+          <p>Напишите пару слов о бизнесе — отвечу в течение дня с предложением и сроками.</p>
+          <div class="contact-actions">
+            <a class="btn" id="contact-telegram" href="#" target="_blank" rel="noopener">Написать в Telegram</a>
+            <a class="btn btn-ghost" id="contact-email" href="#">Написать на почту</a>
+          </div>
+          <div class="contact-lines">
+            <span id="contact-telegram-label"></span>
+            <span id="contact-phone"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> LandingWorks</span>
+      <span>Лендинги для локального бизнеса</span>
+    </div>
+  </footer>
+
+  <script src="catalog.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
