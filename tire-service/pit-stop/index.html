@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ПИТ-СТОП — шиномонтаж за 30 минут по записи</title>
+  <meta name="description" content="Сеть шиномонтажей «Пит-Стоп»: переобуем вашу машину как болид на пит-стопе — за 30 минут по записи. Без очередей.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=JetBrains+Mono:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== ШАПКА ===== -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="logo" href="#top">
+        <span class="logo__flag" aria-hidden="true"></span>
+        <span class="logo__text">ПИТ&#8209;СТОП</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#booking">Запись</a>
+        <a href="#services">Услуги</a>
+        <a href="#why">Почему мы</a>
+        <a href="#branches">Филиалы</a>
+        <a href="#promos">Акции</a>
+        <a href="#reviews">Отзывы</a>
+      </nav>
+      <div class="header__right">
+        <a class="btn btn--red btn--sm" href="tel:+79090939400">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +7 909 093-94-00
+        </a>
+        <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero__grid" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <div class="hero__badge reveal">
+          <span class="dot dot--lime"></span> Сеть шиномонтажей · 3 филиала в городе
+        </div>
+        <h1 class="hero__title reveal">ПИТ-СТОП<br>ЗА <span class="text-red">30</span> МИНУТ</h1>
+        <p class="hero__subtitle reveal">Переобуем, отбалансируем и накачаем по записи. <strong>Без очередей.</strong> Как болид в Формуле-1 — въехал, сменил колёса, уехал.</p>
+        <div class="hero__actions reveal">
+          <a class="btn btn--red btn--lg" href="#booking">Записаться на пит-стоп</a>
+          <a class="btn btn--ghost btn--lg" href="tel:+79090939400">Позвонить</a>
+        </div>
+
+        <!-- Табло: таймер до ближайшего окна + счётчик -->
+        <div class="pitboard reveal">
+          <div class="pitboard__cell">
+            <span class="pitboard__label">До ближайшего окна</span>
+            <span class="pitboard__value" id="nextWindowTimer">--:--:--</span>
+            <span class="pitboard__hint" id="nextWindowInfo">ищем свободный слот…</span>
+          </div>
+          <div class="pitboard__divider" aria-hidden="true"></div>
+          <div class="pitboard__cell">
+            <span class="pitboard__label">Переобули сегодня</span>
+            <span class="pitboard__value text-lime"><span id="carsCounter">0</span> <small>машин</small></span>
+            <span class="pitboard__hint">и счётчик растёт прямо сейчас</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Анимация «смены колёс» -->
+      <div class="hero__scene reveal" aria-hidden="true">
+        <div class="telemetry">
+          <div class="telemetry__row"><span>RPM</span><div class="bar"><i style="--w:82%"></i></div><b>8200</b></div>
+          <div class="telemetry__row"><span>TYRE</span><div class="bar"><i style="--w:64%"></i></div><b>64°C</b></div>
+          <div class="telemetry__row"><span>PIT&nbsp;TIME</span><div class="bar bar--lime"><i style="--w:100%"></i></div><b>30:00</b></div>
+        </div>
+        <div class="car-scene">
+          <div class="car-scene__flash"></div>
+          <svg class="car" viewBox="0 0 640 220" xmlns="http://www.w3.org/2000/svg">
+            <path d="M28 168 L70 168 Q78 120 130 112 L190 104 Q232 56 300 52 L420 48 Q470 50 512 96 L576 108 Q614 116 618 150 L620 168 Z" fill="#E63946"/>
+            <path d="M210 100 Q245 66 300 62 L400 60 Q438 62 470 96 Z" fill="#1A1D23"/>
+            <path d="M28 168 L70 168 Q78 120 130 112 L190 104 Q232 56 300 52 L420 48 Q470 50 512 96 L576 108 Q614 116 618 150 L620 168 Z" fill="none" stroke="#00000033" stroke-width="2"/>
+            <rect x="48" y="150" width="90" height="12" rx="6" fill="#ffffff" opacity=".85"/>
+            <path d="M520 108 L580 118 L578 132 L516 124 Z" fill="#ffffff" opacity=".2"/>
+            <text x="330" y="140" font-family="JetBrains Mono, monospace" font-size="34" font-weight="800" fill="#fff" text-anchor="middle">30</text>
+            <rect x="596" y="128" width="14" height="26" rx="4" fill="#A8E10C"/>
+          </svg>
+          <div class="wheel-slot wheel-slot--front">
+            <div class="wheel wheel--old"><i></i></div>
+            <div class="wheel wheel--new"><i></i></div>
+          </div>
+          <div class="wheel-slot wheel-slot--rear">
+            <div class="wheel wheel--old wheel--delay"><i></i></div>
+            <div class="wheel wheel--new wheel--delay"><i></i></div>
+          </div>
+          <div class="car-scene__shadow"></div>
+        </div>
+        <div class="scene-caption">СМЕНА КОМПЛЕКТА — <b class="text-lime">30:00</b> ПО СЕКУНДОМЕРУ</div>
+      </div>
+    </div>
+    <div class="checker-strip" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===== БЕГУЩАЯ СТРОКА-ТАБЛО ===== -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track" id="tickerTrack">
+      <span>ПЕРЕОБУВКА • БАЛАНСИРОВКА • ПРАВКА ДИСКОВ • ХРАНЕНИЕ • РЕМОНТ ПРОКОЛОВ •&nbsp;</span>
+      <span>ПЕРЕОБУВКА • БАЛАНСИРОВКА • ПРАВКА ДИСКОВ • ХРАНЕНИЕ • РЕМОНТ ПРОКОЛОВ •&nbsp;</span>
+      <span>ПЕРЕОБУВКА • БАЛАНСИРОВКА • ПРАВКА ДИСКОВ • ХРАНЕНИЕ • РЕМОНТ ПРОКОЛОВ •&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- ===== КАЛЕНДАРЬ ЗАПИСИ ===== -->
+  <section class="section" id="booking">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__tag">Онлайн-запись</span>
+        <h2 class="section__title">ВЫБЕРИ ДЕНЬ <span class="text-red">И ВРЕМЯ</span></h2>
+        <p class="section__sub">Свободные слоты подсвечены лаймовым. Клик — и пит-стоп твой. Бронь подтверждаем звонком за 2 часа.</p>
+      </div>
+      <div class="booking-widget reveal" data-branch="center"></div>
+    </div>
+  </section>
+
+  <!-- ===== УСЛУГИ ===== -->
+  <section class="section section--alt" id="services">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__tag">Телеметрия услуг</span>
+        <h2 class="section__title">УСЛУГИ <span class="text-red">ПИТ-СТОПА</span></h2>
+        <p class="section__sub">Фиксированные цены и секундомер на каждую работу. Время стартует с момента заезда на пост.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="service-card__top"><span class="service-card__num">01</span><span class="service-card__time">30 мин</span></div>
+          <h3>Переобувка комплекта</h3>
+          <p>Снятие и установка 4 колёс, протяжка, проверка давления.</p>
+          <div class="service-card__price">от 2 000 ₽</div>
+          <div class="service-card__bar"><i style="--w:55%"></i></div>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__top"><span class="service-card__num">02</span><span class="service-card__time">20 мин</span></div>
+          <h3>Балансировка</h3>
+          <p>Балансировка 4 колёс на стенде Hunter, грузики в комплекте.</p>
+          <div class="service-card__price">от 1 200 ₽</div>
+          <div class="service-card__bar"><i style="--w:38%"></i></div>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__top"><span class="service-card__num">03</span><span class="service-card__time">40 мин</span></div>
+          <h3>Правка дисков</h3>
+          <p>Устранение «восьмёрок» и вмятин на стальных и литых дисках.</p>
+          <div class="service-card__price">от 800 ₽</div>
+          <div class="service-card__bar"><i style="--w:72%"></i></div>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__top"><span class="service-card__num">04</span><span class="service-card__time">15 мин</span></div>
+          <h3>Ремонт прокола</h3>
+          <p>Жгут или грибок, проверка герметичности, подкачка.</p>
+          <div class="service-card__price">от 500 ₽</div>
+          <div class="service-card__bar"><i style="--w:28%"></i></div>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__top"><span class="service-card__num">05</span><span class="service-card__time">сезон</span></div>
+          <h3>Хранение шин</h3>
+          <p>Шинный отель: маркировка, стеллажи, фотоотчёт о состоянии.</p>
+          <div class="service-card__price">от 3 000 ₽/сезон</div>
+          <div class="service-card__bar"><i style="--w:90%"></i></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ПОЧЕМУ МЫ БЫСТРЫЕ ===== -->
+  <section class="section" id="why">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__tag">Секрет скорости</span>
+        <h2 class="section__title">ПОЧЕМУ МЫ <span class="text-red">БЫСТРЫЕ</span></h2>
+      </div>
+      <div class="why-grid">
+        <article class="why-card reveal">
+          <div class="why-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="15" cy="14" r="6"/><circle cx="33" cy="14" r="6"/><path d="M4 40v-4a9 9 0 0 1 18 0v4"/><path d="M26 40v-4a9 9 0 0 1 18 0v4"/></svg>
+          </div>
+          <h3>Работаем в 4 руки</h3>
+          <p>Два механика на посту, как экипаж пит-лейн. Каждый отвечает за свой борт.</p>
+        </article>
+        <article class="why-card reveal">
+          <div class="why-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="10"/><path d="M24 4v6M24 38v6M4 24h6M38 24h6M9.9 9.9l4.2 4.2M33.9 33.9l4.2 4.2M9.9 38.1l4.2-4.2M33.9 14.1l4.2-4.2"/></svg>
+          </div>
+          <h3>Современное оборудование</h3>
+          <p>Стенды Hunter и гайковёрты с моментом затяжки — никакой «кривой» ручной работы.</p>
+        </article>
+        <article class="why-card reveal">
+          <div class="why-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="10" width="36" height="32" rx="4"/><path d="M6 20h36M16 4v10M32 4v10"/><path d="M15 30l6 6 12-12" stroke="#A8E10C"/></svg>
+          </div>
+          <h3>Запись без очередей</h3>
+          <p>Онлайн-бронь слота. Вы приезжаете — пост уже свободен и ждёт именно вас.</p>
+        </article>
+        <article class="why-card reveal">
+          <div class="why-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="26" r="16"/><path d="M24 26l7-8M18 4h12M24 4v6" /></svg>
+          </div>
+          <h3>Фиксированное время</h3>
+          <p>30 минут по секундомеру. Не уложились — балансировка за наш счёт.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== КАРТА ФИЛИАЛОВ ===== -->
+  <section class="section section--alt" id="branches">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__tag">Пит-лейн сети</span>
+        <h2 class="section__title">ВЫБЕРИ СВОЙ <span class="text-red">ТРЕК</span></h2>
+        <p class="section__sub">Кликни по точке на карте — покажем адрес, услуги и свободные окна филиала.</p>
+      </div>
+      <div class="branches reveal">
+        <div class="branches__map">
+          <svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Схема города с филиалами">
+            <rect width="640" height="400" fill="#14161B"/>
+            <g stroke="#2A2F38" stroke-width="10" fill="none">
+              <path d="M0 90 H640"/><path d="M0 210 H640"/><path d="M0 330 H640"/>
+              <path d="M120 0 V400"/><path d="M320 0 V400"/><path d="M520 0 V400"/>
+            </g>
+            <g stroke="#E63946" stroke-width="4" fill="none" opacity=".7">
+              <path d="M120 330 C 220 300, 260 250, 320 210 S 470 130, 520 90" stroke-dasharray="10 8"/>
+            </g>
+            <path d="M0 90 H640" stroke="#3A4150" stroke-width="2" stroke-dasharray="14 10"/>
+            <path d="M320 0 V400" stroke="#3A4150" stroke-width="2" stroke-dasharray="14 10"/>
+            <g stroke="#23262D" stroke-width="26" fill="none" opacity=".9">
+              <path d="M40 0 L200 400"/><path d="M640 260 L400 400"/>
+            </g>
+            <!-- Точки филиалов -->
+            <g class="map-point" data-branch="center" transform="translate(320,210)" tabindex="0" role="button" aria-label="Филиал Центр">
+              <circle r="26" fill="#E63946" opacity=".18"><animate attributeName="r" values="18;30;18" dur="2.4s" repeatCount="indefinite"/></circle>
+              <circle r="12" fill="#E63946" stroke="#fff" stroke-width="2.5"/>
+              <text y="5" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" font-weight="800" fill="#fff">1</text>
+            </g>
+            <g class="map-point" data-branch="north" transform="translate(520,90)" tabindex="0" role="button" aria-label="Филиал Север">
+              <circle r="26" fill="#E63946" opacity=".18"><animate attributeName="r" values="18;30;18" dur="2.4s" begin=".8s" repeatCount="indefinite"/></circle>
+              <circle r="12" fill="#E63946" stroke="#fff" stroke-width="2.5"/>
+              <text y="5" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" font-weight="800" fill="#fff">2</text>
+            </g>
+            <g class="map-point" data-branch="south" transform="translate(120,330)" tabindex="0" role="button" aria-label="Филиал Юг">
+              <circle r="26" fill="#E63946" opacity=".18"><animate attributeName="r" values="18;30;18" dur="2.4s" begin="1.6s" repeatCount="indefinite"/></circle>
+              <circle r="12" fill="#E63946" stroke="#fff" stroke-width="2.5"/>
+              <text y="5" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" font-weight="800" fill="#fff">3</text>
+            </g>
+          </svg>
+        </div>
+        <aside class="branches__info" id="branchInfo" aria-live="polite">
+          <!-- заполняется из script.js -->
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== АКЦИИ ===== -->
+  <section class="section" id="promos">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__tag">Гоночные нашивки</span>
+        <h2 class="section__title">АКЦИИ <span class="text-red">ГОНКИ</span></h2>
+      </div>
+      <div class="promos-grid">
+        <div class="promo-badge reveal">
+          <div class="promo-badge__shine" aria-hidden="true"></div>
+          <span class="promo-badge__tag">АКЦИЯ</span>
+          <span class="promo-badge__big">−20%</span>
+          <span class="promo-badge__text">на переобувку в будни до 14:00</span>
+          <span class="promo-badge__code">промокод: MORNING-PIT</span>
+        </div>
+        <div class="promo-badge promo-badge--lime reveal">
+          <div class="promo-badge__shine" aria-hidden="true"></div>
+          <span class="promo-badge__tag">ПОДАРОК</span>
+          <span class="promo-badge__big">ХРАНЕНИЕ</span>
+          <span class="promo-badge__text">комплект хранения шин в подарок при первой переобувке</span>
+          <span class="promo-badge__code">до конца сезона</span>
+        </div>
+        <div class="promo-badge promo-badge--white reveal">
+          <div class="promo-badge__shine" aria-hidden="true"></div>
+          <span class="promo-badge__tag">КОМБО</span>
+          <span class="promo-badge__big">4+0</span>
+          <span class="promo-badge__text">балансировка 4-го колеса бесплатно при переобувке комплекта</span>
+          <span class="promo-badge__code">постоянно</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ОТЗЫВЫ ===== -->
+  <section class="section section--alt" id="reviews">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__tag">Пелотон говорит</span>
+        <h2 class="section__title">ОТЗЫВЫ <span class="text-red">ГОНЩИКОВ</span></h2>
+      </div>
+      <div class="carousel reveal" id="reviewsCarousel">
+        <div class="carousel__viewport">
+          <div class="carousel__track" id="carouselTrack"><!-- заполняется из script.js --></div>
+        </div>
+        <div class="carousel__controls">
+          <button class="carousel__btn" id="carouselPrev" aria-label="Предыдущий отзыв">←</button>
+          <div class="carousel__dots" id="carouselDots"></div>
+          <button class="carousel__btn" id="carouselNext" aria-label="Следующий отзыв">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ФИНАЛЬНЫЙ CTA ===== -->
+  <section class="section final-cta" id="cta">
+    <div class="checker-strip checker-strip--top" aria-hidden="true"></div>
+    <div class="container">
+      <div class="final-cta__head reveal">
+        <h2 class="final-cta__title">ЗАБРОНИРУЙ СВОЙ <span class="text-lime">ПИТ-СТОП</span></h2>
+        <p>Окно ждёт. Секундомер уже включён.</p>
+      </div>
+      <div class="booking-widget booking-widget--dark reveal" data-branch="north"></div>
+      <p class="final-cta__alt reveal">Или просто позвони: <a class="link-lime" href="tel:+79090939400">+7 909 093-94-00</a></p>
+    </div>
+    <div class="checker-strip" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===== ФУТЕР ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col footer__col--brand">
+        <a class="logo" href="#top">
+          <span class="logo__flag" aria-hidden="true"></span>
+          <span class="logo__text">ПИТ&#8209;СТОП</span>
+        </a>
+        <p>Переобуваем город со скоростью Формулы-1 с 2018 года.</p>
+        <div class="footer__socials">
+          <a href="tel:+79090939400" aria-label="Телефон"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+          <a href="tel:+79090939400" aria-label="Мессенджер"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
+          <a href="tel:+79090939400" aria-label="Видеоканал"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-2C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.95 2c1.71.46 8.59.46 8.59.46s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.41z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Филиалы</h4>
+        <p><b>Центр</b> — ул. Гоночная, 12</p>
+        <p><b>Север</b> — пр. Скорости, 45</p>
+        <p><b>Юг</b> — ш. Трасса М-7, 3 км</p>
+      </div>
+      <div class="footer__col">
+        <h4>Контакты</h4>
+        <p><a class="link-lime" href="tel:+79090939400">+7 909 093-94-00</a></p>
+        <p>Ежедневно 09:00–21:00</p>
+        <p>Запись онлайн — круглосуточно</p>
+      </div>
+    </div>
+    <div class="checker-strip" aria-hidden="true"></div>
+    <div class="footer__bottom">
+      <div class="container">© 2026 Сеть шиномонтажей «Пит-Стоп». Демо-проект для портфолио.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ШинныйОтель — сезонное хранение шин премиум-класса</title>
+  <meta name="description" content="Отапливаемый склад, мойка перед хранением, страховка. Заберём и привезём шины сами. Шинный отель для премиум-авто.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Хедер -->
+  <header class="header" id="siteHeader">
+    <div class="container header__inner">
+      <a href="#hero" class="logo">
+        <svg class="logo__mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="13" stroke="#14325A" stroke-width="2.5"/>
+          <circle cx="16" cy="16" r="5.5" stroke="#2BB3C0" stroke-width="2.5"/>
+          <path d="M16 3v6M16 23v6M3 16h6M23 16h6" stroke="#14325A" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <span>Шинный<b>Отель</b></span>
+      </a>
+      <nav class="nav" id="mainNav">
+        <a href="#calculator">Калькулятор</a>
+        <a href="#how">Хранение</a>
+        <a href="#tariffs">Тарифы</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <a class="btn btn--small header__phone" href="tel:+79090939400">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true"><path d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1l-2.22 2.2Z" fill="currentColor"/></svg>
+        +7 909 093-94-00
+      </a>
+      <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Катящаяся шина между секциями -->
+  <div class="rolling-tire" id="rollingTire" aria-hidden="true">
+    <svg viewBox="0 0 64 64" fill="none">
+      <circle cx="32" cy="32" r="30" stroke="#14325A" stroke-width="4"/>
+      <circle cx="32" cy="32" r="12" stroke="#2BB3C0" stroke-width="4"/>
+      <g stroke="#14325A" stroke-width="3" stroke-linecap="round">
+        <path d="M32 2v12M32 50v12M2 32h12M50 32h12M11 11l8.5 8.5M44.5 44.5 53 53M53 11l-8.5 8.5M19.5 44.5 11 53"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <div class="hero__content reveal">
+        <div class="hero__badges">
+          <span class="badge badge--mint">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z" stroke="currentColor" stroke-width="2"/><path d="m8.5 12 2.5 2.5 4.5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Страховка включена
+          </span>
+          <span class="badge">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" aria-hidden="true"><path d="M7 3h8l4 4v14H7V3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M15 3v4h4M10 12h5M10 16h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            Договор хранения
+          </span>
+        </div>
+        <h1 class="hero__title">Храним ваши шины<br>как в <span class="accent">отеле</span></h1>
+        <p class="hero__subtitle">Отапливаемый склад, мойка перед хранением, страховка.<br>Заберём и привезём сами.</p>
+        <div class="hero__actions">
+          <a href="#calculator" class="btn btn--primary">Рассчитать стоимость</a>
+          <a href="tel:+79090939400" class="btn btn--ghost">Позвонить</a>
+        </div>
+      </div>
+
+      <!-- Иллюстрация склада: стеллажи с шинами (чистый CSS/SVG) -->
+      <div class="hero__visual reveal" id="heroVisual">
+        <div class="warehouse" id="warehouse" aria-hidden="true">
+          <div class="warehouse__glow"></div>
+          <div class="shelf shelf--1" data-depth="14">
+            <div class="shelf__plank"></div>
+            <div class="tire"></div><div class="tire"></div><div class="tire"></div><div class="tire"></div>
+          </div>
+          <div class="shelf shelf--2" data-depth="26">
+            <div class="shelf__plank"></div>
+            <div class="tire tire--mint"></div><div class="tire"></div><div class="tire tire--dark"></div><div class="tire"></div>
+          </div>
+          <div class="shelf shelf--3" data-depth="40">
+            <div class="shelf__plank"></div>
+            <div class="tire"></div><div class="tire tire--dark"></div><div class="tire"></div><div class="tire tire--mint"></div>
+          </div>
+          <div class="warehouse__floor"></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll-hint" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- Калькулятор -->
+  <section class="section calc" id="calculator">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="kicker">Калькулятор</p>
+        <h2>Рассчитайте стоимость за сезон</h2>
+        <p class="section__sub">Выберите параметры — цена пересчитается мгновенно.</p>
+      </div>
+      <div class="calc__card reveal">
+        <div class="calc__controls">
+          <div class="calc__group">
+            <span class="calc__label">Радиус колёс</span>
+            <div class="chips" id="radiusGroup">
+              <label class="chip"><input type="radio" name="radius" value="15" checked><span>R15</span></label>
+              <label class="chip"><input type="radio" name="radius" value="16"><span>R16</span></label>
+              <label class="chip"><input type="radio" name="radius" value="17"><span>R17</span></label>
+              <label class="chip"><input type="radio" name="radius" value="18"><span>R18</span></label>
+              <label class="chip"><input type="radio" name="radius" value="19"><span>R19</span></label>
+              <label class="chip"><input type="radio" name="radius" value="20"><span>R20</span></label>
+            </div>
+          </div>
+          <div class="calc__group">
+            <span class="calc__label">Тип комплекта</span>
+            <div class="chips" id="typeGroup">
+              <label class="chip"><input type="radio" name="ctype" value="assembled" checked><span>Шины в сборе</span></label>
+              <label class="chip"><input type="radio" name="ctype" value="tires"><span>Без дисков</span></label>
+            </div>
+          </div>
+          <div class="calc__group">
+            <span class="calc__label">Срок хранения</span>
+            <div class="chips" id="durationGroup">
+              <label class="chip"><input type="radio" name="duration" value="3"><span>3 месяца</span></label>
+              <label class="chip"><input type="radio" name="duration" value="6" checked><span>6 месяцев</span></label>
+              <label class="chip"><input type="radio" name="duration" value="9"><span>9 месяцев</span></label>
+            </div>
+          </div>
+          <p class="calc__note">В цену включены мойка, упаковка, индивидуальная ячейка и страховка.</p>
+        </div>
+        <div class="calc__result">
+          <span class="calc__result-label">Стоимость за сезон</span>
+          <div class="calc__price"><span id="calcPrice">0</span> <span class="calc__cur">₽</span></div>
+          <span class="calc__permonth" id="calcPerMonth">— ₽ / месяц</span>
+          <a href="#booking" class="btn btn--primary calc__book" id="calcBook">Забронировать место</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Как мы храним -->
+  <section class="section how" id="how">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="kicker">Стандарты</p>
+        <h2>Как мы храним</h2>
+        <p class="section__sub">Условия, которым доверяют шины премиум-автомобилей.</p>
+      </div>
+      <div class="grid grid--4">
+        <article class="card reveal">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="6" y="10" width="36" height="28" rx="3" stroke="#14325A" stroke-width="2.5"/><path d="M6 20h36" stroke="#14325A" stroke-width="2.5"/><path d="M24 26v6M20.5 28.5 24 25l3.5 3.5" stroke="#2BB3C0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 3.5c1.5 1.7 1.5 3.3 0 5M24 3.5c1.5 1.7 1.5 3.3 0 5M34 3.5c1.5 1.7 1.5 3.3 0 5" stroke="#2BB3C0" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Отапливаемый склад</h3>
+          <p>Стабильные +10…+18 °C и влажность 50–60% круглый год. Резина не трескается и не «дубеет».</p>
+        </article>
+        <article class="card reveal">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 6c6 7.5 11 13 11 20a11 11 0 1 1-22 0c0-7 5-12.5 11-20Z" stroke="#14325A" stroke-width="2.5" stroke-linejoin="round"/><path d="M19 27a5 5 0 0 0 5 5" stroke="#2BB3C0" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Мойка шин перед сдачей</h3>
+          <p>Отмываем комплект от грязи и реагентов, сушим и упаковываем в индивидуальные чехлы.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="7" y="7" width="15" height="15" rx="2.5" stroke="#14325A" stroke-width="2.5"/><rect x="26" y="7" width="15" height="15" rx="2.5" stroke="#14325A" stroke-width="2.5"/><rect x="7" y="26" width="15" height="15" rx="2.5" stroke="#14325A" stroke-width="2.5"/><rect x="26" y="26" width="15" height="15" rx="2.5" stroke="#2BB3C0" stroke-width="2.5"/></svg>
+          </div>
+          <h3>Индивидуальные ячейки</h3>
+          <p>У каждого комплекта — своё место с номером и биркой. Доступ к ячейкам только у персонала.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 5 9 10v11c0 10.4 6.4 19.4 15 22 8.6-2.6 15-11.6 15-22V10L24 5Z" stroke="#14325A" stroke-width="2.5" stroke-linejoin="round"/><path d="m17.5 23.5 4.5 4.5 8.5-9" stroke="#2BB3C0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Страхование</h3>
+          <p>Каждый комплект застрахован на полную стоимость. Ответственность фиксируется в договоре.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Сервис под ключ -->
+  <section class="section process" id="process">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="kicker">Под ключ</p>
+        <h2>Сервис, где вы ничего не делаете сами</h2>
+      </div>
+      <div class="timeline reveal" id="timeline">
+        <div class="timeline__line" aria-hidden="true"><div class="timeline__progress" id="timelineProgress"></div></div>
+        <div class="timeline__steps">
+          <div class="timeline__step">
+            <div class="timeline__icon">
+              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M5 32h27V16h-9l-6-8H9v24Z" stroke="#14325A" stroke-width="2.5" stroke-linejoin="round" transform="translate(3 2) scale(0.92)"/><circle cx="14" cy="36" r="4.5" stroke="#2BB3C0" stroke-width="2.5"/><circle cx="33" cy="36" r="4.5" stroke="#2BB3C0" stroke-width="2.5"/></svg>
+            </div>
+            <h3>Заберём шины у вас</h3>
+            <p>Курьер приедет в удобное время — из дома, офиса или с сервиса.</p>
+          </div>
+          <div class="timeline__step">
+            <div class="timeline__icon">
+              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="15" stroke="#14325A" stroke-width="2.5"/><circle cx="24" cy="24" r="6" stroke="#2BB3C0" stroke-width="2.5"/><path d="M13 14c2-2 4.5-3.2 7-3.5M36 34c-2 2-4.5 3.2-7 3.5" stroke="#2BB3C0" stroke-width="2.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Помоем и упакуем</h3>
+            <p>Мойка, сушка, чехлы и маркировка — комплект готов к «заселению».</p>
+          </div>
+          <div class="timeline__step">
+            <div class="timeline__icon">
+              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M7 41V20L24 8l17 12v21" stroke="#14325A" stroke-width="2.5" stroke-linejoin="round"/><path d="M7 41h34" stroke="#14325A" stroke-width="2.5" stroke-linecap="round"/><path d="M19 41V30h10v11" stroke="#2BB3C0" stroke-width="2.5" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Храним в идеальных условиях</h3>
+            <p>Тепло, сухо, чисто. Отправим фотоотчёт о «проживании» вашего комплекта.</p>
+          </div>
+          <div class="timeline__step">
+            <div class="timeline__icon">
+              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="12" y="7" width="24" height="34" rx="4" stroke="#14325A" stroke-width="2.5"/><path d="M12 14h24M12 34h24" stroke="#14325A" stroke-width="2.5"/><path d="M20 24h8M20 20h8M20 28h5" stroke="#2BB3C0" stroke-width="2.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Привезём к сезону</h3>
+            <p>Напомним заранее и доставим комплект точно к дате переобувки.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Галерея склада (CSS/SVG-«фото») -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="kicker">Склад</p>
+        <h2>Посмотрите, где живут шины</h2>
+        <p class="section__sub">Чистота и порядок — наш главный аргумент.</p>
+      </div>
+      <div class="gallery__grid" id="galleryGrid">
+        <figure class="gallery__item gallery__item--wide reveal" data-speed="0.06">
+          <div class="shot shot--racks">
+            <svg viewBox="0 0 600 340" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs>
+                <linearGradient id="gSky" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#EDF2F8"/><stop offset="1" stop-color="#DCE6F0"/>
+                </linearGradient>
+              </defs>
+              <rect width="600" height="340" fill="url(#gSky)"/>
+              <g stroke="#14325A" stroke-width="5" opacity="0.85">
+                <path d="M60 20v300M240 20v300M420 20v300M580 20v300"/>
+                <path d="M40 110h560M40 210h560M40 310h560"/>
+              </g>
+              <g>
+                <circle cx="150" cy="72" r="36" fill="#2A3B55"/><circle cx="150" cy="72" r="14" fill="#DCE6F0"/>
+                <circle cx="330" cy="72" r="36" fill="#2BB3C0" opacity="0.9"/><circle cx="330" cy="72" r="14" fill="#DCE6F0"/>
+                <circle cx="500" cy="72" r="36" fill="#2A3B55"/><circle cx="500" cy="72" r="14" fill="#DCE6F0"/>
+                <circle cx="150" cy="172" r="36" fill="#2A3B55"/><circle cx="150" cy="172" r="14" fill="#DCE6F0"/>
+                <circle cx="330" cy="172" r="36" fill="#2A3B55"/><circle cx="330" cy="172" r="14" fill="#DCE6F0"/>
+                <circle cx="500" cy="172" r="36" fill="#2A3B55"/><circle cx="500" cy="172" r="14" fill="#DCE6F0"/>
+                <circle cx="150" cy="272" r="36" fill="#2BB3C0" opacity="0.9"/><circle cx="150" cy="272" r="14" fill="#DCE6F0"/>
+                <circle cx="330" cy="272" r="36" fill="#2A3B55"/><circle cx="330" cy="272" r="14" fill="#DCE6F0"/>
+                <circle cx="500" cy="272" r="36" fill="#2A3B55"/><circle cx="500" cy="272" r="14" fill="#DCE6F0"/>
+              </g>
+            </svg>
+          </div>
+          <figcaption>Стеллажная зона — 2 400 ячеек</figcaption>
+        </figure>
+        <figure class="gallery__item reveal" data-speed="0.12">
+          <div class="shot shot--wash">
+            <svg viewBox="0 0 400 340" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs>
+                <linearGradient id="gWash" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#E6F6F8"/><stop offset="1" stop-color="#CDEEF2"/>
+                </linearGradient>
+              </defs>
+              <rect width="400" height="340" fill="url(#gWash)"/>
+              <circle cx="200" cy="185" r="85" fill="#2A3B55"/>
+              <circle cx="200" cy="185" r="36" fill="#CDEEF2"/>
+              <g stroke="#2BB3C0" stroke-width="5" stroke-linecap="round" opacity="0.9">
+                <path d="M60 60q20 25 0 50M110 45q20 25 0 50M160 60q20 25 0 50" fill="none"/>
+                <path d="M255 55q20 25 0 50M305 70q20 25 0 50" fill="none"/>
+              </g>
+              <g fill="#FFFFFF" opacity="0.9">
+                <circle cx="90" cy="250" r="9"/><circle cx="130" cy="280" r="6"/><circle cx="310" cy="255" r="8"/><circle cx="275" cy="290" r="5"/>
+              </g>
+            </svg>
+          </div>
+          <figcaption>Пост мойки и сушки</figcaption>
+        </figure>
+        <figure class="gallery__item reveal" data-speed="0.09">
+          <div class="shot shot--cells">
+            <svg viewBox="0 0 400 340" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="400" height="340" fill="#F5F7FA"/>
+              <g stroke="#14325A" stroke-width="4" fill="#FFFFFF">
+                <rect x="30" y="30" width="100" height="80" rx="8"/>
+                <rect x="150" y="30" width="100" height="80" rx="8"/>
+                <rect x="270" y="30" width="100" height="80" rx="8"/>
+                <rect x="30" y="130" width="100" height="80" rx="8"/>
+                <rect x="150" y="130" width="100" height="80" rx="8"/>
+                <rect x="270" y="130" width="100" height="80" rx="8"/>
+                <rect x="30" y="230" width="100" height="80" rx="8"/>
+                <rect x="150" y="230" width="100" height="80" rx="8"/>
+                <rect x="270" y="230" width="100" height="80" rx="8"/>
+              </g>
+              <rect x="150" y="130" width="100" height="80" rx="8" fill="#2BB3C0" opacity="0.18"/>
+              <g fill="#14325A" font-family="Inter, sans-serif" font-size="15" font-weight="600">
+                <text x="44" y="52">A-01</text><text x="164" y="52">A-02</text><text x="284" y="52">A-03</text>
+                <text x="44" y="152">B-01</text><text x="164" y="152">B-02</text><text x="284" y="152">B-03</text>
+                <text x="44" y="252">C-01</text><text x="164" y="252">C-02</text><text x="284" y="252">C-03</text>
+              </g>
+              <circle cx="200" cy="185" r="22" fill="#2A3B55"/><circle cx="200" cy="185" r="9" fill="#F5F7FA"/>
+            </svg>
+          </div>
+          <figcaption>Именные ячейки с маркировкой</figcaption>
+        </figure>
+        <figure class="gallery__item gallery__item--wide reveal" data-speed="0.05">
+          <div class="shot shot--hall">
+            <svg viewBox="0 0 600 340" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs>
+                <linearGradient id="gHall" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#14325A"/><stop offset="1" stop-color="#0E2444"/>
+                </linearGradient>
+              </defs>
+              <rect width="600" height="340" fill="url(#gHall)"/>
+              <g stroke="#2BB3C0" stroke-width="3" opacity="0.55">
+                <path d="M0 40 300 140 600 40M0 340 300 180 600 340"/>
+              </g>
+              <g opacity="0.9">
+                <circle cx="90" cy="230" r="42" fill="#2A3B55"/><circle cx="90" cy="230" r="17" fill="#14325A"/>
+                <circle cx="205" cy="250" r="34" fill="#2A3B55"/><circle cx="205" cy="250" r="13" fill="#14325A"/>
+                <circle cx="470" cy="240" r="38" fill="#2A3B55"/><circle cx="470" cy="240" r="15" fill="#14325A"/>
+                <circle cx="545" cy="265" r="26" fill="#2A3B55"/><circle cx="545" cy="265" r="10" fill="#14325A"/>
+              </g>
+              <rect x="250" y="60" width="100" height="46" rx="8" fill="#2BB3C0"/>
+              <text x="272" y="89" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="17" font-weight="600">Zone A</text>
+              <g fill="#FFFFFF" opacity="0.85">
+                <circle cx="60" cy="60" r="4"/><circle cx="300" cy="30" r="4"/><circle cx="540" cy="55" r="4"/>
+              </g>
+            </svg>
+          </div>
+          <figcaption>Центральный зал — вечерний режим освещения</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Дополнительные услуги -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="kicker">Дополнительно</p>
+        <h2>Услуги к сезону</h2>
+      </div>
+      <div class="grid grid--4">
+        <article class="service reveal">
+          <div class="service__icon">
+            <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="17" cy="17" r="11" stroke="#14325A" stroke-width="2.5"/><circle cx="17" cy="17" r="4" stroke="#2BB3C0" stroke-width="2.5"/><circle cx="33" cy="33" r="11" stroke="#14325A" stroke-width="2.5" transform="translate(-2 -2)"/><path d="M24 24l6 6" stroke="#2BB3C0" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Сезонная переобувка</h3>
+          <p>Снимем, поставим и отрегулируем давление за 30 минут.</p>
+          <span class="service__price">от 1 500 ₽</span>
+        </article>
+        <article class="service reveal">
+          <div class="service__icon">
+            <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="17" stroke="#14325A" stroke-width="2.5"/><path d="M24 24V11" stroke="#2BB3C0" stroke-width="2.5" stroke-linecap="round"/><circle cx="24" cy="24" r="3" fill="#2BB3C0"/><path d="M24 7v3M41 24h-3M24 41v-3M7 24h3" stroke="#14325A" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Балансировка</h3>
+          <p>Точная балансировка на станке с 3D-диагностикой.</p>
+          <span class="service__price">от 400 ₽ / колесо</span>
+        </article>
+        <article class="service reveal">
+          <div class="service__icon">
+            <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="17" stroke="#14325A" stroke-width="2.5"/><circle cx="24" cy="24" r="7" stroke="#14325A" stroke-width="2.5"/><path d="M24 7c4 6 4 10 0 14M41 24c-6 4-10 4-14 0M24 41c-4-6-4-10 0-14M7 24c6-4 10-4 14 0" stroke="#2BB3C0" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Правка дисков</h3>
+          <p>Устраним восьмёрки и вмятины на литых и кованых дисках.</p>
+          <span class="service__price">от 1 200 ₽</span>
+        </article>
+        <article class="service reveal">
+          <div class="service__icon">
+            <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M18 8h12v10l6 8v14H12V26l6-8V8Z" stroke="#14325A" stroke-width="2.5" stroke-linejoin="round"/><path d="M18 8h12" stroke="#14325A" stroke-width="2.5" stroke-linecap="round"/><text x="17" y="36" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#2BB3C0">N₂</text></svg>
+          </div>
+          <h3>Подкачка азотом</h3>
+          <p>Стабильное давление и меньший нагрев на трассе.</p>
+          <span class="service__price">от 300 ₽ / комплект</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Тарифы -->
+  <section class="section tariffs" id="tariffs">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="kicker">Тарифы</p>
+        <h2>Выберите уровень сервиса</h2>
+      </div>
+      <div class="tariffs__grid">
+        <article class="tariff reveal">
+          <h3>Эконом</h3>
+          <p class="tariff__price">3 900 ₽<span> / сезон</span></p>
+          <ul>
+            <li>Хранение 6 месяцев</li>
+            <li>Индивидуальная ячейка</li>
+            <li>Фотоотчёт о приёмке</li>
+            <li class="off">Мойка перед хранением</li>
+            <li class="off">Доставка «под ключ»</li>
+            <li class="off">Страхование</li>
+          </ul>
+          <a href="#booking" class="btn btn--outline tariff__btn">Выбрать</a>
+        </article>
+        <article class="tariff tariff--featured reveal">
+          <span class="tariff__flag">Популярный</span>
+          <h3>Стандарт</h3>
+          <p class="tariff__price">5 900 ₽<span> / сезон</span></p>
+          <ul>
+            <li>Хранение 6 месяцев</li>
+            <li>Индивидуальная ячейка</li>
+            <li>Фотоотчёт о приёмке</li>
+            <li>Мойка перед хранением</li>
+            <li>Страхование комплекта</li>
+            <li class="off">Доставка «под ключ»</li>
+          </ul>
+          <a href="#booking" class="btn btn--primary tariff__btn">Выбрать</a>
+        </article>
+        <article class="tariff reveal">
+          <h3>Премиум</h3>
+          <p class="tariff__price">8 900 ₽<span> / сезон</span></p>
+          <ul>
+            <li>Хранение до 9 месяцев</li>
+            <li>Индивидуальная ячейка</li>
+            <li>Фотоотчёт каждый месяц</li>
+            <li>Мойка и консервация</li>
+            <li>Страхование комплекта</li>
+            <li>Доставка «под ключ»</li>
+          </ul>
+          <a href="#booking" class="btn btn--outline tariff__btn">Выбрать</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Отзывы -->
+  <section class="section reviews" id="reviews">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="kicker">Отзывы</p>
+        <h2>Нас рекомендуют владельцы премиум-авто</h2>
+      </div>
+      <div class="carousel reveal" id="carousel">
+        <div class="carousel__track" id="reviewTrack">
+          <blockquote class="review">
+            <div class="review__stars" aria-label="5 из 5">★★★★★</div>
+            <p>«Сдал колёса от Porsche Cayenne на зиму. Забрали из подземного паркинга, вернули вымытыми в чехлах. Впервые вижу такой сервис у шиномонтажа».</p>
+            <footer><b>Дмитрий К.</b><span>Porsche Cayenne</span></footer>
+          </blockquote>
+          <blockquote class="review">
+            <div class="review__stars" aria-label="5 из 5">★★★★★</div>
+            <p>«Склад правда как на фото — чисто, тепло, у каждого комплекта своя ячейка. Договор и страховка — всё по-взрослому. Рекомендую».</p>
+            <footer><b>Марина С.</b><span>Mercedes-Benz GLE</span></footer>
+          </blockquote>
+          <blockquote class="review">
+            <div class="review__stars" aria-label="5 из 5">★★★★★</div>
+            <p>«Больше не вожу шины на балкон и не мучаю лифт. Один звонок — и всё сделали под ключ. К сезону привезли точно в срок».</p>
+            <footer><b>Игорь В.</b><span>BMW X5</span></footer>
+          </blockquote>
+          <blockquote class="review">
+            <div class="review__stars" aria-label="5 из 5">★★★★★</div>
+            <p>«Храню два комплекта второй год. Ни царапины на дисках, давление проверили перед выдачей. Удобно и спокойно».</p>
+            <footer><b>Анна Л.</b><span>Audi Q7</span></footer>
+          </blockquote>
+        </div>
+        <div class="carousel__controls">
+          <button class="carousel__btn" id="revPrev" aria-label="Предыдущий отзыв">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="m14 6-6 6 6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="carousel__dots" id="revDots"></div>
+          <button class="carousel__btn" id="revNext" aria-label="Следующий отзыв">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="m10 6 6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Календарь свободных ячеек -->
+  <section class="section calendar" id="calendar">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="kicker">Загрузка склада</p>
+        <h2>Ближайшие свободные ячейки</h2>
+        <p class="section__sub">Выберите дату заезда — мы подставим её в форму брони.</p>
+      </div>
+      <div class="cal__card reveal">
+        <div class="cal__head">
+          <button class="cal__nav" id="calPrev" aria-label="Предыдущий месяц">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true"><path d="m14 6-6 6 6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <span class="cal__month" id="calMonth">—</span>
+          <button class="cal__nav" id="calNext" aria-label="Следующий месяц">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true"><path d="m10 6 6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+        <div class="cal__week">
+          <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span>
+        </div>
+        <div class="cal__grid" id="calGrid"></div>
+        <div class="cal__legend">
+          <span><i class="dot dot--free"></i>много мест</span>
+          <span><i class="dot dot--few"></i>осталось мало</span>
+          <span><i class="dot dot--busy"></i>занято</span>
+          <span class="cal__selected-note" id="calSelected"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Форма брони -->
+  <section class="section booking" id="booking">
+    <div class="container booking__inner">
+      <div class="booking__text reveal">
+        <p class="kicker">Бронирование</p>
+        <h2>Забронируйте ячейку за минуту</h2>
+        <p>Оставьте контакты — менеджер перезвонит, подтвердит дату и пришлёт договор. Или позвоните сразу:</p>
+        <a class="booking__phone" href="tel:+79090939400">+7 909 093-94-00</a>
+        <div class="hero__badges booking__badges">
+          <span class="badge badge--mint">Страховка включена</span>
+          <span class="badge">Договор хранения</span>
+        </div>
+      </div>
+      <form class="booking__form reveal" id="bookForm" novalidate>
+        <label class="field">
+          <span>Ваше имя</span>
+          <input type="text" id="bookName" name="name" placeholder="Иван" autocomplete="name" required>
+        </label>
+        <label class="field">
+          <span>Телефон</span>
+          <input type="tel" id="bookPhone" name="phone" placeholder="+7 ___ ___-__-__" autocomplete="tel" required>
+        </label>
+        <div class="field-row">
+          <label class="field">
+            <span>Радиус шин</span>
+            <select id="bookRadius" name="radius">
+              <option value="R15">R15</option>
+              <option value="R16">R16</option>
+              <option value="R17" selected>R17</option>
+              <option value="R18">R18</option>
+              <option value="R19">R19</option>
+              <option value="R20">R20</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Желаемая дата</span>
+            <input type="date" id="bookDate" name="date" required>
+          </label>
+        </div>
+        <button type="submit" class="btn btn--primary booking__submit">Забронировать место</button>
+        <p class="booking__privacy">Нажимая кнопку, вы соглашаетесь с условиями обработки персональных данных.</p>
+        <div class="booking__success" id="bookSuccess" hidden>
+          <svg viewBox="0 0 48 48" width="44" height="44" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="21" stroke="#2BB3C0" stroke-width="3"/><path d="m15 24 6 6 12-13" stroke="#2BB3C0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <b>Заявка принята!</b>
+          <span>Менеджер свяжется с вами в течение 15 минут и подтвердит бронь.</span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer" id="contacts">
+    <div class="container footer__grid">
+      <div class="footer__col footer__brand">
+        <a href="#hero" class="logo logo--footer">
+          <svg class="logo__mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <circle cx="16" cy="16" r="13" stroke="#FFFFFF" stroke-width="2.5"/>
+            <circle cx="16" cy="16" r="5.5" stroke="#2BB3C0" stroke-width="2.5"/>
+            <path d="M16 3v6M16 23v6M3 16h6M23 16h6" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <span>Шинный<b>Отель</b></span>
+        </a>
+        <p>Сезонное хранение шин премиум-класса. Тепло, чисто, застраховано.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Контакты</h4>
+        <a href="tel:+79090939400" class="footer__phone">+7 909 093-94-00</a>
+        <p>г. Москва, Складочная ул., 12, стр. 3</p>
+      </div>
+      <div class="footer__col">
+        <h4>Режим работы</h4>
+        <p>Пн–Пт: 8:00 — 21:00<br>Сб–Вс: 9:00 — 20:00</p>
+        <p>Доставка — ежедневно по записи</p>
+      </div>
+      <div class="footer__col footer__map-col">
+        <h4>Схема проезда</h4>
+        <svg class="footer__map" viewBox="0 0 300 200" role="img" aria-label="Схема проезда к складу">
+          <rect width="300" height="200" rx="10" fill="#0E2444"/>
+          <g stroke="#2A4A7A" stroke-width="6" fill="none" stroke-linecap="round">
+            <path d="M0 60h300M0 140h300M80 0v200M210 0v200"/>
+          </g>
+          <path d="M0 100 C90 90 180 115 300 100" stroke="#2BB3C0" stroke-width="4" fill="none" stroke-dasharray="10 8"/>
+          <g stroke="#16385F" stroke-width="2" fill="#123154">
+            <rect x="20" y="15" width="40" height="28" rx="3"/>
+            <rect x="230" y="150" width="50" height="32" rx="3"/>
+            <rect x="100" y="150" width="60" height="30" rx="3"/>
+          </g>
+          <g>
+            <path d="M150 66c-11 0-19 8-19 18 0 13 19 30 19 30s19-17 19-30c0-10-8-18-19-18Z" fill="#2BB3C0"/>
+            <circle cx="150" cy="84" r="7" fill="#0E2444"/>
+          </g>
+          <text x="150" y="130" text-anchor="middle" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="12">Складочная ул., 12</text>
+        </svg>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <span>© 2025 ШинныйОтель. Демо-проект для портфолио.</span>
+        <span>ООО «ШинныйОтель» · ИНН 7700000000</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

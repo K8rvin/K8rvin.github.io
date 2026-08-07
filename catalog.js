@@ -66,6 +66,24 @@ const WORKS = [
     style: "Быстрый и понятный",
     path: "tire-service/classic/",
   },
+  {
+    category: "Шиномонтаж",
+    title: "Пит-стоп",
+    style: "Гоночная энергия для сети шиномонтажей",
+    path: "tire-service/pit-stop/",
+  },
+  {
+    category: "Шиномонтаж",
+    title: "Служба спасения на дороге",
+    style: "Мобильный выездной шиномонтаж 24/7",
+    path: "tire-service/roadside-rescue/",
+  },
+  {
+    category: "Шиномонтаж",
+    title: "Шинный отель",
+    style: "Премиум-хранение и сезонный сервис",
+    path: "tire-service/tire-hotel/",
+  },
 
   // --- Кафе ---
   {

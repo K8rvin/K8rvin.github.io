@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ШиноСпас — выездной шиномонтаж 24/7 в Волгограде | Приедем за 40 минут</title>
+  <meta name="description" content="Экстренный выездной шиномонтаж в Волгограде. Ремонт прокола, замена колеса, запуск двигателя, вскрытие авто. Приезжаем за 40 минут, работаем 24/7.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Маячок спецслужбы (микро-анимация при клике) -->
+  <div class="beacon" id="beacon" aria-hidden="true"></div>
+
+  <!-- Шапка -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo">
+        <svg class="logo__icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="13" stroke="#FF6B1A" stroke-width="3"/>
+          <circle cx="16" cy="16" r="5" fill="#FFC527"/>
+          <path d="M16 3v6M16 23v6M3 16h6M23 16h6" stroke="#FF6B1A" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <span class="logo__text">ШИНО<span>СПАС</span></span>
+      </a>
+      <a class="header__phone" href="tel:+79090939400">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        <span>+7&nbsp;909&nbsp;093-94-00</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__road" aria-hidden="true">
+        <div class="hero__light hero__light--1"></div>
+        <div class="hero__light hero__light--2"></div>
+        <div class="hero__light hero__light--3"></div>
+        <div class="hero__light hero__light--4"></div>
+        <div class="hero__asphalt"></div>
+      </div>
+      <div class="container hero__inner">
+        <p class="hero__tag reveal">Экстренная помощь на дороге · Волгоград</p>
+        <h1 class="hero__title reveal">Пробил колесо?<br><span>Приедем за 40 минут</span></h1>
+        <p class="hero__subtitle reveal">Выездной шиномонтаж 24/7 по всему городу. Ночь, трасса, дождь — нам всё равно.</p>
+        <div class="hero__actions reveal">
+          <a href="tel:+79090939400" class="btn btn--sos js-beacon">
+            <span class="btn__ring"></span>
+            <span class="btn__ring btn__ring--2"></span>
+            Вызвать мастера
+          </a>
+          <a href="tel:+79090939400" class="hero__phone">+7&nbsp;909&nbsp;093-94-00</a>
+        </div>
+        <p class="hero__note reveal">Звонок бесплатный · Диспетчер ответит за 10 секунд</p>
+      </div>
+    </section>
+
+    <!-- БЛОК СРОЧНОСТИ -->
+    <section class="badges">
+      <div class="container badges__grid">
+        <div class="badge reveal">
+          <div class="badge__num">24/7</div>
+          <div class="badge__label">Работаем круглосуточно</div>
+        </div>
+        <div class="badge reveal">
+          <div class="badge__num"><span class="js-count" data-target="40">0</span><small> мин</small></div>
+          <div class="badge__label">Среднее время прибытия</div>
+        </div>
+        <div class="badge badge--live reveal">
+          <div class="badge__num"><span id="brigadesCount">3</span><small> бригады</small></div>
+          <div class="badge__label">Сейчас свободны <span class="badge__pulse"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- УСЛУГИ -->
+    <section class="services" id="services">
+      <div class="container">
+        <h2 class="section-title reveal">Чем поможем <span>на месте</span></h2>
+        <div class="services__grid">
+          <article class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M30 6a10 10 0 0 0-9.4 13.3L8 32a5.7 5.7 0 0 0 8 8l12.7-12.6A10 10 0 0 0 42 18l-6 6-6-2-2-6 6-6a10 10 0 0 0-4 0z" transform="scale(0.9) translate(3 3)"/></svg>
+            </div>
+            <h3>Ремонт прокола</h3>
+            <p>Жгут или грибок за 15 минут. Гарантия на ремонт 6 месяцев.</p>
+            <div class="service-card__price">от 800&nbsp;₽</div>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="6"/><path d="M24 7v11M24 30v11M7 24h11M30 24h11" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Замена колеса</h3>
+            <p>Снимем пробитое, поставим запаску. Сезонная переобувка на месте.</p>
+            <div class="service-card__price">от 900&nbsp;₽</div>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="14" width="20" height="26" rx="3"/><path d="M30 22h6a3 3 0 0 1 3 3v9a3 3 0 0 0 6 0V16l-5-5M16 14V8h8v6M15 27h10"/></svg>
+            </div>
+            <h3>Подкачка колеса</h3>
+            <p>Компрессор и манометр с собой. Докачаем до нужного давления.</p>
+            <div class="service-card__price">от 500&nbsp;₽</div>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M26 4L10 28h10l-4 16 20-26H24l6-14z" transform="translate(-2 0)"/></svg>
+            </div>
+            <h3>Запуск двигателя</h3>
+            <p>Прикурим аккумулятор или привезём новый с установкой.</p>
+            <div class="service-card__price">от 1200&nbsp;₽</div>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="20" width="28" height="20" rx="4"/><path d="M16 20v-6a8 8 0 0 1 16 0v6M24 28v6"/></svg>
+            </div>
+            <h3>Вскрытие авто</h3>
+            <p>Захлопнулась дверь с ключами внутри? Откроем без повреждений.</p>
+            <div class="service-card__price">от 1500&nbsp;₽</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- КАРТА ЗОН ВЫЕЗДА -->
+    <section class="zones" id="zones">
+      <div class="container">
+        <h2 class="section-title reveal">Карта <span>зон выезда</span></h2>
+        <p class="section-sub reveal">Нажмите на свой район — покажем точное время прибытия и стоимость выезда.</p>
+        <div class="zones__layout">
+          <div class="zones__map reveal">
+            <svg id="zoneMap" viewBox="0 0 600 640" role="img" aria-label="Стилизованная карта Волгограда с зонами выезда">
+              <!-- фон -->
+              <rect x="0" y="0" width="600" height="640" rx="18" fill="#12161d"/>
+              <!-- Волга -->
+              <path d="M470 0 C 440 90, 520 160, 490 250 C 460 340, 540 420, 505 520 C 480 590, 520 620, 510 640 L600 640 L600 0 Z" fill="#16283b"/>
+              <path d="M470 0 C 440 90, 520 160, 490 250 C 460 340, 540 420, 505 520 C 480 590, 520 620, 510 640" fill="none" stroke="#1e3d5c" stroke-width="3"/>
+              <text x="545" y="330" fill="#2e5a85" font-size="14" font-family="Inter, sans-serif" transform="rotate(78 545 330)">Волга</text>
+              <!-- дороги -->
+              <g stroke="#232a35" stroke-width="4" stroke-linecap="round">
+                <path d="M60 80 L440 120"/>
+                <path d="M40 250 L470 280"/>
+                <path d="M30 420 L480 430"/>
+                <path d="M90 560 L460 540"/>
+                <path d="M140 20 L120 620"/>
+                <path d="M300 10 L310 630"/>
+                <path d="M420 40 L400 600"/>
+              </g>
+              <!-- радиусы зон от центра -->
+              <g fill="none" stroke-dasharray="8 8">
+                <circle cx="290" cy="280" r="110" stroke="#FF6B1A" stroke-opacity="0.45" stroke-width="2"/>
+                <circle cx="290" cy="280" r="200" stroke="#FFC527" stroke-opacity="0.35" stroke-width="2"/>
+                <circle cx="290" cy="280" r="285" stroke="#ffffff" stroke-opacity="0.18" stroke-width="2"/>
+              </g>
+              <!-- маршрут машинки -->
+              <path id="carRoute" d="M290 280 L310 430 L400 430 L400 280 L470 280" fill="none" stroke="none"/>
+              <g id="mapCar">
+                <circle r="14" fill="#FF6B1A" fill-opacity="0.25"/>
+                <circle r="6" fill="#FF6B1A"/>
+              </g>
+              <!-- районы -->
+              <g id="zoneDots" font-family="Inter, sans-serif"></g>
+            </svg>
+          </div>
+          <div class="zones__panel reveal" id="zonePanel">
+            <div class="zones__panel-badge">Район</div>
+            <h3 class="zones__panel-name" id="zoneName">Центральный</h3>
+            <div class="zones__panel-rows">
+              <div class="zones__row">
+                <span>Прибытие</span>
+                <strong id="zoneTime">≈ 25 мин</strong>
+              </div>
+              <div class="zones__row">
+                <span>Выезд + ремонт прокола</span>
+                <strong id="zonePrice" class="zones__price">от 1500 ₽</strong>
+              </div>
+              <div class="zones__row">
+                <span>Ближайшая бригада</span>
+                <strong id="zoneBrigade">в 6 км от вас</strong>
+              </div>
+            </div>
+            <a href="tel:+79090939400" class="btn btn--block js-beacon">Вызвать в этот район</a>
+            <p class="zones__hint">Зелёная зона — до 30 мин · Жёлтая — до 45 мин · Серая — до 60 мин</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- КАК ЭТО РАБОТАЕТ -->
+    <section class="steps" id="steps">
+      <div class="container">
+        <h2 class="section-title reveal">Как это <span>работает</span></h2>
+        <div class="timeline reveal">
+          <div class="timeline__track">
+            <div class="timeline__progress" id="timelineProgress"></div>
+            <div class="timeline__car" id="timelineCar" aria-hidden="true">
+              <svg viewBox="0 0 48 24" fill="none"><path d="M4 16h40l-3-7a4 4 0 0 0-3.7-2.5H30l-5-3.5H14a4 4 0 0 0-3.6 2.3L7 11z" fill="#FF6B1A"/><circle cx="14" cy="18" r="3.4" fill="#0E1116" stroke="#FFC527" stroke-width="1.6"/><circle cx="35" cy="18" r="3.4" fill="#0E1116" stroke="#FFC527" stroke-width="1.6"/></svg>
+            </div>
+          </div>
+          <ol class="timeline__list">
+            <li class="timeline__step is-active" data-step="0">
+              <span class="timeline__dot"></span>
+              <h3>Позвонили</h3>
+              <p>Диспетчер уточняет место и фиксирует цену</p>
+            </li>
+            <li class="timeline__step" data-step="1">
+              <span class="timeline__dot"></span>
+              <h3>Мастер выехал</h3>
+              <p>Ближайшая бригада едет к вам</p>
+            </li>
+            <li class="timeline__step" data-step="2">
+              <span class="timeline__dot"></span>
+              <h3>Прибыл за 40 мин</h3>
+              <p>Инструмент, компрессор и запчасти с собой</p>
+            </li>
+            <li class="timeline__step" data-step="3">
+              <span class="timeline__dot"></span>
+              <h3>Колесо готово</h3>
+              <p>Оплата после работы. Чек и гарантия</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ЦЕНЫ -->
+    <section class="prices" id="prices">
+      <div class="container">
+        <h2 class="section-title reveal">Честные <span>цены</span></h2>
+        <div class="prices__wrap reveal">
+          <table class="prices__table">
+            <tbody>
+              <tr><td>Ремонт прокола (жгут / грибок)</td><td class="prices__value">от 800 ₽</td></tr>
+              <tr><td>Замена колеса (легковое)</td><td class="prices__value">от 900 ₽</td></tr>
+              <tr><td>Сезонная переобувка, 4 колеса</td><td class="prices__value">от 2400 ₽</td></tr>
+              <tr><td>Подкачка колеса</td><td class="prices__value">от 500 ₽</td></tr>
+              <tr><td>Запуск двигателя (прикурить)</td><td class="prices__value">от 1200 ₽</td></tr>
+              <tr><td>Вскрытие автомобиля</td><td class="prices__value">от 1500 ₽</td></tr>
+              <tr class="prices__row--free"><td>Выезд по городу при заказе работ</td><td class="prices__value">0 ₽</td></tr>
+            </tbody>
+          </table>
+          <div class="prices__fix">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5zm-3 8V6a3 3 0 1 1 6 0v3z"/></svg>
+            <p><strong>Цена до выезда фиксируется.</strong><br>Никаких доплат на месте — сколько назвали по телефону, столько и платите.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ОТЗЫВЫ -->
+    <section class="reviews" id="reviews">
+      <div class="container">
+        <h2 class="section-title reveal">Водители <span>о скорости</span></h2>
+        <div class="carousel reveal" id="carousel">
+          <div class="carousel__viewport">
+            <div class="carousel__track" id="carouselTrack"></div>
+          </div>
+          <button class="carousel__btn carousel__btn--prev" id="carouselPrev" aria-label="Предыдущий отзыв">‹</button>
+          <button class="carousel__btn carousel__btn--next" id="carouselNext" aria-label="Следующий отзыв">›</button>
+          <div class="carousel__dots" id="carouselDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ФИНАЛЬНЫЙ CTA -->
+    <section class="cta">
+      <div class="cta__glow" aria-hidden="true"></div>
+      <div class="container cta__inner reveal">
+        <h2 class="cta__title">Нужна помощь<br>прямо сейчас?</h2>
+        <p class="cta__sub">Бригада уже на линии. Среднее прибытие — 40 минут.</p>
+        <div class="cta__actions">
+          <a href="tel:+79090939400" class="btn btn--huge js-beacon">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+            Позвонить: +7 909 093-94-00
+          </a>
+          <a href="https://wa.me/79090939400" class="btn btn--whatsapp" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.9 4.5 3.9.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3z"/></svg>
+            Написать в WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ФУТЕР -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <a href="#top" class="logo logo--footer">
+          <span class="logo__text">ШИНО<span>СПАС</span></span>
+        </a>
+        <p>Выездной шиномонтаж и техпомощь на дороге. Волгоград, круглосуточно.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Телефон 24/7</h4>
+        <a class="footer__phone" href="tel:+79090939400">+7 909 093-94-00</a>
+        <p>Диспетчер на связи днём и ночью</p>
+      </div>
+      <div class="footer__col">
+        <h4>Зоны выезда</h4>
+        <p>Весь Волгоград: Центральный, Дзержинский, Ворошиловский, Советский, Кировский, Тракторозаводский, Краснооктябрьский, Красноармейский районы и трассы М-7 / Р-228 в пределах 30 км.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Мы на связи</h4>
+        <div class="footer__socials">
+          <a href="https://wa.me/79090939400" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+          <a href="https://t.me/shinospas_vlg" target="_blank" rel="noopener" aria-label="Telegram">TG</a>
+          <a href="https://vk.com/shinospas_vlg" target="_blank" rel="noopener" aria-label="ВКонтакте">VK</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom">© 2025 ШиноСпас · Демо-сайт для портфолио</div>
+  </footer>
+
+  <!-- Плавающая кнопка SOS -->
+  <a href="tel:+79090939400" class="sos-fab js-beacon" aria-label="Вызвать мастера">
+    <span class="sos-fab__ring"></span>
+    <span class="sos-fab__label">SOS</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
