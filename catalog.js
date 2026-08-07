@@ -64,7 +64,7 @@ const WORKS = [
     category: "Шиномонтаж",
     title: "Шиномонтажка",
     style: "Быстрый и понятный",
-    path: "tire-service/",
+    path: "tire-service/classic/",
   },
 
   // --- Кафе ---
