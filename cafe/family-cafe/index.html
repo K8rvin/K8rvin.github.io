@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кафе «Шинок» — Волгоград | Деловые обеды, детское меню, доставка</title>
+  <meta name="description" content="Светлое семейное кафе «Шинок» в Волгограде. Деловой обед от 420 ₽, детское меню, доставка по городу. Уютно, вкусно, по-домашнему.">
+
+  <!-- Шрифты: Nunito для заголовков, Golos Text для текста -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%23E8863A'/><text x='50' y='66' font-size='52' text-anchor='middle' fill='%23FFFDF8' font-family='sans-serif' font-weight='bold'>Ш</text></svg>">
+</head>
+<body>
+
+  <!-- ======================= ШАПКА ======================= -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#hero" class="logo" aria-label="Кафе Шинок — на главную">
+        <span class="logo__mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="42" height="42">
+            <circle cx="24" cy="24" r="22" fill="#E8863A"/>
+            <ellipse cx="24" cy="27" rx="12" ry="8" fill="#FFFDF8"/>
+            <ellipse cx="24" cy="24.5" rx="10" ry="5.5" fill="#C93B2E"/>
+            <path d="M18 14c1.5-3 3-3 2.5-6M24 13c1.5-3 3-3 2.5-6M30 14c1.5-3 3-3 2.5-6" stroke="#4A7C59" stroke-width="2" fill="none" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="logo__text">Шинок</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#lunch" class="nav__link">Деловой обед</a>
+        <a href="#family" class="nav__link">Семьям</a>
+        <a href="#menu" class="nav__link">Меню</a>
+        <a href="#delivery" class="nav__link">Доставка</a>
+        <a href="#promos" class="nav__link">Акции</a>
+        <a href="#contacts" class="nav__link">Контакты</a>
+      </nav>
+
+      <div class="header__contacts">
+        <a href="tel:+79627601517" class="header__phone">+7 (962) 760-15-17</a>
+        <a href="#booking" class="btn btn--orange btn--sm">Забронировать</a>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================= HERO ======================= -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <span class="hero__badge">Светлое семейное кафе в Краснооктябрьском районе Волгограда</span>
+          <h1 class="hero__title">
+            Обед, на который <em class="hl hl--orange">хочется</em> <em class="hl hl--green">вернуться</em>
+          </h1>
+          <p class="hero__subtitle">
+            Деловой обед от <strong>420&nbsp;₽</strong> • Детское меню • Доставка по Волгограду
+          </p>
+          <div class="hero__actions">
+            <a href="#lunch" class="btn btn--orange btn--lg">Деловой обед</a>
+            <a href="#delivery" class="btn btn--outline-green btn--lg">Заказать доставку</a>
+          </div>
+          <ul class="hero__facts">
+            <li><strong>15 мин</strong><span>подача обеда</span></li>
+            <li><strong>−20%</strong><span>на самовывоз</span></li>
+            <li><strong>4,9</strong><span>рейтинг гостей</span></li>
+          </ul>
+        </div>
+
+        <!-- Процедурная иллюстрация: стол с борщом, пампушками и салатом -->
+        <div class="hero__art reveal" aria-label="Иллюстрация: стол с борщом, пампушками и салатом" role="img">
+          <svg class="hero-svg" viewBox="0 0 560 480" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <radialGradient id="sunGlow" cx="50%" cy="40%" r="70%">
+                <stop offset="0%" stop-color="#FDF3DC"/>
+                <stop offset="100%" stop-color="#FFFDF8" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="tableGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#F3E4C8"/>
+                <stop offset="100%" stop-color="#E8D3AF"/>
+              </linearGradient>
+              <radialGradient id="borshGrad" cx="45%" cy="40%" r="70%">
+                <stop offset="0%" stop-color="#D94B3A"/>
+                <stop offset="100%" stop-color="#A82B1F"/>
+              </radialGradient>
+              <radialGradient id="bunGrad" cx="40%" cy="30%" r="80%">
+                <stop offset="0%" stop-color="#F2C478"/>
+                <stop offset="70%" stop-color="#D98E3B"/>
+                <stop offset="100%" stop-color="#B96E22"/>
+              </radialGradient>
+              <radialGradient id="saladGrad" cx="50%" cy="35%" r="75%">
+                <stop offset="0%" stop-color="#8FBF6E"/>
+                <stop offset="100%" stop-color="#4A7C59"/>
+              </radialGradient>
+            </defs>
+
+            <!-- фон-сияние -->
+            <circle cx="280" cy="210" r="250" fill="url(#sunGlow)"/>
+
+            <!-- окно с солнцем -->
+            <g class="hero-svg__window">
+              <rect x="385" y="18" width="150" height="150" rx="20" fill="#FFF6E2" stroke="#F6C453" stroke-width="4"/>
+              <line x1="460" y1="18" x2="460" y2="168" stroke="#F6C453" stroke-width="4"/>
+              <line x1="385" y1="93" x2="535" y2="93" stroke="#F6C453" stroke-width="4"/>
+              <circle cx="425" cy="55" r="16" fill="#F6C453"/>
+            </g>
+
+            <!-- растение -->
+            <g class="hero-svg__plant">
+              <rect x="30" y="270" width="54" height="60" rx="8" fill="#E8863A"/>
+              <path d="M57 270 C40 230 25 235 30 205 C50 220 55 245 57 262" fill="#4A7C59"/>
+              <path d="M57 270 C74 230 90 238 84 205 C64 222 59 248 57 262" fill="#5F936E"/>
+              <path d="M57 270 C57 235 57 225 57 195 C67 225 66 250 57 262" fill="#6FA87E"/>
+            </g>
+
+            <!-- стол -->
+            <ellipse cx="285" cy="440" rx="255" ry="26" fill="#E4D2B0" opacity="0.6"/>
+            <rect x="45" y="330" width="480" height="26" rx="13" fill="url(#tableGrad)"/>
+            <rect x="45" y="348" width="480" height="8" rx="4" fill="#D9C298" opacity="0.7"/>
+
+            <!-- салатница -->
+            <g class="hero-svg__salad">
+              <ellipse cx="120" cy="330" rx="62" ry="10" fill="#000" opacity="0.06"/>
+              <path d="M62 300 Q120 282 178 300 L170 332 Q120 344 70 332 Z" fill="#FFFDF8" stroke="#EFE3CB" stroke-width="3"/>
+              <ellipse cx="120" cy="300" rx="58" ry="13" fill="url(#saladGrad)"/>
+              <circle cx="95" cy="297" r="7" fill="#E8574A"/>
+              <circle cx="140" cy="301" r="7" fill="#E8574A"/>
+              <circle cx="118" cy="293" r="6" fill="#F6C453"/>
+              <path d="M80 296 q10 -6 20 0 M130 295 q10 -6 20 0" stroke="#3D6B4B" stroke-width="3" fill="none" stroke-linecap="round"/>
+            </g>
+
+            <!-- тарелка борща -->
+            <g class="hero-svg__borsh">
+              <ellipse cx="290" cy="338" rx="98" ry="14" fill="#000" opacity="0.07"/>
+              <ellipse cx="290" cy="326" rx="95" ry="26" fill="#FFFDF8" stroke="#EFE3CB" stroke-width="3"/>
+              <ellipse cx="290" cy="322" rx="74" ry="18" fill="url(#borshGrad)"/>
+              <ellipse cx="272" cy="318" rx="16" ry="6" fill="#FFF3E0" opacity="0.9"/>
+              <circle cx="312" cy="324" r="4.5" fill="#4A7C59"/>
+              <circle cx="252" cy="326" r="4" fill="#4A7C59"/>
+              <circle cx="292" cy="329" r="3.5" fill="#4A7C59"/>
+              <path d="M330 318 q8 -4 14 1" stroke="#F6C453" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+              <!-- пар над борщом -->
+              <g class="steam" stroke="#CBB99A" stroke-width="5" fill="none" stroke-linecap="round">
+                <path class="steam__line steam__line--1" d="M258 292 q-8 -14 0 -26 q8 -12 0 -24"/>
+                <path class="steam__line steam__line--2" d="M290 288 q-8 -14 0 -26 q8 -12 0 -24"/>
+                <path class="steam__line steam__line--3" d="M322 292 q-8 -14 0 -26 q8 -12 0 -24"/>
+              </g>
+            </g>
+
+            <!-- качающаяся ложка -->
+            <g class="hero-svg__spoon">
+              <rect x="382" y="238" width="9" height="96" rx="4.5" fill="#C9B28C" transform="rotate(12 386 330)"/>
+              <ellipse cx="398" cy="238" rx="15" ry="21" fill="#D9C5A2" transform="rotate(12 398 238)"/>
+              <ellipse cx="398" cy="236" rx="9" ry="14" fill="#B99F78" transform="rotate(12 398 236)"/>
+            </g>
+
+            <!-- доска с пампушками (пасхалка — кликабельна) -->
+            <g class="hero-svg__pampushki" id="pampushka" tabindex="0" role="button" aria-label="Пампушка — нажми меня!">
+              <ellipse cx="470" cy="336" rx="70" ry="10" fill="#000" opacity="0.06"/>
+              <rect x="404" y="322" width="132" height="14" rx="7" fill="#D9B98A"/>
+              <g class="buns">
+                <circle cx="432" cy="308" r="20" fill="url(#bunGrad)"/>
+                <circle cx="470" cy="300" r="23" fill="url(#bunGrad)"/>
+                <circle cx="508" cy="309" r="19" fill="url(#bunGrad)"/>
+                <path d="M424 300 q8 -6 16 0 M461 290 q9 -6 18 0 M500 302 q8 -5 15 0" stroke="#FFF3D9" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8"/>
+                <circle cx="438" cy="312" r="2" fill="#8A5417"/><circle cx="476" cy="305" r="2" fill="#8A5417"/><circle cx="512" cy="313" r="2" fill="#8A5417"/>
+              </g>
+            </g>
+
+            <!-- стакан компота -->
+            <g class="hero-svg__drink">
+              <path d="M205 268 h34 l-5 62 h-24 Z" fill="#F8D9C4" opacity="0.85"/>
+              <path d="M207 282 h30 l-3 48 h-24 Z" fill="#D9483B" opacity="0.85"/>
+              <circle cx="216" cy="292" r="3" fill="#FFFDF8" opacity="0.7"/>
+              <circle cx="226" cy="306" r="2.5" fill="#FFFDF8" opacity="0.7"/>
+            </g>
+          </svg>
+
+          <!-- всплывающий промокод (пасхалка) -->
+          <div class="promo-pop" id="promoPop" hidden>
+            <span class="promo-pop__label">Ваш промокод:</span>
+            <strong class="promo-pop__code">ПАМПУШКА10</strong>
+            <span class="promo-pop__hint">−10% на первый заказ доставки</span>
+          </div>
+          <p class="hero__hint" id="pampushkaHint">псст… нажми на пампушку</p>
+        </div>
+      </div>
+
+      <!-- бегущая строка -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Борщ со сметаной</span><i>•</i><span>Пампушки с чесноком</span><i>•</i><span>Детские сырники</span><i>•</i><span>Деловой обед за 15 минут</span><i>•</i><span>Доставка по Волгограду</span><i>•</i><span>Домашние котлеты</span><i>•</i>
+          <span>Борщ со сметаной</span><i>•</i><span>Пампушки с чесноком</span><i>•</i><span>Детские сырники</span><i>•</i><span>Деловой обед за 15 минут</span><i>•</i><span>Доставка по Волгограду</span><i>•</i><span>Домашние котлеты</span><i>•</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= ДЕЛОВОЙ ОБЕД ======================= -->
+    <section class="section lunch" id="lunch">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Пн–Пт, 12:00–16:00</span>
+          <h2 class="section__title">Деловой <em class="hl hl--green">обед</em></h2>
+          <p class="section__lead">Суп + горячее + салат + напиток. Полный комплект, подаём за 15 минут — успеете пообедать даже в короткий перерыв.</p>
+        </div>
+
+        <div class="lunch__grid">
+          <div class="lunch__card reveal">
+            <div class="lunch__price-row">
+              <div class="lunch__price">420&nbsp;₽</div>
+              <div class="lunch__timer" id="lunchTimer" aria-live="polite">
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="13" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 9v4l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M9 3h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <span id="lunchTimerText">до конца обеда: —</span>
+              </div>
+            </div>
+
+            <ul class="lunch__composition">
+              <li><span class="lunch__ico lunch__ico--soup" aria-hidden="true"></span>Суп дня</li>
+              <li><span class="lunch__ico lunch__ico--main" aria-hidden="true"></span>Горячее с гарниром</li>
+              <li><span class="lunch__ico lunch__ico--salad" aria-hidden="true"></span>Свежий салат</li>
+              <li><span class="lunch__ico lunch__ico--drink" aria-hidden="true"></span>Морс или чай</li>
+            </ul>
+
+            <div class="lunch__note">
+              <strong>Готово за 15 минут</strong> — или следующий обед за наш счёт.
+            </div>
+          </div>
+
+          <div class="lunch__week reveal">
+            <div class="lunch__tabs-head">
+              <h3>Сет недели</h3>
+              <div class="tabs" id="lunchTabs" role="tablist" aria-label="Меню обеда по дням недели">
+                <button class="tab" role="tab" data-day="0" aria-selected="true">Пн</button>
+                <button class="tab" role="tab" data-day="1" aria-selected="false">Вт</button>
+                <button class="tab" role="tab" data-day="2" aria-selected="false">Ср</button>
+                <button class="tab" role="tab" data-day="3" aria-selected="false">Чт</button>
+                <button class="tab" role="tab" data-day="4" aria-selected="false">Пт</button>
+              </div>
+            </div>
+            <div class="lunch__day" id="lunchDay" role="tabpanel" aria-live="polite"><!-- заполняется скриптом --></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= СЕМЬЯМ ======================= -->
+    <section class="section family" id="family">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Выходные — семейные</span>
+          <h2 class="section__title">С детьми — <em class="hl hl--orange">легко</em></h2>
+          <p class="section__lead">Мы знаем, как это — обедать с малышами. Поэтому продумали всё: от стульчиков до пампушек, которые доедают даже малоежки.</p>
+        </div>
+
+        <div class="family__cards">
+          <article class="family-card reveal">
+            <div class="family-card__art" aria-hidden="true">
+              <svg viewBox="0 0 120 120">
+                <circle cx="60" cy="60" r="52" fill="#FDF3DC"/>
+                <path d="M35 62 h50 l-6 26 a8 8 0 0 1 -8 6 h-22 a8 8 0 0 1 -8 -6 Z" fill="#F6C453"/>
+                <ellipse cx="60" cy="62" rx="26" ry="8" fill="#FFFDF8"/>
+                <circle cx="52" cy="58" r="4" fill="#E8574A"/><circle cx="68" cy="57" r="4" fill="#E8574A"/>
+                <path d="M45 40 q-4 -8 0 -14 M60 38 q-4 -8 0 -14 M75 40 q-4 -8 0 -14" stroke="#E8863A" stroke-width="3.5" fill="none" stroke-linecap="round" class="steam-anim"/>
+                <circle cx="52" cy="76" r="3.5" fill="#2E2A26"/><circle cx="68" cy="76" r="3.5" fill="#2E2A26"/>
+                <path d="M53 83 q7 5 14 0" stroke="#2E2A26" stroke-width="3" fill="none" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Детское меню</h3>
+            <p>Сырники с мёдом, мини-котлетки, суп-пюре из тыквы — без острого, с любовью. Порции «под ладошку» от 190 ₽.</p>
+          </article>
+
+          <article class="family-card reveal">
+            <div class="family-card__art" aria-hidden="true">
+              <svg viewBox="0 0 120 120">
+                <circle cx="60" cy="60" r="52" fill="#E9F2E7"/>
+                <rect x="38" y="34" width="44" height="34" rx="8" fill="#4A7C59"/>
+                <rect x="44" y="40" width="32" height="18" rx="5" fill="#FFFDF8"/>
+                <path d="M42 68 v22 M78 68 v22 M42 80 h36" stroke="#4A7C59" stroke-width="6" stroke-linecap="round"/>
+                <circle cx="60" cy="47" r="5" fill="#E8863A"/>
+                <path d="M52 53 q8 6 16 0" stroke="#E8863A" stroke-width="3" fill="none" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Стульчики и место для коляски</h3>
+            <p>Широкие проходы, детские стульчики, пеленальный столик и розетка рядом — коляску поставим так, чтобы не мешала.</p>
+          </article>
+
+          <article class="family-card reveal">
+            <div class="family-card__art" aria-hidden="true">
+              <svg viewBox="0 0 120 120">
+                <circle cx="60" cy="60" r="52" fill="#FDEBDD"/>
+                <circle cx="46" cy="64" r="16" fill="#E8A553"/>
+                <circle cx="72" cy="58" r="19" fill="#E8983F"/>
+                <circle cx="80" cy="76" r="13" fill="#D98E3B"/>
+                <path d="M40 56 q6 -5 12 0 M64 48 q7 -5 15 0" stroke="#FFF3D9" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <path d="M38 30 q-3 -7 1 -12 M58 26 q-3 -7 1 -12 M78 30 q-3 -7 1 -12" stroke="#E8863A" stroke-width="3.5" fill="none" stroke-linecap="round" class="steam-anim"/>
+              </svg>
+            </div>
+            <h3>Пампушки, которые любят все</h3>
+            <p>Печём каждый час: румяные, с чесноком и укропом. Детям — с молоком, взрослым — к борщу. Корзинка 90 ₽.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= МЕНЮ-ВИТРИНА ======================= -->
+    <section class="section menu" id="menu">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Готовим каждый день</span>
+          <h2 class="section__title">Меню-витрина</h2>
+          <p class="section__lead">Нажмите на блюдо — покажем состав и КБЖУ. Всё готовим из местных продуктов, закупаем на Центральном рынке.</p>
+        </div>
+
+        <div class="menu__filters reveal" id="menuFilters" role="group" aria-label="Фильтр по категориям">
+          <button class="chip is-active" data-cat="all">Всё меню</button>
+          <button class="chip" data-cat="soups">Супы</button>
+          <button class="chip" data-cat="mains">Горячее</button>
+          <button class="chip" data-cat="salads">Салаты</button>
+          <button class="chip" data-cat="desserts">Десерты</button>
+          <button class="chip" data-cat="kids">Детям</button>
+        </div>
+
+        <div class="menu__grid reveal" id="menuGrid"><!-- карточки генерирует script.js --></div>
+      </div>
+    </section>
+
+    <!-- ======================= ДОСТАВКА ======================= -->
+    <section class="section delivery" id="delivery">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Домой и в офис</span>
+          <h2 class="section__title">Доставка и <em class="hl hl--green">самовывоз</em></h2>
+        </div>
+
+        <div class="delivery__grid">
+          <article class="delivery-card delivery-card--city reveal">
+            <div class="delivery-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 96 96">
+                <circle cx="48" cy="48" r="44" fill="#E9F2E7"/>
+                <rect x="18" y="38" width="40" height="26" rx="5" fill="#4A7C59"/>
+                <path d="M58 46 h14 l8 10 v8 h-22 Z" fill="#3D6B4B"/>
+                <circle cx="32" cy="66" r="8" fill="#2E2A26"/><circle cx="32" cy="66" r="3.5" fill="#FFFDF8"/>
+                <circle cx="68" cy="66" r="8" fill="#2E2A26"/><circle cx="68" cy="66" r="3.5" fill="#FFFDF8"/>
+                <path d="M14 44 h-6 M16 52 h-8 M14 60 h-6" stroke="#E8863A" stroke-width="3.5" stroke-linecap="round" class="speed-lines"/>
+              </svg>
+            </div>
+            <h3>Доставка по городу</h3>
+            <p>Даже если вы остались дома и не успели зайти к нам — закажите на дом или в офис. Приготовленная с любовью гастрономия порадует вас и поднимет настроение.</p>
+            <ul class="delivery-card__facts">
+              <li><strong>от 2000&nbsp;₽</strong><span>минимальный заказ</span></li>
+              <li><strong>от 4000&nbsp;₽</strong><span>доставка бесплатно</span></li>
+              <li><strong>12:00–21:00</strong><span>приём заказов</span></li>
+            </ul>
+            <div class="delivery-card__phone">
+              <span>Заказ по телефону</span>
+              <a href="tel:+79627601517">+7 (962) 760-15-17</a>
+            </div>
+            <a href="tel:+79627601517" class="btn btn--green btn--lg">Заказать доставку</a>
+          </article>
+
+          <article class="delivery-card delivery-card--pickup reveal">
+            <div class="delivery-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 96 96">
+                <circle cx="48" cy="48" r="44" fill="#FDEBDD"/>
+                <path d="M30 36 h36 l-4 36 a6 6 0 0 1 -6 5 h-16 a6 6 0 0 1 -6 -5 Z" fill="#E8863A"/>
+                <path d="M38 36 q10 -14 20 0" fill="none" stroke="#2E2A26" stroke-width="4" stroke-linecap="round"/>
+                <text x="48" y="62" text-anchor="middle" font-size="17" font-weight="800" fill="#FFFDF8" font-family="Nunito, sans-serif">−20%</text>
+              </svg>
+            </div>
+            <h3>Самовывоз −20%</h3>
+            <p>Заберите заказ сами на ул. Маршала Ерёменко, 68 — получите скидку 20% на всё меню. Соберём пакет к вашему приходу, без очереди.</p>
+            <div class="delivery-card__phone">
+              <span>Заказать к времени</span>
+              <a href="tel:+79627601517">+7 (962) 760-15-17</a>
+            </div>
+            <a href="tel:+79627601517" class="btn btn--orange btn--lg">Заказать самовывоз</a>
+          </article>
+        </div>
+
+        <div class="delivery__zones reveal">
+          <div class="delivery__zones-head">
+            <h3>Стоимость доставки по районам</h3>
+            <p>При заказе от 4000&nbsp;₽ привезём бесплатно в любой из районов. Кафе работает до 24:00, а заказы на доставку принимаем до 21:00.</p>
+          </div>
+          <ul class="delivery__zones-list">
+            <li><span>Краснооктябрьский</span><b>400&nbsp;₽</b></li>
+            <li><span>Дзержинский</span><b>500&nbsp;₽</b></li>
+            <li><span>Тракторозаводский</span><b>600&nbsp;₽</b></li>
+            <li><span>Центральный</span><b>600&nbsp;₽</b></li>
+            <li><span>Ворошиловский</span><b>700&nbsp;₽</b></li>
+            <li><span>ГЭС</span><b>700&nbsp;₽</b></li>
+            <li><span>Латошинка</span><b>800&nbsp;₽</b></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= АКЦИИ ======================= -->
+    <section class="section promos" id="promos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Приятные мелочи</span>
+          <h2 class="section__title">Акции и <em class="hl hl--orange">подарки</em></h2>
+        </div>
+
+        <div class="promos__board">
+          <article class="sticker sticker--yellow reveal">
+            <span class="sticker__tape" aria-hidden="true"></span>
+            <h3>−20% в день рождения</h3>
+            <p>Именинникам — скидка на весь счёт и свечка на десерт в подарок. Действует 3 дня до и после праздника.</p>
+            <span class="sticker__note">по паспорту</span>
+          </article>
+          <article class="sticker sticker--green reveal">
+            <span class="sticker__tape" aria-hidden="true"></span>
+            <h3>−20% на самовывоз</h3>
+            <p>Забираете заказ сами — получаете скидку 20%. Работает каждый день, без ограничений по сумме.</p>
+            <span class="sticker__note">постоянно</span>
+          </article>
+          <article class="sticker sticker--orange reveal">
+            <span class="sticker__tape" aria-hidden="true"></span>
+            <h3>5-й обед в подарок</h3>
+            <p>Отмечаем каждый деловой обед в карте гостя. Пятый обед месяца — за наш счёт.</p>
+            <span class="sticker__note">карта гостя</span>
+          </article>
+          <article class="sticker sticker--pink reveal">
+            <span class="sticker__tape" aria-hidden="true"></span>
+            <h3>Семейное воскресенье</h3>
+            <p>По воскресеньям дети до 7 лет обедают бесплатно — к каждому взрослому заказу.</p>
+            <span class="sticker__note">вс, 12:00–20:00</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= КАК НАС НАЙТИ ======================= -->
+    <section class="section contacts" id="contacts">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Краснооктябрьский район</span>
+          <h2 class="section__title">Как нас <em class="hl hl--green">найти</em></h2>
+        </div>
+
+        <div class="contacts__grid">
+          <!-- Стилизованная карта (SVG) -->
+          <div class="contacts__map reveal" role="img" aria-label="Схема: кафе Шинок на ул. Маршала Ерёменко, 68, Краснооктябрьский район">
+            <svg viewBox="0 0 520 360" class="map-svg" aria-hidden="true">
+              <rect width="520" height="360" fill="#EDF3E8"/>
+              <path d="M0 90 H520 M0 210 H520 M120 0 V360 M300 0 V360 M420 0 V360" stroke="#FFFDF8" stroke-width="22"/>
+              <path d="M0 90 H520 M0 210 H520 M120 0 V360 M300 0 V360 M420 0 V360" stroke="#D8DFCE" stroke-width="2"/>
+              <path d="M0 300 C120 280 200 320 340 300 C420 290 480 310 520 300 V360 H0 Z" fill="#CFE3F0"/>
+              <rect x="140" y="110" width="70" height="50" rx="8" fill="#DCE8D2"/>
+              <rect x="330" y="230" width="70" height="46" rx="8" fill="#DCE8D2"/>
+              <rect x="440" y="120" width="60" height="70" rx="8" fill="#F3E4C8"/>
+              <circle cx="360" cy="150" r="34" fill="#BCD6AE"/>
+              <circle cx="360" cy="150" r="10" fill="#8FBF6E"/>
+              <text x="60" y="82" font-size="13" fill="#7A7268" font-family="Golos Text, sans-serif">ул. Маршала Ерёменко</text>
+              <text x="126" y="200" font-size="13" fill="#7A7268" font-family="Golos Text, sans-serif">ул. Грамши</text>
+              <text x="352" y="128" font-size="12" fill="#5A7C50" font-family="Golos Text, sans-serif">сквер</text>
+              <text x="380" y="330" font-size="12" fill="#6E97AE" font-family="Golos Text, sans-serif">наб. 62-й Армии</text>
+              <!-- метка -->
+              <g class="map-pin">
+                <circle cx="260" cy="150" r="26" fill="#E8863A" opacity="0.25" class="map-pin__pulse"/>
+                <path d="M260 118 c-14 0 -24 10 -24 23 0 17 24 39 24 39 s24 -22 24 -39 c0 -13 -10 -23 -24 -23 Z" fill="#E8863A"/>
+                <circle cx="260" cy="141" r="9" fill="#FFFDF8"/>
+                <text x="260" y="146" text-anchor="middle" font-size="11" font-weight="800" fill="#E8863A" font-family="Nunito, sans-serif">Ш</text>
+              </g>
+            </svg>
+            <a class="btn btn--orange contacts__route" href="https://yandex.ru/maps/?text=Волгоград, ул. Маршала Ерёменко, 68" target="_blank" rel="noopener">Построить маршрут</a>
+          </div>
+
+          <div class="contacts__info reveal">
+            <!-- Фото фасада — процедурная иллюстрация -->
+            <div class="contacts__facade" role="img" aria-label="Иллюстрация фасада кафе с вывеской «Шинок»">
+              <svg viewBox="0 0 520 240" aria-hidden="true">
+                <rect width="520" height="240" fill="#F8EFDD"/>
+                <rect x="0" y="196" width="520" height="44" fill="#E4D2B0"/>
+                <rect x="60" y="40" width="400" height="160" rx="10" fill="#FFFDF8" stroke="#EFE3CB" stroke-width="3"/>
+                <rect x="60" y="40" width="400" height="44" rx="10" fill="#4A7C59"/>
+                <text x="260" y="71" text-anchor="middle" font-size="30" font-weight="800" fill="#FFFDF8" font-family="Nunito, sans-serif" letter-spacing="6">ШИНОК</text>
+                <rect x="90" y="104" width="96" height="72" rx="8" fill="#FDF3DC" stroke="#E8D3AF" stroke-width="3"/>
+                <rect x="212" y="104" width="96" height="72" rx="8" fill="#FDF3DC" stroke="#E8D3AF" stroke-width="3"/>
+                <rect x="340" y="104" width="86" height="96" rx="8" fill="#E8863A"/>
+                <circle cx="406" cy="152" r="5" fill="#FFFDF8"/>
+                <path d="M90 104 h96 l-12 -20 h-72 Z" fill="#E8863A" opacity="0.9"/>
+                <path d="M212 104 h96 l-12 -20 h-72 Z" fill="#E8863A" opacity="0.9"/>
+                <circle cx="120" cy="150" r="12" fill="#E8574A"/><circle cx="240" cy="150" r="12" fill="#F6C453"/><circle cx="270" cy="150" r="12" fill="#8FBF6E"/>
+                <g class="steam-anim-group" stroke="#CBB99A" stroke-width="4" fill="none" stroke-linecap="round">
+                  <path class="steam-anim" d="M150 130 q-5 -10 0 -18 q5 -8 0 -16"/>
+                </g>
+                <rect x="66" y="186" width="46" height="12" rx="6" fill="#8FBF6E"/>
+                <rect x="408" y="186" width="46" height="12" rx="6" fill="#8FBF6E"/>
+              </svg>
+            </div>
+            <ul class="contacts__list">
+              <li>
+                <strong>Адрес</strong>
+                <span>400064, г. Волгоград, ул. Маршала Ерёменко, 68 (Краснооктябрьский район)</span>
+              </li>
+              <li>
+                <strong>Часы работы</strong>
+                <span>Ежедневно: 12:00–24:00</span>
+              </li>
+              <li>
+                <strong>Телефон</strong>
+                <a href="tel:+79627601517">+7 (962) 760-15-17</a>
+              </li>
+              <li>
+                <strong>Доставка</strong>
+                <span>Приём заказов 12:00–21:00, от 2000 ₽ · бесплатно от 4000 ₽</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= ОТЗЫВЫ ======================= -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Гости говорят</span>
+          <h2 class="section__title">Отзывы</h2>
+        </div>
+
+        <div class="reviews__carousel reveal" id="reviewsCarousel">
+          <button class="reviews__arrow reviews__arrow--prev" id="revPrev" aria-label="Предыдущий отзыв">←</button>
+          <div class="reviews__viewport">
+            <div class="reviews__track" id="reviewsTrack"><!-- слайды генерирует script.js --></div>
+          </div>
+          <button class="reviews__arrow reviews__arrow--next" id="revNext" aria-label="Следующий отзыв">→</button>
+        </div>
+        <div class="reviews__dots" id="reviewsDots" role="tablist" aria-label="Выбор отзыва"></div>
+      </div>
+    </section>
+
+    <!-- ======================= БРОНЬ ======================= -->
+    <section class="section booking" id="booking">
+      <div class="container booking__inner reveal">
+        <div class="booking__text">
+          <h2 class="section__title">Забронировать <em class="hl hl--orange">столик</em></h2>
+          <p class="section__lead">Оставьте телефон — перезвоним за 5 минут и подтвердим бронь. В обеденные часы держим столики 15 минут.</p>
+          <div class="booking__deco" aria-hidden="true">
+            <svg viewBox="0 0 140 100">
+              <ellipse cx="70" cy="78" rx="60" ry="12" fill="#F3E4C8"/>
+              <ellipse cx="70" cy="62" rx="42" ry="14" fill="#FFFDF8" stroke="#EFE3CB" stroke-width="3"/>
+              <ellipse cx="70" cy="58" rx="30" ry="9" fill="#D94B3A"/>
+              <path d="M58 40 q-4 -8 0 -14 M72 38 q-4 -8 0 -14 M84 40 q-4 -8 0 -14" stroke="#CBB99A" stroke-width="4" fill="none" stroke-linecap="round" class="steam-anim"/>
+            </svg>
+          </div>
+        </div>
+
+        <form class="booking__form" id="bookingForm" novalidate>
+          <div class="field">
+            <label for="bfName">Ваше имя</label>
+            <input type="text" id="bfName" name="name" placeholder="Например, Ольга" autocomplete="name">
+            <span class="field__error" data-error-for="bfName"></span>
+          </div>
+          <div class="field">
+            <label for="bfPhone">Телефон</label>
+            <input type="tel" id="bfPhone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" inputmode="tel">
+            <span class="field__error" data-error-for="bfPhone"></span>
+          </div>
+          <div class="field">
+            <label for="bfGuests">Количество гостей</label>
+            <select id="bfGuests" name="guests">
+              <option value="1">1 гость</option>
+              <option value="2" selected>2 гостя</option>
+              <option value="3">3 гостя</option>
+              <option value="4">4 гостя</option>
+              <option value="5">5 гостей</option>
+              <option value="6+">6 и больше — семейный стол</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn--orange btn--lg booking__submit">Перезвоните мне</button>
+          <p class="booking__note">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+          <div class="booking__success" id="bookingSuccess" hidden>
+            <strong>Спасибо! Заявка принята.</strong>
+            <span>Перезвоним в течение 5 минут и подтвердим столик.</span>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= ФУТЕР ======================= -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col footer__col--brand">
+        <div class="logo logo--footer">
+          <span class="logo__text">Шинок</span>
+        </div>
+        <p>Светлое семейное кафе в Волгограде. Готовим как дома — только быстрее и с пампушками.</p>
+        <div class="footer__social">
+          <a href="https://vk.com" target="_blank" rel="noopener" aria-label="ВКонтакте" class="footer__soc">VK</a>
+          <a href="https://t.me" target="_blank" rel="noopener" aria-label="Telegram" class="footer__soc">TG</a>
+          <a href="https://ok.ru" target="_blank" rel="noopener" aria-label="Одноклассники" class="footer__soc">OK</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Меню</h4>
+        <a href="#lunch">Деловой обед</a>
+        <a href="#menu">Супы и горячее</a>
+        <a href="#menu">Десерты</a>
+        <a href="#family">Детское меню</a>
+      </div>
+      <div class="footer__col">
+        <h4>Гостям</h4>
+        <a href="#delivery">Доставка</a>
+        <a href="#promos">Акции</a>
+        <a href="#booking">Бронирование</a>
+        <a href="#reviews">Отзывы</a>
+      </div>
+      <div class="footer__col">
+        <h4>Контакты</h4>
+        <a href="tel:+79627601517">+7 (962) 760-15-17</a>
+        <a href="mailto:shinok-volgograd@yandex.ru">shinok-volgograd@yandex.ru</a>
+        <span>Волгоград, ул. Маршала Ерёменко, 68</span>
+        <span>Ежедневно 12:00–24:00</span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <span>© 2026 Кафе «Шинок», Волгоград</span>
+        <span>Сделано с любовью и укропом</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Плавающая кнопка звонка -->
+  <a href="tel:+79627601517" class="call-fab" id="callFab" aria-label="Позвонить в кафе Шинок">
+    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
+      <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z" fill="currentColor"/>
+    </svg>
+    <span class="call-fab__label">Позвонить</span>
+  </a>
+
+  <!-- Модальное окно блюда -->
+  <div class="modal" id="dishModal" hidden>
+    <div class="modal__backdrop" data-modal-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" data-modal-close aria-label="Закрыть">×</button>
+      <div class="modal__art" id="modalArt" aria-hidden="true"></div>
+      <div class="modal__body">
+        <span class="modal__cat" id="modalCat"></span>
+        <h3 class="modal__title" id="modalTitle"></h3>
+        <p class="modal__desc" id="modalDesc"></p>
+        <div class="modal__composition">
+          <h4>Состав</h4>
+          <p id="modalComposition"></p>
+        </div>
+        <div class="modal__nutrition" id="modalNutrition"></div>
+        <div class="modal__footer">
+          <span class="modal__price" id="modalPrice"></span>
+          <a href="tel:+79627601517" class="btn btn--orange">Заказать</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

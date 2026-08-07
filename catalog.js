@@ -66,4 +66,24 @@ const WORKS = [
     style: "Быстрый и понятный",
     path: "tire-service/",
   },
+
+  // --- Кафе ---
+  {
+    category: "Кафе",
+    title: "Вечерний гастро-бар",
+    style: "Тёмный, атмосферный, взрослый",
+    path: "cafe/gastro-bar/",
+  },
+  {
+    category: "Кафе",
+    title: "Светлое семейное кафе",
+    style: "Дневной, дружелюбный, для обедов и семей",
+    path: "cafe/family-cafe/",
+  },
+  {
+    category: "Кафе",
+    title: "Современная слобода",
+    style: "Тёплая традиция в новом прочтении",
+    path: "cafe/modern-tradition/",
+  },
 ];

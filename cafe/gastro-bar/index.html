@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Шинок — гастро-бар со славянской душой. Волгоград</title>
+  <meta name="description" content="Гастро-бар «Шинок» в Волгограде: стейки на открытом огне, сало четырёх видов, домашние настойки. Ужин после работы, свидание, большая компания.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== ШАПКА ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#hero" class="logo" aria-label="Шинок — на главную">
+        <svg class="logo__flame" viewBox="0 0 24 32" width="22" height="30" aria-hidden="true">
+          <path d="M12 1c2 6-6 9-6 16a6 6 0 0 0 12 0c0-3-1.5-5-3-7-.5 2-1.5 3-3 3.5C13.5 10 13 5 12 1z" fill="#E8A33D"/>
+        </svg>
+        <span class="logo__text">ШИНОК</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#grill" class="nav__link">Меню</a>
+        <a href="#bar" class="nav__link">Бар</a>
+        <a href="#salo" class="nav__link">Сало</a>
+        <a href="#evenings" class="nav__link">Вечера</a>
+        <a href="#events" class="nav__link">Афиша</a>
+        <a href="#gallery" class="nav__link">Атмосфера</a>
+        <a href="#delivery" class="nav__link">Доставка</a>
+        <a href="#booking" class="nav__link nav__link--cta">Забронировать</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <!-- Анимированный «огонь и дым» вместо видео -->
+      <div class="hero__fire" aria-hidden="true">
+        <div class="hero__flame hero__flame--1"></div>
+        <div class="hero__flame hero__flame--2"></div>
+        <div class="hero__flame hero__flame--3"></div>
+        <div class="hero__embers"></div>
+      </div>
+      <!-- Дым, поднимающийся от жаровни -->
+      <svg class="hero__smoke" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <defs>
+          <filter id="smokeBlur" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="18"/>
+          </filter>
+        </defs>
+        <g filter="url(#smokeBlur)" fill="none" stroke="#F5EFE4" stroke-linecap="round">
+          <path class="smoke-path smoke-path--1" d="M420 620 C 400 520, 460 470, 430 380 C 400 290, 470 240, 445 150 C 430 90, 460 40, 450 -20" stroke-width="26" opacity="0"/>
+          <path class="smoke-path smoke-path--2" d="M600 620 C 580 530, 640 480, 615 390 C 590 300, 655 250, 630 160 C 615 95, 645 45, 638 -20" stroke-width="34" opacity="0"/>
+          <path class="smoke-path smoke-path--3" d="M780 620 C 760 540, 820 480, 795 395 C 770 310, 835 255, 812 170 C 798 105, 825 50, 820 -20" stroke-width="22" opacity="0"/>
+          <path class="smoke-path smoke-path--4" d="M520 620 C 505 545, 555 495, 535 410 C 515 325, 570 270, 552 185 C 540 120, 565 60, 560 -20" stroke-width="18" opacity="0"/>
+        </g>
+      </svg>
+      <div class="hero__grill" aria-hidden="true"></div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="container hero__content">
+        <p class="hero__kicker">Гастро-бар · открыт до последнего гостя</p>
+        <h1 class="hero__title">СТЕЙК. САЛО.<br>НАСТОЙКИ.</h1>
+        <p class="hero__subtitle">Гастро-бар со славянской душой. Волгоград</p>
+        <div class="hero__actions">
+          <a href="#booking" class="btn btn--glow">Забронировать стол</a>
+          <a href="#grill" class="btn btn--ghost">Смотреть меню</a>
+        </div>
+        <div class="hero__tables" id="tablesWidget" title="Имитация виджета в реальном времени">
+          <span class="tables-dot" aria-hidden="true"></span>
+          <span>Сегодня в баре: свободно <strong id="tablesFree">7</strong> из <strong>24</strong> столов</span>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#grill" aria-label="Листайте вниз">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ===== МЯСО И ОГОНЬ ===== -->
+    <section class="section grill" id="grill">
+      <span class="side-label side-label--left" aria-hidden="true">МЕНЮ</span>
+      <div class="container">
+        <p class="section-kicker">Гриль на живом огне</p>
+        <h2 class="section-title reveal">Мясо и огонь</h2>
+        <p class="section-lead">Жарим на углях из ольхи и вишни. Мясо — от фермеров Волгоградской области, выдержка и ничего лишнего.</p>
+
+        <div class="grill__grid">
+          <!-- Стейк -->
+          <article class="dish dish--steak">
+            <div class="dish__art" aria-hidden="true">
+              <div class="dish__glow"></div>
+              <div class="plate">
+                <div class="food food--steak"><i></i></div>
+              </div>
+              <svg class="dish__smoke" viewBox="0 0 200 120" aria-hidden="true">
+                <path class="wisp wisp--1" d="M70 115 C 60 90, 85 75, 72 50 C 62 30, 82 15, 75 -5"/>
+                <path class="wisp wisp--2" d="M120 115 C 112 92, 134 78, 124 55 C 116 36, 132 18, 127 -5"/>
+              </svg>
+            </div>
+            <div class="dish__body">
+              <h3 class="dish__name">Стейк рибай из мраморной говядины</h3>
+              <p class="dish__desc">Выдержка 21 день, прожарка на ваш выбор, дымное масло и крупная соль.</p>
+              <p class="dish__price">1 890 ₽ <span>/ 300 г</span></p>
+            </div>
+          </article>
+
+          <!-- Рёбра -->
+          <article class="dish dish--ribs">
+            <div class="dish__art" aria-hidden="true">
+              <div class="dish__glow"></div>
+              <div class="plate">
+                <div class="food food--ribs"><i></i><i></i><i></i></div>
+              </div>
+              <svg class="dish__smoke" viewBox="0 0 200 120" aria-hidden="true">
+                <path class="wisp wisp--2" d="M95 115 C 88 90, 110 76, 100 52 C 92 32, 108 16, 103 -5"/>
+              </svg>
+            </div>
+            <div class="dish__body">
+              <h3 class="dish__name">Свиные рёбра томлёные</h3>
+              <p class="dish__desc">Шесть часов при 90 градусах, глазурь из мёда и хрена, маринованный лук.</p>
+              <p class="dish__price">890 ₽ <span>/ 450 г</span></p>
+            </div>
+          </article>
+
+          <!-- Перепёлки -->
+          <article class="dish dish--quail">
+            <div class="dish__art" aria-hidden="true">
+              <div class="dish__glow"></div>
+              <div class="plate">
+                <div class="food food--quail"><i></i><i></i></div>
+              </div>
+              <svg class="dish__smoke" viewBox="0 0 200 120" aria-hidden="true">
+                <path class="wisp wisp--1" d="M105 115 C 96 92, 118 78, 108 54 C 100 34, 116 18, 111 -5"/>
+              </svg>
+            </div>
+            <div class="dish__body">
+              <h3 class="dish__name">Перепёлки жареные</h3>
+              <p class="dish__desc">Пара перепелов целиком, чесночный конфитюр, соус из печёной айвы.</p>
+              <p class="dish__price">740 ₽ <span>/ 2 шт</span></p>
+            </div>
+          </article>
+
+          <!-- Свинина на гриле -->
+          <article class="dish dish--pork">
+            <div class="dish__art" aria-hidden="true">
+              <div class="dish__glow"></div>
+              <div class="plate">
+                <div class="food food--pork"><i></i><i></i><i></i><i></i></div>
+              </div>
+              <svg class="dish__smoke" viewBox="0 0 200 120" aria-hidden="true">
+                <path class="wisp wisp--3" d="M85 115 C 76 90, 100 74, 88 50 C 78 28, 96 14, 90 -5"/>
+              </svg>
+            </div>
+            <div class="dish__body">
+              <h3 class="dish__name">Свинина на гриле</h3>
+              <p class="dish__desc">Шея в маринаде из кваса и кориандра, лаваш, соус из копчёной сливы.</p>
+              <p class="dish__price">820 ₽ <span>/ 350 г</span></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== БАРНАЯ КАРТА ===== -->
+    <section class="section bar" id="bar">
+      <span class="side-label side-label--right" aria-hidden="true">БАР</span>
+      <div class="container">
+        <p class="section-kicker">Барная карта</p>
+        <h2 class="section-title reveal">Наливай по-домашнему</h2>
+        <p class="section-lead">Собственные настойки на ягодах и травах, холодная водка из ледяного шкафа, благородные крепкие.</p>
+
+        <div class="bar__tabs" role="tablist" aria-label="Категории бара">
+          <button class="bar__tab is-active" role="tab" aria-selected="true" data-cat="vodka">Водка Шинок</button>
+          <button class="bar__tab" role="tab" aria-selected="false" data-cat="tincture">Настойки и ликёры</button>
+          <button class="bar__tab" role="tab" aria-selected="false" data-cat="cognac">Коньяк и виски</button>
+          <button class="bar__tab" role="tab" aria-selected="false" data-cat="beer">Пиво и коктейли</button>
+        </div>
+
+        <div class="bar__slider-wrap">
+          <button class="bar__arrow bar__arrow--prev" id="barPrev" aria-label="Назад">←</button>
+          <div class="bar__slider" id="barSlider"><!-- карточки рендерит script.js --></div>
+          <button class="bar__arrow bar__arrow--next" id="barNext" aria-label="Вперёд">→</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== САЛО — ПОЛНЫЙ ПАРАД ===== -->
+    <section class="section salo" id="salo">
+      <div class="container salo__inner">
+        <div class="salo__art" aria-hidden="true">
+          <div class="board">
+            <div class="board__grain"></div>
+            <div class="salo-piece salo-piece--1"><i></i><i></i><i></i></div>
+            <div class="salo-piece salo-piece--2"><i></i><i></i><i></i></div>
+            <div class="salo-piece salo-piece--3"><i></i><i></i><i></i></div>
+            <div class="salo-piece salo-piece--4"><i></i><i></i><i></i></div>
+            <span class="board__tag board__tag--1">солёное</span>
+            <span class="board__tag board__tag--2">варёное</span>
+            <span class="board__tag board__tag--3">копчёное</span>
+            <span class="board__tag board__tag--4">тёртое</span>
+          </div>
+        </div>
+        <div class="salo__text">
+          <p class="section-kicker">Наш культ</p>
+          <h2 class="section-title reveal">Сало — полный парад</h2>
+          <p class="section-lead">Доска сала четырёх видов — то, с чего начинается вечер в «Шинке». Подаём на дубовой доске с бородинскими гренками, зелёным луком и горчицей с хреном.</p>
+          <ul class="salo__list">
+            <li><strong>Солёное</strong> — классика, крупная соль и неделя в рассоле;</li>
+            <li><strong>Варёное</strong> — с травами и мёдом, нежное, почти десертное;</li>
+            <li><strong>Копчёное</strong> — со специями, на ольховой щепе;</li>
+            <li><strong>Тёртое</strong> — с чесноком, намазывать на горячую гренку.</li>
+          </ul>
+          <button class="btn btn--glow" id="degustBtn">Заказать дегустацию · 690 ₽</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ВЕЧЕРНИЕ СЦЕНАРИИ ===== -->
+    <section class="section evenings" id="evenings">
+      <div class="container">
+        <p class="section-kicker">Зачем сюда приходят</p>
+        <h2 class="section-title reveal">Вечерние сценарии</h2>
+
+        <div class="evenings__grid">
+          <article class="scene scene--work">
+            <div class="scene__art" aria-hidden="true"><div class="scene__lights"></div></div>
+            <div class="scene__body">
+              <h3>После работы</h3>
+              <p>Сбросить день за стаканом настойки и тарелкой рёбер. Барная стойка, неспешный разговор, и пусть весь мир подождёт.</p>
+            </div>
+          </article>
+          <article class="scene scene--date">
+            <div class="scene__art" aria-hidden="true"><div class="scene__lights"></div></div>
+            <div class="scene__body">
+              <h3>Свидание</h3>
+              <p>Полумрак, свечи, столик у кирпичной стены. Стейк на двоих и десерт из печёного яблока — дальше всё само.</p>
+            </div>
+          </article>
+          <article class="scene scene--party">
+            <div class="scene__art" aria-hidden="true"><div class="scene__lights"></div></div>
+            <div class="scene__body">
+              <h3>Большая компания</h3>
+              <p>Длинный стол на десятерых, доски сала, графин настоек и плейлист, под который поют. Бронируйте заранее.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== АФИША + АКЦИИ ===== -->
+    <section class="section events" id="events">
+      <div class="container">
+        <p class="section-kicker">Афиша</p>
+        <h2 class="section-title reveal">Ближайшие вечера</h2>
+
+        <div class="events__grid">
+          <article class="event">
+            <div class="event__date"><span class="event__day">08</span><span class="event__month">авг · сб</span></div>
+            <div class="event__info">
+              <h3>Живая музыка: группа «Угли»</h3>
+              <p>Блюз-рок и шаманский фолк у самой жаровни. Начало в 20:00, вход свободный по брони стола.</p>
+            </div>
+          </article>
+          <article class="event">
+            <div class="event__date"><span class="event__day">14</span><span class="event__month">авг · пт</span></div>
+            <div class="event__info">
+              <h3>Дегустация настоек</h3>
+              <p>Шесть образцов — от хреновухи до кедровой. Сомелье бара расскажет, что с чем закусывать. 1 200 ₽ с гостя.</p>
+            </div>
+          </article>
+          <article class="event">
+            <div class="event__date"><span class="event__day">22</span><span class="event__month">авг · сб</span></div>
+            <div class="event__info">
+              <h3>Гастроужин «Мясо и огонь»</h3>
+              <p>Пять подач от шефа, сет из крепких напитков, разговор о мясе до полуночи. 3 900 ₽, всего 14 мест.</p>
+            </div>
+          </article>
+          <article class="event">
+            <div class="event__date"><span class="event__day">29</span><span class="event__month">авг · сб</span></div>
+            <div class="event__info">
+              <h3>Виниловый вечер</h3>
+              <p>Приносите свою пластинку — поставим на вертушку и нальём за это. Сбор у стойки с 19:00.</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Акция -->
+        <div class="promo">
+          <span class="promo__badge">Акция</span>
+          <div class="promo__text">
+            <h3>−20% в день рождения</h3>
+            <p>Три дня до и три дня после — на всё меню кухни для именинника и его компании от четырёх человек. Паспорт — ваш промокод.</p>
+          </div>
+          <a href="#booking" class="btn btn--glow">Забронировать праздник</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ГАЛЕРЕЯ АТМОСФЕРЫ ===== -->
+    <section class="section gallery" id="gallery">
+      <span class="side-label side-label--left" aria-hidden="true">АТМОСФЕРА</span>
+      <div class="container">
+        <p class="section-kicker">Внутри «Шинка»</p>
+        <h2 class="section-title reveal">Тёплый свет, тёмное дерево</h2>
+
+        <div class="gallery__grid">
+          <figure class="shot shot--bar"><figcaption>Барная стойка из морёного дуба</figcaption></figure>
+          <figure class="shot shot--fire"><figcaption>Открытая жаровня</figcaption></figure>
+          <figure class="shot shot--candles"><figcaption>Зал при свечах</figcaption></figure>
+          <figure class="shot shot--shelves"><figcaption>Полка настоек</figcaption></figure>
+          <figure class="shot shot--window"><figcaption>Окна на вечернюю ул. Маршала Ерёменко</figcaption></figure>
+          <figure class="shot shot--table"><figcaption>Длинный стол для компаний</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== БРОНИРОВАНИЕ ===== -->
+    <section class="section booking" id="booking">
+      <div class="container booking__inner">
+        <div class="booking__side">
+          <p class="section-kicker">Бронирование</p>
+          <h2 class="section-title reveal">Стол будет ждать</h2>
+          <p class="section-lead">Оставьте заявку — администратор перезвонит в течение 15 минут и подтвердит бронь. Для компаний от восьми человек предложим отдельный зал.</p>
+          <ul class="booking__facts">
+            <li>Ежедневно — с 12:00 до 24:00</li>
+            <li>Кухня закрывается за час</li>
+          </ul>
+        </div>
+
+        <form class="form" id="bookingForm" novalidate>
+          <div class="form__row">
+            <div class="form__field">
+              <label for="fName">Имя</label>
+              <input type="text" id="fName" name="name" placeholder="Как к вам обращаться" autocomplete="name">
+              <span class="form__error" data-for="fName"></span>
+            </div>
+            <div class="form__field">
+              <label for="fPhone">Телефон</label>
+              <input type="tel" id="fPhone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel">
+              <span class="form__error" data-for="fPhone"></span>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__field">
+              <label for="fDate">Дата</label>
+              <input type="date" id="fDate" name="date">
+              <span class="form__error" data-for="fDate"></span>
+            </div>
+            <div class="form__field">
+              <label for="fTime">Время</label>
+              <select id="fTime" name="time">
+                <option value="">Выберите время</option>
+                <option>16:00</option><option>17:00</option><option>18:00</option>
+                <option>19:00</option><option>20:00</option><option>21:00</option>
+                <option>22:00</option><option>23:00</option>
+              </select>
+              <span class="form__error" data-for="fTime"></span>
+            </div>
+            <div class="form__field">
+              <label for="fGuests">Гости</label>
+              <select id="fGuests" name="guests">
+                <option value="">Сколько вас</option>
+                <option>2 гостя</option><option>3 гостя</option><option>4 гостя</option>
+                <option>5 гостей</option><option>6 гостей</option><option>8 гостей</option>
+                <option>10 и более</option>
+              </select>
+              <span class="form__error" data-for="fGuests"></span>
+            </div>
+          </div>
+          <div class="form__field">
+            <label for="fWishes">Пожелания</label>
+            <textarea id="fWishes" name="wishes" rows="3" placeholder="Стол у окна, свечи, день рождения, детское кресло…"></textarea>
+          </div>
+          <button type="submit" class="btn btn--glow form__submit">Забронировать стол</button>
+          <p class="form__note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+          <div class="form__success" id="formSuccess" hidden>
+            <svg viewBox="0 0 52 52" width="46" height="46" aria-hidden="true"><circle cx="26" cy="26" r="24" fill="none" stroke="#E8A33D" stroke-width="2"/><path fill="none" stroke="#E8A33D" stroke-width="3" stroke-linecap="round" d="M14 27l8 8 16-17"/></svg>
+            <h3>Заявка принята!</h3>
+            <p id="successText">Мы перезвоним в течение 15 минут и подтвердим стол.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== ДОСТАВКА ===== -->
+    <section class="section delivery" id="delivery">
+      <span class="side-label side-label--right" aria-hidden="true">ДОСТАВКА</span>
+      <div class="container">
+        <p class="section-kicker">На дом и в офис</p>
+        <h2 class="section-title reveal">«Шинок» приедет сам</h2>
+        <p class="section-lead">Остались дома или не успели зайти — закажите на дом или в офис. Приготовленная с любовью гастрономия порадует вас и поднимет настроение.</p>
+
+        <ul class="delivery__facts">
+          <li>
+            <strong>от 2 000 ₽</strong>
+            <span>минимальная сумма заказа</span>
+          </li>
+          <li>
+            <strong>от 4 000 ₽</strong>
+            <span>доставка бесплатно</span>
+          </li>
+          <li>
+            <strong>12:00 — 21:00</strong>
+            <span>приём заказов на доставку</span>
+          </li>
+        </ul>
+
+        <h3 class="delivery__zones-title">Стоимость доставки по районам Волгограда</h3>
+        <ul class="delivery__zones">
+          <li class="zone"><span>Краснооктябрьский</span><strong>400 ₽</strong></li>
+          <li class="zone"><span>Дзержинский</span><strong>500 ₽</strong></li>
+          <li class="zone"><span>Тракторозаводский</span><strong>600 ₽</strong></li>
+          <li class="zone"><span>Центральный</span><strong>600 ₽</strong></li>
+          <li class="zone"><span>Ворошиловский</span><strong>700 ₽</strong></li>
+          <li class="zone"><span>ГЭС</span><strong>700 ₽</strong></li>
+          <li class="zone"><span>Латошинка</span><strong>800 ₽</strong></li>
+        </ul>
+
+        <div class="delivery__cta">
+          <p class="delivery__note">Сам бар работает ежедневно с 12:00 до 24:00, а заказы на доставку принимаем по телефону до 21:00.</p>
+          <a href="tel:+79627601517" class="btn btn--glow">Заказать: +7 (962) 760-15-17</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== ФУТЕР ===== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <div class="logo logo--footer">
+          <svg class="logo__flame" viewBox="0 0 24 32" width="22" height="30" aria-hidden="true">
+            <path d="M12 1c2 6-6 9-6 16a6 6 0 0 0 12 0c0-3-1.5-5-3-7-.5 2-1.5 3-3 3.5C13.5 10 13 5 12 1z" fill="#E8A33D"/>
+          </svg>
+          <span class="logo__text">ШИНОК</span>
+        </div>
+        <p>Гастро-бар со славянской душой.<br>Мясо, огонь и хорошие люди.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Контакты</h4>
+        <p>400064, г. Волгоград, ул. Маршала Ерёменко, 68</p>
+        <p><a href="tel:+79627601517">+7 (962) 760-15-17</a></p>
+        <p><a href="mailto:shinok-volgograd@yandex.ru">shinok-volgograd@yandex.ru</a></p>
+      </div>
+      <div class="footer__col">
+        <h4>Режим работы</h4>
+        <p>Ежедневно: 12:00 — 24:00</p>
+      </div>
+      <div class="footer__col">
+        <h4>Как добраться</h4>
+        <p>Краснооктябрьский район, ул. Маршала Ерёменко, 68 — удобный подъезд и парковка у входа. От центра города — 15–20 минут на машине.</p>
+        <p class="footer__socials">
+          <a href="#" aria-label="Мы во ВКонтакте">VK</a>
+          <a href="#" aria-label="Мы в Telegram">TG</a>
+        </p>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© 2026 Гастро-бар «Шинок», Волгоград. 18+ · Чрезмерное употребление алкоголя вредит вашему здоровью.</p>
+    </div>
+  </footer>
+
+  <!-- ===== МОДАЛЬНОЕ ОКНО ДЕГУСТАЦИИ ===== -->
+  <div class="modal" id="degustModal" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="degustTitle">
+      <button class="modal__close" data-close aria-label="Закрыть">×</button>
+      <h3 id="degustTitle">Дегустация сала</h3>
+      <p class="modal__lead">Доска четырёх видов на компанию до четырёх человек — 690 ₽. Оставьте телефон, забронируем подачу к вашему визиту.</p>
+      <form id="degustForm" novalidate>
+        <div class="form__field">
+          <label for="dName">Имя</label>
+          <input type="text" id="dName" placeholder="Ваше имя">
+          <span class="form__error" data-for="dName"></span>
+        </div>
+        <div class="form__field">
+          <label for="dPhone">Телефон</label>
+          <input type="tel" id="dPhone" placeholder="+7 (___) ___-__-__">
+          <span class="form__error" data-for="dPhone"></span>
+        </div>
+        <button type="submit" class="btn btn--glow">Заказать дегустацию</button>
+        <div class="form__success" id="degustSuccess" hidden>
+          <h3>Готово!</h3>
+          <p>Доска сала будет ждать. Перезвоним для подтверждения.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Кафе славянской кухни «Шинок» в Волгограде. Борщ, сало и стейк из мраморной говядины. Бронирование столов и доставка.">
+  <title>Шинок — славянская кухня в Волгограде</title>
+
+  <!-- Шрифты Google Fonts с системным fallback -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prata&family=Golos+Text:wght@400;500;600;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='44' fill='%23C4552D'/><text x='50' y='66' font-size='52' text-anchor='middle' fill='%23FAF3E7' font-family='serif'>Ш</text></svg>">
+</head>
+<body>
+
+  <!-- Зерно плёнки поверх всего -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ================= ШАПКА ================= -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo" id="logo" aria-label="Шинок — на главную">
+        <svg class="logo__mark" viewBox="0 0 48 48" aria-hidden="true">
+          <circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="2.5"/>
+          <path d="M12 24 L24 12 L36 24 L24 36 Z" fill="none" stroke="currentColor" stroke-width="2.5"/>
+          <circle cx="24" cy="24" r="3.5" fill="currentColor"/>
+        </svg>
+        <span class="logo__text">Шинок</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#hits" class="nav__link">Хиты</a>
+        <a href="#menu" class="nav__link">Меню</a>
+        <a href="#occasions" class="nav__link">Поводы</a>
+        <a href="#atmosphere" class="nav__link">Атмосфера</a>
+        <a href="#promo" class="nav__link">Акции</a>
+        <a href="#delivery" class="nav__link">Доставка</a>
+        <a href="#booking" class="nav__link nav__link--accent">Бронь</a>
+      </nav>
+
+      <div class="header__right">
+        <button class="cart-btn" id="cartBtn" aria-label="Корзина доставки">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 7h12l-1.2 11.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7z"/>
+            <path d="M9 10V6a3 3 0 0 1 6 0v4"/>
+          </svg>
+          <span class="cart-btn__count" id="cartCount">0</span>
+        </button>
+        <a class="header__phone" href="tel:+79627601517">+7 (962) 760-15-17</a>
+        <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="top">
+    <div class="hero__table" aria-hidden="true"></div>
+
+    <div class="container hero__grid">
+      <div class="hero__content">
+        <p class="hero__kicker">Кафе славянской кухни · Волгоград</p>
+        <h1 class="hero__title">
+          Борщ, сало <span class="hero__amp">и</span> стейк<br>
+          из мраморной говядины
+        </h1>
+        <p class="hero__subtitle">Славянская кухня с европейским характером в Краснооктябрьском районе Волгограда</p>
+        <p class="hero__handwritten">— как у бабушки, только лучше</p>
+        <div class="hero__actions">
+          <a href="#booking" class="btn btn--primary btn--lg">Забронировать стол</a>
+          <a href="#menu" class="btn btn--ghost btn--lg">Смотреть меню</a>
+        </div>
+        <ul class="hero__facts">
+          <li><strong>4.9</strong><span>рейтинг гостей</span></li>
+          <li><strong>12 лет</strong><span>варим и печём</span></li>
+          <li><strong>150+</strong><span>блюд в меню</span></li>
+        </ul>
+      </div>
+
+      <!-- Процедурная «тарелка борща» с анимацией пара -->
+      <div class="hero__dish" aria-hidden="true">
+        <div class="steam">
+          <svg viewBox="0 0 200 160" class="steam__svg">
+            <path class="steam__line steam__line--1" d="M60 150 C 50 120, 75 100, 62 72 C 52 50, 70 30, 60 8"/>
+            <path class="steam__line steam__line--2" d="M100 155 C 92 125, 115 105, 100 78 C 88 56, 110 34, 100 10"/>
+            <path class="steam__line steam__line--3" d="M140 150 C 132 122, 155 100, 140 74 C 128 52, 148 32, 140 8"/>
+          </svg>
+        </div>
+        <div class="bowl">
+          <div class="bowl__soup">
+            <div class="bowl__swirl"></div>
+            <div class="bowl__sourcream"></div>
+            <div class="bowl__herb bowl__herb--1"></div>
+            <div class="bowl__herb bowl__herb--2"></div>
+            <div class="bowl__herb bowl__herb--3"></div>
+          </div>
+          <div class="bowl__rim"></div>
+        </div>
+        <div class="pampushka pampushka--1"><i></i></div>
+        <div class="pampushka pampushka--2"><i></i></div>
+        <div class="pampushka pampushka--3"><i></i></div>
+        <div class="hero__plate-shadow"></div>
+      </div>
+    </div>
+
+    <a href="#hits" class="hero__scroll" aria-label="Листайте вниз">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ================= БЕГУЩАЯ СТРОКА ================= -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track" id="marqueeTrack">
+      <span class="marquee__item">Борщ с пампушками <i>✦</i></span>
+      <span class="marquee__item">Сало «Полный парад» <i>✦</i></span>
+      <span class="marquee__item">Котлета по-киевски <i>✦</i></span>
+      <span class="marquee__item">Салат «Стожок» <i>✦</i></span>
+      <span class="marquee__item">Вареники с вишней <i>✦</i></span>
+      <span class="marquee__item">Медовик «Бабушкин» <i>✦</i></span>
+    </div>
+  </div>
+
+  <!-- ================= ХИТЫ ШИНКА ================= -->
+  <section class="section hits" id="hits">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="section__kicker">Гости заказывают снова и снова</p>
+        <h2 class="section__title">Хиты <span class="accent-script">Шинка</span></h2>
+        <p class="section__note accent-script accent-script--tilt">очень вкусно, проверено</p>
+      </div>
+    </div>
+
+    <div class="hits__scroller" id="hitsScroller">
+      <!-- Карточки-«крафт-открытки» с лёгким поворотом -->
+      <article class="hit-card reveal" style="--tilt:-1.5deg">
+        <div class="hit-card__photo dish-art dish-art--borscht"><span class="hit-card__badge">№1 в сердцах</span></div>
+        <div class="hit-card__body">
+          <h3>Борщ с пампушками</h3>
+          <p>Наваристый, на говяжьей косточке, со сметаной и чесночными пампушками из печи.</p>
+          <div class="hit-card__foot"><span class="price">390 ₽</span><span class="weight">450 г</span></div>
+        </div>
+      </article>
+
+      <article class="hit-card reveal" style="--tilt:1.2deg">
+        <div class="hit-card__photo dish-art dish-art--salo"><span class="hit-card__badge">фирменное</span></div>
+        <div class="hit-card__body">
+          <h3>Сало «Полный парад»</h3>
+          <p>Домашнего посола, с бородинским хлебом, зелёным луком и горчичным соусом.</p>
+          <div class="hit-card__foot"><span class="price">340 ₽</span><span class="weight">180 г</span></div>
+        </div>
+      </article>
+
+      <article class="hit-card reveal" style="--tilt:-1deg">
+        <div class="hit-card__photo dish-art dish-art--kiev"><span class="hit-card__badge">с маслом внутри</span></div>
+        <div class="hit-card__body">
+          <h3>Котлета по-киевски</h3>
+          <p>Хрустящая корочка, внутри — топлёное масло с зеленью. Подаём с картофельным пюре.</p>
+          <div class="hit-card__foot"><span class="price">520 ₽</span><span class="weight">320 г</span></div>
+        </div>
+      </article>
+
+      <article class="hit-card reveal" style="--tilt:1.8deg">
+        <div class="hit-card__photo dish-art dish-art--stozhok"><span class="hit-card__badge">легенда</span></div>
+        <div class="hit-card__body">
+          <h3>Салат «Стожок»</h3>
+          <p>Тёплый салат с копчёной курицей, жареными шампиньонами и хрустящим картофелем пай.</p>
+          <div class="hit-card__foot"><span class="price">430 ₽</span><span class="weight">260 г</span></div>
+        </div>
+      </article>
+
+      <article class="hit-card reveal" style="--tilt:-1.7deg">
+        <div class="hit-card__photo dish-art dish-art--steak"><span class="hit-card__badge">мраморная</span></div>
+        <div class="hit-card__body">
+          <h3>Стейк из мраморной говядины</h3>
+          <p>Рибай отборной выдержки на открытом огне, соус из печёного перца и розмарин.</p>
+          <div class="hit-card__foot"><span class="price">1 190 ₽</span><span class="weight">300 г</span></div>
+        </div>
+      </article>
+
+      <article class="hit-card reveal" style="--tilt:1deg">
+        <div class="hit-card__photo dish-art dish-art--medovik"><span class="hit-card__badge">десерт дня</span></div>
+        <div class="hit-card__body">
+          <h3>Медовик «Бабушкин»</h3>
+          <p>Тонкие медовые коржи, сметанный крем и карамельная крошка. Печём каждое утро.</p>
+          <div class="hit-card__foot"><span class="price">290 ₽</span><span class="weight">140 г</span></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="hits__hint container">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      листайте вправо — там ещё
+    </div>
+  </section>
+
+  <!-- орнамент-разделитель -->
+  <div class="divider" aria-hidden="true">
+    <svg viewBox="0 0 120 20" preserveAspectRatio="none">
+      <path d="M0 10 L10 2 L20 10 L30 2 L40 10 L50 2 L60 10 L70 2 L80 10 L90 2 L100 10 L110 2 L120 10" fill="none"/>
+    </svg>
+  </div>
+
+  <!-- ================= ИНТЕРАКТИВНОЕ МЕНЮ ================= -->
+  <section class="section menu" id="menu">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="section__kicker">Готовим из локальных продуктов</p>
+        <h2 class="section__title">Меню <span class="accent-script">и доставка</span></h2>
+        <p class="section__lead">Выберите категорию — и добавляйте блюда в корзину доставки прямо на сайте.</p>
+      </div>
+
+      <div class="menu__tabs reveal" id="menuTabs" role="tablist" aria-label="Категории меню"></div>
+      <div class="menu__grid" id="menuGrid" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ================= ПОД ВАШ СЛУЧАЙ ================= -->
+  <section class="section occasions" id="occasions">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="section__kicker">Один «Шинок» — четыре настроения</p>
+        <h2 class="section__title">Под ваш <span class="accent-script">случай</span></h2>
+      </div>
+
+      <div class="occasions__grid reveal" id="occasionsGrid">
+        <button class="occ-tile" data-occ="family" aria-expanded="false">
+          <svg class="occ-tile__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="16" cy="14" r="6"/><circle cx="33" cy="16" r="4.5"/>
+            <path d="M6 40c0-7 4.5-12 10-12s10 5 10 12M26 40c0-5.5 3-9 7-9s7 3.5 7 9"/>
+          </svg>
+          <h3>Семейный ужин</h3>
+          <p>Детское меню, стульчики и уютный зал у печи</p>
+        </button>
+
+        <button class="occ-tile" data-occ="business" aria-expanded="false">
+          <svg class="occ-tile__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="8" y="14" width="32" height="24" rx="3"/><path d="M18 14v-4h12v4M8 24h32"/>
+          </svg>
+          <h3>Деловой обед</h3>
+          <p>Комплексные сеты за 25 минут, с 12:00 до 16:00</p>
+        </button>
+
+        <button class="occ-tile" data-occ="party" aria-expanded="false">
+          <svg class="occ-tile__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 40h28M24 40V22M14 22l10-14 10 14M14 22h20"/><circle cx="24" cy="8" r="1.5"/>
+          </svg>
+          <h3>Корпоратив или торжество</h3>
+          <p>Банкетный зал до 60 гостей и личный менеджер</p>
+        </button>
+
+        <button class="occ-tile" data-occ="friends" aria-expanded="false">
+          <svg class="occ-tile__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 8h12v14a8 8 0 0 1-12 0V8zM14 12h-4a4 4 0 0 0 4 6M26 12h4a4 4 0 0 1-4 6M20 30v6M14 40h12"/>
+          </svg>
+          <h3>Вечер с друзьями</h3>
+          <p>Пивная карта, закуски к пенному и настольные игры</p>
+        </button>
+      </div>
+
+      <!-- Раскрывающийся блок с предложением -->
+      <div class="occ-detail" id="occDetail" hidden>
+        <div class="occ-detail__inner" id="occDetailInner"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- орнамент-разделитель -->
+  <div class="divider divider--green" aria-hidden="true">
+    <svg viewBox="0 0 120 20" preserveAspectRatio="none">
+      <path d="M0 10 L10 2 L20 10 L30 2 L40 10 L50 2 L60 10 L70 2 L80 10 L90 2 L100 10 L110 2 L120 10" fill="none"/>
+    </svg>
+  </div>
+
+  <!-- ================= АТМОСФЕРА ================= -->
+  <section class="section atmosphere" id="atmosphere">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="section__kicker">Загляните внутрь</p>
+        <h2 class="section__title">Авторский интерьер — <span class="accent-script">место для любой компании</span></h2>
+      </div>
+
+      <div class="masonry reveal">
+        <figure class="masonry__item masonry__item--tall scene scene--oven">
+          <div class="scene__art"></div>
+          <figcaption>Дровяная печь — сердце зала</figcaption>
+        </figure>
+        <figure class="masonry__item scene scene--window">
+          <div class="scene__art"></div>
+          <figcaption>Окна на тихую улочку Краснооктябрьского района</figcaption>
+        </figure>
+        <figure class="masonry__item masonry__item--wide scene scene--table">
+          <div class="scene__art"></div>
+          <figcaption>Общий стол из массива дуба</figcaption>
+        </figure>
+        <figure class="masonry__item scene scene--shelf">
+          <div class="scene__art"></div>
+          <figcaption>Стеллаж с соленьями и настойками</figcaption>
+        </figure>
+        <figure class="masonry__item masonry__item--tall scene scene--lamp">
+          <div class="scene__art"></div>
+          <figcaption>Тёплый свет медных светильников</figcaption>
+        </figure>
+        <figure class="masonry__item scene scene--green">
+          <div class="scene__art"></div>
+          <figcaption>Зелёный уголок с верандой</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= АКЦИИ ================= -->
+  <section class="section promo" id="promo">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="section__kicker">Приятное к вкусному</p>
+        <h2 class="section__title">Акции <span class="accent-script">недели</span></h2>
+      </div>
+
+      <div class="promo__grid">
+        <article class="promo-card promo-card--terra reveal">
+          <span class="promo-card__badge promo-card__badge--live">Действует сейчас</span>
+          <h3>Скидка 20%<br>в день рождения</h3>
+          <p>Именинникам и их гостям — минус 20% на всё меню за три дня до и после праздника. Свеча на медовике — от нас.</p>
+          <a href="#booking" class="btn btn--light">Забронировать на дату</a>
+        </article>
+
+        <article class="promo-card promo-card--green reveal">
+          <span class="promo-card__badge">Только самовывоз</span>
+          <h3>−20%<br>на самовывоз</h3>
+          <p>Заберите заказ сами из «Шинка» на Маршала Ерёменко, 68 — и получите скидку 20% на всю корзину. До конца акции:</p>
+          <div class="promo-card__timer" id="promoTimer" aria-label="До конца акции осталось">
+            <div><strong id="tHours">00</strong><span>часов</span></div>
+            <div><strong id="tMin">00</strong><span>минут</span></div>
+            <div><strong id="tSec">00</strong><span>секунд</span></div>
+          </div>
+          <a href="#menu" class="btn btn--light">Собрать заказ</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ДОСТАВКА ================= -->
+  <section class="section delivery" id="delivery">
+    <div class="container delivery__grid">
+      <div class="delivery__content reveal">
+        <p class="section__kicker">Горячее — к вашему столу</p>
+        <h2 class="section__title">Доставка по <span class="accent-script">Волгограду</span></h2>
+        <p class="section__lead">Даже если вы остались дома и не успели зайти к нам — закажите на дом или в офис. Приготовленная с любовью гастрономия порадует вас и поднимет настроение.</p>
+        <div class="delivery__actions">
+          <a href="tel:+79627601517" class="btn btn--primary btn--lg">Заказать: +7 (962) 760-15-17</a>
+          <a href="#promo" class="btn btn--ghost btn--lg">Самовывоз со скидкой</a>
+        </div>
+        <ul class="delivery__list">
+          <li>
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="36" r="5"/><circle cx="36" cy="36" r="5"/>
+              <path d="M12 36h13l5-16h6M22 36l-4-12h-6M30 12h8l4 8"/>
+            </svg>
+            <div><strong>Минимальный заказ — 2 000 ₽</strong><span>приём заказов на доставку ежедневно с 12:00 до 21:00</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="24" cy="24" r="16"/><path d="M31 17l-4.2 9.8L17 31l4.2-9.8z"/>
+            </svg>
+            <div><strong>Бесплатно при заказе от 4 000 ₽</strong><span>ниже — по тарифу вашего района, от 400 ₽</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 16h28v24a4 4 0 0 1-4 4H14a4 4 0 0 1-4-4V16z"/><path d="M17 16V10a7 7 0 0 1 14 0v6M20 26h8"/>
+            </svg>
+            <div><strong>Самовывоз −20%</strong><span>ул. Маршала Ерёменко, 68 — заберите заказ сами со скидкой</span></div>
+          </li>
+        </ul>
+      </div>
+      <div class="delivery__visual reveal" aria-hidden="true">
+        <div class="delivery__box">
+          <div class="delivery__lid"></div>
+          <div class="delivery__steam"><i></i><i></i><i></i></div>
+          <span class="accent-script">горячее!</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container delivery__zones reveal">
+      <h3 class="delivery__zones-title">Стоимость доставки <span class="accent-script">по районам</span></h3>
+      <p class="delivery__zones-note">При заказе от 4 000 ₽ привезём бесплатно в любой из районов. Заказы принимаем по телефону с 12:00 до 21:00.</p>
+      <ul class="delivery__zone-grid">
+        <li><span>Краснооктябрьский</span><strong>400 ₽</strong></li>
+        <li><span>Дзержинский</span><strong>500 ₽</strong></li>
+        <li><span>Тракторозаводский</span><strong>600 ₽</strong></li>
+        <li><span>Центральный</span><strong>600 ₽</strong></li>
+        <li><span>Ворошиловский</span><strong>700 ₽</strong></li>
+        <li><span>ГЭС</span><strong>700 ₽</strong></li>
+        <li><span>Латошинка</span><strong>800 ₽</strong></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= ОТЗЫВЫ ================= -->
+  <section class="section reviews" id="reviews">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="section__kicker">Слово гостям</p>
+        <h2 class="section__title">Отзывы <span class="accent-script">и рейтинги</span></h2>
+      </div>
+
+      <div class="carousel reveal" id="carousel">
+        <button class="carousel__btn carousel__btn--prev" id="revPrev" aria-label="Предыдущий отзыв">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg>
+        </button>
+        <div class="carousel__viewport">
+          <div class="carousel__track" id="revTrack"></div>
+        </div>
+        <button class="carousel__btn carousel__btn--next" id="revNext" aria-label="Следующий отзыв">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+      <div class="carousel__dots" id="revDots" role="tablist" aria-label="Выбор отзыва"></div>
+    </div>
+  </section>
+
+  <!-- орнамент-разделитель -->
+  <div class="divider" aria-hidden="true">
+    <svg viewBox="0 0 120 20" preserveAspectRatio="none">
+      <path d="M0 10 L10 2 L20 10 L30 2 L40 10 L50 2 L60 10 L70 2 L80 10 L90 2 L100 10 L110 2 L120 10" fill="none"/>
+    </svg>
+  </div>
+
+  <!-- ================= БРОНИРОВАНИЕ ================= -->
+  <section class="section booking" id="booking">
+    <div class="container booking__grid">
+      <div class="booking__info reveal">
+        <p class="section__kicker">Столик будет ждать</p>
+        <h2 class="section__title">Забронировать <span class="accent-script">стол</span></h2>
+        <p class="section__lead">Оставьте заявку — перезвоним в течение 10 минут и подтвердим бронь. В пятницу и субботу рекомендуем бронировать заранее.</p>
+        <ul class="booking__contacts">
+          <li><strong>Адрес:</strong> 400064, г. Волгоград, ул. Маршала Ерёменко, 68</li>
+          <li><strong>Телефон:</strong> <a href="tel:+79627601517">+7 (962) 760-15-17</a></li>
+          <li><strong>E-mail:</strong> <a href="mailto:shinok-volgograd@yandex.ru">shinok-volgograd@yandex.ru</a></li>
+          <li><strong>Часы:</strong> ежедневно 12:00 — 24:00</li>
+        </ul>
+      </div>
+
+      <form class="booking__form reveal" id="bookingForm" novalidate>
+        <div class="form-row">
+          <label for="bName">Ваше имя</label>
+          <input type="text" id="bName" name="name" placeholder="Например, Ольга" autocomplete="name">
+          <span class="form-error" data-for="bName"></span>
+        </div>
+        <div class="form-row">
+          <label for="bPhone">Телефон</label>
+          <input type="tel" id="bPhone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel">
+          <span class="form-error" data-for="bPhone"></span>
+        </div>
+        <div class="form-row form-row--half">
+          <div>
+            <label for="bDate">Дата</label>
+            <input type="date" id="bDate" name="date">
+            <span class="form-error" data-for="bDate"></span>
+          </div>
+          <div>
+            <label for="bTime">Время</label>
+            <select id="bTime" name="time">
+              <option value="">Выберите…</option>
+              <option>12:00</option><option>13:00</option><option>14:00</option>
+              <option>15:00</option><option>16:00</option><option>17:00</option>
+              <option>18:00</option><option>19:00</option><option>20:00</option>
+              <option>21:00</option><option>22:00</option>
+            </select>
+            <span class="form-error" data-for="bTime"></span>
+          </div>
+        </div>
+        <div class="form-row form-row--half">
+          <div>
+            <label for="bGuests">Гостей</label>
+            <select id="bGuests" name="guests">
+              <option value="">Выберите…</option>
+              <option>1</option><option>2</option><option>3</option><option>4</option>
+              <option>5</option><option>6</option><option>7</option><option>8+</option>
+            </select>
+            <span class="form-error" data-for="bGuests"></span>
+          </div>
+          <div>
+            <label for="bOccasion">Повод</label>
+            <select id="bOccasion" name="occasion">
+              <option value="">Без повода</option>
+              <option>Семейный ужин</option>
+              <option>День рождения</option>
+              <option>Деловая встреча</option>
+              <option>Свидание</option>
+              <option>Банкет / торжество</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn--primary btn--lg booking__submit">Забронировать стол</button>
+        <p class="form-success" id="formSuccess" hidden>
+          <strong>Спасибо, заявка принята!</strong><br>
+          Мы перезвоним в течение 10 минут и подтвердим столик. До встречи в «Шинке»!
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ================= ФУТЕР ================= -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col footer__col--brand">
+        <a href="#top" class="logo logo--footer">
+          <svg class="logo__mark" viewBox="0 0 48 48" aria-hidden="true">
+            <circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M12 24 L24 12 L36 24 L24 36 Z" fill="none" stroke="currentColor" stroke-width="2.5"/>
+            <circle cx="24" cy="24" r="3.5" fill="currentColor"/>
+          </svg>
+          <span class="logo__text">Шинок</span>
+        </a>
+        <p>Славянская кухня с европейским характером. Тёплая традиция в новом прочтении.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="ВКонтакте" title="ВКонтакте">VK</a>
+          <a href="#" aria-label="Telegram" title="Telegram">TG</a>
+          <a href="#" aria-label="Одноклассники" title="Одноклассники">OK</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Контакты</h4>
+        <p>400064, г. Волгоград,<br>ул. Маршала Ерёменко, 68<br>(Краснооктябрьский район)</p>
+        <p><a href="tel:+79627601517">+7 (962) 760-15-17</a><br><a href="mailto:shinok-volgograd@yandex.ru">shinok-volgograd@yandex.ru</a></p>
+      </div>
+      <div class="footer__col">
+        <h4>Режим работы</h4>
+        <p>Ежедневно: 12:00 — 24:00</p>
+        <p>Кухня принимает заказы до 23:30</p>
+        <p>Доставка: приём заказов 12:00 — 21:00</p>
+      </div>
+      <div class="footer__col">
+        <h4>Как добраться</h4>
+        <p>Краснооктябрьский район, остановка «Газовая», 5 минут пешком. Своя парковка во дворе.</p>
+        <a class="btn btn--route" href="https://yandex.ru/maps/?text=Волгоград, ул. Маршала Ерёменко, 68" target="_blank" rel="noopener">Построить маршрут</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <span>© 2026 Кафе «Шинок», Волгоград. Сделано с любовью и сметаной.</span>
+        <span id="easterEggHint" class="footer__egg">✦</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Плавающая кнопка бронирования -->
+  <a href="#booking" class="fab" id="fab" aria-label="Забронировать стол">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/></svg>
+    <span>Забронировать стол</span>
+  </a>
+
+  <!-- Тост «добавлено в корзину» -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

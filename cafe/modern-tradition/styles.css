@@ -1,0 +1,1384 @@
+/* ============================================================
+   Кафе «Шинок» — «новая традиция»
+   Палитра: кремовый / терракота / зелёный / коричневый / мёд
+   ============================================================ */
+
+:root {
+  --cream: #FAF3E7;
+  --cream-deep: #F3E8D5;
+  --terra: #C4552D;
+  --terra-dark: #A03F1E;
+  --green: #3E5641;
+  --green-dark: #2E4230;
+  --brown: #2B1D12;
+  --honey: #D9A441;
+  --honey-light: #EFCB83;
+
+  --font-head: 'Prata', 'Georgia', serif;
+  --font-body: 'Golos Text', 'PT Sans', 'Segoe UI', sans-serif;
+  --font-script: 'Caveat', 'Comic Sans MS', cursive;
+
+  --shadow-card: 0 14px 34px rgba(43, 29, 18, .14);
+  --shadow-lift: 0 22px 48px rgba(43, 29, 18, .22);
+  --radius: 18px;
+  --container: 1200px;
+}
+
+/* ---------- База ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--brown);
+  background: var(--cream);
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
+
+.container {
+  width: min(var(--container), 100% - 48px);
+  margin-inline: auto;
+}
+
+::selection { background: var(--honey); color: var(--brown); }
+
+/* ---------- Кастомный скроллбар ---------- */
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track { background: var(--cream-deep); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--terra), var(--terra-dark));
+  border-radius: 8px;
+  border: 3px solid var(--cream-deep);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--terra); }
+html { scrollbar-width: thin; scrollbar-color: var(--terra) var(--cream-deep); }
+
+/* ---------- Зерно плёнки ---------- */
+.grain {
+  position: fixed; inset: 0;
+  pointer-events: none;
+  z-index: 2000;
+  opacity: .05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
+}
+
+/* ---------- Типографика секций ---------- */
+.section { padding: 110px 0; position: relative; }
+
+.section__head { text-align: center; max-width: 760px; margin: 0 auto 56px; }
+
+.section__kicker {
+  font-size: 13px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--terra);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.section__title {
+  font-family: var(--font-head);
+  font-size: clamp(38px, 5.6vw, 72px);
+  font-weight: 400;
+  line-height: 1.12;
+}
+
+.section__lead { margin-top: 18px; color: rgba(43,29,18,.75); font-size: 18px; }
+
+/* Рукописный акцент */
+.accent-script {
+  font-family: var(--font-script);
+  color: var(--terra);
+  font-size: 1.15em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.accent-script--tilt {
+  display: inline-block;
+  transform: rotate(-3deg);
+  margin-top: 12px;
+  font-size: 28px;
+  color: var(--green);
+}
+
+/* ---------- Кнопки ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 10px;
+  padding: 14px 30px;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
+}
+.btn--lg { padding: 18px 38px; font-size: 17px; }
+.btn--primary {
+  background: var(--terra); color: var(--cream);
+  box-shadow: 0 10px 24px rgba(196, 85, 45, .35);
+}
+.btn--primary:hover { background: var(--terra-dark); transform: translateY(-3px); box-shadow: 0 16px 32px rgba(196, 85, 45, .45); }
+.btn--ghost { border-color: var(--brown); color: var(--brown); background: transparent; }
+.btn--ghost:hover { background: var(--brown); color: var(--cream); transform: translateY(-3px); }
+.btn--light { background: var(--cream); color: var(--brown); }
+.btn--light:hover { background: var(--honey-light); transform: translateY(-3px); }
+
+/* ---------- Шапка ---------- */
+.header {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 1000;
+  padding: 18px 0;
+  transition: background .3s ease, box-shadow .3s ease, padding .3s ease;
+}
+.header.is-scrolled {
+  background: rgba(250, 243, 231, .92);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 24px rgba(43,29,18,.1);
+  padding: 10px 0;
+}
+.header__inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+
+.logo { display: inline-flex; align-items: center; gap: 10px; color: var(--terra); }
+.logo__mark { width: 38px; height: 38px; }
+.logo__text {
+  font-family: var(--font-head);
+  font-size: 28px;
+  color: var(--brown);
+  letter-spacing: .02em;
+}
+.logo--footer .logo__text { color: var(--cream); }
+
+.nav { display: flex; gap: 28px; }
+.nav__link {
+  font-weight: 500;
+  font-size: 15.5px;
+  position: relative;
+  padding: 4px 0;
+}
+.nav__link::after {
+  content: '';
+  position: absolute; left: 0; bottom: 0;
+  width: 100%; height: 2px;
+  background: var(--terra);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .3s ease;
+}
+.nav__link:hover::after { transform: scaleX(1); transform-origin: left; }
+.nav__link--accent { color: var(--terra); font-weight: 700; }
+
+.header__right { display: flex; align-items: center; gap: 18px; }
+.header__phone { font-weight: 700; font-size: 15.5px; white-space: nowrap; }
+.header__phone:hover { color: var(--terra); }
+
+.cart-btn {
+  position: relative;
+  width: 44px; height: 44px;
+  border: 2px solid var(--brown);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--brown);
+  display: grid; place-items: center;
+  transition: background .25s, color .25s, transform .25s;
+}
+.cart-btn svg { width: 20px; height: 20px; }
+.cart-btn:hover { background: var(--brown); color: var(--cream); transform: translateY(-2px); }
+.cart-btn__count {
+  position: absolute; top: -6px; right: -6px;
+  min-width: 20px; height: 20px;
+  border-radius: 999px;
+  background: var(--terra); color: var(--cream);
+  font-size: 12px; font-weight: 700;
+  display: grid; place-items: center;
+  padding: 0 5px;
+  transition: transform .2s ease;
+}
+.cart-btn__count.bump { animation: bump .4s ease; }
+@keyframes bump { 50% { transform: scale(1.5); } }
+
+/* Бургер */
+.burger {
+  display: none;
+  flex-direction: column; gap: 5px;
+  width: 44px; height: 44px;
+  align-items: center; justify-content: center;
+  background: transparent; border: 2px solid var(--brown); border-radius: 12px;
+}
+.burger span {
+  width: 20px; height: 2px; background: var(--brown); border-radius: 2px;
+  transition: transform .3s ease, opacity .3s ease;
+}
+.burger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger.is-open span:nth-child(2) { opacity: 0; }
+.burger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  min-height: 100vh;
+  display: flex; align-items: center;
+  position: relative;
+  padding: 140px 0 80px;
+  overflow: hidden;
+}
+
+/* Деревянный стол — процедурные доски */
+.hero__table {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 90% 60% at 70% 30%, rgba(217, 164, 65, .18), transparent 60%),
+    repeating-linear-gradient(90deg,
+      #6B4A2F 0 140px, #64432A 140px 148px,
+      #715031 148px 300px, #5E3F27 300px 308px),
+    #6B4A2F;
+}
+.hero__table::before {
+  /* волокна дерева */
+  content: '';
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(90deg,
+    transparent 0 6px, rgba(0,0,0,.06) 6px 8px,
+    transparent 8px 22px, rgba(255,255,255,.03) 22px 24px);
+  mix-blend-mode: overlay;
+}
+.hero__table::after {
+  /* виньетка */
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 120% 90% at 50% 40%, transparent 45%, rgba(20, 10, 4, .55) 100%);
+}
+
+.hero__grid {
+  position: relative; z-index: 2;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero__content { color: var(--cream); }
+
+.hero__kicker {
+  font-size: 13px;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: var(--honey-light);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero__title {
+  font-family: var(--font-head);
+  font-size: clamp(40px, 5.8vw, 84px);
+  font-weight: 400;
+  line-height: 1.08;
+  text-shadow: 0 4px 30px rgba(0,0,0,.4);
+}
+.hero__amp { font-family: var(--font-script); color: var(--honey); font-size: 1.1em; padding: 0 .08em; }
+
+.hero__subtitle {
+  margin-top: 22px;
+  font-size: clamp(17px, 1.6vw, 21px);
+  color: rgba(250, 243, 231, .85);
+  max-width: 480px;
+}
+
+.hero__handwritten {
+  font-family: var(--font-script);
+  font-size: 26px;
+  color: var(--honey);
+  transform: rotate(-2deg);
+  margin-top: 10px;
+}
+
+.hero__actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 34px; }
+.hero .btn--ghost { border-color: var(--cream); color: var(--cream); }
+.hero .btn--ghost:hover { background: var(--cream); color: var(--brown); }
+
+.hero__facts {
+  display: flex; gap: 36px;
+  list-style: none;
+  margin-top: 48px;
+}
+.hero__facts li { display: flex; flex-direction: column; }
+.hero__facts strong {
+  font-family: var(--font-head);
+  font-size: 30px;
+  color: var(--honey);
+}
+.hero__facts span { font-size: 13.5px; color: rgba(250,243,231,.7); }
+
+/* ---------- Тарелка борща (вид сверху) ---------- */
+.hero__dish {
+  position: relative;
+  width: min(460px, 90%);
+  aspect-ratio: 1;
+  margin-inline: auto;
+  animation: dishFloat 7s ease-in-out infinite;
+}
+@keyframes dishFloat { 50% { transform: translateY(-14px) rotate(1.2deg); } }
+
+.hero__plate-shadow {
+  position: absolute; left: 8%; right: 8%; bottom: -6%;
+  height: 12%;
+  background: radial-gradient(ellipse, rgba(0,0,0,.45), transparent 70%);
+  filter: blur(6px);
+}
+
+.bowl {
+  position: absolute; inset: 6%;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 38% 32%, #FFFDF7, #EDE1CC 55%, #D8C6A8 80%, #B9A17D);
+  box-shadow:
+    inset 0 -14px 30px rgba(43,29,18,.18),
+    0 30px 60px rgba(0,0,0,.4);
+}
+
+.bowl__rim {
+  position: absolute; inset: 0;
+  border-radius: 50%;
+  border: 3px solid rgba(196, 85, 45, .35);
+  pointer-events: none;
+}
+
+.bowl__soup {
+  position: absolute; inset: 9%;
+  border-radius: 50%;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 42% 40%, #D14E28, #A62F18 45%, #7E1F0E 75%, #5F1408);
+  box-shadow: inset 0 8px 24px rgba(0,0,0,.35);
+  animation: soupShimmer 6s ease-in-out infinite;
+}
+@keyframes soupShimmer { 50% { filter: brightness(1.08) saturate(1.1); } }
+
+/* Кольца жира на борще */
+.bowl__swirl {
+  position: absolute; inset: 0;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 30% 28%, rgba(217,164,65,.5) 0 3.5%, transparent 4.5%),
+    radial-gradient(circle at 68% 62%, rgba(217,164,65,.4) 0 3%, transparent 4%),
+    radial-gradient(circle at 55% 25%, rgba(239,203,131,.45) 0 2.2%, transparent 3.2%),
+    radial-gradient(circle at 28% 68%, rgba(217,164,65,.35) 0 2.6%, transparent 3.6%),
+    radial-gradient(circle at 72% 34%, rgba(239,203,131,.3) 0 2%, transparent 3%);
+  animation: swirlSpin 24s linear infinite;
+}
+@keyframes swirlSpin { to { transform: rotate(360deg); } }
+
+.bowl__sourcream {
+  position: absolute;
+  width: 34%; height: 30%;
+  left: 33%; top: 34%;
+  border-radius: 48% 52% 55% 45% / 52% 46% 54% 48%;
+  background: radial-gradient(circle at 40% 35%, #FFFEF9, #F1E7D3 70%, #E2D2B4);
+  box-shadow: 0 4px 10px rgba(0,0,0,.25);
+  animation: creamMelt 8s ease-in-out infinite;
+}
+@keyframes creamMelt { 50% { transform: scale(1.06) rotate(4deg); border-radius: 52% 48% 46% 54% / 46% 54% 48% 52%; } }
+
+.bowl__herb {
+  position: absolute;
+  width: 7%; height: 2.4%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #5C7A48, #3E5641);
+  box-shadow: 0 1px 2px rgba(0,0,0,.3);
+}
+.bowl__herb--1 { left: 26%; top: 44%; transform: rotate(28deg); }
+.bowl__herb--2 { left: 60%; top: 58%; transform: rotate(-18deg); }
+.bowl__herb--3 { left: 44%; top: 70%; transform: rotate(65deg); width: 5.5%; }
+
+/* Пампушки */
+.pampushka {
+  position: absolute;
+  width: 21%; aspect-ratio: 1.25;
+  border-radius: 50% 50% 46% 54% / 60% 58% 42% 40%;
+  background:
+    radial-gradient(ellipse at 35% 28%, #F0C878, #D99F45 45%, #B07327 80%, #8F5A1C);
+  box-shadow:
+    inset 0 -8px 14px rgba(120, 66, 10, .5),
+    inset 0 6px 10px rgba(255, 235, 190, .5),
+    0 14px 26px rgba(0,0,0,.4);
+}
+.pampushka i {
+  /* чесночная глазурь */
+  position: absolute; inset: 12% 16%;
+  border-radius: inherit;
+  background: radial-gradient(ellipse at 40% 30%, rgba(255,244,214,.75), transparent 60%);
+}
+.pampushka--1 { right: -3%; top: 12%; transform: rotate(18deg); }
+.pampushka--2 { right: 4%; top: 34%; transform: rotate(-12deg) scale(.92); }
+.pampushka--3 { left: -2%; bottom: 12%; transform: rotate(-8deg) scale(.85); }
+
+/* Пар над тарелкой */
+.steam {
+  position: absolute;
+  left: 50%; top: -14%;
+  transform: translateX(-50%);
+  width: 60%; height: 42%;
+  z-index: 3;
+  pointer-events: none;
+}
+.steam__svg { width: 100%; height: 100%; overflow: visible; }
+.steam__line {
+  fill: none;
+  stroke: rgba(250, 243, 231, .85);
+  stroke-width: 7;
+  stroke-linecap: round;
+  filter: blur(5px);
+  stroke-dasharray: 90 130;
+  opacity: 0;
+  animation: steamRise 4.2s ease-in-out infinite;
+}
+.steam__line--2 { animation-delay: 1.4s; }
+.steam__line--3 { animation-delay: 2.8s; }
+@keyframes steamRise {
+  0%   { opacity: 0; stroke-dashoffset: 130; transform: translateY(16px); }
+  30%  { opacity: .8; }
+  70%  { opacity: .35; }
+  100% { opacity: 0; stroke-dashoffset: -90; transform: translateY(-14px); }
+}
+
+/* Индикатор скролла */
+.hero__scroll {
+  position: absolute;
+  left: 50%; bottom: 30px;
+  transform: translateX(-50%);
+  width: 28px; height: 46px;
+  border: 2px solid rgba(250,243,231,.6);
+  border-radius: 999px;
+  z-index: 3;
+}
+.hero__scroll span {
+  position: absolute; left: 50%; top: 8px;
+  width: 4px; height: 10px;
+  margin-left: -2px;
+  border-radius: 4px;
+  background: var(--honey);
+  animation: scrollHint 1.8s ease-in-out infinite;
+}
+@keyframes scrollHint { 60% { transform: translateY(16px); opacity: 0; } 100% { transform: translateY(16px); opacity: 0; } }
+
+/* ============================================================
+   БЕГУЩАЯ СТРОКА
+   ============================================================ */
+.marquee {
+  background: var(--terra);
+  color: var(--cream);
+  overflow: hidden;
+  padding: 16px 0;
+  transform: rotate(-1deg) scale(1.02);
+  box-shadow: 0 10px 30px rgba(43,29,18,.2);
+  position: relative;
+  z-index: 5;
+}
+.marquee__track {
+  display: flex;
+  gap: 48px;
+  width: max-content;
+  animation: marqueeMove 26s linear infinite;
+}
+.marquee:hover .marquee__track { animation-play-state: paused; }
+@keyframes marqueeMove { to { transform: translateX(-50%); } }
+.marquee__item {
+  font-family: var(--font-head);
+  font-size: 19px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.marquee__item i { font-style: normal; color: var(--honey-light); margin-left: 48px; }
+
+/* ============================================================
+   ХИТЫ — горизонтальный скролл крафт-открыток
+   ============================================================ */
+.hits { padding-bottom: 70px; }
+
+.hits__scroller {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding: 30px max(24px, calc((100vw - var(--container)) / 2)) 40px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.hits__scroller::-webkit-scrollbar { height: 8px; }
+.hits__scroller::-webkit-scrollbar-thumb { border: none; }
+
+.hit-card {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+  background: #FDF9F0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  transform: rotate(var(--tilt, 0deg));
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(43,29,18,.08);
+  transition: transform .35s ease, box-shadow .35s ease;
+  position: relative;
+}
+.hit-card::after {
+  /* перфорация открытки */
+  content: '';
+  position: absolute; left: 14px; right: 14px; top: 210px;
+  border-top: 2px dashed rgba(43,29,18,.15);
+}
+.hit-card:hover { transform: rotate(0deg) translateY(-10px); box-shadow: var(--shadow-lift); }
+.hit-card:hover .price { color: var(--honey); text-shadow: 0 0 18px rgba(217,164,65,.5); }
+
+.hit-card__photo {
+  height: 200px;
+  position: relative;
+}
+.hit-card__badge {
+  position: absolute; top: 14px; left: 14px;
+  background: var(--cream);
+  color: var(--terra);
+  font-family: var(--font-script);
+  font-size: 20px;
+  padding: 2px 14px 4px;
+  border-radius: 999px;
+  transform: rotate(-3deg);
+  box-shadow: 0 4px 12px rgba(0,0,0,.2);
+}
+
+.hit-card__body { padding: 22px 22px 24px; }
+.hit-card__body h3 { font-family: var(--font-head); font-size: 22px; font-weight: 400; margin-bottom: 8px; }
+.hit-card__body p { font-size: 14.5px; color: rgba(43,29,18,.72); min-height: 66px; }
+.hit-card__foot {
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-top: 14px;
+}
+.price {
+  font-family: var(--font-head);
+  font-size: 24px;
+  color: var(--terra);
+  transition: color .3s ease, text-shadow .3s ease;
+}
+.weight { font-size: 13px; color: rgba(43,29,18,.5); }
+
+.hits__hint {
+  display: flex; align-items: center; gap: 10px;
+  color: rgba(43,29,18,.55);
+  font-size: 14px;
+  margin-top: 6px;
+}
+.hits__hint svg { width: 18px; height: 18px; animation: hintSlide 1.6s ease-in-out infinite; }
+@keyframes hintSlide { 50% { transform: translateX(6px); } }
+
+/* ============================================================
+   Процедурные «фото» блюд (dish-art)
+   Тарелка сверху + еда из градиентов
+   ============================================================ */
+.dish-art {
+  background-color: #8A6844;
+  /* --food — целый слой-градиент блюда; задаётся в вариантах ниже */
+  background-image:
+    var(--food, radial-gradient(circle at 50% 46%, #B3401F 0 24%, transparent 26%)),
+    radial-gradient(circle at 50% 46%, #FFFDF7 0 46%, #EADCC2 47% 52%, transparent 53%),
+    repeating-linear-gradient(90deg, #8A6844 0 90px, #7D5C3A 90px 96px);
+  background-position: center;
+  position: relative;
+}
+.dish-art::before {
+  /* блик на тарелке */
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 40% at 38% 30%, rgba(255,255,255,.28), transparent 60%);
+}
+.dish-art::after {
+  /* детали блюда */
+  content: '';
+  position: absolute; inset: 0;
+  background: var(--food-detail, none);
+}
+
+.dish-art--borscht {
+  --food: radial-gradient(circle at 50% 46%, #D14E28 0 16%, #8C2410 27%, transparent 28%);
+  --food-detail:
+    radial-gradient(circle at 46% 42%, #FBF3E0 0 9%, transparent 10%),
+    radial-gradient(circle at 58% 52%, rgba(62,86,65,.9) 0 2.5%, transparent 3.5%),
+    radial-gradient(circle at 40% 56%, rgba(62,86,65,.8) 0 2%, transparent 3%),
+    radial-gradient(circle at 54% 38%, rgba(217,164,65,.7) 0 2.6%, transparent 3.6%);
+}
+.dish-art--salo {
+  --food: radial-gradient(circle at 50% 46%, #F2E3CE 0 18%, #C4552D 19% 25%, #8C4A2A 27%, transparent 28%);
+  --food-detail:
+    radial-gradient(circle at 42% 40%, rgba(196,85,45,.85) 0 4%, transparent 5%),
+    radial-gradient(circle at 60% 55%, rgba(196,85,45,.7) 0 3.4%, transparent 4.4%),
+    radial-gradient(circle at 52% 32%, rgba(62,86,65,.85) 0 2.2%, transparent 3.2%),
+    radial-gradient(circle at 34% 58%, rgba(43,29,18,.5) 0 1.6%, transparent 2.6%);
+}
+.dish-art--kiev {
+  --food: radial-gradient(circle at 50% 46%, #E3A94F 0 16%, #A66A1F 27%, transparent 28%);
+  --food-detail:
+    radial-gradient(ellipse 26% 16% at 48% 44%, #F4CE7C 0 60%, transparent 61%),
+    radial-gradient(circle at 62% 58%, rgba(62,86,65,.9) 0 2.4%, transparent 3.4%),
+    radial-gradient(circle at 38% 60%, rgba(62,86,65,.8) 0 2%, transparent 3%),
+    radial-gradient(circle at 56% 32%, rgba(255,244,214,.8) 0 3%, transparent 4%);
+}
+.dish-art--stozhok {
+  --food: radial-gradient(circle at 50% 46%, #C9A15B 0 16%, #8A5E26 27%, transparent 28%);
+  --food-detail:
+    radial-gradient(circle at 44% 40%, #F6ECD2 0 7%, transparent 8%),
+    radial-gradient(circle at 58% 50%, rgba(120,66,20,.8) 0 4%, transparent 5%),
+    radial-gradient(circle at 36% 56%, rgba(196,85,45,.75) 0 3%, transparent 4%),
+    radial-gradient(circle at 52% 62%, rgba(62,86,65,.85) 0 2.4%, transparent 3.4%);
+}
+.dish-art--steak {
+  --food: radial-gradient(circle at 50% 46%, #7A3418 0 15%, #411A0A 26%, transparent 27%);
+  --food-detail:
+    radial-gradient(ellipse 30% 20% at 48% 44%, #A34A22 0 55%, transparent 56%),
+    radial-gradient(ellipse 18% 10% at 48% 44%, #D98B4E 0 50%, transparent 51%),
+    radial-gradient(circle at 66% 60%, rgba(62,86,65,.9) 0 2.4%, transparent 3.4%),
+    radial-gradient(circle at 32% 34%, rgba(239,203,131,.6) 0 2%, transparent 3%);
+}
+.dish-art--medovik {
+  --food: radial-gradient(circle at 50% 46%, #E8BC62 0 16%, #B27B2A 27%, transparent 28%);
+  --food-detail:
+    radial-gradient(ellipse 34% 6% at 50% 40%, #F8ECD2 0 60%, transparent 61%),
+    radial-gradient(ellipse 30% 5% at 50% 48%, #F3DFB4 0 60%, transparent 61%),
+    radial-gradient(ellipse 26% 4% at 50% 55%, #F8ECD2 0 60%, transparent 61%),
+    radial-gradient(circle at 60% 34%, rgba(196,85,45,.7) 0 2%, transparent 3%);
+}
+/* Универсальные варианты для меню */
+.dish-art--pelmeni {
+  --food: radial-gradient(circle at 50% 46%, #F0E2C6 0 16%, #CBB088 26%, transparent 27%);
+  --food-detail:
+    radial-gradient(circle at 42% 40%, #FBF3E0 0 6%, transparent 7%),
+    radial-gradient(circle at 56% 46%, #F4E8CF 0 6%, transparent 7%),
+    radial-gradient(circle at 48% 58%, #EFE0BF 0 6%, transparent 7%),
+    radial-gradient(circle at 62% 58%, rgba(62,86,65,.85) 0 2%, transparent 3%);
+}
+.dish-art--pot {
+  --food: radial-gradient(circle at 50% 46%, #B0562A 0 15%, #6E2F10 26%, transparent 27%);
+  --food-detail:
+    radial-gradient(circle at 50% 46%, rgba(239,203,131,.85) 0 8%, transparent 9%),
+    radial-gradient(circle at 40% 54%, rgba(250,243,231,.7) 0 4%, transparent 5%),
+    radial-gradient(circle at 60% 38%, rgba(62,86,65,.8) 0 2.4%, transparent 3.4%);
+}
+.dish-art--dessert {
+  --food: radial-gradient(circle at 50% 46%, #E9C77B 0 16%, #C08A35 27%, transparent 28%);
+  --food-detail:
+    radial-gradient(circle at 46% 40%, #FDF6E6 0 8%, transparent 9%),
+    radial-gradient(circle at 58% 54%, rgba(160,63,30,.85) 0 3%, transparent 4%),
+    radial-gradient(circle at 38% 56%, rgba(62,86,65,.7) 0 2%, transparent 3%);
+}
+.dish-art--drink {
+  --food: radial-gradient(circle at 50% 46%, #C98A3A 0 15%, #7A4A14 26%, transparent 27%);
+  --food-detail:
+    radial-gradient(circle at 50% 42%, rgba(255,244,214,.85) 0 10%, transparent 11%),
+    radial-gradient(circle at 44% 54%, rgba(250,243,231,.5) 0 3%, transparent 4%);
+}
+.dish-art--salad {
+  --food: radial-gradient(circle at 50% 46%, #7E9A5E 0 16%, #4A6136 27%, transparent 28%);
+  --food-detail:
+    radial-gradient(circle at 44% 40%, rgba(250,243,231,.9) 0 4%, transparent 5%),
+    radial-gradient(circle at 58% 52%, rgba(196,85,45,.9) 0 3%, transparent 4%),
+    radial-gradient(circle at 50% 62%, rgba(217,164,65,.85) 0 3%, transparent 4%),
+    radial-gradient(circle at 36% 54%, rgba(246,236,210,.8) 0 2.4%, transparent 3.4%);
+}
+
+/* ============================================================
+   ОРНАМЕНТ-РАЗДЕЛИТЕЛЬ
+   ============================================================ */
+.divider {
+  height: 20px;
+  width: min(420px, 70%);
+  margin: 0 auto;
+  opacity: .5;
+}
+.divider svg { width: 100%; height: 100%; }
+.divider path { stroke: var(--terra); stroke-width: 2; }
+.divider--green path { stroke: var(--green); }
+
+/* ============================================================
+   ИНТЕРАКТИВНОЕ МЕНЮ
+   ============================================================ */
+.menu { background: var(--cream-deep); }
+
+.menu__tabs {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 10px;
+  margin-bottom: 46px;
+}
+.menu-tab {
+  padding: 11px 24px;
+  border-radius: 999px;
+  border: 2px solid rgba(43,29,18,.18);
+  background: transparent;
+  color: var(--brown);
+  font-size: 15.5px;
+  font-weight: 600;
+  transition: all .25s ease;
+}
+.menu-tab:hover { border-color: var(--terra); color: var(--terra); transform: translateY(-2px); }
+.menu-tab.is-active {
+  background: var(--terra); border-color: var(--terra); color: var(--cream);
+  box-shadow: 0 8px 20px rgba(196,85,45,.35);
+}
+
+.menu__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 26px;
+}
+/* плавная смена категорий */
+.menu__grid.is-switching { opacity: 0; transform: translateY(14px); }
+.menu__grid { transition: opacity .3s ease, transform .3s ease; }
+
+.menu-card {
+  background: #FDF9F0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(43,29,18,.09);
+  border: 1px solid rgba(43,29,18,.07);
+  display: flex; flex-direction: column;
+  transition: transform .3s ease, box-shadow .3s ease;
+  animation: cardIn .45s ease backwards;
+}
+@keyframes cardIn { from { opacity: 0; transform: translateY(18px) scale(.97); } }
+.menu-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lift); }
+.menu-card:hover .price { color: var(--honey); text-shadow: 0 0 16px rgba(217,164,65,.45); }
+
+.menu-card__photo { height: 150px; }
+.menu-card__body { padding: 18px 18px 20px; display: flex; flex-direction: column; flex: 1; }
+.menu-card__body h3 { font-family: var(--font-head); font-size: 18.5px; font-weight: 400; margin-bottom: 6px; }
+.menu-card__body p { font-size: 13.5px; color: rgba(43,29,18,.68); flex: 1; }
+.menu-card__foot {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: 14px; gap: 10px;
+}
+.menu-card__price { font-family: var(--font-head); font-size: 21px; color: var(--terra); }
+.menu-card__price small { display: block; font-family: var(--font-body); font-size: 11.5px; color: rgba(43,29,18,.5); }
+
+.add-cart {
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 2px solid var(--green);
+  background: transparent;
+  color: var(--green);
+  font-weight: 700;
+  font-size: 13.5px;
+  transition: all .25s ease;
+  white-space: nowrap;
+}
+.add-cart:hover { background: var(--green); color: var(--cream); }
+.add-cart.is-added { background: var(--green); color: var(--cream); }
+
+/* ============================================================
+   ПОД ВАШ СЛУЧАЙ
+   ============================================================ */
+.occasions__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+.occ-tile {
+  background: #FDF9F0;
+  border: 2px solid rgba(43,29,18,.1);
+  border-radius: var(--radius);
+  padding: 30px 22px;
+  text-align: center;
+  color: var(--brown);
+  transition: all .3s ease;
+  box-shadow: 0 6px 18px rgba(43,29,18,.07);
+}
+.occ-tile__icon { width: 52px; height: 52px; color: var(--terra); margin-bottom: 14px; transition: transform .3s ease; }
+.occ-tile h3 { font-family: var(--font-head); font-size: 20px; font-weight: 400; margin-bottom: 8px; }
+.occ-tile p { font-size: 13.5px; color: rgba(43,29,18,.65); }
+.occ-tile:hover { transform: translateY(-6px); border-color: var(--honey); box-shadow: var(--shadow-lift); }
+.occ-tile:hover .occ-tile__icon { transform: scale(1.12) rotate(-4deg); }
+.occ-tile.is-active {
+  background: var(--green); color: var(--cream);
+  border-color: var(--green);
+}
+.occ-tile.is-active .occ-tile__icon { color: var(--honey-light); }
+.occ-tile.is-active p { color: rgba(250,243,231,.8); }
+
+.occ-detail {
+  margin-top: 26px;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.occ-detail__inner {
+  background: var(--green);
+  color: var(--cream);
+  padding: 36px 40px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  align-items: center;
+  animation: occOpen .4s ease;
+}
+@keyframes occOpen { from { opacity: 0; transform: translateY(-14px); } }
+.occ-detail__inner h3 { font-family: var(--font-head); font-size: 26px; font-weight: 400; margin-bottom: 10px; color: var(--honey-light); }
+.occ-detail__inner p { color: rgba(250,243,231,.88); max-width: 640px; }
+.occ-detail__inner ul { margin: 12px 0 0 18px; color: rgba(250,243,231,.85); font-size: 15px; }
+.occ-detail__inner li { margin-bottom: 4px; }
+
+/* ============================================================
+   АТМОСФЕРА — masonry
+   ============================================================ */
+.masonry {
+  columns: 3 300px;
+  column-gap: 24px;
+}
+.masonry__item {
+  break-inside: avoid;
+  margin-bottom: 24px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  background: #FDF9F0;
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.masonry__item:hover { transform: translateY(-6px); box-shadow: var(--shadow-lift); }
+.masonry__item figcaption {
+  padding: 14px 18px;
+  font-size: 14px;
+  color: rgba(43,29,18,.7);
+}
+
+.scene__art { height: 220px; position: relative; overflow: hidden; }
+.masonry__item--tall .scene__art { height: 340px; }
+.masonry__item--wide .scene__art { height: 200px; }
+.scene__art::after {
+  /* зерно и виньетка поверх сцены */
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 120% 100% at 50% 40%, transparent 55%, rgba(20,10,4,.35));
+}
+
+/* Печь */
+.scene--oven .scene__art {
+  background:
+    radial-gradient(ellipse 34% 26% at 50% 68%, #F7B733 0 30%, #C4552D 55%, rgba(120,40,10,.9) 80%, transparent 81%),
+    radial-gradient(ellipse 60% 8% at 50% 96%, rgba(247,183,51,.5), transparent 70%),
+    repeating-linear-gradient(0deg, #7A5A3C 0 26px, #6B4A2F 26px 30px),
+    #6B4A2F;
+  animation: fireGlow 3.4s ease-in-out infinite;
+}
+@keyframes fireGlow { 50% { filter: brightness(1.12) saturate(1.15); } }
+
+/* Окно */
+.scene--window .scene__art {
+  background:
+    radial-gradient(ellipse 40% 55% at 50% 42%, #F5E3B8 0 45%, #E0C48C 70%, transparent 71%),
+    linear-gradient(90deg, #4A3520 0 12%, transparent 12% 88%, #4A3520 88%),
+    linear-gradient(0deg, #4A3520 0 10%, transparent 10% 90%, #4A3520 90%),
+    #5C4227;
+}
+
+/* Общий стол */
+.scene--table .scene__art {
+  background:
+    radial-gradient(ellipse 16% 30% at 22% 55%, #EFCB83 0 50%, transparent 51%),
+    radial-gradient(ellipse 16% 30% at 50% 55%, #EFCB83 0 50%, transparent 51%),
+    radial-gradient(ellipse 16% 30% at 78% 55%, #EFCB83 0 50%, transparent 51%),
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(217,164,65,.35), transparent 60%),
+    repeating-linear-gradient(90deg, #6B4A2F 0 60px, #5E3F27 60px 66px),
+    #6B4A2F;
+}
+
+/* Стеллаж с соленьями */
+.scene--shelf .scene__art {
+  background:
+    radial-gradient(ellipse 12% 22% at 20% 38%, #A34A22 0 60%, transparent 61%),
+    radial-gradient(ellipse 12% 22% at 42% 38%, #7E9A5E 0 60%, transparent 61%),
+    radial-gradient(ellipse 12% 22% at 64% 38%, #D9A441 0 60%, transparent 61%),
+    radial-gradient(ellipse 12% 22% at 86% 38%, #8C2410 0 60%, transparent 61%),
+    radial-gradient(ellipse 12% 22% at 30% 74%, #C4552D 0 60%, transparent 61%),
+    radial-gradient(ellipse 12% 22% at 56% 74%, #3E5641 0 60%, transparent 61%),
+    radial-gradient(ellipse 12% 22% at 80% 74%, #E8BC62 0 60%, transparent 61%),
+    linear-gradient(0deg, #4A3520 0 4%, transparent 4% 48%, #4A3520 48% 52%, transparent 52% 96%, #4A3520 96%),
+    #5C4227;
+}
+
+/* Медные светильники */
+.scene--lamp .scene__art {
+  background:
+    radial-gradient(ellipse 14% 3% at 30% 20%, #2B1D12 0 60%, transparent 61%),
+    radial-gradient(ellipse 20% 40% at 30% 45%, rgba(247,183,51,.95) 0 30%, rgba(217,164,65,.4) 55%, transparent 75%),
+    radial-gradient(ellipse 10% 3% at 68% 32%, #2B1D12 0 60%, transparent 61%),
+    radial-gradient(ellipse 16% 34% at 68% 55%, rgba(247,183,51,.85) 0 28%, rgba(217,164,65,.35) 55%, transparent 75%),
+    linear-gradient(#241811, #3A281A);
+}
+
+/* Зелёный уголок */
+.scene--green .scene__art {
+  background:
+    radial-gradient(ellipse 24% 34% at 24% 70%, #4A6136 0 55%, transparent 56%),
+    radial-gradient(ellipse 20% 30% at 46% 78%, #3E5641 0 55%, transparent 56%),
+    radial-gradient(ellipse 22% 36% at 72% 66%, #56704A 0 55%, transparent 56%),
+    radial-gradient(ellipse 60% 40% at 50% 0%, #F5E3B8 0 20%, transparent 60%),
+    linear-gradient(#C9B184, #8A6844);
+}
+
+/* ============================================================
+   АКЦИИ
+   ============================================================ */
+.promo { background: var(--cream-deep); }
+.promo__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  max-width: 960px;
+  margin-inline: auto;
+}
+.promo-card {
+  border-radius: 24px;
+  padding: 42px 38px;
+  color: var(--cream);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.promo-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lift); }
+.promo-card--terra { background: linear-gradient(135deg, var(--terra), var(--terra-dark)); }
+.promo-card--green { background: linear-gradient(135deg, #4A6A50, var(--green-dark)); }
+.promo-card::after {
+  content: '';
+  position: absolute; right: -60px; top: -60px;
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(250,243,231,.14), transparent 70%);
+}
+.promo-card h3 {
+  font-family: var(--font-head);
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 400;
+  line-height: 1.15;
+  margin: 18px 0 14px;
+}
+.promo-card p { color: rgba(250,243,231,.88); margin-bottom: 24px; font-size: 15.5px; }
+
+.promo-card__badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(43,29,18,.3);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.promo-card__badge--live {
+  background: var(--honey);
+  color: var(--brown);
+  animation: livePulse 2s ease-in-out infinite;
+}
+@keyframes livePulse { 50% { box-shadow: 0 0 0 8px rgba(217,164,65,.25); } }
+
+.promo-card__timer {
+  display: flex; gap: 14px;
+  margin: 4px 0 26px;
+}
+.promo-card__timer div {
+  background: rgba(43,29,18,.28);
+  border-radius: 14px;
+  padding: 10px 16px;
+  text-align: center;
+  min-width: 74px;
+}
+.promo-card__timer strong {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 30px;
+  color: var(--honey-light);
+  font-variant-numeric: tabular-nums;
+}
+.promo-card__timer span { font-size: 12px; color: rgba(250,243,231,.75); }
+
+/* ============================================================
+   ДОСТАВКА
+   ============================================================ */
+.delivery__grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 60px;
+  align-items: center;
+}
+.delivery .section__kicker, .delivery .section__title { text-align: left; }
+.delivery__actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+
+.delivery__list { list-style: none; margin-top: 36px; display: grid; gap: 20px; }
+.delivery__list li { display: flex; gap: 16px; align-items: center; }
+.delivery__list svg { width: 46px; height: 46px; color: var(--terra); flex-shrink: 0; }
+.delivery__list strong { display: block; font-size: 17px; }
+.delivery__list span { font-size: 14px; color: rgba(43,29,18,.65); }
+
+/* Тарифы по районам */
+.delivery__zones { margin-top: 56px; }
+.delivery__zones-title {
+  font-family: var(--font-head);
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 400;
+  text-align: center;
+}
+.delivery__zones-title .accent-script { color: var(--terra); }
+.delivery__zones-note {
+  margin: 12px auto 0;
+  max-width: 620px;
+  text-align: center;
+  font-size: 15px;
+  color: rgba(43,29,18,.65);
+}
+.delivery__zone-grid {
+  list-style: none;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+.delivery__zone-grid li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 20px;
+  background: var(--cream-deep);
+  border: 1px solid rgba(43,29,18,.1);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+}
+.delivery__zone-grid span { font-size: 15px; }
+.delivery__zone-grid strong {
+  font-family: var(--font-head);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--terra);
+  white-space: nowrap;
+}
+
+/* Термобокс с паром */
+.delivery__visual { display: grid; place-items: center; }
+.delivery__box {
+  width: min(320px, 80%);
+  aspect-ratio: 1.15;
+  border-radius: 26px;
+  background:
+    linear-gradient(160deg, #D96A3C, var(--terra) 45%, var(--terra-dark));
+  box-shadow: var(--shadow-lift), inset 0 -18px 34px rgba(90,30,8,.5), inset 0 12px 24px rgba(255,220,180,.25);
+  position: relative;
+  display: grid; place-items: center;
+  animation: dishFloat 6s ease-in-out infinite;
+}
+.delivery__box .accent-script { color: var(--cream); font-size: 34px; transform: rotate(-4deg); }
+.delivery__lid {
+  position: absolute; top: -9%; left: 6%; right: 6%;
+  height: 16%;
+  border-radius: 16px;
+  background: linear-gradient(#B0441F, #8F3512);
+  box-shadow: 0 6px 14px rgba(43,29,18,.3);
+}
+.delivery__steam { position: absolute; top: -34%; left: 0; right: 0; height: 30%; }
+.delivery__steam i {
+  position: absolute; bottom: 0;
+  width: 10px; height: 40px;
+  border-radius: 999px;
+  background: linear-gradient(transparent, rgba(43,29,18,.22));
+  filter: blur(4px);
+  animation: boxSteam 3s ease-in-out infinite;
+}
+.delivery__steam i:nth-child(1) { left: 30%; }
+.delivery__steam i:nth-child(2) { left: 50%; animation-delay: 1s; }
+.delivery__steam i:nth-child(3) { left: 68%; animation-delay: 2s; }
+@keyframes boxSteam {
+  0% { opacity: 0; transform: translateY(10px) scaleY(.6); }
+  40% { opacity: .9; }
+  100% { opacity: 0; transform: translateY(-26px) scaleY(1.3); }
+}
+
+/* ============================================================
+   ОТЗЫВЫ — карусель
+   ============================================================ */
+.reviews { background: var(--green); color: var(--cream); }
+.reviews .section__title { color: var(--cream); }
+.reviews .section__kicker { color: var(--honey-light); }
+.reviews .accent-script { color: var(--honey-light); }
+
+.carousel {
+  display: flex; align-items: center; gap: 18px;
+  max-width: 860px;
+  margin-inline: auto;
+}
+.carousel__viewport { overflow: hidden; flex: 1; border-radius: 24px; }
+.carousel__track {
+  display: flex;
+  transition: transform .55s cubic-bezier(.65, 0, .35, 1);
+}
+.review {
+  flex: 0 0 100%;
+  background: rgba(250,243,231,.07);
+  border: 1px solid rgba(250,243,231,.16);
+  border-radius: 24px;
+  padding: 40px 44px;
+  text-align: center;
+}
+.review__stars { color: var(--honey); font-size: 20px; letter-spacing: 4px; margin-bottom: 16px; }
+.review__text {
+  font-family: var(--font-head);
+  font-size: clamp(18px, 2vw, 23px);
+  line-height: 1.5;
+  color: var(--cream);
+}
+.review__author { margin-top: 20px; font-size: 14.5px; color: rgba(250,243,231,.7); }
+.review__author strong { color: var(--honey-light); font-family: var(--font-script); font-size: 22px; margin-right: 8px; }
+
+.carousel__btn {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  border: 2px solid rgba(250,243,231,.4);
+  background: transparent;
+  color: var(--cream);
+  display: grid; place-items: center;
+  transition: all .25s ease;
+  flex-shrink: 0;
+}
+.carousel__btn svg { width: 22px; height: 22px; }
+.carousel__btn:hover { background: var(--cream); color: var(--green); border-color: var(--cream); }
+
+.carousel__dots { display: flex; justify-content: center; gap: 10px; margin-top: 26px; }
+.carousel__dots button {
+  width: 10px; height: 10px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(250,243,231,.35);
+  transition: all .3s ease;
+}
+.carousel__dots button.is-active { background: var(--honey); width: 28px; }
+
+/* ============================================================
+   БРОНИРОВАНИЕ
+   ============================================================ */
+.booking__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 60px;
+  align-items: start;
+}
+.booking .section__kicker, .booking .section__title { text-align: left; }
+.booking__contacts { list-style: none; margin-top: 28px; display: grid; gap: 10px; font-size: 16px; }
+.booking__contacts a { color: var(--terra); font-weight: 600; }
+
+.booking__form {
+  background: #FDF9F0;
+  border: 1px solid rgba(43,29,18,.09);
+  border-radius: 24px;
+  padding: 38px;
+  box-shadow: var(--shadow-card);
+  display: grid;
+  gap: 18px;
+}
+.form-row { display: grid; gap: 6px; }
+.form-row--half { grid-template-columns: 1fr 1fr; gap: 18px; }
+.form-row--half > div { display: grid; gap: 6px; align-content: start; }
+.form-row label { font-size: 14px; font-weight: 600; }
+.form-row input, .form-row select {
+  padding: 13px 16px;
+  border: 2px solid rgba(43,29,18,.16);
+  border-radius: 12px;
+  background: var(--cream);
+  font-family: inherit;
+  font-size: 15.5px;
+  color: var(--brown);
+  transition: border-color .25s ease, box-shadow .25s ease;
+  width: 100%;
+}
+.form-row input:focus, .form-row select:focus {
+  outline: none;
+  border-color: var(--terra);
+  box-shadow: 0 0 0 4px rgba(196,85,45,.15);
+}
+.form-row input.is-invalid, .form-row select.is-invalid {
+  border-color: #B3271E;
+  box-shadow: 0 0 0 4px rgba(179,39,30,.12);
+}
+.form-error { font-size: 12.5px; color: #B3271E; min-height: 16px; }
+
+.booking__submit { width: 100%; margin-top: 6px; }
+
+.form-success {
+  background: rgba(62,86,65,.12);
+  border: 2px solid var(--green);
+  border-radius: 14px;
+  padding: 18px 20px;
+  color: var(--green-dark);
+  font-size: 15px;
+  animation: occOpen .4s ease;
+}
+
+/* ============================================================
+   ФУТЕР
+   ============================================================ */
+.footer { background: var(--brown); color: rgba(250,243,231,.85); }
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding: 70px 0 50px;
+}
+.footer__col h4 {
+  font-family: var(--font-head);
+  font-weight: 400;
+  font-size: 19px;
+  color: var(--cream);
+  margin-bottom: 16px;
+}
+.footer__col p { font-size: 14.5px; margin-bottom: 12px; color: rgba(250,243,231,.7); }
+.footer__col a:hover { color: var(--honey); }
+.footer__col--brand p { max-width: 280px; margin-top: 16px; }
+
+.footer__social { display: flex; gap: 10px; margin-top: 18px; }
+.footer__social a {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  border: 2px solid rgba(250,243,231,.3);
+  display: grid; place-items: center;
+  font-weight: 700; font-size: 13px;
+  transition: all .25s ease;
+}
+.footer__social a:hover { background: var(--terra); border-color: var(--terra); color: var(--cream); transform: translateY(-3px); }
+
+.btn--route {
+  border: 2px solid var(--honey);
+  color: var(--honey);
+  margin-top: 6px;
+  font-size: 14.5px;
+  padding: 12px 24px;
+}
+.btn--route:hover { background: var(--honey); color: var(--brown); }
+
+.footer__bottom {
+  border-top: 1px solid rgba(250,243,231,.14);
+  padding: 20px 0;
+  font-size: 13px;
+  color: rgba(250,243,231,.5);
+}
+.footer__bottom .container { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.footer__egg { cursor: default; user-select: none; transition: transform .3s ease; }
+.footer__egg:hover { transform: rotate(180deg) scale(1.4); color: var(--honey); }
+
+/* ============================================================
+   Плавающая кнопка + тост
+   ============================================================ */
+.fab {
+  position: fixed;
+  right: 26px; bottom: 26px;
+  z-index: 1500;
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--terra);
+  color: var(--cream);
+  padding: 15px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: 0 14px 34px rgba(196,85,45,.45);
+  transform: translateY(120px);
+  opacity: 0;
+  transition: transform .4s cubic-bezier(.34,1.56,.64,1), opacity .4s ease, background .25s ease;
+}
+.fab svg { width: 19px; height: 19px; }
+.fab.is-visible { transform: translateY(0); opacity: 1; }
+.fab:hover { background: var(--terra-dark); }
+
+.toast {
+  position: fixed;
+  left: 50%; bottom: 30px;
+  transform: translate(-50%, 120px);
+  z-index: 1600;
+  background: var(--green-dark);
+  color: var(--cream);
+  padding: 14px 26px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 15px;
+  box-shadow: var(--shadow-lift);
+  transition: transform .45s cubic-bezier(.34,1.56,.64,1);
+  pointer-events: none;
+}
+.toast.is-visible { transform: translate(-50%, 0); }
+
+/* ============================================================
+   Появление секций при скролле
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity .8s ease, transform .8s cubic-bezier(.22,1,.36,1);
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; }
+}
+
+/* ============================================================
+   АДАПТИВ
+   ============================================================ */
+@media (max-width: 1024px) {
+  .hero__grid { grid-template-columns: 1fr; text-align: center; gap: 60px; }
+  .hero__subtitle { margin-inline: auto; }
+  .hero__actions, .hero__facts { justify-content: center; }
+  .hero__dish { width: min(380px, 80%); }
+  .occasions__grid { grid-template-columns: 1fr 1fr; }
+  .delivery__grid, .booking__grid { grid-template-columns: 1fr; gap: 44px; }
+  .footer__grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 76px 0; }
+  .nav {
+    position: fixed;
+    top: 0; right: 0; bottom: 0;
+    width: min(320px, 82vw);
+    background: var(--cream);
+    flex-direction: column;
+    padding: 110px 34px 34px;
+    gap: 22px;
+    box-shadow: -14px 0 44px rgba(43,29,18,.2);
+    transform: translateX(100%);
+    transition: transform .4s cubic-bezier(.22,1,.36,1);
+    z-index: 999;
+  }
+  .nav.is-open { transform: translateX(0); }
+  .nav__link { font-size: 20px; font-family: var(--font-head); }
+  .burger { display: flex; position: relative; z-index: 1001; }
+  .header__phone { display: none; }
+
+  .promo__grid { grid-template-columns: 1fr; }
+  .occ-detail__inner { grid-template-columns: 1fr; padding: 28px; }
+  .carousel__btn { display: none; }
+  .review { padding: 30px 24px; }
+  .form-row--half { grid-template-columns: 1fr; }
+  .booking__form { padding: 26px 22px; }
+  .hero__facts { gap: 22px; }
+  .hit-card { flex-basis: 280px; }
+  .fab span { display: none; }
+  .fab { padding: 16px; }
+  .footer__grid { grid-template-columns: 1fr; gap: 30px; }
+  .marquee__item { font-size: 16px; }
+}
+
+@media (max-width: 480px) {
+  body { font-size: 16px; }
+  .container { width: calc(100% - 36px); }
+  .hero { padding-top: 110px; }
+  .hero__dish { width: min(300px, 88%); }
+  .occasions__grid { grid-template-columns: 1fr; }
+  .menu__tabs { gap: 8px; }
+  .menu-tab { padding: 9px 16px; font-size: 14px; }
+}
