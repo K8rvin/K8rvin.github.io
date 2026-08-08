@@ -104,4 +104,24 @@ const WORKS = [
     style: "Тёплая традиция в новом прочтении",
     path: "cafe/modern-tradition/",
   },
+
+  // --- Кухни на заказ ---
+  {
+    category: "Кухни на заказ",
+    title: "Ателье кухонь",
+    style: "Премиум, тёмный, как журнал",
+    path: "kitchens/atelier/",
+  },
+  {
+    category: "Кухни на заказ",
+    title: "Конструктор мечты",
+    style: "Интерактивный, технологичный, светлый",
+    path: "kitchens/constructor/",
+  },
+  {
+    category: "Кухни на заказ",
+    title: "Семейный очаг",
+    style: "Тёплый, эмоциональный, скандинавский",
+    path: "kitchens/family-hearth/",
+  },
 ];

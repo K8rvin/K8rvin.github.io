@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>КухняМодуль — кухни на заказ. Рассчитайте стоимость за 3 минуты</title>
+<meta name="description" content="Фабрика кухонь на заказ. Онлайн-калькулятор стоимости, бесплатный 3D-проект, собственное производство, гарантия 5 лет.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFFFF;
+  --bg-alt:#F8F9FA;
+  --text:#1F2937;
+  --muted:#6B7280;
+  --accent:#2D6CDF;
+  --accent-dark:#1F56C4;
+  --accent-soft:#EAF1FE;
+  --green:#10B981;
+  --green-dark:#0C9A6C;
+  --green-soft:#E7F8F1;
+  --card:#FFFFFF;
+  --border:#E5E7EB;
+  --shadow:0 18px 45px rgba(31,41,55,.09);
+  --shadow-sm:0 6px 18px rgba(31,41,55,.07);
+  --radius:18px;
+}
+[data-theme="dark"]{
+  --bg:#0F172A;
+  --bg-alt:#131F38;
+  --text:#E5E7EB;
+  --muted:#94A3B8;
+  --accent:#4C84F0;
+  --accent-dark:#3B6FD4;
+  --accent-soft:#1B2B4D;
+  --green:#34D399;
+  --green-dark:#10B981;
+  --green-soft:#0E2E26;
+  --card:#1B2740;
+  --border:#2A3A5C;
+  --shadow:0 18px 45px rgba(0,0,0,.45);
+  --shadow-sm:0 6px 18px rgba(0,0,0,.35);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{
+  font-family:'Manrope',system-ui,sans-serif;
+  background:var(--bg);color:var(--text);
+  line-height:1.55;overflow-x:hidden;
+  transition:background .35s,color .35s;
+}
+img{max-width:100%;display:block}
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+h1,h2,h3{line-height:1.12;font-weight:800;letter-spacing:-.02em}
+h2{font-size:clamp(32px,4.4vw,56px);margin-bottom:14px}
+h3{font-size:22px}
+.section-sub{color:var(--muted);font-size:18px;max-width:640px;margin-bottom:48px}
+.center{text-align:center}
+.center .section-sub{margin-left:auto;margin-right:auto}
+
+/* ---------- кнопки ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:16px 32px;border-radius:14px;border:none;cursor:pointer;
+  font-family:inherit;font-size:17px;font-weight:700;text-decoration:none;
+  transition:transform .2s,box-shadow .2s,background .2s;
+}
+.btn:active{transform:scale(.97)}
+.btn-blue{background:var(--accent);color:#fff;box-shadow:0 10px 25px rgba(45,108,223,.35)}
+.btn-blue:hover{background:var(--accent-dark);transform:translateY(-2px)}
+.btn-green{background:var(--green);color:#fff;box-shadow:0 10px 25px rgba(16,185,129,.35)}
+.btn-green:hover{background:var(--green-dark);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--text);border:2px solid var(--border);box-shadow:none}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+.btn-big{padding:20px 44px;font-size:19px;border-radius:16px}
+
+/* ---------- шапка ---------- */
+.header{
+  position:sticky;top:0;z-index:100;
+  background:color-mix(in srgb,var(--bg) 85%,transparent);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+}
+.nav{display:flex;align-items:center;gap:28px;height:72px}
+.logo{font-size:21px;font-weight:800;letter-spacing:-.02em;text-decoration:none;color:var(--text)}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:24px;margin-left:auto}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:15px;font-weight:600;transition:color .2s}
+.nav-links a:hover{color:var(--accent)}
+.nav-phone{font-weight:800;font-size:15px;color:var(--text);text-decoration:none;white-space:nowrap}
+.theme-toggle{
+  width:42px;height:42px;border-radius:50%;border:1px solid var(--border);
+  background:var(--card);cursor:pointer;display:flex;align-items:center;justify-content:center;
+  transition:transform .2s,border-color .2s;flex:none;
+}
+.theme-toggle:hover{transform:rotate(20deg);border-color:var(--accent)}
+.theme-toggle svg{width:20px;height:20px;stroke:var(--text);fill:none;stroke-width:2;stroke-linecap:round}
+.theme-toggle .moon{display:none}
+[data-theme="dark"] .theme-toggle .sun{display:none}
+[data-theme="dark"] .theme-toggle .moon{display:block}
+
+/* ---------- hero ---------- */
+.hero{padding:72px 0 96px;background:linear-gradient(180deg,var(--bg) 0%,var(--bg-alt) 100%);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(40px,5.6vw,76px);margin-bottom:22px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero-sub{font-size:19px;color:var(--muted);max-width:480px;margin-bottom:36px}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.hero-note{margin-top:18px;font-size:14px;color:var(--muted);display:flex;align-items:center;gap:8px}
+.hero-note b{color:var(--green)}
+
+/* CSS 3D-кухня */
+.scene{perspective:1300px;height:460px;display:flex;align-items:center;justify-content:center}
+.kitchen{
+  position:relative;width:540px;height:420px;
+  transform-style:preserve-3d;
+  transform:rotateX(-8deg) rotateY(-14deg);
+  transition:transform .18s ease-out;
+  will-change:transform;
+}
+.k-el{position:absolute;transform-style:preserve-3d}
+.k-wall{
+  inset:0;border-radius:26px;transform:translateZ(-95px);
+  background:linear-gradient(160deg,#FDFEFF,#EDF1F7);
+  box-shadow:var(--shadow);border:1px solid var(--border);
+}
+.k-lights{top:26px;left:120px;right:120px;height:80px;transform:translateZ(-40px);display:flex;justify-content:space-between}
+.k-lamp{width:52px;display:flex;flex-direction:column;align-items:center}
+.k-lamp i{width:2px;height:42px;background:#C7CEDA;display:block}
+.k-lamp b{width:46px;height:20px;background:linear-gradient(180deg,#374151,#1F2937);border-radius:0 0 23px 23px;display:block;box-shadow:0 18px 22px rgba(251,191,36,.35)}
+.k-uppers{top:64px;left:64px;right:64px;height:118px;transform:translateZ(-55px);display:flex;gap:10px}
+.k-uppers div{flex:1;border-radius:10px;background:linear-gradient(160deg,#FFFFFF,#E9EDF3);border:1px solid #DFE4EC;box-shadow:inset 0 -3px 0 rgba(31,41,55,.05)}
+.k-shelf{top:196px;left:84px;width:150px;height:10px;transform:translateZ(-45px);border-radius:5px;background:linear-gradient(180deg,#E4C79A,#C9A468);box-shadow:0 8px 12px rgba(31,41,55,.12)}
+.k-counter{top:226px;left:44px;right:44px;height:20px;transform:translateZ(-28px);border-radius:8px;background:linear-gradient(180deg,#EFD3A6,#D9B87F);box-shadow:0 10px 16px rgba(31,41,55,.15)}
+.k-base{top:250px;left:58px;right:58px;height:132px;transform:translateZ(-38px);display:flex;gap:10px}
+.k-base div{flex:1;border-radius:9px;background:linear-gradient(170deg,#FFFFFF,#E7ECF3);border:1px solid #DFE4EC;position:relative}
+.k-base div::after{content:"";position:absolute;top:12px;left:20%;right:20%;height:4px;border-radius:2px;background:#C9D2DE}
+.k-base div:nth-child(2){background:linear-gradient(170deg,#2D6CDF,#1F56C4);border-color:#1F56C4}
+.k-base div:nth-child(2)::after{background:rgba(255,255,255,.55)}
+.k-island{top:292px;left:158px;width:224px;height:96px;transform:translateZ(78px);border-radius:10px;background:linear-gradient(170deg,#10B981,#0C9A6C);box-shadow:0 26px 34px rgba(16,185,129,.3)}
+.k-island::before{
+  content:"";position:absolute;left:-8px;right:-8px;top:-46px;height:50px;border-radius:10px;
+  background:linear-gradient(180deg,#F2DDB4,#E3C48F);
+  transform-origin:bottom;transform:rotateX(72deg);
+  box-shadow:0 4px 8px rgba(31,41,55,.12);
+}
+.k-island::after{content:"";position:absolute;top:16px;left:16%;right:16%;height:5px;border-radius:3px;background:rgba(255,255,255,.5)}
+.k-shadow{top:392px;left:100px;right:100px;height:26px;transform:translateZ(-60px) rotateX(70deg);background:radial-gradient(ellipse,rgba(31,41,55,.22),transparent 70%);border-radius:50%}
+.scene-tag{
+  position:absolute;bottom:6px;right:6px;font-size:12px;font-weight:700;color:var(--muted);
+  background:var(--card);border:1px solid var(--border);border-radius:999px;padding:6px 14px;
+  transform:translateZ(40px);
+}
+[data-theme="dark"] .k-wall{background:linear-gradient(160deg,#243355,#1A2745)}
+[data-theme="dark"] .k-uppers div{background:linear-gradient(160deg,#2E4066,#243355);border-color:#33477A}
+[data-theme="dark"] .k-base div{background:linear-gradient(170deg,#2E4066,#243355);border-color:#33477A}
+[data-theme="dark"] .k-base div:nth-child(2){background:linear-gradient(170deg,#3B6FD4,#2D6CDF);border-color:#2D6CDF}
+[data-theme="dark"] .k-lamp i{background:#3D5078}
+
+/* ---------- калькулятор ---------- */
+.calc{background:var(--bg-alt)}
+.calc-wrap{display:grid;grid-template-columns:1.6fr 1fr;gap:28px;align-items:start}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-sm);padding:32px}
+.calc-progress{display:flex;align-items:center;gap:16px;margin-bottom:28px}
+.progress-track{flex:1;height:8px;border-radius:99px;background:var(--bg-alt);border:1px solid var(--border);overflow:hidden}
+.progress-bar{height:100%;width:20%;border-radius:99px;background:linear-gradient(90deg,var(--accent),var(--green));transition:width .45s ease}
+.step-label{font-weight:800;font-size:14px;color:var(--muted);white-space:nowrap}
+.step{display:none;animation:stepIn .35s ease}
+.step.active{display:block}
+@keyframes stepIn{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}
+.step h3{margin-bottom:6px;font-size:24px}
+.step-hint{color:var(--muted);font-size:15px;margin-bottom:24px}
+.dim-row{display:flex;gap:16px;flex-wrap:wrap}
+.field{flex:1;min-width:180px}
+.field label{display:block;font-size:13px;font-weight:700;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.04em}
+.field input,.field select{
+  width:100%;padding:14px 16px;border-radius:12px;border:2px solid var(--border);
+  background:var(--bg);color:var(--text);font-family:inherit;font-size:17px;font-weight:700;
+  transition:border-color .2s;outline:none;
+}
+.field input:focus,.field select:focus{border-color:var(--accent)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.tile{
+  border:2px solid var(--border);border-radius:14px;padding:18px 14px;cursor:pointer;
+  background:var(--bg);text-align:center;font-weight:700;font-size:15px;color:var(--text);
+  transition:border-color .2s,background .2s,transform .2s;user-select:none;
+}
+.tile:hover{transform:translateY(-3px);border-color:var(--accent)}
+.tile.selected{border-color:var(--accent);background:var(--accent-soft);color:var(--accent)}
+.tile svg{width:56px;height:40px;margin:0 auto 10px;display:block;stroke:currentColor;fill:none;stroke-width:5;stroke-linejoin:round;stroke-linecap:round}
+.tile small{display:block;margin-top:5px;font-weight:600;font-size:12px;color:var(--muted)}
+.material-preview{margin-top:22px;border-radius:14px;overflow:hidden;height:190px;position:relative;background:linear-gradient(120deg,#E5EAF1,#D5DCE6)}
+.material-preview img{width:100%;height:100%;object-fit:cover;transition:opacity .45s ease}
+.material-preview.fade img{opacity:0}
+.material-preview span{
+  position:absolute;left:14px;bottom:12px;background:rgba(15,23,42,.72);color:#fff;
+  font-size:13px;font-weight:700;padding:6px 14px;border-radius:999px;backdrop-filter:blur(4px);
+}
+.checks{display:flex;flex-direction:column;gap:12px}
+.check{
+  display:flex;align-items:center;gap:14px;border:2px solid var(--border);border-radius:14px;
+  padding:16px 18px;cursor:pointer;font-weight:700;transition:border-color .2s,background .2s;user-select:none;
+}
+.check:hover{border-color:var(--green)}
+.check.on{border-color:var(--green);background:var(--green-soft)}
+.check .box{
+  width:24px;height:24px;border-radius:7px;border:2px solid var(--border);flex:none;
+  display:flex;align-items:center;justify-content:center;font-size:14px;color:#fff;transition:all .2s;
+}
+.check.on .box{background:var(--green);border-color:var(--green)}
+.check .box::after{content:"✓";opacity:0;transform:scale(.4);transition:all .2s}
+.check.on .box::after{opacity:1;transform:scale(1)}
+.check small{margin-left:auto;color:var(--green);font-weight:800;white-space:nowrap}
+.calc-nav{display:flex;justify-content:space-between;gap:14px;margin-top:30px}
+.calc-side{position:sticky;top:96px}
+.calc-side .side-title{font-size:14px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+.live-price{
+  font-size:clamp(38px,3.6vw,50px);font-weight:800;letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums;color:var(--text);margin-bottom:4px;white-space:nowrap;
+}
+.live-price small{font-size:.55em;color:var(--muted);font-weight:700}
+.side-note{font-size:13px;color:var(--muted);margin-bottom:18px}
+.price-details{list-style:none;margin-bottom:24px;border-top:1px dashed var(--border)}
+.price-details li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed var(--border);font-size:14px}
+.price-details li span{color:var(--muted)}
+.price-details li b{font-variant-numeric:tabular-nums;white-space:nowrap}
+.calc-side .btn{width:100%}
+.result-final{
+  margin-top:24px;padding:22px;border-radius:14px;background:var(--green-soft);
+  border:1px solid var(--green);text-align:center;
+}
+.result-final .rf-price{font-size:40px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--green)}
+
+/* ---------- счётчик ---------- */
+.counter-strip{background:var(--bg);text-align:center;padding:80px 0}
+.counter-num{
+  font-size:clamp(56px,7vw,88px);font-weight:800;letter-spacing:-.03em;
+  font-variant-numeric:tabular-nums;color:var(--accent);line-height:1;
+}
+.counter-label{font-size:19px;color:var(--muted);margin-top:10px;font-weight:600}
+
+/* ---------- решения ---------- */
+.solutions{background:var(--bg-alt)}
+.sol-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.sol-card{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+  overflow:hidden;cursor:pointer;box-shadow:var(--shadow-sm);
+  transition:transform .25s,box-shadow .25s;
+}
+.sol-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.sol-photo{height:220px;overflow:hidden;background:linear-gradient(120deg,#E5EAF1,#D5DCE6)}
+.sol-photo img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.sol-card:hover .sol-photo img{transform:scale(1.06)}
+.sol-body{padding:22px}
+.sol-body h3{margin-bottom:4px}
+.sol-meta{font-size:14px;color:var(--muted);margin-bottom:14px}
+.sol-price{font-size:28px;font-weight:800;font-variant-numeric:tabular-nums}
+.sol-price small{font-size:15px;color:var(--muted);font-weight:700}
+.sol-link{color:var(--accent);font-weight:700;font-size:14px;margin-top:12px;display:inline-block}
+
+/* ---------- галерея ---------- */
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.g-item{
+  position:relative;border-radius:var(--radius);overflow:hidden;cursor:zoom-in;height:250px;
+  background:linear-gradient(120deg,#E5EAF1,#D5DCE6);border:1px solid var(--border);
+}
+.g-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.g-item:hover img{transform:scale(1.05)}
+.g-badge{
+  position:absolute;top:12px;left:12px;background:rgba(15,23,42,.72);color:#fff;
+  font-size:12px;font-weight:800;padding:5px 12px;border-radius:999px;backdrop-filter:blur(4px);
+}
+.g-caption{
+  position:absolute;left:0;right:0;bottom:0;padding:32px 16px 14px;color:#fff;font-size:14px;font-weight:600;
+  background:linear-gradient(180deg,transparent,rgba(15,23,42,.78));
+}
+.g-caption b{display:block;font-size:15px}
+
+/* ---------- таблица цены ---------- */
+.price-table-wrap{background:var(--bg-alt)}
+.price-table{width:100%;border-collapse:collapse;background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid var(--border)}
+.price-table th,.price-table td{padding:16px 22px;text-align:left;font-size:16px}
+.price-table th{background:var(--bg);font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);border-bottom:1px solid var(--border)}
+.price-table td{border-bottom:1px solid var(--border)}
+.price-table td:last-child,.price-table th:last-child{text-align:right;font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap}
+.price-table tr:last-child td{border-bottom:none}
+.price-table .total td{background:var(--green-soft);font-weight:800;font-size:19px;color:var(--green)}
+.table-note{font-size:14px;color:var(--muted);margin-top:16px}
+
+/* ---------- производство ---------- */
+.prod-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.prod-photo{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);height:400px;background:linear-gradient(120deg,#E5EAF1,#D5DCE6)}
+.prod-photo img{width:100%;height:100%;object-fit:cover}
+.prod-chips{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.chip{
+  background:var(--accent-soft);color:var(--accent);font-weight:800;font-size:14px;
+  padding:10px 18px;border-radius:999px;
+}
+.chip.green{background:var(--green-soft);color:var(--green)}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.stagger.visible>*{opacity:1;transform:none}
+.stagger.visible>*:nth-child(1){transition-delay:.05s}
+.stagger.visible>*:nth-child(2){transition-delay:.2s}
+.stagger.visible>*:nth-child(3){transition-delay:.35s}
+.stagger.visible>*:nth-child(4){transition-delay:.5s}
+.stagger.visible>*:nth-child(5){transition-delay:.65s}
+.stagger.visible>*:nth-child(6){transition-delay:.8s}
+
+/* ---------- гарантии ---------- */
+.guarantee{background:var(--bg-alt)}
+.gua-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.gua-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px 24px;box-shadow:var(--shadow-sm);transition:transform .25s}
+.gua-card:hover{transform:translateY(-5px)}
+.gua-icon{
+  width:52px;height:52px;border-radius:14px;background:var(--accent-soft);color:var(--accent);
+  display:flex;align-items:center;justify-content:center;margin-bottom:16px;
+}
+.gua-card:nth-child(even) .gua-icon{background:var(--green-soft);color:var(--green)}
+.gua-icon svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.gua-card h3{font-size:18px;margin-bottom:6px}
+.gua-card p{font-size:14px;color:var(--muted)}
+
+/* ---------- отзывы ---------- */
+.reviews-carousel{position:relative;max-width:820px;margin:0 auto}
+.review-slide{display:none;text-align:center;animation:stepIn .4s ease}
+.review-slide.active{display:block}
+.review-slide img{
+  width:100%;height:340px;object-fit:cover;border-radius:var(--radius);
+  box-shadow:var(--shadow);margin-bottom:24px;background:linear-gradient(120deg,#E5EAF1,#D5DCE6);
+}
+.review-quote{font-size:20px;font-weight:600;max-width:640px;margin:0 auto 14px}
+.review-name{color:var(--muted);font-weight:700;font-size:15px}
+.review-stars{color:#F59E0B;font-size:18px;letter-spacing:3px;margin-bottom:10px}
+.carousel-btn{
+  position:absolute;top:150px;width:48px;height:48px;border-radius:50%;border:1px solid var(--border);
+  background:var(--card);color:var(--text);font-size:20px;cursor:pointer;box-shadow:var(--shadow-sm);
+  transition:transform .2s;z-index:2;
+}
+.carousel-btn:hover{transform:scale(1.1);border-color:var(--accent);color:var(--accent)}
+.carousel-btn.prev{left:-24px}
+.carousel-btn.next{right:-24px}
+.review-dots{display:flex;gap:8px;justify-content:center;margin-top:22px}
+.review-dots button{width:10px;height:10px;border-radius:50%;border:none;background:var(--border);cursor:pointer;transition:all .2s}
+.review-dots button.active{background:var(--accent);transform:scale(1.3)}
+.review-badges{display:flex;gap:14px;justify-content:center;margin-top:34px;flex-wrap:wrap}
+.r-badge{
+  display:inline-flex;align-items:center;gap:9px;background:var(--card);border:1px solid var(--border);
+  border-radius:999px;padding:10px 20px;font-weight:800;font-size:15px;box-shadow:var(--shadow-sm);
+}
+.r-badge i{font-style:normal;width:11px;height:11px;border-radius:50%;display:inline-block}
+.r-badge .y{background:#FC3F1D}
+.r-badge .g{background:#2D6CDF}
+.r-badge em{font-style:normal;color:#F59E0B}
+
+/* ---------- форма ---------- */
+.order{background:linear-gradient(135deg,var(--accent) 0%,#1B4BB8 100%);color:#fff}
+[data-theme="dark"] .order{background:linear-gradient(135deg,#1B2B4D,#12203E)}
+.order-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.order h2{color:#fff}
+.order p{color:rgba(255,255,255,.85);font-size:17px;margin-bottom:22px}
+.order-list{list-style:none}
+.order-list li{display:flex;gap:12px;align-items:center;margin-bottom:12px;font-weight:600}
+.order-list li::before{content:"✓";flex:none;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;font-size:14px}
+.order-form{background:var(--card);color:var(--text);border-radius:var(--radius);padding:36px;box-shadow:var(--shadow)}
+.order-form .field{margin-bottom:16px}
+.order-form .btn{width:100%;margin-top:6px}
+.form-success{
+  display:none;text-align:center;padding:40px 10px;
+}
+.form-success .fs-icon{
+  width:64px;height:64px;border-radius:50%;background:var(--green-soft);color:var(--green);
+  display:flex;align-items:center;justify-content:center;font-size:30px;margin:0 auto 18px;
+}
+.form-success h3{margin-bottom:8px}
+.form-success p{color:var(--muted);font-size:15px}
+.form-note{font-size:12px;color:var(--muted);margin-top:14px;text-align:center}
+
+/* ---------- футер ---------- */
+.footer{background:var(--bg-alt);border-top:1px solid var(--border);padding:56px 0 32px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;margin-bottom:40px}
+.footer h4{font-size:15px;margin-bottom:14px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.footer p,.footer a{font-size:15px;color:var(--text);text-decoration:none;display:block;margin-bottom:8px}
+.footer a:hover{color:var(--accent)}
+.footer .socials{display:flex;gap:10px}
+.footer .socials a{
+  width:42px;height:42px;border-radius:12px;background:var(--card);border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:var(--accent);
+  margin-bottom:0;transition:all .2s;
+}
+.footer .socials a:hover{background:var(--accent);color:#fff;transform:translateY(-3px)}
+.footer-bottom{border-top:1px solid var(--border);padding-top:24px;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* ---------- модалка / лайтбокс ---------- */
+.overlay{
+  position:fixed;inset:0;background:rgba(15,23,42,.62);backdrop-filter:blur(6px);
+  display:none;align-items:center;justify-content:center;z-index:300;padding:20px;
+}
+.overlay.open{display:flex;animation:fadeIn .25s ease}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.modal{
+  background:var(--card);color:var(--text);border-radius:var(--radius);max-width:520px;width:100%;
+  padding:0;overflow:hidden;box-shadow:var(--shadow);animation:popIn .3s ease;max-height:90vh;overflow-y:auto;
+}
+@keyframes popIn{from{opacity:0;transform:scale(.94) translateY(14px)}to{opacity:1;transform:none}}
+.modal img{width:100%;height:240px;object-fit:cover}
+.modal-body{padding:28px}
+.modal-body h3{font-size:24px;margin-bottom:8px}
+.modal-body .sol-price{margin:12px 0 18px}
+.modal-list{list-style:none;margin-bottom:24px}
+.modal-list li{display:flex;gap:10px;font-size:15px;margin-bottom:8px;color:var(--muted)}
+.modal-list li::before{content:"✓";color:var(--green);font-weight:800}
+.modal-close{
+  position:absolute;top:14px;right:14px;width:38px;height:38px;border-radius:50%;border:none;
+  background:rgba(15,23,42,.55);color:#fff;font-size:18px;cursor:pointer;transition:background .2s;
+}
+.modal-close:hover{background:rgba(15,23,42,.8)}
+.modal-wrap{position:relative;width:100%;max-width:520px}
+.lightbox-content{max-width:900px;width:100%;position:relative}
+.lightbox-content img{width:100%;max-height:76vh;object-fit:contain;border-radius:var(--radius)}
+.lightbox-caption{color:#fff;text-align:center;margin-top:14px;font-weight:600;font-size:16px}
+
+/* ---------- чат-бот ---------- */
+.chat-fab{
+  position:fixed;right:24px;bottom:24px;width:60px;height:60px;border-radius:50%;border:none;
+  background:var(--accent);color:#fff;cursor:pointer;z-index:250;box-shadow:0 12px 28px rgba(45,108,223,.45);
+  display:flex;align-items:center;justify-content:center;transition:transform .2s,background .2s;
+}
+.chat-fab:hover{transform:scale(1.08)}
+.chat-fab svg{width:27px;height:27px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.chat-window{
+  position:fixed;right:24px;bottom:96px;width:360px;max-width:calc(100vw - 32px);height:460px;max-height:calc(100vh - 130px);
+  background:var(--card);border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow);
+  z-index:250;display:none;flex-direction:column;overflow:hidden;
+}
+.chat-window.open{display:flex;animation:popIn .3s ease}
+.chat-head{background:var(--accent);color:#fff;padding:16px 20px;font-weight:800;display:flex;align-items:center;gap:10px}
+.chat-head .dot{width:9px;height:9px;border-radius:50%;background:#34D399;box-shadow:0 0 0 3px rgba(52,211,153,.3)}
+.chat-head small{display:block;font-weight:600;font-size:12px;opacity:.85}
+.chat-body{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:var(--bg-alt)}
+.msg{max-width:82%;padding:11px 15px;border-radius:16px;font-size:14.5px;line-height:1.45;animation:stepIn .25s ease}
+.msg.bot{background:var(--card);border:1px solid var(--border);border-bottom-left-radius:4px;align-self:flex-start}
+.msg.user{background:var(--accent);color:#fff;border-bottom-right-radius:4px;align-self:flex-end}
+.chat-chips{display:flex;gap:8px;flex-wrap:wrap;padding:10px 16px;background:var(--bg-alt);border-top:1px solid var(--border)}
+.chat-chips button{
+  border:1px solid var(--accent);color:var(--accent);background:transparent;border-radius:999px;
+  padding:7px 14px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;transition:all .2s;
+}
+.chat-chips button:hover{background:var(--accent);color:#fff}
+.chat-input{display:flex;gap:8px;padding:12px;border-top:1px solid var(--border);background:var(--card)}
+.chat-input input{
+  flex:1;border:2px solid var(--border);border-radius:12px;padding:11px 14px;font-family:inherit;
+  font-size:14px;background:var(--bg);color:var(--text);outline:none;
+}
+.chat-input input:focus{border-color:var(--accent)}
+.chat-input button{
+  border:none;background:var(--accent);color:#fff;border-radius:12px;padding:0 18px;cursor:pointer;
+  font-weight:800;font-family:inherit;transition:background .2s;
+}
+.chat-input button:hover{background:var(--accent-dark)}
+
+/* ---------- адаптив ---------- */
+@media (max-width:1020px){
+  .hero-grid{grid-template-columns:1fr;gap:24px}
+  .scene{height:400px}
+  .kitchen{transform:rotateX(-8deg) rotateY(-14deg) scale(.85)}
+  .calc-wrap{grid-template-columns:1fr}
+  .calc-side{position:static}
+  .sol-grid,.gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .gua-grid{grid-template-columns:repeat(2,1fr)}
+  .prod-grid,.order-grid{grid-template-columns:1fr;gap:36px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+}
+@media (max-width:620px){
+  section{padding:64px 0}
+  .scene{height:320px}
+  .kitchen{transform:rotateX(-8deg) rotateY(-14deg) scale(.62)}
+  .sol-grid,.gallery-grid,.gua-grid{grid-template-columns:1fr}
+  .carousel-btn.prev{left:4px}
+  .carousel-btn.next{right:4px}
+  .card{padding:24px 18px}
+  .order-form{padding:26px 20px}
+  .nav-phone{display:none}
+  .chat-window{right:12px;bottom:88px}
+  .chat-fab{right:12px;bottom:16px}
+  .footer-grid{grid-template-columns:1fr}
+  .review-slide img{height:220px}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= ШАПКА ================= -->
+<header class="header">
+  <div class="container nav">
+    <a href="#top" class="logo">Кухня<span>Модуль</span></a>
+    <nav class="nav-links">
+      <a href="#calc">Калькулятор</a>
+      <a href="#solutions">Решения</a>
+      <a href="#gallery">Проекты</a>
+      <a href="#production">Производство</a>
+      <a href="#reviews">Отзывы</a>
+    </nav>
+    <a class="nav-phone" href="tel:+74951234567">+7 (495) 123-45-67</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему" title="Сменить тему">
+      <svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div>
+      <h1>Кухня вашей мечты — <em>за 3 минуты</em></h1>
+      <p class="hero-sub">Рассчитайте стоимость онлайн, соберите конфигурацию, получите 3D-проект бесплатно</p>
+      <div class="hero-actions">
+        <a href="#calc" class="btn btn-blue btn-big">Рассчитать стоимость</a>
+        <a href="#solutions" class="btn btn-ghost">Готовые решения</a>
+      </div>
+      <div class="hero-note"><b>●</b> Цена известна до звонка — без менеджеров и ожидания</div>
+    </div>
+    <div class="scene" id="scene">
+      <div class="kitchen" id="kitchen3d">
+        <div class="k-el k-wall"></div>
+        <div class="k-el k-lights">
+          <div class="k-lamp"><i></i><b></b></div>
+          <div class="k-lamp"><i></i><b></b></div>
+          <div class="k-lamp"><i></i><b></b></div>
+        </div>
+        <div class="k-el k-uppers"><div></div><div></div><div></div><div></div></div>
+        <div class="k-el k-shelf"></div>
+        <div class="k-el k-counter"></div>
+        <div class="k-el k-base"><div></div><div></div><div></div><div></div></div>
+        <div class="k-el k-island"></div>
+        <div class="k-el k-shadow"></div>
+        <div class="k-el scene-tag">Интерактивный макет — двигайте мышью</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= КАЛЬКУЛЯТОР ================= -->
+<section class="calc" id="calc">
+  <div class="container">
+    <h2>Соберите кухню как конструктор</h2>
+    <p class="section-sub">Пять простых шагов — и вы видите честную предварительную цену. Пересчёт происходит мгновенно на каждом шаге.</p>
+    <div class="calc-wrap">
+      <div class="card calc-main">
+        <div class="calc-progress">
+          <span class="step-label" id="stepLabel">Шаг 1 из 5</span>
+          <div class="progress-track"><div class="progress-bar" id="progressBar"></div></div>
+        </div>
+
+        <!-- Шаг 1 -->
+        <div class="step active" data-step="1">
+          <h3>Размер кухни</h3>
+          <p class="step-hint">Укажите длину и ширину помещения в метрах. Примерно — этого достаточно.</p>
+          <div class="dim-row">
+            <div class="field">
+              <label for="inpLength">Длина, м</label>
+              <input type="number" id="inpLength" min="1" max="15" step="0.1" value="3.2" inputmode="decimal">
+            </div>
+            <div class="field">
+              <label for="inpWidth">Ширина, м</label>
+              <input type="number" id="inpWidth" min="1" max="15" step="0.1" value="2.4" inputmode="decimal">
+            </div>
+          </div>
+        </div>
+
+        <!-- Шаг 2 -->
+        <div class="step" data-step="2">
+          <h3>Форма кухни</h3>
+          <p class="step-hint">Выберите планировку, ближайшую к вашей.</p>
+          <div class="tiles" id="shapeTiles">
+            <div class="tile selected" data-value="straight">
+              <svg viewBox="0 0 56 40"><path d="M4 20h48"/></svg>
+              Прямая<small>вдоль одной стены</small>
+            </div>
+            <div class="tile" data-value="corner">
+              <svg viewBox="0 0 56 40"><path d="M8 6v22h40"/></svg>
+              Угловая<small>Г-образная</small>
+            </div>
+            <div class="tile" data-value="ushape">
+              <svg viewBox="0 0 56 40"><path d="M8 6v22h40V6"/></svg>
+              П-образная<small>вдоль трёх стен</small>
+            </div>
+            <div class="tile" data-value="island">
+              <svg viewBox="0 0 56 40"><path d="M4 8h48"/><rect x="18" y="20" width="20" height="12" rx="2"/></svg>
+              Остров<small>ряд + остров</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Шаг 3 -->
+        <div class="step" data-step="3">
+          <h3>Материал фасадов</h3>
+          <p class="step-hint">Материал — главный фактор цены. Превью меняется при выборе.</p>
+          <div class="tiles" id="materialTiles">
+            <div class="tile selected" data-value="mdf">
+              МДФ<small>оптимально по цене</small>
+            </div>
+            <div class="tile" data-value="plastic">
+              Пластик<small>практично, яркие цвета</small>
+            </div>
+            <div class="tile" data-value="acrylic">
+              Акрил<small>глянец, глубокий блеск</small>
+            </div>
+            <div class="tile" data-value="wood">
+              Массив<small>натуральное дерево</small>
+            </div>
+          </div>
+          <div class="material-preview" id="materialPreview">
+            <img id="materialImg" src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=70" alt="Пример кухни с фасадами МДФ" loading="lazy" onerror="this.style.opacity=0">
+            <span id="materialCaption">МДФ — эмаль, любой цвет по RAL</span>
+          </div>
+        </div>
+
+        <!-- Шаг 4 -->
+        <div class="step" data-step="4">
+          <h3>Столешница</h3>
+          <p class="step-hint">Рабочая поверхность, которой вы будете пользоваться каждый день.</p>
+          <div class="tiles" id="counterTiles">
+            <div class="tile selected" data-value="ldsp">
+              ЛДСП<small>базовая, +0 ₽/п.м</small>
+            </div>
+            <div class="tile" data-value="woodtop">
+              Дерево<small>тёплая, +8 000 ₽/п.м</small>
+            </div>
+            <div class="tile" data-value="stone">
+              Камень<small>кварц, +16 000 ₽/п.м</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Шаг 5 -->
+        <div class="step" data-step="5">
+          <h3>Дополнительно</h3>
+          <p class="step-hint">Отметьте нужные опции — они сразу добавятся к расчёту.</p>
+          <div class="checks" id="extrasChecks">
+            <div class="check" data-value="tech"><span class="box"></span>Встроенная техника (духовка, варочная, вытяжка, посудомойка)<small>+120 000 ₽</small></div>
+            <div class="check" data-value="light"><span class="box"></span>Подсветка рабочей зоны и шкафов<small>+15 000 ₽</small></div>
+            <div class="check" data-value="soft"><span class="box"></span>Доводчики на все фасады и ящики<small>+12 000 ₽</small></div>
+          </div>
+          <div class="result-final">
+            <div style="font-weight:700;color:var(--muted);font-size:14px;margin-bottom:4px">Ваш предварительный расчёт</div>
+            <div class="rf-price" id="finalPrice">от 0 ₽</div>
+            <div style="font-size:13px;color:var(--muted);margin-top:6px">Точную смету после бесплатного замера зафиксируем в договоре</div>
+            <a href="#order" class="btn btn-green" style="margin-top:16px;width:100%">Получить точный расчёт</a>
+          </div>
+        </div>
+
+        <div class="calc-nav">
+          <button class="btn btn-ghost" id="prevBtn" disabled>← Назад</button>
+          <button class="btn btn-blue" id="nextBtn">Далее →</button>
+        </div>
+      </div>
+
+      <aside class="card calc-side">
+        <div class="side-title">Живой расчёт</div>
+        <div class="live-price"><small>от </small><span id="livePrice">0</span><small> ₽</small></div>
+        <div class="side-note">Пересчитывается на каждом шаге</div>
+        <ul class="price-details" id="priceDetails"></ul>
+        <a href="#order" class="btn btn-green">Получить точный расчёт</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ================= СЧЁТЧИК ================= -->
+<section class="counter-strip" id="counter">
+  <div class="container reveal">
+    <div class="counter-num"><span id="counterNum">0</span></div>
+    <div class="counter-label">кухонь уже спроектировали и изготовили наши клиенты вместе с нами</div>
+  </div>
+</section>
+
+<!-- ================= ПОПУЛЯРНЫЕ РЕШЕНИЯ ================= -->
+<section class="solutions" id="solutions">
+  <div class="container">
+    <h2>Популярные решения</h2>
+    <p class="section-sub">Готовые конфигурации с фиксированной комплектацией. Нажмите на карточку, чтобы увидеть детали.</p>
+    <div class="sol-grid stagger" id="solGrid">
+      <article class="sol-card" data-name="Сканди 12 м²" data-price="от 198 000 ₽"
+        data-img="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=70"
+        data-details="Фасады МДФ эмаль, белый матовый|Столешница ЛДСП под дерево|Рейлинги и открытые полки|Срок изготовления — 14 дней|Замер, доставка и монтаж включены">
+        <div class="sol-photo"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=70" alt="Кухня Сканди 12 м²" loading="lazy" onerror="this.style.opacity=0"></div>
+        <div class="sol-body">
+          <h3>Сканди 12 м²</h3>
+          <div class="sol-meta">Угловая · МДФ эмаль · светлое дерево</div>
+          <div class="sol-price"><small>от </small>198 000<small> ₽</small></div>
+          <span class="sol-link">Подробнее →</span>
+        </div>
+      </article>
+      <article class="sol-card" data-name="Модерн 9 м²" data-price="от 164 000 ₽"
+        data-img="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=70"
+        data-details="Фасады акрил, глянец графит|Столешница кварцевый агломерат|Скрытые ручки, доводчики|Срок изготовления — 18 дней|Замер, доставка и монтаж включены">
+        <div class="sol-photo"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=70" alt="Кухня Модерн 9 м²" loading="lazy" onerror="this.style.opacity=0"></div>
+        <div class="sol-body">
+          <h3>Модерн 9 м²</h3>
+          <div class="sol-meta">Прямая · акрил глянец · камень</div>
+          <div class="sol-price"><small>от </small>164 000<small> ₽</small></div>
+          <span class="sol-link">Подробнее →</span>
+        </div>
+      </article>
+      <article class="sol-card" data-name="Классика 15 м²" data-price="от 289 000 ₽"
+        data-img="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=70"
+        data-details="Фасады массив ясеня, патина|Столешница из массива дуба|Витрины со стеклом и карнизы|Срок изготовления — 21 день|Замер, доставка и монтаж включены">
+        <div class="sol-photo"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=70" alt="Кухня Классика 15 м²" loading="lazy" onerror="this.style.opacity=0"></div>
+        <div class="sol-body">
+          <h3>Классика 15 м²</h3>
+          <div class="sol-meta">П-образная · массив ясеня · дуб</div>
+          <div class="sol-price"><small>от </small>289 000<small> ₽</small></div>
+          <span class="sol-link">Подробнее →</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ГАЛЕРЕЯ ================= -->
+<section id="gallery">
+  <div class="container">
+    <h2>Проекты до и после</h2>
+    <p class="section-sub">Реальные кухни наших клиентов. Нажмите на фото, чтобы рассмотреть ближе.</p>
+    <div class="gallery-grid stagger" id="galleryGrid">
+      <figure class="g-item" data-caption="Кухня 9 м² · стиль Сканди · срок 16 дней">
+        <img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&w=800&q=70" alt="Кухня 9 м², сканди" loading="lazy" onerror="this.style.opacity=0">
+        <span class="g-badge">После</span>
+        <figcaption class="g-caption"><b>9 м² · Сканди</b>срок изготовления — 16 дней</figcaption>
+      </figure>
+      <figure class="g-item" data-caption="Кухня 11 м² · стиль Модерн · срок 18 дней">
+        <img src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=800&q=70" alt="Кухня 11 м², модерн" loading="lazy" onerror="this.style.opacity=0">
+        <span class="g-badge">После</span>
+        <figcaption class="g-caption"><b>11 м² · Модерн</b>срок изготовления — 18 дней</figcaption>
+      </figure>
+      <figure class="g-item" data-caption="Кухня 14 м² · стиль Лофт · срок 19 дней">
+        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=800&q=70" alt="Кухня 14 м², лофт" loading="lazy" onerror="this.style.opacity=0">
+        <span class="g-badge">После</span>
+        <figcaption class="g-caption"><b>14 м² · Лофт</b>срок изготовления — 19 дней</figcaption>
+      </figure>
+      <figure class="g-item" data-caption="Кухня 7 м² · стиль Минимализм · срок 14 дней">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=800&q=70" alt="Кухня 7 м², минимализм" loading="lazy" onerror="this.style.opacity=0">
+        <span class="g-badge">После</span>
+        <figcaption class="g-caption"><b>7 м² · Минимализм</b>срок изготовления — 14 дней</figcaption>
+      </figure>
+      <figure class="g-item" data-caption="Кухня 16 м² · стиль Классика · срок 21 день">
+        <img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?auto=format&fit=crop&w=800&q=70" alt="Кухня 16 м², классика" loading="lazy" onerror="this.style.opacity=0">
+        <span class="g-badge">После</span>
+        <figcaption class="g-caption"><b>16 м² · Классика</b>срок изготовления — 21 день</figcaption>
+      </figure>
+      <figure class="g-item" data-caption="Кухня 12 м² · стиль Неоклассика · срок 20 дней">
+        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=70" alt="Кухня 12 м², неоклассика" loading="lazy" onerror="this.style.opacity=0">
+        <span class="g-badge">После</span>
+        <figcaption class="g-caption"><b>12 м² · Неоклассика</b>срок изготовления — 20 дней</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ЧТО ВХОДИТ В ЦЕНУ ================= -->
+<section class="price-table-wrap" id="price">
+  <div class="container">
+    <h2>Что входит в цену</h2>
+    <p class="section-sub">Прозрачная смета без скрытых доплат. Пример разбивки для угловой кухни 3,2 п.м с фасадами МДФ.</p>
+    <table class="price-table reveal">
+      <thead>
+        <tr><th>Статья расходов</th><th>Что входит</th><th>Сумма</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Фасады</td><td>МДФ эмаль, цвет по каталогу RAL, фрезеровка</td><td>84 000 ₽</td></tr>
+        <tr><td>Столешница</td><td>ЛДСП 38 мм, влагостойкая, с кромкой</td><td>18 000 ₽</td></tr>
+        <tr><td>Фурнитура</td><td>Петли и направляющие Blum, ручки, выдвижные ящики</td><td>52 000 ₽</td></tr>
+        <tr><td>Доставка</td><td>По городу и подъём на этаж</td><td>бесплатно</td></tr>
+        <tr><td>Монтаж</td><td>Сборка и установка за 1 день, вывоз мусора</td><td>12 000 ₽</td></tr>
+        <tr class="total"><td>Итог</td><td>Кухня под ключ</td><td>166 000 ₽</td></tr>
+      </tbody>
+    </table>
+    <p class="table-note">Смета фиксируется в договоре и не меняется после подписания. Никаких «допов на месте».</p>
+  </div>
+</section>
+
+<!-- ================= ПРОИЗВОДСТВО ================= -->
+<section id="production">
+  <div class="container prod-grid">
+    <div class="prod-photo reveal">
+      <img src="https://images.unsplash.com/photo-1567095761054-7a02e69e5c43?auto=format&fit=crop&w=1000&q=70" alt="Производственный цех фабрики" loading="lazy" onerror="this.style.opacity=0">
+    </div>
+    <div class="stagger" id="prodStagger">
+      <h2>Наше производство</h2>
+      <p class="section-sub" style="margin-bottom:20px">Собственный цех 500 м². Производим за 14–21 день — без посредников и наценок дилерских сетей.</p>
+      <p style="color:var(--muted);margin-bottom:8px">Раскрой и присадка на станках с ЧПУ — точность до десятых долей миллиметра. Каждая кухня проходит контроль качества перед отгрузкой.</p>
+      <div class="prod-chips">
+        <span class="chip">Цех 500 м²</span>
+        <span class="chip green">14–21 день</span>
+        <span class="chip">Станки с ЧПУ</span>
+        <span class="chip green">Контроль качества</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ГАРАНТИИ ================= -->
+<section class="guarantee" id="guarantee">
+  <div class="container">
+    <h2 class="center">Гарантии и сервис</h2>
+    <p class="section-sub center">Работаем по договору и отвечаем за результат на каждом этапе.</p>
+    <div class="gua-grid stagger">
+      <div class="gua-card">
+        <div class="gua-icon"><svg viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.5 9.5-8 11-4.5-1.5-8-6-8-11V5l8-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Гарантия 5 лет</h3>
+        <p>На корпуса, фасады и фурнитуру. Гарантийный случай решаем за 3 дня.</p>
+      </div>
+      <div class="gua-card">
+        <div class="gua-icon"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg></div>
+        <h3>Бесплатный замер</h3>
+        <p>Инженер приедет с образцами материалов в удобное время, даже вечером.</p>
+      </div>
+      <div class="gua-card">
+        <div class="gua-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <h3>Монтаж за 1 день</h3>
+        <p>Собираем и устанавливаем кухню за один день, убираем и вывозим мусор.</p>
+      </div>
+      <div class="gua-card">
+        <div class="gua-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4L15 12l-3-3 2.7-2.7z"/></svg></div>
+        <h3>Сервисное обслуживание</h3>
+        <p>Регулировка фасадов и замена фурнитуры — в течение всего срока службы.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ОТЗЫВЫ ================= -->
+<section id="reviews">
+  <div class="container">
+    <h2 class="center">Отзывы клиентов</h2>
+    <p class="section-sub center">Больше 400 отзывов на картах и в независимых сервисах.</p>
+    <div class="reviews-carousel reveal">
+      <button class="carousel-btn prev" id="revPrev" aria-label="Предыдущий отзыв">←</button>
+      <div class="review-slide active">
+        <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&w=900&q=70" alt="Кухня клиента Анны" loading="lazy" onerror="this.style.opacity=0">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">«Собрала конфигурацию в калькуляторе вечером, утром приехал замерщик, а через 16 дней кухня уже стояла у меня. Цена совпала с расчётом до рубля».</p>
+        <div class="review-name">Анна К. · кухня «Сканди», 11 м²</div>
+      </div>
+      <div class="review-slide">
+        <img src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=900&q=70" alt="Кухня клиентов Дмитрия и Ольги" loading="lazy" onerror="this.style.opacity=0">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">«Боялись скрытых доплат, но смета в договоре оказалась финальной. Монтажники управились за день, мусор вывезли сами. Рекомендуем».</p>
+        <div class="review-name">Дмитрий и Ольга · кухня «Модерн», 9 м²</div>
+      </div>
+      <div class="review-slide">
+        <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=900&q=70" alt="Кухня клиента Сергея" loading="lazy" onerror="this.style.opacity=0">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">«3D-проект сделали бесплатно ещё до договора — видно, что люди уверены в продукте. Массив ясеня выглядит дорого, гости не верят в цену».</p>
+        <div class="review-name">Сергей В. · кухня «Классика», 15 м²</div>
+      </div>
+      <button class="carousel-btn next" id="revNext" aria-label="Следующий отзыв">→</button>
+      <div class="review-dots" id="revDots"></div>
+    </div>
+    <div class="review-badges">
+      <span class="r-badge"><i class="y"></i>Яндекс Карты · <em>4.9 ★</em></span>
+      <span class="r-badge"><i class="g"></i>2ГИС · <em>4.8 ★</em></span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ФОРМА ================= -->
+<section class="order" id="order">
+  <div class="container order-grid">
+    <div>
+      <h2>Получите 3D-проект бесплатно</h2>
+      <p>Оставьте заявку — дизайнер подготовит проект вашей кухни и точную смету в течение одного рабочего дня.</p>
+      <ul class="order-list">
+        <li>3D-проект и смета — бесплатно и без обязательств</li>
+        <li>Выезд замерщика с образцами — в удобное время</li>
+        <li>Цена фиксируется в договоре</li>
+      </ul>
+    </div>
+    <div class="order-form">
+      <form id="orderForm" novalidate>
+        <div class="field">
+          <label for="fName">Ваше имя</label>
+          <input type="text" id="fName" name="name" placeholder="Как к вам обращаться" required>
+        </div>
+        <div class="field">
+          <label for="fPhone">Телефон</label>
+          <input type="tel" id="fPhone" name="phone" placeholder="+7 (___) ___-__-__" required>
+        </div>
+        <div class="field">
+          <label for="fArea">Площадь кухни, м²</label>
+          <input type="number" id="fArea" name="area" min="3" max="60" step="0.5" placeholder="Например, 12">
+        </div>
+        <div class="field">
+          <label for="fStyle">Стиль кухни</label>
+          <select id="fStyle" name="style">
+            <option value="scandi">Сканди</option>
+            <option value="modern">Модерн</option>
+            <option value="classic">Классика</option>
+            <option value="loft">Лофт</option>
+            <option value="unsure">Ещё не определился</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-blue btn-big">Получить 3D-проект</button>
+        <p class="form-note">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных</p>
+      </form>
+      <div class="form-success" id="formSuccess">
+        <div class="fs-icon">✓</div>
+        <h3>Заявка отправлена!</h3>
+        <p>Дизайнер свяжется с вами в течение рабочего дня и уточнит детали для 3D-проекта.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ФУТЕР ================= -->
+<footer class="footer" id="contacts">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="#top" class="logo" style="display:inline-block;margin-bottom:14px">Кухня<span>Модуль</span></a>
+        <p style="color:var(--muted);max-width:280px">Фабрика кухонь на заказ. Проектируем, производим и устанавливаем кухни с 2012 года.</p>
+      </div>
+      <div>
+        <h4>Шоурум</h4>
+        <p>г. Москва, ул. Мебельная, 12</p>
+        <p>ТЦ «Интерьер Плаза», 2 этаж</p>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+        <a href="mailto:hello@kuhnya-modul.ru">hello@kuhnya-modul.ru</a>
+        <p>Ежедневно 10:00–21:00</p>
+      </div>
+      <div>
+        <h4>Мы в соцсетях</h4>
+        <div class="socials">
+          <a href="#" aria-label="ВКонтакте" title="ВКонтакте">VK</a>
+          <a href="#" aria-label="Telegram" title="Telegram">TG</a>
+          <a href="#" aria-label="WhatsApp" title="WhatsApp">WA</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 КухняМодуль. Все права защищены.</span>
+      <span>Цены на сайте не являются публичной офертой</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= МОДАЛКА РЕШЕНИЯ ================= -->
+<div class="overlay" id="modalOverlay">
+  <div class="modal-wrap">
+    <div class="modal">
+      <img id="modalImg" src="" alt="Фото кухни">
+      <button class="modal-close" data-close aria-label="Закрыть">✕</button>
+      <div class="modal-body">
+        <h3 id="modalTitle"></h3>
+        <div class="sol-price" id="modalPrice"></div>
+        <ul class="modal-list" id="modalList"></ul>
+        <a href="#calc" class="btn btn-blue" data-close style="width:100%">Собрать похожую в конструкторе</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= ЛАЙТБОКС ================= -->
+<div class="overlay" id="lightbox">
+  <div class="lightbox-content">
+    <button class="modal-close" data-close aria-label="Закрыть">✕</button>
+    <img id="lightboxImg" src="" alt="Проект кухни крупным планом">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+</div>
+
+<!-- ================= ЧАТ-БОТ ================= -->
+<button class="chat-fab" id="chatFab" aria-label="Открыть чат с помощником">
+  <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8A8.38 8.38 0 0 1 12.5 3a8.38 8.38 0 0 1 8.5 8.5z"/></svg>
+</button>
+<div class="chat-window" id="chatWindow">
+  <div class="chat-head">
+    <span class="dot"></span>
+    <div>Помощник КухняМодуль<small>онлайн, отвечает мгновенно</small></div>
+  </div>
+  <div class="chat-body" id="chatBody"></div>
+  <div class="chat-chips" id="chatChips">
+    <button data-q="Сколько стоит кухня?">Цена</button>
+    <button data-q="Какие сроки изготовления?">Сроки</button>
+    <button data-q="Как проходит замер?">Замер</button>
+    <button data-q="Какая гарантия?">Гарантия</button>
+  </div>
+  <div class="chat-input">
+    <input type="text" id="chatText" placeholder="Напишите вопрос..." maxlength="200">
+    <button id="chatSend" aria-label="Отправить">→</button>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+var fmt = new Intl.NumberFormat('ru-RU');
+
+/* ============ Тёмная тема ============ */
+var themeToggle = document.getElementById('themeToggle');
+function applyTheme(t){ document.documentElement.setAttribute('data-theme', t); }
+var savedTheme = null;
+try { savedTheme = localStorage.getItem('km-theme'); } catch(e){}
+if (savedTheme === 'dark' || (!savedTheme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  applyTheme('dark');
+}
+themeToggle.addEventListener('click', function(){
+  var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  applyTheme(next);
+  try { localStorage.setItem('km-theme', next); } catch(e){}
+});
+
+/* ============ 3D-кухня в hero ============ */
+var scene = document.getElementById('scene');
+var k3d = document.getElementById('kitchen3d');
+var tRX = -8, tRY = -14, cRX = -8, cRY = -14;
+function onTilt(x, y){
+  tRY = -14 + (x - .5) * 30;
+  tRX = -8 - (y - .5) * 18;
+}
+var finePointer = window.matchMedia('(pointer: fine)').matches;
+if (scene && finePointer){
+  document.querySelector('.hero').addEventListener('mousemove', function(e){
+    var r = scene.getBoundingClientRect();
+    onTilt((e.clientX - r.left) / r.width, (e.clientY - r.top) / r.height);
+  });
+  document.querySelector('.hero').addEventListener('mouseleave', function(){ tRX = -8; tRY = -14; });
+}
+(function tiltLoop(){
+  if (finePointer){
+    cRX += (tRX - cRX) * .08;
+    cRY += (tRY - cRY) * .08;
+    if (k3d) k3d.style.transform = 'rotateX(' + cRX.toFixed(2) + 'deg) rotateY(' + cRY.toFixed(2) + 'deg)';
+  }
+  requestAnimationFrame(tiltLoop);
+})();
+
+/* ============ Калькулятор ============ */
+var state = {
+  length: 3.2, width: 2.4,
+  shape: 'straight', material: 'mdf', counter: 'ldsp',
+  extras: { tech: false, light: false, soft: false }
+};
+var BASE_PER_M = 45000;
+var SHAPE_MULT = { straight: 1, corner: 1.1, ushape: 1.2, island: 1.3 };
+var MAT_MULT = { mdf: 1, plastic: 1.1, acrylic: 1.25, wood: 1.6 };
+var MAT_NAMES = { mdf: 'МДФ эмаль', plastic: 'Пластик', acrylic: 'Акрил', wood: 'Массив дерева' };
+var SHAPE_NAMES = { straight: 'Прямая', corner: 'Угловая', ushape: 'П-образная', island: 'С островом' };
+var COUNTER_ADD = { ldsp: 0, woodtop: 8000, stone: 16000 };
+var COUNTER_NAMES = { ldsp: 'ЛДСП', woodtop: 'Дерево', stone: 'Камень' };
+var EXTRA_COST = { tech: 120000, light: 15000, soft: 12000 };
+var EXTRA_NAMES = { tech: 'Встроенная техника', light: 'Подсветка', soft: 'Доводчики' };
+
+function getMeters(){
+  var L = Math.max(1, state.length), W = Math.max(1, state.width);
+  var m;
+  switch (state.shape){
+    case 'corner': m = L + W - .6; break;
+    case 'ushape': m = L + 2 * W - 1.2; break;
+    case 'island': m = L + 2; break;
+    default: m = L;
+  }
+  return Math.max(1.2, Math.round(m * 10) / 10);
+}
+function calcPrice(){
+  var m = getMeters();
+  var corpus = m * BASE_PER_M * SHAPE_MULT[state.shape] * MAT_MULT[state.material];
+  var top = m * COUNTER_ADD[state.counter];
+  var extras = 0;
+  for (var k in state.extras) if (state.extras[k]) extras += EXTRA_COST[k];
+  return { total: Math.round((corpus + top + extras) / 1000) * 1000, meters: m, top: top, extras: extras };
+}
+
+/* плавный пересчёт цены */
+var livePriceEl = document.getElementById('livePrice');
+var finalPriceEl = document.getElementById('finalPrice');
+var displayed = 0, priceAnimId = null;
+function animatePrice(target){
+  if (priceAnimId) cancelAnimationFrame(priceAnimId);
+  var from = displayed, start = performance.now(), dur = 450;
+  function frame(now){
+    var p = Math.min(1, (now - start) / dur);
+    var ease = 1 - Math.pow(1 - p, 3);
+    displayed = Math.round(from + (target - from) * ease);
+    livePriceEl.textContent = fmt.format(displayed);
+    finalPriceEl.textContent = 'от ' + fmt.format(displayed) + ' ₽';
+    if (p < 1) priceAnimId = requestAnimationFrame(frame);
+  }
+  priceAnimId = requestAnimationFrame(frame);
+}
+var detailsEl = document.getElementById('priceDetails');
+function renderDetails(){
+  var r = calcPrice();
+  var rows = [
+    ['Планировка', SHAPE_NAMES[state.shape] + ', ' + String(r.meters).replace('.', ',') + ' п.м'],
+    ['Фасады', MAT_NAMES[state.material] + ' ×' + String(MAT_MULT[state.material]).replace('.', ',')],
+    ['Столешница', COUNTER_NAMES[state.counter] + (r.top ? ' +' + fmt.format(Math.round(r.top)) + ' ₽' : '')]
+  ];
+  for (var k in state.extras) if (state.extras[k]) rows.push([EXTRA_NAMES[k], '+' + fmt.format(EXTRA_COST[k]) + ' ₽']);
+  detailsEl.innerHTML = rows.map(function(row){
+    return '<li><span>' + row[0] + '</span><b>' + row[1] + '</b></li>';
+  }).join('');
+  animatePrice(r.total);
+}
+
+/* мастер шагов */
+var steps = document.querySelectorAll('.step');
+var currentStep = 1, TOTAL = steps.length;
+var stepLabel = document.getElementById('stepLabel');
+var progressBar = document.getElementById('progressBar');
+var prevBtn = document.getElementById('prevBtn');
+var nextBtn = document.getElementById('nextBtn');
+function showStep(n){
+  currentStep = n;
+  steps.forEach(function(s){ s.classList.toggle('active', +s.dataset.step === n); });
+  stepLabel.textContent = 'Шаг ' + n + ' из ' + TOTAL;
+  progressBar.style.width = (n / TOTAL * 100) + '%';
+  prevBtn.disabled = n === 1;
+  nextBtn.style.display = n === TOTAL ? 'none' : '';
+}
+prevBtn.addEventListener('click', function(){ if (currentStep > 1) showStep(currentStep - 1); });
+nextBtn.addEventListener('click', function(){
+  if (currentStep === 1){
+    var L = parseFloat(document.getElementById('inpLength').value);
+    var W = parseFloat(document.getElementById('inpWidth').value);
+    if (!(L > 0) || !(W > 0)) return;
+  }
+  if (currentStep < TOTAL) showStep(currentStep + 1);
+});
+
+/* шаг 1: размеры */
+['inpLength','inpWidth'].forEach(function(id){
+  document.getElementById(id).addEventListener('input', function(){
+    var v = parseFloat(this.value);
+    if (v > 0){
+      if (id === 'inpLength') state.length = v; else state.width = v;
+      renderDetails();
+    }
+  });
+});
+
+/* шаги 2-4: плитки */
+function bindTiles(containerId, key){
+  var box = document.getElementById(containerId);
+  box.addEventListener('click', function(e){
+    var tile = e.target.closest('.tile');
+    if (!tile) return;
+    box.querySelectorAll('.tile').forEach(function(t){ t.classList.remove('selected'); });
+    tile.classList.add('selected');
+    state[key] = tile.dataset.value;
+    if (key === 'material') swapMaterialPreview(tile.dataset.value);
+    renderDetails();
+  });
+}
+bindTiles('shapeTiles', 'shape');
+bindTiles('materialTiles', 'material');
+bindTiles('counterTiles', 'counter');
+
+/* шаг 3: плавная смена превью */
+var MAT_MEDIA = {
+  mdf:     { img: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=70', cap: 'МДФ — эмаль, любой цвет по RAL' },
+  plastic: { img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=70', cap: 'Пластик — стойкий к царапинам и влаге' },
+  acrylic: { img: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=70', cap: 'Акрил — глубокий глянец, эффект стекла' },
+  wood:    { img: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=70', cap: 'Массив — натуральное дерево, статусная классика' }
+};
+var matPreview = document.getElementById('materialPreview');
+var matImg = document.getElementById('materialImg');
+var matCap = document.getElementById('materialCaption');
+function swapMaterialPreview(val){
+  var media = MAT_MEDIA[val];
+  if (!media) return;
+  matPreview.classList.add('fade');
+  setTimeout(function(){
+    matImg.style.opacity = '';
+    matImg.src = media.img;
+    matCap.textContent = media.cap;
+    matPreview.classList.remove('fade');
+  }, 300);
+}
+
+/* шаг 5: допы */
+document.getElementById('extrasChecks').addEventListener('click', function(e){
+  var c = e.target.closest('.check');
+  if (!c) return;
+  c.classList.toggle('on');
+  state.extras[c.dataset.value] = c.classList.contains('on');
+  renderDetails();
+});
+renderDetails();
+
+/* ============ Счётчик count-up ============ */
+var counterNum = document.getElementById('counterNum');
+var counterDone = false;
+var counterObs = new IntersectionObserver(function(entries){
+  entries.forEach(function(en){
+    if (!en.isIntersecting || counterDone) return;
+    counterDone = true;
+    var target = 1284, start = performance.now(), dur = 1800;
+    (function tick(now){
+      var p = Math.min(1, (now - start) / dur);
+      var ease = 1 - Math.pow(1 - p, 3);
+      counterNum.textContent = fmt.format(Math.round(target * ease));
+      if (p < 1) requestAnimationFrame(tick);
+    })(start);
+    counterObs.disconnect();
+  });
+}, { threshold: .5 });
+counterObs.observe(document.getElementById('counter'));
+
+/* ============ Появление при скролле ============ */
+var revealObs = new IntersectionObserver(function(entries){
+  entries.forEach(function(en){
+    if (en.isIntersecting){ en.target.classList.add('visible'); revealObs.unobserve(en.target); }
+  });
+}, { threshold: .15 });
+document.querySelectorAll('.reveal, .stagger').forEach(function(el){ revealObs.observe(el); });
+
+/* ============ Модалки ============ */
+var modalOverlay = document.getElementById('modalOverlay');
+var lightbox = document.getElementById('lightbox');
+function openOverlay(o){ o.classList.add('open'); document.body.style.overflow = 'hidden'; }
+function closeOverlays(){
+  document.querySelectorAll('.overlay.open').forEach(function(o){ o.classList.remove('open'); });
+  document.body.style.overflow = '';
+}
+document.querySelectorAll('[data-close]').forEach(function(b){ b.addEventListener('click', closeOverlays); });
+[modalOverlay, lightbox].forEach(function(o){
+  o.addEventListener('click', function(e){ if (e.target === o) closeOverlays(); });
+});
+document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeOverlays(); });
+
+/* карточки решений -> модалка */
+document.getElementById('solGrid').addEventListener('click', function(e){
+  var card = e.target.closest('.sol-card');
+  if (!card) return;
+  document.getElementById('modalImg').src = card.dataset.img;
+  document.getElementById('modalTitle').textContent = card.dataset.name;
+  document.getElementById('modalPrice').innerHTML = card.dataset.price.replace(/^(от )?([\d\s]+)( ₽)?$/, function(_, p, n, s){
+    return '<small>' + (p || '') + '</small>' + n + '<small>' + (s || '') + '</small>';
+  });
+  document.getElementById('modalList').innerHTML = card.dataset.details.split('|').map(function(d){
+    return '<li>' + d + '</li>';
+  }).join('');
+  openOverlay(modalOverlay);
+});
+
+/* галерея -> лайтбокс */
+document.getElementById('galleryGrid').addEventListener('click', function(e){
+  var item = e.target.closest('.g-item');
+  if (!item) return;
+  var img = item.querySelector('img');
+  document.getElementById('lightboxImg').src = img.src.replace('w=800', 'w=1400');
+  document.getElementById('lightboxCaption').textContent = item.dataset.caption;
+  openOverlay(lightbox);
+});
+
+/* ============ Карусель отзывов ============ */
+var slides = document.querySelectorAll('.review-slide');
+var dotsBox = document.getElementById('revDots');
+var revIndex = 0;
+slides.forEach(function(_, i){
+  var d = document.createElement('button');
+  d.setAttribute('aria-label', 'Отзыв ' + (i + 1));
+  if (i === 0) d.classList.add('active');
+  d.addEventListener('click', function(){ showReview(i); });
+  dotsBox.appendChild(d);
+});
+function showReview(i){
+  revIndex = (i + slides.length) % slides.length;
+  slides.forEach(function(s, j){ s.classList.toggle('active', j === revIndex); });
+  dotsBox.querySelectorAll('button').forEach(function(d, j){ d.classList.toggle('active', j === revIndex); });
+}
+document.getElementById('revPrev').addEventListener('click', function(){ showReview(revIndex - 1); });
+document.getElementById('revNext').addEventListener('click', function(){ showReview(revIndex + 1); });
+
+/* ============ Форма ============ */
+document.getElementById('orderForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var name = document.getElementById('fName');
+  var phone = document.getElementById('fPhone');
+  var ok = true;
+  [name, phone].forEach(function(f){
+    var valid = f.value.trim().length >= (f === phone ? 6 : 2);
+    f.style.borderColor = valid ? '' : '#EF4444';
+    if (!valid) ok = false;
+  });
+  if (!ok) return;
+  this.style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+});
+
+/* ============ Чат-бот ============ */
+var chatFab = document.getElementById('chatFab');
+var chatWindow = document.getElementById('chatWindow');
+var chatBody = document.getElementById('chatBody');
+var chatText = document.getElementById('chatText');
+var chatOpened = false;
+function addMsg(text, who){
+  var d = document.createElement('div');
+  d.className = 'msg ' + who;
+  d.textContent = text;
+  chatBody.appendChild(d);
+  chatBody.scrollTop = chatBody.scrollHeight;
+}
+function botReply(q){
+  var t = q.toLowerCase();
+  var answer;
+  if (/цен|стоим|сколько|прайс|руб/.test(t)){
+    answer = 'Кухни от 45 000 ₽ за погонный метр. Прямая кухня 2,5 м — от 112 000 ₽. Соберите свою конфигурацию в калькуляторе выше — цена посчитается сразу.';
+  } else if (/срок|когда|долго|быстро|дней|изготов/.test(t)){
+    answer = 'Изготавливаем за 14–21 день в зависимости от материала фасадов. Монтаж — за 1 день. Точный срок зафиксируем в договоре.';
+  } else if (/замер|измер|выезд|приед/.test(t)){
+    answer = 'Замер бесплатный. Инженер приедет с образцами материалов в удобное время, включая вечера и выходные. Оставьте заявку в форме ниже.';
+  } else if (/гарант|сервис|ремонт|сломал/.test(t)){
+    answer = 'Гарантия 5 лет на корпуса, фасады и фурнитуру. Гарантийные случаи решаем за 3 дня, сервисное обслуживание — весь срок службы кухни.';
+  } else {
+    answer = 'Не совсем понял вопрос. Оставьте телефон в форме «Получить 3D-проект» — перезвоним и ответим лично. Или спросите про цену, сроки, замер или гарантию.';
+  }
+  setTimeout(function(){ addMsg(answer, 'bot'); }, 450);
+}
+function sendChat(){
+  var q = chatText.value.trim();
+  if (!q) return;
+  addMsg(q, 'user');
+  chatText.value = '';
+  botReply(q);
+}
+chatFab.addEventListener('click', function(){
+  chatWindow.classList.toggle('open');
+  if (!chatOpened && chatWindow.classList.contains('open')){
+    chatOpened = true;
+    setTimeout(function(){ addMsg('Здравствуйте! Помогу сориентироваться по ценам, срокам и замеру. Выберите вопрос или напишите свой.', 'bot'); }, 300);
+  }
+});
+document.getElementById('chatSend').addEventListener('click', sendChat);
+chatText.addEventListener('keydown', function(e){ if (e.key === 'Enter') sendChat(); });
+document.getElementById('chatChips').addEventListener('click', function(e){
+  var b = e.target.closest('button');
+  if (!b) return;
+  addMsg(b.dataset.q, 'user');
+  botReply(b.dataset.q);
+});
+})();
+</script>
+</body>
+</html>

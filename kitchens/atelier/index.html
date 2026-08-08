@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kitchen Atelier — кухни на заказ премиум-класса</title>
+<meta name="description" content="Проектируем и производим кухни по индивидуальному дизайн-проекту. От эскиза до монтажа за 21 день.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#1A1A1E;
+  --bg-deep:#121214;
+  --gold:#C9A96E;
+  --beige:#E8DCC8;
+  --white:#F5F2EC;
+  --muted:#9A958C;
+  --serif:'Playfair Display','Cormorant Garamond',serif;
+  --sans:'Montserrat','Raleway',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--white);
+  font-family:var(--sans);
+  font-weight:300;
+  line-height:1.7;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--gold);color:#121214}
+
+/* Кастомный скроллбар — золотая нить */
+::-webkit-scrollbar{width:9px}
+::-webkit-scrollbar-track{background:#0d0d0f}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#8a6f42,var(--gold),#8a6f42);border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:var(--gold)}
+
+/* ============ HEADER ============ */
+.header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 48px;
+  background:rgba(18,18,20,.72);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(201,169,110,.18);
+  transition:background .4s;
+}
+.logo{display:flex;align-items:center;gap:12px}
+.logo svg{width:34px;height:34px}
+.logo-text{font-family:var(--serif);font-size:22px;letter-spacing:.08em;color:var(--beige)}
+.logo-text span{color:var(--gold)}
+.nav{display:flex;gap:38px;align-items:center}
+.nav a{
+  font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);
+  position:relative;transition:color .3s;
+}
+.nav a::after{
+  content:'';position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--gold);transition:width .35s;
+}
+.nav a:hover{color:var(--beige)}
+.nav a:hover::after{width:100%}
+.header-phone{
+  font-size:15px;letter-spacing:.06em;color:var(--beige);
+  border:1px solid rgba(201,169,110,.4);padding:9px 20px;border-radius:2px;
+  transition:all .3s;white-space:nowrap;
+}
+.header-phone:hover{background:var(--gold);color:#121214;border-color:var(--gold)}
+.burger{display:none;background:none;border:none;cursor:pointer;padding:6px;z-index:110}
+.burger span{display:block;width:26px;height:2px;background:var(--gold);margin:6px 0;transition:.35s}
+.burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;min-height:100vh;display:flex;align-items:center;
+  overflow:hidden;
+  background:linear-gradient(135deg,#121214 0%,#1f1c17 60%,#2a241a 100%);
+}
+.hero-bg{
+  position:absolute;inset:-12% 0;z-index:0;
+  background:linear-gradient(135deg,#121214 0%,#1f1c17 60%,#2a241a 100%);
+  will-change:transform;
+}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.62}
+.hero-bg::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(18,18,20,.92) 0%,rgba(18,18,20,.55) 45%,rgba(18,18,20,.25) 100%);
+}
+.hero-content{
+  position:relative;z-index:2;max-width:760px;padding:140px 48px 120px;
+}
+.hero-eyebrow{
+  font-size:12px;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);
+  margin-bottom:28px;display:flex;align-items:center;gap:16px;
+}
+.hero-eyebrow::before{content:'';width:52px;height:1px;background:var(--gold)}
+.hero h1{
+  font-family:var(--serif);font-weight:500;
+  font-size:clamp(44px,6.2vw,84px);
+  line-height:1.12;letter-spacing:.045em;color:var(--white);
+  margin-bottom:30px;
+}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{
+  font-size:17px;color:#CFC9BE;max-width:520px;margin-bottom:46px;font-weight:300;
+}
+.hero-btns{display:flex;gap:20px;flex-wrap:wrap}
+.btn{
+  display:inline-block;cursor:pointer;font-family:var(--sans);
+  font-size:13px;letter-spacing:.2em;text-transform:uppercase;
+  padding:19px 42px;border-radius:2px;transition:all .35s;border:none;
+}
+.btn-gold{
+  background:linear-gradient(135deg,#b3904f,var(--gold) 50%,#d8bd86);
+  color:#121214;font-weight:500;
+  box-shadow:0 8px 30px rgba(201,169,110,.28);
+}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(201,169,110,.42)}
+.btn-outline{
+  background:transparent;color:var(--beige);
+  border:1px solid rgba(232,220,200,.45);
+}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+.hero-scroll{
+  position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:2;
+  font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+}
+.hero-scroll::after{
+  content:'';width:1px;height:52px;background:linear-gradient(180deg,var(--gold),transparent);
+  animation:scrollPulse 2.2s ease-in-out infinite;
+}
+@keyframes scrollPulse{0%,100%{opacity:.3}50%{opacity:1}}
+
+/* ============ MARQUEE ============ */
+.marquee{
+  border-top:1px solid rgba(201,169,110,.35);
+  border-bottom:1px solid rgba(201,169,110,.35);
+  padding:22px 0;overflow:hidden;background:var(--bg-deep);
+}
+.marquee-track{
+  display:flex;width:max-content;
+  animation:marquee 26s linear infinite;
+}
+.marquee-track span{
+  font-family:var(--serif);font-size:19px;letter-spacing:.32em;
+  color:var(--gold);white-space:nowrap;padding-right:12px;
+}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* ============ ОБЩЕЕ ============ */
+.section{padding:110px 48px;position:relative}
+.section-inner{max-width:1240px;margin:0 auto}
+.gold-divider{
+  height:1px;max-width:1240px;margin:0 auto;
+  background:linear-gradient(90deg,transparent,rgba(201,169,110,.5),transparent);
+}
+.section-label{
+  font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);
+  text-align:center;margin-bottom:18px;
+}
+.section-title{
+  font-family:var(--serif);font-weight:500;text-align:center;
+  font-size:clamp(34px,4vw,56px);letter-spacing:.06em;color:var(--white);
+  margin-bottom:20px;
+}
+.section-desc{text-align:center;color:var(--muted);max-width:640px;margin:0 auto 64px;font-size:15px}
+.reveal{opacity:0;transform:translateY(38px);transition:opacity .9s ease,transform .9s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* ============ ГАЛЕРЕЯ ============ */
+.gallery{columns:3;column-gap:22px}
+.g-item{
+  position:relative;break-inside:avoid;margin-bottom:22px;overflow:hidden;
+  cursor:pointer;border-radius:2px;background:var(--bg-deep);
+}
+.g-item img{width:100%;transition:transform 1.2s cubic-bezier(.22,.61,.36,1)}
+.g-item:hover img{transform:scale(1.02)}
+.g-overlay{
+  position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;
+  padding:26px;opacity:0;transition:opacity .45s;
+  background:linear-gradient(180deg,transparent 30%,rgba(18,18,20,.88));
+}
+.g-item:hover .g-overlay{opacity:1}
+.g-overlay h3{font-family:var(--serif);font-size:22px;letter-spacing:.04em;color:var(--beige)}
+.g-overlay p{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+
+/* Лайтбокс */
+.lightbox{
+  position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;
+  background:rgba(10,10,12,.92);backdrop-filter:blur(8px);padding:24px;
+}
+.lightbox.open{display:flex;animation:fadeIn .35s}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.lb-box{
+  background:#1d1d21;border:1px solid rgba(201,169,110,.3);
+  max-width:880px;width:100%;max-height:90vh;overflow:auto;
+  display:grid;grid-template-columns:1.1fr 1fr;border-radius:3px;
+}
+.lb-box img{width:100%;height:100%;object-fit:cover;min-height:340px}
+.lb-info{padding:42px 38px}
+.lb-info h3{font-family:var(--serif);font-size:30px;color:var(--beige);margin-bottom:18px;letter-spacing:.04em}
+.lb-meta{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px}
+.lb-meta div{border-left:2px solid var(--gold);padding-left:12px}
+.lb-meta b{display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:400}
+.lb-meta span{font-size:15px;color:var(--white)}
+.lb-info p{font-size:14px;color:#C4BDB0}
+.lb-close{
+  position:absolute;top:26px;right:36px;background:none;border:none;cursor:pointer;
+  color:var(--gold);font-size:15px;letter-spacing:.2em;text-transform:uppercase;font-family:var(--sans);
+}
+
+/* ============ КОНФИГУРАТОР ============ */
+.config{background:var(--bg-deep)}
+.config-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:start}
+.cfg-group{margin-bottom:40px}
+.cfg-group h4{
+  font-family:var(--serif);font-size:21px;color:var(--beige);letter-spacing:.05em;margin-bottom:16px;
+  display:flex;align-items:center;gap:14px;
+}
+.cfg-group h4::after{content:'';flex:1;height:1px;background:rgba(201,169,110,.25)}
+.cfg-options{display:flex;flex-wrap:wrap;gap:12px}
+.cfg-opt{
+  cursor:pointer;padding:12px 24px;font-size:13px;letter-spacing:.1em;
+  border:1px solid rgba(232,220,200,.25);color:var(--muted);border-radius:2px;
+  transition:all .3s;background:transparent;font-family:var(--sans);
+}
+.cfg-opt:hover{border-color:var(--gold);color:var(--beige)}
+.cfg-opt.active{
+  border-color:var(--gold);color:#121214;font-weight:500;
+  background:linear-gradient(135deg,#b3904f,var(--gold));
+}
+.cfg-swatches{display:flex;gap:14px}
+.swatch{
+  width:52px;height:52px;border-radius:50%;cursor:pointer;position:relative;
+  border:2px solid transparent;transition:all .3s;
+}
+.swatch::after{
+  content:'';position:absolute;inset:-7px;border-radius:50%;
+  border:1px solid transparent;transition:border-color .3s;
+}
+.swatch.active::after{border-color:var(--gold)}
+.swatch:hover{transform:scale(1.08)}
+.cfg-result{
+  position:sticky;top:120px;
+  border:1px solid rgba(201,169,110,.35);padding:52px 44px;text-align:center;
+  background:linear-gradient(160deg,#1d1d21,#151517);
+}
+.cfg-result .lbl{font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+.cfg-price{
+  font-family:var(--serif);font-size:clamp(42px,4.5vw,60px);color:var(--gold);
+  letter-spacing:.03em;margin-bottom:12px;font-variant-numeric:tabular-nums;
+}
+.cfg-note{font-size:13px;color:var(--muted);margin-bottom:34px}
+.cfg-summary{font-size:13px;color:#C4BDB0;margin-bottom:30px;line-height:2}
+.cfg-summary b{color:var(--beige);font-weight:400}
+
+/* ============ МАТЕРИАЛЫ ============ */
+.mat-wrap{position:relative}
+.mat-track{
+  display:flex;gap:26px;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding:10px 4px 26px;scrollbar-width:none;
+}
+.mat-track::-webkit-scrollbar{display:none}
+.mat-card{
+  flex:0 0 320px;scroll-snap-align:start;background:#1d1d21;
+  border:1px solid rgba(201,169,110,.15);border-radius:3px;overflow:hidden;
+  transition:transform .45s,border-color .45s;
+}
+.mat-card:hover{transform:translateY(-8px) scale(1.015);border-color:rgba(201,169,110,.5)}
+.mat-card img{height:220px;width:100%;object-fit:cover}
+.mat-card-body{padding:26px 24px 30px}
+.mat-card-body h4{font-family:var(--serif);font-size:22px;color:var(--beige);letter-spacing:.05em;margin-bottom:10px}
+.mat-card-body p{font-size:13px;color:var(--muted)}
+.mat-arrow{
+  position:absolute;top:38%;width:52px;height:52px;border-radius:50%;cursor:pointer;
+  background:rgba(18,18,20,.8);border:1px solid rgba(201,169,110,.5);color:var(--gold);
+  font-size:20px;display:flex;align-items:center;justify-content:center;transition:all .3s;z-index:5;
+}
+.mat-arrow:hover{background:var(--gold);color:#121214}
+.mat-arrow.prev{left:-14px}
+.mat-arrow.next{right:-14px}
+
+/* ============ ТАЙМЛАЙН ============ */
+.timeline{display:flex;justify-content:space-between;position:relative;margin-top:70px}
+.timeline::before{
+  content:'';position:absolute;top:9px;left:6%;right:6%;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold) 15%,var(--gold) 85%,transparent);
+}
+.t-step{flex:1;text-align:center;padding:0 14px;position:relative}
+.t-dot{
+  width:19px;height:19px;border-radius:50%;margin:0 auto 26px;
+  background:var(--bg);border:2px solid var(--gold);position:relative;z-index:2;
+  box-shadow:0 0 0 6px rgba(201,169,110,.12);
+}
+.t-step h5{font-family:var(--serif);font-size:20px;color:var(--beige);letter-spacing:.05em;margin-bottom:8px}
+.t-step .t-num{font-size:11px;letter-spacing:.3em;color:var(--gold);display:block;margin-bottom:6px}
+.t-step p{font-size:13px;color:var(--muted);max-width:200px;margin:0 auto}
+
+/* ============ ПОЧЕМУ МЫ ============ */
+.why{background:var(--bg-deep)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.why-card{
+  border:1px solid rgba(201,169,110,.18);padding:52px 36px;text-align:center;
+  background:linear-gradient(160deg,#1d1d21,#141416);transition:all .4s;border-radius:3px;
+}
+.why-card:hover{border-color:rgba(201,169,110,.55);transform:translateY(-6px)}
+.why-card svg{width:44px;height:44px;margin-bottom:24px}
+.why-num{
+  font-family:var(--serif);font-size:52px;color:var(--gold);letter-spacing:.02em;line-height:1.1;
+}
+.why-card h4{font-family:var(--serif);font-size:23px;color:var(--beige);margin:14px 0 12px;letter-spacing:.05em}
+.why-card p{font-size:13px;color:var(--muted)}
+
+/* ============ ОТЗЫВЫ ============ */
+.reviews-viewport{overflow:hidden;max-width:980px;margin:0 auto;position:relative}
+.reviews-track{display:flex;transition:transform .7s cubic-bezier(.22,.61,.36,1)}
+.review{
+  flex:0 0 100%;display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center;padding:0 8px;
+}
+.review img{height:340px;width:100%;object-fit:cover;border-radius:3px;border:1px solid rgba(201,169,110,.25)}
+.review-quote{font-family:var(--serif);font-style:italic;font-size:clamp(19px,2vw,25px);color:var(--beige);line-height:1.55;margin-bottom:26px;position:relative;padding-left:34px}
+.review-quote::before{
+  content:'«';position:absolute;left:-4px;top:-14px;font-size:64px;color:var(--gold);opacity:.6;font-style:normal;
+}
+.review-author{font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+.review-role{font-size:12px;color:var(--muted);margin-top:4px}
+.rev-nav{display:flex;justify-content:center;gap:16px;margin-top:44px;align-items:center}
+.rev-btn{
+  width:46px;height:46px;border-radius:50%;cursor:pointer;background:transparent;
+  border:1px solid rgba(201,169,110,.5);color:var(--gold);font-size:17px;transition:all .3s;
+}
+.rev-btn:hover{background:var(--gold);color:#121214}
+.rev-dots{display:flex;gap:9px}
+.rev-dot{width:8px;height:8px;border-radius:50%;background:rgba(201,169,110,.3);cursor:pointer;transition:all .3s}
+.rev-dot.active{background:var(--gold);transform:scale(1.3)}
+
+/* ============ ФОРМА ============ */
+.form-section{
+  background:
+    linear-gradient(rgba(18,18,20,.94),rgba(18,18,20,.96)),
+    url('https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1600&q=70') center/cover fixed;
+}
+.form-box{
+  max-width:640px;margin:0 auto;border:1px solid rgba(201,169,110,.35);
+  padding:60px 56px;background:rgba(18,18,20,.7);border-radius:3px;
+}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.form-field{display:flex;flex-direction:column;gap:8px}
+.form-field.full{grid-column:1/-1}
+.form-field label{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+.form-field input,.form-field textarea{
+  background:rgba(255,255,255,.04);border:1px solid rgba(232,220,200,.2);
+  color:var(--white);padding:15px 18px;font-family:var(--sans);font-size:15px;
+  border-radius:2px;transition:border-color .3s;outline:none;resize:vertical;
+}
+.form-field input:focus,.form-field textarea:focus{border-color:var(--gold)}
+.form-box .btn-gold{width:100%;margin-top:28px}
+.form-success{
+  display:none;text-align:center;font-family:var(--serif);font-size:24px;color:var(--gold);
+  padding:40px 0;letter-spacing:.04em;
+}
+.form-privacy{font-size:11px;color:var(--muted);text-align:center;margin-top:16px}
+
+/* ============ ФУТЕР ============ */
+.footer{background:#0d0d0f;padding:70px 48px 34px;border-top:1px solid rgba(201,169,110,.2)}
+.footer-grid{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:44px}
+.footer h5{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;font-weight:400}
+.footer p,.footer a{font-size:14px;color:var(--muted);display:block;margin-bottom:9px;transition:color .3s}
+.footer a:hover{color:var(--beige)}
+.socials{display:flex;gap:12px;margin-top:16px}
+.socials a{
+  width:40px;height:40px;border:1px solid rgba(201,169,110,.35);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;color:var(--gold);
+  font-size:12px;letter-spacing:.05em;
+}
+.socials a:hover{background:var(--gold);color:#121214}
+.footer-bottom{
+  max-width:1240px;margin:52px auto 0;padding-top:24px;
+  border-top:1px solid rgba(201,169,110,.12);
+  display:flex;justify-content:space-between;font-size:12px;color:#6d675e;
+}
+
+/* Плавающая кнопка */
+.float-cta{
+  position:fixed;right:26px;bottom:26px;z-index:90;
+  background:linear-gradient(135deg,#b3904f,var(--gold) 55%,#d8bd86);
+  color:#121214;font-family:var(--sans);font-weight:500;font-size:12px;
+  letter-spacing:.16em;text-transform:uppercase;padding:17px 26px;border-radius:50px;
+  border:none;cursor:pointer;box-shadow:0 10px 34px rgba(201,169,110,.4);
+  transition:transform .3s,opacity .4s;opacity:0;pointer-events:none;
+}
+.float-cta.show{opacity:1;pointer-events:auto}
+.float-cta:hover{transform:translateY(-4px) scale(1.03)}
+
+/* ============ АДАПТИВ ============ */
+@media (max-width:1024px){
+  .gallery{columns:2}
+  .config-grid{grid-template-columns:1fr}
+  .cfg-result{position:static}
+  .why-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .timeline{flex-wrap:wrap;gap:34px}
+  .timeline::before{display:none}
+  .t-step{flex:0 0 45%}
+}
+@media (max-width:768px){
+  .section{padding:80px 22px}
+  .header{padding:14px 22px}
+  .header-phone{display:none}
+  .burger{display:block}
+  .nav{
+    position:fixed;inset:0;background:rgba(18,18,20,.97);flex-direction:column;
+    justify-content:center;gap:34px;transform:translateY(-100%);transition:transform .45s;
+  }
+  .nav.open{transform:none}
+  .nav a{font-size:17px}
+  .hero-content{padding:130px 24px 110px}
+  .gallery{columns:1}
+  .lb-box{grid-template-columns:1fr}
+  .review{grid-template-columns:1fr;gap:26px}
+  .review img{height:230px}
+  .form-grid{grid-template-columns:1fr}
+  .form-box{padding:44px 26px}
+  .t-step{flex:0 0 100%}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;gap:8px}
+  .mat-arrow{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header" id="header">
+  <a href="#" class="logo">
+    <svg viewBox="0 0 40 40" fill="none">
+      <path d="M20 3 L35 12 V28 L20 37 L5 28 V12 Z" stroke="#C9A96E" stroke-width="1.4"/>
+      <path d="M20 11 L28 16 V25 L20 30 L12 25 V16 Z" stroke="#C9A96E" stroke-width="1"/>
+      <circle cx="20" cy="20.5" r="2.4" fill="#C9A96E"/>
+    </svg>
+    <span class="logo-text">Kitchen <span>Atelier</span></span>
+  </a>
+  <nav class="nav" id="nav">
+    <a href="#projects">Проекты</a>
+    <a href="#materials">Материалы</a>
+    <a href="#about">О нас</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+  <a href="tel:+74951234567" class="header-phone">+7 (495) 123-45-67</a>
+  <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="hero">
+  <div class="hero-bg" id="heroBg">
+    <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1920&q=75" alt="Кухня в тёмном интерьере с тёплой подсветкой" onerror="this.style.display='none'">
+  </div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Фабрика кухонь на заказ</div>
+    <h1>Кухня, в которую хочется <em>возвращаться</em></h1>
+    <p class="hero-sub">Проектируем и производим по индивидуальному дизайн-проекту. От эскиза до монтажа за 21 день.</p>
+    <div class="hero-btns">
+      <a href="#form" class="btn btn-gold">Получить бесплатный дизайн-проект</a>
+      <a href="#projects" class="btn btn-outline">Смотреть работы</a>
+    </div>
+  </div>
+  <div class="hero-scroll">Листайте вниз</div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>МАССИВ ДУБА • МДФ ЭМАЛЬ • КАМЕНЬ QUARTZ • СТЕКЛО • МЕТАЛЛ •&nbsp;</span>
+    <span>МАССИВ ДУБА • МДФ ЭМАЛЬ • КАМЕНЬ QUARTZ • СТЕКЛО • МЕТАЛЛ •&nbsp;</span>
+  </div>
+</div>
+
+<!-- ================= ГАЛЕРЕЯ ================= -->
+<section class="section" id="projects">
+  <div class="section-inner">
+    <div class="section-label reveal">Портфолио</div>
+    <h2 class="section-title reveal">Наши работы</h2>
+    <p class="section-desc reveal">Каждый проект — как разворот интерьерного журнала: продуманная композиция, благородные материалы и свет, который расставляет акценты.</p>
+    <div class="gallery" id="gallery"></div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ================= КОНФИГУРАТОР ================= -->
+<section class="section config" id="config">
+  <div class="section-inner">
+    <div class="section-label reveal">Конфигуратор</div>
+    <h2 class="section-title reveal">Соберите свою кухню</h2>
+    <p class="section-desc reveal">Выберите стиль, материалы и цвет — мы мгновенно рассчитаем ориентировочную стоимость кухни длиной 3 метра.</p>
+    <div class="config-grid">
+      <div>
+        <div class="cfg-group reveal">
+          <h4>Стиль</h4>
+          <div class="cfg-options" data-group="style">
+            <button class="cfg-opt active" data-value="classic" data-label="Классика">Классика</button>
+            <button class="cfg-opt" data-value="modern" data-label="Модерн">Модерн</button>
+            <button class="cfg-opt" data-value="loft" data-label="Лофт">Лофт</button>
+            <button class="cfg-opt" data-value="scandi" data-label="Сканди">Сканди</button>
+          </div>
+        </div>
+        <div class="cfg-group reveal">
+          <h4>Материал фасадов</h4>
+          <div class="cfg-options" data-group="facade">
+            <button class="cfg-opt active" data-value="oak" data-label="Массив дуба">Массив дуба</button>
+            <button class="cfg-opt" data-value="mdf" data-label="МДФ эмаль">МДФ эмаль</button>
+            <button class="cfg-opt" data-value="plastic" data-label="Пластик">Пластик</button>
+            <button class="cfg-opt" data-value="acrylic" data-label="Акрил">Акрил</button>
+          </div>
+        </div>
+        <div class="cfg-group reveal">
+          <h4>Цвет</h4>
+          <div class="cfg-swatches" data-group="color">
+            <div class="swatch active" data-value="graphite" data-label="Графит" style="background:#3A3A40" title="Графит"></div>
+            <div class="swatch" data-value="olive" data-label="Олива" style="background:#5A5B41" title="Олива"></div>
+            <div class="swatch" data-value="sand" data-label="Песочный" style="background:#CBB79A" title="Песочный"></div>
+            <div class="swatch" data-value="ivory" data-label="Слоновая кость" style="background:#EDE6D6" title="Слоновая кость"></div>
+            <div class="swatch" data-value="terra" data-label="Терракота" style="background:#9A5B41" title="Терракота"></div>
+          </div>
+        </div>
+        <div class="cfg-group reveal">
+          <h4>Столешница</h4>
+          <div class="cfg-options" data-group="top">
+            <button class="cfg-opt active" data-value="quartz" data-label="Камень quartz">Камень quartz</button>
+            <button class="cfg-opt" data-value="wood" data-label="Дерево">Дерево</button>
+            <button class="cfg-opt" data-value="chip" data-label="ЛДСП">ЛДСП</button>
+          </div>
+        </div>
+      </div>
+      <div class="cfg-result reveal">
+        <div class="lbl">Ориентировочная стоимость</div>
+        <div class="cfg-price" id="cfgPrice">от 0 ₽</div>
+        <div class="cfg-note">за кухню длиной 3 метра «под ключ»</div>
+        <div class="cfg-summary" id="cfgSummary"></div>
+        <a href="#form" class="btn btn-gold" style="width:100%">Заказать точный расчёт</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ================= МАТЕРИАЛЫ ================= -->
+<section class="section" id="materials">
+  <div class="section-inner">
+    <div class="section-label reveal">Фактура и тактильность</div>
+    <h2 class="section-title reveal">Материалы</h2>
+    <p class="section-desc reveal">Работаем только с проверенными поставщиками. Каждый материал можно потрогать в нашем шоуруме.</p>
+    <div class="mat-wrap reveal">
+      <button class="mat-arrow prev" id="matPrev" aria-label="Назад">&#8249;</button>
+      <div class="mat-track" id="matTrack"></div>
+      <button class="mat-arrow next" id="matNext" aria-label="Вперёд">&#8250;</button>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ================= КАК МЫ РАБОТАЕМ ================= -->
+<section class="section" id="about">
+  <div class="section-inner">
+    <div class="section-label reveal">Процесс</div>
+    <h2 class="section-title reveal">Как мы работаем</h2>
+    <p class="section-desc reveal">Прозрачный процесс от первого звонка до ключей от новой кухни. Срок — 21 день с момента утверждения проекта.</p>
+    <div class="timeline reveal">
+      <div class="t-step">
+        <div class="t-dot"></div>
+        <span class="t-num">Шаг 01</span>
+        <h5>Замер</h5>
+        <p>Инженер приезжает в удобное время и снимает точные размеры помещения.</p>
+      </div>
+      <div class="t-step">
+        <div class="t-dot"></div>
+        <span class="t-num">Шаг 02</span>
+        <h5>Дизайн-проект</h5>
+        <p>Дизайнер готовит 3D-визуализацию и смету. Правки — до полного согласования.</p>
+      </div>
+      <div class="t-step">
+        <div class="t-dot"></div>
+        <span class="t-num">Шаг 03</span>
+        <h5>Производство</h5>
+        <p>Изготавливаем кухню на собственном производстве с контролем качества.</p>
+      </div>
+      <div class="t-step">
+        <div class="t-dot"></div>
+        <span class="t-num">Шаг 04</span>
+        <h5>Доставка</h5>
+        <p>Аккуратно упаковываем и привозим кухню в оговорённый день.</p>
+      </div>
+      <div class="t-step">
+        <div class="t-dot"></div>
+        <span class="t-num">Шаг 05</span>
+        <h5>Монтаж</h5>
+        <p>Собираем за один день, подключаем технику и выносим весь мусор.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ================= ПОЧЕМУ МЫ ================= -->
+<section class="section why">
+  <div class="section-inner">
+    <div class="section-label reveal">Наши гарантии</div>
+    <h2 class="section-title reveal">Почему мы</h2>
+    <p class="section-desc reveal">Мы отвечаем за результат не словами, а условиями договора.</p>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#C9A96E" stroke-width="1.6">
+          <path d="M24 4 L40 10 V24 C40 34 33 41 24 44 C15 41 8 34 8 24 V10 Z"/>
+          <path d="M17 24 L22 29 L32 19"/>
+        </svg>
+        <div class="why-num">5 лет</div>
+        <h4>Гарантия 5 лет</h4>
+        <p>Официальная гарантия на фасады, фурнитуру и сборку — прописана в договоре.</p>
+      </div>
+      <div class="why-card reveal">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#C9A96E" stroke-width="1.6">
+          <path d="M6 40 V20 L18 28 V20 L30 28 V14 H42 V40 Z"/>
+          <path d="M34 14 V8 H40 V14"/>
+        </svg>
+        <div class="why-num">100%</div>
+        <h4>Своё производство</h4>
+        <p>Полный цикл на собственной фабрике — без посредников и накруток к цене.</p>
+      </div>
+      <div class="why-card reveal">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#C9A96E" stroke-width="1.6">
+          <circle cx="24" cy="16" r="7"/>
+          <path d="M10 42 C10 32 16 27 24 27 C32 27 38 32 38 42"/>
+        </svg>
+        <div class="why-num">12</div>
+        <h4>Дизайнер в штате</h4>
+        <p>Двенадцать штатных дизайнеров ведут проект от эскиза до авторского надзора.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ================= ОТЗЫВЫ ================= -->
+<section class="section" id="reviews">
+  <div class="section-inner">
+    <div class="section-label reveal">Отзывы</div>
+    <h2 class="section-title reveal">Истории наших клиентов</h2>
+    <p class="section-desc reveal">Нам доверяют самое личное — пространство, где собирается вся семья.</p>
+    <div class="reviews-viewport reveal">
+      <div class="reviews-track" id="revTrack"></div>
+    </div>
+    <div class="rev-nav reveal">
+      <button class="rev-btn" id="revPrev" aria-label="Предыдущий отзыв">&#8249;</button>
+      <div class="rev-dots" id="revDots"></div>
+      <button class="rev-btn" id="revNext" aria-label="Следующий отзыв">&#8250;</button>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ================= ФОРМА ================= -->
+<section class="section form-section" id="form">
+  <div class="section-inner">
+    <div class="section-label reveal">Начнём с эскиза</div>
+    <h2 class="section-title reveal">Бесплатный дизайн-проект</h2>
+    <p class="section-desc reveal">Оставьте заявку — дизайнер свяжется с вами в течение часа и подготовит первый эскиз вашей кухни.</p>
+    <div class="form-box reveal">
+      <form id="leadForm" class="form-grid">
+        <div class="form-field">
+          <label for="fName">Ваше имя</label>
+          <input type="text" id="fName" name="name" placeholder="Анна" required>
+        </div>
+        <div class="form-field">
+          <label for="fPhone">Телефон</label>
+          <input type="tel" id="fPhone" name="phone" placeholder="+7 (___) ___-__-__" required>
+        </div>
+        <div class="form-field full">
+          <label for="fArea">Площадь кухни</label>
+          <input type="text" id="fArea" name="area" placeholder="Например, 12 м²">
+        </div>
+        <div class="form-field full">
+          <label for="fWishes">Пожелания</label>
+          <textarea id="fWishes" name="wishes" rows="4" placeholder="Расскажите, какой вы видите свою кухню"></textarea>
+        </div>
+        <div class="form-field full">
+          <button type="submit" class="btn btn-gold">Получить дизайн-проект</button>
+        </div>
+      </form>
+      <div class="form-success" id="formSuccess">Спасибо! Мы свяжемся с вами в ближайшее время.</div>
+      <p class="form-privacy">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ФУТЕР ================= -->
+<footer class="footer" id="contacts">
+  <div class="footer-grid">
+    <div>
+      <a href="#" class="logo" style="margin-bottom:20px">
+        <svg viewBox="0 0 40 40" fill="none" width="30" height="30">
+          <path d="M20 3 L35 12 V28 L20 37 L5 28 V12 Z" stroke="#C9A96E" stroke-width="1.4"/>
+          <circle cx="20" cy="20.5" r="2.4" fill="#C9A96E"/>
+        </svg>
+        <span class="logo-text" style="font-size:19px">Kitchen <span>Atelier</span></span>
+      </a>
+      <p>Фабрика кухонь на заказ. Кухня как произведение искусства, созданное под вас.</p>
+      <div class="socials">
+        <a href="#" aria-label="VK">VK</a>
+        <a href="#" aria-label="Telegram">TG</a>
+        <a href="#" aria-label="YouTube">YT</a>
+        <a href="#" aria-label="Pinterest">PIN</a>
+      </div>
+    </div>
+    <div>
+      <h5>Шоурум</h5>
+      <p>г. Москва, Складочная ул., 1, стр. 18</p>
+      <p>ТЦ «Интерьер Град», 2 этаж</p>
+    </div>
+    <div>
+      <h5>Контакты</h5>
+      <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+      <a href="mailto:hello@kitchen-atelier.ru">hello@kitchen-atelier.ru</a>
+    </div>
+    <div>
+      <h5>Режим работы</h5>
+      <p>Пн–Сб: 10:00 — 21:00</p>
+      <p>Вс: 11:00 — 19:00</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Kitchen Atelier. Все права защищены.</span>
+    <span>Кухни на заказ премиум-класса</span>
+  </div>
+</footer>
+
+<button class="float-cta" id="floatCta">Записаться на замер</button>
+
+<!-- Лайтбокс -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose">Закрыть ✕</button>
+  <div class="lb-box">
+    <img id="lbImg" src="" alt="">
+    <div class="lb-info">
+      <h3 id="lbTitle"></h3>
+      <div class="lb-meta">
+        <div><b>Площадь</b><span id="lbArea"></span></div>
+        <div><b>Стиль</b><span id="lbStyle"></span></div>
+        <div><b>Срок</b><span id="lbTerm"></span></div>
+        <div><b>Материалы</b><span id="lbMat"></span></div>
+      </div>
+      <p id="lbDesc"></p>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ============ ДАННЫЕ ПРОЕКТОВ ============ */
+const IMG = id => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=900&q=72`;
+const projects = [
+  {id:'1556912172-45b7abe8b7e1', title:'Квартира на Патриарших', area:'14 м²', style:'Модерн', term:'21 день', mat:'МДФ эмаль, quartz', desc:'Монохромная кухня с фасадами цвета графит и столешницей из кварцевого агломерата. Скрытая подсветка рабочей зоны, техника уровня eye-level.'},
+  {id:'1556911220-e15b29be8c8f', title:'Дом в Барвихе', area:'22 м²', style:'Классика', term:'28 дней', mat:'Массив дуба, камень', desc:'Классическая кухня из массива дуба с патиной. Остров с мраморной столешницей стал центром притяжения всего дома.'},
+  {id:'1600489000022-c2086d79f9d4', title:'Лофт на Артплее', area:'11 м²', style:'Лофт', term:'19 дней', mat:'МДФ, металл, дерево', desc:'Индустриальная эстетика: фактурные фасады, открытые металлические полки и тёплое дерево на столешнице.'},
+  {id:'1631679706909-1844bbd07221', title:'ЖК «Символ»', area:'9 м²', style:'Сканди', term:'18 дней', mat:'Пластик, ЛДСП', desc:'Светлая скандинавская кухня: максимум хранения на девяти метрах, фасады без ручек, продуманная эргономика.'},
+  {id:'1600566753086-00f18fb6b3ea', title:'Квартира на Кутузовском', area:'16 м²', style:'Модерн', term:'21 день', mat:'Акрил, quartz', desc:'Глянцевые акриловые фасады глубокого синего оттенка и бесшовная столешница из кварца с интегрированной мойкой.'},
+  {id:'1556909212-d5b604d0c90d', title:'Таунхаус в Истре', area:'18 м²', style:'Классика', term:'26 дней', mat:'Массив дуба, дерево', desc:'Тёплая семейная кухня-столовая: дубовые фасады, витрины со стеклом и массивный обеденный стол в едином ансамбле.'},
+  {id:'1583847268964-b28dc8f51f92', title:'Пентхаус в Сити', area:'20 м²', style:'Модерн', term:'24 дня', mat:'МДФ эмаль, камень, металл', desc:'Кухня для панорамных видов: тёмные эмалевые фасады, латунная фурнитура и подсветка, сценарии которой управляются со смартфона.'},
+  {id:'1556911220-bff31c812dba', title:'Дом под Псковом', area:'13 м²', style:'Сканди', term:'20 дней', mat:'Массив дуба, ЛДСП', desc:'Загородная кухня в светлых тонах: открытые полки, деревянная столешница и много живого света.'}
+];
+
+/* Галерея */
+const gallery = document.getElementById('gallery');
+projects.forEach((p, i) => {
+  const item = document.createElement('div');
+  item.className = 'g-item';
+  item.innerHTML = `<img loading="lazy" src="${IMG(p.id)}" alt="${p.title}">
+    <div class="g-overlay"><h3>${p.title}</h3><p>${p.area} • ${p.style}</p></div>`;
+  item.addEventListener('click', () => openLightbox(i));
+  gallery.appendChild(item);
+});
+
+/* Лайтбокс */
+const lightbox = document.getElementById('lightbox');
+function openLightbox(i){
+  const p = projects[i];
+  document.getElementById('lbImg').src = IMG(p.id);
+  document.getElementById('lbImg').alt = p.title;
+  document.getElementById('lbTitle').textContent = p.title;
+  document.getElementById('lbArea').textContent = p.area;
+  document.getElementById('lbStyle').textContent = p.style;
+  document.getElementById('lbTerm').textContent = p.term;
+  document.getElementById('lbMat').textContent = p.mat;
+  document.getElementById('lbDesc').textContent = p.desc;
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox(){
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('lbClose').addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+/* ============ ПАРАЛЛАКС HERO ============ */
+const heroBg = document.getElementById('heroBg');
+let ticking = false;
+window.addEventListener('scroll', () => {
+  if (!ticking){
+    requestAnimationFrame(() => {
+      const y = window.scrollY;
+      if (y < window.innerHeight * 1.2) heroBg.style.transform = `translateY(${y * 0.32}px)`;
+      ticking = false;
+    });
+    ticking = true;
+  }
+}, {passive:true});
+
+/* ============ КОНФИГУРАТОР ============ */
+const BASE = 350000;
+const styleK   = { classic:1.2, modern:1.0, loft:1.1, scandi:0.9 };
+const facadeK  = { oak:1.4, mdf:1.15, plastic:1.0, acrylic:1.1 };
+const topAdd   = { quartz:90000, wood:55000, chip:20000 };
+const state = { style:'classic', facade:'oak', color:'graphite', top:'quartz' };
+
+const cfgPriceEl = document.getElementById('cfgPrice');
+const cfgSummaryEl = document.getElementById('cfgSummary');
+let displayedPrice = 0, priceAnim = null;
+
+function calcPrice(){
+  return Math.round((BASE * styleK[state.style] * facadeK[state.facade] + topAdd[state.top]) / 1000) * 1000;
+}
+function fmt(n){ return n.toLocaleString('ru-RU'); }
+function animatePrice(target){
+  if (priceAnim) cancelAnimationFrame(priceAnim);
+  const from = displayedPrice, start = performance.now(), dur = 700;
+  function step(t){
+    const k = Math.min((t - start) / dur, 1);
+    const e = 1 - Math.pow(1 - k, 3);
+    displayedPrice = Math.round(from + (target - from) * e);
+    cfgPriceEl.textContent = 'от ' + fmt(displayedPrice) + ' ₽';
+    if (k < 1) priceAnim = requestAnimationFrame(step);
+  }
+  priceAnim = requestAnimationFrame(step);
+}
+function updateSummary(){
+  const label = sel => document.querySelector(sel)?.dataset.label || '';
+  cfgSummaryEl.innerHTML =
+    `<b>${label('[data-group="style"] .cfg-opt.active')}</b> · <b>${label('[data-group="facade"] .cfg-opt.active')}</b><br>` +
+    `Цвет <b>${label('[data-group="color"] .swatch.active')}</b> · Столешница <b>${label('[data-group="top"] .cfg-opt.active')}</b>`;
+}
+function refreshConfig(){ animatePrice(calcPrice()); updateSummary(); }
+
+document.querySelectorAll('.cfg-options').forEach(group => {
+  group.addEventListener('click', e => {
+    const btn = e.target.closest('.cfg-opt');
+    if (!btn) return;
+    group.querySelectorAll('.cfg-opt').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    state[group.dataset.group] = btn.dataset.value;
+    refreshConfig();
+  });
+});
+document.querySelector('.cfg-swatches').addEventListener('click', e => {
+  const sw = e.target.closest('.swatch');
+  if (!sw) return;
+  document.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
+  sw.classList.add('active');
+  state.color = sw.dataset.value;
+  refreshConfig();
+});
+refreshConfig();
+
+/* ============ МАТЕРИАЛЫ ============ */
+const materials = [
+  {id:'1541123437800-1bb1317badc2', title:'Массив дуба', text:'Живая текстура натурального дерева. Фасады служат десятилетиями и со временем становятся только благороднее.'},
+  {id:'1615873968403-89e068629265', title:'МДФ эмаль', text:'Идеально гладкое покрытие любого оттенка по каталогу RAL. Стойкость к влаге, царапинам и выцветанию.'},
+  {id:'1521783593447-5702b9bfd267', title:'Камень', text:'Кварцевый агломерат и натуральный мрамор для столешниц: бесшовные поверхности, не боящиеся ни ножа, ни горячего.'},
+  {id:'1544457070-4cd773b4d71e', title:'Стекло', text:'Тонированные и лакированные витрины, фартуки и полки. Добавляют кухне глубину и воздух.'},
+  {id:'1518644961665-ed172691aaa1', title:'Металл', text:'Латунь, чернёная сталь и алюминий: фурнитура, рейлинги и декоративные элементы ручной отделки.'}
+];
+const matTrack = document.getElementById('matTrack');
+materials.forEach(m => {
+  const card = document.createElement('div');
+  card.className = 'mat-card';
+  card.innerHTML = `<img loading="lazy" src="${IMG(m.id)}" alt="${m.title}">
+    <div class="mat-card-body"><h4>${m.title}</h4><p>${m.text}</p></div>`;
+  matTrack.appendChild(card);
+});
+document.getElementById('matPrev').addEventListener('click', () => matTrack.scrollBy({left:-360, behavior:'smooth'}));
+document.getElementById('matNext').addEventListener('click', () => matTrack.scrollBy({left: 360, behavior:'smooth'}));
+
+/* ============ ОТЗЫВЫ ============ */
+const reviews = [
+  {id:'1565538810643-b5bdb714032a', quote:'Кухня получилась точно как на визуализации — даже лучше. Отдельное спасибо за то, что уложились в обещанные 21 день и убрали за собой всё до последней пылинки.', name:'Елена и Дмитрий Соколовы', role:'Кухня 14 м², ЖК «Дом на набережной»'},
+  {id:'1571175443880-49e1d25b2bc5', quote:'Прошли семь студий, прежде чем попали в Kitchen Atelier. Только здесь дизайнер слушал, а не продавал. Результат — кухня, которой мы восхищаемся каждое утро.', name:'Марина Орлова', role:'Кухня 18 м², таунхаус в Истре'},
+  {id:'1588854337236-6889d631faa8', quote:'Заказывали кухню из массива дуба для загородного дома. Качество столярной работы — на уровне дорогой мебели из Италии, но по адекватной цене и без ожидания в полгода.', name:'Андрей Верещагин', role:'Кухня 22 м², дом в Барвихе'}
+];
+const revTrack = document.getElementById('revTrack');
+const revDots = document.getElementById('revDots');
+reviews.forEach((r, i) => {
+  const slide = document.createElement('div');
+  slide.className = 'review';
+  slide.innerHTML = `<img loading="lazy" src="${IMG(r.id)}" alt="Кухня клиента">
+    <div><p class="review-quote">${r.quote}</p>
+    <div class="review-author">${r.name}</div><div class="review-role">${r.role}</div></div>`;
+  revTrack.appendChild(slide);
+  const dot = document.createElement('div');
+  dot.className = 'rev-dot' + (i === 0 ? ' active' : '');
+  dot.addEventListener('click', () => goReview(i));
+  revDots.appendChild(dot);
+});
+let revIndex = 0, revTimer = null;
+function goReview(i){
+  revIndex = (i + reviews.length) % reviews.length;
+  revTrack.style.transform = `translateX(-${revIndex * 100}%)`;
+  document.querySelectorAll('.rev-dot').forEach((d, k) => d.classList.toggle('active', k === revIndex));
+  restartAuto();
+}
+function restartAuto(){
+  clearInterval(revTimer);
+  revTimer = setInterval(() => goReview(revIndex + 1), 6000);
+}
+document.getElementById('revPrev').addEventListener('click', () => goReview(revIndex - 1));
+document.getElementById('revNext').addEventListener('click', () => goReview(revIndex + 1));
+restartAuto();
+
+/* ============ ФОРМА ============ */
+document.getElementById('leadForm').addEventListener('submit', e => {
+  e.preventDefault();
+  e.target.style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+  document.querySelector('.form-privacy').style.display = 'none';
+});
+
+/* ============ АНИМАЦИЯ ПОЯВЛЕНИЯ ============ */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(en => { if (en.isIntersecting){ en.target.classList.add('visible'); observer.unobserve(en.target); } });
+}, {threshold:.15});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+/* ============ БУРГЕР-МЕНЮ ============ */
+const burger = document.getElementById('burger');
+const nav = document.getElementById('nav');
+burger.addEventListener('click', () => {
+  burger.classList.toggle('open');
+  nav.classList.toggle('open');
+});
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  burger.classList.remove('open');
+  nav.classList.remove('open');
+}));
+
+/* ============ ПЛАВАЮЩАЯ КНОПКА ============ */
+const floatCta = document.getElementById('floatCta');
+window.addEventListener('scroll', () => {
+  const formTop = document.getElementById('form').getBoundingClientRect().top;
+  floatCta.classList.toggle('show', window.scrollY > window.innerHeight * .8 && formTop > window.innerHeight * .5);
+}, {passive:true});
+floatCta.addEventListener('click', () => document.getElementById('form').scrollIntoView({behavior:'smooth'}));
+</script>
+</body>
+</html>

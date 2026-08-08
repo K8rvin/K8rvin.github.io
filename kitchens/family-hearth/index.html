@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Семейный очаг — кухни на заказ, за которыми хочется собираться</title>
+<meta name="description" content="Фабрика кухонь на заказ. Проектируем кухни, за которыми хочется собираться. Бесплатный дизайн-проект за 2 дня.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500;700;800&family=Nunito:wght@400;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --milk:#FDF8F3;
+    --beige:#F5E6D3;
+    --sage:#7FA98C;
+    --sage-dark:#5f8a6e;
+    --brown:#5C4033;
+    --brown-soft:#8a6f5f;
+    --peach:#F4A261;
+    --peach-dark:#e88f4a;
+    --white:#fff;
+    --shadow:0 10px 30px rgba(92,64,51,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  img{max-width:100%}
+  .hero-inner>*,.gallery-grid>*,.family-cards>*,.family-detail>*,.fd-photos>*,.mat-grid>*,.steps>*,.slide>*,.gifts-grid>*,.calc-selects>*,.foot-grid>*{min-width:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Nunito',sans-serif;
+    background:var(--milk);
+    color:var(--brown);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  h1,h2,h3{font-family:'Alegreya',serif;font-weight:700;line-height:1.15}
+  .hand{font-family:'Caveat',cursive}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+  section{padding:88px 0}
+  .section-title{font-size:clamp(32px,5vw,52px);text-align:center;margin-bottom:14px}
+  .section-sub{text-align:center;color:var(--brown-soft);max-width:640px;margin:0 auto 48px;font-size:18px}
+  .hand-accent{color:var(--sage);font-size:clamp(24px,3vw,32px)}
+
+  /* ---------- Кнопки ---------- */
+  .btn{
+    display:inline-block;border:none;cursor:pointer;text-decoration:none;
+    font-family:'Nunito',sans-serif;font-weight:700;font-size:19px;
+    background:var(--peach);color:#fff;
+    padding:18px 42px;border-radius:60px;
+    box-shadow:0 8px 20px rgba(244,162,97,.45);
+    transition:transform .25s ease,box-shadow .25s ease,background .25s ease;
+  }
+  .btn:hover{background:var(--peach-dark);transform:translateY(-3px);box-shadow:0 14px 28px rgba(244,162,97,.5)}
+  .btn:active{transform:translateY(0)}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;min-height:100vh;display:flex;align-items:center;
+    padding:110px 0 80px;overflow:hidden;
+    background:linear-gradient(160deg,var(--milk) 0%,var(--beige) 100%);
+  }
+  .hero-light{
+    position:absolute;inset:-40%;pointer-events:none;
+    background:radial-gradient(ellipse 45% 35% at 70% 20%,rgba(255,236,200,.75),transparent 70%),
+               radial-gradient(ellipse 35% 30% at 20% 70%,rgba(255,220,180,.4),transparent 70%);
+    animation:morning 14s ease-in-out infinite alternate;
+  }
+  @keyframes morning{
+    0%{transform:translate(-4%,-2%) rotate(0deg);opacity:.7}
+    50%{opacity:1}
+    100%{transform:translate(4%,3%) rotate(3deg);opacity:.8}
+  }
+  .hero-inner{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:60px;align-items:center}
+  .hero h1{font-size:clamp(40px,5.6vw,68px);margin-bottom:22px}
+  .hero .lead{font-size:clamp(18px,2vw,21px);color:var(--brown-soft);margin-bottom:36px;max-width:520px}
+  .hero-icons{display:flex;gap:34px;margin-top:44px;align-items:center}
+  .hero-icons svg{width:44px;height:44px;stroke:var(--brown);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+  .coffee-hint{position:relative;cursor:pointer;background:none;border:none;padding:0;transition:transform .25s}
+  .coffee-hint:hover{transform:scale(1.12) rotate(-4deg)}
+  .coffee-hint .hand{position:absolute;top:-30px;left:50%;transform:translateX(-50%) rotate(-4deg);color:var(--sage);font-size:19px;white-space:nowrap}
+
+  .polaroid{
+    background:#fff;padding:18px 18px 64px;border-radius:6px;
+    box-shadow:0 24px 60px rgba(92,64,51,.22);
+    transform:rotate(3.5deg);
+    position:relative;
+    transition:transform .5s ease;
+  }
+  .polaroid:hover{transform:rotate(1deg) scale(1.02)}
+  .polaroid .ph{
+    aspect-ratio:4/4.6;border-radius:3px;overflow:hidden;
+    background:linear-gradient(150deg,#f7dcb8,#e8b98a 60%,#d99f6f);
+  }
+  .polaroid img{width:100%;height:100%;object-fit:cover;display:block}
+  .polaroid figcaption{
+    position:absolute;bottom:14px;left:0;right:0;text-align:center;
+    font-family:'Caveat',cursive;font-size:26px;color:var(--brown-soft);
+  }
+  .coffee-note{
+    position:absolute;top:-56px;left:-70px;transform:rotate(-8deg);
+    font-family:'Caveat',cursive;font-size:28px;color:var(--brown);text-align:center;line-height:1.2;
+  }
+  .coffee-note svg{display:block;margin:2px auto 0;width:56px;height:44px;stroke:var(--brown);fill:none;stroke-width:2;stroke-linecap:round}
+
+  /* ---------- Полоса доверия ---------- */
+  .trust{background:var(--sage);color:#fff;padding:22px 0}
+  .trust .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 40px;font-weight:700;font-size:17px}
+
+  /* ---------- Галерея ---------- */
+  .gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px}
+  .gcard{cursor:pointer}
+  .gcard .frame{
+    position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/3.4;
+    background:linear-gradient(140deg,#f2d3ab,#dfa878);
+    transition:transform .45s ease,box-shadow .45s ease,padding .45s ease,border-radius .45s ease,background .45s ease;
+  }
+  .gcard img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease,border-radius .45s ease}
+  .gcard .look{
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    background:rgba(92,64,51,.35);color:#fff;font-weight:700;font-size:18px;
+    opacity:0;transition:opacity .4s;
+  }
+  .gcard .hand-note{
+    position:absolute;left:0;right:0;bottom:12px;text-align:center;
+    font-family:'Caveat',cursive;font-size:23px;color:var(--brown-soft);
+    opacity:0;transition:opacity .45s;
+  }
+  .gcard:hover .frame{
+    background:#fff;padding:12px 12px 52px;border-radius:6px;
+    transform:scale(1.04) rotate(-1.5deg);
+    box-shadow:0 20px 50px rgba(92,64,51,.25);
+  }
+  .gcard:hover img{border-radius:3px;transform:scale(1.03)}
+  .gcard:hover .look{opacity:1;background:rgba(92,64,51,.28)}
+  .gcard:hover .hand-note{opacity:1}
+  .gcard h3{font-size:24px;margin:18px 0 4px}
+  .gcard .meta{color:var(--brown-soft);font-size:15px}
+
+  /* ---------- Под вашу семью ---------- */
+  .family{background:var(--beige)}
+  .family-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-bottom:40px}
+  .fcard{
+    background:#fff;border:3px solid transparent;border-radius:18px;padding:30px 22px;text-align:center;
+    cursor:pointer;transition:transform .3s,border-color .3s,box-shadow .3s;box-shadow:0 6px 18px rgba(92,64,51,.08);
+  }
+  .fcard:hover{transform:translateY(-6px)}
+  .fcard.active{border-color:var(--sage);box-shadow:0 14px 30px rgba(127,169,140,.3)}
+  .fcard .emoji{font-size:40px;display:block;margin-bottom:12px}
+  .fcard h3{font-size:21px}
+  .family-detail{
+    background:#fff;border-radius:22px;padding:44px;box-shadow:var(--shadow);
+    display:none;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:40px;align-items:center;
+    animation:fadeUp .5s ease;
+  }
+  .family-detail.open{display:grid}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+  .family-detail h3{font-size:30px;margin-bottom:14px}
+  .family-detail p{color:var(--brown-soft);margin-bottom:14px}
+  .family-detail ul{list-style:none}
+  .family-detail li{padding:8px 0 8px 30px;position:relative}
+  .family-detail li::before{content:'✓';position:absolute;left:0;color:var(--sage);font-weight:700}
+  .fd-photos{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+  .fd-photos .p{
+    border-radius:12px;overflow:hidden;aspect-ratio:1/1.1;
+    background:linear-gradient(140deg,#f2d3ab,#dfa878);
+  }
+  .fd-photos img{width:100%;height:100%;object-fit:cover;display:block}
+  .fd-photos .p:nth-child(2){transform:rotate(2deg)}
+
+  /* ---------- Калькулятор ---------- */
+  .calc-box{
+    background:#fff;border-radius:26px;box-shadow:var(--shadow);
+    padding:52px;max-width:820px;margin:0 auto;
+  }
+  .calc-row{margin-bottom:30px}
+  .calc-row label{display:block;font-weight:700;margin-bottom:12px;font-size:18px}
+  .calc-row label .val{color:var(--sage);font-family:'Caveat',cursive;font-size:26px;margin-left:8px}
+  input[type=range]{
+    width:100%;appearance:none;-webkit-appearance:none;height:8px;border-radius:8px;
+    background:linear-gradient(90deg,var(--sage) var(--fill,30%),var(--beige) var(--fill,30%));outline:none;
+  }
+  input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance:none;width:26px;height:26px;border-radius:50%;
+    background:var(--peach);border:4px solid #fff;box-shadow:0 3px 8px rgba(92,64,51,.3);cursor:pointer;
+  }
+  input[type=range]::-moz-range-thumb{
+    width:22px;height:22px;border-radius:50%;background:var(--peach);border:4px solid #fff;cursor:pointer;
+  }
+  .calc-selects{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px}
+  select{
+    width:100%;padding:14px 18px;border-radius:14px;border:2px solid var(--beige);
+    font-family:'Nunito',sans-serif;font-size:17px;color:var(--brown);background:var(--milk);
+    cursor:pointer;outline:none;transition:border-color .3s;
+  }
+  select:focus{border-color:var(--sage)}
+  .calc-result{
+    text-align:center;padding:28px;background:var(--milk);border-radius:18px;margin-bottom:26px;
+  }
+  .calc-result .price{
+    font-family:'Alegreya',serif;font-size:clamp(36px,5vw,52px);font-weight:800;color:var(--sage-dark);
+    transition:opacity .25s;
+  }
+  .calc-result .note{color:var(--brown-soft);font-size:15px}
+  .calc-box .btn{display:block;margin:0 auto}
+
+  /* ---------- Материалы ---------- */
+  .materials{background:var(--beige)}
+  .mat-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px}
+  .mcard{
+    background:#fff;border-radius:20px;padding:16px 16px 26px;text-align:center;
+    box-shadow:0 8px 22px rgba(92,64,51,.1);
+    transition:transform .35s ease,box-shadow .35s ease;
+  }
+  .mcard:hover{transform:scale(1.05) rotate(-1deg);box-shadow:0 22px 46px rgba(92,64,51,.22)}
+  .mcard .tex{
+    border-radius:14px;overflow:hidden;aspect-ratio:4/3;margin-bottom:18px;
+    background:linear-gradient(140deg,#d8c1a5,#b08d68);
+  }
+  .mcard img{width:100%;height:100%;object-fit:cover;display:block}
+  .mcard .hand{font-size:28px;color:var(--brown)}
+  .mcard p{color:var(--brown-soft);font-size:15px;margin-top:6px}
+
+  /* ---------- Таймлайн ---------- */
+  .timeline-wrap{position:relative;padding-top:10px}
+  .timeline-line{display:block;width:100%;height:110px}
+  .timeline-line path{
+    stroke:var(--sage);stroke-width:3;fill:none;stroke-linecap:round;
+    stroke-dasharray:1400;stroke-dashoffset:1400;
+    transition:stroke-dashoffset 2.6s ease;
+  }
+  .timeline-wrap.drawn .timeline-line path{stroke-dashoffset:0}
+  .steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;margin-top:8px}
+  .step{text-align:center;opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+  .timeline-wrap.drawn .step{opacity:1;transform:none}
+  .timeline-wrap.drawn .step:nth-child(1){transition-delay:.3s}
+  .timeline-wrap.drawn .step:nth-child(2){transition-delay:.8s}
+  .timeline-wrap.drawn .step:nth-child(3){transition-delay:1.3s}
+  .timeline-wrap.drawn .step:nth-child(4){transition-delay:1.8s}
+  .timeline-wrap.drawn .step:nth-child(5){transition-delay:2.3s}
+  .step .icon{
+    width:86px;height:86px;margin:0 auto 14px;border-radius:50%;
+    background:var(--beige);display:flex;align-items:center;justify-content:center;
+    border:3px dashed var(--sage);
+  }
+  .step .icon svg{width:44px;height:44px;stroke:var(--brown);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .step h3{font-size:21px;margin-bottom:6px}
+  .step p{font-size:14.5px;color:var(--brown-soft)}
+  .step .num{font-family:'Caveat',cursive;color:var(--peach);font-size:22px}
+
+  /* ---------- Отзывы ---------- */
+  .reviews{background:var(--beige)}
+  .carousel{position:relative;max-width:860px;margin:0 auto;min-height:430px}
+  .slide{
+    position:absolute;inset:0;display:grid;grid-template-columns:280px minmax(0,1fr);gap:38px;align-items:center;
+    background:#fff;border-radius:24px;padding:40px;box-shadow:var(--shadow);
+    opacity:0;pointer-events:none;transform:translateX(30px);transition:opacity .5s,transform .5s;
+  }
+  .slide.active{opacity:1;pointer-events:auto;transform:none;position:relative}
+  .slide .avatar{
+    border-radius:18px;overflow:hidden;aspect-ratio:1/1.15;transform:rotate(-2.5deg);
+    box-shadow:0 12px 28px rgba(92,64,51,.2);background:linear-gradient(140deg,#f2d3ab,#dfa878);
+  }
+  .slide .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+  .slide blockquote{font-family:'Alegreya',serif;font-size:clamp(20px,2.6vw,26px);font-style:italic;margin-bottom:16px}
+  .slide .who{font-family:'Caveat',cursive;font-size:24px;color:var(--sage-dark)}
+  .car-nav{display:flex;justify-content:center;gap:16px;margin-top:30px;align-items:center}
+  .car-btn{
+    width:52px;height:52px;border-radius:50%;border:none;background:#fff;color:var(--brown);
+    font-size:22px;cursor:pointer;box-shadow:0 6px 16px rgba(92,64,51,.15);transition:transform .25s,background .25s;
+  }
+  .car-btn:hover{background:var(--peach);color:#fff;transform:scale(1.08)}
+  .dots{display:flex;gap:10px}
+  .dot{width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid var(--sage);cursor:pointer;transition:background .3s}
+  .dot.active{background:var(--sage)}
+
+  /* ---------- Подарки ---------- */
+  .gifts-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}
+  .gift{
+    background:#fff;border-radius:22px;padding:42px 30px;text-align:center;
+    border:3px dashed var(--sage);position:relative;
+    transition:transform .3s,box-shadow .3s;
+  }
+  .gift:hover{transform:translateY(-8px) rotate(-.6deg);box-shadow:var(--shadow)}
+  .gift .bow{font-size:44px;display:block;margin-bottom:16px}
+  .gift h3{font-size:23px;margin-bottom:10px}
+  .gift p{color:var(--brown-soft);font-size:15.5px}
+  .gift .tag{
+    position:absolute;top:-16px;right:18px;background:var(--peach);color:#fff;
+    font-family:'Caveat',cursive;font-size:20px;padding:2px 16px;border-radius:20px;transform:rotate(4deg);
+  }
+
+  /* ---------- Форма ---------- */
+  .cta{background:linear-gradient(160deg,var(--sage) 0%,var(--sage-dark) 100%);color:#fff}
+  .cta .section-title{color:#fff}
+  .cta .section-sub{color:rgba(255,255,255,.85)}
+  .form-box{
+    background:#fff;border-radius:26px;padding:48px;max-width:640px;margin:0 auto;
+    box-shadow:0 24px 60px rgba(0,0,0,.18);
+  }
+  .form-box .frow{margin-bottom:20px}
+  .form-box label{display:block;font-weight:700;color:var(--brown);margin-bottom:8px}
+  .form-box input,.form-box textarea{
+    width:100%;padding:15px 18px;border-radius:14px;border:2px solid var(--beige);
+    font-family:'Nunito',sans-serif;font-size:16.5px;color:var(--brown);background:var(--milk);
+    outline:none;transition:border-color .3s;resize:vertical;
+  }
+  .form-box input:focus,.form-box textarea:focus{border-color:var(--sage)}
+  .form-box .btn{width:100%;margin-top:6px}
+  .form-ok{
+    display:none;text-align:center;padding:30px 10px;
+  }
+  .form-ok .hand{font-size:34px;color:var(--sage-dark);display:block;margin-bottom:12px}
+  .form-ok p{color:var(--brown-soft)}
+
+  /* ---------- Футер ---------- */
+  footer{background:var(--brown);color:#f0e4d7;padding:56px 0 34px}
+  .foot-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:34px;margin-bottom:36px}
+  footer h4{font-family:'Alegreya',serif;font-size:20px;margin-bottom:14px;color:#fff}
+  footer p,footer a{color:#d8c6b4;font-size:15.5px;text-decoration:none;display:block;margin-bottom:8px}
+  footer a:hover{color:var(--peach)}
+  .foot-hand{
+    text-align:center;font-family:'Caveat',cursive;font-size:30px;color:var(--peach);
+    border-top:1px solid rgba(255,255,255,.15);padding-top:28px;
+  }
+
+  /* ---------- Плавающая чашка ---------- */
+  .float-cup{
+    position:fixed;right:26px;bottom:26px;z-index:60;
+    width:74px;height:74px;border-radius:50%;border:none;cursor:pointer;
+    background:var(--peach);box-shadow:0 12px 30px rgba(244,162,97,.55);
+    display:flex;align-items:center;justify-content:center;
+    transition:transform .3s,box-shadow .3s;animation:bob 3.4s ease-in-out infinite;
+  }
+  .float-cup:hover{transform:scale(1.12);box-shadow:0 18px 40px rgba(244,162,97,.65)}
+  .float-cup svg{width:40px;height:40px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+  .float-label{
+    position:fixed;right:110px;bottom:44px;z-index:60;
+    font-family:'Caveat',cursive;font-size:21px;color:var(--brown);
+    background:#fff;padding:4px 18px;border-radius:20px;box-shadow:0 6px 18px rgba(92,64,51,.18);
+    transform:rotate(-3deg);pointer-events:none;
+  }
+
+  /* ---------- Модалка промокода ---------- */
+  .modal{
+    position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;
+    background:rgba(92,64,51,.55);backdrop-filter:blur(3px);padding:20px;
+  }
+  .modal.open{display:flex}
+  .modal-card{
+    background:var(--milk);border-radius:24px;padding:48px 42px;max-width:440px;text-align:center;
+    position:relative;animation:pop .35s ease;box-shadow:0 30px 80px rgba(0,0,0,.3);
+  }
+  @keyframes pop{from{transform:scale(.8);opacity:0}to{transform:none;opacity:1}}
+  .modal-card .hand{font-size:30px;color:var(--brown);display:block;margin-bottom:10px}
+  .promo{
+    font-family:'Alegreya',serif;font-weight:800;font-size:42px;letter-spacing:4px;color:var(--sage-dark);
+    background:var(--beige);border:3px dashed var(--sage);border-radius:16px;padding:14px;margin:18px 0;cursor:pointer;
+  }
+  .modal-card p{color:var(--brown-soft);font-size:15.5px}
+  .modal-close{
+    position:absolute;top:14px;right:18px;border:none;background:none;font-size:26px;
+    color:var(--brown-soft);cursor:pointer;
+  }
+
+  /* ---------- Адаптив ---------- */
+  @media (max-width:960px){
+    .hero-inner{grid-template-columns:minmax(0,1fr);gap:70px;text-align:center}
+    .hero .lead{margin:0 auto 36px}
+    .hero-icons{justify-content:center}
+    .polaroid{max-width:420px;margin:0 auto}
+    .coffee-note{left:-14px;top:-66px}
+    .gallery-grid,.mat-grid,.gifts-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .family-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .family-detail{grid-template-columns:minmax(0,1fr);padding:30px}
+    .steps{grid-template-columns:minmax(0,1fr);gap:30px;max-width:420px;margin:20px auto 0}
+    .timeline-line{display:none}
+    .slide{grid-template-columns:minmax(0,1fr);padding:30px;text-align:center}
+    .slide .avatar{max-width:240px;margin:0 auto}
+    .foot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    section{padding:64px 0}
+  }
+  @media (max-width:600px){
+    .gallery-grid,.mat-grid,.gifts-grid,.family-cards,.calc-selects{grid-template-columns:minmax(0,1fr)}
+    .calc-box{padding:32px 22px}
+    .form-box{padding:32px 22px}
+    .float-label{display:none}
+    .foot-grid{grid-template-columns:minmax(0,1fr)}
+    .hero-icons{gap:22px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="hero-light"></div>
+  <div class="wrap hero-inner">
+    <div>
+      <p class="hand hand-accent">с любовью к вашему дому</p>
+      <h1>Кухня, где рождаются семейные традиции</h1>
+      <p class="lead">Проектируем кухни, за которыми хочется собираться. Бесплатный дизайн-проект за 2 дня.</p>
+      <a class="btn" href="#cta">Получить дизайн-проект</a>
+      <div class="hero-icons">
+        <!-- рисованное сердце -->
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 40 C10 30 5 21 8 13 C11 6 20 6 24 13 C28 6 37 6 40 13 C43 21 38 30 24 40 Z"/></svg>
+        <!-- рисованная чашка — пасхалка с промокодом -->
+        <button class="coffee-hint" id="coffeeHint" aria-label="Промокод">
+          <span class="hand">тсс... у меня есть секрет</span>
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path d="M10 18 h22 v12 c0 6 -5 10 -11 10 c-6 0 -11 -4 -11 -10 Z"/>
+            <path d="M32 20 c6 -2 9 2 7 6 c-2 4 -6 4 -7 3"/>
+            <path d="M17 12 c-1.5 -2 1.5 -3.5 0 -6 M24 12 c-1.5 -2 1.5 -3.5 0 -6"/>
+            <path d="M8 44 c8 -2.5 24 -2.5 32 0"/>
+          </svg>
+        </button>
+        <!-- рисованный домик -->
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M7 24 L24 8 L41 24 M12 21 v17 h24 v-17 M20 38 v-10 h8 v10"/></svg>
+      </div>
+    </div>
+    <figure class="polaroid">
+      <span class="coffee-note">здесь<br>пахнет кофе
+        <svg viewBox="0 0 56 44"><path d="M6 6 C22 4 40 10 46 30 M46 30 l-8 -3 M46 30 l2 -8"/></svg>
+      </span>
+      <div class="ph">
+        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=900&q=80"
+             alt="Семья за завтраком на кухне в утреннем свете"
+             onerror="this.style.display='none'">
+      </div>
+      <figcaption>утро воскресенья</figcaption>
+    </figure>
+  </div>
+</header>
+
+<!-- ============ ПОЛОСА ДОВЕРИЯ ============ -->
+<div class="trust">
+  <div class="wrap">
+    <span>✓ 5 лет гарантии</span>
+    <span>✓ Своё производство</span>
+    <span>✓ Монтаж за 1 день</span>
+    <span>✓ 500+ счастливых семей</span>
+  </div>
+</div>
+
+<!-- ============ НАШИ КУХНИ ============ -->
+<section id="gallery">
+  <div class="wrap">
+    <h2 class="section-title">Наши кухни</h2>
+    <p class="section-sub">Каждая кухня — это чья-то история: первые блины, семейные ужины и разговоры допоздна.</p>
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- ============ ПОД ВАШУ СЕМЬЮ ============ -->
+<section class="family" id="family">
+  <div class="wrap">
+    <h2 class="section-title">Под вашу семью</h2>
+    <p class="section-sub">Нет двух одинаковых семей — и не должно быть двух одинаковых кухонь. Выберите, что ближе вам.</p>
+    <div class="family-cards">
+      <div class="fcard" data-key="big"><span class="emoji">👨‍👩‍👧‍👦</span><h3>Для большой семьи</h3></div>
+      <div class="fcard" data-key="small"><span class="emoji">🏡</span><h3>Для маленькой кухни</h3></div>
+      <div class="fcard" data-key="cook"><span class="emoji">🍲</span><h3>Для тех, кто любит готовить</h3></div>
+      <div class="fcard" data-key="mini"><span class="emoji">🌿</span><h3>Для минималистов</h3></div>
+    </div>
+    <div class="family-detail" id="familyDetail">
+      <div>
+        <p class="hand hand-accent" id="fdHand"></p>
+        <h3 id="fdTitle"></h3>
+        <p id="fdText"></p>
+        <ul id="fdList"></ul>
+      </div>
+      <div class="fd-photos">
+        <div class="p"><img id="fdImg1" src="" alt="Пример решения для вашей семьи" onerror="this.style.display='none'"></div>
+        <div class="p"><img id="fdImg2" src="" alt="Пример решения для вашей семьи" onerror="this.style.display='none'"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ КАЛЬКУЛЯТОР ============ -->
+<section id="calc">
+  <div class="wrap">
+    <h2 class="section-title">Сколько стоит ваша кухня?</h2>
+    <p class="section-sub">Подвигайте ползунок — мы честно покажем ориентировочную цену. Точный расчёт сделаем после бесплатного замера.</p>
+    <div class="calc-box">
+      <div class="calc-row">
+        <label for="area">Площадь кухни <span class="val" id="areaVal">10 м²</span></label>
+        <input type="range" id="area" min="4" max="30" value="10" step="1">
+      </div>
+      <div class="calc-selects">
+        <div class="calc-row">
+          <label for="material">Материал фасадов</label>
+          <select id="material">
+            <option value="9000">ЛДСП — практично и тепло</option>
+            <option value="14000" selected>МДФ в эмали — гладко и благородно</option>
+            <option value="22000">Массив дерева — на поколения</option>
+          </select>
+        </div>
+        <div class="calc-row">
+          <label for="style">Стиль</label>
+          <select id="style">
+            <option value="1" selected>Скандинавский уют</option>
+            <option value="1.15">Светлый модерн</option>
+            <option value="1.25">Тёплая классика</option>
+            <option value="0.95">Минимализм</option>
+          </select>
+        </div>
+      </div>
+      <div class="calc-result">
+        <div class="price" id="price">от 185 000 ₽</div>
+        <div class="note">Ориентировочная стоимость «под ключ»: фасады, корпус, столешница, фурнитура и монтаж.</div>
+      </div>
+      <a class="btn" href="#cta">Заказать точный расчёт</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ МАТЕРИАЛЫ ============ -->
+<section class="materials" id="materials">
+  <div class="wrap">
+    <h2 class="section-title">Материалы, которые приятно трогать</h2>
+    <p class="section-sub">Кухню выбирают не только глазами. Приходите в шоурум — потрогайте каждую поверхность.</p>
+    <div class="mat-grid">
+      <div class="mcard">
+        <div class="tex"><img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=600&q=80" alt="Текстура тёплого дерева крупным планом" onerror="this.style.display='none'"></div>
+        <span class="hand">тёплое дерево</span>
+        <p>Массив дуба и ясеня — живая текстура, которая с годами становится только красивее.</p>
+      </div>
+      <div class="mcard">
+        <div class="tex"><img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?w=600&q=80" alt="Текстура прочного камня крупным планом" onerror="this.style.display='none'"></div>
+        <span class="hand">прочный камень</span>
+        <p>Кварцевые столешницы не боятся ни горячих кастрюль, ни детских экспериментов.</p>
+      </div>
+      <div class="mcard">
+        <div class="tex"><img src="https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?w=600&q=80" alt="Гладкая эмалевая поверхность крупным планом" onerror="this.style.display='none'"></div>
+        <span class="hand">гладкая эмаль</span>
+        <p>МДФ в матовой эмали — бархатистая поверхность, за которой легко ухаживать.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ КАК РОЖДАЕТСЯ ВАША КУХНЯ ============ -->
+<section id="steps">
+  <div class="wrap">
+    <h2 class="section-title">Как рождается ваша кухня</h2>
+    <p class="section-sub">Пять шагов — и ваша кухня дома. Без суеты, с заботой на каждом этапе.</p>
+    <div class="timeline-wrap" id="timeline">
+      <svg class="timeline-line" viewBox="0 0 1200 110" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M20 60 C 130 30, 220 88, 330 58 C 440 28, 520 90, 630 60 C 740 30, 830 88, 940 56 C 1050 28, 1120 76, 1180 52"/>
+      </svg>
+      <div class="steps">
+        <div class="step">
+          <div class="icon"><svg viewBox="0 0 48 48"><path d="M14 30 c-4 -6 -2 -14 4 -17 c5 -2 11 0 13 5 M16 32 c2 5 8 8 14 6 M30 12 c6 0 10 5 9 11 c-1 6 -7 9 -12 7"/><circle cx="18" cy="20" r="1.6"/><circle cx="26" cy="18" r="1.6"/><path d="M20 25 c2 2 5 2 7 0"/></svg></div>
+          <span class="num">шаг 1</span>
+          <h3>Знакомимся</h3>
+          <p>Пьём чай, слушаем ваши мечты и измеряем кухню.</p>
+        </div>
+        <div class="step">
+          <div class="icon"><svg viewBox="0 0 48 48"><path d="M12 36 L30 8 l6 4 l-18 28 l-8 2 Z M28 12 l6 5 M12 36 l4 4"/><path d="M34 34 c4 -1 7 1 6 4"/></svg></div>
+          <span class="num">шаг 2</span>
+          <h3>Проектируем</h3>
+          <p>За 2 дня рисуем дизайн-проект — до миллиметра.</p>
+        </div>
+        <div class="step">
+          <div class="icon"><svg viewBox="0 0 48 48"><path d="M8 34 h32 M12 34 v-8 h10 v8 M26 34 v-14 h8 v14"/><circle cx="15" cy="40" r="3"/><circle cx="33" cy="40" r="3"/><path d="M10 40 h38 M18 18 c2 -4 8 -4 10 0"/></svg></div>
+          <span class="num">шаг 3</span>
+          <h3>Производим</h3>
+          <p>Собираем мебель на собственной фабрике.</p>
+        </div>
+        <div class="step">
+          <div class="icon"><svg viewBox="0 0 48 48"><path d="M4 30 h26 v-14 h-26 Z M30 20 h8 l6 6 v4 h-14 Z"/><circle cx="12" cy="34" r="3.5"/><circle cx="36" cy="34" r="3.5"/><path d="M4 34 h4 M16 34 h16 M40 34 h4"/></svg></div>
+          <span class="num">шаг 4</span>
+          <h3>Привозим</h3>
+          <p>Аккуратно доставляем и поднимаем на этаж.</p>
+        </div>
+        <div class="step">
+          <div class="icon"><svg viewBox="0 0 48 48"><path d="M28 10 c6 0 10 4 10 10 c0 2 -0.5 4 -1.5 5.5 L24 38 l-6 -6 l12.5 -12.5 c-1 -1 -1.5 -2.5 -1.5 -3.5"/><path d="M10 12 l8 8 M12 8 l6 6 M8 12 l6 6"/></svg></div>
+          <span class="num">шаг 5</span>
+          <h3>Собираем</h3>
+          <p>Монтаж за 1 день. Вечером — первый семейный ужин.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ОТЗЫВЫ ============ -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <h2 class="section-title">Семьи, которые уже собираются вместе</h2>
+    <p class="section-sub">Самое тёплое в нашей работе — ваши истории.</p>
+    <div class="carousel" id="carousel">
+      <div class="slide active">
+        <div class="avatar"><img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=700&q=80" alt="Семья на новой кухне" onerror="this.style.display='none'"></div>
+        <div>
+          <blockquote>«Теперь вся семья завтракает вместе. Раньше мы ели по очереди, а теперь за нашим столом помещаются все — и даже кот»</blockquote>
+          <span class="who">— Анна и Михаил, кухня «Уютная сканди»</span>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="avatar"><img src="https://images.unsplash.com/photo-1504151932400-72d4384f04b3?w=700&q=80" alt="Семья печёт вместе на кухне" onerror="this.style.display='none'"></div>
+        <div>
+          <blockquote>«Дочка говорит, что наша кухня пахнет счастьем. По воскресеньям мы печём блины всей семьёй — это стало нашей традицией»</blockquote>
+          <span class="who">— Елена, кухня «Классика для семьи»</span>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="avatar"><img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=700&q=80" alt="Утренний кофе на новой кухне" onerror="this.style.display='none'"></div>
+        <div>
+          <blockquote>«Боялись, что на 9 метрах ничего не поместится. А получилось место и для готовки, и для ужинов втроём. Спасибо за чудо!»</blockquote>
+          <span class="who">— Дмитрий и Ольга, кухня «Мятное утро»</span>
+        </div>
+      </div>
+    </div>
+    <div class="car-nav">
+      <button class="car-btn" id="prevSlide" aria-label="Предыдущий отзыв">←</button>
+      <div class="dots" id="dots"></div>
+      <button class="car-btn" id="nextSlide" aria-label="Следующий отзыв">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ПОДАРКИ И БОНУСЫ ============ -->
+<section id="gifts">
+  <div class="wrap">
+    <h2 class="section-title">Подарки и бонусы</h2>
+    <p class="section-sub">Приятное начало нашей дружбы.</p>
+    <div class="gifts-grid">
+      <div class="gift">
+        <span class="tag">всегда</span>
+        <span class="bow">🎁</span>
+        <h3>Бесплатный дизайн-проект</h3>
+        <p>Нарисуем кухню вашей мечты за 2 дня — ещё до всякого договора.</p>
+      </div>
+      <div class="gift">
+        <span class="tag">до конца месяца</span>
+        <span class="bow">💝</span>
+        <h3>Скидка 10%</h3>
+        <p>При заказе кухни до конца месяца подарим скидку 10% на весь проект.</p>
+      </div>
+      <div class="gift">
+        <span class="tag">в подарок</span>
+        <span class="bow">✨</span>
+        <h3>Встроенная подсветка</h3>
+        <p>Тёплая подсветка рабочей зоны — для уютных вечеров на кухне.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ФОРМА ============ -->
+<section class="cta" id="cta">
+  <div class="wrap">
+    <h2 class="section-title">Начнём с дизайн-проекта?</h2>
+    <p class="section-sub">Оставьте заявку — перезвоним в течение часа и договоримся о бесплатном замере.</p>
+    <form class="form-box" id="leadForm" novalidate>
+      <div id="formFields">
+        <div class="frow">
+          <label for="name">Ваше имя</label>
+          <input type="text" id="name" name="name" placeholder="Как к вам обращаться?" required>
+        </div>
+        <div class="frow">
+          <label for="phone">Телефон</label>
+          <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+        </div>
+        <div class="frow">
+          <label for="kitchenArea">Площадь кухни</label>
+          <input type="number" id="kitchenArea" name="area" min="2" max="100" placeholder="Например, 12 м²">
+        </div>
+        <div class="frow">
+          <label for="dream">Расскажите о вашей мечте</label>
+          <textarea id="dream" name="dream" rows="4" placeholder="Хочу кухню, где поместится вся семья и большой стол у окна..."></textarea>
+        </div>
+        <button type="submit" class="btn">Получить дизайн-проект</button>
+      </div>
+      <div class="form-ok" id="formOk">
+        <span class="hand">Спасибо, вы почти у цели!</span>
+        <p>Мы получили вашу заявку и скоро позвоним. А пока заварите чашечку кофе — хорошие кухни начинаются с хорошего настроения.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ ФУТЕР ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Семейный очаг</h4>
+        <p>Фабрика кухонь на заказ. Делаем кухни, за которыми хочется собираться.</p>
+      </div>
+      <div>
+        <h4>Шоурум</h4>
+        <p>г. Москва, ул. Тёплая, 12</p>
+        <p>ТЦ «Домашний», 2 этаж</p>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+        <a href="mailto:privet@ochag.ru">privet@ochag.ru</a>
+      </div>
+      <div>
+        <h4>Мы на связи</h4>
+        <a href="#" rel="noopener">ВКонтакте</a>
+        <a href="#" rel="noopener">Telegram</a>
+        <a href="#" rel="noopener">Pinterest</a>
+        <p style="margin-top:12px">Ежедневно с 10:00 до 21:00</p>
+      </div>
+    </div>
+    <div class="foot-hand">С любовью к вашим кухням</div>
+  </div>
+</footer>
+
+<!-- ============ ПЛАВАЮЩАЯ ЧАШКА ============ -->
+<span class="float-label">записаться на замер</span>
+<button class="float-cup" id="floatCup" aria-label="Записаться на замер">
+  <svg viewBox="0 0 48 48">
+    <path d="M10 18 h22 v12 c0 6 -5 10 -11 10 c-6 0 -11 -4 -11 -10 Z"/>
+    <path d="M32 20 c6 -2 9 2 7 6 c-2 4 -6 4 -7 3"/>
+    <path d="M17 12 c-1.5 -2 1.5 -3.5 0 -6 M24 12 c-1.5 -2 1.5 -3.5 0 -6"/>
+    <path d="M8 44 c8 -2.5 24 -2.5 32 0"/>
+  </svg>
+</button>
+
+<!-- ============ МОДАЛКА ПРОМОКОДА ============ -->
+<div class="modal" id="promoModal" role="dialog" aria-modal="true" aria-label="Промокод">
+  <div class="modal-card">
+    <button class="modal-close" id="modalClose" aria-label="Закрыть">×</button>
+    <span class="hand">вы нашли наш секрет!</span>
+    <p>Назовите промокод менеджеру — и получите скидку на кухню:</p>
+    <div class="promo" id="promoCode" title="Нажмите, чтобы скопировать">КОФЕ10</div>
+    <p>Скидка 10% и чашка отличного кофе в шоуруме — за наш счёт ☕</p>
+  </div>
+</div>
+
+<script>
+/* ================= Галерея ================= */
+const kitchens = [
+  {img:'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=700&q=80', name:'Уютная сканди', area:'12 м²', note:'любимое место кота'},
+  {img:'https://images.unsplash.com/photo-1556912173-3bb406ef7e77?w=700&q=80', name:'Светлый модерн', area:'14 м²', note:'здесь пекут блины'},
+  {img:'https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=700&q=80', name:'Классика для семьи', area:'16 м²', note:'бабушкин рецепт'},
+  {img:'https://images.unsplash.com/photo-1576867757603-05b134ebc379?w=700&q=80', name:'Семейное гнездо', area:'18 м²', note:'стол на всех'},
+  {img:'https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=700&q=80', name:'Мятное утро', area:'10 м²', note:'кофе в 7 утра'},
+  {img:'https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=700&q=80', name:'Тёплый минимализм', area:'13 м²', note:'ничего лишнего'}
+];
+document.getElementById('galleryGrid').innerHTML = kitchens.map(k => `
+  <div class="gcard">
+    <div class="frame">
+      <img src="${k.img}" alt="Кухня «${k.name}», ${k.area}" loading="lazy" onerror="this.style.display='none'">
+      <div class="look">Смотреть проект →</div>
+      <span class="hand-note">${k.note}</span>
+    </div>
+    <h3>${k.name}</h3>
+    <div class="meta">${k.area} • кухня на заказ</div>
+  </div>`).join('');
+
+/* ================= Под вашу семью ================= */
+const familyData = {
+  big: {
+    hand:'место найдётся для всех',
+    title:'Кухня для большой семьи',
+    text:'Когда за столом пятеро — и ещё друзья заглянули. Проектируем так, чтобы каждому хватило места, а маме не приходилось танцевать между плитой и раковиной.',
+    list:['Большой обеденный стол или остров','Две зоны хранения: «взрослая» и «детская»','Посудомойка 60 см — горы посуды не страшны','Столешница, стойкая к детским экспериментам'],
+    imgs:['https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=700&q=80','https://images.unsplash.com/photo-1543269865-cbf427effbad?w=700&q=80']
+  },
+  small: {
+    hand:'маленькая — но своя',
+    title:'Кухня для маленькой площади',
+    text:'Даже 6–9 метров могут вместить всё: готовку, завтраки и долгие разговоры. Главное — продумать каждый сантиметр, чем мы и займёмся.',
+    list:['Шкафы до потолка — хранение в два раза больше','Складной или барный стол вместо громоздкого','Светлые фасады и подсветка — визуально просторнее','Встроенная техника компактного размера'],
+    imgs:['https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=700&q=80','https://images.unsplash.com/photo-1484154218962-a197022b5858?w=700&q=80']
+  },
+  cook: {
+    hand:'ваш ресторан — дома',
+    title:'Кухня для тех, кто любит готовить',
+    text:'Рабочий треугольник, как в ресторане, место для каждой специи и столешница, которой не страшны ни ножи, ни горячее. Готовить станет ещё приятнее.',
+    list:['Эргономичный «рабочий треугольник» плита–мойка–холодильник','Столешница из кварца — можно резать прямо на ней','Выдвижные ящики с доводчиками для специй и утвари','Мощная вытяжка и подсветка рабочей зоны'],
+    imgs:['https://images.unsplash.com/photo-1556910109-a14b4226abff?w=700&q=80','https://images.unsplash.com/photo-1543353071-873f17a7a088?w=700&q=80']
+  },
+  mini: {
+    hand:'тишина и порядок',
+    title:'Кухня для минималистов',
+    text:'Ничего лишнего — только воздух, свет и то, что действительно нужно. Скрытые ручки, гладкие фасады и хранение, о котором никто не догадается.',
+    list:['Фасады без ручек с открыванием нажатием','Скрытая техника за глухими фасадами','Спокойная палитра: молоко, беж, шалфей','Продуманное хранение — столешница всегда пуста'],
+    imgs:['https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=700&q=80','https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?w=700&q=80']
+  }
+};
+const fd = document.getElementById('familyDetail');
+document.querySelectorAll('.fcard').forEach(card => {
+  card.addEventListener('click', () => {
+    const key = card.dataset.key;
+    const d = familyData[key];
+    const wasActive = card.classList.contains('active');
+    document.querySelectorAll('.fcard').forEach(c => c.classList.remove('active'));
+    if (wasActive) { fd.classList.remove('open'); return; }
+    card.classList.add('active');
+    document.getElementById('fdHand').textContent = d.hand;
+    document.getElementById('fdTitle').textContent = d.title;
+    document.getElementById('fdText').textContent = d.text;
+    document.getElementById('fdList').innerHTML = d.list.map(li => `<li>${li}</li>`).join('');
+    const i1 = document.getElementById('fdImg1'), i2 = document.getElementById('fdImg2');
+    i1.style.display = i2.style.display = '';
+    i1.src = d.imgs[0]; i2.src = d.imgs[1];
+    fd.classList.remove('open');
+    void fd.offsetWidth; /* перезапуск анимации */
+    fd.classList.add('open');
+    fd.scrollIntoView({behavior:'smooth', block:'nearest'});
+  });
+});
+
+/* ================= Калькулятор ================= */
+const area = document.getElementById('area'),
+      areaVal = document.getElementById('areaVal'),
+      material = document.getElementById('material'),
+      styleSel = document.getElementById('style'),
+      priceEl = document.getElementById('price');
+function fmt(n){ return n.toLocaleString('ru-RU'); }
+function calc(){
+  const a = +area.value;
+  const rate = +material.value;
+  const coef = +styleSel.value;
+  const price = Math.round((90000 + a * rate * coef) / 1000) * 1000;
+  areaVal.textContent = a + ' м²';
+  area.style.setProperty('--fill', ((a - 4) / 26 * 100) + '%');
+  priceEl.style.opacity = 0;
+  setTimeout(() => {
+    priceEl.textContent = 'от ' + fmt(price) + ' ₽';
+    priceEl.style.opacity = 1;
+  }, 200);
+}
+[area, material, styleSel].forEach(el => el.addEventListener('input', calc));
+calc();
+
+/* ================= Таймлайн: анимация при скролле ================= */
+const tl = document.getElementById('timeline');
+new IntersectionObserver((entries, obs) => {
+  if (entries[0].isIntersecting) { tl.classList.add('drawn'); obs.disconnect(); }
+}, {threshold:.35}).observe(tl);
+
+/* ================= Отзывы: карусель ================= */
+const slides = document.querySelectorAll('.slide'),
+      dotsBox = document.getElementById('dots');
+let cur = 0, timer;
+slides.forEach((_, i) => {
+  const d = document.createElement('span');
+  d.className = 'dot' + (i === 0 ? ' active' : '');
+  d.addEventListener('click', () => show(i));
+  dotsBox.appendChild(d);
+});
+function show(i){
+  cur = (i + slides.length) % slides.length;
+  slides.forEach((s, k) => s.classList.toggle('active', k === cur));
+  document.querySelectorAll('.dot').forEach((d, k) => d.classList.toggle('active', k === cur));
+  restart();
+}
+function restart(){ clearInterval(timer); timer = setInterval(() => show(cur + 1), 7000); }
+document.getElementById('prevSlide').addEventListener('click', () => show(cur - 1));
+document.getElementById('nextSlide').addEventListener('click', () => show(cur + 1));
+restart();
+
+/* ================= Форма ================= */
+document.getElementById('leadForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  if (!name || !phone) {
+    alert('Подскажите, пожалуйста, имя и телефон — мы перезвоним лично.');
+    return;
+  }
+  document.getElementById('formFields').style.display = 'none';
+  document.getElementById('formOk').style.display = 'block';
+});
+
+/* ================= Пасхалки ================= */
+const modal = document.getElementById('promoModal');
+document.getElementById('coffeeHint').addEventListener('click', () => modal.classList.add('open'));
+document.getElementById('modalClose').addEventListener('click', () => modal.classList.remove('open'));
+modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') modal.classList.remove('open'); });
+document.getElementById('promoCode').addEventListener('click', function(){
+  const code = this.textContent.trim();
+  if (navigator.clipboard) navigator.clipboard.writeText(code);
+  this.textContent = 'Скопировано!';
+  setTimeout(() => this.textContent = 'КОФЕ10', 1600);
+});
+document.getElementById('floatCup').addEventListener('click', () => {
+  document.getElementById('cta').scrollIntoView({behavior:'smooth'});
+});
+</script>
+</body>
+</html>
