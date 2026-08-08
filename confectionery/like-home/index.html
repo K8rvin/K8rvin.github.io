@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Как дома — торты из настоящих продуктов</title>
+  <meta name="description" content="Домашняя кондитерская «Как дома». Сливочное масло, бельгийский шоколад, сезонные ягоды. Без маргарина и пальмового масла. Печём, как для своих.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;0,800;1,400&family=Caveat:wght@400;600;700&family=Marck+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ======== ШАПКА ======== -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="logo" href="#hero">
+        <span class="logo__mark">🍰</span>
+        <span class="logo__text">Как&nbsp;дома</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#ingredients">Ингредиенты</a>
+        <a href="#calculator">Калькулятор</a>
+        <a href="#gallery">Работы</a>
+        <a href="#kids">Детям</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#order">Заказать</a>
+      </nav>
+      <a class="topbar__phone" href="tel:+79001234567">+7 (900) 123-45-67</a>
+      <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ======== HERO ======== -->
+  <section class="hero" id="hero">
+    <div class="hero__glow"></div>
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <p class="hero__badge handwrite">Печём, как для своих ♥</p>
+        <h1>Торты из настоящих продуктов.<br><span class="accent">Без маргарина и&nbsp;пальмового масла</span></h1>
+        <p class="hero__sub">Сливочное масло, бельгийский шоколад, сезонные ягоды. Состав каждого торта — как у вас на кухне.</p>
+        <div class="hero__cta">
+          <a href="#calculator" class="btn btn--caramel">Рассчитать мой торт</a>
+          <span class="handwrite hero__note">это бесплатно и вкусно →</span>
+        </div>
+        <svg class="hero__arrow" viewBox="0 0 120 80" fill="none" aria-hidden="true">
+          <path d="M10 10 C 40 50, 70 60, 100 55" stroke="#B5484D" stroke-width="3" stroke-linecap="round"/>
+          <path d="M88 62 L 101 55 L 92 45" stroke="#B5484D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <div class="hero__scene" aria-label="Торт на деревянном столе">
+        <div class="table">
+          <!-- CSS-арт: торт -->
+          <div class="cake">
+            <div class="cake__plate"></div>
+            <div class="cake__tier cake__tier--bottom"></div>
+            <div class="cake__tier cake__tier--middle"></div>
+            <div class="cake__tier cake__tier--top"></div>
+            <div class="cake__drip"></div>
+            <div class="cake__berry cake__berry--1"></div>
+            <div class="cake__berry cake__berry--2"></div>
+            <div class="cake__berry cake__berry--3"></div>
+          </div>
+          <!-- Пасхалка: кликабельная ягода -->
+          <button class="hero-berry" id="heroBerry" aria-label="Ягодка (нажми меня!)" title="нажми меня!">
+            <span class="hero-berry__body"></span>
+            <span class="hero-berry__leaf"></span>
+          </button>
+          <!-- мука -->
+          <div class="flour">
+            <div class="flour__pile"></div>
+            <div class="flour__dusting"></div>
+          </div>
+          <!-- рукописная подпись -->
+          <span class="handwrite hero__scene-note">настоящее масло, честный состав!</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,60 L0,60 Z" fill="#FBF6EE"></path></svg>
+    </div>
+  </section>
+
+  <!-- ======== ИЗ ЧЕГО МЫ ПЕЧЁМ ======== -->
+  <section class="section ingredients" id="ingredients">
+    <div class="container">
+      <h2>Из чего мы печём</h2>
+      <p class="section__sub handwrite">всё, как на вашей кухне — только вкуснее собрано</p>
+      <div class="ingredients__grid">
+        <article class="ing-card">
+          <div class="ing-card__art ing-card__art--butter"><span>🧈</span></div>
+          <h3>Сливочное масло 82,5%</h3>
+          <p class="handwrite">только оно. никаких спредов</p>
+        </article>
+        <article class="ing-card">
+          <div class="ing-card__art ing-card__art--cream"><span>🥛</span></div>
+          <h3>Сливки 33%</h3>
+          <p class="handwrite">фермерские, утренние</p>
+        </article>
+        <article class="ing-card">
+          <div class="ing-card__art ing-card__art--choco"><span>🍫</span></div>
+          <h3>Бельгийский шоколад</h3>
+          <p class="handwrite">Callebaut, 54% какао</p>
+        </article>
+        <article class="ing-card">
+          <div class="ing-card__art ing-card__art--berry"><span>🍓</span></div>
+          <h3>Сезонные ягоды</h3>
+          <p class="handwrite">свои или с проверенной фермы</p>
+        </article>
+        <article class="ing-card">
+          <div class="ing-card__art ing-card__art--flour"><span>🌾</span></div>
+          <h3>Мука высшего сорта</h3>
+          <p class="handwrite">просеиваем дважды</p>
+        </article>
+        <article class="ing-card">
+          <div class="ing-card__art ing-card__art--honey"><span>🍯</span></div>
+          <h3>Мёд</h3>
+          <p class="handwrite">гречишный, с пасеки дедушки</p>
+        </article>
+      </div>
+      <div class="badge-trust">
+        <span class="badge-trust__icon">📖</span>
+        Состав открыт — спросите любой рецепт
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== КАЛЬКУЛЯТОР ======== -->
+  <section class="section calculator" id="calculator">
+    <div class="container">
+      <h2>Соберите свой торт</h2>
+      <p class="section__sub handwrite">цена пересчитывается сразу, без звонков</p>
+
+      <div class="calc">
+        <div class="calc__steps">
+          <div class="calc__step">
+            <h3><span class="calc__num">1</span> Вес торта</h3>
+            <div class="chips" data-group="weight">
+              <button class="chip is-active" data-value="1" data-price="2400" data-label="1 кг">1 кг <small>6–8 гостей</small></button>
+              <button class="chip" data-value="2" data-price="4200" data-label="2 кг">2 кг <small>12–16 гостей</small></button>
+              <button class="chip" data-value="3" data-price="5900" data-label="3 кг">3 кг <small>20–25 гостей</small></button>
+            </div>
+          </div>
+
+          <div class="calc__step">
+            <h3><span class="calc__num">2</span> Начинка</h3>
+            <div class="chips" data-group="filling">
+              <button class="chip is-active" data-price="0" data-label="Медовик со сметанным кремом">🍯 Медовик</button>
+              <button class="chip" data-price="300" data-label="Шоколад-вишня">🍒 Шоколад-вишня <small>+300 ₽</small></button>
+              <button class="chip" data-price="400" data-label="Морковный с карамелью">🥕 Морковный <small>+400 ₽</small></button>
+              <button class="chip" data-price="500" data-label="Ягодный с маскарпоне">🍓 Ягодный <small>+500 ₽</small></button>
+            </div>
+          </div>
+
+          <div class="calc__step">
+            <h3><span class="calc__num">3</span> Декор</h3>
+            <div class="chips" data-group="decor">
+              <button class="chip is-active" data-price="0" data-label="свежие ягоды">Свежие ягоды</button>
+              <button class="chip" data-price="400" data-label="кремовые розы">Кремовые розы <small>+400 ₽</small></button>
+              <button class="chip" data-price="700" data-label="мастика и фигурки">Мастика и фигурки <small>+700 ₽</small></button>
+            </div>
+          </div>
+
+          <div class="calc__step">
+            <h3><span class="calc__num">4</span> Срочность</h3>
+            <div class="chips" data-group="urgency">
+              <button class="chip is-active" data-price="0" data-label="за 3 дня">За 3 дня — спокойно</button>
+              <button class="chip" data-price="600" data-label="завтра">Нужен завтра! <small>+600 ₽</small></button>
+            </div>
+          </div>
+        </div>
+
+        <aside class="calc__result">
+          <div class="calc__card">
+            <p class="calc__label handwrite">ваш торт ≈</p>
+            <p class="calc__price">от <span id="calcPrice">2 400</span> ₽</p>
+            <ul class="calc__summary" id="calcSummary"></ul>
+            <a href="#order" class="btn btn--caramel btn--wide" id="calcOrderBtn">Оформить заказ</a>
+            <p class="calc__hint">точную цену подтвердим после звонка</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== ГАЛЕРЕЯ (ПОЛАРОИД) ======== -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <h2>Наши работы</h2>
+      <p class="section__sub handwrite">каждый торт — чья-то история</p>
+      <div class="polaroids">
+        <figure class="polaroid" style="--rot:-4deg">
+          <div class="polaroid__art polaroid__art--1"><div class="mini-cake mini-cake--pink"></div></div>
+          <figcaption class="handwrite">для Алисы, 5 лет 🎈</figcaption>
+        </figure>
+        <figure class="polaroid" style="--rot:3deg">
+          <div class="polaroid__art polaroid__art--2"><div class="mini-cake mini-cake--choco"></div></div>
+          <figcaption class="handwrite">юбилей папы, 60 лет</figcaption>
+        </figure>
+        <figure class="polaroid" style="--rot:-2deg">
+          <div class="polaroid__art polaroid__art--3"><div class="mini-cake mini-cake--berry"></div></div>
+          <figcaption class="handwrite">свадьба Оли и Димы ♥</figcaption>
+        </figure>
+        <figure class="polaroid" style="--rot:5deg">
+          <div class="polaroid__art polaroid__art--4"><div class="mini-cake mini-cake--honey"></div></div>
+          <figcaption class="handwrite">медовик «как у бабушки»</figcaption>
+        </figure>
+        <figure class="polaroid" style="--rot:-5deg">
+          <div class="polaroid__art polaroid__art--5"><div class="mini-cake mini-cake--green"></div></div>
+          <figcaption class="handwrite">крещение Матвея</figcaption>
+        </figure>
+        <figure class="polaroid" style="--rot:2deg">
+          <div class="polaroid__art polaroid__art--6"><div class="mini-cake mini-cake--carrot"></div></div>
+          <figcaption class="handwrite">морковный на выписку</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== ТАЙМЛАЙН ======== -->
+  <section class="section timeline" id="timeline">
+    <div class="container">
+      <h2>Как рождается ваш торт</h2>
+      <p class="section__sub handwrite">от идеи до стола — 3 дня тепла</p>
+      <ol class="timeline__list">
+        <li class="timeline__item">
+          <div class="timeline__icon">💬</div>
+          <h3>Обсуждаем идею</h3>
+          <p>Созваниваемся или переписываемся, рисуем эскиз</p>
+        </li>
+        <li class="timeline__item">
+          <div class="timeline__icon">🥣</div>
+          <h3>Печём коржи</h3>
+          <p>Только свежие продукты, в день заказа</p>
+        </li>
+        <li class="timeline__item">
+          <div class="timeline__icon">🎂</div>
+          <h3>Собираем</h3>
+          <p>Прослаиваем, выстаиваем ночь в холоде</p>
+        </li>
+        <li class="timeline__item">
+          <div class="timeline__icon">🍓</div>
+          <h3>Украшаем</h3>
+          <p>Ягоды, крем, фигурки — всё руками</p>
+        </li>
+        <li class="timeline__item">
+          <div class="timeline__icon">🚗</div>
+          <h3>Привозим</h3>
+          <p>В термобоксе, аккуратно, к часу чая</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ======== ДЕТСКАЯ СЕКЦИЯ ======== -->
+  <section class="section kids" id="kids">
+    <div class="container">
+      <h2>Торты для самых маленьких</h2>
+      <p class="section__sub handwrite">герои, фигурки и никакой «химии»</p>
+      <div class="kids__grid">
+        <article class="kid-card">
+          <div class="kid-card__art kid-card__art--dino">🦕</div>
+          <h3>Динозаврик</h3>
+          <p>Морковные коржи, крем-чиз, шалфейные «листики» из мастики</p>
+        </article>
+        <article class="kid-card">
+          <div class="kid-card__art kid-card__art--unicorn">🦄</div>
+          <h3>Единорог</h3>
+          <p>Ванильный бисквит, ягодный конфи, рожок из белого шоколада</p>
+        </article>
+        <article class="kid-card">
+          <div class="kid-card__art kid-card__art--space">🚀</div>
+          <h3>Космос</h3>
+          <p>Шоколадный, «звёзды» из меренги, черничная глазурь</p>
+        </article>
+      </div>
+      <div class="badge-trust badge-trust--green">
+        <span class="badge-trust__icon">🌿</span>
+        Красители натуральные: свёкла, шпинат, черника, куркума
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== ОТЗЫВЫ (КАРУСЕЛЬ) ======== -->
+  <section class="section reviews" id="reviews">
+    <div class="container">
+      <h2>Мамы говорят</h2>
+      <p class="section__sub handwrite">не мы придумали — честные слова</p>
+      <div class="carousel" id="reviewsCarousel">
+        <button class="carousel__btn carousel__btn--prev" id="revPrev" aria-label="Предыдущий отзыв">←</button>
+        <div class="carousel__viewport">
+          <div class="carousel__track" id="revTrack">
+            <blockquote class="review">
+              <div class="review__avatar review__avatar--1">М</div>
+              <p class="review__text">«Заказывали единорога на 4 года дочке. Ребёнок был в восторге, а я спокойна: состав читается как список покупок, а не как таблица Менделеева».</p>
+              <cite class="handwrite">— Марина, мама Алисы</cite>
+            </blockquote>
+            <blockquote class="review">
+              <div class="review__avatar review__avatar--2">О</div>
+              <p class="review__text">«Медовик — точь-в-точь как у моей бабушки. Муж, который «не ест сладкое», съел два куска. Состав спокойный, всё по-честному».</p>
+              <cite class="handwrite">— Ольга, заказ на юбилей</cite>
+            </blockquote>
+            <blockquote class="review">
+              <div class="review__avatar review__avatar--3">Н</div>
+              <p class="review__text">«Сын аллергик — подобрали рецепт без орехов и ярких красителей. Впервые на празднике он ел торт вместе со всеми. Спасибо!».</p>
+              <cite class="handwrite">— Наталья, мама Матвея</cite>
+            </blockquote>
+            <blockquote class="review">
+              <div class="review__avatar review__avatar--4">Е</div>
+              <p class="review__text">«Привезли торт к точному времени, в термобоксе, ни одна розочка не пострадала. Видно, что пекут, как для своих».</p>
+              <cite class="handwrite">— Елена, свадьба в июне</cite>
+            </blockquote>
+          </div>
+        </div>
+        <button class="carousel__btn carousel__btn--next" id="revNext" aria-label="Следующий отзыв">→</button>
+      </div>
+      <div class="carousel__dots" id="revDots"></div>
+    </div>
+  </section>
+
+  <!-- ======== СЧЁТЧИК ЯГОД ======== -->
+  <section class="section counter" id="counter">
+    <div class="container counter__inner">
+      <div class="counter__berry" aria-hidden="true">🫐</div>
+      <p class="counter__num"><span id="berryCounter" data-target="847">0</span> кг</p>
+      <p class="counter__label handwrite">ягод съедено вместе с нашими тортами в этом сезоне</p>
+    </div>
+  </section>
+
+  <!-- ======== B2B: АБОНЕМЕНТ ДЛЯ КАФЕ ======== -->
+  <section class="section b2b" id="b2b">
+    <div class="container b2b__inner">
+      <div class="b2b__text">
+        <h2>Абонемент для кафе</h2>
+        <p class="section__sub handwrite">свежие десерты каждое утро — как из своей пекарни</p>
+        <p>Поставляем десерты в кофейни района: чизкейки, наполеон, мини-тарталетки, сезонные пироги. Привозим к открытию, берём на себя витрину и рецептуру.</p>
+        <ul class="b2b__list">
+          <li>🚚 доставка до 8:00 каждый день</li>
+          <li>📋 стабильный состав и декларации</li>
+          <li>🍰 дегустационный набор — бесплатно</li>
+        </ul>
+        <a href="#order" class="btn btn--sage" id="b2bBtn">Хочу дегустацию</a>
+      </div>
+      <div class="b2b__art" aria-hidden="true">
+        <div class="b2b__box">
+          <div class="b2b__pastry b2b__pastry--1"></div>
+          <div class="b2b__pastry b2b__pastry--2"></div>
+          <div class="b2b__pastry b2b__pastry--3"></div>
+          <span class="handwrite b2b__note">каждое утро, тёплые!</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== ФОРМА ЗАКАЗА ======== -->
+  <section class="section order" id="order">
+    <div class="container">
+      <h2>Заказать торт</h2>
+      <p class="section__sub handwrite">расскажите о празднике — мы ответим в течение часа</p>
+      <form class="order__form" id="orderForm" novalidate>
+        <div class="field">
+          <label for="fName">Ваше имя</label>
+          <input type="text" id="fName" name="name" placeholder="Как к вам обращаться?" required>
+        </div>
+        <div class="field">
+          <label for="fPhone">Телефон</label>
+          <input type="tel" id="fPhone" name="phone" placeholder="+7 (___) ___-__-__" required>
+        </div>
+        <div class="field">
+          <label for="fDate">Дата праздника</label>
+          <input type="date" id="fDate" name="date" required>
+        </div>
+        <div class="field field--full">
+          <label for="fDream">Опишите торт мечты</label>
+          <textarea id="fDream" name="dream" rows="4" placeholder="Например: двухъярусный, с клубникой, надпись «С днём рождения, бабушка!»…"></textarea>
+        </div>
+        <button type="submit" class="btn btn--caramel btn--wide field--full">Отправить заявку</button>
+        <p class="order__ok handwrite" id="orderOk" hidden>ура! заявка у нас — скоро позвоним 🎉</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ======== ФУТЕР ======== -->
+  <footer class="footer" id="footer">
+    <div class="container footer__inner">
+      <div class="footer__col footer__coffee-wrap">
+        <!-- чашка кофе с анимированным паром -->
+        <div class="coffee" aria-hidden="true">
+          <span class="coffee__steam coffee__steam--1"></span>
+          <span class="coffee__steam coffee__steam--2"></span>
+          <span class="coffee__steam coffee__steam--3"></span>
+          <div class="coffee__cup"></div>
+          <div class="coffee__saucer"></div>
+        </div>
+        <p class="handwrite footer__coffee-note">заходите на кофе с тортиком!</p>
+      </div>
+      <div class="footer__col">
+        <p class="footer__brand">Как дома</p>
+        <p>семейная кондитерская<br>печём с 2018 года</p>
+      </div>
+      <div class="footer__col">
+        <p><a href="tel:+79001234567">+7 (900) 123-45-67</a></p>
+        <p class="footer__socials">
+          <a href="#" aria-label="ВКонтакте">VK</a>
+          <a href="#" aria-label="Telegram">TG</a>
+          <a href="#" aria-label="WhatsApp">WA</a>
+        </p>
+      </div>
+      <div class="footer__col">
+        <div class="badge-trust badge-trust--small">✅ санитарная книжка</div>
+        <div class="badge-trust badge-trust--small">📜 сертификат соответствия</div>
+      </div>
+    </div>
+    <p class="footer__bottom">© 2026 «Как дома». Сделано с любовью и сливочным маслом.</p>
+  </footer>
+
+  <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>

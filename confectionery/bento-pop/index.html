@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Бенто-Поп — бенто-торты, мем-надписи и яркие десерты</title>
+<meta name="description" content="Бенто-торты за 3 дня, любая надпись кремом, макаруны и пряники. Торт — это повод для сторис.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Rubik:ital,wght@0,400;0,500;0,700;0,900;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero" id="top">
+  <nav class="nav">
+    <a class="logo" href="#top">БЕНТО<span>-ПОП</span></a>
+    <div class="nav-links">
+      <a href="#catalog">Каталог</a>
+      <a href="#memes">Мемы</a>
+      <a href="#builder">Конструктор</a>
+      <a href="#delivery">Доставка</a>
+      <a class="nav-cta" href="#order">Заказать</a>
+    </div>
+  </nav>
+
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="sticker-sticker">🎂 сделано с любовью и дерзостью</div>
+      <h1>ТОРТ ЗА <mark>3&nbsp;ДНЯ</mark>.<br>НАДПИСЬ <span class="underline">ЛЮБАЯ</span>.</h1>
+      <p class="hero-sub">Бенто-торты, макаруны и пряники, которые фотографируют раньше, чем едят.</p>
+      <div class="hero-actions">
+        <button class="btn btn-pink btn-big confetti-btn" data-scroll="#builder">Хочу торт 🎉</button>
+        <a class="btn btn-ghost" href="#memes">Смотреть мемы →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" id="cake-counter" data-target="247">0</span>
+          <span class="stat-label">тортов испечено<br>в этом месяце</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">15<span class="stat-min">мин</span></span>
+          <span class="stat-label">среднее время<br>ответа в мессенджере</span>
+        </div>
+      </div>
+      <svg class="doodle-arrow" viewBox="0 0 120 90" fill="none" aria-hidden="true">
+        <path d="M8 10 C 40 4, 78 20, 92 55" stroke="#1E1E24" stroke-width="4" stroke-linecap="round"/>
+        <path d="M80 46 L 94 60 L 102 40" stroke="#1E1E24" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="4" y="84" font-size="14" fill="#1E1E24" font-family="Rubik, sans-serif" font-weight="700">твоё лицо, когда кусаешь ↓</text>
+      </svg>
+    </div>
+
+    <div class="hero-cake-wrap">
+      <div class="speech-bubble bubble-hero">«беру второй —<br>для сторис!» 📸</div>
+      <!-- CSS-арт: бенто-торт -->
+      <div class="cake cake-hero" id="hero-cake" title="тыкни — вкусно!">
+        <div class="cake-top">
+          <div class="cake-icing"></div>
+          <div class="cake-text">БЕРИ,<br>НЕ ДУМАЙ</div>
+          <div class="sprinkles">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <div class="cake-bite" aria-hidden="true"></div>
+          <div class="cake-bite cake-bite-2" aria-hidden="true"></div>
+        </div>
+        <div class="cake-body"></div>
+        <div class="cake-plate"></div>
+        <div class="cake-shadow"></div>
+      </div>
+      <div class="hero-hint">👆 тыкни по торту, мы не против</div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== БЕГУЩАЯ СТРОКА ===================== -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>БЕНТО • МАКАРУНЫ • ПРЯНИКИ • КЕКСЫ • НАДПИСИ ЛЮБЫЕ •&nbsp;</span>
+    <span>БЕНТО • МАКАРУНЫ • ПРЯНИКИ • КЕКСЫ • НАДПИСИ ЛЮБЫЕ •&nbsp;</span>
+    <span>БЕНТО • МАКАРУНЫ • ПРЯНИКИ • КЕКСЫ • НАДПИСИ ЛЮБЫЕ •&nbsp;</span>
+  </div>
+</div>
+
+<!-- ===================== КАТАЛОГ ===================== -->
+<section class="section" id="catalog">
+  <h2 class="section-title"><span class="highlight-yellow">СТИКЕР</span>-КАТАЛОГ</h2>
+  <p class="section-sub">Торт — это повод для сторис. Выбирай под свой вайб 👇</p>
+
+  <div class="chips" id="chips">
+    <button class="chip active" data-filter="all">Все</button>
+    <button class="chip" data-filter="bday">🎂 День рождения</button>
+    <button class="chip" data-filter="friend">👯 Подруге</button>
+    <button class="chip" data-filter="mom">💐 Маме</button>
+    <button class="chip" data-filter="corp">💼 Корпоратив</button>
+    <button class="chip" data-filter="just">✨ Просто так</button>
+  </div>
+
+  <div class="catalog-grid" id="catalog-grid">
+
+    <article class="card" data-tags="bday friend">
+      <div class="card-sticker">хит 🔥</div>
+      <div class="card-img"><div class="cake-mini v-pink"><div class="mini-top"><span>УРА!</span></div><div class="mini-body"></div></div></div>
+      <h3>Бенто «УРА!»</h3>
+      <p class="card-desc">Кислотно-розовый, ваниль + малина, надпись любая.</p>
+      <div class="card-foot">
+        <span class="price">1 900 ₽</span>
+        <button class="btn btn-pink btn-sm confetti-btn add-order" data-item="Бенто «УРА!»">В заказ</button>
+      </div>
+    </article>
+
+    <article class="card" data-tags="friend just">
+      <div class="card-img"><div class="cake-mini v-blue"><div class="mini-top"><span>ТЫ ЛУЧШАЯ</span></div><div class="mini-body"></div></div></div>
+      <h3>Бенто «Ты лучшая»</h3>
+      <p class="card-desc">Голубой крем, шоколад + солёная карамель.</p>
+      <div class="card-foot">
+        <span class="price">1 900 ₽</span>
+        <button class="btn btn-pink btn-sm confetti-btn add-order" data-item="Бенто «Ты лучшая»">В заказ</button>
+      </div>
+    </article>
+
+    <article class="card" data-tags="mom">
+      <div class="card-img"><div class="cake-mini v-cream"><div class="mini-top"><span>МАМА ♥</span></div><div class="mini-body"></div></div></div>
+      <h3>Бенто «Маме»</h3>
+      <p class="card-desc">Нежный крем-чиз, клубника, розочки из крема.</p>
+      <div class="card-foot">
+        <span class="price">2 100 ₽</span>
+        <button class="btn btn-pink btn-sm confetti-btn add-order" data-item="Бенто «Маме»">В заказ</button>
+      </div>
+    </article>
+
+    <article class="card" data-tags="bday corp">
+      <div class="card-sticker">новинка ✨</div>
+      <div class="card-img"><div class="cake-mini v-yellow"><div class="mini-top"><span>+1 ГОД</span></div><div class="mini-body"></div></div></div>
+      <h3>Бенто «Плюс один год»</h3>
+      <p class="card-desc">Солнечный жёлтый, лимонный курд, конфетти внутри.</p>
+      <div class="card-foot">
+        <span class="price">1 800 ₽</span>
+        <button class="btn btn-pink btn-sm confetti-btn add-order" data-item="Бенто «Плюс один год»">В заказ</button>
+      </div>
+    </article>
+
+    <article class="card" data-tags="corp">
+      <div class="card-img"><div class="card-emoji-art bg-blue">🧁🧁🧁</div></div>
+      <h3>Капкейки ×6 «Тимбилдинг»</h3>
+      <p class="card-desc">Набор с логотипом на топперах, 3 вкуса на выбор.</p>
+      <div class="card-foot">
+        <span class="price">1 500 ₽</span>
+        <button class="btn btn-pink btn-sm confetti-btn add-order" data-item="Капкейки ×6 «Тимбилдинг»">В заказ</button>
+      </div>
+    </article>
+
+    <article class="card" data-tags="friend just mom">
+      <div class="card-img"><div class="card-emoji-art bg-pink">🌈🍬🍭</div></div>
+      <h3>Макаруны ×9 «Радуга»</h3>
+      <p class="card-desc">Все цвета палитры, вкусы: фисташка, манго, бабл-гам.</p>
+      <div class="card-foot">
+        <span class="price">1 300 ₽</span>
+        <button class="btn btn-pink btn-sm confetti-btn add-order" data-item="Макаруны ×9 «Радуга»">В заказ</button>
+      </div>
+    </article>
+
+    <article class="card" data-tags="bday mom just">
+      <div class="card-img"><div class="card-emoji-art bg-yellow">🍪✏️💬</div></div>
+      <h3>Пряники с надписью ×4</h3>
+      <p class="card-desc">Имбирные, глазурь, пишем хоть «прости», хоть «погнали».</p>
+      <div class="card-foot">
+        <span class="price">990 ₽</span>
+        <button class="btn btn-pink btn-sm confetti-btn add-order" data-item="Пряники с надписью ×4">В заказ</button>
+      </div>
+    </article>
+
+    <article class="card" data-tags="bday friend corp just mom">
+      <div class="card-sticker">для сторис 📸</div>
+      <div class="card-img"><div class="cake-mini v-dark"><div class="mini-top"><span>ОГОНЬ</span></div><div class="mini-body"></div></div></div>
+      <h3>Бенто «Графит»</h3>
+      <p class="card-desc">Чёрный крем, вишня + шоколад. Для эстетов тёмной темы.</p>
+      <div class="card-foot">
+        <span class="price">2 300 ₽</span>
+        <button class="btn btn-pink btn-sm confetti-btn add-order" data-item="Бенто «Графит»">В заказ</button>
+      </div>
+    </article>
+
+  </div>
+  <p class="catalog-empty" id="catalog-empty" hidden>Под этот повод пока пусто — но мы что-нибудь придумаем! Напиши нам 👇</p>
+</section>
+
+<!-- ===================== МЕМ-ТОРТЫ ===================== -->
+<section class="section section-blue" id="memes">
+  <h2 class="section-title">МЕМ-<span class="highlight-pink">ТОРТЫ</span></h2>
+  <p class="section-sub">Надпись кремом — главная начинка. Чернее юмор — смешнее подарок.</p>
+
+  <div class="meme-grid">
+    <div class="meme-card">
+      <div class="cake-mini v-pink"><div class="mini-top"><span>ТЫ СПРАВИШЬСЯ (наверное)</span></div><div class="mini-body"></div></div>
+      <div class="speech-bubble">подруга выходит на новую работу 💼</div>
+    </div>
+    <div class="meme-card">
+      <div class="cake-mini v-yellow"><div class="mini-top"><span>С ДР, СТАРИК</span></div><div class="mini-body"></div></div>
+      <div class="speech-bubble">ему 25, но уже больно 🦴</div>
+    </div>
+    <div class="meme-card">
+      <div class="cake-mini v-blue"><div class="mini-top"><span>ЭТО НЕ ТОРТ, ЭТО КРИК ДУШИ</span></div><div class="mini-body"></div></div>
+      <div class="speech-bubble">когда сессия закрыта 🎓</div>
+    </div>
+  </div>
+
+  <!-- Интерактивный мокап -->
+  <div class="mockup">
+    <div class="mockup-left">
+      <h3>Придумай свою надпись</h3>
+      <p>Напиши что угодно — хоть «прости за плейлист». Появится на торте сразу, как вживую.</p>
+      <button class="btn btn-pink" id="mockup-toggle">Придумай свою надпись ✏️</button>
+      <form class="mockup-form" id="mockup-form" hidden>
+        <input type="text" id="mockup-input" maxlength="28" placeholder="Твоя надпись кремом…" autocomplete="off">
+        <button type="submit" class="btn btn-dark">Накремить 🍰</button>
+      </form>
+      <p class="mockup-hint" id="mockup-hint">👆 и да, по этому торту тоже можно тыкать</p>
+    </div>
+    <div class="mockup-right">
+      <div class="cake cake-mockup" id="mockup-cake">
+        <div class="cake-top">
+          <div class="cake-icing"></div>
+          <div class="cake-text" id="mockup-text">ТВОЯ<br>НАДПИСЬ</div>
+          <div class="sprinkles">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <div class="cake-bite" aria-hidden="true"></div>
+          <div class="cake-bite cake-bite-2" aria-hidden="true"></div>
+        </div>
+        <div class="cake-body"></div>
+        <div class="cake-plate"></div>
+      </div>
+      <div class="bite-msg" id="bite-msg">НЯМ! 🐹</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== КОНСТРУКТОР ===================== -->
+<section class="section section-pink" id="builder">
+  <h2 class="section-title">КОНСТРУКТОР <span class="highlight-yellow">БЕНТО</span></h2>
+  <p class="section-sub">Собери свой — цена пересчитается сама, магия.</p>
+
+  <div class="builder">
+    <div class="builder-form">
+      <div class="builder-group">
+        <h4>Размер</h4>
+        <div class="opts" data-group="size">
+          <button class="opt active" data-price="1500" data-label="0.5 кг">0.5 кг<br><small>на двоих</small></button>
+          <button class="opt" data-price="2400" data-label="1 кг">1 кг<br><small>на компанию</small></button>
+          <button class="opt" data-price="3200" data-label="1.5 кг">1.5 кг<br><small>на толпу</small></button>
+        </div>
+      </div>
+      <div class="builder-group">
+        <h4>Начинка</h4>
+        <div class="opts" data-group="filling">
+          <button class="opt active" data-price="0" data-label="Ваниль-малина">🍓 Ваниль-малина</button>
+          <button class="opt" data-price="200" data-label="Шоколад-карамель">🍫 Шоколад-карамель</button>
+          <button class="opt" data-price="300" data-label="Писташка-вишня">🌰 Писташка-вишня</button>
+          <button class="opt" data-price="200" data-label="Лимон-черника">🍋 Лимон-черника</button>
+        </div>
+      </div>
+      <div class="builder-group">
+        <h4>Цвет крема</h4>
+        <div class="opts opts-colors" data-group="color">
+          <button class="opt opt-color active" data-price="0" data-label="Кислотный розовый" style="--c:#FF4D8D"><span></span>Розовый</button>
+          <button class="opt opt-color" data-price="0" data-label="Солнечный жёлтый" style="--c:#FFD93D"><span></span>Жёлтый</button>
+          <button class="opt opt-color" data-price="0" data-label="Голубой" style="--c:#4DC9FF"><span></span>Голубой</button>
+          <button class="opt opt-color" data-price="150" data-label="Графитовый" style="--c:#1E1E24"><span></span>Графит</button>
+        </div>
+      </div>
+      <div class="builder-group">
+        <h4>Надпись кремом</h4>
+        <input type="text" id="builder-text" maxlength="28" placeholder="Например: ТЫ ЛУЧШАЯ (+300 ₽)" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="builder-preview">
+      <div class="cake cake-builder" id="builder-cake">
+        <div class="cake-top">
+          <div class="cake-icing"></div>
+          <div class="cake-text" id="builder-cake-text">ВАШ<br>ТЕКСТ</div>
+          <div class="sprinkles"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+        <div class="cake-body"></div>
+        <div class="cake-plate"></div>
+      </div>
+      <div class="builder-total">
+        <div class="builder-lines" id="builder-lines"></div>
+        <div class="builder-price"><span>Итого:</span><strong id="builder-price">1 500 ₽</strong></div>
+        <button class="btn btn-dark btn-big confetti-btn" id="builder-order">Заказать этот 🛒</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ОТЗЫВЫ ===================== -->
+<section class="section" id="reviews">
+  <h2 class="section-title">СТОРИС О НАС <span class="highlight-blue">ЛУЧШЕ НАС</span></h2>
+  <div class="stories">
+    <div class="story">
+      <div class="story-head"><span class="story-ava">🦊</span><span>@kris_bakes</span></div>
+      <p>Заказала подруге «ТЫ СТАРАЯ» на 23-летие. Она рыдала. От смеха. Торт улетел за 10 минут 😭🔥</p>
+      <div class="story-emoji">🎂😂❤️</div>
+    </div>
+    <div class="story">
+      <div class="story-head"><span class="story-ava">🐸</span><span>@dmitriy.exe</span></div>
+      <p>Попросил надпись «СПАСИБО ЗА КОД-РЕВЬЮ». Тимлид выложил в сторис. Пиар успешен, торт вкусный 🚀</p>
+      <div class="story-emoji">💻🍰👏</div>
+    </div>
+    <div class="story">
+      <div class="story-head"><span class="story-ava">🌸</span><span>@masha_flowers</span></div>
+      <p>Маме на юбилей — с розочками и «МАМА, ТЫ СУПЕР». Она сфоткала 40 раз до первого куска 🥹</p>
+      <div class="story-emoji">💐📸✨</div>
+    </div>
+    <div class="story">
+      <div class="story-head"><span class="story-ava">🐙</span><span>@olya_hr</span></div>
+      <p>Брали капкейки на корпорат с топперами-лого. Бухгалтерия одобрила, а это дорогого стоит 💼🧁</p>
+      <div class="story-emoji">🏢🎉😎</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ДОСТАВКА ===================== -->
+<section class="section section-yellow" id="delivery">
+  <h2 class="section-title">ДОСТАВКА</h2>
+  <div class="delivery-grid">
+    <div class="delivery-box">
+      <!-- CSS-арт: коробка с окошком -->
+      <div class="box-art">
+        <div class="box-window"><div class="cake-mini v-pink"><div class="mini-top"><span>ОПА</span></div><div class="mini-body"></div></div></div>
+        <div class="box-lid"></div>
+      </div>
+      <h3>Коробка с окошком</h3>
+      <p>Привезём в прозрачной коробке — сразу видно красоту, можно снимать распаковку в сторис 📦✨</p>
+    </div>
+    <div class="delivery-info">
+      <div class="delivery-item">
+        <h4>🚗 По городу</h4>
+        <p>2 часа и торт у тебя. До 3 км от студии — бесплатно, дальше 300 ₽.</p>
+      </div>
+      <div class="delivery-item">
+        <h4>🏃 Самовывоз</h4>
+        <p>Студия на ул. Сладкой, 7. Забирай с 10:00 до 21:00 — угостим кофе.</p>
+      </div>
+      <div class="delivery-item">
+        <h4>⏱ Сроки</h4>
+        <p>Бенто — за 3 дня, пряники и макаруны — за 1 день. Срочно? Напиши, что-нибудь придумаем.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ЗАКАЗ ===================== -->
+<section class="section section-dark" id="order">
+  <h2 class="section-title">СКИНЬ ФОТО ТОРТА МЕЧТЫ —<br>ПОСЧИТАЕМ ЗА <span class="highlight-yellow">15 МИНУТ</span></h2>
+  <p class="section-sub">Пинтерест-борды, скрины из тиктока, рисунок на салфетке — принимаем всё.</p>
+  <div class="order-btns">
+    <a class="btn btn-wa btn-big confetti-btn" href="https://wa.me/79000000000?text=Хочу%20торт!%20Скидываю%20фото%20мечты%20🎂" target="_blank" rel="noopener">💬 WhatsApp</a>
+    <a class="btn btn-tg btn-big confetti-btn" href="https://t.me/bento_pop" target="_blank" rel="noopener">✈️ Telegram</a>
+  </div>
+  <p class="order-note" id="order-note"></p>
+</section>
+
+<!-- ===================== ФУТЕР ===================== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="logo logo-footer">БЕНТО<span>-ПОП</span></div>
+      <p>Торт — это повод для сторис.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Контакты</h5>
+      <p>📞 <a href="tel:+79000000000">+7 (900) 000-00-00</a><br>
+      📍 ул. Сладкая, 7<br>
+      ⏰ 10:00–21:00, без выходных</p>
+    </div>
+    <div class="footer-col">
+      <h5>Мы в соцсетях</h5>
+      <p>Мы в <a href="https://vk.com" target="_blank" rel="noopener">VK</a> и <a href="https://t.me/bento_pop" target="_blank" rel="noopener">Telegram</a> — там все новые мем-торты и розыгрыши.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Бенто-Поп • сделано с кремом и конфетти 🎉</div>
+</footer>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maison Douce — патиссерия. Десерты, которые жалко есть</title>
+  <meta name="description" content="Авторские торты и французские десерты на заказ. Свадебные торты, макаруны, эклеры. Натуральные ингредиенты, доставка по городу.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Great+Vibes&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍰</text></svg>">
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#hero" class="logo">
+        <span class="logo-script">Maison</span>
+        <span class="logo-main">DOUCE</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#vitrine">Витрина</a>
+        <a href="#cake-of-day">Торт дня</a>
+        <a href="#wedding">Свадьбы</a>
+        <a href="#fillings">Начинки</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#delivery">Доставка</a>
+      </nav>
+      <a href="#order" class="btn btn-small btn-choco header-cta">Заказать торт</a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-text reveal">
+        <p class="hero-over"><span class="script-accent">с любовью</span> — французская патиссерия</p>
+        <h1>Десерты, которые <em>жалко&nbsp;есть</em>.<br>Но невозможно не&nbsp;попробовать</h1>
+        <p class="hero-sub">Авторские торты и французские десерты на заказ.<br>Натуральные ингредиенты, доставка по городу.</p>
+        <div class="hero-actions">
+          <a href="#order" class="btn btn-choco">Заказать торт</a>
+          <a href="#vitrine" class="btn btn-ghost">Смотреть витрину</a>
+        </div>
+      </div>
+
+      <div class="hero-art" id="heroArt">
+        <!-- Свадебный торт на подставке (SVG-иллюстрация) -->
+        <svg id="heroCake" class="hero-cake" viewBox="0 0 420 460" role="img" aria-label="Элегантный трёхъярусный свадебный торт на золотой подставке">
+          <defs>
+            <linearGradient id="creamGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#FFFFFF"/>
+              <stop offset="1" stop-color="#F6DFDA"/>
+            </linearGradient>
+            <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#E3C566"/>
+              <stop offset=".5" stop-color="#C9A227"/>
+              <stop offset="1" stop-color="#A5851F"/>
+            </linearGradient>
+            <radialGradient id="softLight" cx=".5" cy=".2" r=".9">
+              <stop offset="0" stop-color="#FFF9F5" stop-opacity=".9"/>
+              <stop offset="1" stop-color="#FFF9F5" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+
+          <ellipse cx="210" cy="440" rx="150" ry="12" fill="#4A2C2A" opacity=".08"/>
+
+          <!-- подставка -->
+          <rect x="202" y="392" width="16" height="40" fill="url(#goldGrad)" rx="4"/>
+          <ellipse cx="210" cy="434" rx="70" ry="8" fill="url(#goldGrad)"/>
+          <ellipse cx="210" cy="392" rx="140" ry="14" fill="url(#goldGrad)"/>
+          <ellipse cx="210" cy="389" rx="140" ry="12" fill="#E9D18A"/>
+
+          <!-- ярус 1 (нижний) -->
+          <g class="tier">
+            <rect x="95" y="292" width="230" height="98" rx="10" fill="url(#creamGrad)" stroke="#C9A227" stroke-opacity=".45"/>
+            <path d="M95 302 q14 18 29 0 q14 18 29 0 q14 18 29 0 q14 18 29 0 q14 18 29 0 q14 18 29 0 q14 18 28 0 q15 18 29 0 v-14 a10 10 0 0 0 -10 -10 h-210 a10 10 0 0 0 -10 10 z" fill="#F6DFDA"/>
+            <circle cx="140" cy="345" r="5" fill="#C9A227" opacity=".8"/>
+            <circle cx="180" cy="345" r="5" fill="#C9A227" opacity=".8"/>
+            <circle cx="220" cy="345" r="5" fill="#C9A227" opacity=".8"/>
+            <circle cx="260" cy="345" r="5" fill="#C9A227" opacity=".8"/>
+            <circle cx="300" cy="345" r="5" fill="#C9A227" opacity=".8"/>
+          </g>
+
+          <!-- ярус 2 -->
+          <g class="tier">
+            <rect x="125" y="206" width="170" height="88" rx="9" fill="url(#creamGrad)" stroke="#C9A227" stroke-opacity=".45"/>
+            <path d="M125 216 q12 16 24 0 q12 16 24 0 q12 16 24 0 q12 16 24 0 q12 16 24 0 q12 16 24 0 q13 16 25 0 q12 16 24 0 v-12 a9 9 0 0 0 -9 -9 h-152 a9 9 0 0 0 -9 9 z" fill="#F6DFDA"/>
+            <path d="M140 262 q35 14 70 0 q35 -14 70 0" fill="none" stroke="#C9A227" stroke-width="2" opacity=".7"/>
+          </g>
+
+          <!-- ярус 3 -->
+          <g class="tier">
+            <rect x="152" y="132" width="116" height="76" rx="8" fill="url(#creamGrad)" stroke="#C9A227" stroke-opacity=".45"/>
+            <path d="M152 141 q10 14 20 0 q10 14 20 0 q10 14 19 0 q10 14 19 0 q10 14 19 0 q10 14 19 0 q10 14 20 0 v-11 a8 8 0 0 0 -8 -8 h-100 a8 8 0 0 0 -8 8 z" fill="#F6DFDA"/>
+            <circle cx="185" cy="180" r="4" fill="#C9A227" opacity=".8"/>
+            <circle cx="210" cy="180" r="4" fill="#C9A227" opacity=".8"/>
+            <circle cx="235" cy="180" r="4" fill="#C9A227" opacity=".8"/>
+          </g>
+
+          <!-- цветы на вершине -->
+          <g class="cake-top">
+            <circle cx="210" cy="118" r="14" fill="#F6DFDA" stroke="#C9A227" stroke-opacity=".5"/>
+            <circle cx="196" cy="126" r="10" fill="#FBEBE6"/>
+            <circle cx="224" cy="126" r="10" fill="#FBEBE6"/>
+            <circle cx="210" cy="118" r="5" fill="#C9A227"/>
+            <ellipse cx="186" cy="118" rx="10" ry="5" fill="#B8C4A9" transform="rotate(-30 186 118)"/>
+            <ellipse cx="234" cy="118" rx="10" ry="5" fill="#B8C4A9" transform="rotate(30 234 118)"/>
+          </g>
+
+          <ellipse cx="210" cy="120" rx="230" ry="220" fill="url(#softLight)" pointer-events="none"/>
+        </svg>
+        <p class="hero-hint script-accent" id="heroHint">погладьте тортик…</p>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true"><span></span></div>
+  </section>
+
+  <div class="gold-divider" aria-hidden="true"></div>
+
+  <!-- ВИТРИНА -->
+  <section class="section vitrine" id="vitrine">
+    <div class="container">
+      <p class="section-script script-accent reveal">каждый десерт — как украшение</p>
+      <h2 class="reveal">Витрина десертов</h2>
+      <p class="section-sub reveal">Выберите категорию или просто пролистайте витрину —<br class="br-wide"> как вдоль настоящего кондитерского прилавка.</p>
+
+      <div class="chips reveal" id="chips" role="tablist" aria-label="Категории десертов">
+        <button class="chip is-active" data-filter="all">Вся витрина</button>
+        <button class="chip" data-filter="cake">Торты</button>
+        <button class="chip" data-filter="small">Пирожные</button>
+        <button class="chip" data-filter="gift">К празднику</button>
+      </div>
+
+      <div class="vitrine-wrap reveal">
+        <button class="slider-btn prev" id="vitrinePrev" aria-label="Назад">‹</button>
+        <div class="shelf" id="shelf">
+
+          <article class="cloche-card" data-cat="cake gift" data-id="wedding">
+            <div class="cloche-top" aria-hidden="true"></div>
+            <div class="card-art">
+              <svg viewBox="0 0 200 170" aria-hidden="true">
+                <ellipse cx="100" cy="152" rx="72" ry="8" fill="#C9A227"/>
+                <rect x="96" y="140" width="8" height="12" fill="#C9A227"/>
+                <ellipse cx="100" cy="140" rx="62" ry="6" fill="#E9D18A"/>
+                <rect x="48" y="96" width="104" height="44" rx="6" fill="#FFF" stroke="#F0DCD4"/>
+                <path d="M48 102 q9 12 17 0 q9 12 17 0 q9 12 18 0 q9 12 18 0 q9 12 17 0 q9 12 18 0 v-8 a6 6 0 0 0 -6 -6 h-92 a6 6 0 0 0 -6 6 z" fill="#F6DFDA"/>
+                <rect x="66" y="58" width="68" height="38" rx="5" fill="#FFF" stroke="#F0DCD4"/>
+                <path d="M66 63 q8 10 17 0 q8 10 17 0 q9 10 17 0 q8 10 17 0 v-6 a5 5 0 0 0 -5 -5 h-58 a5 5 0 0 0 -5 5 z" fill="#F6DFDA"/>
+                <circle cx="100" cy="50" r="7" fill="#F6DFDA" stroke="#C9A227"/>
+                <circle cx="100" cy="50" r="2.5" fill="#C9A227"/>
+              </svg>
+            </div>
+            <span class="tag script-accent">хит сезона</span>
+            <h3>Свадебные торты</h3>
+            <p class="card-desc">Многоярусные, с живыми цветами и золотым кантом</p>
+            <div class="card-meta">
+              <span class="price">от 3 200 ₽/кг</span>
+              <span class="time">от 5 дней</span>
+            </div>
+            <a href="#order" class="card-link" data-fill-povod="Свадьба">Заказать →</a>
+            <div class="shelf-board" aria-hidden="true"></div>
+          </article>
+
+          <article class="cloche-card" data-cat="cake gift" data-id="bento">
+            <div class="cloche-top" aria-hidden="true"></div>
+            <div class="card-art">
+              <svg viewBox="0 0 200 170" aria-hidden="true">
+                <rect x="38" y="86" width="124" height="56" rx="10" fill="#FBEBE6" stroke="#E8CFC6"/>
+                <rect x="38" y="74" width="124" height="16" rx="8" fill="#F6DFDA" stroke="#E8CFC6"/>
+                <ellipse cx="100" cy="86" rx="44" ry="8" fill="#FFF"/>
+                <rect x="60" y="52" width="80" height="34" rx="8" fill="#FFF" stroke="#F0DCD4"/>
+                <ellipse cx="100" cy="54" rx="40" ry="9" fill="#F6DFDA"/>
+                <path d="M78 62 q11 9 22 0 q11 -9 22 0" stroke="#4A2C2A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                <circle cx="100" cy="46" r="4" fill="#C9A227"/>
+              </svg>
+            </div>
+            <h3>Бенто-торты</h3>
+            <p class="card-desc">Милые мини-тортики с надписью — тренд из Сеула</p>
+            <div class="card-meta">
+              <span class="price">от 1 400 ₽</span>
+              <span class="time">1–2 дня</span>
+            </div>
+            <a href="#order" class="card-link" data-fill-povod="День рождения">Заказать →</a>
+            <div class="shelf-board" aria-hidden="true"></div>
+          </article>
+
+          <article class="cloche-card" data-cat="small gift" data-id="macaron">
+            <div class="cloche-top" aria-hidden="true"></div>
+            <div class="card-art">
+              <svg viewBox="0 0 200 170" aria-hidden="true">
+                <g transform="translate(38 84)">
+                  <path d="M0 14 a32 14 0 0 1 64 0 z" fill="#F6DFDA"/>
+                  <rect x="0" y="12" width="64" height="9" rx="4" fill="#FFF"/>
+                  <path d="M0 21 a32 13 0 0 0 64 0 z" fill="#EBC9C1"/>
+                </g>
+                <g transform="translate(86 58)">
+                  <path d="M0 14 a32 14 0 0 1 64 0 z" fill="#B8C4A9"/>
+                  <rect x="0" y="12" width="64" height="9" rx="4" fill="#FFF"/>
+                  <path d="M0 21 a32 13 0 0 0 64 0 z" fill="#9FAF8C"/>
+                </g>
+                <g transform="translate(64 96)">
+                  <path d="M0 14 a32 14 0 0 1 64 0 z" fill="#E8C98F"/>
+                  <rect x="0" y="12" width="64" height="9" rx="4" fill="#FFF"/>
+                  <path d="M0 21 a32 13 0 0 0 64 0 z" fill="#C9A227"/>
+                </g>
+              </svg>
+            </div>
+            <h3>Макаруны</h3>
+            <p class="card-desc">Миндальное печенье с нежным ганашем, 12 вкусов</p>
+            <div class="card-meta">
+              <span class="price">от 130 ₽/шт</span>
+              <span class="time">1 день</span>
+            </div>
+            <a href="#order" class="card-link" data-fill-povod="Подарок">Заказать →</a>
+            <div class="shelf-board" aria-hidden="true"></div>
+          </article>
+
+          <article class="cloche-card" data-cat="small" data-id="eclair">
+            <div class="cloche-top" aria-hidden="true"></div>
+            <div class="card-art">
+              <svg viewBox="0 0 200 170" aria-hidden="true">
+                <g transform="translate(30 70) rotate(-6 70 30)">
+                  <rect x="0" y="18" width="140" height="34" rx="17" fill="#E4B97C"/>
+                  <rect x="0" y="8" width="140" height="26" rx="13" fill="#4A2C2A"/>
+                  <path d="M18 14 q26 -8 52 0" stroke="#7A4A44" stroke-width="5" fill="none" stroke-linecap="round"/>
+                  <circle cx="118" cy="16" r="5" fill="#F6DFDA"/>
+                </g>
+                <g transform="translate(36 112) rotate(3 70 20)">
+                  <rect x="0" y="12" width="128" height="30" rx="15" fill="#E4B97C"/>
+                  <rect x="0" y="3" width="128" height="23" rx="11" fill="#F6DFDA"/>
+                  <path d="M16 9 q24 -7 48 0" stroke="#FFF" stroke-width="4" fill="none" stroke-linecap="round" opacity=".8"/>
+                </g>
+              </svg>
+            </div>
+            <h3>Эклеры</h3>
+            <p class="card-desc">Заварные, с глазурью и кремом — как в Париже</p>
+            <div class="card-meta">
+              <span class="price">от 220 ₽/шт</span>
+              <span class="time">1 день</span>
+            </div>
+            <a href="#order" class="card-link" data-fill-povod="Подарок">Заказать →</a>
+            <div class="shelf-board" aria-hidden="true"></div>
+          </article>
+
+          <article class="cloche-card" data-cat="small gift" data-id="ginger">
+            <div class="cloche-top" aria-hidden="true"></div>
+            <div class="card-art">
+              <svg viewBox="0 0 200 170" aria-hidden="true">
+                <g transform="translate(100 88)">
+                  <path d="M0 42 C-56 6 -38 -42 0 -16 C38 -42 56 6 0 42 Z" fill="#C68B4E"/>
+                  <path d="M0 32 C-42 4 -30 -32 0 -10 C30 -32 42 4 0 32 Z" fill="none" stroke="#FFF" stroke-width="3"/>
+                  <circle cx="0" cy="2" r="4" fill="#FFF"/>
+                  <circle cx="-12" cy="8" r="2.5" fill="#F6DFDA"/>
+                  <circle cx="12" cy="8" r="2.5" fill="#F6DFDA"/>
+                  <path d="M-8 16 q8 6 16 0" stroke="#F6DFDA" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                </g>
+                <circle cx="52" cy="120" r="10" fill="#C68B4E"/>
+                <circle cx="52" cy="120" r="6" fill="none" stroke="#FFF" stroke-width="2"/>
+                <circle cx="150" cy="52" r="8" fill="#C68B4E"/>
+                <circle cx="150" cy="52" r="4.5" fill="none" stroke="#FFF" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3>Пряники</h3>
+            <p class="card-desc">Имбирные, с росписью глазурью — к любому событию</p>
+            <div class="card-meta">
+              <span class="price">от 150 ₽/шт</span>
+              <span class="time">2–3 дня</span>
+            </div>
+            <a href="#order" class="card-link" data-fill-povod="Подарок">Заказать →</a>
+            <div class="shelf-board" aria-hidden="true"></div>
+          </article>
+
+          <article class="cloche-card" data-cat="small" data-id="cupcake">
+            <div class="cloche-top" aria-hidden="true"></div>
+            <div class="card-art">
+              <svg viewBox="0 0 200 170" aria-hidden="true">
+                <g transform="translate(58 40)">
+                  <path d="M0 50 q21 -58 42 0 z" fill="#FFF"/>
+                  <path d="M6 44 q15 -42 30 0" fill="none" stroke="#F6DFDA" stroke-width="6"/>
+                  <circle cx="21" cy="0" r="7" fill="#C0392B"/>
+                  <path d="M0 52 h84 l-10 66 a8 8 0 0 1 -8 7 h-48 a8 8 0 0 1 -8 -7 z" fill="#F6DFDA" transform="translate(-21 0)"/>
+                  <path d="M-14 56 v58 M-2 56 v62 M10 56 v62 M22 56 v58" stroke="#E8CFC6" stroke-width="3" transform="translate(11 0)"/>
+                </g>
+                <g transform="translate(130 88) scale(.62)">
+                  <path d="M0 50 q21 -58 42 0 z" fill="#B8C4A9"/>
+                  <circle cx="21" cy="-2" r="7" fill="#4A2C2A"/>
+                  <path d="M0 52 h84 l-10 66 a8 8 0 0 1 -8 7 h-48 a8 8 0 0 1 -8 -7 z" fill="#E8C98F" transform="translate(-21 0)"/>
+                </g>
+              </svg>
+            </div>
+            <span class="tag tag-pistachio script-accent">нежнейший</span>
+            <h3>Капкейки</h3>
+            <p class="card-desc">Воздушный крем-чиз и ягодный центр внутри</p>
+            <div class="card-meta">
+              <span class="price">от 190 ₽/шт</span>
+              <span class="time">1 день</span>
+            </div>
+            <a href="#order" class="card-link" data-fill-povod="Корпоратив">Заказать →</a>
+            <div class="shelf-board" aria-hidden="true"></div>
+          </article>
+
+        </div>
+        <button class="slider-btn next" id="vitrineNext" aria-label="Вперёд">›</button>
+      </div>
+      <p class="shelf-empty" id="shelfEmpty" hidden>В этой категории пока пусто — загляните на «Всю витрину».</p>
+    </div>
+  </section>
+
+  <div class="gold-divider" aria-hidden="true"></div>
+
+  <!-- ТОРТ ДНЯ -->
+  <section class="section cake-day" id="cake-of-day">
+    <div class="container cake-day-grid">
+      <div class="cake-day-art reveal">
+        <svg viewBox="0 0 320 300" aria-label="Торт дня — фисташка и малина">
+          <ellipse cx="160" cy="272" rx="120" ry="12" fill="#C9A227"/>
+          <rect x="154" y="252" width="12" height="18" fill="#C9A227"/>
+          <ellipse cx="160" cy="252" rx="112" ry="10" fill="#E9D18A"/>
+          <rect x="70" y="120" width="180" height="132" rx="12" fill="#B8C4A9"/>
+          <path d="M70 134 q15 20 30 0 q15 20 30 0 q15 20 30 0 q15 20 30 0 q15 20 30 0 q15 20 30 0 v-16 a12 12 0 0 0 -12 -12 h-156 a12 12 0 0 0 -12 12 z" fill="#A9B89A"/>
+          <rect x="70" y="196" width="180" height="14" fill="#C44569" opacity=".9"/>
+          <g>
+            <circle cx="110" cy="112" r="9" fill="#C44569"/>
+            <circle cx="140" cy="106" r="9" fill="#D2557B"/>
+            <circle cx="172" cy="110" r="9" fill="#C44569"/>
+            <circle cx="204" cy="105" r="9" fill="#D2557B"/>
+            <circle cx="228" cy="112" r="8" fill="#C44569"/>
+            <ellipse cx="120" cy="96" rx="10" ry="5" fill="#8FA07E" transform="rotate(-24 120 96)"/>
+            <ellipse cx="196" cy="94" rx="10" ry="5" fill="#8FA07E" transform="rotate(20 196 94)"/>
+          </g>
+          <circle cx="262" cy="140" r="4" fill="#C9A227"/>
+          <circle cx="58" cy="170" r="4" fill="#C9A227"/>
+        </svg>
+        <span class="badge-discount">−10% сегодня</span>
+      </div>
+      <div class="cake-day-text reveal">
+        <p class="section-script script-accent">только сегодня</p>
+        <h2>Торт дня</h2>
+        <h3 class="cake-day-name">«Фисташковый сад с малиной»</h3>
+        <p class="cake-day-desc">
+          Фисташковый бисквит на сицилийской пасте, малиновый конфи из свежих ягод,
+          крем-чиз на сливках и хрустящий слой пралине. Покрытие — велюр цвета молодой фисташки.
+        </p>
+        <ul class="cake-day-list">
+          <li><strong>Вес:</strong> 1,5 кг — хватит на 7–8 гостей</li>
+          <li><strong>Цена сегодня:</strong> <s>4 500 ₽</s> <span class="price-now">4 050 ₽</span></li>
+          <li><strong>Готов к выдаче:</strong> <span id="cakeDayTime">сегодня к 18:00</span></li>
+        </ul>
+        <button class="btn btn-choco" id="reserveBtn">Забронировать сегодня</button>
+        <p class="reserve-note script-accent" id="reserveNote" hidden>забронировано! мы позвоним подтвердить ♡</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-divider" aria-hidden="true"></div>
+
+  <!-- СВАДЕБНАЯ СЕКЦИЯ -->
+  <section class="section wedding" id="wedding">
+    <div class="container">
+      <p class="section-script script-accent reveal">самый важный десерт в жизни</p>
+      <h2 class="reveal">Свадебные торты</h2>
+      <p class="section-sub reveal">Перед свадьбой приглашаем вас на бесплатную дегустацию трёх начинок —<br class="br-wide"> в студии, за чашкой чая, обсудим дизайн и эскиз.</p>
+
+      <div class="wedding-grid">
+        <div class="wedding-art reveal">
+          <!-- Многоярусный торт -->
+          <svg viewBox="0 0 360 420" aria-label="Четырёхъярусный свадебный торт">
+            <ellipse cx="180" cy="402" rx="140" ry="10" fill="#4A2C2A" opacity=".08"/>
+            <rect x="172" y="368" width="16" height="34" fill="#C9A227"/>
+            <ellipse cx="180" cy="402" rx="66" ry="8" fill="#C9A227"/>
+            <ellipse cx="180" cy="368" rx="136" ry="12" fill="#E9D18A"/>
+
+            <rect x="60" y="282" width="240" height="86" rx="10" fill="#FFF" stroke="#EBD9D2"/>
+            <path d="M60 291 q15 18 30 0 q15 18 30 0 q15 18 30 0 q15 18 30 0 q15 18 30 0 q15 18 30 0 q15 18 30 0 q15 18 30 0 v-11 a10 10 0 0 0 -10 -10 h-220 a10 10 0 0 0 -10 10 z" fill="#F6DFDA"/>
+            <path d="M76 340 q52 16 104 0 q52 -16 104 0" fill="none" stroke="#C9A227" stroke-width="2" opacity=".7"/>
+
+            <rect x="88" y="204" width="184" height="80" rx="9" fill="#FFF" stroke="#EBD9D2"/>
+            <path d="M88 213 q12 16 23 0 q12 16 23 0 q12 16 23 0 q12 16 23 0 q12 16 23 0 q12 16 23 0 q12 16 23 0 q11 16 23 0 v-10 a9 9 0 0 0 -9 -9 h-166 a9 9 0 0 0 -9 9 z" fill="#F6DFDA"/>
+            <circle cx="120" cy="252" r="4.5" fill="#C9A227" opacity=".8"/>
+            <circle cx="156" cy="252" r="4.5" fill="#C9A227" opacity=".8"/>
+            <circle cx="192" cy="252" r="4.5" fill="#C9A227" opacity=".8"/>
+            <circle cx="228" cy="252" r="4.5" fill="#C9A227" opacity=".8"/>
+
+            <rect x="112" y="134" width="136" height="72" rx="8" fill="#FFF" stroke="#EBD9D2"/>
+            <path d="M112 142 q11 14 22 0 q11 14 23 0 q11 14 23 0 q11 14 23 0 q11 14 22 0 q11 14 23 0 v-9 a8 8 0 0 0 -8 -8 h-120 a8 8 0 0 0 -8 8 z" fill="#F6DFDA"/>
+            <path d="M126 180 q27 10 54 0 q27 -10 54 0" fill="none" stroke="#C9A227" stroke-width="2" opacity=".7"/>
+
+            <rect x="134" y="74" width="92" height="62" rx="7" fill="#FFF" stroke="#EBD9D2"/>
+            <path d="M134 81 q9 12 19 0 q9 12 18 0 q9 12 18 0 q9 12 18 0 q10 12 19 0 v-8 a7 7 0 0 0 -7 -7 h-78 a7 7 0 0 0 -7 7 z" fill="#F6DFDA"/>
+
+            <g>
+              <circle cx="180" cy="60" r="13" fill="#F6DFDA" stroke="#C9A227" stroke-opacity=".6"/>
+              <circle cx="166" cy="68" r="9" fill="#FBEBE6"/>
+              <circle cx="194" cy="68" r="9" fill="#FBEBE6"/>
+              <circle cx="180" cy="60" r="4.5" fill="#C9A227"/>
+              <ellipse cx="156" cy="58" rx="9" ry="4.5" fill="#B8C4A9" transform="rotate(-28 156 58)"/>
+              <ellipse cx="204" cy="58" rx="9" ry="4.5" fill="#B8C4A9" transform="rotate(28 204 58)"/>
+            </g>
+          </svg>
+        </div>
+
+        <div class="wedding-calc reveal" id="weddingCalc">
+          <h3>Калькулятор веса торта</h3>
+          <p class="calc-rule">1 кг торта ≈ 5 гостей</p>
+
+          <label class="calc-label" for="guestsRange">Гостей на свадьбе: <output id="guestsOut">60</output></label>
+          <input type="range" id="guestsRange" min="10" max="200" step="5" value="60">
+
+          <div class="calc-results">
+            <div class="calc-item">
+              <span class="calc-num" id="weightOut">12</span>
+              <span class="calc-cap">кг — рекомендуемый вес</span>
+            </div>
+            <div class="calc-item">
+              <span class="calc-num" id="tiersOut">4</span>
+              <span class="calc-cap">яруса</span>
+            </div>
+            <div class="calc-item">
+              <span class="calc-num"><span id="priceOut">38 400</span> ₽</span>
+              <span class="calc-cap">ориентировочно, от 3 200 ₽/кг</span>
+            </div>
+          </div>
+
+          <p class="calc-note">Точную стоимость назовём после эскиза: декор, живые цветы и фигурки считаются отдельно.</p>
+          <a href="#order" class="btn btn-gold" data-fill-povod="Свадьба">Записаться на дегустацию</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-divider" aria-hidden="true"></div>
+
+  <!-- НАЧИНКИ -->
+  <section class="section fillings" id="fillings">
+    <div class="container">
+      <p class="section-script script-accent reveal">внутри — тоже искусство</p>
+      <h2 class="reveal">Фирменные начинки</h2>
+      <p class="section-sub reveal">Каждую можно попробовать на дегустации.</p>
+
+      <div class="fillings-grid">
+        <article class="filling-card reveal">
+          <svg viewBox="0 0 220 150" aria-label="Разрез торта фисташка-малина">
+            <path d="M30 130 V50 L190 20 V130 Z" fill="#EFE8D8"/>
+            <path d="M30 108 L190 78 V92 L30 122 Z" fill="#B8C4A9"/>
+            <path d="M30 90 L190 60 V74 L30 104 Z" fill="#C44569" opacity=".85"/>
+            <path d="M30 68 L190 38 V52 L30 82 Z" fill="#EFE8D8"/>
+            <path d="M30 50 L190 20 V32 L30 62 Z" fill="#B8C4A9"/>
+            <circle cx="60" cy="42" r="6" fill="#C44569"/>
+            <circle cx="78" cy="38" r="5" fill="#D2557B"/>
+          </svg>
+          <h3>Фисташка-малина</h3>
+          <p class="script-accent f-note">нежнейший</p>
+          <p>Фисташковый бисквит, малиновый конфи, крем-чиз</p>
+        </article>
+
+        <article class="filling-card reveal">
+          <svg viewBox="0 0 220 150" aria-label="Разрез торта тёмный шоколад-вишня">
+            <path d="M30 130 V50 L190 20 V130 Z" fill="#5A3633"/>
+            <path d="M30 108 L190 78 V92 L30 122 Z" fill="#3E2422"/>
+            <path d="M30 90 L190 60 V74 L30 104 Z" fill="#7B1E3B"/>
+            <path d="M30 68 L190 38 V52 L30 82 Z" fill="#5A3633"/>
+            <path d="M30 50 L190 20 V32 L30 62 Z" fill="#4A2C2A"/>
+            <circle cx="62" cy="40" r="6" fill="#7B1E3B"/>
+            <path d="M62 34 q2 -8 8 -10" stroke="#B8C4A9" stroke-width="2" fill="none"/>
+          </svg>
+          <h3>Тёмный шоколад-вишня</h3>
+          <p class="script-accent f-note">классика жанра</p>
+          <p>Шоколад 70%, вишнёвый компоте, ганаш</p>
+        </article>
+
+        <article class="filling-card reveal">
+          <svg viewBox="0 0 220 150" aria-label="Разрез торта ваниль-карамель">
+            <path d="M30 130 V50 L190 20 V130 Z" fill="#FBF3E4"/>
+            <path d="M30 108 L190 78 V92 L30 122 Z" fill="#E8C98F"/>
+            <path d="M30 90 L190 60 V74 L30 104 Z" fill="#C98F3B"/>
+            <path d="M30 68 L190 38 V52 L30 82 Z" fill="#FBF3E4"/>
+            <path d="M30 50 L190 20 V32 L30 62 Z" fill="#E8C98F"/>
+            <path d="M56 40 q14 10 28 0" stroke="#C98F3B" stroke-width="4" fill="none" stroke-linecap="round"/>
+          </svg>
+          <h3>Ваниль-карамель</h3>
+          <p class="script-accent f-note">хит сезона</p>
+          <p>Мадагаскарская ваниль, солёная карамель, крем-чиз</p>
+        </article>
+
+        <article class="filling-card reveal">
+          <svg viewBox="0 0 220 150" aria-label="Разрез торта лимон-базилик">
+            <path d="M30 130 V50 L190 20 V130 Z" fill="#FDF6D8"/>
+            <path d="M30 108 L190 78 V92 L30 122 Z" fill="#F0DF9A"/>
+            <path d="M30 90 L190 60 V74 L30 104 Z" fill="#B8C4A9"/>
+            <path d="M30 68 L190 38 V52 L30 82 Z" fill="#FDF6D8"/>
+            <path d="M30 50 L190 20 V32 L30 62 Z" fill="#F0DF9A"/>
+            <ellipse cx="62" cy="38" rx="10" ry="5" fill="#B8C4A9" transform="rotate(-20 62 38)"/>
+            <circle cx="82" cy="40" r="5" fill="#E8D26B"/>
+          </svg>
+          <h3>Лимон-базилик</h3>
+          <p class="script-accent f-note">освежающий</p>
+          <p>Лимонный курд, крем с базиликом, ванильный бисквит</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-divider" aria-hidden="true"></div>
+
+  <!-- ОТЗЫВЫ -->
+  <section class="section reviews" id="reviews">
+    <div class="container">
+      <p class="section-script script-accent reveal">нам доверяют праздники</p>
+      <h2 class="reveal">Отзывы</h2>
+      <div class="rating-badge reveal" aria-label="Рейтинг 5.0 на Яндекс Картах">
+        <span class="stars">★★★★★</span>
+        <span><strong>5.0</strong> на Яндекс Картах · 214 отзывов</span>
+      </div>
+
+      <div class="reviews-carousel reveal">
+        <button class="slider-btn prev" id="revPrev" aria-label="Предыдущий отзыв">‹</button>
+        <div class="reviews-viewport">
+          <div class="reviews-track" id="revTrack">
+
+            <figure class="review-slide is-active">
+              <div class="review-art" aria-hidden="true">
+                <svg viewBox="0 0 120 110">
+                  <ellipse cx="60" cy="100" rx="46" ry="6" fill="#C9A227"/>
+                  <rect x="22" y="58" width="76" height="40" rx="6" fill="#FFF" stroke="#EBD9D2"/>
+                  <path d="M22 64 q10 12 19 0 q10 12 19 0 q10 12 19 0 q10 12 19 0 v-8 a6 6 0 0 0 -6 -6 h-64 a6 6 0 0 0 -6 6 z" fill="#F6DFDA"/>
+                  <rect x="34" y="28" width="52" height="30" rx="5" fill="#FFF" stroke="#EBD9D2"/>
+                  <path d="M34 33 q8 10 13 0 q7 10 13 0 q7 10 13 0 q7 10 13 0 v-6 a5 5 0 0 0 -5 -5 h-42 a5 5 0 0 0 -5 5 z" fill="#F6DFDA"/>
+                  <circle cx="60" cy="22" r="5" fill="#C9A227"/>
+                </svg>
+              </div>
+              <blockquote>«Торт был такой красивый, что гости фотографировали его дольше, чем нас с женихом. А по вкусу — фисташка с малиной просто растворяется во рту.»</blockquote>
+              <figcaption><strong>Анна и Дмитрий</strong> · свадьба, 80 гостей</figcaption>
+            </figure>
+
+            <figure class="review-slide">
+              <div class="review-art" aria-hidden="true">
+                <svg viewBox="0 0 120 110">
+                  <g transform="translate(18 46)">
+                    <path d="M0 10 a26 10 0 0 1 52 0 z" fill="#F6DFDA"/>
+                    <rect x="0" y="8" width="52" height="7" rx="3.5" fill="#FFF"/>
+                    <path d="M0 15 a26 10 0 0 0 52 0 z" fill="#EBC9C1"/>
+                  </g>
+                  <g transform="translate(56 32)">
+                    <path d="M0 10 a26 10 0 0 1 52 0 z" fill="#B8C4A9"/>
+                    <rect x="0" y="8" width="52" height="7" rx="3.5" fill="#FFF"/>
+                    <path d="M0 15 a26 10 0 0 0 52 0 z" fill="#9FAF8C"/>
+                  </g>
+                  <g transform="translate(38 62)">
+                    <path d="M0 10 a26 10 0 0 1 52 0 z" fill="#E8C98F"/>
+                    <rect x="0" y="8" width="52" height="7" rx="3.5" fill="#FFF"/>
+                    <path d="M0 15 a26 10 0 0 0 52 0 z" fill="#C9A227"/>
+                  </g>
+                </svg>
+              </div>
+              <blockquote>«Заказываем макаруны для клиентов уже третий год. Упаковка — как коробочка из ювелирного, вкус стабильно безупречный. Ни одной задержки.»</blockquote>
+              <figcaption><strong>Ольга</strong> · корпоративный заказ, 300 шт</figcaption>
+            </figure>
+
+            <figure class="review-slide">
+              <div class="review-art" aria-hidden="true">
+                <svg viewBox="0 0 120 110">
+                  <rect x="24" y="66" width="72" height="30" rx="8" fill="#FBEBE6" stroke="#E8CFC6"/>
+                  <rect x="24" y="56" width="72" height="12" rx="6" fill="#F6DFDA" stroke="#E8CFC6"/>
+                  <rect x="40" y="30" width="40" height="26" rx="6" fill="#FFF" stroke="#EBD9D2"/>
+                  <ellipse cx="60" cy="32" rx="20" ry="6" fill="#F6DFDA"/>
+                  <path d="M48 40 q6 5 12 0 q6 -5 12 0" stroke="#4A2C2A" stroke-width="2" fill="none" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <blockquote>«Бенто-торт с надписью “Папе лучшему” привезли за день. Папа, человек суровый, сфотографировал его и отправил всем родственникам.»</blockquote>
+              <figcaption><strong>Марина</strong> · бенто-торт на юбилей</figcaption>
+            </figure>
+
+            <figure class="review-slide">
+              <div class="review-art" aria-hidden="true">
+                <svg viewBox="0 0 120 110">
+                  <g transform="translate(14 44) rotate(-5 45 20)">
+                    <rect x="0" y="12" width="92" height="24" rx="12" fill="#E4B97C"/>
+                    <rect x="0" y="4" width="92" height="18" rx="9" fill="#4A2C2A"/>
+                    <path d="M14 9 q18 -6 36 0" stroke="#7A4A44" stroke-width="4" fill="none" stroke-linecap="round"/>
+                  </g>
+                  <g transform="translate(20 72) rotate(3 45 15)">
+                    <rect x="0" y="8" width="80" height="20" rx="10" fill="#E4B97C"/>
+                    <rect x="0" y="1" width="80" height="15" rx="7" fill="#F6DFDA"/>
+                  </g>
+                </svg>
+              </div>
+              <blockquote>«Эклеры с лимоном и базиликом — это как десерт из парижской витрины, только в нашем городе. Дочь съела три и попросила повторить на выпускной.»</blockquote>
+              <figcaption><strong>Екатерина</strong> · набор эклеров</figcaption>
+            </figure>
+
+          </div>
+        </div>
+        <button class="slider-btn next" id="revNext" aria-label="Следующий отзыв">›</button>
+      </div>
+      <div class="reviews-dots" id="revDots" role="tablist" aria-label="Навигация по отзывам"></div>
+    </div>
+  </section>
+
+  <div class="gold-divider" aria-hidden="true"></div>
+
+  <!-- ДОСТАВКА -->
+  <section class="section delivery" id="delivery">
+    <div class="container">
+      <p class="section-script script-accent reveal">привезём в идеальном виде</p>
+      <h2 class="reveal">Доставка и самовывоз</h2>
+
+      <div class="delivery-grid">
+        <article class="delivery-card reveal">
+          <div class="delivery-icon" aria-hidden="true">📦</div>
+          <h3>Термокороб</h3>
+          <p>Каждый торт едет в фирменном термокоробе с хладоэлементами — крем не поплывёт даже в +30°.</p>
+        </article>
+        <article class="delivery-card reveal">
+          <div class="delivery-icon" aria-hidden="true">🚗</div>
+          <h3>Доставка в день готовности</h3>
+          <p>Привозим в день изготовления в удобный двухчасовой интервал. Курьер поможет переставить торт в холодильник.</p>
+        </article>
+        <article class="delivery-card reveal">
+          <div class="delivery-icon" aria-hidden="true">🎀</div>
+          <h3>Самовывоз со скидкой</h3>
+          <p>Забираете из студии сами — дарим скидку 5% и коробочку макарун к заказу.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-divider" aria-hidden="true"></div>
+
+  <!-- ФОРМА ЗАКАЗА -->
+  <section class="section order" id="order">
+    <div class="container order-grid">
+      <div class="order-text reveal">
+        <p class="section-script script-accent">расскажите о празднике</p>
+        <h2>Заказать торт</h2>
+        <p class="section-sub align-left">Оставьте заявку — кондитер перезвонит в течение часа,
+        обсудит эскиз, начинку и рассчитает точную стоимость.</p>
+        <ul class="order-bullets">
+          <li>Эскиз бесплатно при заказе от 3 кг</li>
+          <li>Предоплата 30%, остальное — при получении</li>
+          <li>Работаем без маргарина и готовых смесей</li>
+        </ul>
+      </div>
+
+      <form class="order-form reveal" id="orderForm" novalidate>
+        <div class="field">
+          <label for="fName">Ваше имя *</label>
+          <input type="text" id="fName" name="name" placeholder="Как к вам обращаться" autocomplete="name">
+          <span class="field-error" id="errName" hidden>Введите имя (минимум 2 буквы)</span>
+        </div>
+        <div class="field">
+          <label for="fPhone">Телефон *</label>
+          <input type="tel" id="fPhone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" inputmode="tel">
+          <span class="field-error" id="errPhone" hidden>Введите корректный телефон</span>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="fDate">Дата события</label>
+            <input type="date" id="fDate" name="date">
+          </div>
+          <div class="field">
+            <label for="fPovod">Повод</label>
+            <select id="fPovod" name="povod">
+              <option value="">— выбрать —</option>
+              <option>Свадьба</option>
+              <option>День рождения</option>
+              <option>Корпоратив</option>
+              <option>Подарок</option>
+              <option>Просто так</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="fWish">Пожелания</label>
+          <textarea id="fWish" name="wish" rows="4" placeholder="Начинка, цвет, надпись на торте, количество гостей…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-choco btn-wide">Отправить заявку</button>
+        <p class="form-note">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+
+        <div class="form-success" id="formSuccess" hidden>
+          <p class="script-accent success-script">спасибо!</p>
+          <h3>Заявка отправлена</h3>
+          <p>Кондитер свяжется с вами в течение часа.<br>А пока — полюбуйтесь витриной ещё раз.</p>
+          <button type="button" class="btn btn-ghost" id="successClose">Отправить ещё одну</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ФУТЕР -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="#hero" class="logo logo-footer">
+          <span class="logo-script">Maison</span>
+          <span class="logo-main">DOUCE</span>
+        </a>
+        <p class="footer-tag script-accent">десерты как украшения</p>
+      </div>
+      <div class="footer-col">
+        <h4>Студия</h4>
+        <p>ул. Кремлёвская, 12, ТЦ «Атриум», 2 этаж</p>
+        <p><a href="tel:+78432000000">+7 (843) 200-00-00</a></p>
+        <p><a href="mailto:hello@maison-douce.ru">hello@maison-douce.ru</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Режим работы</h4>
+        <p>Пн–Сб: 9:00 – 21:00</p>
+        <p>Вс: 10:00 – 20:00</p>
+        <p class="footer-note">Срочные заказы — от 24 часов</p>
+      </div>
+      <div class="footer-col">
+        <h4>Мы в соцсетях</h4>
+        <div class="socials">
+          <a href="#" aria-label="ВКонтакте" class="social-link">VK</a>
+          <a href="#" aria-label="Telegram" class="social-link">TG</a>
+          <a href="#" aria-label="Instagram" class="social-link">IG</a>
+        </div>
+        <div class="insta-strip" aria-hidden="true">
+          <span>🎂</span><span>🧁</span><span>🍰</span><span>🥐</span><span>🍮</span><span>🍩</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Maison Douce · Сделано <span class="script-accent">с любовью</span> и сливочным кремом</p>
+    </div>
+  </footer>
+
+  <!-- Плавающая кнопка-макарун -->
+  <a href="#order" class="macaron-fab" id="macaronFab" aria-label="Заказать торт">
+    <span class="macaron-icon" aria-hidden="true">
+      <svg viewBox="0 0 64 44">
+        <path d="M4 20 a28 15 0 0 1 56 0 z" fill="#F6DFDA"/>
+        <rect x="4" y="18" width="56" height="8" rx="4" fill="#FFF"/>
+        <path d="M4 26 a28 14 0 0 0 56 0 z" fill="#EBC9C1"/>
+      </svg>
+    </span>
+    <span class="fab-text">Заказать торт</span>
+  </a>
+
+  <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>

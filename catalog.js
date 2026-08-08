@@ -124,4 +124,24 @@ const WORKS = [
     style: "Тёплый, эмоциональный, скандинавский",
     path: "kitchens/family-hearth/",
   },
+
+  // --- Кондитерская ---
+  {
+    category: "Кондитерская",
+    title: "Бенто-Поп",
+    style: "Яркий, дерзкий, молодёжный",
+    path: "confectionery/bento-pop/",
+  },
+  {
+    category: "Кондитерская",
+    title: "Как дома",
+    style: "Натуральность, тепло, крафт",
+    path: "confectionery/like-home/",
+  },
+  {
+    category: "Кондитерская",
+    title: "Патиссерия",
+    style: "Французская витрина, премиум-элегантность",
+    path: "confectionery/patisserie/",
+  },
 ];
