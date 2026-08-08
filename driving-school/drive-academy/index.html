@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drive Academy — автошкола премиум-класса | Твоя категория B без нервов</title>
+  <meta name="description" content="Премиальная автошкола Drive Academy: личный инструктор, современный автопарк, 92% учеников сдают экзамен с первого раза. Обучение от 35 000 ₽.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== ШАПКА ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#hero" class="logo" aria-label="Drive Academy — на главную">
+        <svg class="logo__icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M4 22 L16 6 L28 22" stroke="#00D4FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M9 26 L16 16 L23 26" stroke="#8B5CF6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="logo__text">Drive<span>Academy</span></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#program" class="nav__link">Программа</a>
+        <a href="#fleet" class="nav__link">Автопарк</a>
+        <a href="#instructors" class="nav__link">Инструкторы</a>
+        <a href="#prices" class="nav__link">Цены</a>
+        <a href="#reviews" class="nav__link">Отзывы</a>
+        <a href="tel:+79090939400" class="nav__phone">+7 909 093-94-00</a>
+        <a href="#cta" class="btn btn--small nav__cta">Пробный урок — 0 ₽</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__glow hero__glow--cyan"></div>
+      <div class="hero__glow hero__glow--violet"></div>
+      <!-- Неоновая дорога в перспективе -->
+      <svg class="hero__road" viewBox="0 0 1440 520" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="roadEdgeL" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#00D4FF" stop-opacity="0"/>
+            <stop offset="1" stop-color="#00D4FF" stop-opacity="0.9"/>
+          </linearGradient>
+          <linearGradient id="roadEdgeR" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#8B5CF6" stop-opacity="0"/>
+            <stop offset="1" stop-color="#8B5CF6" stop-opacity="0.9"/>
+          </linearGradient>
+          <linearGradient id="dashGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffffff" stop-opacity="0.1"/>
+            <stop offset="1" stop-color="#00D4FF" stop-opacity="0.85"/>
+          </linearGradient>
+          <linearGradient id="horizonFade" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#0B0E17" stop-opacity="1"/>
+            <stop offset="0.55" stop-color="#0B0E17" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <!-- покрытие -->
+        <polygon points="700,120 740,120 1180,520 260,520" fill="#10142a" opacity="0.85"/>
+        <!-- края трассы -->
+        <line x1="700" y1="120" x2="260" y2="520" stroke="url(#roadEdgeL)" stroke-width="3" class="road-edge road-edge--glow"/>
+        <line x1="740" y1="120" x2="1180" y2="520" stroke="url(#roadEdgeR)" stroke-width="3" class="road-edge road-edge--glow"/>
+        <!-- свет фар по центру -->
+        <ellipse cx="720" cy="470" rx="300" ry="46" fill="#00D4FF" opacity="0.08" class="headlight"/>
+        <ellipse cx="720" cy="430" rx="150" ry="26" fill="#8B5CF6" opacity="0.1" class="headlight headlight--violet"/>
+        <!-- анимированная разметка: сегменты «едут» на зрителя -->
+        <g class="road-dashes">
+          <polygon class="dash" points="718,150 722,150 724,180 716,180" fill="url(#dashGrad)"/>
+          <polygon class="dash" points="714,210 726,210 731,255 709,255" fill="url(#dashGrad)"/>
+          <polygon class="dash" points="706,300 734,300 742,365 698,365" fill="url(#dashGrad)"/>
+          <polygon class="dash" points="693,420 747,420 760,520 680,520" fill="url(#dashGrad)"/>
+        </g>
+        <rect x="0" y="0" width="1440" height="220" fill="url(#horizonFade)"/>
+      </svg>
+    </div>
+
+    <div class="container hero__content">
+      <p class="hero__eyebrow reveal">Автошкола премиум-класса · Москва</p>
+      <h1 class="hero__title reveal reveal--d1">
+        Твоя категория <span class="neon-text">B</span> —<br>без нервов
+      </h1>
+      <p class="hero__subtitle reveal reveal--d2">
+        Личный инструктор, современные авто и отработка маршрутов экзамена ГИБДД.
+        Учим так, чтобы ты сдал <strong>с первого раза</strong> — и получал удовольствие от вождения.
+      </p>
+      <div class="hero__actions reveal reveal--d3">
+        <a href="#cta" class="btn btn--neon btn--pulse">Записаться на пробный урок</a>
+        <a href="tel:+79090939400" class="btn btn--ghost">+7 909 093-94-00</a>
+      </div>
+      <div class="hero__badges reveal reveal--d4">
+        <div class="badge">
+          <span class="badge__value">92%</span>
+          <span class="badge__label">учеников сдают экзамен<br>с первого раза</span>
+        </div>
+        <div class="badge__divider" aria-hidden="true"></div>
+        <div class="badge">
+          <span class="badge__value">от 35 000 ₽</span>
+          <span class="badge__label">полный курс обучения<br>с рассрочкой 0%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Счётчики -->
+    <div class="container hero__stats reveal">
+      <div class="stat">
+        <span class="stat__num counter" data-target="4800" data-suffix="+">0</span>
+        <span class="stat__label">выпускников за 12 лет</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num counter" data-target="12" data-suffix="">0</span>
+        <span class="stat__label">лет на рынке</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num counter" data-target="18" data-suffix="">0</span>
+        <span class="stat__label">инструкторов в команде</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num counter" data-target="14" data-suffix="">0</span>
+        <span class="stat__label">авто в учебном парке</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== БЕГУЩАЯ СТРОКА ===== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__item">Личный инструктор <i>•</i> Современный автопарк <i>•</i> Своя автодром-площадка <i>•</i> Рассрочка 0% <i>•</i>&nbsp;</span>
+      <span class="marquee__item">Личный инструктор <i>•</i> Современный автопарк <i>•</i> Своя автодром-площадка <i>•</i> Рассрочка 0% <i>•</i>&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- ===== ПРОГРАММА: ТРАССА С ЧЕКПОИНТАМИ ===== -->
+  <section class="section program" id="program">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="section__eyebrow">Программа обучения</p>
+        <h2 class="section__title">Твоя трасса до прав — <span class="neon-text">4 чекпоинта</span></h2>
+        <p class="section__lead">Наведи на этап, чтобы увидеть детали. Машинка уже едет по маршруту.</p>
+      </div>
+
+      <div class="track reveal" id="track">
+        <svg class="track__svg" viewBox="0 0 1000 260" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="trackGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#00D4FF"/>
+              <stop offset="1" stop-color="#8B5CF6"/>
+            </linearGradient>
+          </defs>
+          <path id="trackPath" d="M 30 210 C 200 210, 260 60, 430 60 C 600 60, 640 210, 780 150 C 860 116, 920 60, 970 50"
+                fill="none" stroke="url(#trackGrad)" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 8" class="track__line"/>
+        </svg>
+
+        <!-- Машинка, движущаяся по трассе -->
+        <div class="track__car" id="trackCar" aria-hidden="true">
+          <svg viewBox="0 0 48 24" fill="none">
+            <path d="M4 16 L10 8 Q11 6 14 6 L30 6 Q33 6 35 8 L42 15 Q44 16 44 18 L44 19 L4 19 Z" fill="#00D4FF"/>
+            <circle cx="13" cy="19" r="3.4" fill="#0B0E17" stroke="#00D4FF" stroke-width="1.6"/>
+            <circle cx="35" cy="19" r="3.4" fill="#0B0E17" stroke="#00D4FF" stroke-width="1.6"/>
+            <path d="M14 8.5 L28 8.5" stroke="#0B0E17" stroke-width="1.6"/>
+          </svg>
+        </div>
+
+        <ol class="track__points">
+          <li class="checkpoint reveal" style="--i:0">
+            <button class="checkpoint__node" type="button" aria-expanded="false">
+              <span class="checkpoint__num">01</span>
+            </button>
+            <div class="checkpoint__card">
+              <h3>Теория</h3>
+              <p class="checkpoint__duration">3–4 недели · онлайн и в классе</p>
+              <p>ПДД на живых кейсах, симулятор билетов, разбор экзаменационных ловушек. Внутренний зачёт до 90% правильных ответов.</p>
+            </div>
+          </li>
+          <li class="checkpoint reveal" style="--i:1">
+            <button class="checkpoint__node" type="button" aria-expanded="false">
+              <span class="checkpoint__num">02</span>
+            </button>
+            <div class="checkpoint__card">
+              <h3>Автодром</h3>
+              <p class="checkpoint__duration">10 занятий · своя площадка</p>
+              <p>Параллельная парковка, эстакада, «змейка» и разворот в ограниченном пространстве — на нашей закрытой площадке без трафика.</p>
+            </div>
+          </li>
+          <li class="checkpoint reveal" style="--i:2">
+            <button class="checkpoint__node" type="button" aria-expanded="false">
+              <span class="checkpoint__num">03</span>
+            </button>
+            <div class="checkpoint__card">
+              <h3>Город</h3>
+              <p class="checkpoint__duration">12–16 занятий · реальные маршруты</p>
+              <p>Езда по официальным экзаменационным маршрутам ГИБДД, ночной город, дождь, плотный трафик — с личным инструктором рядом.</p>
+            </div>
+          </li>
+          <li class="checkpoint reveal" style="--i:3">
+            <button class="checkpoint__node" type="button" aria-expanded="false">
+              <span class="checkpoint__num">04</span>
+            </button>
+            <div class="checkpoint__card">
+              <h3>Экзамен ГИБДД</h3>
+              <p class="checkpoint__duration">1 день · сопровождение</p>
+              <p>Подаём документы, даём учебное авто на экзамен и морально держим за руку. 92% наших учеников сдают с первой попытки.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== АВТОПАРК ===== -->
+  <section class="section fleet" id="fleet">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="section__eyebrow">Автопарк</p>
+        <h2 class="section__title">Учись на авто, <span class="neon-text">которые хочется водить</span></h2>
+        <p class="section__lead">Все машины — не старше 3 лет, с дополнительными педалями и камерами для инструктора.</p>
+      </div>
+
+      <div class="fleet__grid">
+        <article class="car-card reveal" style="--i:0">
+          <div class="car-card__visual car-card__visual--sedan" aria-hidden="true">
+            <svg viewBox="0 0 240 90" fill="none">
+              <path d="M18 62 L34 62 L52 40 Q56 34 64 33 L150 30 Q160 30 168 36 L196 56 L222 58 Q230 59 230 66 L230 70 L18 70 Z" fill="currentColor" opacity="0.9"/>
+              <path d="M62 38 L100 36 L100 50 L56 50 Z M110 36 L148 34 L160 50 L110 50 Z" fill="#0B0E17" opacity="0.85"/>
+              <circle cx="66" cy="70" r="13" fill="#0B0E17" stroke="currentColor" stroke-width="3"/>
+              <circle cx="180" cy="70" r="13" fill="#0B0E17" stroke="currentColor" stroke-width="3"/>
+              <path d="M230 64 L238 64" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+            </svg>
+          </div>
+          <h3 class="car-card__name">Kia Rio</h3>
+          <p class="car-card__type">Седан · основной учебный</p>
+          <ul class="car-card__specs">
+            <li>МКПП / АКПП</li><li>2023 год</li><li>Камера 360°</li>
+          </ul>
+        </article>
+
+        <article class="car-card reveal" style="--i:1">
+          <div class="car-card__visual car-card__visual--hatch" aria-hidden="true">
+            <svg viewBox="0 0 240 90" fill="none">
+              <path d="M16 62 L32 60 L50 38 Q54 32 62 31 L140 28 Q150 28 158 34 L186 56 L220 58 Q230 59 230 66 L230 70 L16 70 Z" fill="currentColor" opacity="0.9"/>
+              <path d="M60 37 L96 35 L96 50 L54 50 Z M106 35 L140 33 L152 50 L106 50 Z" fill="#0B0E17" opacity="0.85"/>
+              <circle cx="62" cy="70" r="13" fill="#0B0E17" stroke="currentColor" stroke-width="3"/>
+              <circle cx="176" cy="70" r="13" fill="#0B0E17" stroke="currentColor" stroke-width="3"/>
+              <path d="M230 64 L238 64" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+            </svg>
+          </div>
+          <h3 class="car-card__name">Volkswagen Polo</h3>
+          <p class="car-card__type">Хэтчбек · для города</p>
+          <ul class="car-card__specs">
+            <li>АКПП</li><li>2024 год</li><li>Парктроники</li>
+          </ul>
+        </article>
+
+        <article class="car-card reveal" style="--i:2">
+          <div class="car-card__visual car-card__visual--cross" aria-hidden="true">
+            <svg viewBox="0 0 240 90" fill="none">
+              <path d="M16 60 L30 58 L46 30 Q50 24 58 23 L150 21 Q158 21 166 27 L192 52 L222 54 Q230 55 230 62 L230 68 L16 68 Z" fill="currentColor" opacity="0.9"/>
+              <path d="M58 30 L100 28 L100 48 L52 48 Z M110 28 L150 26 L162 48 L110 48 Z" fill="#0B0E17" opacity="0.85"/>
+              <circle cx="64" cy="68" r="14" fill="#0B0E17" stroke="currentColor" stroke-width="3"/>
+              <circle cx="180" cy="68" r="14" fill="#0B0E17" stroke="currentColor" stroke-width="3"/>
+              <path d="M230 60 L238 60" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+            </svg>
+          </div>
+          <h3 class="car-card__name">Hyundai Creta</h3>
+          <p class="car-card__type">Кроссовер · высокая посадка</p>
+          <ul class="car-card__specs">
+            <li>АКПП</li><li>2023 год</li><li>Климат-контроль</li>
+          </ul>
+        </article>
+
+        <article class="car-card reveal" style="--i:3">
+          <div class="car-card__visual car-card__visual--premium" aria-hidden="true">
+            <svg viewBox="0 0 240 90" fill="none">
+              <path d="M14 62 L36 61 L56 42 Q60 37 68 36 L158 33 Q168 33 176 39 L200 57 L224 59 Q230 60 230 66 L230 70 L14 70 Z" fill="currentColor" opacity="0.9"/>
+              <path d="M66 41 L106 39 L106 52 L60 52 Z M116 39 L156 37 L168 52 L116 52 Z" fill="#0B0E17" opacity="0.85"/>
+              <circle cx="68" cy="70" r="12" fill="#0B0E17" stroke="currentColor" stroke-width="3"/>
+              <circle cx="184" cy="70" r="12" fill="#0B0E17" stroke="currentColor" stroke-width="3"/>
+              <path d="M230 64 L238 64" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+            </svg>
+          </div>
+          <h3 class="car-card__name">BMW 3 Series</h3>
+          <p class="car-card__type">Премиум · пакет VIP</p>
+          <ul class="car-card__specs">
+            <li>АКПП</li><li>2024 год</li><li>Спорт-режим</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ИНСТРУКТОРЫ ===== -->
+  <section class="section instructors" id="instructors">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="section__eyebrow">Команда</p>
+        <h2 class="section__title">Инструкторы, которым <span class="neon-text">доверяют нервы</span></h2>
+        <p class="section__lead">Спокойные, пунктуальные, без крика в салоне. Выбирай своего — или доверь подбор нам.</p>
+      </div>
+
+      <div class="instructors__grid">
+        <article class="coach reveal" style="--i:0">
+          <div class="coach__avatar" aria-hidden="true">
+            <svg viewBox="0 0 96 96" fill="none">
+              <circle cx="48" cy="48" r="46" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+              <circle cx="48" cy="38" r="15" fill="currentColor" opacity="0.9"/>
+              <path d="M20 82 Q20 60 48 60 Q76 60 76 82 Z" fill="currentColor" opacity="0.9"/>
+              <rect x="30" y="32" width="36" height="7" rx="3.5" fill="#0B0E17" opacity="0.85"/>
+            </svg>
+          </div>
+          <h3 class="coach__name">Андрей Волков</h3>
+          <p class="coach__exp">Стаж 14 лет · механика и автомат</p>
+          <div class="coach__meta">
+            <div class="coach__rating"><span class="star">★</span> 4.98</div>
+            <div class="coach__pass"><b>96%</b> сдают с первого раза</div>
+          </div>
+          <p class="coach__quote">«Научу чувствовать машину, а не зубрить манёвры».</p>
+        </article>
+
+        <article class="coach reveal" style="--i:1">
+          <div class="coach__avatar" aria-hidden="true">
+            <svg viewBox="0 0 96 96" fill="none">
+              <circle cx="48" cy="48" r="46" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+              <circle cx="48" cy="38" r="15" fill="currentColor" opacity="0.9"/>
+              <path d="M20 82 Q20 60 48 60 Q76 60 76 82 Z" fill="currentColor" opacity="0.9"/>
+              <path d="M32 30 Q48 18 64 30 L64 38 Q48 30 32 38 Z" fill="#0B0E17" opacity="0.85"/>
+            </svg>
+          </div>
+          <h3 class="coach__name">Марина Соколова</h3>
+          <p class="coach__exp">Стаж 9 лет · автомат, город</p>
+          <div class="coach__meta">
+            <div class="coach__rating"><span class="star">★</span> 5.00</div>
+            <div class="coach__pass"><b>94%</b> сдают с первого раза</div>
+          </div>
+          <p class="coach__quote">«Страх за рулём лечится спокойным голосом и практикой».</p>
+        </article>
+
+        <article class="coach reveal" style="--i:2">
+          <div class="coach__avatar" aria-hidden="true">
+            <svg viewBox="0 0 96 96" fill="none">
+              <circle cx="48" cy="48" r="46" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+              <circle cx="48" cy="38" r="15" fill="currentColor" opacity="0.9"/>
+              <path d="M20 82 Q20 60 48 60 Q76 60 76 82 Z" fill="currentColor" opacity="0.9"/>
+              <path d="M33 30 L63 30 L60 24 L36 24 Z" fill="#0B0E17" opacity="0.85"/>
+              <path d="M40 52 L56 52" stroke="#0B0E17" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+            </svg>
+          </div>
+          <h3 class="coach__name">Дмитрий Ким</h3>
+          <p class="coach__exp">Стаж 11 лет · премиум-авто, VIP</p>
+          <div class="coach__meta">
+            <div class="coach__rating"><span class="star">★</span> 4.97</div>
+            <div class="coach__pass"><b>97%</b> сдают с первого раза</div>
+          </div>
+          <p class="coach__quote">«Экзамен — это просто ещё одна поездка по знакомому маршруту».</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ЦЕНЫ ===== -->
+  <section class="section prices" id="prices">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="section__eyebrow">Тарифы</p>
+        <h2 class="section__title">Честные пакеты <span class="neon-text">без доплат</span></h2>
+        <p class="section__lead">Рассрочка 0% на любой пакет. Цена фиксируется в договоре и не растёт в процессе.</p>
+      </div>
+
+      <div class="prices__grid">
+        <article class="plan reveal" style="--i:0">
+          <h3 class="plan__name">Стандарт</h3>
+          <p class="plan__price">35 000 ₽</p>
+          <p class="plan__note">или 2 920 ₽/мес в рассрочку</p>
+          <ul class="plan__list">
+            <li>Теория: 34 часа, онлайн + класс</li>
+            <li>Практика: 20 занятий на Kia Rio</li>
+            <li>Своя автодром-площадка</li>
+            <li>Внутренний экзамен и зачёт</li>
+            <li>Методичка и доступ к симулятору билетов</li>
+          </ul>
+          <a href="#cta" class="btn btn--ghost plan__btn" data-plan="Стандарт">Выбрать «Стандарт»</a>
+        </article>
+
+        <article class="plan plan--featured reveal" style="--i:1">
+          <span class="plan__tag">Выбирают 7 из 10</span>
+          <h3 class="plan__name">Комфорт</h3>
+          <p class="plan__price">52 000 ₽</p>
+          <p class="plan__note">или 4 330 ₽/мес в рассрочку</p>
+          <ul class="plan__list">
+            <li>Всё из пакета «Стандарт»</li>
+            <li>Практика: 28 занятий на Polo / Creta</li>
+            <li>Ночной город и дождь — 2 занятия</li>
+            <li>Прокат учебного авто на экзамен ГИБДД</li>
+            <li>Подача документов без очередей</li>
+            <li>2 бесплатных пересдачи внутреннего зачёта</li>
+          </ul>
+          <a href="#cta" class="btn btn--neon plan__btn" data-plan="Комфорт">Выбрать «Комфорт»</a>
+        </article>
+
+        <article class="plan reveal" style="--i:2">
+          <h3 class="plan__name">VIP</h3>
+          <p class="plan__price">89 000 ₽</p>
+          <p class="plan__note">или 7 420 ₽/мес в рассрочку</p>
+          <ul class="plan__list">
+            <li>Всё из пакета «Комфорт»</li>
+            <li>Личный инструктор на весь курс</li>
+            <li>Практика на BMW 3 Series</li>
+            <li>Подача авто к дому или офису</li>
+            <li>Гибкое расписание 7:00–23:00</li>
+            <li>Гарантия: докатай до сдачи бесплатно</li>
+          </ul>
+          <a href="#cta" class="btn btn--ghost plan__btn" data-plan="VIP">Выбрать «VIP»</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ОТЗЫВЫ ===== -->
+  <section class="section reviews" id="reviews">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="section__eyebrow">Отзывы</p>
+        <h2 class="section__title">Сдали <span class="neon-text">с первого раза</span> — и рассказали об этом</h2>
+      </div>
+
+      <div class="carousel reveal" id="carousel">
+        <div class="carousel__viewport">
+          <div class="carousel__track" id="carouselTrack">
+            <blockquote class="review">
+              <p class="review__text">Боялась садиться за руль до 30 лет. Марина за два месяца сделала из меня водителя: экзамен в ГИБДД сдала с первой попытки, инспектор даже похвалил парковку.</p>
+              <footer class="review__author">
+                <span class="review__name">Ольга, 31</span>
+                <span class="review__meta">Категория B · пакет «Комфорт»</span>
+              </footer>
+            </blockquote>
+            <blockquote class="review">
+              <p class="review__text">Брал VIP с личным инструктором — Дмитрий подгонял занятия под мой график, машину подавали к офису. Сдал теорию и практику с первого раза, без единой помарки.</p>
+              <footer class="review__author">
+                <span class="review__name">Тимур, 28</span>
+                <span class="review__meta">Категория B · пакет «VIP»</span>
+              </footer>
+            </blockquote>
+            <blockquote class="review">
+              <p class="review__text">Учился на механике у Андрея. Самое ценное — отработка реальных маршрутов экзамена. На экзамене ехал как по домашнему району. Права в кармане с первой попытки.</p>
+              <footer class="review__author">
+                <span class="review__name">Игорь, 24</span>
+                <span class="review__meta">Категория B · пакет «Стандарт»</span>
+              </footer>
+            </blockquote>
+            <blockquote class="review">
+              <p class="review__text">До Drive Academy дважды завалила экзамен в другой школе. Здесь разобрали мои ошибки по видеозаписям занятий — и с третьего раза уже в ГИБДД всё получилось легко. Спасибо!</p>
+              <footer class="review__author">
+                <span class="review__name">Анна, 35</span>
+                <span class="review__meta">Категория B · пакет «Комфорт»</span>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+        <div class="carousel__controls">
+          <button class="carousel__arrow" id="prevReview" type="button" aria-label="Предыдущий отзыв">←</button>
+          <div class="carousel__dots" id="carouselDots" role="tablist" aria-label="Слайды отзывов"></div>
+          <button class="carousel__arrow" id="nextReview" type="button" aria-label="Следующий отзыв">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ФИНАЛЬНЫЙ CTA ===== -->
+  <section class="section cta" id="cta">
+    <div class="cta__glow" aria-hidden="true"></div>
+    <div class="container cta__inner reveal">
+      <div class="cta__text">
+        <h2 class="cta__title">Записывайся на пробное занятие — <span class="neon-text">0 ₽</span></h2>
+        <p class="cta__lead">30 минут за рулём учебного авто, знакомство с инструктором и честный план обучения под твой график. Без обязательств.</p>
+        <ul class="cta__perks">
+          <li>Перезвоним в течение 15 минут</li>
+          <li>Подберём инструктора и авто</li>
+          <li>Рассрочка 0% без банка</li>
+        </ul>
+      </div>
+      <form class="cta__form" id="leadForm" novalidate>
+        <div class="field">
+          <label for="leadName">Имя</label>
+          <input type="text" id="leadName" name="name" placeholder="Как к тебе обращаться" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="leadPhone">Телефон</label>
+          <input type="tel" id="leadPhone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+        </div>
+        <div class="field">
+          <label for="leadCategory">Категория прав</label>
+          <select id="leadCategory" name="category" required>
+            <option value="B" selected>B — легковой автомобиль</option>
+            <option value="A">A — мотоцикл</option>
+            <option value="B-auto">B (только автомат)</option>
+            <option value="restore">Восстановление навыков</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn--neon btn--pulse cta__submit">Получить пробный урок за 0 ₽</button>
+        <p class="cta__privacy">Нажимая кнопку, ты соглашаешься с политикой обработки персональных данных.</p>
+        <div class="cta__success" id="formSuccess" role="status" aria-live="polite" hidden>
+          <svg viewBox="0 0 52 52" class="cta__success-icon" aria-hidden="true">
+            <circle cx="26" cy="26" r="24" fill="none" stroke="#00D4FF" stroke-width="2.5"/>
+            <path fill="none" stroke="#00D4FF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" d="M14 27l8 8 16-17"/>
+          </svg>
+          <p><b>Заявка принята!</b><br>Менеджер перезвонит в течение 15 минут и подберёт удобное время пробного урока.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== ФУТЕР ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col footer__brand">
+        <a href="#hero" class="logo" aria-label="Drive Academy">
+          <svg class="logo__icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <path d="M4 22 L16 6 L28 22" stroke="#00D4FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 26 L16 16 L23 26" stroke="#8B5CF6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="logo__text">Drive<span>Academy</span></span>
+        </a>
+        <p>Премиальная автошкола в Москве. Учим водить уверенно с 2013 года.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Контакты</h4>
+        <p>Москва, пр-т Неоновый, 17, стр. 2<br>Ежедневно 9:00–21:00</p>
+        <a href="tel:+79090939400" class="footer__phone">+7 909 093-94-00</a>
+      </div>
+      <div class="footer__col">
+        <h4>Документы</h4>
+        <p>Лицензия на образовательную деятельность<br>№ 77 Л01-0012345 от 14.03.2013</p>
+      </div>
+      <div class="footer__col">
+        <h4>Мы на связи</h4>
+        <div class="footer__socials">
+          <a href="#" aria-label="Telegram" class="social">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.6 18.8 19c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.3.3-.5.5-1 .5l.3-4.6L18 7.3c.4-.3-.1-.5-.6-.2L7 13.2l-4.5-1.4c-1-.3-1-1 .2-1.4l17.6-6.8c.8-.3 1.5.2 1.6 1z"/></svg>
+          </a>
+          <a href="#" aria-label="ВКонтакте" class="social">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 17.5c-5.5 0-8.6-3.8-8.8-10h2.8c.1 4.6 2.1 6.5 3.7 7v-7h2.6v4c1.6-.2 3.2-2 3.7-4h2.6c-.4 2.4-2.1 4.2-3.3 5 1.2.6 3.2 2.2 3.9 5h-2.9c-.6-1.9-2.1-3.4-4.3-3.6v3.6z"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube" class="social">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 8.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.3-1C16.6 5 12 5 12 5s-4.6 0-7.8.2c-.4.1-1.4.1-2.3 1-.7.7-.9 2.3-.9 2.3S.8 10.4.8 12.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.6.2 7.6.2s4.6 0 7.8-.2c.4-.1 1.4-.1 2.3-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 15.3V8.7l6.2 3.3z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© 2013–2025 Drive Academy. Все права защищены.</p>
+      <p class="footer__demo">Демо-сайт для портфолио</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

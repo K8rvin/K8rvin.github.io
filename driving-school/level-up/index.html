@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEVEL UP — автошкола нового поколения | Прокачай скилл вождения</title>
+  <meta name="description" content="Автошкола LEVEL UP: обучение вождению как прокачка персонажа. От нуба до водителя 80 lvl за 3 месяца. Первый урок бесплатно.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Manrope:wght@400;500;600;700;800&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== ШАПКА ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="LEVEL UP — на главную">
+        <span class="logo__badge">LVL</span>
+        <span class="logo__text">UP<em>школа</em></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#map" class="nav__link">Карта уровней</a>
+        <a href="#quiz" class="nav__link">Квиз</a>
+        <a href="#pricing" class="nav__link">Пакеты</a>
+        <a href="#instructors" class="nav__link">Наставники</a>
+        <a href="#reviews" class="nav__link">Ачивки</a>
+        <a href="tel:+79090939400" class="btn btn--small btn--pink nav__cta">Позвонить</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <div class="sticker sticker--pink sticker--hero1">без нервов</div>
+          <div class="sticker sticker--blue sticker--hero2">инструктор не орёт</div>
+          <div class="sticker sticker--yellow sticker--hero3">18+</div>
+          <p class="hero__tag">автошкола нового поколения</p>
+          <h1 class="hero__title">
+            ПРОКАЧАЙ<br>
+            <span class="hl">СКИЛЛ</span><br>
+            ВОЖДЕНИЯ
+          </h1>
+          <p class="hero__subtitle">От нуба до водителя <strong>80 lvl</strong> — за 3 месяца. Теория без зубрёжки, свои тачки, инструкторы без крика.</p>
+          <div class="hero__actions">
+            <a href="#quiz" class="btn btn--pink btn--big">Начать игру</a>
+            <a href="tel:+79090939400" class="btn btn--ghost">+7 909 093-94-00</a>
+          </div>
+          <div class="counter reveal">
+            <span class="counter__num" id="skillsCounter" data-target="12847">0</span>
+            <span class="counter__label">скиллов прокачано учениками</span>
+          </div>
+        </div>
+
+        <!-- Карточка персонажа -->
+        <div class="char-card reveal" id="charCard">
+          <div class="char-card__head">
+            <div class="char-card__avatar">
+              <svg viewBox="0 0 120 120" role="img" aria-label="Аватар ученика">
+                <circle cx="60" cy="60" r="56" fill="#2EC5FF" stroke="#111" stroke-width="5"/>
+                <circle cx="60" cy="52" r="24" fill="#FFD9B8" stroke="#111" stroke-width="4"/>
+                <path d="M36 46 Q40 22 60 22 Q80 22 84 46 L78 46 Q74 32 60 32 Q46 32 42 46 Z" fill="#111"/>
+                <circle cx="51" cy="52" r="3" fill="#111"/>
+                <circle cx="69" cy="52" r="3" fill="#111"/>
+                <path d="M52 62 Q60 68 68 62" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"/>
+                <path d="M28 108 Q30 82 60 82 Q90 82 92 108" fill="#FF4D8D" stroke="#111" stroke-width="4"/>
+                <rect x="46" y="90" width="28" height="10" rx="5" fill="#FFD02E" stroke="#111" stroke-width="3"/>
+              </svg>
+            </div>
+            <div class="char-card__meta">
+              <div class="char-card__name">Нуб_228</div>
+              <div class="char-card__class">класс: будущий водитель</div>
+              <div class="char-card__lvl">LVL <b>1</b></div>
+            </div>
+          </div>
+          <div class="xp">
+            <div class="xp__row">
+              <span>XP</span>
+              <span id="xpValue">0 / 1000</span>
+            </div>
+            <div class="xp__bar">
+              <div class="xp__fill" id="xpFill"></div>
+            </div>
+          </div>
+          <div class="skills">
+            <div class="skill">
+              <div class="skill__row"><span>Парковка</span><span>20%</span></div>
+              <div class="skill__bar"><div class="skill__fill skill__fill--pink" data-fill="20"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill__row"><span>Город</span><span>5%</span></div>
+              <div class="skill__bar"><div class="skill__fill skill__fill--violet" data-fill="5"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill__row"><span>Теория ПДД</span><span>35%</span></div>
+              <div class="skill__bar"><div class="skill__fill skill__fill--blue" data-fill="35"></div></div>
+            </div>
+          </div>
+          <div class="char-card__hint">это ты через 3 месяца → LVL 80</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== БЕГУЩАЯ СТРОКА ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track" id="marqueeTrack">
+        <span>ТЕОРИЯ БЕЗ ЗУБРЁЖКИ • СВОИ ТАЧКИ • ПЕРВЫЙ УРОК FREE • РАССРОЧКА •&nbsp;</span>
+        <span>ТЕОРИЯ БЕЗ ЗУБРЁЖКИ • СВОИ ТАЧКИ • ПЕРВЫЙ УРОК FREE • РАССРОЧКА •&nbsp;</span>
+        <span>ТЕОРИЯ БЕЗ ЗУБРЁЖКИ • СВОИ ТАЧКИ • ПЕРВЫЙ УРОК FREE • РАССРОЧКА •&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- ===== КАРТА УРОВНЕЙ ===== -->
+    <section class="section map" id="map">
+      <div class="container">
+        <div class="section__head reveal">
+          <div class="sticker sticker--yellow sticker--map">кликай по узлам!</div>
+          <h2 class="section__title">КАРТА <span class="hl hl--pink">УРОВНЕЙ</span></h2>
+          <p class="section__subtitle">Твой путь от нуба до легенды. Каждый узел — новый скилл. Кликай, чтобы узнать, что тебя ждёт.</p>
+        </div>
+
+        <div class="map__wrap reveal">
+          <svg class="map__svg" viewBox="0 0 1000 560" id="mapSvg" aria-label="Игровая карта уровней обучения">
+            <path id="mapPath" class="map__road" fill="none"
+              d="M 90 470 C 200 470 220 380 320 370 C 420 360 430 460 540 450 C 650 440 640 320 750 300 C 850 282 830 170 910 130"/>
+            <circle id="mapDot" class="map__dot" r="14" cx="90" cy="470"/>
+            <circle id="mapDotInner" class="map__dot-inner" r="5" cx="90" cy="470"/>
+            <g id="mapNodes"></g>
+          </svg>
+
+          <div class="map__panel" id="mapPanel" aria-live="polite">
+            <div class="map__panel-lvl" id="panelLvl">LVL 1</div>
+            <h3 class="map__panel-title" id="panelTitle">Нуб</h3>
+            <p class="map__panel-desc" id="panelDesc"></p>
+            <div class="map__panel-meta">
+              <div><b id="panelLessons"></b><span>занятий</span></div>
+              <div><b id="panelSkill"></b><span>главный скилл</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== КВИЗ ===== -->
+    <section class="section quiz" id="quiz">
+      <div class="container">
+        <div class="section__head reveal">
+          <div class="sticker sticker--pink sticker--quiz">тест за 60 секунд</div>
+          <h2 class="section__title">КАКОЙ ТЫ <span class="hl hl--blue">ВОДИТЕЛЬ</span>?</h2>
+          <p class="section__subtitle">5 вопросов — и мы подберём тебе пакет. Честнее, чем гороскоп.</p>
+        </div>
+
+        <div class="quiz__box reveal" id="quizBox">
+          <div class="quiz__progress">
+            <div class="quiz__progress-label" id="quizProgressLabel">Вопрос 1 из 5</div>
+            <div class="quiz__progress-bar"><div class="quiz__progress-fill" id="quizProgressFill"></div></div>
+          </div>
+          <div class="quiz__body" id="quizBody" aria-live="polite">
+            <h3 class="quiz__question" id="quizQuestion"></h3>
+            <div class="quiz__answers" id="quizAnswers"></div>
+          </div>
+          <div class="quiz__result" id="quizResult" hidden>
+            <div class="quiz__result-badge" id="quizResultBadge"></div>
+            <h3 class="quiz__result-title" id="quizResultTitle"></h3>
+            <p class="quiz__result-text" id="quizResultText"></p>
+            <p class="quiz__result-pack">Рекомендуем пакет: <b id="quizResultPack"></b></p>
+            <div class="quiz__result-actions">
+              <a href="#pricing" class="btn btn--pink" id="quizResultBtn">Смотреть пакет</a>
+              <button class="btn btn--ghost" id="quizRestart" type="button">Пройти ещё раз</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ПАКЕТЫ ===== -->
+    <section class="section pricing" id="pricing">
+      <div class="container">
+        <div class="section__head reveal">
+          <div class="sticker sticker--blue sticker--pricing">рассрочка 0%</div>
+          <h2 class="section__title">ВЫБЕРИ СВОЙ <span class="hl">ЛУТ-БОКС</span></h2>
+          <p class="section__subtitle">Три сундука с прокачкой. Открывай любой — донатить нервами не придётся.</p>
+        </div>
+
+        <div class="pricing__grid">
+          <article class="chest reveal">
+            <div class="chest__lid chest__lid--blue">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 L15 8 L21 9 L16.5 13.5 L18 20 L12 16.5 L6 20 L7.5 13.5 L3 9 L9 8 Z" fill="#FFF6E9" stroke="#111" stroke-width="1.6"/></svg>
+              СТАНДАРТ
+            </div>
+            <div class="chest__price">29 900 ₽</div>
+            <div class="chest__per">или 2 491 ₽/мес в рассрочку</div>
+            <ul class="chest__list">
+              <li>Теория ПДД — 34 часа</li>
+              <li>Практика — 20 уроков</li>
+              <li>Автодром + город</li>
+              <li>Внутренний экзамен</li>
+            </ul>
+            <a href="tel:+79090939400" class="btn btn--ghost chest__btn">Забрать сундук</a>
+          </article>
+
+          <article class="chest chest--hot reveal">
+            <div class="chest__badge">выбирают 7 из 10</div>
+            <div class="chest__lid chest__lid--pink">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 L15 8 L21 9 L16.5 13.5 L18 20 L12 16.5 L6 20 L7.5 13.5 L3 9 L9 8 Z" fill="#111"/></svg>
+              ПРО
+            </div>
+            <div class="chest__price">39 900 ₽</div>
+            <div class="chest__per">или 3 325 ₽/мес в рассрочку</div>
+            <ul class="chest__list">
+              <li>Теория ПДД — 34 часа</li>
+              <li>Практика — 30 уроков</li>
+              <li>+5 уроков «парковка-ниндзя»</li>
+              <li>Госэкзамен с нашим авто</li>
+              <li>Поддержка в чате 24/7</li>
+            </ul>
+            <a href="tel:+79090939400" class="btn btn--pink chest__btn">Забрать сундук</a>
+          </article>
+
+          <article class="chest reveal">
+            <div class="chest__lid chest__lid--violet">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 L15 8 L21 9 L16.5 13.5 L18 20 L12 16.5 L6 20 L7.5 13.5 L3 9 L9 8 Z" fill="#FFF6E9" stroke="#111" stroke-width="1.6"/></svg>
+              УЛЬТРА
+            </div>
+            <div class="chest__price">54 900 ₽</div>
+            <div class="chest__per">или 4 575 ₽/мес в рассрочку</div>
+            <ul class="chest__list">
+              <li>Всё из пакета ПРО</li>
+              <li>Практика — 40 уроков</li>
+              <li>Личный инструктор</li>
+              <li>Курс контраварийки</li>
+              <li>Пересдача экзамена — бесплатно</li>
+            </ul>
+            <a href="tel:+79090939400" class="btn btn--ghost chest__btn">Забрать сундук</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ИНСТРУКТОРЫ ===== -->
+    <section class="section instructors" id="instructors">
+      <div class="container">
+        <div class="section__head reveal">
+          <div class="sticker sticker--yellow sticker--instr">не бьют по рукам</div>
+          <h2 class="section__title">ВЫБЕРИ СВОЕГО <span class="hl hl--violet">НАСТАВНИКА</span></h2>
+          <p class="section__subtitle">NPC реального мира. У каждого — суперсила и бесконечный запас терпения.</p>
+        </div>
+
+        <div class="instructors__grid">
+          <article class="npc reveal">
+            <div class="npc__avatar npc__avatar--pink">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <circle cx="50" cy="42" r="20" fill="#FFD9B8" stroke="#111" stroke-width="4"/>
+                <path d="M30 38 Q34 18 50 18 Q66 18 70 38 L64 38 Q61 27 50 27 Q39 27 36 38 Z" fill="#111"/>
+                <circle cx="43" cy="42" r="2.5" fill="#111"/><circle cx="57" cy="42" r="2.5" fill="#111"/>
+                <path d="M44 50 Q50 55 56 50" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M24 92 Q26 68 50 68 Q74 68 76 92" fill="#7C5CFF" stroke="#111" stroke-width="4"/>
+              </svg>
+            </div>
+            <h3 class="npc__name">Дима «Батя»</h3>
+            <div class="npc__stat">Стаж: <b>12 лет</b></div>
+            <div class="npc__power">Суперсила: терпение 9999</div>
+            <p class="npc__quote">«Спокойно объясню параллельную парковку. Хоть сто раз. Хоть двести.»</p>
+          </article>
+
+          <article class="npc reveal">
+            <div class="npc__avatar npc__avatar--yellow">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <circle cx="50" cy="42" r="20" fill="#FFD9B8" stroke="#111" stroke-width="4"/>
+                <path d="M28 44 Q28 16 50 16 Q72 16 72 44 L66 52 Q68 34 50 30 Q32 34 34 52 Z" fill="#FF4D8D" stroke="#111" stroke-width="3"/>
+                <circle cx="43" cy="42" r="2.5" fill="#111"/><circle cx="57" cy="42" r="2.5" fill="#111"/>
+                <path d="M43 50 Q50 57 57 50" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M24 92 Q26 68 50 68 Q74 68 76 92" fill="#2EC5FF" stroke="#111" stroke-width="4"/>
+              </svg>
+            </div>
+            <h3 class="npc__name">Аня «Турбо»</h3>
+            <div class="npc__stat">Стаж: <b>8 лет</b></div>
+            <div class="npc__power">Суперсила: мемы на каждую ошибку</div>
+            <p class="npc__quote">«Учу через мемы. Забудешь знак — вспомнишь картинку и смеяться перестанешь на экзамене.»</p>
+          </article>
+
+          <article class="npc reveal">
+            <div class="npc__avatar npc__avatar--blue">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <circle cx="50" cy="42" r="20" fill="#FFD9B8" stroke="#111" stroke-width="4"/>
+                <path d="M32 34 Q50 10 68 34 Q62 24 50 24 Q38 24 32 34 Z" fill="#111"/>
+                <rect x="36" y="38" width="12" height="8" rx="4" fill="none" stroke="#111" stroke-width="3"/>
+                <rect x="52" y="38" width="12" height="8" rx="4" fill="none" stroke="#111" stroke-width="3"/>
+                <path d="M48 42 L52 42" stroke="#111" stroke-width="3"/>
+                <path d="M43 52 Q50 56 57 52" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M24 92 Q26 68 50 68 Q74 68 76 92" fill="#FFD02E" stroke="#111" stroke-width="4"/>
+              </svg>
+            </div>
+            <h3 class="npc__name">Серёга «Профессор»</h3>
+            <div class="npc__stat">Стаж: <b>15 лет</b></div>
+            <div class="npc__power">Суперсила: знает ПДД наизусть</div>
+            <p class="npc__quote">«Экзаменаторы меня уважают. Мои ученики сдают с первого раза — 9 из 10.»</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ДОСТИЖЕНИЯ / ОТЗЫВЫ ===== -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="section__head reveal">
+          <div class="sticker sticker--pink sticker--reviews">ачивка разблокирована!</div>
+          <h2 class="section__title">ДОСТИЖЕНИЯ <span class="hl hl--pink">ВЫПУСКНИКОВ</span></h2>
+          <p class="section__subtitle">Реальные ачивки реальных людей. Листай — их много.</p>
+        </div>
+
+        <div class="carousel reveal">
+          <button class="carousel__arrow carousel__arrow--prev" id="revPrev" aria-label="Предыдущий отзыв">
+            <svg viewBox="0 0 24 24"><path d="M15 4 L7 12 L15 20" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="carousel__viewport">
+            <div class="carousel__track" id="revTrack"></div>
+          </div>
+          <button class="carousel__arrow carousel__arrow--next" id="revNext" aria-label="Следующий отзыв">
+            <svg viewBox="0 0 24 24"><path d="M9 4 L17 12 L9 20" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+        <div class="carousel__dots" id="revDots"></div>
+      </div>
+    </section>
+
+    <!-- ===== ФИНАЛЬНЫЙ CTA ===== -->
+    <section class="cta" id="cta">
+      <div class="container">
+        <div class="cta__box reveal">
+          <div class="sticker sticker--yellow sticker--cta1">первый урок — free</div>
+          <div class="sticker sticker--pink sticker--cta2">записывайся!</div>
+          <h2 class="cta__title">ГОТОВ <span class="hl hl--violet">НАЧАТЬ</span>?</h2>
+          <p class="cta__text">Оставь номер — перезвоним за 10 минут, ответим на вопросы и запишем на бесплатный первый урок.</p>
+          <form class="cta__form" id="ctaForm" novalidate>
+            <input class="cta__input" id="ctaPhone" type="tel" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+            <button class="btn btn--pink btn--big" type="submit">Начать игру</button>
+          </form>
+          <div class="cta__success" id="ctaSuccess" hidden>
+            <div class="cta__success-icon">
+              <svg viewBox="0 0 24 24"><path d="M4 12.5 L9.5 18 L20 6" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p><b>Заявка принята!</b> Перезвоним в течение 10 минут. А пока — потренируй реакцию на нашем квизе выше.</p>
+          </div>
+          <a href="tel:+79090939400" class="cta__phone">или сразу звони: <b>+7 909 093-94-00</b></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== ФУТЕР ===== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <a href="#top" class="logo logo--footer">
+          <span class="logo__badge">LVL</span>
+          <span class="logo__text">UP<em>школа</em></span>
+        </a>
+        <p class="footer__about">Автошкола, где учат водить, а не страдать. Работаем с 2016 года.</p>
+      </div>
+      <div class="footer__col">
+        <div class="footer__title">Контакты</div>
+        <a href="tel:+79090939400" class="footer__link">+7 909 093-94-00</a>
+        <span class="footer__text">г. Москва, ул. Проезжая, 80</span>
+        <span class="footer__text">Ежедневно 9:00–21:00</span>
+      </div>
+      <div class="footer__col">
+        <div class="footer__title">Мы в соцсетях</div>
+        <div class="footer__socials">
+          <a href="#" class="footer__social" aria-label="Telegram" onclick="return false;">
+            <svg viewBox="0 0 24 24"><path d="M21 4 L3 11.2 L8.5 13.2 L10 19 L13 14.8 L17.5 17.5 Z" fill="#FFF6E9" stroke="#111" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            Telegram
+          </a>
+          <a href="#" class="footer__social" aria-label="VK" onclick="return false;">
+            <svg viewBox="0 0 24 24"><path d="M3 7 C4 14 8 18 13 18 L13 14 C15 14.3 17 16 18 18 L21 18 C20 15 18 13 16.5 12.2 C18 11 19.5 9 20 7 L17 7 C16.3 9.3 14.7 11 13 11.3 L13 7 L10.5 7 L10.5 14 C8 13 6 10 5.5 7 Z" fill="#FFF6E9" stroke="#111" stroke-width="1.2" stroke-linejoin="round"/></svg>
+            VK
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">© 2026 Автошкола LEVEL UP. Все права защищены. Любые совпадения с нубами случайны.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дорожный пропуск — автошкола с фиксированной ценой и понятной системой</title>
+  <meta name="description" content="Автошкола «Дорожный пропуск»: фиксированная цена в договоре, расписание в личном кабинете, никаких доплат. Обучение категорий A и B, МКПП и АКПП.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Golos+Text:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== ШАПКА ===== -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="Дорожный пропуск — на главную">
+        <svg class="logo__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="36" height="36" rx="10" fill="#12B76A"/>
+          <path d="M11 27 V13 M11 27 h4 a6 6 0 0 0 6-6 v0 a6 6 0 0 0 -6-6 h-4" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/>
+          <path d="M25 27 v-14 h4" stroke="#F7B500" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="logo__text">Дорожный<span> пропуск</span></span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#calc" class="nav__link">Стоимость</a>
+        <a href="#process" class="nav__link">Обучение</a>
+        <a href="#price" class="nav__link">Цена</a>
+        <a href="#schedule" class="nav__link">Расписание</a>
+        <a href="#reviews" class="nav__link">Отзывы</a>
+        <a href="#faq" class="nav__link">FAQ</a>
+        <a href="tel:+79090939400" class="nav__phone">
+          <svg viewBox="0 0 20 20" width="16" height="16" fill="none" aria-hidden="true"><path d="M4 3h3l2 4-2 1.5a11 11 0 0 0 4.5 4.5L13 11l4 2v3a1.5 1.5 0 0 1-1.6 1.5C7 17 3 13 2.5 4.6A1.5 1.5 0 0 1 4 3z" fill="currentColor"/></svg>
+          +7 909 093-94-00
+        </a>
+        <a href="#calc" class="btn btn--sm btn--primary nav__cta">Рассчитать стоимость</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== 1. HERO ===== -->
+  <section class="hero">
+    <div class="hero__grid-bg" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <div class="hero__content reveal">
+        <div class="badge badge--green">
+          <svg viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8" stroke="#12B76A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Разрешено: обучение без доплат
+        </div>
+        <h1 class="hero__title">Учись вождению по&nbsp;<span class="hl-green">понятной системе</span></h1>
+        <p class="hero__subtitle">Фиксированная цена в договоре. Расписание в личном кабинете. Никаких доплат.</p>
+        <div class="hero__actions">
+          <a href="#calc" class="btn btn--primary btn--lg">Рассчитать стоимость
+            <svg viewBox="0 0 20 20" width="18" height="18" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#process" class="btn btn--ghost btn--lg">Как проходит обучение</a>
+        </div>
+        <ul class="hero__facts">
+          <li><strong>4 месяца</strong><span>средний срок до прав</span></li>
+          <li><strong>96%</strong><span>сдают экзамен с 1–2 попытки</span></li>
+          <li><strong>0 ₽</strong><span>доплат после подписания договора</span></li>
+        </ul>
+      </div>
+
+      <!-- Мини-карточка личного кабинета -->
+      <div class="cabinet reveal" id="cabinetCard">
+        <div class="cabinet__head">
+          <div class="cabinet__avatar" aria-hidden="true">АК</div>
+          <div>
+            <div class="cabinet__name">Анна Ковалёва</div>
+            <div class="cabinet__course">Категория B · АКПП</div>
+          </div>
+          <span class="cabinet__status">Идёт обучение</span>
+        </div>
+        <div class="cabinet__progress">
+          <div class="cabinet__progress-row">
+            <span>Прогресс курса</span>
+            <strong id="cabinetPct">0%</strong>
+          </div>
+          <div class="cabinet__bar"><div class="cabinet__bar-fill" id="cabinetBar"></div></div>
+          <div class="cabinet__legend">
+            <span><i class="dot dot--green"></i>Теория</span>
+            <span><i class="dot dot--green"></i>Площадка</span>
+            <span><i class="dot dot--blue"></i>Город</span>
+            <span><i class="dot dot--gray"></i>Экзамен</span>
+          </div>
+        </div>
+        <div class="cabinet__next">
+          <div class="cabinet__next-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><rect x="3" y="5" width="18" height="16" rx="3" stroke="#1B2A4A" stroke-width="1.8"/><path d="M3 10h18M8 3v4M16 3v4" stroke="#1B2A4A" stroke-width="1.8" stroke-linecap="round"/><path d="M8 15.5l2.5 2.5 5-5.5" stroke="#12B76A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <div class="cabinet__next-label">Следующее занятие</div>
+            <div class="cabinet__next-value">Среда, 18:30 · город, маршрут 12</div>
+            <div class="cabinet__next-instr">Инструктор: Сергей М. · Kia Rio</div>
+          </div>
+        </div>
+        <div class="cabinet__road" aria-hidden="true"><span></span></div>
+      </div>
+    </div>
+    <div class="road-divider" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===== 2. КАЛЬКУЛЯТОР ===== -->
+  <section class="section" id="calc">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="badge badge--yellow">Калькулятор</span>
+        <h2>Рассчитайте точную стоимость</h2>
+        <p>Цена пересчитывается мгновенно и совпадает с той, что попадёт в договор.</p>
+      </div>
+      <div class="calc reveal">
+        <div class="calc__controls">
+          <div class="calc__group">
+            <span class="calc__label">Категория прав</span>
+            <div class="segmented" data-group="category">
+              <button type="button" class="segmented__btn is-active" data-value="B">B — легковой</button>
+              <button type="button" class="segmented__btn" data-value="A">A — мото</button>
+            </div>
+          </div>
+          <div class="calc__group" id="transmissionGroup">
+            <span class="calc__label">Коробка передач</span>
+            <div class="segmented" data-group="transmission">
+              <button type="button" class="segmented__btn is-active" data-value="akpp">АКПП</button>
+              <button type="button" class="segmented__btn" data-value="mkpp">МКПП</button>
+            </div>
+          </div>
+          <div class="calc__group">
+            <span class="calc__label">Пакет практических занятий</span>
+            <div class="segmented segmented--triple" data-group="lessons">
+              <button type="button" class="segmented__btn" data-value="base">Базовый<small>обязательный минимум</small></button>
+              <button type="button" class="segmented__btn is-active" data-value="standard">Стандарт<small>+8 занятий</small></button>
+              <button type="button" class="segmented__btn" data-value="max">Максимум<small>+16 занятий</small></button>
+            </div>
+          </div>
+          <div class="calc__group">
+            <span class="calc__label">Формат теории</span>
+            <div class="segmented" data-group="theory">
+              <button type="button" class="segmented__btn is-active" data-value="online">Онлайн</button>
+              <button type="button" class="segmented__btn" data-value="class">В классе</button>
+            </div>
+          </div>
+        </div>
+        <div class="calc__result">
+          <div class="calc__price-label">Итоговая цена — фиксируется в договоре</div>
+          <div class="calc__price"><span id="calcPrice">0</span> ₽</div>
+          <div class="calc__details">
+            <div class="calc__row"><span>Срок обучения</span><strong id="calcTerm">—</strong></div>
+            <div class="calc__row"><span>Практика</span><strong id="calcLessons">—</strong></div>
+            <div class="calc__row"><span>Рассрочка</span><strong id="calcInstallment">—</strong></div>
+          </div>
+          <ul class="calc__included">
+            <li>Теория и все учебные материалы</li>
+            <li>Топливо и амортизация авто включены</li>
+            <li>Внутренний экзамен и сопровождение в ГИБДД</li>
+          </ul>
+          <a href="#cta" class="btn btn--primary btn--block" id="fixPriceBtn">Зафиксировать цену</a>
+          <p class="calc__note">Нажимая, вы получите расчёт на консультации — цена действует 30 дней.</p>
+        </div>
+      </div>
+    </div>
+    <div class="road-divider" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===== 3. КАК ПРОХОДИТ ОБУЧЕНИЕ ===== -->
+  <section class="section section--gray" id="process">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="badge badge--green">Маршрут</span>
+        <h2>Как проходит обучение</h2>
+        <p>Четыре понятных этапа — вы всегда видите в личном кабинете, где находитесь.</p>
+      </div>
+      <div class="timeline reveal">
+        <div class="timeline__line"><div class="timeline__fill" id="timelineFill"></div></div>
+        <ol class="timeline__steps">
+          <li class="timeline__step">
+            <div class="timeline__icon">
+              <svg viewBox="0 0 28 28" width="26" height="26" fill="none" aria-hidden="true"><path d="M5 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16l-3-2-3 2-3-2-3 2-3-2-2 2V6z" stroke="#1B2A4A" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 9h8M9 13h8M9 17h5" stroke="#12B76A" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Теория</h3>
+            <p class="timeline__term">2 месяца</p>
+            <p>ПДД, основы устройства авто, медицина. Онлайн или в классе — как удобно.</p>
+          </li>
+          <li class="timeline__step">
+            <div class="timeline__icon">
+              <svg viewBox="0 0 28 28" width="26" height="26" fill="none" aria-hidden="true"><rect x="3" y="3" width="22" height="22" rx="4" stroke="#1B2A4A" stroke-width="1.8"/><path d="M8 19l5-5 3 3 4-5" stroke="#12B76A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="9" r="1.6" fill="#F7B500"/></svg>
+            </div>
+            <h3>Площадка</h3>
+            <p class="timeline__term">10 занятий</p>
+            <p>Старт, разворот, параллельная парковка, эстакада. Закрытый автодром.</p>
+          </li>
+          <li class="timeline__step">
+            <div class="timeline__icon">
+              <svg viewBox="0 0 28 28" width="26" height="26" fill="none" aria-hidden="true"><path d="M4 21c4-8 8-2 10-9s6-1 10-8" stroke="#1B2A4A" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="3.5 3.5"/><circle cx="4" cy="21" r="2.4" fill="#12B76A"/><circle cx="24" cy="4" r="2.4" fill="#F7B500"/></svg>
+            </div>
+            <h3>Город</h3>
+            <p class="timeline__term">18 занятий</p>
+            <p>Реальные экзаменационные маршруты: развязки, круговое движение, плотный трафик.</p>
+          </li>
+          <li class="timeline__step">
+            <div class="timeline__icon">
+              <svg viewBox="0 0 28 28" width="26" height="26" fill="none" aria-hidden="true"><circle cx="14" cy="14" r="10.5" stroke="#1B2A4A" stroke-width="1.8"/><path d="M9 14.5l3.5 3.5 6.5-7.5" stroke="#12B76A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Экзамен</h3>
+            <p class="timeline__term">ГИБДД</p>
+            <p>Внутренний экзамен, затем сопровождение в ГИБДД на учебном автомобиле школы.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div class="road-divider" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===== 4. ПРОЗРАЧНАЯ ЦЕНА ===== -->
+  <section class="section" id="price">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="badge badge--green">Прозрачность</span>
+        <h2>Прозрачная цена — без звёздочек</h2>
+        <p>Честно показываем, что вы получаете за свои деньги, а что оплачивается отдельно.</p>
+      </div>
+      <div class="price-grid reveal">
+        <div class="price-card price-card--in">
+          <h3><svg viewBox="0 0 20 20" width="20" height="20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#12B76A"/><path d="M6 10.5l2.7 2.7L14 7.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Включено в цену</h3>
+          <ul class="checklist">
+            <li class="yes">Полный курс теории ПДД и доступ к онлайн-платформе</li>
+            <li class="yes">Все практические занятия по выбранному пакету</li>
+            <li class="yes">Топливо, страховка и амортизация учебного авто</li>
+            <li class="yes">Учебные материалы, сборники билетов, симуляторы</li>
+            <li class="yes">Внутренний экзамен и занятие-репетиция по маршруту</li>
+            <li class="yes">Сопровождение в ГИБДД и учебный авто на экзамен</li>
+            <li class="yes">Перенос занятий бесплатно за 24 часа</li>
+          </ul>
+        </div>
+        <div class="price-card price-card--out">
+          <h3><svg viewBox="0 0 20 20" width="20" height="20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#F7B500"/><path d="M6.8 6.8l6.4 6.4M13.2 6.8l-6.4 6.4" stroke="#1B2A4A" stroke-width="2" stroke-linecap="round"/></svg> Не входит (оплачивается отдельно)</h3>
+          <ul class="checklist">
+            <li class="no">Госпошлина ГИБДД за выдачу прав — 2 000 ₽</li>
+            <li class="no">Медицинская справка — от 1 800 ₽ в лицензированной клинике</li>
+            <li class="no">Фото на права — от 300 ₽</li>
+            <li class="no">Пересдача экзамена в ГИБДД (пошлина) — если потребуется</li>
+          </ul>
+          <div class="price-card__note">Всё, что входит в пакет, указано в договоре построчно — доплатить «потом» ничего не попросят.</div>
+        </div>
+      </div>
+      <div class="price-banner reveal">
+        <svg viewBox="0 0 40 40" width="38" height="38" fill="none" aria-hidden="true"><rect x="3" y="6" width="34" height="28" rx="5" stroke="#12B76A" stroke-width="2"/><path d="M3 13h34" stroke="#12B76A" stroke-width="2"/><path d="M13 25l4 4 9-10" stroke="#12B76A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>
+          <strong>Цена фиксируется в договоре.</strong>
+          <p>Сумма, которую вы видите в калькуляторе, прописывается в договоре и не меняется до конца обучения. Любые «доплаты за бензин» и «обязательные допзанятия» исключены.</p>
+        </div>
+      </div>
+    </div>
+    <div class="road-divider" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===== 5. РАСПИСАНИЕ ===== -->
+  <section class="section section--gray" id="schedule">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="badge badge--yellow">Расписание</span>
+        <h2>Свободные окна на этой неделе</h2>
+        <p>Нажмите на слот — покажем инструктора и автомобиль. Так же это выглядит и в вашем личном кабинете.</p>
+      </div>
+      <div class="schedule reveal">
+        <div class="schedule__grid" id="scheduleGrid" role="grid" aria-label="Расписание свободных окон"></div>
+        <div class="schedule__panel" id="schedulePanel">
+          <div class="schedule__empty" id="scheduleEmpty">
+            <svg viewBox="0 0 48 48" width="44" height="44" fill="none" aria-hidden="true"><rect x="6" y="9" width="36" height="33" rx="5" stroke="#98A2B3" stroke-width="2"/><path d="M6 19h36M16 4v9M32 4v9" stroke="#98A2B3" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="31" r="6" stroke="#12B76A" stroke-width="2"/><path d="M24 28.5V31l2 2" stroke="#12B76A" stroke-width="2" stroke-linecap="round"/></svg>
+            <p>Выберите свободный слот слева, чтобы увидеть детали.</p>
+          </div>
+          <div class="schedule__details" id="scheduleDetails" hidden>
+            <div class="schedule__when" id="slotWhen">—</div>
+            <div class="schedule__instructor">
+              <div class="schedule__avatar" id="slotAvatar">—</div>
+              <div>
+                <div class="schedule__name" id="slotInstructor">—</div>
+                <div class="schedule__exp" id="slotExp">—</div>
+              </div>
+            </div>
+            <div class="schedule__car">
+              <svg viewBox="0 0 48 24" width="52" height="26" fill="none" aria-hidden="true"><path d="M6 17l4-7a4 4 0 0 1 3.5-2h14l6 4 8 2a2 2 0 0 1 1.5 2v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1a2 2 0 0 1 3-1z" fill="#EAFBF3" stroke="#12B76A" stroke-width="1.6"/><circle cx="13" cy="19" r="3.4" fill="#1B2A4A"/><circle cx="35" cy="19" r="3.4" fill="#1B2A4A"/><path d="M14 8.5L17 4h9l4 4.5" stroke="#12B76A" stroke-width="1.6" stroke-linecap="round"/></svg>
+              <div>
+                <div class="schedule__car-name" id="slotCar">—</div>
+                <div class="schedule__car-meta" id="slotCarMeta">—</div>
+              </div>
+            </div>
+            <a href="tel:+79090939400" class="btn btn--primary btn--block">Записаться на это время</a>
+          </div>
+        </div>
+      </div>
+      <div class="schedule__legend reveal">
+        <span><i class="slot-mark slot-mark--free"></i>свободно</span>
+        <span><i class="slot-mark slot-mark--busy"></i>занято</span>
+      </div>
+    </div>
+    <div class="road-divider" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===== 6. АВТОПАРК И ПЛОЩАДКА ===== -->
+  <section class="section" id="fleet">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="badge badge--green">Инфраструктура</span>
+        <h2>Автопарк и площадка</h2>
+        <p>Современные автомобили с дублирующими педалями и собственный закрытый автодром.</p>
+      </div>
+      <div class="fleet-grid">
+        <article class="fleet-card reveal">
+          <div class="fleet-card__visual" aria-hidden="true">
+            <svg viewBox="0 0 320 130" fill="none" class="fleet-svg">
+              <rect width="320" height="130" rx="14" fill="#EAFBF3"/>
+              <path d="M0 108 h320" stroke="#12B76A" stroke-width="3" stroke-dasharray="16 12"/>
+              <path d="M52 96 l18-34a16 16 0 0 1 14-9h92l38 24 44 8a14 14 0 0 1 11 13v6a10 10 0 0 1-10 10H60a14 14 0 0 1-8-12z" fill="#fff" stroke="#1B2A4A" stroke-width="3"/>
+              <path d="M96 55l14-20h58l26 20z" fill="#D9E7FF" stroke="#1B2A4A" stroke-width="2.6" stroke-linejoin="round"/>
+              <circle cx="96" cy="108" r="16" fill="#1B2A4A"/><circle cx="96" cy="108" r="6" fill="#F4F6F9"/>
+              <circle cx="228" cy="108" r="16" fill="#1B2A4A"/><circle cx="228" cy="108" r="6" fill="#F4F6F9"/>
+              <rect x="196" y="30" width="44" height="14" rx="4" fill="#F7B500"/>
+              <text x="218" y="41" text-anchor="middle" font-family="Inter, sans-serif" font-size="9.5" font-weight="700" fill="#1B2A4A">УЧЕБНЫЙ</text>
+            </svg>
+          </div>
+          <div class="fleet-card__body">
+            <h3>Автопарк</h3>
+            <p>12 учебных автомобилей не старше 4 лет: Kia Rio, Hyundai Solaris, Škoda Rapid и мотоциклы Honda CB. Каждый — с дублирующими педалями, знаком «У» и видеорегистратором.</p>
+            <ul class="tag-list">
+              <li>АКПП и МКПП</li><li>Дублирующие педали</li><li>Кондиционер</li><li>Знаки «У»</li>
+            </ul>
+          </div>
+        </article>
+        <article class="fleet-card reveal">
+          <div class="fleet-card__visual" aria-hidden="true">
+            <svg viewBox="0 0 320 130" fill="none" class="fleet-svg">
+              <rect width="320" height="130" rx="14" fill="#FFF7E0"/>
+              <ellipse cx="160" cy="70" rx="130" ry="42" stroke="#1B2A4A" stroke-width="3" fill="#fff"/>
+              <ellipse cx="160" cy="70" rx="130" ry="42" stroke="#F7B500" stroke-width="3" stroke-dasharray="12 14" fill="none"/>
+              <rect x="46" y="36" width="8" height="26" rx="2" fill="#F7B500"/>
+              <rect x="72" y="28" width="8" height="22" rx="2" fill="#F7B500"/>
+              <rect x="98" y="26" width="8" height="18" rx="2" fill="#F7B500"/>
+              <path d="M196 52l8 14h-16z" fill="#12B76A"/><rect x="186" y="66" width="20" height="8" rx="2" fill="#12B76A"/>
+              <path d="M232 60l8 14h-16z" fill="#12B76A"/><rect x="222" y="74" width="20" height="8" rx="2" fill="#12B76A"/>
+              <rect x="138" y="20" width="44" height="12" rx="4" fill="#1B2A4A"/>
+              <text x="160" y="29.5" text-anchor="middle" font-family="Inter, sans-serif" font-size="8.5" font-weight="700" fill="#fff">АВТОДРОМ</text>
+            </svg>
+          </div>
+          <div class="fleet-card__body">
+            <h3>Площадка</h3>
+            <p>Собственный закрытый автодром площадью 2 400 м²: эстакада, зона параллельной парковки, «змейка» и разметка как на экзамене ГИБДД. Освещение для вечерних занятий.</p>
+            <ul class="tag-list">
+              <li>2 400 м²</li><li>Эстакада</li><li>Вечернее освещение</li><li>Разметка ГИБДД</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="road-divider" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===== 7. ДОКУМЕНТЫ ===== -->
+  <section class="section section--gray" id="docs">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="badge badge--green">Официально</span>
+        <h2>Документы и лицензия</h2>
+        <p>Работаем официально — все документы предоставим до подписания договора.</p>
+      </div>
+      <div class="docs-grid reveal">
+        <div class="doc-badge">
+          <svg viewBox="0 0 44 44" width="40" height="40" fill="none" aria-hidden="true"><rect x="8" y="4" width="28" height="36" rx="4" stroke="#1B2A4A" stroke-width="2"/><path d="M14 12h16M14 18h16M14 24h10" stroke="#98A2B3" stroke-width="2" stroke-linecap="round"/><circle cx="28" cy="32" r="7" fill="#12B76A"/><path d="M24.8 32.2l2.2 2.2 4-4.6" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Лицензия</h3>
+          <p>Лицензия на образовательную деятельность № Л035-01298-77/00452631 от 14.03.2019</p>
+        </div>
+        <div class="doc-badge">
+          <svg viewBox="0 0 44 44" width="40" height="40" fill="none" aria-hidden="true"><path d="M10 6h18l8 8v24a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z" stroke="#1B2A4A" stroke-width="2" stroke-linejoin="round"/><path d="M28 6v8h8" stroke="#1B2A4A" stroke-width="2" stroke-linejoin="round"/><path d="M14 24c3 4 13 4 16 0M13 31h18" stroke="#12B76A" stroke-width="2" stroke-linecap="round"/></svg>
+          <h3>Договор</h3>
+          <p>Публичный договор-оферта с фиксированной ценой и построчным перечнем услуг</p>
+        </div>
+        <div class="doc-badge">
+          <svg viewBox="0 0 44 44" width="40" height="40" fill="none" aria-hidden="true"><path d="M22 4l16 6v10c0 10-6.5 17-16 20C12.5 37 6 30 6 20V10z" stroke="#1B2A4A" stroke-width="2" stroke-linejoin="round"/><path d="M15 22l5 5 9-10" stroke="#12B76A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Программы ГИБДД</h3>
+          <p>Официальные учебные программы, утверждённые в установленном порядке для категорий A и B</p>
+        </div>
+      </div>
+    </div>
+    <div class="road-divider" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===== 8. ОТЗЫВЫ ===== -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="badge badge--yellow">Отзывы</span>
+        <h2>Что говорят выпускники</h2>
+        <p>Средняя оценка по независимым картам — 4,9 из 5.</p>
+      </div>
+      <div class="reviews reveal">
+        <div class="reviews__track" id="reviewsTrack">
+          <article class="review-card">
+            <div class="review-card__stars" data-stars="5"></div>
+            <p>«Выбрала эту школу именно из-за договора с фиксированной ценой — ни разу не попросили доплатить. Расписание меняла дважды через личный кабинет, всё за минуту».</p>
+            <div class="review-card__author"><span class="review-card__avatar">МС</span><div><strong>Мария Соколова</strong><span>Категория B, АКПП · сдала с 1 попытки</span></div></div>
+          </article>
+          <article class="review-card">
+            <div class="review-card__stars" data-stars="5"></div>
+            <p>«Инструктор Сергей спокойно объяснял, не повышал голос. На площадке всё как на экзамене — пришёл в ГИБДД и просто повторил привычный маршрут».</p>
+            <div class="review-card__author"><span class="review-card__avatar">ДВ</span><div><strong>Дмитрий Волков</strong><span>Категория B, МКПП · 4 месяца</span></div></div>
+          </article>
+          <article class="review-card">
+            <div class="review-card__stars" data-stars="5"></div>
+            <p>«Сравнивал пять автошкол — здесь единственные сразу показали, что входит, а что нет. Взял рассрочку, платил три частями, без переплат».</p>
+            <div class="review-card__author"><span class="review-card__avatar">АГ</span><div><strong>Артём Гришин</strong><span>Категория B, АКПП · рассрочка</span></div></div>
+          </article>
+          <article class="review-card">
+            <div class="review-card__stars" data-stars="5"></div>
+            <p>«Училась теорию онлайн по вечерам, практику — по субботам. Кабинет показывает прогресс, очень мотивирует. Права уже в кармане!»</p>
+            <div class="review-card__author"><span class="review-card__avatar">ОК</span><div><strong>Ольга Ким</strong><span>Категория B, АКПП · теория онлайн</span></div></div>
+          </article>
+          <article class="review-card">
+            <div class="review-card__stars" data-stars="4"></div>
+            <p>«Мотокурс компактный, всё по делу. Единственное — свободных окошек на вечер вторника мало, записывайтесь заранее. Экзамен сдал со второго раза».</p>
+            <div class="review-card__author"><span class="review-card__avatar">ИЛ</span><div><strong>Игорь Лебедев</strong><span>Категория A · 2,5 месяца</span></div></div>
+          </article>
+        </div>
+        <div class="reviews__nav">
+          <button class="reviews__btn" id="revPrev" aria-label="Предыдущие отзывы"><svg viewBox="0 0 20 20" width="18" height="18" fill="none"><path d="M12.5 4.5L7 10l5.5 5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="reviews__dots" id="revDots"></div>
+          <button class="reviews__btn" id="revNext" aria-label="Следующие отзывы"><svg viewBox="0 0 20 20" width="18" height="18" fill="none"><path d="M7.5 4.5L13 10l-5.5 5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <div class="road-divider" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===== 9. FAQ ===== -->
+  <section class="section section--gray" id="faq">
+    <div class="container container--narrow">
+      <div class="section__head reveal">
+        <span class="badge badge--green">FAQ</span>
+        <h2>Частые вопросы</h2>
+        <p>Если не нашли ответ — позвоните, расскажем подробнее.</p>
+      </div>
+      <div class="faq reveal">
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false">
+            Будут ли доплаты в процессе обучения?
+            <span class="faq__chev" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a"><div class="faq__a-inner">Нет. Цена фиксируется в договоре на момент подписания и включает топливо, амортизацию автомобиля, все занятия пакета и сопровождение в ГИБДД. Отдельно оплачиваются только госпошлина, медсправка и фото — это оплата третьим сторонам, а не школе.</div></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false">
+            Можно ли переносить занятия?
+            <span class="faq__chev" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a"><div class="faq__a-inner">Да, бесплатно и без ограничений — при условии переноса минимум за 24 часа. Сделать это можно в личном кабинете в пару кликов: выберите новое свободное окно в расписании инструктора.</div></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false">
+            Есть ли рассрочка?
+            <span class="faq__chev" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a"><div class="faq__a-inner">Да, собственная рассрочка без банка и переплат: 30% при подписании договора, остаток — равными частями в течение обучения. Рассрочка не влияет на итоговую цену.</div></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false">
+            Что будет, если я не сдам экзамен с первой попытки?
+            <span class="faq__chev" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a"><div class="faq__a-inner">Ничего страшного — так бывает. Мы проведём разбор ошибок и дополнительное занятие-репетицию со скидкой 30%, затем снова организуем сдачу в ГИБДД. Оплачивается только госпошлина за пересдачу.</div></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false">
+            Можно ли начать обучение без медицинской справки?
+            <span class="faq__chev" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a"><div class="faq__a-inner">Теорию — да, начинайте сразу. Справка понадобится к первому практическому занятию, то есть примерно через 2–3 недели после старта. Подскажем ближайшие лицензированные клиники, где её делают за один визит.</div></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false">
+            Сколько длится обучение и можно ли быстрее?
+            <span class="faq__chev" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a"><div class="faq__a-inner">Стандартный срок — около 4 месяцев для категории B и 2,5 месяца для категории A. Ускорить можно за счёт интенсивного графика практики (3–4 занятия в неделю), но часы теории регламентированы программой ГИБДД — их сократить нельзя.</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="road-divider" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===== 10. ФИНАЛЬНЫЙ CTA ===== -->
+  <section class="section cta" id="cta">
+    <div class="container">
+      <div class="cta__card reveal">
+        <div class="cta__content">
+          <span class="badge badge--green">Пропуск выдан</span>
+          <h2>Зафиксируйте цену — начните на этой неделе</h2>
+          <p>Оставьте контакты: перезвоним в удобное время, ответим на вопросы и закрепим за вами актуальную стоимость на 30 дней.</p>
+          <a href="tel:+79090939400" class="cta__phone">
+            <svg viewBox="0 0 20 20" width="20" height="20" fill="none" aria-hidden="true"><path d="M4 3h3l2 4-2 1.5a11 11 0 0 0 4.5 4.5L13 11l4 2v3a1.5 1.5 0 0 1-1.6 1.5C7 17 3 13 2.5 4.6A1.5 1.5 0 0 1 4 3z" fill="currentColor"/></svg>
+            +7 909 093-94-00
+          </a>
+        </div>
+        <form class="cta__form" id="ctaForm" novalidate>
+          <div class="field">
+            <label for="fName">Имя</label>
+            <input type="text" id="fName" name="name" placeholder="Как к вам обращаться" required>
+          </div>
+          <div class="field">
+            <label for="fPhone">Телефон</label>
+            <input type="tel" id="fPhone" name="phone" placeholder="+7 (___) ___-__-__" required>
+          </div>
+          <div class="field">
+            <label for="fTime">Удобное время звонка</label>
+            <select id="fTime" name="time">
+              <option value="morning">Утром, 9:00–12:00</option>
+              <option value="day">Днём, 12:00–17:00</option>
+              <option value="evening" selected>Вечером, 17:00–20:00</option>
+              <option value="any">В любое время</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block btn--lg">Перезвоните мне</button>
+          <p class="cta__privacy">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.</p>
+          <div class="cta__success" id="formSuccess" hidden>
+            <svg viewBox="0 0 48 48" width="46" height="46" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#12B76A"/><path d="M15 25l6 6 12-13" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <strong>Заявка принята!</strong>
+            <p>Менеджер перезвонит в выбранное время и зафиксирует за вами цену на 30 дней.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 11. ФУТЕР ===== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <a href="#top" class="logo logo--light">
+          <svg class="logo__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <rect x="2" y="2" width="36" height="36" rx="10" fill="#12B76A"/>
+            <path d="M11 27 V13 M11 27 h4 a6 6 0 0 0 6-6 v0 a6 6 0 0 0 -6-6 h-4" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/>
+            <path d="M25 27 v-14 h4" stroke="#F7B500" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="logo__text">Дорожный<span> пропуск</span></span>
+        </a>
+        <p>Автошкола с фиксированной ценой в договоре и прозрачной системой обучения.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Контакты</h4>
+        <p>г. Москва, ул. Маршрутная, 12, стр. 2<br>м. «Проспект Вернадского»</p>
+        <a href="tel:+79090939400" class="footer__phone">+7 909 093-94-00</a>
+      </div>
+      <div class="footer__col">
+        <h4>Режим работы</h4>
+        <p>Пн–Пт: 9:00–20:00<br>Сб: 10:00–17:00<br>Вс: занятия по расписанию</p>
+      </div>
+      <div class="footer__col">
+        <h4>Документы</h4>
+        <p>Лицензия № Л035-01298-77/00452631<br><a href="#docs">Лицензия и договор</a><br><a href="#faq">Частые вопросы</a></p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <span>© 2026 Автошкола «Дорожный пропуск». Демо-проект для портфолио.</span>
+        <span class="footer__road" aria-hidden="true"></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -144,4 +144,24 @@ const WORKS = [
     style: "Французская витрина, премиум-элегантность",
     path: "confectionery/patisserie/",
   },
+
+  // --- Автошкола ---
+  {
+    category: "Автошкола",
+    title: "Drive Academy",
+    style: "Тёмный неоновый премиум, ночной город",
+    path: "driving-school/drive-academy/",
+  },
+  {
+    category: "Автошкола",
+    title: "Дорожный пропуск",
+    style: "Светлый, технологичный, прозрачные цены",
+    path: "driving-school/road-pass/",
+  },
+  {
+    category: "Автошкола",
+    title: "LVL UP школа",
+    style: "Яркий, дерзкий, геймификация",
+    path: "driving-school/level-up/",
+  },
 ];
