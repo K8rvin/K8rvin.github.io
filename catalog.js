@@ -164,4 +164,24 @@ const WORKS = [
     style: "Яркий, дерзкий, геймификация",
     path: "driving-school/level-up/",
   },
+
+  // --- Цветы ---
+  {
+    category: "Цветы",
+    title: "Цветочное ателье",
+    style: "Свадебная и премиум-флористика",
+    path: "flowers/atelier/",
+  },
+  {
+    category: "Цветы",
+    title: "Букет за 60 минут",
+    style: "Яркая доставка подарков",
+    path: "flowers/bouquet-60/",
+  },
+  {
+    category: "Цветы",
+    title: "Подписка на цветы",
+    style: "Городские джунгли, дом и бизнес",
+    path: "flowers/subscription/",
+  },
 ];

@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ателье «Флёр» — свадебная флористика и авторские букеты</title>
+<meta name="description" content="Цветочная студия свадебной флористики и авторских букетов премиум-сегмента. Каждый букет создаётся под вашу историю.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='14' r='9' fill='%23D8B4AE'/%3E%3Ccircle cx='16' cy='14' r='4' fill='%23B99762'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="#hero" class="logo">
+      <span class="logo__script">Atelier</span>
+      <span class="logo__name">ФЛЁР</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#wedding" class="nav__link">Свадьбы</a>
+      <a href="#bouquets" class="nav__link">Букеты</a>
+      <a href="#season" class="nav__link">Сезон</a>
+      <a href="#florists" class="nav__link">Флористы</a>
+      <a href="#portfolio" class="nav__link">Портфолио</a>
+      <a href="#reviews" class="nav__link">Отзывы</a>
+      <a href="#form" class="nav__link">Контакты</a>
+    </nav>
+    <a href="tel:+79090939400" class="header__phone">+7 909 093-94-00</a>
+    <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero__petals" id="petals" aria-hidden="true">
+    <svg class="petal" data-speed="0.12" style="--x:6%;  --d:14s; --r:-20deg" viewBox="0 0 40 60"><path d="M20 2 C34 12 36 34 20 58 C4 34 6 12 20 2 Z" fill="#D8B4AE"/></svg>
+    <svg class="petal" data-speed="0.2"  style="--x:18%; --d:18s; --r:35deg" viewBox="0 0 40 60"><path d="M20 2 C34 12 36 34 20 58 C4 34 6 12 20 2 Z" fill="#9CAF97"/></svg>
+    <svg class="petal" data-speed="0.08" style="--x:32%; --d:16s; --r:10deg" viewBox="0 0 40 60"><path d="M20 2 C34 12 36 34 20 58 C4 34 6 12 20 2 Z" fill="#E9CFC9"/></svg>
+    <svg class="petal" data-speed="0.16" style="--x:55%; --d:20s; --r:-40deg" viewBox="0 0 40 60"><path d="M20 2 C34 12 36 34 20 58 C4 34 6 12 20 2 Z" fill="#D8B4AE"/></svg>
+    <svg class="petal" data-speed="0.1"  style="--x:70%; --d:15s; --r:25deg" viewBox="0 0 40 60"><path d="M20 2 C34 12 36 34 20 58 C4 34 6 12 20 2 Z" fill="#B7C7B2"/></svg>
+    <svg class="petal" data-speed="0.22" style="--x:84%; --d:19s; --r:-15deg" viewBox="0 0 40 60"><path d="M20 2 C34 12 36 34 20 58 C4 34 6 12 20 2 Z" fill="#E4C2BA"/></svg>
+    <svg class="petal" data-speed="0.14" style="--x:93%; --d:17s; --r:50deg" viewBox="0 0 40 60"><path d="M20 2 C34 12 36 34 20 58 C4 34 6 12 20 2 Z" fill="#9CAF97"/></svg>
+  </div>
+
+  <div class="container hero__inner">
+    <div class="hero__text reveal">
+      <p class="hero__eyebrow">Цветочное ателье · свадьбы и события</p>
+      <h1 class="hero__title">Цветы, которые<br>рассказывают <em>вашу</em><br>историю</h1>
+      <p class="hero__subtitle">Свадебная флористика и авторские букеты.<br>Работаем по записи, собираем каждый заказ вручную.</p>
+      <div class="hero__actions">
+        <a href="#form" class="btn btn--outline-gold">Обсудить проект</a>
+        <a href="#bouquets" class="hero__link">Смотреть букеты<span class="hero__link-arrow">→</span></a>
+      </div>
+      <p class="hero__note"><span class="script">каждый букет — как haute couture</span></p>
+    </div>
+
+    <div class="hero__art reveal">
+      <!-- Editorial-иллюстрация букета в вазе -->
+      <svg class="hero__bouquet" viewBox="0 0 420 560" role="img" aria-label="Садовый букет в стеклянной вазе">
+        <defs>
+          <linearGradient id="vaseGlass" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#ffffff" stop-opacity=".85"/>
+            <stop offset=".5" stop-color="#EDE6DB" stop-opacity=".55"/>
+            <stop offset="1" stop-color="#ffffff" stop-opacity=".8"/>
+          </linearGradient>
+          <radialGradient id="peonyGrad" cx=".4" cy=".35" r=".8">
+            <stop offset="0" stop-color="#EFD5CE"/>
+            <stop offset="1" stop-color="#D8B4AE"/>
+          </radialGradient>
+          <radialGradient id="creamGrad" cx=".4" cy=".35" r=".8">
+            <stop offset="0" stop-color="#FFFDF9"/>
+            <stop offset="1" stop-color="#EFE3D3"/>
+          </radialGradient>
+          <radialGradient id="sageGrad" cx=".4" cy=".35" r=".8">
+            <stop offset="0" stop-color="#B7C7B2"/>
+            <stop offset="1" stop-color="#9CAF97"/>
+          </radialGradient>
+        </defs>
+
+        <!-- стебли -->
+        <g stroke="#7D8F78" stroke-width="4" fill="none" stroke-linecap="round">
+          <path d="M210 470 C 205 380 150 320 120 250"/>
+          <path d="M210 470 C 210 370 205 300 205 210"/>
+          <path d="M210 470 C 218 380 270 330 300 260"/>
+          <path d="M210 470 C 200 400 170 360 165 300"/>
+          <path d="M210 470 C 222 400 250 360 255 300"/>
+        </g>
+        <!-- эвкалипт слева -->
+        <g class="sway">
+          <path d="M150 330 C 120 280 100 250 88 200" stroke="#8FA487" stroke-width="3" fill="none"/>
+          <g fill="#9CAF97">
+            <circle cx="102" cy="238" r="11"/><circle cx="118" cy="264" r="12"/>
+            <circle cx="134" cy="290" r="11"/><circle cx="92" cy="212" r="9"/>
+            <circle cx="86" cy="186" r="10"/>
+          </g>
+          <g fill="#B7C7B2">
+            <circle cx="112" cy="250" r="8"/><circle cx="126" cy="276" r="8"/><circle cx="96" cy="224" r="7"/>
+          </g>
+        </g>
+        <!-- ветка справа -->
+        <g class="sway sway--slow">
+          <path d="M270 320 C 300 270 320 240 334 190" stroke="#8FA487" stroke-width="3" fill="none"/>
+          <g fill="#9CAF97">
+            <ellipse cx="318" cy="232" rx="9" ry="16" transform="rotate(35 318 232)"/>
+            <ellipse cx="330" cy="204" rx="8" ry="14" transform="rotate(28 330 204)"/>
+            <ellipse cx="302" cy="256" rx="8" ry="14" transform="rotate(42 302 256)"/>
+          </g>
+        </g>
+        <!-- цветы -->
+        <g class="sway">
+          <g transform="translate(120 236)">
+            <g fill="url(#peonyGrad)">
+              <ellipse rx="20" ry="30" transform="rotate(0)"/><ellipse rx="20" ry="30" transform="rotate(60)"/><ellipse rx="20" ry="30" transform="rotate(120)"/>
+            </g>
+            <g fill="#E7C6BE">
+              <ellipse rx="12" ry="19" transform="rotate(30)"/><ellipse rx="12" ry="19" transform="rotate(90)"/><ellipse rx="12" ry="19" transform="rotate(150)"/>
+            </g>
+            <circle r="8" fill="#B99762"/>
+          </g>
+        </g>
+        <g class="sway sway--slow">
+          <g transform="translate(205 176)">
+            <g fill="url(#creamGrad)">
+              <ellipse rx="22" ry="32" transform="rotate(0)"/><ellipse rx="22" ry="32" transform="rotate(72)"/><ellipse rx="22" ry="32" transform="rotate(144)"/><ellipse rx="22" ry="32" transform="rotate(216)"/><ellipse rx="22" ry="32" transform="rotate(288)"/>
+            </g>
+            <g fill="#F6ECDD">
+              <ellipse rx="13" ry="20" transform="rotate(36)"/><ellipse rx="13" ry="20" transform="rotate(108)"/><ellipse rx="13" ry="20" transform="rotate(180)"/><ellipse rx="13" ry="20" transform="rotate(252)"/><ellipse rx="13" ry="20" transform="rotate(324)"/>
+            </g>
+            <circle r="9" fill="#C9A66E"/>
+          </g>
+        </g>
+        <g class="sway">
+          <g transform="translate(300 244)">
+            <g fill="url(#peonyGrad)">
+              <ellipse rx="18" ry="27" transform="rotate(0)"/><ellipse rx="18" ry="27" transform="rotate(72)"/><ellipse rx="18" ry="27" transform="rotate(144)"/><ellipse rx="18" ry="27" transform="rotate(216)"/><ellipse rx="18" ry="27" transform="rotate(288)"/>
+            </g>
+            <circle r="11" fill="#E7C6BE"/><circle r="5" fill="#B99762"/>
+          </g>
+        </g>
+        <g class="sway sway--slow">
+          <g transform="translate(162 296)">
+            <g fill="url(#sageGrad)">
+              <ellipse rx="14" ry="21" transform="rotate(0)"/><ellipse rx="14" ry="21" transform="rotate(72)"/><ellipse rx="14" ry="21" transform="rotate(144)"/><ellipse rx="14" ry="21" transform="rotate(216)"/><ellipse rx="14" ry="21" transform="rotate(288)"/>
+            </g>
+            <circle r="7" fill="#E9E3D2"/>
+          </g>
+          <g transform="translate(258 296)">
+            <g fill="url(#sageGrad)">
+              <ellipse rx="13" ry="20" transform="rotate(0)"/><ellipse rx="13" ry="20" transform="rotate(72)"/><ellipse rx="13" ry="20" transform="rotate(144)"/><ellipse rx="13" ry="20" transform="rotate(216)"/><ellipse rx="13" ry="20" transform="rotate(288)"/>
+            </g>
+            <circle r="6" fill="#E9E3D2"/>
+          </g>
+        </g>
+        <!-- ваза -->
+        <g>
+          <path d="M160 340 L260 340 L252 520 C 252 534 240 542 210 542 C 180 542 168 534 168 520 Z" fill="url(#vaseGlass)" stroke="#D9CFBF" stroke-width="2"/>
+          <path d="M166 420 L254 420" stroke="#D9CFBF" stroke-width="1.5" opacity=".7"/>
+          <path d="M168 424 C 190 480 230 480 252 424 L 250 520 C 248 530 238 536 210 536 C 182 536 172 530 170 520 Z" fill="#E7DFD0" opacity=".55"/>
+          <ellipse cx="210" cy="340" rx="50" ry="7" fill="#F4EEE3" stroke="#D9CFBF" stroke-width="1.5"/>
+          <path d="M180 350 C 176 420 176 480 182 524" stroke="#ffffff" stroke-width="5" opacity=".65" fill="none" stroke-linecap="round"/>
+        </g>
+      </svg>
+      <div class="hero__frame" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <div class="hero__scroll" aria-hidden="true"><span></span></div>
+</section>
+
+<!-- ============ СВАДЬБЫ + МУДБОРД ============ -->
+<section class="section wedding" id="wedding">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="section__eyebrow">Свадебная флористика</p>
+      <h2 class="section__title">Декор, который звучит<br>как <em>клятва</em></h2>
+      <p class="section__lead">Букет невесты, оформление арки, столы гостей — продумываем сценографию дня целиком, от первого референса до последнего лепестка.</p>
+    </div>
+
+    <div class="gold-line reveal" aria-hidden="true"><span></span></div>
+
+    <!-- Мудборд «стол флориста» -->
+    <div class="moodboard">
+      <figure class="mood mood--r1 reveal">
+        <div class="mood__img mood__img--arch">
+          <svg viewBox="0 0 260 200" aria-hidden="true">
+            <rect width="260" height="200" fill="#F3EDE2"/>
+            <path d="M60 200 L60 90 C60 40 200 40 200 90 L200 200" fill="none" stroke="#B99762" stroke-width="3"/>
+            <g fill="#D8B4AE">
+              <circle cx="66" cy="96" r="13"/><circle cx="82" cy="66" r="11"/><circle cx="112" cy="52" r="12"/><circle cx="148" cy="50" r="11"/><circle cx="182" cy="62" r="12"/><circle cx="196" cy="92" r="10"/>
+            </g>
+            <g fill="#9CAF97">
+              <circle cx="74" cy="82" r="7"/><circle cx="98" cy="58" r="7"/><circle cx="130" cy="50" r="6"/><circle cx="166" cy="54" r="7"/><circle cx="190" cy="76" r="6"/>
+            </g>
+            <rect x="30" y="178" width="200" height="8" rx="4" fill="#E4DACA"/>
+          </svg>
+        </div>
+        <figcaption>арка «садовый полёт»</figcaption>
+      </figure>
+
+      <figure class="mood mood--r2 reveal">
+        <div class="mood__img mood__img--bride">
+          <svg viewBox="0 0 260 200" aria-hidden="true">
+            <rect width="260" height="200" fill="#EFE7DA"/>
+            <g transform="translate(130 96)">
+              <g fill="#E7C6BE">
+                <ellipse rx="26" ry="38" transform="rotate(0)"/><ellipse rx="26" ry="38" transform="rotate(60)"/><ellipse rx="26" ry="38" transform="rotate(120)"/>
+              </g>
+              <g fill="#F3DED7">
+                <ellipse rx="15" ry="24" transform="rotate(30)"/><ellipse rx="15" ry="24" transform="rotate(90)"/><ellipse rx="15" ry="24" transform="rotate(150)"/>
+              </g>
+              <circle r="10" fill="#B99762"/>
+            </g>
+            <g stroke="#8FA487" stroke-width="4" stroke-linecap="round">
+              <path d="M130 130 L118 186"/><path d="M130 130 L142 186"/>
+            </g>
+            <path d="M108 150 L152 150 L146 176 L114 176 Z" fill="#FDFAF6" stroke="#D9CFBF"/>
+          </svg>
+        </div>
+        <figcaption>букет невесты, пионы</figcaption>
+      </figure>
+
+      <figure class="mood mood--r3 reveal">
+        <div class="mood__img mood__img--table">
+          <svg viewBox="0 0 260 200" aria-hidden="true">
+            <rect width="260" height="200" fill="#F5EFE5"/>
+            <rect x="24" y="120" width="212" height="46" rx="6" fill="#EDE3D2"/>
+            <g transform="translate(70 108)"><circle r="16" fill="#D8B4AE"/><circle r="8" fill="#EED2CB"/></g>
+            <g transform="translate(130 100)"><circle r="20" fill="#F3E9DA"/><circle r="9" fill="#D8B4AE"/></g>
+            <g transform="translate(192 108)"><circle r="15" fill="#9CAF97"/><circle r="7" fill="#C6D3C1"/></g>
+            <g fill="#B99762"><rect x="50" y="126" width="4" height="30" rx="2"/><rect x="206" y="126" width="4" height="30" rx="2"/></g>
+            <g fill="#FFFDF8"><circle cx="100" cy="146" r="9"/><circle cx="160" cy="146" r="9"/></g>
+          </svg>
+        </div>
+        <figcaption>столы гостей, композиции</figcaption>
+      </figure>
+
+      <figure class="mood mood--r4 reveal">
+        <div class="mood__img mood__img--ribbon">
+          <svg viewBox="0 0 260 200" aria-hidden="true">
+            <rect width="260" height="200" fill="#F2EBDF"/>
+            <path d="M40 150 C 90 110 120 170 160 120 C 190 84 220 120 236 96" fill="none" stroke="#D8B4AE" stroke-width="10" stroke-linecap="round" opacity=".8"/>
+            <path d="M30 120 C 80 90 130 140 180 96 C 205 74 226 88 240 70" fill="none" stroke="#B99762" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+            <g transform="translate(70 66)"><circle r="17" fill="#E7C6BE"/><circle r="7" fill="#B99762"/></g>
+            <g transform="translate(186 52)"><circle r="13" fill="#9CAF97"/><circle r="6" fill="#E9E3D2"/></g>
+          </svg>
+        </div>
+        <figcaption>ленты и фактуры</figcaption>
+      </figure>
+
+      <figure class="mood mood--r5 reveal">
+        <div class="mood__img mood__img--palette">
+          <svg viewBox="0 0 260 200" aria-hidden="true">
+            <rect width="260" height="200" fill="#F6F1E8"/>
+            <g><rect x="40" y="50" width="46" height="100" rx="23" fill="#D8B4AE"/>
+               <rect x="98" y="50" width="46" height="100" rx="23" fill="#9CAF97"/>
+               <rect x="156" y="50" width="46" height="100" rx="23" fill="#FDFAF6" stroke="#E2D8C8"/>
+               <rect x="214" y="50" width="10" height="100" rx="5" fill="#B99762"/></g>
+            <circle cx="63" cy="166" r="7" fill="#B99762"/>
+          </svg>
+        </div>
+        <figcaption>палитра сезона</figcaption>
+      </figure>
+
+      <figure class="mood mood--r6 reveal">
+        <div class="mood__img mood__img--candles">
+          <svg viewBox="0 0 260 200" aria-hidden="true">
+            <rect width="260" height="200" fill="#EFE8DB"/>
+            <g><rect x="60" y="92" width="16" height="74" rx="6" fill="#FDFAF6" stroke="#E2D8C8"/>
+               <ellipse cx="68" cy="82" rx="6" ry="11" fill="#E9C87E"/></g>
+            <g><rect x="120" y="72" width="18" height="94" rx="7" fill="#FDFAF6" stroke="#E2D8C8"/>
+               <ellipse cx="129" cy="60" rx="7" ry="13" fill="#E9C87E"/></g>
+            <g><rect x="184" y="102" width="14" height="64" rx="6" fill="#FDFAF6" stroke="#E2D8C8"/>
+               <ellipse cx="191" cy="93" rx="5" ry="10" fill="#E9C87E"/></g>
+            <g fill="#9CAF97"><ellipse cx="98" cy="160" rx="14" ry="7"/><ellipse cx="162" cy="164" rx="16" ry="7"/></g>
+            <circle cx="98" cy="150" r="10" fill="#D8B4AE"/><circle cx="162" cy="154" r="11" fill="#F3E9DA"/>
+          </svg>
+        </div>
+        <figcaption>вечерний свет, свечи</figcaption>
+      </figure>
+    </div>
+
+    <div class="wedding__cta reveal">
+      <p class="script wedding__script">свадьба Ани и Миши, июнь — из нашего мудборда</p>
+      <a href="#form" class="btn btn--solid">Записаться на консультацию</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ КАЛЬКУЛЯТОР ============ -->
+<section class="section calc" id="calc">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="section__eyebrow">Ориентир по бюджету</p>
+      <h2 class="section__title">Калькулятор <em>свадебной</em> сметы</h2>
+      <p class="section__lead">Выберите количество композиций и стилистику — покажем порядок бюджета. Точная смета — после встречи и мудборда.</p>
+    </div>
+
+    <div class="calc__grid reveal">
+      <div class="calc__controls">
+        <div class="calc__field">
+          <label for="calcTables">Гостевые столы <output id="calcTablesOut">10</output></label>
+          <input type="range" id="calcTables" min="0" max="30" value="10" step="1">
+          <span class="calc__hint">композиция на стол — от 6 500 ₽</span>
+        </div>
+        <div class="calc__field">
+          <label for="calcBridesmaids">Букеты подружек <output id="calcBridesmaidsOut">3</output></label>
+          <input type="range" id="calcBridesmaids" min="0" max="8" value="3" step="1">
+          <span class="calc__hint">3 500 ₽ за букет</span>
+        </div>
+        <div class="calc__field">
+          <span class="calc__label">Крупные композиции</span>
+          <label class="check"><input type="checkbox" id="calcArch" checked><span class="check__box"></span>Церемониальная арка — 45 000 ₽</label>
+          <label class="check"><input type="checkbox" id="calcPhoto"><span class="check__box"></span>Фотозона — 30 000 ₽</label>
+          <label class="check"><input type="checkbox" id="calcPresidium" checked><span class="check__box"></span>Президиум жениха и невесты — 25 000 ₽</label>
+        </div>
+        <div class="calc__field">
+          <span class="calc__label">Стилистика</span>
+          <div class="calc__styles" id="calcStyles">
+            <button type="button" class="chip" data-mult="1">Минимализм</button>
+            <button type="button" class="chip is-active" data-mult="1.2">Садовая классика</button>
+            <button type="button" class="chip" data-mult="1.45">Haute couture</button>
+          </div>
+        </div>
+      </div>
+      <div class="calc__result">
+        <p class="calc__result-label">Ориентировочная смета</p>
+        <p class="calc__sum"><span id="calcSumFrom">0</span> — <span id="calcSumTo">0</span> ₽</p>
+        <p class="calc__style-note" id="calcStyleNote">стиль: садовая классика</p>
+        <ul class="calc__breakdown" id="calcBreakdown"></ul>
+        <p class="calc__disclaimer">* Точная смета — после личной встречи: учитываем сезон, площадку и ваши референсы.</p>
+        <a href="#form" class="btn btn--solid">Обсудить смету</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ АВТОРСКИЕ БУКЕТЫ ============ -->
+<section class="section bouquets" id="bouquets">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="section__eyebrow">Витрина ателье</p>
+      <h2 class="section__title">Авторские <em>букеты</em></h2>
+      <p class="section__lead">Шесть постоянных композиций сезона. Каждую собираем в день доставки из свежей поставки.</p>
+    </div>
+
+    <div class="bouquets__grid">
+      <article class="card reveal">
+        <div class="card__img">
+          <svg viewBox="0 0 200 210" aria-hidden="true">
+            <g stroke="#8FA487" stroke-width="3" stroke-linecap="round"><path d="M100 205 L92 140"/><path d="M100 205 L112 138"/></g>
+            <g fill="#9CAF97"><ellipse cx="78" cy="150" rx="8" ry="16" transform="rotate(-40 78 150)"/><ellipse cx="124" cy="152" rx="8" ry="15" transform="rotate(40 124 152)"/></g>
+            <g transform="translate(100 96)">
+              <g fill="#E7C6BE"><ellipse rx="22" ry="32" transform="rotate(0)"/><ellipse rx="22" ry="32" transform="rotate(60)"/><ellipse rx="22" ry="32" transform="rotate(120)"/></g>
+              <g fill="#F3DED7"><ellipse rx="13" ry="20" transform="rotate(30)"/><ellipse rx="13" ry="20" transform="rotate(90)"/><ellipse rx="13" ry="20" transform="rotate(150)"/></g>
+              <circle r="9" fill="#B99762"/>
+            </g>
+            <path d="M76 158 L124 158 L118 186 L82 186 Z" fill="#FDFAF6" stroke="#E2D8C8"/>
+          </svg>
+        </div>
+        <h3 class="card__name">«Пудровый пион»</h3>
+        <p class="card__desc">пионы, роза «эксплорер», эвкалипт</p>
+        <div class="card__foot"><span class="card__price">7 900 ₽</span><button class="card__btn" data-bouquet="Пудровый пион">Заказать</button></div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__img">
+          <svg viewBox="0 0 200 210" aria-hidden="true">
+            <g stroke="#8FA487" stroke-width="3" stroke-linecap="round"><path d="M100 205 L94 140"/><path d="M100 205 L110 140"/></g>
+            <g fill="#B7C7B2"><circle cx="76" cy="140" r="9"/><circle cx="124" cy="138" r="8"/><circle cx="90" cy="128" r="7"/></g>
+            <g transform="translate(84 92)"><circle r="26" fill="#D8B4AE"/><circle r="17" fill="#E7C6BE"/><circle r="9" fill="#F3DED7"/><circle r="4" fill="#B99762"/></g>
+            <g transform="translate(124 106)"><circle r="20" fill="#E7C6BE"/><circle r="12" fill="#F3DED7"/><circle r="5" fill="#B99762"/></g>
+            <path d="M78 158 L122 158 L117 186 L83 186 Z" fill="#FDFAF6" stroke="#E2D8C8"/>
+          </svg>
+        </div>
+        <h3 class="card__name">«Садовый ранункулюс»</h3>
+        <p class="card__desc">ранункулюсы, матиола, зелень писташа</p>
+        <div class="card__foot"><span class="card__price">6 400 ₽</span><button class="card__btn" data-bouquet="Садовый ранункулюс">Заказать</button></div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__img">
+          <svg viewBox="0 0 200 210" aria-hidden="true">
+            <g stroke="#8FA487" stroke-width="3" stroke-linecap="round"><path d="M100 205 L96 138"/><path d="M100 205 L108 140"/></g>
+            <g transform="translate(100 100)">
+              <g fill="#9CAF97"><ellipse rx="14" ry="30" transform="rotate(-30)"/><ellipse rx="14" ry="30" transform="rotate(30)"/><ellipse rx="12" ry="26" transform="rotate(-70)"/><ellipse rx="12" ry="26" transform="rotate(70)"/></g>
+              <circle cy="-18" r="15" fill="#F3E9DA"/><circle cx="-20" cy="6" r="13" fill="#FDFAF6"/><circle cx="20" cy="8" r="13" fill="#EFE3D3"/><circle cy="16" r="12" fill="#F6ECDD"/>
+            </g>
+            <g fill="#D8B4AE"><circle cx="66" cy="120" r="8"/><circle cx="136" cy="118" r="8"/></g>
+            <path d="M78 158 L122 158 L117 186 L83 186 Z" fill="#FDFAF6" stroke="#E2D8C8"/>
+          </svg>
+        </div>
+        <h3 class="card__name">«Утро в Провансе»</h3>
+        <p class="card__desc">гортензия, лаванда, льняная лента</p>
+        <div class="card__foot"><span class="card__price">5 600 ₽</span><button class="card__btn" data-bouquet="Утро в Провансе">Заказать</button></div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__img">
+          <svg viewBox="0 0 200 210" aria-hidden="true">
+            <g stroke="#8FA487" stroke-width="3" stroke-linecap="round"><path d="M100 205 L94 142"/><path d="M100 205 L110 142"/></g>
+            <g transform="translate(100 96)">
+              <g fill="#F6F1E6" stroke="#E4D9C4" stroke-width="1">
+                <circle cx="-24" cy="-6" r="14"/><circle cx="24" cy="-6" r="14"/><circle cy="-24" r="14"/><circle cy="14" r="15"/><circle cx="-14" cy="-20" r="12"/><circle cx="14" cy="-20" r="12"/>
+              </g>
+              <circle r="8" fill="#E7C6BE"/>
+            </g>
+            <g fill="#9CAF97"><ellipse cx="70" cy="140" rx="8" ry="15" transform="rotate(-45 70 140)"/><ellipse cx="132" cy="142" rx="8" ry="14" transform="rotate(45 132 142)"/></g>
+            <path d="M78 158 L122 158 L117 186 L83 186 Z" fill="#FDFAF6" stroke="#E2D8C8"/>
+          </svg>
+        </div>
+        <h3 class="card__name">«Молочная гортензия»</h3>
+        <p class="card__desc">гортензия «аннабель», розовый акцент</p>
+        <div class="card__foot"><span class="card__price">4 900 ₽</span><button class="card__btn" data-bouquet="Молочная гортензия">Заказать</button></div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__img">
+          <svg viewBox="0 0 200 210" aria-hidden="true">
+            <g stroke="#8FA487" stroke-width="3" stroke-linecap="round"><path d="M100 205 L92 140"/><path d="M100 205 L112 140"/></g>
+            <g transform="translate(100 94)">
+              <g fill="#D8B4AE"><ellipse rx="24" ry="34" transform="rotate(0)"/><ellipse rx="24" ry="34" transform="rotate(72)"/><ellipse rx="24" ry="34" transform="rotate(144)"/><ellipse rx="24" ry="34" transform="rotate(216)"/><ellipse rx="24" ry="34" transform="rotate(288)"/></g>
+              <g fill="#E4C2BA"><ellipse rx="15" ry="22" transform="rotate(36)"/><ellipse rx="15" ry="22" transform="rotate(108)"/><ellipse rx="15" ry="22" transform="rotate(180)"/><ellipse rx="15" ry="22" transform="rotate(252)"/><ellipse rx="15" ry="22" transform="rotate(324)"/></g>
+              <circle r="10" fill="#C99A94"/>
+            </g>
+            <path d="M76 158 L124 158 L118 186 L82 186 Z" fill="#FDFAF6" stroke="#E2D8C8"/>
+          </svg>
+        </div>
+        <h3 class="card__name">«Пыльная роза»</h3>
+        <p class="card__desc">садовые розы «quicksand», рускус</p>
+        <div class="card__foot"><span class="card__price">8 700 ₽</span><button class="card__btn" data-bouquet="Пыльная роза">Заказать</button></div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__img">
+          <svg viewBox="0 0 200 210" aria-hidden="true">
+            <g stroke="#8FA487" stroke-width="3" stroke-linecap="round"><path d="M100 205 L96 140"/><path d="M100 205 L108 140"/></g>
+            <g transform="translate(100 94)">
+              <g fill="#E9C87E"><ellipse rx="10" ry="30" transform="rotate(0)"/><ellipse rx="10" ry="30" transform="rotate(30)"/><ellipse rx="10" ry="30" transform="rotate(60)"/><ellipse rx="10" ry="30" transform="rotate(90)"/><ellipse rx="10" ry="30" transform="rotate(120)"/><ellipse rx="10" ry="30" transform="rotate(150)"/></g>
+              <g fill="#D8B4AE"><ellipse rx="8" ry="20" transform="rotate(15)"/><ellipse rx="8" ry="20" transform="rotate(75)"/><ellipse rx="8" ry="20" transform="rotate(135)"/></g>
+              <circle r="9" fill="#B99762"/>
+            </g>
+            <g fill="#9CAF97"><ellipse cx="72" cy="144" rx="8" ry="14" transform="rotate(-42 72 144)"/><ellipse cx="130" cy="146" rx="8" ry="13" transform="rotate(42 130 146)"/></g>
+            <path d="M78 158 L122 158 L117 186 L83 186 Z" fill="#FDFAF6" stroke="#E2D8C8"/>
+          </svg>
+        </div>
+        <h3 class="card__name">«Золотая георгина»</h3>
+        <p class="card__desc">георгины «кафе о ле», пыльные акценты</p>
+        <div class="card__foot"><span class="card__price">6 900 ₽</span><button class="card__btn" data-bouquet="Золотая георгина">Заказать</button></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ СЕЗОННОСТЬ ============ -->
+<section class="section season" id="season">
+  <div class="container season__inner">
+    <div class="season__text reveal">
+      <p class="section__eyebrow">Календарь ателье</p>
+      <h2 class="section__title">Что цветёт <em>сейчас</em></h2>
+      <p class="section__lead">Работаем только с сезонными цветами — так букет живёт дольше и стоит честнее. Свежая поставка — по вторникам и пятницам.</p>
+      <p class="season__note"><span class="season__dot"></span>свежая поставка по вторникам и пятницам</p>
+    </div>
+    <ul class="season__list">
+      <li class="season__item reveal">
+        <span class="season__flower"><svg viewBox="0 0 60 60"><g fill="#D8B4AE"><ellipse cx="30" cy="30" rx="7" ry="20" transform="rotate(0 30 30)"/><ellipse cx="30" cy="30" rx="7" ry="20" transform="rotate(45 30 30)"/><ellipse cx="30" cy="30" rx="7" ry="20" transform="rotate(90 30 30)"/><ellipse cx="30" cy="30" rx="7" ry="20" transform="rotate(135 30 30)"/></g><circle cx="30" cy="30" r="6" fill="#B99762"/></svg></span>
+        <div><h3>Георгины</h3><p>август — октябрь · от 350 ₽/ветвь</p></div>
+        <span class="season__tag">в наличии</span>
+      </li>
+      <li class="season__item reveal">
+        <span class="season__flower"><svg viewBox="0 0 60 60"><g fill="#F3E9DA" stroke="#E2D8C8"><circle cx="22" cy="24" r="10"/><circle cx="38" cy="24" r="10"/><circle cx="30" cy="38" r="11"/><circle cx="30" cy="18" r="8"/></g><circle cx="30" cy="30" r="5" fill="#E7C6BE"/></svg></span>
+        <div><h3>Гортензия</h3><p>июль — сентябрь · от 600 ₽/ветвь</p></div>
+        <span class="season__tag">в наличии</span>
+      </li>
+      <li class="season__item reveal">
+        <span class="season__flower"><svg viewBox="0 0 60 60"><g fill="#9CAF97"><ellipse cx="30" cy="30" rx="8" ry="18" transform="rotate(-25 30 30)"/><ellipse cx="30" cy="30" rx="8" ry="18" transform="rotate(25 30 30)"/></g><g fill="#E7C6BE"><circle cx="24" cy="20" r="7"/><circle cx="36" cy="20" r="7"/><circle cx="30" cy="30" r="7"/><circle cx="24" cy="40" r="6"/><circle cx="36" cy="40" r="6"/></g></svg></span>
+        <div><h3>Флоксы</h3><p>июль — сентябрь · от 280 ₽/ветвь</p></div>
+        <span class="season__tag">в наличии</span>
+      </li>
+      <li class="season__item reveal">
+        <span class="season__flower"><svg viewBox="0 0 60 60"><g fill="#E9C87E"><ellipse cx="30" cy="30" rx="6" ry="19" transform="rotate(0 30 30)"/><ellipse cx="30" cy="30" rx="6" ry="19" transform="rotate(40 30 30)"/><ellipse cx="30" cy="30" rx="6" ry="19" transform="rotate(80 30 30)"/><ellipse cx="30" cy="30" rx="6" ry="19" transform="rotate(120 30 30)"/><ellipse cx="30" cy="30" rx="6" ry="19" transform="rotate(160 30 30)"/></g><circle cx="30" cy="30" r="6" fill="#C98F4E"/></svg></span>
+        <div><h3>Цинния</h3><p>август — октябрь · от 240 ₽/ветвь</p></div>
+        <span class="season__tag season__tag--soon">пик сезона</span>
+      </li>
+      <li class="season__item reveal">
+        <span class="season__flower"><svg viewBox="0 0 60 60"><g fill="#B7A6C9"><ellipse cx="30" cy="30" rx="6" ry="18" transform="rotate(0 30 30)"/><ellipse cx="30" cy="30" rx="6" ry="18" transform="rotate(45 30 30)"/><ellipse cx="30" cy="30" rx="6" ry="18" transform="rotate(90 30 30)"/><ellipse cx="30" cy="30" rx="6" ry="18" transform="rotate(135 30 30)"/></g><circle cx="30" cy="30" r="6" fill="#E9C87E"/></svg></span>
+        <div><h3>Астра садовая</h3><p>август — ноябрь · от 220 ₽/ветвь</p></div>
+        <span class="season__tag">в наличии</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ КАК МЫ РАБОТАЕМ (таймлапс-сцена) ============ -->
+<section class="section process" id="process">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="section__eyebrow">За кулисами ателье</p>
+      <h2 class="section__title">Как мы <em>работаем</em></h2>
+      <p class="section__lead">Таймлапс сборки свадебного букета — 20 секунд, которые обычно занимают три часа ручной работы.</p>
+    </div>
+
+    <div class="process__grid">
+      <div class="process__scene reveal" aria-hidden="true">
+        <svg class="timelapse" viewBox="0 0 300 300">
+          <rect width="300" height="300" rx="8" fill="#F5EFE5"/>
+          <line x1="30" y1="250" x2="270" y2="250" stroke="#E2D8C8" stroke-width="3"/>
+          <!-- стебли появляются первыми -->
+          <g class="tl tl--1" stroke="#8FA487" stroke-width="4" stroke-linecap="round">
+            <path d="M150 250 L138 150"/><path d="M150 250 L150 140"/><path d="M150 250 L164 148"/>
+          </g>
+          <g class="tl tl--2" fill="#9CAF97">
+            <ellipse cx="122" cy="168" rx="9" ry="18" transform="rotate(-42 122 168)"/>
+            <ellipse cx="180" cy="170" rx="9" ry="17" transform="rotate(42 180 170)"/>
+            <circle cx="112" cy="140" r="9"/><circle cx="190" cy="142" r="8"/>
+          </g>
+          <g class="tl tl--3">
+            <g transform="translate(128 118)">
+              <g fill="#E7C6BE"><ellipse rx="16" ry="24" transform="rotate(0)"/><ellipse rx="16" ry="24" transform="rotate(60)"/><ellipse rx="16" ry="24" transform="rotate(120)"/></g>
+              <circle r="8" fill="#F3DED7"/><circle r="4" fill="#B99762"/>
+            </g>
+          </g>
+          <g class="tl tl--4">
+            <g transform="translate(172 122)">
+              <g fill="#F3E9DA"><ellipse rx="14" ry="21" transform="rotate(0)"/><ellipse rx="14" ry="21" transform="rotate(72)"/><ellipse rx="14" ry="21" transform="rotate(144)"/><ellipse rx="14" ry="21" transform="rotate(216)"/><ellipse rx="14" ry="21" transform="rotate(288)"/></g>
+              <circle r="7" fill="#D8B4AE"/>
+            </g>
+            <g transform="translate(150 92)">
+              <g fill="#D8B4AE"><ellipse rx="12" ry="18" transform="rotate(0)"/><ellipse rx="12" ry="18" transform="rotate(72)"/><ellipse rx="12" ry="18" transform="rotate(144)"/><ellipse rx="12" ry="18" transform="rotate(216)"/><ellipse rx="12" ry="18" transform="rotate(288)"/></g>
+              <circle r="6" fill="#B99762"/>
+            </g>
+          </g>
+          <g class="tl tl--5">
+            <path d="M122 196 L178 196 L172 232 L128 232 Z" fill="#FDFAF6" stroke="#E2D8C8" stroke-width="2"/>
+            <path d="M150 200 C 138 216 130 224 118 228" fill="none" stroke="#D8B4AE" stroke-width="6" stroke-linecap="round"/>
+            <path d="M150 200 C 162 216 170 224 182 228" fill="none" stroke="#D8B4AE" stroke-width="6" stroke-linecap="round"/>
+          </g>
+          <text class="tl tl--6" x="150" y="282" text-anchor="middle" font-size="13" fill="#B99762" font-family="Georgia, serif" font-style="italic">готово · 20 секунд</text>
+        </svg>
+      </div>
+      <ol class="process__steps">
+        <li class="reveal"><span class="process__num">01</span><div><h3>Встреча и мудборд</h3><p>Слушаем вашу историю, собираем референсы, фиксируем палитру и настроение дня.</p></div></li>
+        <li class="reveal"><span class="process__num">02</span><div><h3>Эскиз и смета</h3><p>Рисуем каждую композицию: букет, арка, столы. Смета прозрачна до ветки.</p></div></li>
+        <li class="reveal"><span class="process__num">03</span><div><h3>Закупка на аукционе</h3><p>Под эскиз отбираем цветы на цветочном аукционе, поставка — за 1–2 дня до события.</p></div></li>
+        <li class="reveal"><span class="process__num">04</span><div><h3>Сборка и монтаж</h3><p>Собираем вручную в день события, монтируем декор на площадке и остаёмся на связи.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ФЛОРИСТЫ ============ -->
+<section class="section florists" id="florists">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="section__eyebrow">Команда</p>
+      <h2 class="section__title">Флористы <em>ателье</em></h2>
+      <p class="section__lead">У каждого мастера — свой почерк. Выбирайте флориста под характер вашей истории.</p>
+    </div>
+
+    <div class="florists__grid">
+      <article class="florist reveal">
+        <div class="florist__portrait florist__portrait--anna">
+          <svg viewBox="0 0 200 220" aria-hidden="true">
+            <rect width="200" height="220" fill="#F1E9DC"/>
+            <circle cx="100" cy="92" r="52" fill="#E8C4B2"/>
+            <path d="M48 92 C 44 40 156 40 152 92 C 152 70 138 56 100 56 C 62 56 48 70 48 92 Z" fill="#6B4A38"/>
+            <path d="M48 92 C 46 130 56 150 66 156 L 60 100 Z" fill="#6B4A38"/>
+            <path d="M152 92 C 154 130 144 150 134 156 L 140 100 Z" fill="#6B4A38"/>
+            <circle cx="82" cy="94" r="4" fill="#2E2B28"/><circle cx="118" cy="94" r="4" fill="#2E2B28"/>
+            <path d="M88 116 C 96 122 104 122 112 116" fill="none" stroke="#B0614F" stroke-width="3" stroke-linecap="round"/>
+            <path d="M60 220 C 60 172 140 172 140 220 Z" fill="#9CAF97"/>
+            <path d="M100 176 L100 220" stroke="#7D8F78" stroke-width="2"/>
+            <g transform="translate(142 150)"><circle r="12" fill="#D8B4AE"/><circle r="5" fill="#B99762"/></g>
+          </svg>
+        </div>
+        <h3 class="florist__name">Анна Вербова</h3>
+        <p class="florist__style">стиль: <span class="script">садовая классика</span></p>
+        <p class="florist__about">12 лет во флористике, училась в Париже. Любит пионы, свободные линии и «букеты с ветерком».</p>
+        <button class="florist__btn" data-florist="Анна Вербова">Выбрать флориста</button>
+      </article>
+
+      <article class="florist reveal">
+        <div class="florist__portrait">
+          <svg viewBox="0 0 200 220" aria-hidden="true">
+            <rect width="200" height="220" fill="#EDE7DB"/>
+            <circle cx="100" cy="92" r="52" fill="#EFCDBB"/>
+            <path d="M52 80 C 52 34 148 34 148 80 L 148 66 C 130 50 70 50 52 66 Z" fill="#2E2B28"/>
+            <path d="M52 80 L 52 118 C 58 96 60 84 60 78 Z" fill="#2E2B28"/>
+            <path d="M148 80 L 148 118 C 142 96 140 84 140 78 Z" fill="#2E2B28"/>
+            <circle cx="82" cy="94" r="4" fill="#2E2B28"/><circle cx="118" cy="94" r="4" fill="#2E2B28"/>
+            <path d="M90 114 C 96 119 104 119 110 114" fill="none" stroke="#A85A49" stroke-width="3" stroke-linecap="round"/>
+            <path d="M60 220 C 60 172 140 172 140 220 Z" fill="#2E2B28"/>
+            <g transform="translate(58 152)"><circle r="11" fill="#F3E9DA"/><circle r="4" fill="#B99762"/></g>
+          </svg>
+        </div>
+        <h3 class="florist__name">Мария Санд</h3>
+        <p class="florist__style">стиль: <span class="script">минимализм</span></p>
+        <p class="florist__about">Архитектор по образованию. Собирает строгие монокомпозиции, где каждая ветка — на своём месте.</p>
+        <button class="florist__btn" data-florist="Мария Санд">Выбрать флориста</button>
+      </article>
+
+      <article class="florist reveal">
+        <div class="florist__portrait">
+          <svg viewBox="0 0 200 220" aria-hidden="true">
+            <rect width="200" height="220" fill="#F4EDE1"/>
+            <circle cx="100" cy="92" r="52" fill="#EAC2AE"/>
+            <path d="M46 96 C 40 30 160 30 154 96 C 150 62 132 50 100 50 C 68 50 50 62 46 96 Z" fill="#C98F4E"/>
+            <path d="M46 96 C 42 140 52 162 62 168 L 58 104 Z" fill="#C98F4E"/>
+            <path d="M154 96 C 158 140 148 162 138 168 L 142 104 Z" fill="#C98F4E"/>
+            <circle cx="82" cy="94" r="4" fill="#2E2B28"/><circle cx="118" cy="94" r="4" fill="#2E2B28"/>
+            <path d="M88 116 C 96 123 104 123 112 116" fill="none" stroke="#B0614F" stroke-width="3" stroke-linecap="round"/>
+            <path d="M60 220 C 60 172 140 172 140 220 Z" fill="#D8B4AE"/>
+            <g transform="translate(144 152)"><circle r="12" fill="#E9C87E"/><circle r="5" fill="#2E2B28"/></g>
+          </svg>
+        </div>
+        <h3 class="florist__name">Ольга Раевская</h3>
+        <p class="florist__style">стиль: <span class="script">couture-драматургия</span></p>
+        <p class="florist__about">Бывший театральный художник. Крупные формы, неожиданные сочетания, цветы как костюм.</p>
+        <button class="florist__btn" data-florist="Ольга Раевская">Выбрать флориста</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ПОРТФОЛИО СОБЫТИЙ ============ -->
+<section class="section portfolio" id="portfolio">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="section__eyebrow">Портфолио событий</p>
+      <h2 class="section__title">Свадьбы, которые мы <em>оформили</em></h2>
+    </div>
+  </div>
+  <div class="slider reveal" id="portfolioSlider">
+    <button class="slider__arrow slider__arrow--prev" id="portfolioPrev" aria-label="Назад">←</button>
+    <div class="slider__track" id="portfolioTrack">
+      <figure class="slide">
+        <div class="slide__img slide__img--s1">
+          <svg viewBox="0 0 360 240" aria-hidden="true">
+            <rect width="360" height="240" fill="#F3EDE2"/>
+            <path d="M80 240 L80 110 C80 56 280 56 280 110 L280 240" fill="none" stroke="#B99762" stroke-width="4"/>
+            <g fill="#D8B4AE"><circle cx="88" cy="116" r="16"/><circle cx="108" cy="82" r="14"/><circle cx="146" cy="64" r="15"/><circle cx="196" cy="62" r="14"/><circle cx="244" cy="78" r="15"/><circle cx="272" cy="112" r="13"/></g>
+            <g fill="#9CAF97"><circle cx="98" cy="98" r="8"/><circle cx="128" cy="72" r="8"/><circle cx="170" cy="62" r="7"/><circle cx="220" cy="68" r="8"/><circle cx="258" cy="94" r="7"/></g>
+            <rect x="120" y="200" width="120" height="10" rx="5" fill="#E4DACA"/>
+            <g fill="#FDFAF6"><rect x="150" y="176" width="12" height="26" rx="5"/><rect x="196" y="170" width="14" height="32" rx="6"/></g>
+            <ellipse cx="156" cy="168" rx="5" ry="9" fill="#E9C87E"/><ellipse cx="203" cy="160" rx="5" ry="10" fill="#E9C87E"/>
+          </svg>
+        </div>
+        <figcaption><span class="script">свадьба Ани и Миши</span><span class="slide__meta">14 июня · Усадьба «Середниково»</span></figcaption>
+      </figure>
+      <figure class="slide">
+        <div class="slide__img slide__img--s2">
+          <svg viewBox="0 0 360 240" aria-hidden="true">
+            <rect width="360" height="240" fill="#EFE8DB"/>
+            <rect x="40" y="150" width="280" height="52" rx="8" fill="#E9DFCE"/>
+            <g transform="translate(90 132)"><circle r="22" fill="#F3E9DA"/><circle r="10" fill="#D8B4AE"/></g>
+            <g transform="translate(180 122)"><circle r="26" fill="#D8B4AE"/><circle r="12" fill="#F3DED7"/></g>
+            <g transform="translate(272 132)"><circle r="20" fill="#9CAF97"/><circle r="9" fill="#C6D3C1"/></g>
+            <g fill="#B99762"><rect x="64" y="158" width="5" height="40" rx="2"/><rect x="292" y="158" width="5" height="40" rx="2"/></g>
+            <g fill="#FFFDF8"><circle cx="134" cy="176" r="10"/><circle cx="228" cy="176" r="10"/></g>
+          </svg>
+        </div>
+        <figcaption><span class="script">вечер Кати и Лёши</span><span class="slide__meta">26 июля · Loft «Квартал»</span></figcaption>
+      </figure>
+      <figure class="slide">
+        <div class="slide__img slide__img--s3">
+          <svg viewBox="0 0 360 240" aria-hidden="true">
+            <rect width="360" height="240" fill="#F5EFE5"/>
+            <g transform="translate(180 120)">
+              <g fill="#E7C6BE"><ellipse rx="34" ry="50" transform="rotate(0)"/><ellipse rx="34" ry="50" transform="rotate(60)"/><ellipse rx="34" ry="50" transform="rotate(120)"/></g>
+              <g fill="#F3DED7"><ellipse rx="20" ry="30" transform="rotate(30)"/><ellipse rx="20" ry="30" transform="rotate(90)"/><ellipse rx="20" ry="30" transform="rotate(150)"/></g>
+              <circle r="13" fill="#B99762"/>
+            </g>
+            <g fill="#9CAF97"><ellipse cx="98" cy="150" rx="12" ry="24" transform="rotate(-40 98 150)"/><ellipse cx="266" cy="150" rx="12" ry="22" transform="rotate(40 266 150)"/></g>
+            <path d="M120 190 L240 190 L228 232 L132 232 Z" fill="#FDFAF6" stroke="#E2D8C8" stroke-width="2"/>
+          </svg>
+        </div>
+        <figcaption><span class="script">утро невесты Сони</span><span class="slide__meta">2 августа · Отель «Метрополь»</span></figcaption>
+      </figure>
+      <figure class="slide">
+        <div class="slide__img slide__img--s4">
+          <svg viewBox="0 0 360 240" aria-hidden="true">
+            <rect width="360" height="240" fill="#F2EBDF"/>
+            <path d="M30 60 C 120 20 240 20 330 60" fill="none" stroke="#B99762" stroke-width="3"/>
+            <g fill="#D8B4AE"><circle cx="60" cy="58" r="12"/><circle cx="110" cy="40" r="13"/><circle cx="165" cy="32" r="12"/><circle cx="220" cy="32" r="13"/><circle cx="275" cy="42" r="12"/><circle cx="318" cy="60" r="11"/></g>
+            <g fill="#9CAF97"><circle cx="84" cy="48" r="7"/><circle cx="138" cy="34" r="7"/><circle cx="192" cy="30" r="6"/><circle cx="248" cy="36" r="7"/><circle cx="298" cy="50" r="6"/></g>
+            <g fill="#FDFAF6"><rect x="90" y="150" width="14" height="60" rx="6"/><rect x="170" y="136" width="16" height="74" rx="7"/><rect x="256" y="156" width="12" height="54" rx="5"/></g>
+            <ellipse cx="97" cy="140" rx="6" ry="11" fill="#E9C87E"/><ellipse cx="178" cy="124" rx="7" ry="13" fill="#E9C87E"/><ellipse cx="262" cy="147" rx="5" ry="10" fill="#E9C87E"/>
+            <rect x="60" y="210" width="240" height="8" rx="4" fill="#E4DACA"/>
+          </svg>
+        </div>
+        <figcaption><span class="script">ужин Марины и Тима</span><span class="slide__meta">18 августа · Ресторан «Сад»</span></figcaption>
+      </figure>
+    </div>
+    <button class="slider__arrow slider__arrow--next" id="portfolioNext" aria-label="Вперёд">→</button>
+  </div>
+</section>
+
+<!-- ============ ОТЗЫВЫ ============ -->
+<section class="section reviews" id="reviews">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="section__eyebrow">Слова невест</p>
+      <h2 class="section__title">Отзывы <em>наших</em> героинь</h2>
+    </div>
+
+    <div class="carousel reveal" id="reviewsCarousel">
+      <div class="carousel__viewport">
+        <div class="carousel__track" id="reviewsTrack">
+          <blockquote class="review">
+            <div class="review__img">
+              <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="58" fill="#F3EDE2"/><g transform="translate(60 56)"><g fill="#E7C6BE"><ellipse rx="16" ry="24" transform="rotate(0)"/><ellipse rx="16" ry="24" transform="rotate(60)"/><ellipse rx="16" ry="24" transform="rotate(120)"/></g><circle r="8" fill="#F3DED7"/><circle r="4" fill="#B99762"/></g><path d="M60 80 L54 108 M60 80 L68 106" stroke="#8FA487" stroke-width="3" stroke-linecap="round"/></svg>
+            </div>
+            <p class="review__quote">«Букет был точно про меня — Анна услышала даже то, что я не смогла сформулировать. Гости до сих пор вспоминают арку».</p>
+            <footer><span class="script">Аня</span><span class="review__meta">свадьба в «Середниково», июнь</span></footer>
+          </blockquote>
+          <blockquote class="review">
+            <div class="review__img">
+              <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="58" fill="#EFE8DB"/><g transform="translate(60 54)"><g fill="#F3E9DA"><ellipse rx="14" ry="22" transform="rotate(0)"/><ellipse rx="14" ry="22" transform="rotate(72)"/><ellipse rx="14" ry="22" transform="rotate(144)"/><ellipse rx="14" ry="22" transform="rotate(216)"/><ellipse rx="14" ry="22" transform="rotate(288)"/></g><circle r="7" fill="#D8B4AE"/></g><path d="M60 78 L56 106 M60 78 L66 104" stroke="#8FA487" stroke-width="3" stroke-linecap="round"/></svg>
+            </div>
+            <p class="review__quote">«Минимализм Марии — это любовь. Ни одной лишней ветки, всё строго и при этом очень нежно. Смета сошлась до рубля».</p>
+            <footer><span class="script">Катя</span><span class="review__meta">вечер в лофте «Квартал», июль</span></footer>
+          </blockquote>
+          <blockquote class="review">
+            <div class="review__img">
+              <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="58" fill="#F5EFE5"/><g transform="translate(60 56)"><g fill="#E9C87E"><ellipse rx="8" ry="24" transform="rotate(0)"/><ellipse rx="8" ry="24" transform="rotate(45)"/><ellipse rx="8" ry="24" transform="rotate(90)"/><ellipse rx="8" ry="24" transform="rotate(135)"/></g><circle r="7" fill="#B99762"/></g><path d="M60 82 L56 108 M60 82 L66 106" stroke="#8FA487" stroke-width="3" stroke-linecap="round"/></svg>
+            </div>
+            <p class="review__quote">«Ольга сделала из нашего ужина сцену из спектакля: георгины, свечи, драма. Плакала не только я, но и флорист».</p>
+            <footer><span class="script">Марина</span><span class="review__meta">ужин в ресторане «Сад», август</span></footer>
+          </blockquote>
+        </div>
+      </div>
+      <div class="carousel__controls">
+        <button class="carousel__arrow" id="reviewPrev" aria-label="Предыдущий отзыв">←</button>
+        <div class="carousel__dots" id="reviewDots"></div>
+        <button class="carousel__arrow" id="reviewNext" aria-label="Следующий отзыв">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ФОРМА ============ -->
+<section class="section contact" id="form">
+  <div class="container contact__inner">
+    <div class="contact__text reveal">
+      <p class="section__eyebrow">Запись в ателье</p>
+      <h2 class="section__title">Расскажите о<br>вашей <em>мечте</em></h2>
+      <p class="section__lead">Оставьте заявку — перезвоним в течение часа в рабочее время, обсудим дату и пригласим на встречу с мудбордом.</p>
+      <div class="contact__details">
+        <a href="tel:+79090939400" class="contact__phone">+7 909 093-94-00</a>
+        <p>Москва, Столешников переулок, 7<br>работаем по записи · ежедневно 10:00–20:00</p>
+      </div>
+    </div>
+
+    <form class="form reveal" id="leadForm" novalidate>
+      <div class="form__row">
+        <label class="form__field">
+          <span>Ваше имя *</span>
+          <input type="text" name="name" id="formName" placeholder="Анна" required>
+        </label>
+        <label class="form__field">
+          <span>Телефон *</span>
+          <input type="tel" name="phone" id="formPhone" placeholder="+7 ___ ___-__-__" required>
+        </label>
+      </div>
+      <div class="form__row">
+        <label class="form__field">
+          <span>Дата события</span>
+          <input type="date" name="date" id="formDate">
+        </label>
+        <label class="form__field">
+          <span>Бюджет</span>
+          <select name="budget" id="formBudget">
+            <option value="">Выберите ориентир</option>
+            <option>до 50 000 ₽</option>
+            <option>50 000 – 120 000 ₽</option>
+            <option>120 000 – 300 000 ₽</option>
+            <option>от 300 000 ₽</option>
+            <option>пока не знаю</option>
+          </select>
+        </label>
+      </div>
+      <label class="form__field">
+        <span>Расскажите о вашей мечте</span>
+        <textarea name="dream" id="formDream" rows="4" placeholder="Площадка, настроение, любимые цветы, референсы..."></textarea>
+      </label>
+      <p class="form__error" id="formError" role="alert"></p>
+      <button type="submit" class="btn btn--solid form__submit">Отправить заявку</button>
+      <p class="form__privacy">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+      <div class="form__success" id="formSuccess" hidden>
+        <span class="form__success-icon">✿</span>
+        <h3>Заявка отправлена</h3>
+        <p>Спасибо! Мы свяжемся с вами в течение часа в рабочее время.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ ФУТЕР ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__col">
+      <a href="#hero" class="logo logo--footer"><span class="logo__script">Atelier</span><span class="logo__name">ФЛЁР</span></a>
+      <p class="footer__tag">Флористика как haute couture:<br>каждый букет создаётся под историю.</p>
+      <p class="footer__note">работаем по записи</p>
+    </div>
+    <div class="footer__col">
+      <h4>Студия</h4>
+      <p>Москва, Столешников переулок, 7<br>ежедневно 10:00–20:00</p>
+      <a href="tel:+79090939400" class="footer__phone">+7 909 093-94-00</a>
+    </div>
+    <div class="footer__col">
+      <h4>Соцсети и лента</h4>
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="ВКонтакте" title="ВКонтакте"><svg viewBox="0 0 24 24"><path d="M3 7 C3 7 4 15 9 18 L12 18 L12 14 C14 14 15.5 15.5 16.5 18 L21 18 C19.5 14 17.5 12.5 16 11.5 C17.5 10.5 19.5 8.5 20.5 7 L16.5 7 C15.5 9.5 13.8 11 12 11 L12 7 L8.5 7 L8.5 14 C6.5 13 4.8 9.5 4.5 7 Z" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="Telegram" title="Telegram"><svg viewBox="0 0 24 24"><path d="M21 4 L3 11.2 L8.5 13 L10 19 L13 14.5 L17.5 17.5 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></a>
+        <a href="#" aria-label="Pinterest" title="Pinterest"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 19 C11 15 11.5 12 12.5 9 M9 12.5 C8.5 10 10 7.5 12.5 7.5 C15 7.5 16.5 9.5 16 12 C15.5 14.5 13 15.5 11.5 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+      </div>
+      <ul class="footer__feed">
+        <li>сборка арки для Ани и Миши →</li>
+        <li>новая поставка георгин →</li>
+        <li>мудборд сентябрьской свадьбы →</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <span>© 2025 Ателье «Флёр». Все букеты собраны вручную.</span>
+    <span class="script footer__sign">с любовью к цветам</span>
+  </div>
+</footer>
+
+<!-- ============ ПЛАВАЮЩАЯ КНОПКА-ВЕТОЧКА ============ -->
+<a href="#form" class="float-btn" id="floatBtn" aria-label="Записаться">
+  <svg viewBox="0 0 44 44" aria-hidden="true">
+    <path d="M22 40 C 22 28 22 16 22 6" stroke="#7D8F78" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <ellipse cx="14" cy="18" rx="4" ry="9" fill="#9CAF97" transform="rotate(-38 14 18)"/>
+    <ellipse cx="30" cy="14" rx="4" ry="9" fill="#9CAF97" transform="rotate(38 30 14)"/>
+    <ellipse cx="15" cy="30" rx="3.6" ry="8" fill="#B7C7B2" transform="rotate(-42 15 30)"/>
+    <ellipse cx="29" cy="26" rx="3.6" ry="8" fill="#B7C7B2" transform="rotate(42 29 26)"/>
+    <circle cx="22" cy="7" r="4.4" fill="#D8B4AE"/><circle cx="22" cy="7" r="1.8" fill="#B99762"/>
+  </svg>
+  <span>Записаться</span>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>

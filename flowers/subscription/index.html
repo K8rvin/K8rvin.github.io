@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Зелёная привычка — подписка на свежие цветы для дома и бизнеса</title>
+  <meta name="description" content="Подписка на свежие букеты: собираем, привозим, меняем. Цветы дома каждую неделю — без походов в магазин.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== ШАПКА ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo">
+        <svg class="logo__leaf" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M16 28C16 18 10 12 4 10c0 10 4 16 12 18z" fill="#C96F4A"/>
+          <path d="M16 28c0-12 6-20 14-22 0 12-6 20-14 22z" fill="#7FB08A"/>
+          <path d="M16 28V6" stroke="#F6F1E7" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <span>Зелёная&nbsp;привычка</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#tariffs" class="nav__link">Тарифы</a>
+        <a href="#how" class="nav__link">Как работает</a>
+        <a href="#business" class="nav__link">Для бизнеса</a>
+        <a href="#plants" class="nav__link">Растения</a>
+        <a href="#reviews" class="nav__link">Отзывы</a>
+        <a href="tel:+79090939400" class="btn btn--small btn--terracotta nav__cta">+7 909 093-94-00</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="top">
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <p class="hero__hand">как кофе по утрам — привычка, которая делает жизнь лучше</p>
+        <h1 class="hero__title">Цветы дома каждую неделю — <em>без походов в магазин</em></h1>
+        <p class="hero__subtitle">Подписка на свежие букеты: собираем, привозим, меняем. Первое оформление — <strong>со скидкой 30%</strong>.</p>
+        <div class="hero__actions">
+          <a href="#order" class="btn btn--terracotta btn--big">Оформить подписку</a>
+          <a href="#how" class="btn btn--ghost btn--big">Как это работает</a>
+        </div>
+        <ul class="hero__points">
+          <li>Свежая поставка каждое утро</li>
+          <li>Бесплатная доставка</li>
+          <li>Пауза подписки в один клик</li>
+        </ul>
+      </div>
+
+      <!-- CSS/SVG-сцена: интерьер с вазами и растениями -->
+      <div class="hero__scene" aria-hidden="true">
+        <svg class="scene" viewBox="0 0 520 560" role="img">
+          <!-- окно -->
+          <rect x="60" y="30" width="400" height="300" rx="18" fill="#2A5140"/>
+          <rect x="80" y="50" width="170" height="260" rx="10" fill="#3E6B54"/>
+          <rect x="270" y="50" width="170" height="260" rx="10" fill="#3E6B54"/>
+          <circle cx="150" cy="110" r="34" fill="#D9C6A5" opacity="0.85"/>
+          <path d="M270 260c40-40 90-50 150-40v90H270z" fill="#35604A"/>
+          <path d="M80 240c30-30 80-36 130-26v96H80z" fill="#35604A"/>
+          <!-- полка -->
+          <rect x="40" y="330" width="440" height="16" rx="8" fill="#C96F4A"/>
+          <rect x="70" y="346" width="14" height="60" rx="6" fill="#A5573A"/>
+          <rect x="436" y="346" width="14" height="60" rx="6" fill="#A5573A"/>
+          <!-- большое растение в кашпо -->
+          <g class="scene__plant">
+            <path d="M120 330c-6-70-30-96-52-112 26-4 52 22 58 62 2-52 18-84 42-100 8 34-6 86-24 118 16-30 44-44 68-46-10 34-44 66-70 78z" fill="#7FB08A"/>
+            <path d="M140 330h72l-10 66h-52z" fill="#C96F4A"/>
+            <rect x="134" y="324" width="84" height="14" rx="7" fill="#A5573A"/>
+          </g>
+          <!-- ваза с букетом -->
+          <g class="scene__vase">
+            <path d="M300 336c0-14 40-14 40 0l10 60c0 12-60 12-60 0z" fill="#F6F1E7"/>
+            <path d="M316 336V276M324 336l14-52M308 336l-16-46" stroke="#7FB08A" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="316" cy="266" r="14" fill="#E8A48B"/>
+            <circle cx="340" cy="278" r="11" fill="#C96F4A"/>
+            <circle cx="290" cy="282" r="10" fill="#E8A48B"/>
+            <circle cx="316" cy="266" r="5" fill="#A5573A"/>
+          </g>
+          <!-- вторая ваза -->
+          <g class="scene__vase2">
+            <path d="M420 340c2-10 26-10 28 0l6 44c0 10-40 10-40 0z" fill="#D9C6A5"/>
+            <path d="M434 340v-56" stroke="#4E7A5F" stroke-width="4" stroke-linecap="round"/>
+            <ellipse cx="434" cy="272" rx="9" ry="16" fill="#7FB08A"/>
+          </g>
+          <!-- подвесное растение -->
+          <g class="scene__hanging">
+            <path d="M470 30v60" stroke="#D9C6A5" stroke-width="3"/>
+            <path d="M452 90h36l-6 34h-24z" fill="#C96F4A"/>
+            <path d="M458 124c-4 26-14 40-26 48M470 124c0 30-4 48-12 62M482 124c4 24 12 38 24 46" stroke="#7FB08A" stroke-width="4" stroke-linecap="round" fill="none"/>
+          </g>
+          <!-- стол и листья внизу -->
+          <rect x="0" y="520" width="520" height="40" fill="#16291D"/>
+          <ellipse cx="90" cy="470" rx="60" ry="90" fill="#27503C" opacity="0.7"/>
+          <ellipse cx="440" cy="480" rx="70" ry="80" fill="#27503C" opacity="0.55"/>
+        </svg>
+        <div class="hero__badge">
+          <span class="hero__badge-num">−30%</span>
+          <span class="hero__badge-text">на первое<br>оформление</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0 60C240 10 480 90 720 50s480-30 720 10v20H0z" fill="#F6F1E7"/></svg>
+    </div>
+  </section>
+
+  <!-- ===== СЧЁТЧИК ВАЗ ===== -->
+  <section class="counter-strip">
+    <div class="container counter-strip__inner">
+      <svg viewBox="0 0 40 48" class="counter-strip__icon" aria-hidden="true">
+        <path d="M12 20c0-6 16-6 16 0l4 20c0 5-24 5-24 0z" fill="#C96F4A"/>
+        <path d="M18 20V8M22 20l6-10M14 20l-6-8" stroke="#1F3D2B" stroke-width="2.4" stroke-linecap="round"/>
+        <circle cx="18" cy="5" r="3.6" fill="#E8A48B"/>
+        <circle cx="29" cy="8" r="3" fill="#C96F4A"/>
+        <circle cx="7" cy="10" r="2.6" fill="#E8A48B"/>
+      </svg>
+      <p class="counter-strip__text">Ваз, которые мы наполнили на этой неделе</p>
+      <p class="counter-strip__num"><span id="vaseCounter">0</span></p>
+    </div>
+  </section>
+
+  <!-- ===== ТАРИФЫ ===== -->
+  <section class="section section--cream" id="tariffs">
+    <div class="container">
+      <p class="section__hand reveal">выбери свой ритм</p>
+      <h2 class="section__title reveal">Тарифы подписки</h2>
+
+      <div class="period-toggle reveal" role="group" aria-label="Периодичность доставки">
+        <button class="period-toggle__btn is-active" data-period="weekly">Раз в неделю</button>
+        <button class="period-toggle__btn" data-period="biweekly">Раз в две недели</button>
+        <span class="period-toggle__slider" aria-hidden="true"></span>
+      </div>
+
+      <div class="tariffs">
+        <article class="tariff reveal">
+          <h3 class="tariff__name">Мини</h3>
+          <p class="tariff__desc">Небольшой букет сезонных цветов — для кухни, рабочего стола или прикроватной тумбы.</p>
+          <p class="tariff__price"><span class="tariff__value" data-weekly="1500" data-biweekly="1700">1 500</span> ₽<span class="tariff__per">/ доставка</span></p>
+          <ul class="tariff__list">
+            <li>Букет до 1 500 ₽</li>
+            <li>5–7 стеблей сезонных цветов</li>
+            <li>Замена раз в неделю</li>
+            <li>Открытка с уходом в подарок</li>
+          </ul>
+          <button class="btn btn--outline tariff__btn" data-tariff="Мини">Выбрать «Мини»</button>
+        </article>
+
+        <article class="tariff tariff--featured reveal">
+          <span class="tariff__badge">выбирают чаще</span>
+          <h3 class="tariff__name">Стандарт</h3>
+          <p class="tariff__desc">Авторский букет от флориста — композиция, которая задаёт настроение всей комнате.</p>
+          <p class="tariff__price"><span class="tariff__value" data-weekly="2900" data-biweekly="3200">2 900</span> ₽<span class="tariff__per">/ доставка</span></p>
+          <ul class="tariff__list">
+            <li>Авторский букет 10–14 стеблей</li>
+            <li>Экзотика и зелень в каждой сборке</li>
+            <li>Ваза в подарок на первой доставке</li>
+            <li>Фото букета до отправки</li>
+          </ul>
+          <button class="btn btn--terracotta tariff__btn" data-tariff="Стандарт">Выбрать «Стандарт»</button>
+        </article>
+
+        <article class="tariff reveal">
+          <h3 class="tariff__name">Премиум</h3>
+          <p class="tariff__desc">Сезонные пионы и ранункулюсы, редкие сорта — для тех, кто хочет лучшее.</p>
+          <p class="tariff__price"><span class="tariff__value" data-weekly="5900" data-biweekly="6400">5 900</span> ₽<span class="tariff__per">/ доставка</span></p>
+          <ul class="tariff__list">
+            <li>Пионы, ранункулюсы, редкие сорта</li>
+            <li>Композиция 18–24 стебля</li>
+            <li>Личный флорист</li>
+            <li>Доставка к точному времени</li>
+          </ul>
+          <button class="btn btn--outline tariff__btn" data-tariff="Премиум">Выбрать «Премиум»</button>
+        </article>
+      </div>
+      <p class="tariffs__note reveal">Раз в две недели — чуть дороже за доставку: свежие сборки держим на неделю дольше специально для вас.</p>
+    </div>
+  </section>
+
+  <!-- ===== КАК РАБОТАЕТ ===== -->
+  <section class="section section--green" id="how">
+    <div class="container">
+      <p class="section__hand section__hand--light reveal">три шага — и дома цветут</p>
+      <h2 class="section__title reveal">Как работает подписка</h2>
+
+      <div class="timeline">
+        <!-- «растущий лист» -->
+        <svg class="timeline__stem" viewBox="0 0 60 620" aria-hidden="true">
+          <path class="timeline__stem-path" d="M30 610C22 480 40 360 28 240 20 150 34 60 30 10" fill="none" stroke="#7FB08A" stroke-width="4" stroke-linecap="round"/>
+          <g class="timeline__leaf" style="--d:.1s"><path d="M30 540C10 530 2 510 4 490c20 4 32 22 34 44z" fill="#7FB08A"/></g>
+          <g class="timeline__leaf" style="--d:.45s"><path d="M30 420c22-8 32-28 30-50-22 4-34 22-36 44z" fill="#7FB08A"/></g>
+          <g class="timeline__leaf" style="--d:.8s"><path d="M30 300c-20-10-28-30-26-52 20 4 32 22 34 46z" fill="#7FB08A"/></g>
+          <g class="timeline__leaf" style="--d:1.15s"><path d="M30 180c20-10 28-30 26-50-20 2-32 20-34 42z" fill="#7FB08A"/></g>
+          <g class="timeline__leaf" style="--d:1.5s">
+            <circle cx="30" cy="26" r="16" fill="#C96F4A"/>
+            <circle cx="30" cy="26" r="7" fill="#F6F1E7"/>
+          </g>
+        </svg>
+
+        <ol class="timeline__steps">
+          <li class="timeline__step reveal">
+            <span class="timeline__num">01</span>
+            <div>
+              <h3>Выбрали тариф</h3>
+              <p>Определитесь с размером букета и периодичностью. Первое оформление — со скидкой 30%, отмена в любой момент.</p>
+            </div>
+          </li>
+          <li class="timeline__step reveal">
+            <span class="timeline__num">02</span>
+            <div>
+              <h3>Привозим в удобный день</h3>
+              <p>Флорист собирает букет утром, курьер привозит его в ваш день и окно по времени. Ваза — в подарок на первой доставке.</p>
+            </div>
+          </li>
+          <li class="timeline__step reveal">
+            <span class="timeline__num">03</span>
+            <div>
+              <h3>Через неделю меняем на свежий</h3>
+              <p>Забираем увядший букет и привозим новый. Вам остаётся только налить воды в вазу.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ДЛЯ БИЗНЕСА ===== -->
+  <section class="section section--cream" id="business">
+    <div class="container">
+      <p class="section__hand reveal">для кафе, офисов и ресторанов</p>
+      <h2 class="section__title reveal">Цветы, которые продают за вас</h2>
+      <p class="section__lead reveal">Живые композиции повышают средний чек, время визита и количество фото вашего заведения в соцсетях. Мы берём всё на себя: подбор, доставку, замену.</p>
+
+      <div class="biz-grid">
+        <article class="biz-card reveal">
+          <div class="biz-card__art biz-card__art--cafe" aria-hidden="true">
+            <svg viewBox="0 0 300 180">
+              <rect width="300" height="180" fill="#27503C"/>
+              <rect x="30" y="110" width="240" height="10" rx="5" fill="#C96F4A"/>
+              <rect x="50" y="120" width="10" height="50" fill="#A5573A"/>
+              <rect x="240" y="120" width="10" height="50" fill="#A5573A"/>
+              <path d="M130 110c0-8 24-8 24 0l6 30c0 8-36 8-36 0z" fill="#F6F1E7"/>
+              <path d="M140 110V76M146 110l10-30M136 110l-8-26" stroke="#7FB08A" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="140" cy="70" r="9" fill="#E8A48B"/>
+              <circle cx="158" cy="77" r="7" fill="#C96F4A"/>
+              <circle cx="126" cy="80" r="6" fill="#E8A48B"/>
+              <circle cx="70" cy="70" r="22" fill="#D9C6A5" opacity="0.8"/>
+              <rect x="180" y="40" width="80" height="50" rx="6" fill="#35604A"/>
+            </svg>
+          </div>
+          <h3>Кафе и кофейни</h3>
+          <p>Мини-букеты на столики, композиция на барную стойку и витрину. Гости фотографируют — вы получаете рекламу.</p>
+        </article>
+        <article class="biz-card reveal">
+          <div class="biz-card__art" aria-hidden="true">
+            <svg viewBox="0 0 300 180">
+              <rect width="300" height="180" fill="#27503C"/>
+              <rect x="20" y="130" width="260" height="8" rx="4" fill="#D9C6A5"/>
+              <path d="M150 130V70" stroke="#D9C6A5" stroke-width="5"/>
+              <ellipse cx="150" cy="60" rx="46" ry="22" fill="#7FB08A"/>
+              <ellipse cx="120" cy="48" rx="16" ry="24" fill="#7FB08A"/>
+              <ellipse cx="182" cy="46" rx="14" ry="26" fill="#7FB08A"/>
+              <path d="M90 130c0-6 18-6 18 0l4 24c0 6-26 6-26 0z" fill="#C96F4A"/>
+              <path d="M200 130c0-6 18-6 18 0l4 24c0 6-26 6-26 0z" fill="#C96F4A"/>
+            </svg>
+          </div>
+          <h3>Рестораны</h3>
+          <p>Высокие композиции для залов, сезонное оформление витрин и входной группы. Меняем до прихода гостей.</p>
+        </article>
+        <article class="biz-card reveal">
+          <div class="biz-card__art" aria-hidden="true">
+            <svg viewBox="0 0 300 180">
+              <rect width="300" height="180" fill="#27503C"/>
+              <rect x="40" y="90" width="220" height="14" rx="7" fill="#C96F4A"/>
+              <rect x="60" y="104" width="180" height="40" rx="6" fill="#A5573A"/>
+              <path d="M90 90c-2-40-16-56-30-66 16-2 32 14 36 38 0-30 10-50 24-60 4 20-4 50-14 68 10-18 26-26 40-28-6 20-26 38-42 46z" fill="#7FB08A"/>
+              <rect x="200" y="60" width="44" height="30" rx="4" fill="#35604A"/>
+            </svg>
+          </div>
+          <h3>Офисы и ресепшены</h3>
+          <p>Зелёная зона встречи клиентов и здоровая атмосфера для команды. Растения подбираем под ваш свет.</p>
+        </article>
+        <article class="biz-card reveal">
+          <div class="biz-card__art" aria-hidden="true">
+            <svg viewBox="0 0 300 180">
+              <rect width="300" height="180" fill="#27503C"/>
+              <circle cx="150" cy="90" r="64" fill="none" stroke="#C96F4A" stroke-width="8"/>
+              <path d="M150 26c10 20 4 40-8 50M150 154c-10-20-4-40 8-50M86 90c20-10 40-4 50 8M214 90c-20 10-40 4-50-8" stroke="#7FB08A" stroke-width="4" stroke-linecap="round" fill="none"/>
+              <circle cx="150" cy="26" r="10" fill="#E8A48B"/>
+              <circle cx="150" cy="154" r="10" fill="#E8A48B"/>
+              <circle cx="86" cy="90" r="10" fill="#C96F4A"/>
+              <circle cx="214" cy="90" r="10" fill="#C96F4A"/>
+            </svg>
+          </div>
+          <h3>Фотозоны и события</h3>
+          <p>Цветочные арки и инсталляции для мероприятий, презентаций и съёмок. Монтаж и демонтаж — на нас.</p>
+        </article>
+      </div>
+
+      <div class="biz-cta reveal">
+        <p class="biz-cta__hand">напишем КП за один день</p>
+        <a href="#order" class="btn btn--terracotta btn--big" id="bizCta">Получить коммерческое предложение</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== КОМНАТНЫЕ РАСТЕНИЯ ===== -->
+  <section class="section section--sand" id="plants">
+    <div class="container">
+      <p class="section__hand reveal">забери джунгли домой</p>
+      <h2 class="section__title reveal">Комнатные растения в кашпо</h2>
+
+      <div class="plant-filters reveal" role="group" aria-label="Фильтр растений">
+        <button class="chip is-active" data-filter="all">Все</button>
+        <button class="chip" data-filter="easy">Неприхотливые</button>
+        <button class="chip" data-filter="shade">Для северного окна</button>
+        <button class="chip" data-filter="cats">Безопасно для котов</button>
+      </div>
+
+      <div class="plants" id="plantsGrid">
+        <article class="plant reveal" data-tags="easy shade">
+          <div class="plant__art">
+            <svg viewBox="0 0 200 170">
+              <path d="M100 140c-4-50-20-70-40-84 20-4 40 16 46 44 2-40 14-64 32-76 6 26-4 62-18 86 12-22 32-32 50-34-8 26-32 48-52 56z" fill="#4E7A5F"/>
+              <path d="M100 140h0" stroke="#35604A" stroke-width="3"/>
+              <path d="M78 140h44l-6 30H84z" fill="#C96F4A"/>
+              <rect x="74" y="136" width="52" height="9" rx="4" fill="#A5573A"/>
+            </svg>
+            <span class="plant__note">поливай редко, он всё прощает</span>
+          </div>
+          <h3>Замиокулькас</h3>
+          <p class="plant__price">1 900 ₽ с кашпо</p>
+          <div class="plant__tags"><span>неприхотливое</span><span>для северного окна</span></div>
+        </article>
+
+        <article class="plant reveal" data-tags="shade cats">
+          <div class="plant__art">
+            <svg viewBox="0 0 200 170">
+              <ellipse cx="100" cy="80" rx="10" ry="34" fill="#4E7A5F" transform="rotate(-30 100 100)"/>
+              <ellipse cx="100" cy="76" rx="10" ry="36" fill="#5E8F6C" transform="rotate(-10 100 100)"/>
+              <ellipse cx="100" cy="76" rx="10" ry="36" fill="#4E7A5F" transform="rotate(12 100 100)"/>
+              <ellipse cx="100" cy="82" rx="9" ry="30" fill="#5E8F6C" transform="rotate(34 100 100)"/>
+              <ellipse cx="100" cy="86" rx="8" ry="26" fill="#4E7A5F" transform="rotate(55 100 100)"/>
+              <ellipse cx="100" cy="86" rx="8" ry="26" fill="#5E8F6C" transform="rotate(-55 100 100)"/>
+              <path d="M80 140h40l-5 30H85z" fill="#F6F1E7"/>
+              <rect x="76" y="136" width="48" height="9" rx="4" fill="#D9C6A5"/>
+            </svg>
+            <span class="plant__note">любит полутень</span>
+          </div>
+          <h3>Калатея</h3>
+          <p class="plant__price">2 400 ₽ с кашпо</p>
+          <div class="plant__tags"><span>для северного окна</span><span>безопасно для котов</span></div>
+        </article>
+
+        <article class="plant reveal" data-tags="easy cats">
+          <div class="plant__art">
+            <svg viewBox="0 0 200 170">
+              <path d="M100 70c-30-10-50 4-56 26 24 6 46-2 56-26z" fill="#5E8F6C"/>
+              <path d="M100 70c30-10 50 4 56 26-24 6-46-2-56-26z" fill="#4E7A5F"/>
+              <path d="M100 66c-18-26-14-48 0-60 14 12 18 34 0 60z" fill="#7FB08A"/>
+              <path d="M100 96c-14 30-34 44-54 44M100 96c14 30 34 44 54 44" stroke="#5E8F6C" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <circle cx="46" cy="142" r="6" fill="#7FB08A"/>
+              <circle cx="154" cy="142" r="6" fill="#7FB08A"/>
+              <path d="M80 108h40l-5 32H85z" fill="#C96F4A"/>
+              <rect x="76" y="104" width="48" height="9" rx="4" fill="#A5573A"/>
+            </svg>
+            <span class="plant__note">даёт «деток» — дари друзьям!</span>
+          </div>
+          <h3>Хлорофитум</h3>
+          <p class="plant__price">1 200 ₽ с кашпо</p>
+          <div class="plant__tags"><span>неприхотливое</span><span>безопасно для котов</span></div>
+        </article>
+
+        <article class="plant reveal" data-tags="easy">
+          <div class="plant__art">
+            <svg viewBox="0 0 200 170">
+              <path d="M86 140c-8-60 0-96 8-116 8 20 10 70 2 116z" fill="#4E7A5F"/>
+              <path d="M100 140c2-56 14-84 26-100 4 26-6 70-16 100z" fill="#5E8F6C"/>
+              <path d="M80 140c-6-46-18-68-32-82-2 28 10 58 22 82z" fill="#5E8F6C"/>
+              <path d="M78 140h44l-6 30H84z" fill="#F6F1E7"/>
+              <rect x="74" y="136" width="52" height="9" rx="4" fill="#D9C6A5"/>
+            </svg>
+            <span class="plant__note">не переливайте!</span>
+          </div>
+          <h3>Сансевиерия</h3>
+          <p class="plant__price">1 600 ₽ с кашпо</p>
+          <div class="plant__tags"><span>неприхотливое</span></div>
+        </article>
+
+        <article class="plant reveal" data-tags="cats">
+          <div class="plant__art">
+            <svg viewBox="0 0 200 170">
+              <ellipse cx="100" cy="70" rx="34" ry="10" fill="#4E7A5F"/>
+              <ellipse cx="84" cy="88" rx="26" ry="9" fill="#5E8F6C" transform="rotate(-18 84 88)"/>
+              <ellipse cx="118" cy="88" rx="26" ry="9" fill="#5E8F6C" transform="rotate(18 118 88)"/>
+              <ellipse cx="100" cy="104" rx="28" ry="10" fill="#4E7A5F"/>
+              <path d="M80 118h40l-5 32H85z" fill="#D9C6A5"/>
+              <rect x="76" y="114" width="48" height="9" rx="4" fill="#B8A07C"/>
+            </svg>
+            <span class="plant__note">пушистая, коты в восторге</span>
+          </div>
+          <h3>Пеперомия</h3>
+          <p class="plant__price">1 400 ₽ с кашпо</p>
+          <div class="plant__tags"><span>безопасно для котов</span></div>
+        </article>
+
+        <article class="plant reveal" data-tags="easy shade">
+          <div class="plant__art">
+            <svg viewBox="0 0 200 170">
+              <path d="M100 60c-26-4-42 10-44 30 20 8 40-4 44-30z" fill="#4E7A5F"/>
+              <path d="M100 60c26-4 42 10 44 30-20 8-40-4-44-30z" fill="#5E8F6C"/>
+              <path d="M100 90c-10 26-30 40-52 42M100 90c10 26 30 40 52 42" stroke="#4E7A5F" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <path d="M100 56c-12-20-8-38 0-48 8 10 12 28 0 48z" fill="#7FB08A"/>
+              <path d="M80 112h40l-5 32H85z" fill="#C96F4A"/>
+              <rect x="76" y="108" width="48" height="9" rx="4" fill="#A5573A"/>
+            </svg>
+            <span class="plant__note">растёт, пока ты спишь</span>
+          </div>
+          <h3>Сциндапсус</h3>
+          <p class="plant__price">1 500 ₽ с кашпо</p>
+          <div class="plant__tags"><span>неприхотливое</span><span>для северного окна</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== КВИЗ ===== -->
+  <section class="section section--green" id="quiz">
+    <div class="container container--narrow">
+      <p class="section__hand section__hand--light reveal">60 секунд — и подборка готова</p>
+      <h2 class="section__title reveal">Подберите растения под ваш свет</h2>
+
+      <div class="quiz reveal" id="quizBox">
+        <div class="quiz__progress" aria-hidden="true">
+          <span class="quiz__progress-bar" id="quizProgress"></span>
+        </div>
+
+        <div class="quiz__step is-active" data-step="1">
+          <p class="quiz__q-num">Вопрос 1 из 3</p>
+          <h3 class="quiz__question">Куда смотрят ваши окна?</h3>
+          <div class="quiz__answers">
+            <button class="quiz__answer" data-value="sun">На юг — много солнца</button>
+            <button class="quiz__answer" data-value="half">Восток/запад — полутень</button>
+            <button class="quiz__answer" data-value="north">На север — света мало</button>
+          </div>
+        </div>
+
+        <div class="quiz__step" data-step="2">
+          <p class="quiz__q-num">Вопрос 2 из 3</p>
+          <h3 class="quiz__question">Какой у вас опыт с растениями?</h3>
+          <div class="quiz__answers">
+            <button class="quiz__answer" data-value="newbie">Я новичок — всё вянет</button>
+            <button class="quiz__answer" data-value="some">Пара растений уже выжила</button>
+            <button class="quiz__answer" data-value="guru">У меня дома джунгли</button>
+          </div>
+        </div>
+
+        <div class="quiz__step" data-step="3">
+          <p class="quiz__q-num">Вопрос 3 из 3</p>
+          <h3 class="quiz__question">Дома живут коты?</h3>
+          <div class="quiz__answers">
+            <button class="quiz__answer" data-value="cats">Да, и они всё грызут</button>
+            <button class="quiz__answer" data-value="nocats">Нет, животных нет</button>
+          </div>
+        </div>
+
+        <div class="quiz__result" id="quizResult" aria-live="polite">
+          <div class="quiz__result-leaf" aria-hidden="true">
+            <svg viewBox="0 0 80 90">
+              <path d="M40 84C40 48 26 30 8 22c2 26 14 42 32 48 2-30 14-52 32-62 4 30-10 58-26 70z" fill="#7FB08A"/>
+              <path d="M40 84V40" stroke="#F6F1E7" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <p class="quiz__result-hand">мы нашли идеальное растение</p>
+          <h3 class="quiz__result-title" id="quizResultTitle">Хлорофитум</h3>
+          <p class="quiz__result-text" id="quizResultText"></p>
+          <div class="quiz__result-actions">
+            <button class="btn btn--terracotta btn--big" id="quizShowCollection">Показать подборку</button>
+            <button class="quiz__restart" id="quizRestart">Пройти заново</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ГИД ПО УХОДУ ===== -->
+  <section class="section section--cream" id="care">
+    <div class="container">
+      <p class="section__hand reveal">коротко и по делу</p>
+      <h2 class="section__title reveal">Гид по уходу: 5 правил</h2>
+
+      <div class="care-grid">
+        <article class="care-card reveal">
+          <span class="care-card__num">01</span>
+          <h3>Не переливайте!</h3>
+          <p>Мокрые корни — причина №1 гибели растений. Поливайте, когда верхние 3 см грунта высохли.</p>
+          <span class="care-card__note">лучше недолить</span>
+        </article>
+        <article class="care-card reveal">
+          <span class="care-card__num">02</span>
+          <h3>Раз в неделю — достаточно</h3>
+          <p>Большинству наших растений хватает одного полива в неделю. Зимой — ещё реже.</p>
+          <span class="care-card__note">поставьте напоминание</span>
+        </article>
+        <article class="care-card reveal">
+          <span class="care-card__num">03</span>
+          <h3>Свет важнее удобрений</h3>
+          <p>Никакая подкормка не заменит подоконник. Северное окно — берите теневыносливые виды.</p>
+          <span class="care-card__note">проверьте наш квиз!</span>
+        </article>
+        <article class="care-card reveal">
+          <span class="care-card__num">04</span>
+          <h3>Мойте листья</h3>
+          <p>Пыль мешает растению дышать. Раз в две недели — тёплый душ или влажная салфетка.</p>
+          <span class="care-card__note">листья скажут спасибо</span>
+        </article>
+        <article class="care-card reveal">
+          <span class="care-card__num">05</span>
+          <h3>Жёлтый лист — не катастрофа</h3>
+          <p>Это нормальный цикл обновления. Просто уберите его — и проверьте полив.</p>
+          <span class="care-card__note">не паникуйте :)</span>
+        </article>
+        <article class="care-card care-card--cta reveal">
+          <h3>Остались вопросы?</h3>
+          <p>Наш флорист отвечает подписчикам в чате в течение часа.</p>
+          <a href="tel:+79090939400" class="btn btn--terracotta">Позвонить нам</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ОТЗЫВЫ ===== -->
+  <section class="section section--green" id="reviews">
+    <div class="container">
+      <p class="section__hand section__hand--light reveal">нас уже полюбили</p>
+      <h2 class="section__title reveal">Отзывы подписчиков</h2>
+
+      <div class="reviews-badges reveal">
+        <span class="reviews-badge"><strong>120+</strong> подписчиков</span>
+        <span class="reviews-badge"><strong>40</strong> кафе и офисов</span>
+        <span class="reviews-badge"><strong>4,9</strong> средняя оценка</span>
+      </div>
+
+      <div class="carousel reveal" id="carousel">
+        <button class="carousel__arrow carousel__arrow--prev" id="revPrev" aria-label="Предыдущий отзыв">
+          <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </button>
+
+        <div class="carousel__viewport">
+          <div class="carousel__track" id="revTrack">
+            <article class="review">
+              <div class="review__photo review__photo--1" aria-hidden="true">
+                <svg viewBox="0 0 280 200">
+                  <rect width="280" height="200" fill="#D9C6A5"/>
+                  <rect x="0" y="140" width="280" height="60" fill="#B8A07C"/>
+                  <rect x="30" y="30" width="100" height="110" rx="8" fill="#F6F1E7"/>
+                  <rect x="42" y="42" width="76" height="86" rx="5" fill="#8FBF9A" opacity="0.5"/>
+                  <path d="M190 140c0-8 26-8 26 0l7 34c0 9-40 9-40 0z" fill="#C96F4A"/>
+                  <path d="M203 140V96M210 140l12-38M197 140l-10-32" stroke="#4E7A5F" stroke-width="3.4" stroke-linecap="round"/>
+                  <circle cx="203" cy="88" r="11" fill="#E8A48B"/>
+                  <circle cx="224" cy="98" r="8" fill="#C96F4A"/>
+                  <circle cx="185" cy="102" r="8" fill="#E8A48B"/>
+                </svg>
+              </div>
+              <p class="review__quote">«Букет приезжает каждый четверг, и вся пятница у меня пахнет пионами. Квартира наконец выглядит как в Pinterest — я ничего для этого не делаю».</p>
+              <p class="review__author">Мария, тариф «Стандарт», дом</p>
+            </article>
+
+            <article class="review">
+              <div class="review__photo" aria-hidden="true">
+                <svg viewBox="0 0 280 200">
+                  <rect width="280" height="200" fill="#27503C"/>
+                  <rect x="24" y="120" width="232" height="12" rx="6" fill="#C96F4A"/>
+                  <path d="M70 120c0-6 20-6 20 0l5 26c0 7-30 7-30 0z" fill="#F6F1E7"/>
+                  <path d="M80 120V88M86 120l8-28M75 120l-7-24" stroke="#7FB08A" stroke-width="3" stroke-linecap="round"/>
+                  <circle cx="80" cy="82" r="8" fill="#E8A48B"/>
+                  <circle cx="96" cy="89" r="6" fill="#C96F4A"/>
+                  <path d="M180 120c0-6 20-6 20 0l5 26c0 7-30 7-30 0z" fill="#D9C6A5"/>
+                  <path d="M190 120c-4-30-14-40-26-48 16-2 28 12 32 30 0-22 8-36 20-42 2 20-8 40-18 52z" fill="#7FB08A"/>
+                  <circle cx="140" cy="50" r="18" fill="#D9C6A5" opacity="0.7"/>
+                </svg>
+              </div>
+              <p class="review__quote">«Гости постоянно спрашивают, кто делает нам флористику. Средний чек на десерты вырос — люди просто дольше сидят и заказывают ещё кофе».</p>
+              <p class="review__author">Антон, кофейня «Крючок», B2B</p>
+            </article>
+
+            <article class="review">
+              <div class="review__photo" aria-hidden="true">
+                <svg viewBox="0 0 280 200">
+                  <rect width="280" height="200" fill="#F6F1E7"/>
+                  <rect x="0" y="150" width="280" height="50" fill="#D9C6A5"/>
+                  <rect x="40" y="40" width="200" height="90" rx="10" fill="#27503C"/>
+                  <path d="M140 150c0-10 30-10 30 0l8 38c0 10-46 10-46 0z" fill="#C96F4A"/>
+                  <path d="M155 150V104M162 150l14-40M148 150l-12-34" stroke="#7FB08A" stroke-width="4" stroke-linecap="round"/>
+                  <circle cx="155" cy="96" r="13" fill="#E8A48B"/>
+                  <circle cx="179" cy="105" r="9" fill="#C96F4A"/>
+                  <circle cx="134" cy="110" r="9" fill="#E8A48B"/>
+                </svg>
+              </div>
+              <p class="review__quote">«Подключили подписку на ресепшен — забыли про искусственные цветы как про страшный сон. Клиенты замечают. Даже курьер всегда вовремя».</p>
+              <p class="review__author">Ольга, офис IT-компании, B2B</p>
+            </article>
+
+            <article class="review">
+              <div class="review__photo" aria-hidden="true">
+                <svg viewBox="0 0 280 200">
+                  <rect width="280" height="200" fill="#8FBF9A" opacity="0.35"/>
+                  <rect x="0" y="0" width="280" height="200" fill="#D9C6A5"/>
+                  <rect x="60" y="20" width="160" height="120" rx="10" fill="#F6F1E7"/>
+                  <rect x="74" y="34" width="132" height="92" rx="6" fill="#27503C"/>
+                  <circle cx="110" cy="66" r="16" fill="#D9C6A5"/>
+                  <path d="M74 110c30-24 70-28 132-14v30H74z" fill="#35604A"/>
+                  <path d="M110 180c0-8 24-8 24 0l6 30c0 8-36 8-36 0z" fill="#C96F4A" transform="translate(0,-22)"/>
+                  <path d="M122 152v-36M128 152l10-30M116 152l-9-26" stroke="#4E7A5F" stroke-width="3" stroke-linecap="round"/>
+                  <circle cx="122" cy="110" r="9" fill="#E8A48B"/>
+                </svg>
+              </div>
+              <p class="review__quote">«Прошла квиз, купила калатею и хлорофитум — оба живы спустя полгода, хотя до этого у меня погибал даже кактус. Пометки по уходу реально работают».</p>
+              <p class="review__author">Ксения, владелица кота Бориса</p>
+            </article>
+          </div>
+        </div>
+
+        <button class="carousel__arrow carousel__arrow--next" id="revNext" aria-label="Следующий отзыв">
+          <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="carousel__dots" id="revDots"></div>
+    </div>
+  </section>
+
+  <!-- ===== ФОРМА ===== -->
+  <section class="section section--cream" id="order">
+    <div class="container container--narrow">
+      <p class="section__hand reveal">первый букет уже на этой неделе</p>
+      <h2 class="section__title reveal">Оформить подписку</h2>
+      <p class="section__lead reveal">Оставьте контакты — перезвоним в течение 30 минут, уточним детали и назначим первую доставку.</p>
+
+      <form class="order-form reveal" id="orderForm" novalidate>
+        <div class="order-form__row">
+          <label class="field">
+            <span class="field__label">Ваше имя</span>
+            <input type="text" name="name" class="field__input" placeholder="Анна" required>
+          </label>
+          <label class="field">
+            <span class="field__label">Телефон</span>
+            <input type="tel" name="phone" class="field__input" placeholder="+7 ___ ___-__-__" required>
+          </label>
+        </div>
+        <div class="order-form__row">
+          <label class="field">
+            <span class="field__label">Тариф</span>
+            <select name="tariff" class="field__input" id="tariffSelect">
+              <option value="Мини">Мини — от 1 500 ₽</option>
+              <option value="Стандарт" selected>Стандарт — от 2 900 ₽</option>
+              <option value="Премиум">Премиум — от 5 900 ₽</option>
+              <option value="Растения">Комнатные растения</option>
+              <option value="Для бизнеса">Для бизнеса (КП)</option>
+            </select>
+          </label>
+          <div class="field">
+            <span class="field__label">Куда привозить?</span>
+            <div class="segmented" role="radiogroup">
+              <button type="button" class="segmented__btn is-active" data-dest="Домой">Дом</button>
+              <button type="button" class="segmented__btn" data-dest="Бизнес">Бизнес</button>
+            </div>
+          </div>
+        </div>
+        <p class="order-form__error" id="formError" role="alert"></p>
+        <button type="submit" class="btn btn--terracotta btn--big order-form__submit">Оформить подписку</button>
+        <p class="order-form__hint">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных</p>
+      </form>
+
+      <div class="order-success" id="orderSuccess" hidden>
+        <svg viewBox="0 0 90 90" class="order-success__icon" aria-hidden="true">
+          <circle cx="45" cy="45" r="42" fill="#7FB08A"/>
+          <path d="M28 46l12 12 22-26" fill="none" stroke="#F6F1E7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>Заявка принята!</h3>
+        <p id="orderSuccessText">Мы перезвоним вам в течение 30 минут, чтобы подтвердить первую доставку. Спасибо, что выбираете зелёную привычку!</p>
+        <button class="btn btn--outline" id="orderAgain">Отправить ещё одну заявку</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ФУТЕР ===== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <a href="#top" class="logo logo--footer">
+          <svg class="logo__leaf" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M16 28C16 18 10 12 4 10c0 10 4 16 12 18z" fill="#C96F4A"/>
+            <path d="M16 28c0-12 6-20 14-22 0 12-6 20-14 22z" fill="#7FB08A"/>
+            <path d="M16 28V6" stroke="#F6F1E7" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <span>Зелёная&nbsp;привычка</span>
+        </a>
+        <p class="footer__tagline">Доставляем по всему городу.<br>Цветы — это привычка, которая делает жизнь лучше.</p>
+        <div class="footer__socials">
+          <a href="#" class="footer__social" aria-label="ВКонтакте">
+            <svg viewBox="0 0 24 24"><path d="M12.7 17.8c-5.6 0-8.8-3.8-8.9-10.3h2.8c.1 4.7 2.2 6.7 3.8 7.1V7.5h2.6v4.1c1.6-.2 3.3-2 3.9-4.1h2.6c-.4 2.5-2.2 4.3-3.4 5.1 1.2.6 3.3 2.2 4 5.2h-2.9c-.5-1.7-1.9-3-3.9-3.4v3.4z" fill="currentColor"/></svg>
+          </a>
+          <a href="#" class="footer__social" aria-label="Telegram">
+            <svg viewBox="0 0 24 24"><path d="M20.9 4.6L3.3 11.4c-1.2.5-1.2 1.2-.2 1.5l4.5 1.4 1.7 5.3c.2.6.4.8.9.8.4 0 .6-.2.9-.5l2.2-2.1 4.5 3.3c.8.5 1.4.2 1.6-.7l2.9-13.9c.3-1.2-.4-1.8-1.4-1.9zM8.4 13.9l9.6-6.1c.4-.2.8-.2.5.2l-8.2 7.4-.3 3.2z" fill="currentColor"/></svg>
+          </a>
+          <a href="#" class="footer__social" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.3" fill="currentColor"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Студия</h4>
+        <p>ул. Зелёная, 12, стр. 1<br>Ежедневно 9:00–21:00</p>
+        <a href="tel:+79090939400" class="footer__phone">+7 909 093-94-00</a>
+      </div>
+      <div class="footer__col">
+        <h4>Навигация</h4>
+        <a href="#tariffs">Тарифы</a>
+        <a href="#business">Для бизнеса</a>
+        <a href="#plants">Растения</a>
+        <a href="#care">Гид по уходу</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© 2026 Зелёная привычка — цветочная студия подписки</p>
+    </div>
+  </footer>
+
+  <!-- Плавающая кнопка звонка -->
+  <a href="tel:+79090939400" class="call-fab" aria-label="Позвонить нам">
+    <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z" fill="currentColor"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
