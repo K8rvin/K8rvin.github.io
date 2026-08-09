@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Гранитная мастерская в Волгограде. Изготовление и установка памятников из гранита и мрамора. Гарантия до 50 лет. Бесплатный выезд замерщика.">
+  <title>Мемориальный сад — памятники из гранита и мрамора в Волгограде</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== ШАПКА ===== -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="logo" href="#top">
+        <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true">
+          <rect x="12" y="6" width="16" height="22" rx="8" fill="#8A9B7E" opacity="0.35"/>
+          <rect x="14" y="8" width="12" height="18" rx="6" fill="#2E2C29"/>
+          <rect x="10" y="28" width="20" height="4" rx="1" fill="#9C7A4D"/>
+        </svg>
+        <span class="logo__text">Мемориальный&nbsp;сад<small>гранитная мастерская</small></span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#catalog">Модели</a>
+        <a href="#calculator">Калькулятор</a>
+        <a href="#works">Работы</a>
+        <a href="#steps">Как мы работаем</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <a class="header__phone" href="tel:+79090939400">+7 909 093-94-00</a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero__scene" aria-hidden="true">
+        <svg viewBox="0 0 1440 620" preserveAspectRatio="xMidYMax slice" class="hero__svg">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#F7F3EA"/>
+              <stop offset="55%" stop-color="#F2EDE4"/>
+              <stop offset="100%" stop-color="#E9E2D2"/>
+            </linearGradient>
+            <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#FBF6E8" stop-opacity="0.95"/>
+              <stop offset="100%" stop-color="#FBF6E8" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="grass" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#9BAC8C"/>
+              <stop offset="100%" stop-color="#7E9070"/>
+            </linearGradient>
+            <linearGradient id="stone" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#3A3833"/>
+              <stop offset="55%" stop-color="#2E2C29"/>
+              <stop offset="100%" stop-color="#4A4741"/>
+            </linearGradient>
+            <linearGradient id="stoneBase" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#55524B"/>
+              <stop offset="100%" stop-color="#403D38"/>
+            </linearGradient>
+          </defs>
+
+          <rect width="1440" height="620" fill="url(#sky)"/>
+          <circle cx="1120" cy="130" r="230" fill="url(#sun)"/>
+
+          <!-- дальние деревья -->
+          <g opacity="0.45" fill="#8A9B7E">
+            <ellipse cx="180" cy="330" rx="90" ry="120"/>
+            <ellipse cx="330" cy="360" rx="70" ry="95"/>
+            <ellipse cx="1290" cy="340" rx="100" ry="130"/>
+            <ellipse cx="1150" cy="370" rx="65" ry="90"/>
+          </g>
+          <!-- стволы -->
+          <g fill="#6d5a41" opacity="0.4">
+            <rect x="175" y="400" width="10" height="70"/>
+            <rect x="1285" y="410" width="11" height="60"/>
+          </g>
+
+          <!-- лужайка -->
+          <ellipse cx="720" cy="640" rx="900" ry="170" fill="url(#grass)"/>
+          <ellipse cx="720" cy="640" rx="900" ry="170" fill="#8A9B7E" opacity="0.2"/>
+
+          <!-- группа «памятник с дорожкой» смещена вправо, под текстом — чистое небо -->
+          <g transform="translate(350,0)">
+            <!-- дорожка -->
+            <path d="M640 620 Q660 540 700 500 L760 500 Q800 540 820 620 Z" fill="#E4DCCB" opacity="0.85"/>
+
+            <!-- цветник -->
+            <g opacity="0.9">
+              <ellipse cx="560" cy="560" rx="60" ry="18" fill="#77895F"/>
+              <ellipse cx="880" cy="560" rx="60" ry="18" fill="#77895F"/>
+              <circle cx="540" cy="548" r="5" fill="#C9B87A"/>
+              <circle cx="575" cy="552" r="4" fill="#D8C99A"/>
+              <circle cx="862" cy="548" r="5" fill="#C9B87A"/>
+              <circle cx="898" cy="552" r="4" fill="#D8C99A"/>
+            </g>
+
+            <!-- памятник -->
+            <g class="hero__monument">
+              <rect x="645" y="520" width="170" height="26" rx="3" fill="url(#stoneBase)"/>
+              <rect x="665" y="488" width="130" height="34" rx="2" fill="url(#stoneBase)"/>
+              <path d="M680 488 L680 380 Q680 340 730 336 Q780 340 780 380 L780 488 Z" fill="url(#stone)"/>
+              <ellipse cx="730" cy="396" rx="22" ry="26" fill="#F2EDE4" opacity="0.14"/>
+              <path d="M700 448 h60 M706 462 h48" stroke="#9C7A4D" stroke-width="2" opacity="0.55" stroke-linecap="round"/>
+              <rect x="680" y="380" width="8" height="108" fill="#ffffff" opacity="0.05"/>
+            </g>
+
+            <!-- световой блик -->
+            <ellipse cx="730" cy="470" rx="260" ry="120" fill="url(#sun)" opacity="0.5"/>
+          </g>
+
+          <!-- листья, тихо падающие -->
+          <g class="hero__leaves" fill="#8A9B7E">
+            <ellipse class="leaf leaf--1" cx="300" cy="220" rx="7" ry="4" opacity="0.7"/>
+            <ellipse class="leaf leaf--2" cx="1050" cy="260" rx="6" ry="3.5" opacity="0.6"/>
+            <ellipse class="leaf leaf--3" cx="520" cy="180" rx="5" ry="3" opacity="0.5"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="container hero__content">
+        <p class="hero__badge reveal">Работаем бережно, без спешки и давления</p>
+        <h1 class="hero__title reveal">Изготовим памятник,<br>который будет стоять поколениями</h1>
+        <p class="hero__subtitle reveal">Гранит и мрамор. Гарантия до 50&nbsp;лет. Возьмём все заботы на&nbsp;себя&nbsp;— от&nbsp;эскиза до&nbsp;установки.</p>
+        <div class="hero__actions reveal">
+          <a href="#calculator" class="btn btn--bronze">Рассчитать стоимость</a>
+          <a href="#contacts" class="btn btn--ghost">Бесплатная консультация</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ПОДДЕРЖКА ===== -->
+    <section class="support">
+      <div class="container">
+        <div class="support__grid">
+          <div class="support__item reveal">
+            <svg class="support__icon" viewBox="0 0 48 48" aria-hidden="true">
+              <circle cx="24" cy="24" r="22" fill="none" stroke="#8A9B7E" stroke-width="2"/>
+              <path d="M15 33 l9-18 9 18 M18.5 27 h11" fill="none" stroke="#9C7A4D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3>Бесплатный выезд замерщика</h3>
+            <p>Приедем на кладбище в удобное время, всё измерим и подскажем, что подойдёт именно вашему участку.</p>
+          </div>
+          <div class="support__item reveal">
+            <svg class="support__icon" viewBox="0 0 48 48" aria-hidden="true">
+              <rect x="12" y="8" width="24" height="32" rx="2" fill="none" stroke="#8A9B7E" stroke-width="2"/>
+              <path d="M17 16 h14 M17 22 h14 M17 28 h9" stroke="#9C7A4D" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M28 34 l3 3 6-7" fill="none" stroke="#8A9B7E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3>Поможем с документами</h3>
+            <p>Подскажем, как оформить разрешение на установку, и поможем собрать нужные бумаги без лишних хлопот.</p>
+          </div>
+          <div class="support__item reveal">
+            <svg class="support__icon" viewBox="0 0 48 48" aria-hidden="true">
+              <circle cx="24" cy="24" r="22" fill="none" stroke="#8A9B7E" stroke-width="2"/>
+              <path d="M24 13 v22 M30 17.5 c0-2.5-2.7-4-6-4 s-6 1.6-6 4 2 3.4 6 4.2 6 1.8 6 4.4-2.7 4.2-6 4.2-6-1.7-6-4.2" fill="none" stroke="#9C7A4D" stroke-width="2.2" stroke-linecap="round"/>
+            </svg>
+            <h3>Рассрочка и скидки пенсионерам</h3>
+            <p>Спокойные условия оплаты: рассрочка без переплат и заботливая скидка для пенсионеров.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="engrave-divider" aria-hidden="true"></div>
+
+    <!-- ===== КАТАЛОГ ===== -->
+    <section class="section catalog" id="catalog">
+      <div class="container">
+        <h2 class="section__title reveal">Каталог моделей</h2>
+        <p class="section__lead reveal">Каждую модель адаптируем под ваш участок: изменим размер, добавим гравировку, подберём цвет камня.</p>
+
+        <div class="catalog__tabs reveal" role="tablist" id="catalogTabs">
+          <button class="tab is-active" data-category="econom" role="tab">Эконом <span>от 14 500 ₽</span></button>
+          <button class="tab" data-category="standard" role="tab">Стандартные <span>от 24 000 ₽</span></button>
+          <button class="tab" data-category="figure" role="tab">Фигурные <span>от 18 500 ₽</span></button>
+          <button class="tab" data-category="exclusive" role="tab">Эксклюзив</button>
+        </div>
+
+        <div class="catalog__filters reveal">
+          <label>Материал
+            <select id="filterMaterial">
+              <option value="any">Любой</option>
+              <option value="granite">Гранит</option>
+              <option value="marble">Мрамор</option>
+            </select>
+          </label>
+          <label>Форма
+            <select id="filterForm">
+              <option value="any">Любая</option>
+              <option value="straight">Прямоугольная</option>
+              <option value="arch">Арочная</option>
+              <option value="figure">Фигурная</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="catalog__grid" id="catalogGrid"></div>
+        <p class="catalog__empty" id="catalogEmpty" hidden>По выбранным фильтрам ничего не найдено — попробуйте изменить материал или форму.</p>
+      </div>
+    </section>
+
+    <div class="engrave-divider" aria-hidden="true"></div>
+
+    <!-- ===== КАЛЬКУЛЯТОР ===== -->
+    <section class="section calculator" id="calculator">
+      <div class="container">
+        <h2 class="section__title reveal">Спокойный расчёт стоимости</h2>
+        <p class="section__lead reveal">Соберите памятник за минуту — цена пересчитывается сразу и честно показывает, из чего складывается.</p>
+
+        <div class="calc reveal">
+          <div class="calc__form">
+            <div class="calc__field">
+              <label for="calcModel">Модель</label>
+              <select id="calcModel"></select>
+            </div>
+            <div class="calc__field">
+              <label for="calcMaterial">Материал</label>
+              <select id="calcMaterial">
+                <option value="granite">Гранит (прочнее, служит дольше)</option>
+                <option value="marble">Мрамор (благородный, мягче)</option>
+              </select>
+            </div>
+            <div class="calc__field">
+              <label for="calcSize">Размер стелы</label>
+              <select id="calcSize">
+                <option value="s">80 × 40 см</option>
+                <option value="m" selected>100 × 50 см</option>
+                <option value="l">120 × 60 см</option>
+                <option value="xl">140 × 70 см</option>
+              </select>
+            </div>
+            <div class="calc__field calc__field--check">
+              <label class="check">
+                <input type="checkbox" id="calcPortrait">
+                <span class="check__box" aria-hidden="true"></span>
+                Гравировка портрета (+ 6 500 ₽)
+              </label>
+            </div>
+
+            <fieldset class="calc__fieldset">
+              <legend>Благоустройство участка</legend>
+              <label class="check">
+                <input type="checkbox" class="calc-addon" value="table" data-price="12000">
+                <span class="check__box" aria-hidden="true"></span>
+                Столик из камня (+ 12 000 ₽)
+              </label>
+              <label class="check">
+                <input type="checkbox" class="calc-addon" value="bench" data-price="9500">
+                <span class="check__box" aria-hidden="true"></span>
+                Скамья из камня (+ 9 500 ₽)
+              </label>
+              <label class="check">
+                <input type="checkbox" class="calc-addon" value="tile" data-price="8400">
+                <span class="check__box" aria-hidden="true"></span>
+                Облицовка плиткой (+ 8 400 ₽)
+              </label>
+              <label class="check">
+                <input type="checkbox" class="calc-addon" value="fence" data-price="15600">
+                <span class="check__box" aria-hidden="true"></span>
+                Ограда (+ 15 600 ₽)
+              </label>
+            </fieldset>
+          </div>
+
+          <div class="calc__result">
+            <h3>Ваша смета</h3>
+            <ul class="calc__breakdown" id="calcBreakdown"></ul>
+            <div class="calc__total">
+              <span>Итого с установкой</span>
+              <strong id="calcTotal">0 ₽</strong>
+            </div>
+            <p class="calc__note">Окончательную цену подтвердит замерщик после выезда — она не вырастет внезапно.</p>
+            <button class="btn btn--bronze calc__order" id="calcOrder">Заказать точный расчёт</button>
+            <p class="calc__ok" id="calcOk" hidden>Спасибо. Мы перезвоним бережно, в удобное для вас время.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="engrave-divider" aria-hidden="true"></div>
+
+    <!-- ===== ГАЛЕРЕЯ РАБОТ ===== -->
+    <section class="section works" id="works">
+      <div class="container">
+        <h2 class="section__title reveal">Наши работы</h2>
+        <p class="section__lead reveal">Установленные памятники на кладбищах Волгограда и области. Подпишем материал и срок изготовления — без прикрас.</p>
+        <div class="works__grid" id="worksGrid"></div>
+      </div>
+    </section>
+
+    <div class="engrave-divider" aria-hidden="true"></div>
+
+    <!-- ===== КАК МЫ РАБОТАЕМ ===== -->
+    <section class="section steps" id="steps">
+      <div class="container">
+        <h2 class="section__title reveal">Как мы работаем</h2>
+        <p class="section__lead reveal">Пять спокойных шагов. Показываем фото на каждом этапе — вы всегда знаете, что происходит с заказом.</p>
+        <ol class="steps__list">
+          <li class="step reveal">
+            <span class="step__num">1</span>
+            <div>
+              <h3>Разговор и замер</h3>
+              <p>Выслушаем, приедем на участок бесплатно, всё измерим и посоветуем без навязывания.</p>
+            </div>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">2</span>
+            <div>
+              <h3>Эскиз на согласование</h3>
+              <p>Покажем макет памятника с гравировкой. Правим, пока вам не станет спокойно на сердце.</p>
+            </div>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">3</span>
+            <div>
+              <h3>Изготовление в цеху</h3>
+              <p>Режем, шлифуем и гравируем камень в собственном цеху. Присылаем фото процесса.</p>
+            </div>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">4</span>
+            <div>
+              <h3>Доставка</h3>
+              <p>Аккуратно привезём памятник на кладбище в согласованный день.</p>
+            </div>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">5</span>
+            <div>
+              <h3>Установка и благоустройство</h3>
+              <p>Установим на надёжное основание, положим плитку, поставим столик и скамью.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <div class="engrave-divider" aria-hidden="true"></div>
+
+    <!-- ===== МАТЕРИАЛЫ ===== -->
+    <section class="section materials" id="materials">
+      <div class="container">
+        <h2 class="section__title reveal">Материалы</h2>
+        <p class="section__lead reveal">Гранит — вечный, мрамор — благородный. Наведите курсор на камень, чтобы почувствовать фактуру.</p>
+        <div class="materials__grid">
+          <article class="material material--granite reveal" tabindex="0">
+            <div class="material__texture" aria-hidden="true"></div>
+            <div class="material__body">
+              <h3>Гранит</h3>
+              <ul>
+                <li>Срок службы — более 500 лет</li>
+                <li>Не боится мороза, дождя и солнца</li>
+                <li>Полировка сохраняется десятилетиями</li>
+                <li>От 15 500 ₽ за стелу</li>
+              </ul>
+            </div>
+          </article>
+          <article class="material material--marble reveal" tabindex="0">
+            <div class="material__texture" aria-hidden="true"></div>
+            <div class="material__body">
+              <h3>Мрамор</h3>
+              <ul>
+                <li>Мягкий, тёплый рисунок камня</li>
+                <li>Благородный светлый тон</li>
+                <li>Идеален для тонкой гравировки</li>
+                <li>От 15 500 ₽ за стелу</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="engrave-divider" aria-hidden="true"></div>
+
+    <!-- ===== БЛАГОУСТРОЙСТВО ===== -->
+    <section class="section care" id="care">
+      <div class="container">
+        <h2 class="section__title reveal">Благоустройство места памяти</h2>
+        <p class="section__lead reveal">Приведём участок в порядок — чтобы приезжать сюда было спокойно.</p>
+        <div class="care__grid">
+          <div class="care__card reveal">
+            <svg viewBox="0 0 64 64" class="care__icon" aria-hidden="true">
+              <rect x="8" y="38" width="48" height="12" rx="2" fill="#8A9B7E" opacity="0.4"/>
+              <path d="M10 38 v12 M22 38 v12 M34 38 v12 M46 38 v12" stroke="#9C7A4D" stroke-width="2"/>
+            </svg>
+            <h3>Облицовка плиткой</h3>
+            <p>Гранитная плитка на участок — ровно, прочно, с уклоном от дождевой воды.</p>
+          </div>
+          <div class="care__card reveal">
+            <svg viewBox="0 0 64 64" class="care__icon" aria-hidden="true">
+              <rect x="14" y="20" width="36" height="8" rx="2" fill="#2E2C29"/>
+              <rect x="18" y="28" width="6" height="18" fill="#2E2C29" opacity="0.7"/>
+              <rect x="40" y="28" width="6" height="18" fill="#2E2C29" opacity="0.7"/>
+            </svg>
+            <h3>Столики и скамьи</h3>
+            <p>Из цельного камня, в тон памятнику. Место, где можно посидеть и вспомнить.</p>
+          </div>
+          <div class="care__card reveal">
+            <svg viewBox="0 0 64 64" class="care__icon" aria-hidden="true">
+              <path d="M10 46 v-24 M22 46 v-24 M34 46 v-24 M46 46 v-24 M58 46 v-24" stroke="#9C7A4D" stroke-width="2.4" stroke-linecap="round"/>
+              <path d="M6 26 h52 M6 40 h52" stroke="#8A9B7E" stroke-width="2.4"/>
+            </svg>
+            <h3>Ограды</h3>
+            <p>Аккуратные металлические и гранитные ограды с установкой под ключ.</p>
+          </div>
+          <div class="care__card reveal">
+            <svg viewBox="0 0 64 64" class="care__icon" aria-hidden="true">
+              <path d="M32 8 v20" stroke="#8A9B7E" stroke-width="2.4" stroke-linecap="round"/>
+              <path d="M20 34 h24 l-3 20 H23 Z" fill="#2E2C29" opacity="0.85"/>
+              <path d="M26 40 h12" stroke="#9C7A4D" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <h3>Реставрация</h3>
+            <p>Восстановим старые памятники: чистка, подновление гравировки, выравнивание.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="engrave-divider" aria-hidden="true"></div>
+
+    <!-- ===== ОТЗЫВЫ ===== -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <h2 class="section__title reveal">Слова благодарности</h2>
+        <div class="carousel reveal" id="carousel">
+          <div class="carousel__viewport" id="carouselViewport"></div>
+          <div class="carousel__controls">
+            <button class="carousel__btn" id="carouselPrev" aria-label="Предыдущий отзыв">‹</button>
+            <div class="carousel__dots" id="carouselDots"></div>
+            <button class="carousel__btn" id="carouselNext" aria-label="Следующий отзыв">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="engrave-divider" aria-hidden="true"></div>
+
+    <!-- ===== ГАРАНТИИ ===== -->
+    <section class="section guarantees" id="guarantees">
+      <div class="container">
+        <div class="guarantees__grid">
+          <div class="guarantee reveal">
+            <span class="guarantee__big">50 лет</span>
+            <h3>Гарантия в договоре</h3>
+            <p>Гарантию до 50 лет прописываем в договоре — на установку и целостность камня.</p>
+          </div>
+          <div class="guarantee reveal">
+            <span class="guarantee__big">0 ₽</span>
+            <h3>Рассрочка без переплат</h3>
+            <p>Платите частями, спокойно. Первый взнос — после утверждения эскиза.</p>
+          </div>
+          <div class="guarantee reveal">
+            <span class="guarantee__big">−10%</span>
+            <h3>Скидка пенсионерам</h3>
+            <p>Заботливая скидка для пенсионеров на памятники и работы по благоустройству.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="engrave-divider" aria-hidden="true"></div>
+
+    <!-- ===== ФОРМА ===== -->
+    <section class="section contact" id="contacts">
+      <div class="container contact__inner">
+        <div class="contact__text reveal">
+          <h2 class="section__title">Поговорим спокойно</h2>
+          <p>Оставьте телефон — перезвоним, ответим на вопросы и при необходимости договоримся о бесплатном замере. Без спешки и давления.</p>
+          <p class="contact__phone">Или позвоните сами: <a href="tel:+79090939400">+7 909 093-94-00</a></p>
+        </div>
+        <form class="form reveal" id="leadForm" novalidate>
+          <label>Ваше имя
+            <input type="text" name="name" id="leadName" placeholder="Как к вам обращаться" required>
+          </label>
+          <label>Телефон
+            <input type="tel" name="phone" id="leadPhone" placeholder="+7 ___ ___-__-__" required>
+          </label>
+          <label>Что вас беспокоит / какой памятник нужен
+            <textarea name="message" id="leadMessage" rows="4" placeholder="Расскажите в свободной форме — мы поймём"></textarea>
+          </label>
+          <button type="submit" class="btn btn--bronze form__submit">Жду звонка</button>
+          <p class="form__hint">Перезвоним бережно, в удобное время.</p>
+          <p class="form__ok" id="formOk" hidden>Спасибо за доверие. Мы свяжемся с вами в ближайшее время — бережно и без спешки.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== ФУТЕР ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <p class="footer__brand">Мемориальный сад</p>
+        <p>Гранитная мастерская</p>
+      </div>
+      <div>
+        <p>г. Волгоград, ул. Каменщиков, 12</p>
+        <p>Пн–Сб: 9:00–19:00, Вс: по договорённости</p>
+      </div>
+      <div>
+        <p><a href="tel:+79090939400">+7 909 093-94-00</a></p>
+        <p>Выезд по Волгограду и области</p>
+      </div>
+    </div>
+    <p class="footer__note">Память, которая остаётся навсегда — в камне, которому не страшны десятилетия.</p>
+  </footer>
+
+  <!-- Тихий плавающий блок консультации -->
+  <aside class="quiet-consult" id="quietConsult" hidden>
+    <button class="quiet-consult__close" id="quietConsultClose" aria-label="Закрыть">×</button>
+    <p>Нужна помощь? Ответим спокойно.</p>
+    <a href="#contacts" class="quiet-consult__link">Бесплатная консультация</a>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>

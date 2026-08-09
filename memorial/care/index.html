@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Гранитная мастерская в Волгограде. Поможем оформить памятник спокойно и без лишних хлопот: приедем сами, всё покажем и посчитаем. Бесплатный выезд замерщика, рассрочка, гарантия до 50 лет.">
+  <title>Памятники в Волгограде — спокойно и без лишних хлопот</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Шапка -->
+  <header class="header">
+    <div class="container header__inner">
+      <div class="logo">
+        <svg class="logo__mark" width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
+          <rect x="8" y="10" width="24" height="22" rx="3" fill="#7E94A6"/>
+          <path d="M8 14 Q20 4 32 14" fill="none" stroke="#7E94A6" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="20" cy="20" r="4" fill="#FBF8F3"/>
+        </svg>
+        <span class="logo__text">Гранитная мастерская<br><small>Волгоград</small></span>
+      </div>
+      <a class="header__phone" href="tel:+79090939400">+7 (909) 093-94-00</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero__light" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <h1>Поможем оформить памятник — спокойно и&nbsp;без лишних хлопот</h1>
+          <p class="hero__sub">Приедем сами, всё покажем, подскажем и посчитаем. Вам не нужно никуда ехать.</p>
+          <div class="hero__actions">
+            <a class="btn btn--huge" href="tel:+79090939400">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.24 1z" fill="currentColor"/>
+              </svg>
+              Позвонить
+            </a>
+            <a class="btn btn--ghost" href="#call-form">Перезвоните мне</a>
+          </div>
+          <a class="hero__phone" href="tel:+79090939400">+7 (909) 093-94-00</a>
+          <p class="hero__note">Работаем ежедневно · Выезд замерщика бесплатно</p>
+        </div>
+
+        <!-- Тёплая SVG-сцена: руки, кладущие цветы к памятнику, мягкий свет -->
+        <div class="hero__scene" aria-hidden="true">
+          <svg viewBox="0 0 520 560" class="scene" role="img" aria-label="Руки кладут цветы к памятнику в мягком свете">
+            <defs>
+              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#F6EDE0"/>
+                <stop offset="0.55" stop-color="#E9E3D8"/>
+                <stop offset="1" stop-color="#D8E0E4"/>
+              </linearGradient>
+              <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+                <stop offset="0" stop-color="#F3D9AE" stop-opacity="0.95"/>
+                <stop offset="1" stop-color="#F3D9AE" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="stone" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#8FA3B2"/>
+                <stop offset="1" stop-color="#6E8293"/>
+              </linearGradient>
+              <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#CBD6CE"/>
+                <stop offset="1" stop-color="#B4C3B8"/>
+              </linearGradient>
+            </defs>
+
+            <rect width="520" height="560" rx="24" fill="url(#sky)"/>
+
+            <!-- мягкий свет -->
+            <circle cx="380" cy="110" r="150" fill="url(#sun)">
+              <animate attributeName="opacity" values="1;0.8;1" dur="9s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="380" cy="110" r="46" fill="#F1CE9B" opacity="0.85"/>
+
+            <!-- далёкие деревья -->
+            <g opacity="0.45" fill="#9BAEBB">
+              <ellipse cx="60" cy="330" rx="46" ry="62"/>
+              <rect x="55" y="360" width="10" height="60" rx="4"/>
+              <ellipse cx="470" cy="320" rx="40" ry="56"/>
+              <rect x="465" y="350" width="9" height="60" rx="4"/>
+            </g>
+
+            <!-- земля -->
+            <ellipse cx="260" cy="520" rx="330" ry="90" fill="url(#ground)"/>
+
+            <!-- памятник -->
+            <g class="scene__monument">
+              <rect x="180" y="420" width="160" height="26" rx="6" fill="#5F7181"/>
+              <rect x="196" y="392" width="128" height="30" rx="6" fill="#6B7E8E"/>
+              <path d="M210 392 L210 220 Q210 180 260 180 Q310 180 310 220 L310 392 Z" fill="url(#stone)"/>
+              <path d="M226 250 L294 250" stroke="#FBF8F3" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+              <path d="M236 274 L284 274" stroke="#FBF8F3" stroke-width="4" stroke-linecap="round" opacity="0.35"/>
+              <path d="M244 298 L276 298" stroke="#FBF8F3" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
+              <!-- медальон-свет -->
+              <circle cx="260" cy="222" r="16" fill="#FBF8F3" opacity="0.55"/>
+            </g>
+
+            <!-- цветы у памятника -->
+            <g class="scene__flowers">
+              <path d="M300 448 Q304 424 312 410" stroke="#5E7D5A" stroke-width="5" fill="none" stroke-linecap="round"/>
+              <path d="M318 450 Q320 428 330 416" stroke="#5E7D5A" stroke-width="5" fill="none" stroke-linecap="round"/>
+              <path d="M286 450 Q288 430 280 418" stroke="#5E7D5A" stroke-width="5" fill="none" stroke-linecap="round"/>
+              <circle cx="312" cy="406" r="12" fill="#C08552"/>
+              <circle cx="330" cy="412" r="10" fill="#D99C6B"/>
+              <circle cx="278" cy="414" r="10" fill="#E4B183"/>
+              <circle cx="312" cy="406" r="4.5" fill="#FBF8F3"/>
+              <circle cx="330" cy="412" r="3.5" fill="#FBF8F3"/>
+              <circle cx="278" cy="414" r="3.5" fill="#FBF8F3"/>
+              <path d="M270 452 Q304 440 336 452 L336 462 Q304 472 270 462 Z" fill="#7E94A6" opacity="0.8"/>
+            </g>
+
+            <!-- руки, кладущие цветок -->
+            <g class="scene__hands">
+              <animateTransform attributeName="transform" type="translate" values="0 0; 0 8; 0 0" dur="8s" repeatCount="indefinite"/>
+              <path d="M40 300 Q90 310 120 344 L136 372 Q100 386 64 366 Q30 344 14 318 Z" fill="#D9A984"/>
+              <path d="M120 344 Q150 360 172 380 L160 398 Q132 384 110 366 Z" fill="#C99A72"/>
+              <path d="M150 384 Q176 398 196 412" stroke="#5E7D5A" stroke-width="6" fill="none" stroke-linecap="round"/>
+              <circle cx="200" cy="414" r="13" fill="#C08552"/>
+              <circle cx="200" cy="414" r="5" fill="#FBF8F3"/>
+              <circle cx="214" cy="404" r="8" fill="#D99C6B"/>
+            </g>
+
+            <!-- птицы -->
+            <g stroke="#7E94A6" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.7">
+              <path d="M120 120 Q130 110 140 120 Q150 110 160 120"/>
+              <path d="M170 92 Q178 84 186 92 Q194 84 202 92"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Обещания -->
+    <section class="promises">
+      <div class="container promises__grid">
+        <div class="promise reveal">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <path d="M10 36 L22 24 Q26 20 30 24 L34 28 L46 20 Q50 17 54 21 L56 24" stroke="#C08552" stroke-width="4" stroke-linecap="round"/>
+            <path d="M34 28 L26 36 Q23 39 26 42 Q29 45 32 42 L44 32" stroke="#C08552" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+          <p><strong>Говорим по-человечески.</strong><br>Никакой бюрократии — объясним просто и честно.</p>
+        </div>
+        <div class="promise reveal">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <path d="M32 8 L52 16 V32 Q52 48 32 56 Q12 48 12 32 V16 Z" stroke="#7E94A6" stroke-width="4" stroke-linejoin="round" fill="rgba(126,148,166,0.12)"/>
+            <path d="M24 32 L30 38 L42 26" stroke="#7E94A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <p><strong>Гарантия до 50 лет.</strong><br>На камень и установку — письменно, в договоре.</p>
+        </div>
+        <div class="promise reveal">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <path d="M32 54 Q10 40 10 26 Q10 14 21 14 Q28 14 32 22 Q36 14 43 14 Q54 14 54 26 Q54 40 32 54 Z" stroke="#C08552" stroke-width="4" stroke-linejoin="round" fill="rgba(192,133,82,0.12)"/>
+          </svg>
+          <p><strong>Бережно и без спешки.</strong><br>Мы рядом, пока всё не будет сделано как надо.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Что мы возьмём на себя -->
+    <section class="section care" id="care">
+      <div class="container">
+        <h2 class="reveal">Что мы возьмём на себя</h2>
+        <p class="section__lead reveal">Вы не одни. Все хлопоты — наши, от первого звонка до установки.</p>
+        <div class="care__grid">
+          <article class="care__card reveal">
+            <svg width="72" height="72" viewBox="0 0 72 72" fill="none" aria-hidden="true">
+              <rect x="14" y="10" width="34" height="48" rx="4" stroke="#7E94A6" stroke-width="4"/>
+              <path d="M22 22 H40 M22 32 H40 M22 42 H32" stroke="#7E94A6" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="52" cy="48" r="10" stroke="#C08552" stroke-width="4"/>
+              <path d="M59 55 L66 62" stroke="#C08552" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+            <h3>Замер на кладбище</h3>
+            <p>Приедем сами, всё измерим и осмотрим место. Вам ехать не нужно.</p>
+          </article>
+          <article class="care__card reveal">
+            <svg width="72" height="72" viewBox="0 0 72 72" fill="none" aria-hidden="true">
+              <path d="M20 60 V26 Q20 14 36 14 Q52 14 52 26 V60" stroke="#7E94A6" stroke-width="4" stroke-linejoin="round"/>
+              <path d="M28 34 H44" stroke="#C08552" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="36" cy="26" r="4" fill="#C08552"/>
+              <path d="M12 60 H60" stroke="#7E94A6" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+            <h3>Подбор модели и эскиз</h3>
+            <p>Покажем каталог и живые образцы камня, нарисуем эскиз — бесплатно.</p>
+          </article>
+          <article class="care__card reveal">
+            <svg width="72" height="72" viewBox="0 0 72 72" fill="none" aria-hidden="true">
+              <rect x="14" y="12" width="44" height="52" rx="4" stroke="#7E94A6" stroke-width="4"/>
+              <path d="M22 24 H50 M22 34 H50 M22 44 H40" stroke="#7E94A6" stroke-width="4" stroke-linecap="round"/>
+              <path d="M42 54 L48 60 L62 44" stroke="#C08552" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3>Согласование с администрацией</h3>
+            <p>Сами оформим все разрешения на кладбище. Бумаги — наша забота.</p>
+          </article>
+          <article class="care__card reveal">
+            <svg width="72" height="72" viewBox="0 0 72 72" fill="none" aria-hidden="true">
+              <circle cx="36" cy="36" r="22" stroke="#7E94A6" stroke-width="4"/>
+              <circle cx="36" cy="36" r="8" stroke="#C08552" stroke-width="4"/>
+              <path d="M36 14 V22 M36 50 V58 M14 36 H22 M50 36 H58" stroke="#7E94A6" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+            <h3>Изготовление</h3>
+            <p>Собственная мастерская: режем, полируем, гравируем портрет и надписи.</p>
+          </article>
+          <article class="care__card reveal">
+            <svg width="72" height="72" viewBox="0 0 72 72" fill="none" aria-hidden="true">
+              <path d="M12 52 H60" stroke="#7E94A6" stroke-width="4" stroke-linecap="round"/>
+              <path d="M20 52 L28 24 H44 L52 52" stroke="#7E94A6" stroke-width="4" stroke-linejoin="round"/>
+              <path d="M36 24 V14" stroke="#C08552" stroke-width="4" stroke-linecap="round"/>
+              <path d="M30 14 H42" stroke="#C08552" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+            <h3>Установка</h3>
+            <p>Прочный фундамент, аккуратный монтаж. Гарантия на установку — до 50 лет.</p>
+          </article>
+          <article class="care__card reveal">
+            <svg width="72" height="72" viewBox="0 0 72 72" fill="none" aria-hidden="true">
+              <path d="M12 54 H60" stroke="#7E94A6" stroke-width="4" stroke-linecap="round"/>
+              <path d="M24 54 V38 H34 V54 M40 54 V30 H50 V54" stroke="#7E94A6" stroke-width="4" stroke-linejoin="round"/>
+              <path d="M18 24 Q24 14 30 24 M42 18 Q48 8 54 18" stroke="#C08552" stroke-width="4" stroke-linecap="round" fill="none"/>
+            </svg>
+            <h3>Благоустройство</h3>
+            <p>Плитка, ограда, столик и скамейка, вазы — место будет ухоженным и тёплым.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Каталог -->
+    <section class="section catalog" id="catalog">
+      <div class="container">
+        <h2 class="reveal">Простые и понятные варианты</h2>
+        <p class="section__lead reveal">Три честных решения. Подскажем, что подойдёт именно вам, — без навязывания.</p>
+        <div class="catalog__grid">
+
+          <article class="card reveal">
+            <div class="card__art card__art--eco" aria-hidden="true">
+              <svg viewBox="0 0 300 220">
+                <defs>
+                  <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#93A6B5"/><stop offset="1" stop-color="#74899A"/>
+                  </linearGradient>
+                </defs>
+                <ellipse cx="150" cy="196" rx="130" ry="20" fill="#CBD6CE"/>
+                <rect x="100" y="170" width="100" height="16" rx="4" fill="#5F7181"/>
+                <rect x="115" y="70" width="70" height="102" rx="6" fill="url(#g1)"/>
+                <path d="M128 96 H172 M132 116 H168" stroke="#FBF8F3" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+              </svg>
+            </div>
+            <h3>Эконом</h3>
+            <p class="card__price">от 14 500 ₽</p>
+            <p class="card__text">Аккуратный прямоугольный памятник из гранита. Надёжно и достойно.</p>
+            <a class="card__link" href="tel:+79090939400">Узнать подробнее</a>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__art card__art--std" aria-hidden="true">
+              <svg viewBox="0 0 300 220">
+                <defs>
+                  <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#869BAB"/><stop offset="1" stop-color="#667E90"/>
+                  </linearGradient>
+                </defs>
+                <ellipse cx="150" cy="196" rx="130" ry="20" fill="#CBD6CE"/>
+                <rect x="92" y="172" width="116" height="16" rx="4" fill="#5F7181"/>
+                <rect x="104" y="150" width="92" height="24" rx="4" fill="#6B7E8E"/>
+                <path d="M116 150 V64 Q116 40 150 40 Q184 40 184 64 V150 Z" fill="url(#g2)"/>
+                <circle cx="150" cy="66" r="14" fill="#FBF8F3" opacity="0.55"/>
+                <path d="M132 100 H168 M136 120 H164" stroke="#FBF8F3" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+              </svg>
+            </div>
+            <h3>Стандарт</h3>
+            <p class="card__price">от 24 000 ₽</p>
+            <p class="card__text">Классическая форма с полировкой, цветник и надёжный фундамент.</p>
+            <a class="card__link" href="tel:+79090939400">Узнать подробнее</a>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__art card__art--fig" aria-hidden="true">
+              <svg viewBox="0 0 300 220">
+                <defs>
+                  <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#9FAFBB"/><stop offset="1" stop-color="#7C91A1"/>
+                  </linearGradient>
+                </defs>
+                <ellipse cx="150" cy="196" rx="130" ry="20" fill="#CBD6CE"/>
+                <rect x="94" y="172" width="112" height="16" rx="4" fill="#5F7181"/>
+                <path d="M112 172 V96 Q112 48 150 48 Q188 48 188 96 V172 Q150 158 112 172 Z" fill="url(#g3)"/>
+                <path d="M150 60 Q138 78 150 92 Q162 78 150 60 Z" fill="#C08552" opacity="0.8"/>
+                <path d="M132 118 H168 M138 138 H162" stroke="#FBF8F3" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+              </svg>
+            </div>
+            <h3>Фигурный</h3>
+            <p class="card__price">от 18 500 ₽</p>
+            <p class="card__text">Индивидуальная форма по эскизу — волна, сердце, арка. Гравировка портрета.</p>
+            <a class="card__link" href="tel:+79090939400">Узнать подробнее</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Цены -->
+    <section class="section prices" id="prices">
+      <div class="container">
+        <h2 class="reveal">Сколько это стоит</h2>
+        <p class="section__lead reveal">Никаких скрытых доплат. Точная цена — после бесплатного замера.</p>
+        <div class="prices__wrap reveal">
+          <table class="prices__table">
+            <thead>
+              <tr><th>Работа</th><th>Ориентировочная цена</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Памятник «Эконом» (гранит, стела + подставка)</td><td>от 14 500 ₽</td></tr>
+              <tr><td>Памятник «Стандарт» с цветником</td><td>от 24 000 ₽</td></tr>
+              <tr><td>Фигурный памятник по эскизу</td><td>от 18 500 ₽</td></tr>
+              <tr><td>Плита из гранита или мрамора</td><td>от 15 500 ₽</td></tr>
+              <tr><td>Гравировка портрета и надписей</td><td>от 3 000 ₽</td></tr>
+              <tr><td>Установка с фундаментом</td><td>от 8 000 ₽</td></tr>
+              <tr><td>Благоустройство (плитка, ограда, столик)</td><td>от 12 000 ₽</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="prices__note reveal">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <circle cx="24" cy="24" r="20" stroke="#C08552" stroke-width="4"/>
+            <path d="M24 14 V26 M24 32 V34" stroke="#C08552" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+          <p><strong>Точная цена называется после замера — замер бесплатный.</strong><br>Назовём сумму один раз, и она не изменится. Так пишем в договоре.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Рассрочка и льготы -->
+    <section class="section benefits" id="benefits">
+      <div class="container">
+        <h2 class="reveal">Рассрочка и льготы</h2>
+        <p class="section__lead reveal">Понимаем, что расходы приходятся на непростое время. Поможем с оплатой.</p>
+        <div class="benefits__grid">
+          <article class="benefit reveal">
+            <span class="benefit__badge">0%</span>
+            <h3>Рассрочка без процентов</h3>
+            <p>Разделим оплату на 3–6 месяцев. Без банка, без переплат, по договору.</p>
+          </article>
+          <article class="benefit reveal">
+            <span class="benefit__badge">−10%</span>
+            <h3>Скидки пенсионерам</h3>
+            <p>Пенсионерам и ветеранам — скидка 10% на изготовление и установку.</p>
+          </article>
+          <article class="benefit reveal">
+            <span class="benefit__badge">50/50</span>
+            <h3>Оплата частями</h3>
+            <p>Половина при заказе, половина — после установки. Сначала увидите результат.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Как мы работаем -->
+    <section class="section steps" id="steps">
+      <div class="container">
+        <h2 class="reveal">Как мы работаем</h2>
+        <p class="section__lead reveal">Четыре простых шага. Больше от вас ничего не потребуется.</p>
+        <ol class="steps__list">
+          <li class="step reveal">
+            <span class="step__num">1</span>
+            <h3>Позвоните нам</h3>
+            <p>Расскажите, что нужно. Ответим на вопросы и договоримся о замере.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">2</span>
+            <h3>Приедем на замер</h3>
+            <p>Бесплатно, в удобный день. Покажем образцы и посчитаем точную цену.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">3</span>
+            <h3>Изготовим и согласуем</h3>
+            <p>Сделаем памятник, оформим разрешения. Вы будете в курсе каждого этапа.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">4</span>
+            <h3>Установим и приведём в порядок</h3>
+            <p>Аккуратно установим, уберём за собой. Передаём гарантию до 50 лет.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Реальные работы -->
+    <section class="section works" id="works">
+      <div class="container">
+        <h2 class="reveal">Наши работы</h2>
+        <p class="section__lead reveal">Установленные памятники на кладбищах Волгограда и области.</p>
+        <div class="works__grid">
+          <figure class="work reveal">
+            <div class="work__art" aria-hidden="true">
+              <svg viewBox="0 0 300 240">
+                <defs><linearGradient id="w1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8FA3B2"/><stop offset="1" stop-color="#6E8293"/></linearGradient></defs>
+                <rect width="300" height="240" fill="#EAF0F2"/>
+                <ellipse cx="60" cy="60" rx="50" ry="66" fill="#A9BCC9" opacity="0.5"/>
+                <ellipse cx="150" cy="212" rx="140" ry="26" fill="#C6D2C8"/>
+                <rect x="96" y="188" width="108" height="16" rx="4" fill="#5F7181"/>
+                <path d="M112 188 V84 Q112 52 150 52 Q188 52 188 84 V188 Z" fill="url(#w1)"/>
+                <circle cx="150" cy="84" r="13" fill="#FBF8F3" opacity="0.55"/>
+                <path d="M132 116 H168 M138 134 H162" stroke="#FBF8F3" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+              </svg>
+            </div>
+            <figcaption>Стела из чёрного гранита с медальоном<br><small>Красноармейский район</small></figcaption>
+          </figure>
+          <figure class="work reveal">
+            <div class="work__art" aria-hidden="true">
+              <svg viewBox="0 0 300 240">
+                <defs><linearGradient id="w2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#97A9B8"/><stop offset="1" stop-color="#768BA0"/></linearGradient></defs>
+                <rect width="300" height="240" fill="#EFEAE0"/>
+                <ellipse cx="250" cy="70" rx="44" ry="58" fill="#C8B79A" opacity="0.4"/>
+                <ellipse cx="150" cy="212" rx="140" ry="26" fill="#C6D2C8"/>
+                <rect x="86" y="190" width="128" height="14" rx="4" fill="#5F7181"/>
+                <rect x="98" y="168" width="104" height="24" rx="4" fill="#6B7E8E"/>
+                <path d="M116 168 V78 Q150 44 184 78 V168 Z" fill="url(#w2)"/>
+                <rect x="110" y="196" width="80" height="10" rx="4" fill="#C08552" opacity="0.35"/>
+                <path d="M134 108 H166 M138 126 H162" stroke="#FBF8F3" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+              </svg>
+            </div>
+            <figcaption>Семейный памятник с цветником<br><small>Дзержинский район</small></figcaption>
+          </figure>
+          <figure class="work reveal">
+            <div class="work__art" aria-hidden="true">
+              <svg viewBox="0 0 300 240">
+                <defs><linearGradient id="w3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A7B4BE"/><stop offset="1" stop-color="#8496A4"/></linearGradient></defs>
+                <rect width="300" height="240" fill="#F2EDE4"/>
+                <circle cx="230" cy="56" r="30" fill="#F1CE9B" opacity="0.7"/>
+                <ellipse cx="150" cy="212" rx="140" ry="26" fill="#C6D2C8"/>
+                <rect x="92" y="190" width="116" height="14" rx="4" fill="#5F7181"/>
+                <path d="M112 190 V96 Q112 48 150 48 Q188 48 188 96 V190 Q150 176 112 190 Z" fill="url(#w3)"/>
+                <path d="M150 62 Q138 80 150 94 Q162 80 150 62 Z" fill="#C08552" opacity="0.8"/>
+                <path d="M136 122 H164 M140 140 H160" stroke="#FBF8F3" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+              </svg>
+            </div>
+            <figcaption>Фигурная стела «Волна» с гравировкой<br><small>Ворошиловский район</small></figcaption>
+          </figure>
+          <figure class="work reveal">
+            <div class="work__art" aria-hidden="true">
+              <svg viewBox="0 0 300 240">
+                <defs><linearGradient id="w4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#90A2B1"/><stop offset="1" stop-color="#71869A"/></linearGradient></defs>
+                <rect width="300" height="240" fill="#E9EFF0"/>
+                <ellipse cx="70" cy="80" rx="40" ry="54" fill="#A9BCC9" opacity="0.45"/>
+                <ellipse cx="150" cy="212" rx="140" ry="26" fill="#C6D2C8"/>
+                <rect x="80" y="192" width="140" height="12" rx="4" fill="#5F7181"/>
+                <rect x="98" y="120" width="44" height="72" rx="5" fill="url(#w4)"/>
+                <rect x="158" y="100" width="44" height="92" rx="5" fill="url(#w4)"/>
+                <path d="M110 148 H132 M170 132 H192" stroke="#FBF8F3" stroke-width="3.5" stroke-linecap="round" opacity="0.5"/>
+                <circle cx="150" cy="86" r="9" fill="#C08552"/>
+              </svg>
+            </div>
+            <figcaption>Двойной памятник с общей тумбой<br><small>Советский район</small></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <h2 class="reveal">Спасибо за добрые слова</h2>
+        <div class="reviews__grid">
+          <blockquote class="review reveal">
+            <p>«Всё сделали сами: и замер, и бумаги. Мне только позвонили, когда памятник установили. Очень бережно.»</p>
+            <cite>— Валентина Петровна, 67 лет</cite>
+          </blockquote>
+          <blockquote class="review reveal">
+            <p>«Боялась, что будут давить и навязывать. А мне просто спокойно всё объяснили и назвали цену сразу.»</p>
+            <cite>— Людмила Ивановна, 72 года</cite>
+          </blockquote>
+          <blockquote class="review reveal">
+            <p>«Оформили рассрочку без процентов. Памятник папе сделали красивый, как на эскизе. Спасибо вам.»</p>
+            <cite>— Сергей, 48 лет</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Форма -->
+    <section class="section callme" id="call-form">
+      <div class="container callme__inner reveal">
+        <h2>Позвоните — просто поговорим</h2>
+        <p class="callme__lead">Оставьте телефон, и мы сами перезвоним в удобное время.</p>
+        <form class="callme__form" id="callback-form" novalidate>
+          <label class="visually-hidden" for="phone">Ваш телефон</label>
+          <input class="callme__input" type="tel" id="phone" name="phone" inputmode="tel"
+                 placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+          <button class="btn btn--huge" type="submit">Перезвоните мне</button>
+        </form>
+        <p class="callme__error" id="form-error" role="alert" hidden>Пожалуйста, введите телефон полностью — например, +7 (909) 093-94-00</p>
+        <p class="callme__success" id="form-success" hidden>Спасибо! Мы перезвоним вам в ближайшее время.</p>
+        <p class="callme__note">Ответим бережно, поможем разобраться, ни к чему не обяжем.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <p class="footer__phone-label">Позвоните — мы рядом</p>
+        <a class="footer__phone" href="tel:+79090939400">+7 (909) 093-94-00</a>
+      </div>
+      <div class="footer__info">
+        <p>г. Волгоград, ул. Гранитная, 12</p>
+        <p>Работаем ежедневно с 9:00 до 20:00</p>
+        <p>Выезд замерщика — бесплатно</p>
+      </div>
+    </div>
+    <p class="footer__copy">© 2025 Гранитная мастерская. Демо-сайт портфолио.</p>
+  </footer>
+
+  <!-- Плавающая кнопка звонка -->
+  <a class="float-call" href="tel:+79090939400" aria-label="Позвонить">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.24 1z" fill="currentColor"/>
+    </svg>
+    <span class="float-call__text">Позвонить</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
