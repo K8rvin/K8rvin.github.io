@@ -184,4 +184,10 @@ const WORKS = [
     style: "Городские джунгли, дом и бизнес",
     path: "flowers/subscription/",
   },
+  {
+    category: "Цветы",
+    title: "Море цветов",
+    style: "Элегантный, простой — локальный магазин",
+    path: "flowers/more-flowers/",
+  },
 ];
