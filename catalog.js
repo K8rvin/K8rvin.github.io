@@ -5,8 +5,8 @@
    ============================================================ */
 
 const CONTACTS = {
-  telegram: "https://t.me/AndyCorw",
-  telegramLabel: "@AndyCorw",
+  telegram: "https://t.me/AndyMokhov",
+  telegramLabel: "@AndyMokhov",
   email: "k8rvin@yandex.ru",
   phone: "+7 (909) 394-00-58",
 };
