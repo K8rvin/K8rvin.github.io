@@ -190,4 +190,24 @@ const WORKS = [
     style: "Элегантный, простой — локальный магазин",
     path: "flowers/more-flowers/",
   },
+
+  // --- Ремонт квартир ---
+  {
+    category: "Ремонт квартир",
+    title: "Архитектурный код",
+    style: "Премиум, инженерная графика",
+    path: "renovation/arch-code/",
+  },
+  {
+    category: "Ремонт квартир",
+    title: "Свет и прозрачность",
+    style: "Светлый, доверительный, как у застройщика",
+    path: "renovation/light-clarity/",
+  },
+  {
+    category: "Ремонт квартир",
+    title: "Журнальный",
+    style: "Редакционный, истории проектов",
+    path: "renovation/magazine/",
+  },
 ];

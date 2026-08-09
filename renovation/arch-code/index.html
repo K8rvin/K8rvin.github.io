@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дока Строй — дизайнерский ремонт под ключ | Саратов</title>
+  <meta name="description" content="Дизайнерский ремонт квартир и коммерческих помещений под ключ. Один руководитель отвечает за бюджет, сроки и качество. 18 лет на рынке, гарантия 3 года, рассрочка 0%.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Прогресс-бар скролла -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Шапка -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="Дока Строй — на главную">
+        <span class="logo__mark">ДС</span>
+        <span class="logo__text">Дока&nbsp;Строй</span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#objects" class="nav__link">Объекты</a>
+        <a href="#calculator" class="nav__link">Смета</a>
+        <a href="#portfolio" class="nav__link">Портфолио</a>
+        <a href="#process" class="nav__link">Процесс</a>
+        <a href="#team" class="nav__link">Команда</a>
+        <a href="#faq" class="nav__link">Вопросы</a>
+      </nav>
+      <div class="header__contacts">
+        <a href="tel:+78452000000" class="header__phone">+7 (8452) 00-00-00</a>
+        <a href="#contact" class="btn btn--accent btn--sm">Обсудить проект</a>
+      </div>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Мобильное меню -->
+  <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-menu__nav" aria-label="Мобильная навигация">
+      <a href="#objects" class="mobile-menu__link">Объекты</a>
+      <a href="#calculator" class="mobile-menu__link">Смета</a>
+      <a href="#portfolio" class="mobile-menu__link">Портфолио</a>
+      <a href="#process" class="mobile-menu__link">Процесс</a>
+      <a href="#team" class="mobile-menu__link">Команда</a>
+      <a href="#faq" class="mobile-menu__link">Вопросы</a>
+      <a href="#contact" class="mobile-menu__link mobile-menu__link--accent">Обсудить проект</a>
+    </nav>
+    <a href="tel:+78452000000" class="mobile-menu__phone">+7 (8452) 00-00-00</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero__bg" role="img" aria-label="Премиальный интерьер после ремонта"></div>
+      <div class="hero__grid" aria-hidden="true"></div>
+      <!-- Размерные линии-декор -->
+      <div class="dim dim--hero-w" aria-hidden="true"><span class="dim__label">12 400 мм</span></div>
+      <div class="dim dim--hero-h" aria-hidden="true"><span class="dim__label">3 200 мм</span></div>
+
+      <div class="container hero__inner">
+        <p class="hero__kicker reveal">// Ремонт как инженерный проект</p>
+        <h1 class="hero__title reveal">Дизайнерский ремонт под&nbsp;ключ — <em>без вашего ежедневного участия</em></h1>
+        <p class="hero__sub reveal">Один руководитель отвечает за бюджет, сроки и&nbsp;качество. Фиксированный бюджет. Предсказуемый срок.</p>
+        <div class="hero__actions reveal">
+          <a href="#contact" class="btn btn--accent">Обсудить проект</a>
+          <a href="#calculator" class="btn btn--outline">Рассчитать смету</a>
+        </div>
+        <ul class="hero__badges reveal">
+          <li class="badge">
+            <span class="badge__num" data-count="18">0</span>
+            <span class="badge__label">лет на рынке<br>с 2007 года</span>
+          </li>
+          <li class="badge">
+            <span class="badge__num">5.0</span>
+            <span class="badge__label">рейтинг<br>Яндекс Карты</span>
+          </li>
+          <li class="badge">
+            <span class="badge__num">5.0</span>
+            <span class="badge__label">рейтинг<br>2ГИС</span>
+          </li>
+          <li class="badge">
+            <span class="badge__num" data-count="3">0</span>
+            <span class="badge__label">года гарантии<br>по договору</span>
+          </li>
+        </ul>
+      </div>
+      <a href="#objects" class="hero__scroll" aria-label="Прокрутить вниз">01 / листать вниз</a>
+    </section>
+
+    <!-- ============ КАКОЙ ОБЪЕКТ ПЛАНИРУЕТЕ ============ -->
+    <section class="section objects" id="objects">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__index">01</span>
+          <h2 class="section__title">Какой объект планируете?</h2>
+          <p class="section__note">Выберите тип — покажем, как строится работа именно под вашу задачу.</p>
+        </div>
+        <div class="objects__grid">
+          <article class="obj-card reveal" data-obj>
+            <button class="obj-card__head" aria-expanded="false">
+              <span class="obj-card__num">Т-01</span>
+              <h3 class="obj-card__title">Премиальная квартира</h3>
+              <span class="obj-card__plus" aria-hidden="true"></span>
+            </button>
+            <div class="obj-card__body">
+              <p>Авторский надзор от дизайнера, комплектация материалами под ключ, скрытые инженерные системы, чистовая отделка уровня show-room. Уборка и химчистка перед сдачей.</p>
+              <ul class="obj-card__list">
+                <li>Дизайн-проект и 3D-визуализация</li>
+                <li>Комплектация: закупка, логистика, приёмка</li>
+                <li>Еженедельные фотоотчёты руководителя</li>
+              </ul>
+              <a href="#contact" class="btn btn--outline btn--sm obj-card__cta">Обсудить квартиру</a>
+            </div>
+          </article>
+          <article class="obj-card reveal" data-obj>
+            <button class="obj-card__head" aria-expanded="false">
+              <span class="obj-card__num">Т-02</span>
+              <h3 class="obj-card__title">Офис / коммерция</h3>
+              <span class="obj-card__plus" aria-hidden="true"></span>
+            </button>
+            <div class="obj-card__body">
+              <p>Работаем без остановки вашего бизнеса: ночные и вахтовые графики, поэтапная сдача зон. Помогаем согласовать перепланировку с управляющей компанией и арендодателем.</p>
+              <ul class="obj-card__list">
+                <li>Сдача зонами — офис работает во время ремонта</li>
+                <li>Инженерия: СКС, вентиляция, электрика под нагрузку</li>
+                <li>Опыт: офисы, рестораны, ритейл</li>
+              </ul>
+              <a href="#contact" class="btn btn--outline btn--sm obj-card__cta">Обсудить коммерцию</a>
+            </div>
+          </article>
+          <article class="obj-card reveal" data-obj>
+            <button class="obj-card__head" aria-expanded="false">
+              <span class="obj-card__num">Т-03</span>
+              <h3 class="obj-card__title">Сложный или исторический объект</h3>
+              <span class="obj-card__plus" aria-hidden="true"></span>
+            </button>
+            <div class="obj-card__body">
+              <p>Старинные фундаменты, деревянные перекрытия, охранные обязательства. Начинаем с инженерного обследования, а не с лома. Работаем с согласованиями в надзорных органах.</p>
+              <ul class="obj-card__list">
+                <li>Обследование конструкций до старта работ</li>
+                <li>Реставрация лепнины, паркета, столярки</li>
+                <li>Согласование с органами охраны наследия</li>
+              </ul>
+              <a href="#contact" class="btn btn--outline btn--sm obj-card__cta">Обсудить объект</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ КАЛЬКУЛЯТОР ============ -->
+    <section class="section calc" id="calculator">
+      <div class="calc__grid-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__index">02</span>
+          <h2 class="section__title">Калькулятор сметы</h2>
+          <p class="section__note">Вилка «от–до» по нашему прайсу. Точная смета — после бесплатного замера.</p>
+        </div>
+        <div class="calc__panel reveal">
+          <div class="calc__controls">
+            <p class="calc__label">01 / Выберите тариф</p>
+            <div class="calc__tariffs" role="radiogroup" aria-label="Тариф ремонта">
+              <label class="tariff">
+                <input type="radio" name="tariff" value="18700" data-name="Черновой" data-days="0.55">
+                <span class="tariff__name">Черновой</span>
+                <span class="tariff__price">18 700 <i>₽/м²</i></span>
+              </label>
+              <label class="tariff">
+                <input type="radio" name="tariff" value="14900" data-name="Косметический" data-days="0.45" checked>
+                <span class="tariff__name">Косметический</span>
+                <span class="tariff__price">14 900 <i>₽/м²</i></span>
+              </label>
+              <label class="tariff">
+                <input type="radio" name="tariff" value="23500" data-name="Новостройка" data-days="0.65">
+                <span class="tariff__name">Новостройка</span>
+                <span class="tariff__price">23 500 <i>₽/м²</i></span>
+              </label>
+              <label class="tariff">
+                <input type="radio" name="tariff" value="27700" data-name="Комфорт" data-days="0.8">
+                <span class="tariff__name">Комфорт</span>
+                <span class="tariff__price">27 700 <i>₽/м²</i></span>
+              </label>
+              <label class="tariff">
+                <input type="radio" name="tariff" value="29900" data-name="Комфорт+" data-days="0.9">
+                <span class="tariff__name">Комфорт+</span>
+                <span class="tariff__price">29 900 <i>₽/м²</i></span>
+              </label>
+              <label class="tariff">
+                <input type="radio" name="tariff" value="34000" data-name="Престиж" data-days="1.1">
+                <span class="tariff__name">Престиж</span>
+                <span class="tariff__price">34 000 <i>₽/м²</i></span>
+              </label>
+            </div>
+            <p class="calc__label">02 / Площадь объекта</p>
+            <div class="calc__area">
+              <input type="range" id="areaRange" min="20" max="300" step="1" value="64" aria-label="Площадь объекта, м²">
+              <div class="calc__area-input">
+                <input type="number" id="areaInput" min="20" max="300" value="64" aria-label="Площадь, м²">
+                <span>м²</span>
+              </div>
+            </div>
+          </div>
+          <div class="calc__result">
+            <p class="calc__result-label">Предварительная вилка стоимости</p>
+            <p class="calc__sum"><span id="calcSumMin">0</span> — <span id="calcSumMax">0</span> <i>₽</i></p>
+            <div class="calc__meta">
+              <div class="calc__meta-item">
+                <span class="calc__meta-num" id="calcDays">0</span>
+                <span class="calc__meta-label">рабочих дней<br>ориентировочно</span>
+              </div>
+              <div class="calc__meta-item">
+                <span class="calc__meta-num" id="calcPerM">0</span>
+                <span class="calc__meta-label">₽/м² выбранный<br>тариф</span>
+              </div>
+            </div>
+            <p class="calc__hint">В стоимость входят работы и черновые материалы. Рассрочка 0% на 6 или 12 месяцев.</p>
+            <a href="#contact" class="btn btn--accent calc__cta">Получить точную смету</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ПОРТФОЛИО ============ -->
+    <section class="section portfolio" id="portfolio">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__index">03</span>
+          <h2 class="section__title">Портфолио — 140+ объектов</h2>
+          <p class="section__note">Кликните по проекту — внутри слайдер «до / после».</p>
+        </div>
+        <div class="portfolio__filters reveal" role="group" aria-label="Фильтры портфолио">
+          <button class="filter is-active" data-filter="all">Все</button>
+          <button class="filter" data-filter="flat">Квартиры</button>
+          <button class="filter" data-filter="house">Дома</button>
+          <button class="filter" data-filter="office">Офисы</button>
+          <span class="portfolio__divider" aria-hidden="true"></span>
+          <button class="filter" data-filter="minimal">Минимализм</button>
+          <button class="filter" data-filter="neoclassic">Неоклассика</button>
+          <button class="filter" data-filter="loft">Лофт</button>
+        </div>
+        <div class="portfolio__grid" id="portfolioGrid"><!-- карточки генерируются JS --></div>
+      </div>
+    </section>
+
+    <!-- ============ ПРОЦЕСС / ТАЙМЛАЙН ============ -->
+    <section class="section process" id="process">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__index">04</span>
+          <h2 class="section__title">Вам не придётся становиться прорабом</h2>
+          <p class="section__note">Пять шагов. На каждом — один ответственный и понятный результат.</p>
+        </div>
+        <ol class="timeline">
+          <li class="timeline__step reveal-line">
+            <span class="timeline__num">01</span>
+            <div class="timeline__content">
+              <h3>Замер и техзадание</h3>
+              <p>Выезжаем на объект, фиксируем исходные данные, обсуждаем сценарии жизни. Бесплатно и ни к чему не обязывает.</p>
+            </div>
+          </li>
+          <li class="timeline__step reveal-line">
+            <span class="timeline__num">02</span>
+            <div class="timeline__content">
+              <h3>Смета и договор</h3>
+              <p>Подробная смета по этапам, календарный график в договоре. Бюджет фиксируется до начала каждого этапа.</p>
+            </div>
+          </li>
+          <li class="timeline__step reveal-line">
+            <span class="timeline__num">03</span>
+            <div class="timeline__content">
+              <h3>Дизайн-проект и комплектация</h3>
+              <p>Планировки, 3D-визуализация, ведомость материалов. Закупку и логистику берём на себя.</p>
+            </div>
+          </li>
+          <li class="timeline__step reveal-line">
+            <span class="timeline__num">04</span>
+            <div class="timeline__content">
+              <h3>Строительство</h3>
+              <p>Собственные бригады, еженедельные фотоотчёты, скрытые работы принимаете с актами — или доверяете технадзору.</p>
+            </div>
+          </li>
+          <li class="timeline__step reveal-line">
+            <span class="timeline__num">05</span>
+            <div class="timeline__content">
+              <h3>Сдача и гарантия</h3>
+              <p>Клининг, финальная приёмка по чек-листу, гарантия 3 года по договору и сервисная поддержка.</p>
+            </div>
+          </li>
+        </ol>
+        <blockquote class="process__accent reveal">
+          «Ни одно изменение не выполняется без согласования цены и&nbsp;срока»
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ============ ФИНАНСОВАЯ ПРОЗРАЧНОСТЬ ============ -->
+    <section class="section finance" id="finance">
+      <div class="container finance__inner">
+        <div class="section__head reveal">
+          <span class="section__index">05</span>
+          <h2 class="section__title">Финансовая прозрачность</h2>
+        </div>
+        <ul class="finance__list">
+          <li class="finance__item reveal">
+            <span class="finance__check" aria-hidden="true"></span>
+            <div>
+              <h3>Бюджет фиксирован до этапа</h3>
+              <p>Цена каждого этапа утверждается до его начала и не меняется в процессе.</p>
+            </div>
+          </li>
+          <li class="finance__item reveal">
+            <span class="finance__check" aria-hidden="true"></span>
+            <div>
+              <h3>Оплата за принятые этапы</h3>
+              <p>Платите только после приёмки выполненных работ по акту. Никаких авансов «вперёд на месяц».</p>
+            </div>
+          </li>
+          <li class="finance__item reveal">
+            <span class="finance__check" aria-hidden="true"></span>
+            <div>
+              <h3>Изменения согласуются до работ</h3>
+              <p>Любая корректировка — только после вашего «да» по цене и сроку, письменно.</p>
+            </div>
+          </li>
+        </ul>
+        <button class="btn btn--outline finance__btn reveal" id="openEstimateModal">Пример структуры сметы</button>
+      </div>
+    </section>
+
+    <!-- ============ КОМАНДА ============ -->
+    <section class="section team" id="team">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__index">06</span>
+          <h2 class="section__title">Команда — 55 человек в штате</h2>
+          <p class="section__note">Без субподрядных «случайных» бригад: ключевые специалисты — наши сотрудники.</p>
+        </div>
+        <div class="team__grid">
+          <article class="team-card reveal">
+            <div class="team-card__photo team-card__photo--1" role="img" aria-label="Фото креативного директора"></div>
+            <div class="team-card__info">
+              <h3>Марина Власова</h3>
+              <p class="team-card__role">Креативный директор</p>
+              <p class="team-card__zone">Зона ответственности: дизайн-проект, визуализация, авторский надзор, комплектация.</p>
+            </div>
+          </article>
+          <article class="team-card reveal">
+            <div class="team-card__photo team-card__photo--2" role="img" aria-label="Фото технического директора"></div>
+            <div class="team-card__info">
+              <h3>Андрей Ковалёв</h3>
+              <p class="team-card__role">Технический директор</p>
+              <p class="team-card__zone">Зона ответственности: инженерные системы, технадзор, приёмка скрытых работ.</p>
+            </div>
+          </article>
+          <article class="team-card reveal">
+            <div class="team-card__photo team-card__photo--3" role="img" aria-label="Фото руководителя работы с заказчиками"></div>
+            <div class="team-card__info">
+              <h3>Ольга Сомова</h3>
+              <p class="team-card__role">Руководитель работы с заказчиками</p>
+              <p class="team-card__zone">Зона ответственности: смета, график, отчётность, ваш единый контакт на весь проект.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ОТЗЫВЫ ============ -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="reviews__layout">
+          <div class="reviews__rating reveal">
+            <p class="reviews__score">5.0</p>
+            <div class="reviews__stars" aria-label="Рейтинг 5 из 5">★★★★★</div>
+            <p class="reviews__source">Яндекс Карты</p>
+            <p class="reviews__score">5.0</p>
+            <div class="reviews__stars" aria-label="Рейтинг 5 из 5">★★★★★</div>
+            <p class="reviews__source">2ГИС</p>
+          </div>
+          <div class="reviews__carousel reveal">
+            <div class="section__head">
+              <span class="section__index">07</span>
+              <h2 class="section__title">Отзывы заказчиков</h2>
+            </div>
+            <div class="carousel" id="carousel">
+              <div class="carousel__track" id="carouselTrack"><!-- слайды генерируются JS --></div>
+              <div class="carousel__controls">
+                <button class="carousel__btn" id="carouselPrev" aria-label="Предыдущий отзыв">←</button>
+                <div class="carousel__dots" id="carouselDots"></div>
+                <button class="carousel__btn" id="carouselNext" aria-label="Следующий отзыв">→</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ РАССРОЧКА ============ -->
+    <section class="installment">
+      <div class="container">
+        <div class="installment__banner reveal">
+          <div class="installment__text">
+            <p class="installment__kicker">// Рассрочка от банка-партнёра</p>
+            <h2 class="installment__title">0% на <span class="mono">6</span> или <span class="mono">12</span> месяцев</h2>
+            <p class="installment__sub">Первоначальный взнос — от 0 ₽. Решение банка за 15 минут, без справок о доходах до 1 млн ₽.</p>
+          </div>
+          <a href="#contact" class="btn btn--accent">Оформить рассрочку</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section faq" id="faq">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__index">08</span>
+          <h2 class="section__title">Частые вопросы</h2>
+        </div>
+        <div class="faq__list">
+          <div class="faq-item reveal">
+            <button class="faq-item__q" aria-expanded="false">
+              <span>Я живу в другом городе. Можно ли заказать ремонт дистанционно?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <p>Да, около трети наших проектов — дистанционные. Вы получаете еженедельные фото- и видеоотчёты, онлайн-доступ к камере на объекте, а все согласования и оплаты проходят в электронном виде. Ключи передаём через договор хранения.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-item__q" aria-expanded="false">
+              <span>У меня уже есть готовый дизайн-проект. Возьмёте его в работу?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <p>Конечно. Наш технический директор бесплатно проверит проект на реализуемость: узлы, инженерию, ведомости. Если найдём проблемные места — предложим решения до старта работ, а не на стройплощадке.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-item__q" aria-expanded="false">
+              <span>Работаете ли вы с историческими зданиями и охранными обязательствами?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <p>Да. Начинаем с инженерного обследования конструкций, готовим документацию для органов охраны культурного наследия и выполняем реставрационные работы: лепнина, паркет, столярка, фасадные элементы.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-item__q" aria-expanded="false">
+              <span>Что будет, если смета вырастет в процессе?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <p>Не вырастет без вашего согласия. Бюджет каждого этапа фиксируется до его начала. Если вскрываются скрытые проблемы (например, аварийная проводка), мы останавливаемся, показываем проблему и согласуем решение и цену — только потом работаем.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-item__q" aria-expanded="false">
+              <span>Какая гарантия и что она покрывает?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <p>3 года по договору на все виды работ, включая инженерные системы и отделку. Гарантийные обращения принимаем круглый год, выезд сервисной бригады — в течение 3 рабочих дней.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ФИНАЛЬНАЯ ФОРМА ============ -->
+    <section class="section contact" id="contact">
+      <div class="contact__grid-bg" aria-hidden="true"></div>
+      <div class="container contact__inner">
+        <div class="contact__text reveal">
+          <span class="section__index">09</span>
+          <h2 class="section__title">Обсудим ваш объект</h2>
+          <p class="section__note">Оставьте контакты — руководитель проектов перезвонит в течение рабочего дня, задаст 5–7 вопросов и предложит дату замера.</p>
+          <ul class="contact__facts">
+            <li>Замер и консультация — бесплатно</li>
+            <li>Предварительная смета — за 2 рабочих дня</li>
+            <li>Работаем по договору, гарантия 3 года</li>
+          </ul>
+        </div>
+        <form class="contact__form reveal" id="contactForm" novalidate>
+          <label class="field">
+            <span class="field__label">Ваше имя</span>
+            <input type="text" name="name" placeholder="Как к вам обращаться" required>
+          </label>
+          <label class="field">
+            <span class="field__label">Телефон</span>
+            <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required>
+          </label>
+          <label class="field">
+            <span class="field__label">Тип объекта</span>
+            <select name="objectType" required>
+              <option value="" disabled selected>Выберите тип</option>
+              <option value="flat">Квартира</option>
+              <option value="house">Дом / коттедж</option>
+              <option value="office">Офис / коммерция</option>
+              <option value="historic">Исторический объект</option>
+            </select>
+          </label>
+          <button type="submit" class="btn btn--accent contact__submit">Отправить заявку</button>
+          <p class="contact__privacy">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.</p>
+          <p class="contact__success" id="formSuccess" hidden>Заявка отправлена. Перезвоним в течение рабочего дня — спасибо!</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ ФУТЕР ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col footer__col--brand">
+        <a href="#top" class="logo">
+          <span class="logo__mark">ДС</span>
+          <span class="logo__text">Дока&nbsp;Строй</span>
+        </a>
+        <p class="footer__since">Работаем с <span class="mono">2007</span> года</p>
+        <p class="footer__tagline">Ремонт как инженерный проект: один ответственный, фиксированный бюджет, предсказуемый срок.</p>
+      </div>
+      <nav class="footer__col" aria-label="Разделы сайта">
+        <p class="footer__head">Разделы</p>
+        <a href="#objects">Объекты</a>
+        <a href="#calculator">Смета</a>
+        <a href="#portfolio">Портфолио</a>
+        <a href="#process">Процесс</a>
+        <a href="#faq">Вопросы</a>
+      </nav>
+      <div class="footer__col">
+        <p class="footer__head">Контакты</p>
+        <a href="tel:+78452000000">+7 (8452) 00-00-00</a>
+        <a href="mailto:hello@doka-stroy.ru">hello@doka-stroy.ru</a>
+        <p>г. Саратов, ул. Строителей, 12</p>
+        <p>Пн–Пт 9:00–19:00, Сб 10:00–16:00</p>
+      </div>
+      <div class="footer__col">
+        <p class="footer__head">ЖК в портфолио</p>
+        <p>«Арбат»</p>
+        <p>«Бастион»</p>
+        <p>«Кокос»</p>
+        <p>«Берег Волги»</p>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© 2007–2026 ООО «Дока Строй». Все права защищены.</p>
+      <p class="mono">140+ объектов · 18 лет · рейтинг 5.0</p>
+    </div>
+  </footer>
+
+  <!-- Sticky-панель -->
+  <div class="sticky-cta" id="stickyCta">
+    <span class="sticky-cta__text">Ремонт от <b class="mono">14 900 ₽/м²</b> · рассрочка 0%</span>
+    <a href="#calculator" class="btn btn--accent btn--sm">Рассчитать смету</a>
+  </div>
+
+  <!-- Модалка: проект с «до/после» -->
+  <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__box">
+      <button class="modal__close" data-close aria-label="Закрыть">×</button>
+      <div class="before-after" id="beforeAfter">
+        <div class="ba__layer ba__layer--after" id="baAfter"></div>
+        <div class="ba__layer ba__layer--before" id="baBefore"></div>
+        <span class="ba__tag ba__tag--before">До</span>
+        <span class="ba__tag ba__tag--after">После</span>
+        <div class="ba__handle" id="baHandle" aria-hidden="true"><span></span></div>
+        <input type="range" class="ba__range" id="baRange" min="0" max="100" value="50" aria-label="Сравнение до и после">
+      </div>
+      <div class="modal__info">
+        <h3 id="projectModalTitle"></h3>
+        <p id="projectModalDesc"></p>
+        <p class="modal__meta mono" id="projectModalMeta"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Модалка: пример структуры сметы -->
+  <div class="modal" id="estimateModal" role="dialog" aria-modal="true" aria-labelledby="estimateModalTitle" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__box modal__box--estimate">
+      <button class="modal__close" data-close aria-label="Закрыть">×</button>
+      <h3 id="estimateModalTitle">Структура сметы — пример</h3>
+      <p class="modal__note">Фрагмент реальной сметы по тарифу «Комфорт», квартира 64 м².</p>
+      <table class="estimate-table">
+        <thead>
+          <tr><th>Этап</th><th>Срок</th><th>Сумма</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Демонтаж и подготовка</td><td>7 дн.</td><td class="mono">89 600 ₽</td></tr>
+          <tr><td>Черновая электрика и сантехника</td><td>12 дн.</td><td class="mono">236 800 ₽</td></tr>
+          <tr><td>Штукатурка, стяжка, гипсокартон</td><td>16 дн.</td><td class="mono">412 400 ₽</td></tr>
+          <tr><td>Чистовая отделка</td><td>18 дн.</td><td class="mono">598 300 ₽</td></tr>
+          <tr><td>Установка дверей, сантехники, света</td><td>6 дн.</td><td class="mono">210 100 ₽</td></tr>
+          <tr><td>Клининг и сдача</td><td>2 дн.</td><td class="mono">38 400 ₽</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td>Итого (работы + черновые материалы)</td><td class="mono">61 дн.</td><td class="mono">1 585 600 ₽</td></tr>
+        </tfoot>
+      </table>
+      <p class="modal__note">Оплата — по актам приёмки каждого этапа. Полную смету под ваш объект готовим после замера.</p>
+      <a href="#contact" class="btn btn--accent" data-close>Заказать точную смету</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

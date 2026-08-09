@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дока Строй — ремонт квартир под ключ с фиксированной сметой</title>
+  <meta name="description" content="Ремонт квартир и коммерческих помещений под ключ. С 2007 года, 55 специалистов, гарантия 3 года в договоре. Рассрочка 0%. Рейтинг 5.0 на Яндекс Картах и 2ГИС.">
+
+  <!-- Шрифты: Google Fonts + системный fallback -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=Golos+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%231F4E79'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>Д</text></svg>">
+</head>
+<body>
+
+  <!-- ============ Липкая шапка ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="Дока Строй — на главную">
+        <span class="logo__mark">Д</span>
+        <span class="logo__text">Дока&nbsp;Строй</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#calculator" class="nav__link">Калькулятор</a>
+        <a href="#tariffs" class="nav__link">Тарифы</a>
+        <a href="#portfolio" class="nav__link">Портфолио</a>
+        <a href="#process" class="nav__link">Этапы</a>
+        <a href="#reviews" class="nav__link">Отзывы</a>
+        <a href="#faq" class="nav__link">Вопросы</a>
+      </nav>
+
+      <div class="header__right">
+        <span class="header__rating" title="Рейтинг на Яндекс Картах и 2ГИС">
+          <svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.72-4.9 4.55 1.35 6.47L12 16.7 6.05 20l1.35-6.47-4.9-4.55 6.6-.72L12 2z"/></svg>
+          5.0
+        </span>
+        <a href="tel:+78000000000" class="header__phone">8 800 000-00-00</a>
+        <a href="#lead" class="btn btn--primary btn--sm header__cta">Рассчитать ремонт</a>
+        <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ Hero ============ -->
+    <section class="hero">
+      <div class="hero__bg" role="img" aria-label="Светлая гостиная после ремонта под ключ"></div>
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <span class="hero__eyebrow">Ремонт квартир и коммерческих помещений под ключ</span>
+          <h1 class="hero__title">Заезжайте и живите: ремонт под&nbsp;ключ с&nbsp;фиксированной сметой</h1>
+          <p class="hero__subtitle">С 2007 года. 55 специалистов. Гарантия 3 года в договоре.</p>
+          <div class="hero__actions">
+            <a href="#calculator" class="btn btn--primary btn--lg">Рассчитать мой ремонт</a>
+            <a href="#portfolio" class="btn btn--ghost btn--lg">Смотреть проекты</a>
+          </div>
+          <div class="hero__badges">
+            <span class="badge-lock">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2H5v13h14V9h-2zM9 7a3 3 0 0 1 6 0v2H9V7zm4 10.73V19h-2v-1.27a2 2 0 1 1 2 0z"/></svg>
+              Смета не вырастет после подписания
+            </span>
+            <span class="badge-lock badge-lock--sand">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Оплата по этапам, рассрочка 0%
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Полоса доверия ============ -->
+    <section class="trust" aria-label="Наши показатели">
+      <div class="container trust__grid">
+        <div class="trust__item reveal">
+          <span class="trust__value"><span class="counter" data-target="18">0</span></span>
+          <span class="trust__label">лет на рынке</span>
+        </div>
+        <div class="trust__item reveal">
+          <span class="trust__value">5.0 <svg class="icon-star icon-star--green" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.72-4.9 4.55 1.35 6.47L12 16.7 6.05 20l1.35-6.47-4.9-4.55 6.6-.72L12 2z"/></svg></span>
+          <span class="trust__label">Яндекс Карты</span>
+        </div>
+        <div class="trust__item reveal">
+          <span class="trust__value">5.0 <svg class="icon-star icon-star--green" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.72-4.9 4.55 1.35 6.47L12 16.7 6.05 20l1.35-6.47-4.9-4.55 6.6-.72L12 2z"/></svg></span>
+          <span class="trust__label">2ГИС</span>
+        </div>
+        <div class="trust__item reveal">
+          <span class="trust__value">0%</span>
+          <span class="trust__label">рассрочка 6 или 12 мес</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Калькулятор ============ -->
+    <section class="section calculator" id="calculator">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">Калькулятор сметы</span>
+          <h2 class="section__title">Узнайте цену за 30 секунд</h2>
+          <p class="section__lead">Двигайте ползунок и выбирайте тариф — цена и срок пересчитаются сразу. Точную смету зафиксируем в договоре после замера.</p>
+        </div>
+
+        <div class="calc reveal">
+          <div class="calc__controls">
+            <div class="calc__area">
+              <div class="calc__area-head">
+                <label for="areaRange">Площадь квартиры</label>
+                <output class="calc__area-value" id="areaValue">54 м²</output>
+              </div>
+              <input type="range" id="areaRange" min="20" max="200" value="54" step="1"
+                     aria-label="Площадь квартиры в квадратных метрах">
+              <div class="calc__area-marks"><span>20 м²</span><span>200 м²</span></div>
+            </div>
+
+            <fieldset class="calc__tariffs">
+              <legend>Тариф ремонта</legend>
+              <div class="calc__tariff-grid" id="calcTariffs">
+                <button type="button" class="calc-tariff" data-price="14900" data-days="1.2" data-name="Косметический">
+                  <span class="calc-tariff__name">Косметический</span>
+                  <span class="calc-tariff__price">от 14 900 ₽/м²</span>
+                </button>
+                <button type="button" class="calc-tariff" data-price="18700" data-days="2.1" data-name="Черновой">
+                  <span class="calc-tariff__name">Черновой</span>
+                  <span class="calc-tariff__price">от 18 700 ₽/м²</span>
+                </button>
+                <button type="button" class="calc-tariff" data-price="23500" data-days="1.8" data-name="Новостройка">
+                  <span class="calc-tariff__name">Новостройка</span>
+                  <span class="calc-tariff__price">от 23 500 ₽/м²</span>
+                </button>
+                <button type="button" class="calc-tariff is-active" data-price="27700" data-days="2.0" data-name="Комфорт">
+                  <span class="calc-tariff__name">Комфорт</span>
+                  <span class="calc-tariff__price">от 27 700 ₽/м²</span>
+                </button>
+                <button type="button" class="calc-tariff" data-price="29900" data-days="2.2" data-name="Комфорт+">
+                  <span class="calc-tariff__name">Комфорт+</span>
+                  <span class="calc-tariff__price">от 29 900 ₽/м²</span>
+                </button>
+                <button type="button" class="calc-tariff" data-price="34000" data-days="2.6" data-name="Престиж">
+                  <span class="calc-tariff__name">Престиж</span>
+                  <span class="calc-tariff__price">от 34 000 ₽/м²</span>
+                </button>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="calc__result">
+            <span class="calc__result-label">Предварительная смета</span>
+            <span class="calc__result-price" id="calcPrice">1 495 800 ₽</span>
+            <span class="calc__result-term" id="calcTerm">Срок: ≈ 17 недель</span>
+            <span class="calc__result-note" id="calcNote">Тариф «Комфорт», 54 м²</span>
+            <span class="badge-lock badge-lock--inline">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2H5v13h14V9h-2zM9 7a3 3 0 0 1 6 0v2H9V7zm4 10.73V19h-2v-1.27a2 2 0 1 1 2 0z"/></svg>
+              Цена фиксируется в договоре
+            </span>
+            <a href="#lead" class="btn btn--primary calc__cta" id="calcCta">Зафиксировать цену</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Тарифы ============ -->
+    <section class="section section--gray" id="tariffs">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">Тарифы</span>
+          <h2 class="section__title">Шесть понятных тарифов</h2>
+          <p class="section__lead">Никаких таблиц на 40 строк — раскройте «что входит» и посмотрите состав работ в каждом тарифе.</p>
+        </div>
+
+        <div class="tariffs__grid" id="tariffsGrid">
+          <!-- Карточки генерируются из данных в script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Портфолио ============ -->
+    <section class="section" id="portfolio">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">Портфолио</span>
+          <h2 class="section__title">140+ сданных объектов</h2>
+          <p class="section__lead">Фильтруйте по жилому комплексу и типу ремонта — все объекты реальные, с актами и гарантией.</p>
+        </div>
+
+        <div class="portfolio__filters reveal" role="group" aria-label="Фильтры портфолио">
+          <div class="filter-group" id="filterZhK">
+            <span class="filter-group__label">ЖК:</span>
+            <button class="chip is-active" data-zhk="all">Все</button>
+            <button class="chip" data-zhk="arbat">ЖК «Арбат»</button>
+            <button class="chip" data-zhk="bastion">ЖК «Бастион»</button>
+            <button class="chip" data-zhk="kokos">ЖК «Кокос»</button>
+            <button class="chip" data-zhk="bereg">ЖК «Берег Волги»</button>
+          </div>
+          <div class="filter-group" id="filterType">
+            <span class="filter-group__label">Тип:</span>
+            <button class="chip is-active" data-type="all">Все</button>
+            <button class="chip" data-type="podkluch">Под ключ</button>
+            <button class="chip" data-type="kosmeticheskiy">Косметический</button>
+            <button class="chip" data-type="dizainerskiy">Дизайнерский</button>
+          </div>
+        </div>
+
+        <div class="portfolio__grid" id="portfolioGrid"><!-- Карточки из script.js --></div>
+        <p class="portfolio__empty" id="portfolioEmpty" hidden>По выбранным фильтрам пока нет объектов — попробуйте другую комбинацию.</p>
+      </div>
+    </section>
+
+    <!-- ============ Как проходит ремонт ============ -->
+    <section class="section section--gray" id="process">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">Прозрачный процесс</span>
+          <h2 class="section__title">Как проходит ремонт</h2>
+          <p class="section__lead">Шесть шагов от первого звонка до подписания акта. На каждом этапе вы знаете, что происходит и сколько это стоит.</p>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline__step reveal">
+            <span class="timeline__num">1</span>
+            <span class="timeline__icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.4 11.4 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.57 1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg></span>
+            <h3>Звонок и консультация</h3>
+            <p>Обсуждаем задачу, подбираем тариф, отвечаем на вопросы.</p>
+            <span class="timeline__term">в день обращения</span>
+          </li>
+          <li class="timeline__step reveal">
+            <span class="timeline__num">2</span>
+            <span class="timeline__icon"><svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg></span>
+            <h3>Замер и смета</h3>
+            <p>Инженер приезжает бесплатно, считает точную смету до рубля.</p>
+            <span class="timeline__term">1–2 дня</span>
+          </li>
+          <li class="timeline__step reveal">
+            <span class="timeline__num">3</span>
+            <span class="timeline__icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg></span>
+            <h3>Договор</h3>
+            <p>Фиксируем цену, сроки и гарантию 3 года. Смета не меняется.</p>
+            <span class="timeline__term">1 день</span>
+          </li>
+          <li class="timeline__step reveal">
+            <span class="timeline__num">4</span>
+            <span class="timeline__icon"><svg viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1a6.06 6.06 0 0 0-1.9-3.9A5.97 5.97 0 0 0 7.41 4.6L10.9 8.1 8.1 10.9 4.6 7.4a6 6 0 0 0 1.4 4.3 6.06 6.06 0 0 0 3.9 1.9L1 22.7 3.4 25l9.1-9.1 8.2 8.2 2-2.1z"/></svg></span>
+            <h3>Ремонт</h3>
+            <p>Работаем по графику, фотоотчёты в чате каждую неделю.</p>
+            <span class="timeline__term">6–16 недель</span>
+          </li>
+          <li class="timeline__step reveal">
+            <span class="timeline__num">5</span>
+            <span class="timeline__icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span>
+            <h3>Приёмка</h3>
+            <p>Проверяем каждый узел вместе с вами по чек-листу из 120 пунктов.</p>
+            <span class="timeline__term">1–3 дня</span>
+          </li>
+          <li class="timeline__step reveal">
+            <span class="timeline__num">6</span>
+            <span class="timeline__icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></span>
+            <h3>Акт и гарантия</h3>
+            <p>Подписываем акт, выдаём гарантийный талон на 3 года.</p>
+            <span class="timeline__term">день сдачи</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ Кто отвечает ============ -->
+    <section class="section" id="team">
+      <div class="container">
+        <div class="team__wrap">
+          <div class="team__text reveal">
+            <span class="section__eyebrow">Кто отвечает</span>
+            <h2 class="section__title">Один руководитель проекта — вместо десяти телефонов</h2>
+            <p>У каждого объекта есть персональный руководитель: он ведёт график, закупает материалы, принимает работы у бригад и отвечает вам в чате в течение часа. Вам не нужно искать прораба, поставщика или электрика — один человек отвечает за всё.</p>
+            <ul class="check-list">
+              <li>Фотоотчёты каждую неделю</li>
+              <li>Ответ в чате в течение часа в рабочее время</li>
+              <li>Выезд на объект по первому запросу</li>
+            </ul>
+          </div>
+          <div class="team__cards">
+            <article class="team-card reveal">
+              <div class="team-card__photo team-card__photo--1" role="img" aria-label="Фото руководителя проектов"></div>
+              <h3>Алексей Докин</h3>
+              <p>Основатель, инженер-строитель. 18 лет в компании.</p>
+            </article>
+            <article class="team-card reveal">
+              <div class="team-card__photo team-card__photo--2" role="img" aria-label="Фото руководителя проектов"></div>
+              <h3>Марина Светлова</h3>
+              <p>Руководитель проектов. Ведёт 6 объектов одновременно.</p>
+            </article>
+            <article class="team-card reveal">
+              <div class="team-card__photo team-card__photo--3" role="img" aria-label="Фото технического надзора"></div>
+              <h3>Игорь Крамарь</h3>
+              <p>Технадзор. Проверяет каждый этап по чек-листу.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Отзывы ============ -->
+    <section class="section section--gray" id="reviews">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">Отзывы</span>
+          <h2 class="section__title">Нас рекомендуют соседям</h2>
+          <p class="section__lead">
+            <span class="platform-badge platform-badge--ya">5.0 ★ Яндекс Карты</span>
+            <span class="platform-badge platform-badge--gis">5.0 ★ 2ГИС</span>
+          </p>
+        </div>
+
+        <div class="carousel reveal" id="reviewsCarousel">
+          <div class="carousel__track" id="carouselTrack">
+            <article class="review-slide">
+              <div class="review-slide__photo review-slide__photo--1" role="img" aria-label="Кухня после ремонта"></div>
+              <div class="review-slide__body">
+                <div class="review-slide__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+                <blockquote>«Смета ни разу не изменилась за три месяца ремонта. Каждую пятницу приходили фото в чат. Заехали точно в срок — даже раньше на неделю».</blockquote>
+                <p class="review-slide__author">Ольга и Дмитрий · ЖК «Кокос», 84 м², под ключ</p>
+              </div>
+            </article>
+            <article class="review-slide">
+              <div class="review-slide__photo review-slide__photo--2" role="img" aria-label="Гостиная после ремонта"></div>
+              <div class="review-slide__body">
+                <div class="review-slide__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+                <blockquote>«Брали тариф „Новостройка" с рассрочкой на 12 месяцев. Руководитель проекта Марина решала все вопросы сама — мы приезжали только на приёмку этапов».</blockquote>
+                <p class="review-slide__author">Сергей · ЖК «Арбат», 61 м², новостройка</p>
+              </div>
+            </article>
+            <article class="review-slide">
+              <div class="review-slide__photo review-slide__photo--3" role="img" aria-label="Спальня после ремонта"></div>
+              <div class="review-slide__body">
+                <div class="review-slide__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+                <blockquote>«Делали ремонт родителям. Боялись, что пожилых людей запутают — но всё было прозрачно: договор, график, оплата по этапам. Спасибо за терпение и честность».</blockquote>
+                <p class="review-slide__author">Наталья · ЖК «Берег Волги», 47 м², комфорт</p>
+              </div>
+            </article>
+            <article class="review-slide">
+              <div class="review-slide__photo review-slide__photo--4" role="img" aria-label="Ванная после ремонта"></div>
+              <div class="review-slide__body">
+                <div class="review-slide__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+                <blockquote>«Это наш второй ремонт с „Дока Строй" — первый был в 2016-м. За восемь лет ничего не отвалилось, поэтому с новой квартирой пошли сразу к ним».</blockquote>
+                <p class="review-slide__author">Андрей и Елена · ЖК «Бастион», 96 м², престиж</p>
+              </div>
+            </article>
+          </div>
+          <div class="carousel__controls">
+            <button class="carousel__btn" id="prevReview" aria-label="Предыдущий отзыв">←</button>
+            <div class="carousel__dots" id="carouselDots"></div>
+            <button class="carousel__btn" id="nextReview" aria-label="Следующий отзыв">→</button>
+          </div>
+        </div>
+
+        <!-- Видео-отзывы -->
+        <div class="video-reviews">
+          <button class="video-review reveal" data-video="1" aria-label="Смотреть видео-отзыв семьи из ЖК Кокос">
+            <span class="video-review__play">▶</span>
+            <span class="video-review__caption">Видео-отзыв: семья из ЖК «Кокос»</span>
+          </button>
+          <button class="video-review video-review--2 reveal" data-video="2" aria-label="Смотреть видео-отзыв из ЖК Арбат">
+            <span class="video-review__play">▶</span>
+            <span class="video-review__caption">Видео-обзор квартиры в ЖК «Арбат»</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Рассрочка и кредит ============ -->
+    <section class="section" id="finance">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">Оплата</span>
+          <h2 class="section__title">Рассрочка и кредит</h2>
+          <p class="section__lead">Не откладывайте ремонт на годы — начните сейчас и платите частями.</p>
+        </div>
+        <div class="finance__grid">
+          <article class="finance-card reveal">
+            <span class="finance-card__tag">Популярно</span>
+            <h3>Рассрочка 0%</h3>
+            <p class="finance-card__big">6 или 12 месяцев</p>
+            <p>Без переплаты и банка: платите равными частями напрямую компании. Первый взнос — после старта работ.</p>
+            <a href="#lead" class="btn btn--primary">Оформить рассрочку</a>
+          </article>
+          <article class="finance-card reveal">
+            <h3>Кредит на ремонт</h3>
+            <p class="finance-card__big">до 7 лет</p>
+            <p>Помогаем оформить через банки-партнёры. Ставка от 9,9% годовых, решение за один день, без залога.</p>
+            <a href="#lead" class="btn btn--ghost">Подобрать кредит</a>
+          </article>
+          <article class="finance-card finance-card--accent reveal">
+            <h3>Оплата по этапам</h3>
+            <p class="finance-card__big">4 платежа</p>
+            <p>Платите только за принятые работы: черновые, инженерия, чистовые, финал. Никакой предоплаты «за всё сразу».</p>
+            <span class="badge-lock badge-lock--inline">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2H5v13h14V9h-2zM9 7a3 3 0 0 1 6 0v2H9V7zm4 10.73V19h-2v-1.27a2 2 0 1 1 2 0z"/></svg>
+              Смета зафиксирована в договоре
+            </span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Блог ============ -->
+    <section class="section section--gray" id="blog">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">Блог</span>
+          <h2 class="section__title">Полезное перед ремонтом</h2>
+        </div>
+        <div class="blog__grid">
+          <article class="blog-card reveal">
+            <div class="blog-card__img blog-card__img--1" role="img" aria-label="Расчёт сметы"></div>
+            <div class="blog-card__body">
+              <span class="blog-card__date">12 января 2026</span>
+              <h3>Реальный расчёт ремонта в 2026 году: сколько стоит квадратный метр на самом деле</h3>
+              <p>Разбираем смету двушки 54 м² построчно: работы, материалы, скрытые расходы.</p>
+              <a href="#lead" class="blog-card__link">Читать →</a>
+            </div>
+          </article>
+          <article class="blog-card reveal">
+            <div class="blog-card__img blog-card__img--2" role="img" aria-label="Тренды интерьера"></div>
+            <div class="blog-card__body">
+              <span class="blog-card__date">28 декабря 2025</span>
+              <h3>Тренды-2026: что будет в интерьерах новостроек через год</h3>
+              <p>Тёплый минимализм, скрытые двери, умный свет — что стоит закладывать уже сейчас.</p>
+              <a href="#lead" class="blog-card__link">Читать →</a>
+            </div>
+          </article>
+          <article class="blog-card reveal">
+            <div class="blog-card__img blog-card__img--3" role="img" aria-label="Приёмка квартиры"></div>
+            <div class="blog-card__body">
+              <span class="blog-card__date">9 декабря 2025</span>
+              <h3>Как принять квартиру у застройщика и не платить за переделки</h3>
+              <p>Чек-лист из 30 пунктов: стены, стяжка, окна, электрика. Что исправить за счёт застройщика.</p>
+              <a href="#lead" class="blog-card__link">Читать →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">Вопросы и ответы</span>
+          <h2 class="section__title">Частые вопросы</h2>
+        </div>
+        <div class="faq" id="faqList">
+          <details class="faq__item reveal">
+            <summary>Правда, что смета не вырастет?</summary>
+            <div class="faq__body">Да. После замера мы фиксируем смету в договоре. Если что-то не учли — делаем за свой счёт. Изменения возможны только по вашему запросу (например, вы решили добавить тёплый пол) и оформляются отдельным допсоглашением.</div>
+          </details>
+          <details class="faq__item reveal">
+            <summary>Как работает рассрочка 0%?</summary>
+            <div class="faq__body">Вы платите равными частями в течение 6 или 12 месяцев без переплаты. Договор рассрочки заключается напрямую с компанией, без банка и справок о доходах.</div>
+          </details>
+          <details class="faq__item reveal">
+            <summary>Что входит в гарантию 3 года?</summary>
+            <div class="faq__body">Все работы: электрика, сантехника, отделка. Если что-то треснуло, отклеилось или перестало работать — приезжаем и чиним бесплатно. Гарантия прописана в договоре, действует с дня подписания акта.</div>
+          </details>
+          <details class="faq__item reveal">
+            <summary>Можно ли жить в квартире во время ремонта?</summary>
+            <div class="faq__body">При косметическом ремонте — да, работаем по комнатам. При капитальном и в новостройке — не рекомендуем: пыль и шум. Подскажем варианты временного жилья рядом.</div>
+          </details>
+          <details class="faq__item reveal">
+            <summary>Вы закупаете материалы или мы?</summary>
+            <div class="faq__body">Как вам удобно. Можем закупить всё сами по оптовым ценам (чек-лист согласуем с вами), можем работать с вашими материалами. Все чеки и остатки — прозрачно, в отчёте.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Форма ============ -->
+    <section class="section section--lead" id="lead">
+      <div class="container">
+        <div class="lead reveal">
+          <div class="lead__text">
+            <h2 class="section__title">Рассчитайте точную смету</h2>
+            <p>Оставьте контакты — инженер приедет на бесплатный замер в течение двух дней и зафиксирует смету до рубля.</p>
+            <ul class="check-list check-list--light">
+              <li>Замер и смета — бесплатно</li>
+              <li>Цена фиксируется в договоре</li>
+              <li>Рассрочка 0% на 6 или 12 месяцев</li>
+            </ul>
+          </div>
+          <form class="lead__form" id="leadForm" novalidate>
+            <div class="form-field">
+              <label for="fName">Ваше имя</label>
+              <input type="text" id="fName" name="name" placeholder="Например, Анна" required autocomplete="name">
+              <span class="form-field__error">Введите имя</span>
+            </div>
+            <div class="form-field">
+              <label for="fPhone">Телефон</label>
+              <input type="tel" id="fPhone" name="phone" placeholder="+7 (___) ___-__-__" required autocomplete="tel" inputmode="tel">
+              <span class="form-field__error">Введите корректный телефон</span>
+            </div>
+            <div class="form-field">
+              <label for="fZhK">ЖК или тип дома</label>
+              <select id="fZhK" name="zhk" required>
+                <option value="" disabled selected>Выберите вариант</option>
+                <option>ЖК «Арбат»</option>
+                <option>ЖК «Бастион»</option>
+                <option>ЖК «Кокос»</option>
+                <option>ЖК «Берег Волги»</option>
+                <option>Другая новостройка</option>
+                <option>Вторичное жильё</option>
+                <option>Коммерческое помещение</option>
+              </select>
+              <span class="form-field__error">Выберите вариант</span>
+            </div>
+            <div class="form-field">
+              <label for="fArea">Площадь, м²</label>
+              <input type="number" id="fArea" name="area" placeholder="54" min="10" max="500" required inputmode="numeric">
+              <span class="form-field__error">Укажите площадь от 10 до 500 м²</span>
+            </div>
+            <button type="submit" class="btn btn--primary btn--lg lead__submit">Получить точную смету</button>
+            <p class="lead__privacy">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.</p>
+            <div class="lead__success" id="leadSuccess" hidden>
+              <span class="lead__success-icon">✓</span>
+              <strong>Заявка отправлена!</strong>
+              <p>Перезвоним в течение 30 минут в рабочее время (9:00–20:00).</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ Футер ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <a href="#top" class="logo logo--footer"><span class="logo__mark">Д</span><span class="logo__text">Дока&nbsp;Строй</span></a>
+        <p>Ремонт квартир и коммерческих помещений под ключ с 2007 года.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Навигация</h4>
+        <a href="#calculator">Калькулятор</a>
+        <a href="#tariffs">Тарифы</a>
+        <a href="#portfolio">Портфолио</a>
+        <a href="#reviews">Отзывы</a>
+      </div>
+      <div class="footer__col">
+        <h4>Контакты</h4>
+        <a href="tel:+78000000000">8 800 000-00-00</a>
+        <a href="mailto:hello@doka-stroy.ru">hello@doka-stroy.ru</a>
+        <p>Ежедневно 9:00–20:00</p>
+      </div>
+      <div class="footer__col">
+        <h4>Рейтинг</h4>
+        <p class="footer__rating">5.0 ★ Яндекс Карты<br>5.0 ★ 2ГИС</p>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© 2007–2026 «Дока Строй». Все права защищены.</span>
+    </div>
+  </footer>
+
+  <!-- Кнопка «наверх» -->
+  <button class="to-top" id="toTop" aria-label="Наверх">↑</button>
+
+  <!-- Модалка видео-отзыва -->
+  <div class="modal" id="videoModal" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__box" role="dialog" aria-modal="true" aria-label="Видео-отзыв">
+      <button class="modal__close" data-close aria-label="Закрыть">×</button>
+      <div class="modal__video">
+        <span class="modal__video-icon">▶</span>
+        <p>Видео-отзыв<br><small>Здесь будет встроен плеер с роликом клиента</small></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

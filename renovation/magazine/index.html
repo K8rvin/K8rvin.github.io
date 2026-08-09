@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дока Строй — журнал о ремонте, в котором хочется жить</title>
+  <meta name="description" content="Дока Строй — ремонт квартир и коммерческих помещений под ключ с 2007 года. 140+ объектов, смета как открытая книга, гарантия 3 года.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Caveat:wght@400;600&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===================== ШАПКА ===================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#top" class="logo">
+        <span class="logo-mark">ДС</span>
+        <span class="logo-text">Дока&nbsp;Строй <em>журнал о ремонте</em></span>
+      </a>
+      <nav class="main-nav" id="mainNav" aria-label="Основная навигация">
+        <a href="#story">История</a>
+        <a href="#rubrics">Рубрики</a>
+        <a href="#estimate">Смета</a>
+        <a href="#tariffs">Тарифы</a>
+        <a href="#portfolio">Портфолио</a>
+        <a href="#letters">Письма</a>
+        <a href="#journal">Журнал</a>
+      </nav>
+      <a href="#contact" class="btn btn-small btn-terracotta header-cta">Обсудить проект</a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===================== HERO / ОБЛОЖКА НОМЕРА ===================== -->
+    <section class="hero" id="hero">
+      <div class="hero-bg" role="img" aria-label="Светлая гостиная после ремонта"></div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="hero-kicker reveal">Выпуск № 18 · 2007–2025 · Строительная компания</p>
+        <h1 class="hero-title reveal">Мы делаем квартиры,<br>в которых <em>хочется жить</em></h1>
+        <p class="hero-manifest reveal">«Дока Строй» — это не бригада и не подрядчик. Это редакция,
+          которая восемнадцать лет пишет истории домов: от черновых стен новостройки
+          до последней полочки в историческом здании.</p>
+        <div class="hero-actions reveal">
+          <a href="#story" class="btn btn-terracotta">Читать истории проектов</a>
+          <a href="#estimate" class="btn btn-ghost">Посчитать смету</a>
+        </div>
+        <p class="hero-handnote reveal">— с любовью к деталям, редакция «Дока Строй»</p>
+      </div>
+      <div class="hero-scroll-hint" aria-hidden="true"><span></span>листайте</div>
+    </section>
+
+    <!-- ===================== СОДЕРЖАНИЕ НОМЕРА ===================== -->
+    <section class="toc section" id="toc">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">Содержание номера</p>
+          <h2 class="section-title">Что в этом выпуске</h2>
+        </div>
+        <ol class="toc-list">
+          <li class="toc-item reveal">
+            <a href="#story">
+              <span class="toc-num">01</span>
+              <span class="toc-name">Обложка-история <small>ЖК «Берег Волги» — 84 м² за 4 месяца</small></span>
+              <span class="toc-page">стр. 04</span>
+            </a>
+          </li>
+          <li class="toc-item reveal">
+            <a href="#rubrics">
+              <span class="toc-num">02</span>
+              <span class="toc-name">Рубрики <small>Новостройки · Вторичка · Коммерция · Исторические здания</small></span>
+              <span class="toc-page">стр. 08</span>
+            </a>
+          </li>
+          <li class="toc-item reveal">
+            <a href="#estimate">
+              <span class="toc-num">03</span>
+              <span class="toc-name">Смета как открытая книга <small>финансовая прозрачность + калькулятор</small></span>
+              <span class="toc-page">стр. 14</span>
+            </a>
+          </li>
+          <li class="toc-item reveal">
+            <a href="#tariffs">
+              <span class="toc-num">04</span>
+              <span class="toc-name">Меню тарифов <small>шесть сценариев ремонта</small></span>
+              <span class="toc-page">стр. 18</span>
+            </a>
+          </li>
+          <li class="toc-item reveal">
+            <a href="#portfolio">
+              <span class="toc-num">05</span>
+              <span class="toc-name">Дайджест портфолио <small>140+ объектов за 18 лет</small></span>
+              <span class="toc-page">стр. 24</span>
+            </a>
+          </li>
+          <li class="toc-item reveal">
+            <a href="#letters">
+              <span class="toc-num">06</span>
+              <span class="toc-name">Письма читателей <small>отзывы, которые мы бережно храним</small></span>
+              <span class="toc-page">стр. 30</span>
+            </a>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== ОБЛОЖКА-ИСТОРИЯ: ЖК «БЕРЕГ ВОЛГИ» ===================== -->
+    <section class="cover-story section" id="story">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">История с обложки</p>
+          <h2 class="section-title">Квартира, где рассвет<br>начинается с Волги</h2>
+        </div>
+        <article class="story-grid">
+          <figure class="story-photo polaroid reveal">
+            <div class="story-photo-inner parallax-img" data-speed="0.25" role="img" aria-label="Гостиная в ЖК Берег Волги после ремонта"></div>
+            <figcaption class="hand-note">84 м², 4 месяца, счастливая семья</figcaption>
+          </figure>
+          <div class="story-text">
+            <p class="story-lead reveal">Когда Анна и Михаил получили ключи, квартира в ЖК «Берег Волги»
+              была бетонной коробкой с видом на воду. Через четыре месяца — это дом,
+              где утро начинается с кофе у панорамного окна.</p>
+            <blockquote class="story-quote reveal">
+              <p>«Мы боялись ремонта больше, чем ипотеки. А получилось так, что эти четыре
+                месяца мы просто получали фотоотчёты по пятницам — и ни разу не поссорились
+                из-за стройки».</p>
+              <cite>— Анна, заказчица, ЖК «Берег Волги»</cite>
+            </blockquote>
+            <dl class="story-facts reveal">
+              <div><dt>Площадь</dt><dd>84 м²</dd></div>
+              <div><dt>Срок</dt><dd>4 месяца</dd></div>
+              <div><dt>Бюджет</dt><dd>по согласованию</dd></div>
+            </dl>
+            <a href="#contact" class="btn btn-outline reveal">Хочу так же</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== ЛОНГРИД О ПОДХОДЕ ===================== -->
+    <section class="longread section section-dark" id="longread">
+      <div class="container container-narrow">
+        <p class="section-kicker reveal">Лонгрид · наш подход</p>
+        <h2 class="section-title reveal">Ремонт — это текст,<br>который нельзя переписать</h2>
+        <p class="longread-p reveal">Поэтому мы пишем его с первого раза. Восемнадцать лет, с 2007 года,
+          «Дока Строй» делает ремонт под ключ: 55 штатных сотрудников, ноль случайных
+          людей на объекте и один ответственный за всё — от сметы до ключей.</p>
+
+        <blockquote class="pull-quote reveal-quote">
+          <p>«Хороший ремонт не виден. Видна жизнь, которая в нём случается».</p>
+        </blockquote>
+
+        <p class="longread-p reveal">Мы не нанимаем субподрядчиков «на день». Штукатур, электрик и плиточник
+          работают у нас годами и знают стандарты компании лучше, чем текст договора.
+          Каждую пятницу заказчик получает фотоотчёт — даже если живёт в другом городе.</p>
+
+        <blockquote class="pull-quote reveal-quote">
+          <p>«Смета, которая растёт после подписания, — это не смета. Это фантастика».</p>
+        </blockquote>
+
+        <p class="longread-p reveal">Поэтому цена фиксируется до начала работ. За 18 лет мы сдали более
+          140 объектов — ЖК «Арбат», «Бастион», «Кокос», «Берег Волги» — и до сих пор
+          получаем звонки от первых клиентов. Не по гарантии (она у нас 3 года).
+          Просто позвать на новоселье.</p>
+
+        <div class="longread-stats">
+          <div class="stat reveal"><strong data-count="18">0</strong><span>лет на рынке</span></div>
+          <div class="stat reveal"><strong data-count="55">0</strong><span>штатных сотрудников</span></div>
+          <div class="stat reveal"><strong data-count="140">0</strong><span>+ сданных объектов</span></div>
+          <div class="stat reveal"><strong>5.0</strong><span>рейтинг на Яндекс Картах и 2ГИС</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== РУБРИКИ-УСЛУГИ ===================== -->
+    <section class="rubrics section" id="rubrics">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">Рубрики</p>
+          <h2 class="section-title">Четыре темы,<br>которые мы закрываем под ключ</h2>
+        </div>
+        <div class="rubrics-grid">
+          <a href="#tariffs" class="rubric-card reveal">
+            <div class="rubric-img rubric-img-1" role="img" aria-label="Интерьер новостройки"></div>
+            <div class="rubric-body">
+              <span class="rubric-tag">Рубрика № 1</span>
+              <h3>Новостройки</h3>
+              <p>От бетонной коробки до новоселья. Предчистовая, перепланировки по согласованию, тихие соседи сверху — тоже наша работа.</p>
+              <span class="rubric-link">Читать рубрику →</span>
+            </div>
+          </a>
+          <a href="#tariffs" class="rubric-card reveal">
+            <div class="rubric-img rubric-img-2" role="img" aria-label="Кухня во вторичном жилье"></div>
+            <div class="rubric-body">
+              <span class="rubric-tag">Рубрика № 2</span>
+              <h3>Вторичка</h3>
+              <p>Сносим «бабушкин ремонт», меняем коммуникации и возвращаем квартире характер. Демонтаж и вывоз мусора — в смете.</p>
+              <span class="rubric-link">Читать рубрику →</span>
+            </div>
+          </a>
+          <a href="#tariffs" class="rubric-card reveal">
+            <div class="rubric-img rubric-img-3" role="img" aria-label="Кафе после ремонта"></div>
+            <div class="rubric-body">
+              <span class="rubric-tag">Рубрика № 3</span>
+              <h3>Коммерция</h3>
+              <p>Кафе, офисы, шоурумы. Работаем ночами и по выходным, чтобы вы не теряли ни одного дня аренды и выручки.</p>
+              <span class="rubric-link">Читать рубрику →</span>
+            </div>
+          </a>
+          <a href="#tariffs" class="rubric-card reveal">
+            <div class="rubric-img rubric-img-4" role="img" aria-label="Лепнина в историческом здании"></div>
+            <div class="rubric-body">
+              <span class="rubric-tag">Рубрика № 4</span>
+              <h3>Исторические здания</h3>
+              <p>Лепнина, паркет, высокие потолки. Бережная реставрация вместе с современным инженерным комфортом.</p>
+              <span class="rubric-link">Читать рубрику →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== СМЕТА КАК ОТКРЫТАЯ КНИГА ===================== -->
+    <section class="estimate section section-cream" id="estimate">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">Финансовая прозрачность</p>
+          <h2 class="section-title">Смета как открытая книга</h2>
+          <p class="section-sub">Цена фиксируется до подписания договора и не меняется в процессе.
+            Каждая строка — с единицей измерения, объёмом и расшифровкой.</p>
+        </div>
+
+        <div class="estimate-grid">
+          <!-- Пример структуры сметы -->
+          <div class="estimate-book reveal" id="estimatePrint">
+            <div class="estimate-book-head">
+              <h3>Пример структуры сметы</h3>
+              <span class="hand-note">двухкомнатная, 54 м², тариф «Комфорт»</span>
+            </div>
+            <ul class="estimate-lines">
+              <li><span>Черновые работы и материалы</span><b>38%</b></li>
+              <li><span>Чистовая отделка</span><b>34%</b></li>
+              <li><span>Электрика и сантехника</span><b>14%</b></li>
+              <li><span>Демонтаж и вывоз мусора</span><b>6%</b></li>
+              <li><span>Проектирование и авторский надзор</span><b>5%</b></li>
+              <li><span>Логистика и подъём материалов</span><b>3%</b></li>
+            </ul>
+            <p class="estimate-note">Итог — одна цифра в договоре. Никаких «допов» по ходу:
+              если мы что-то не учли, это наша ошибка и наш расход.</p>
+            <button class="btn btn-outline" id="printEstimate">Скачать пример сметы (PDF)</button>
+          </div>
+
+          <!-- Калькулятор -->
+          <div class="calc reveal" id="calc">
+            <h3>Калькулятор сметы</h3>
+            <p class="calc-sub">Прикиньте бюджет за 20 секунд. Точную смету составим после замера — бесплатно.</p>
+
+            <div class="calc-field">
+              <label for="calcArea">Площадь, м² — <output id="areaOut">54</output></label>
+              <input type="range" id="calcArea" min="20" max="200" value="54" step="1">
+            </div>
+
+            <div class="calc-field">
+              <label for="calcTariff">Тариф</label>
+              <select id="calcTariff">
+                <option value="14900">Косметический — 14 900 ₽/м²</option>
+                <option value="18700">Черновой — 18 700 ₽/м²</option>
+                <option value="23500">Новостройка — 23 500 ₽/м²</option>
+                <option value="27700" selected>Комфорт — 27 700 ₽/м²</option>
+                <option value="29900">Комфорт+ — 29 900 ₽/м²</option>
+                <option value="34000">Престиж — 34 000 ₽/м²</option>
+              </select>
+            </div>
+
+            <fieldset class="calc-field calc-options">
+              <legend>Опции</legend>
+              <label><input type="checkbox" id="optDesign" data-price="1800"> Дизайн-проект (+1 800 ₽/м²)</label>
+              <label><input type="checkbox" id="optDismantle" data-price="900"> Демонтаж старой отделки (+900 ₽/м²)</label>
+              <label><input type="checkbox" id="optSmart" data-price="1200"> Умный дом, базовый сценарий (+1 200 ₽/м²)</label>
+            </fieldset>
+
+            <div class="calc-field">
+              <span>Рассрочка 0%</span>
+              <div class="calc-installment" role="group" aria-label="Срок рассрочки">
+                <button type="button" class="chip is-active" data-months="0">Сразу</button>
+                <button type="button" class="chip" data-months="6">6 мес</button>
+                <button type="button" class="chip" data-months="12">12 мес</button>
+              </div>
+            </div>
+
+            <div class="calc-result">
+              <p class="calc-total"><span>Ориентировочный бюджет</span><strong id="calcTotal">1 495 800 ₽</strong></p>
+              <p class="calc-monthly" id="calcMonthly" hidden>≈ <b id="calcMonthlyValue"></b> / мес без переплат</p>
+              <p class="calc-disclaimer">Расчёт предварительный, не является офертой. Точная смета — после бесплатного замера.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ТАРИФЫ-МЕНЮ ===================== -->
+    <section class="tariffs section" id="tariffs">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">Меню номера</p>
+          <h2 class="section-title">Тарифы</h2>
+          <p class="section-sub">Шесть сценариев — как блюда в меню. Раскройте любой, чтобы увидеть состав.
+            Рассрочка 0% на 6 или 12 месяцев, гарантия 3 года.</p>
+        </div>
+        <div class="tariff-menu" id="tariffMenu">
+
+          <article class="tariff reveal">
+            <button class="tariff-head" aria-expanded="false">
+              <span class="tariff-name">Косметический</span>
+              <span class="tariff-dots"></span>
+              <span class="tariff-price">14 900 ₽/м²</span>
+              <span class="tariff-toggle" aria-hidden="true">+</span>
+            </button>
+            <div class="tariff-body">
+              <p class="tariff-desc">Лёгкое обновление без перепланировки: освежить, выровнять, перекрасить.</p>
+              <ul>
+                <li>Обои или покраска стен в два слоя</li>
+                <li>Ламинат / линолеум, плинтусы</li>
+                <li>Натяжные потолки</li>
+                <li>Замена розеток, выключателей, светильников</li>
+                <li>Срок: от 20 дней</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="tariff reveal">
+            <button class="tariff-head" aria-expanded="false">
+              <span class="tariff-name">Черновой</span>
+              <span class="tariff-dots"></span>
+              <span class="tariff-price">18 700 ₽/м²</span>
+              <span class="tariff-toggle" aria-hidden="true">+</span>
+            </button>
+            <div class="tariff-body">
+              <p class="tariff-desc">Предчистовая подготовка для тех, кто хочет чистовую отделку позже или своими силами.</p>
+              <ul>
+                <li>Стяжка пола, штукатурка стен по маякам</li>
+                <li>Черновая электрика и сантехника</li>
+                <li>Шпаклёвка под финиш</li>
+                <li>Гидроизоляция санузлов</li>
+                <li>Срок: от 30 дней</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="tariff reveal">
+            <button class="tariff-head" aria-expanded="false">
+              <span class="tariff-name">Новостройка</span>
+              <span class="tariff-dots"></span>
+              <span class="tariff-price">23 500 ₽/м²</span>
+              <span class="tariff-toggle" aria-hidden="true">+</span>
+            </button>
+            <div class="tariff-body">
+              <p class="tariff-desc">Полный цикл для квартиры от застройщика: от бетона до ключей.</p>
+              <ul>
+                <li>Полная черновая подготовка</li>
+                <li>Чистовая отделка стен, пола, потолков</li>
+                <li>Электрика и сантехника под ключ</li>
+                <li>Плитка в санузлах, установка сантехники</li>
+                <li>Срок: от 60 дней</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="tariff tariff-featured reveal">
+            <span class="tariff-badge">выбор редакции</span>
+            <button class="tariff-head" aria-expanded="false">
+              <span class="tariff-name">Комфорт</span>
+              <span class="tariff-dots"></span>
+              <span class="tariff-price">27 700 ₽/м²</span>
+              <span class="tariff-toggle" aria-hidden="true">+</span>
+            </button>
+            <div class="tariff-body">
+              <p class="tariff-desc">Самый популярный сценарий: продуманный ремонт для жизни, без компромиссов.</p>
+              <ul>
+                <li>Всё из тарифа «Новостройка»</li>
+                <li>Демонтаж и вывоз мусора (для вторички)</li>
+                <li>Тёплые полы в санузлах и на кухне</li>
+                <li>Двери, откосы, столешница — установка</li>
+                <li>Шумоизоляция межкомнатных перегородок</li>
+                <li>Срок: от 75 дней</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="tariff reveal">
+            <button class="tariff-head" aria-expanded="false">
+              <span class="tariff-name">Комфорт+</span>
+              <span class="tariff-dots"></span>
+              <span class="tariff-price">29 900 ₽/м²</span>
+              <span class="tariff-toggle" aria-hidden="true">+</span>
+            </button>
+            <div class="tariff-body">
+              <p class="tariff-desc">Комфорт плюс дизайн-проект: ремонт по картинкам, которые потом становятся квартирой.</p>
+              <ul>
+                <li>Всё из тарифа «Комфорт»</li>
+                <li>Дизайн-проект с 3D-визуализацией</li>
+                <li>Комплектация: закупаем и привозим материалы сами</li>
+                <li>Авторский надзор дизайнера</li>
+                <li>Срок: от 90 дней</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="tariff reveal">
+            <button class="tariff-head" aria-expanded="false">
+              <span class="tariff-name">Престиж</span>
+              <span class="tariff-dots"></span>
+              <span class="tariff-price">34 000 ₽/м²</span>
+              <span class="tariff-toggle" aria-hidden="true">+</span>
+            </button>
+            <div class="tariff-body">
+              <p class="tariff-desc">Максимальный уровень: сложные материалы, нестандартные решения, реставрация.</p>
+              <ul>
+                <li>Всё из тарифа «Комфорт+»</li>
+                <li>Декоративная штукатурка, молдинги, лепнина</li>
+                <li>Инженерная доска / художественный паркет</li>
+                <li>Сценарное освещение, умный дом</li>
+                <li>Работы в исторических зданиях</li>
+                <li>Срок: по проекту</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ДАЙДЖЕСТ ПОРТФОЛИО ===================== -->
+    <section class="portfolio section section-cream" id="portfolio">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">Дайджест портфолио</p>
+          <h2 class="section-title">140+ объектов —<br>и каждый со своей историей</h2>
+        </div>
+
+        <div class="portfolio-filters reveal" role="group" aria-label="Фильтр проектов">
+          <button class="chip is-active" data-filter="all">Все</button>
+          <button class="chip" data-filter="novostroyka">Новостройки</button>
+          <button class="chip" data-filter="vtorichka">Вторичка</button>
+          <button class="chip" data-filter="commerce">Коммерция</button>
+        </div>
+      </div>
+
+      <div class="portfolio-strip-wrap">
+        <button class="strip-arrow strip-prev" aria-label="Назад">←</button>
+        <div class="portfolio-strip" id="portfolioStrip">
+
+          <article class="project-card polaroid" data-cat="novostroyka">
+            <div class="project-img project-img-1" role="img" aria-label="Гостиная в ЖК Берег Волги"></div>
+            <div class="project-meta">
+              <h3>ЖК «Берег Волги»</h3>
+              <p>84 м² · современный минимализм</p>
+              <span class="hand-note">4 месяца — и новоселье</span>
+            </div>
+          </article>
+
+          <article class="project-card polaroid" data-cat="novostroyka">
+            <div class="project-img project-img-2" role="img" aria-label="Спальня в ЖК Арбат"></div>
+            <div class="project-meta">
+              <h3>ЖК «Арбат»</h3>
+              <p>62 м² · современная классика</p>
+              <span class="hand-note">для молодой семьи</span>
+            </div>
+          </article>
+
+          <article class="project-card polaroid" data-cat="vtorichka">
+            <div class="project-img project-img-3" role="img" aria-label="Кухня после капитального ремонта"></div>
+            <div class="project-meta">
+              <h3>Хрущёвка на Гагарина</h3>
+              <p>46 м² · скандинавский стиль</p>
+              <span class="hand-note">«бабушкин ремонт» снесён за 2 дня</span>
+            </div>
+          </article>
+
+          <article class="project-card polaroid" data-cat="commerce">
+            <div class="project-img project-img-4" role="img" aria-label="Кофейня после ремонта"></div>
+            <div class="project-meta">
+              <h3>Кофейня «Кокос»</h3>
+              <p>120 м² · лофт в центре</p>
+              <span class="hand-note">открылись без потери сезона</span>
+            </div>
+          </article>
+
+          <article class="project-card polaroid" data-cat="novostroyka">
+            <div class="project-img project-img-5" role="img" aria-label="Кухня-гостиная в ЖК Бастион"></div>
+            <div class="project-meta">
+              <h3>ЖК «Бастион»</h3>
+              <p>97 м² · тёплый контемпорари</p>
+              <span class="hand-note">умный дом в комплекте</span>
+            </div>
+          </article>
+
+          <article class="project-card polaroid" data-cat="vtorichka">
+            <div class="project-img project-img-6" role="img" aria-label="Гостиная со старинным паркетом"></div>
+            <div class="project-meta">
+              <h3>Сталинка на Набережной</h3>
+              <p>78 м² · неоклассика</p>
+              <span class="hand-note">паркет 1954 года — реставрировали</span>
+            </div>
+          </article>
+
+          <article class="project-card polaroid" data-cat="commerce">
+            <div class="project-img project-img-7" role="img" aria-label="Офис после ремонта"></div>
+            <div class="project-meta">
+              <h3>Офис IT-компании</h3>
+              <p>210 м² · функциональный минимализм</p>
+              <span class="hand-note">сдали за 3 месяца, работали ночами</span>
+            </div>
+          </article>
+
+          <article class="project-card polaroid" data-cat="novostroyka">
+            <div class="project-img project-img-8" role="img" aria-label="Детская комната после ремонта"></div>
+            <div class="project-meta">
+              <h3>ЖК «Кокос»</h3>
+              <p>70 м² · джапанди</p>
+              <span class="hand-note">детская — гордость редакции</span>
+            </div>
+          </article>
+
+        </div>
+        <button class="strip-arrow strip-next" aria-label="Вперёд">→</button>
+      </div>
+
+      <!-- До / После -->
+      <div class="container">
+        <div class="ba-block reveal">
+          <div class="ba-text">
+            <h3>Было / стало</h3>
+            <p>Потяните шторку: типичная кухня «вторички» до и после трёх месяцев работы.</p>
+          </div>
+          <div class="ba-slider" id="baSlider">
+            <div class="ba-layer ba-after" role="img" aria-label="Кухня после ремонта"><span class="ba-label">После</span></div>
+            <div class="ba-layer ba-before" id="baBefore" role="img" aria-label="Кухня до ремонта"><span class="ba-label">До</span></div>
+            <div class="ba-handle" id="baHandle"><span class="ba-grip">⇔</span></div>
+            <input type="range" class="ba-range" id="baRange" min="0" max="100" value="50" aria-label="Сравнение до и после">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== КОЛОНКА РЕДАКТОРА ===================== -->
+    <section class="editor section" id="editor">
+      <div class="container container-narrow">
+        <div class="editor-grid">
+          <figure class="editor-photo polaroid reveal">
+            <div class="editor-photo-img" role="img" aria-label="Руководитель проектов на объекте"></div>
+            <figcaption class="hand-note">наш главный редактор — на объекте</figcaption>
+          </figure>
+          <div class="editor-text">
+            <p class="section-kicker reveal">Колонка редактора</p>
+            <h2 class="section-title reveal">Почему за ваш ремонт<br>отвечает один человек</h2>
+            <p class="reveal">В большинстве компаний вы общаетесь с менеджером, который передаёт прорабу,
+              который передаёт бригадиру, который передаёт... в общем, вы поняли.
+              На каждой передаче теряется что-то важное: срок, качество, смысл ваших слов.</p>
+            <p class="reveal">У нас иначе. За каждым проектом закреплён руководитель — «редактор номера».
+              Он подписывает смету, стоит на объекте в день приёмки и отвечает лично.
+              Его телефон у вас в избранном с первого дня и до конца гарантии — а она, напомним, три года.</p>
+            <blockquote class="pull-quote reveal-quote">
+              <p>«Один проект — один ответственный. Не потому что так модно, а потому что иначе не работает».</p>
+            </blockquote>
+            <p class="reveal">Так мы работаем с 2007 года. 55 человек в штате, 140+ сданных объектов
+              и рейтинг 5.0 на Яндекс Картах и 2ГИС — это, в сущности, всё, что нужно знать о нашей редакции.</p>
+            <p class="editor-sign hand-note reveal">— редакция «Дока Строй»</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ПИСЬМА ЧИТАТЕЛЕЙ (ОТЗЫВЫ) ===================== -->
+    <section class="letters section section-dark" id="letters">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">Почта номера</p>
+          <h2 class="section-title">Письма читателей</h2>
+          <p class="section-sub">Отзывы, которые мы бережно храним. Рейтинг 5.0 — на Яндекс Картах и 2ГИС.</p>
+        </div>
+        <div class="letters-carousel reveal" id="lettersCarousel">
+          <div class="letters-track" id="lettersTrack">
+
+            <article class="letter">
+              <p class="letter-text">«Добрый день, редакция! Пишем из новой квартиры в „Арбате". Ремонт закончили
+                на неделю раньше срока — кто так вообще делает?! Отдельное спасибо за пятничные
+                фотоотчёты: жили в другом городе и всё равно чувствовали себя на объекте».</p>
+              <footer class="letter-sign"><span class="hand-note">Ирина и Олег, ЖК «Арбат», 62 м²</span><span class="letter-stars">★★★★★</span></footer>
+            </article>
+
+            <article class="letter">
+              <p class="letter-text">«Боялась, что смета поплывёт, как у подруги в другой фирме. Ни на рубль.
+                Когда прораб сам нашёл неточность и убрал лишнюю позицию, я поняла, что не ошиблась.
+                Кухня из рубрики „вторичка" — теперь моя любимая комната».</p>
+              <footer class="letter-sign"><span class="hand-note">Светлана, вторичка, 46 м²</span><span class="letter-stars">★★★★★</span></footer>
+            </article>
+
+            <article class="letter">
+              <p class="letter-text">«Заказывали ремонт кофейни. Ребята работали ночами, чтобы мы не теряли
+                день аренды. Открылись вовремя, гости фотографируют интерьер чаще, чем капучино.
+                Рассрочка 0% на 12 месяцев — честная, без подвоха».</p>
+              <footer class="letter-sign"><span class="hand-note">Марат, кофейня «Кокос», 120 м²</span><span class="letter-stars">★★★★★</span></footer>
+            </article>
+
+            <article class="letter">
+              <p class="letter-text">«Сталинка с паркетом 1954 года. Все пугали, что реставрация — это на год
+                и на нервы. Управились за четыре месяца, паркет спасли, лепнину восстановили.
+                Руководитель проекта отвечал даже в воскресенье вечером (извините ещё раз!)».</p>
+              <footer class="letter-sign"><span class="hand-note">Андрей и Мария, сталинка, 78 м²</span><span class="letter-stars">★★★★★</span></footer>
+            </article>
+
+          </div>
+          <div class="letters-nav">
+            <button class="strip-arrow" id="letterPrev" aria-label="Предыдущий отзыв">←</button>
+            <div class="letters-dots" id="lettersDots" role="tablist" aria-label="Выбор отзыва"></div>
+            <button class="strip-arrow" id="letterNext" aria-label="Следующий отзыв">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ЖУРНАЛ (БЛОГ) ===================== -->
+    <section class="journal section" id="journal">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">Редакционные материалы</p>
+          <h2 class="section-title">Журнал</h2>
+        </div>
+        <div class="journal-grid">
+          <article class="journal-card journal-card-big reveal">
+            <div class="journal-img journal-img-1" role="img" aria-label="Светлая кухня-гостиная"></div>
+            <div class="journal-body">
+              <div class="journal-meta"><time datetime="2025-07-28">28 июля 2025</time><span class="tag">Гайды</span></div>
+              <h3>Как читать смету: 7 строк, в которых прячутся допы</h3>
+              <p>Разбираем реальные сметы и показываем, где недобросовестные подрядчики закладывают «сюрпризы» — и почему в наших сметах таких строк нет.</p>
+            </div>
+          </article>
+          <article class="journal-card reveal">
+            <div class="journal-img journal-img-2" role="img" aria-label="Материалы для отделки"></div>
+            <div class="journal-body">
+              <div class="journal-meta"><time datetime="2025-07-14">14 июля 2025</time><span class="tag">Материалы</span></div>
+              <h3>Ламинат, кварцвинил или инженерная доска: честное сравнение</h3>
+              <p>Что переживёт детей, собаку и десять лет жизни — а что красиво только в каталоге.</p>
+            </div>
+          </article>
+          <article class="journal-card reveal">
+            <div class="journal-img journal-img-3" role="img" aria-label="Планировка квартиры"></div>
+            <div class="journal-body">
+              <div class="journal-meta"><time datetime="2025-06-30">30 июня 2025</time><span class="tag">Новостройки</span></div>
+              <h3>Приёмка квартиры у застройщика: чек-лист от нашего прораба</h3>
+              <p>На что смотреть, прежде чем подписать акт — и когда лучше позвать специалиста.</p>
+            </div>
+          </article>
+          <article class="journal-card reveal">
+            <div class="journal-img journal-img-4" role="img" aria-label="Свет в интерьере"></div>
+            <div class="journal-body">
+              <div class="journal-meta"><time datetime="2025-06-12">12 июня 2025</time><span class="tag">Свет</span></div>
+              <h3>Сценарное освещение: почему одна люстра — это прошлый век</h3>
+              <p>Три контура света, которые превращают квартиру из «коробки» в пространство для жизни.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="faq section section-cream" id="faq">
+      <div class="container container-narrow">
+        <div class="section-head reveal">
+          <p class="section-kicker">Вопросы в редакцию</p>
+          <h2 class="section-title">Частые вопросы</h2>
+        </div>
+        <div class="faq-list" id="faqList">
+          <details class="faq-item reveal">
+            <summary>Смета точно не вырастет в процессе?<span class="faq-plus">+</span></summary>
+            <p>Нет. Смета фиксируется в договоре до начала работ. Если мы что-то не учли на замере — это наш расход, а не ваш. Изменения возможны только по вашей инициативе и оформляются отдельным допсоглашением.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Как работает рассрочка 0%?<span class="faq-plus">+</span></summary>
+            <p>Честная рассрочка от компании на 6 или 12 месяцев без банка и переплат: стоимость делится на равные платежи. Первый взнос — после подписания договора и согласования сметы.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Кто будет делать мой ремонт?<span class="faq-plus">+</span></summary>
+            <p>Только штатные сотрудники — 55 человек, никаких случайных бригад. За проектом закреплён руководитель: он на связи каждый день, а по пятницам присылает фотоотчёт.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Что входит в гарантию 3 года?<span class="faq-plus">+</span></summary>
+            <p>Все работы по договору: отделка, электрика, сантехника. Если что-то пошло не так по нашей вине — приезжаем и исправляем бесплатно. Гарантия прописана в договоре, а не «на словах».</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Работаете ли вы с коммерческими помещениями?<span class="faq-plus">+</span></summary>
+            <p>Да, это отдельная рубрика: кафе, офисы, шоурумы. Можем работать ночами и по выходным, чтобы вы не теряли дни аренды. Портфолио — от кофейни «Кокос» до офиса в 210 м².</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ФИНАЛ / ФОРМА ===================== -->
+    <section class="contact section" id="contact">
+      <div class="container container-narrow">
+        <div class="contact-card reveal">
+          <p class="section-kicker">Последняя страница номера</p>
+          <h2 class="section-title">Начнём вашу историю?</h2>
+          <p class="section-sub">Оставьте телефон — перезвоним в течение рабочего дня, ответим на вопросы
+            и договоримся о бесплатном замере. Без спама и навязчивости, честное слово.</p>
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <label>
+                <span>Ваше имя</span>
+                <input type="text" name="name" placeholder="Как к вам обращаться" required>
+              </label>
+              <label>
+                <span>Телефон</span>
+                <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required>
+              </label>
+            </div>
+            <label>
+              <span>Пара слов о проекте (необязательно)</span>
+              <textarea name="message" rows="3" placeholder="Например: двушка в новостройке, 54 м², хочется уехать от ремонта за 3 месяца"></textarea>
+            </label>
+            <button type="submit" class="btn btn-terracotta btn-wide">Отправить письмо в редакцию</button>
+            <p class="form-privacy">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+          </form>
+          <div class="form-success" id="formSuccess" hidden>
+            <p class="form-success-title">Письмо получено!</p>
+            <p>Спасибо. Редакция уже читает вашу историю — перезвоним в течение рабочего дня.</p>
+            <p class="hand-note">— до связи, «Дока Строй»</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== ПОДВАЛ ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <span class="logo-text footer-logo">Дока&nbsp;Строй</span>
+        <p>Строительная компания. Ремонт квартир и коммерческих помещений под ключ с 2007 года.</p>
+        <p class="footer-rating">★ 5.0 — Яндекс Карты · 2ГИС</p>
+      </div>
+      <div class="footer-col">
+        <h4>Рубрики</h4>
+        <a href="#story">История с обложки</a>
+        <a href="#rubrics">Услуги</a>
+        <a href="#tariffs">Тарифы</a>
+        <a href="#portfolio">Портфолио</a>
+      </div>
+      <div class="footer-col">
+        <h4>Контакты</h4>
+        <a href="tel:+78000000000">8 (800) 000-00-00</a>
+        <a href="mailto:privet@doka-stroy.ru">privet@doka-stroy.ru</a>
+        <p>Ежедневно с 9:00 до 20:00</p>
+      </div>
+      <div class="footer-col">
+        <h4>Факты</h4>
+        <p>18 лет на рынке · 55 сотрудников</p>
+        <p>140+ объектов · гарантия 3 года</p>
+        <p>Рассрочка 0% — 6 или 12 месяцев</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2007–2025 «Дока Строй». Все истории — настоящие.</p>
+      <p class="hand-note">сверстано с любовью</p>
+    </div>
+  </footer>
+
+  <!-- Плавающая кнопка -->
+  <a href="#contact" class="floating-cta" id="floatingCta">Обсудить проект</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
