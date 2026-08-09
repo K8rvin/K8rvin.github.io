@@ -224,6 +224,29 @@ body {
 }
 
 /* --- Сетка работ --- */
+.group-title {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-family: var(--font-head);
+  font-size: 22px;
+  font-weight: 600;
+  margin: 52px 0 24px;
+}
+.works-group:first-child .group-title { margin-top: 0; }
+.group-count {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-dim);
+}
+.group-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--card-border);
+  align-self: center;
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));

@@ -30,9 +30,27 @@ function cardHTML(work) {
     </a>`;
 }
 
+function groupHTML(category, works) {
+  return `
+    <section class="works-group">
+      <h3 class="group-title">${category} <span class="group-count">${works.length}</span></h3>
+      <div class="grid">${works.map(cardHTML).join("")}</div>
+    </section>`;
+}
+
 function renderWorks(category) {
-  const list = category === "Все" ? WORKS : WORKS.filter(w => w.category === category);
-  grid.innerHTML = list.map(cardHTML).join("");
+  if (category === "Все") {
+    // Группируем по категориям в порядке первого появления в WORKS
+    const groups = [];
+    WORKS.forEach(w => {
+      let g = groups.find(g => g.category === w.category);
+      if (!g) groups.push(g = { category: w.category, works: [] });
+      g.works.push(w);
+    });
+    grid.innerHTML = groups.map(g => groupHTML(g.category, g.works)).join("");
+  } else {
+    grid.innerHTML = groupHTML(category, WORKS.filter(w => w.category === category));
+  }
   scalePreviews();
   observeIframes();
   observeReveals();
@@ -67,7 +85,10 @@ function observeIframes() {
 function renderFilters() {
   const categories = ["Все", ...new Set(WORKS.map(w => w.category))];
   filtersEl.innerHTML = categories
-    .map((c, i) => `<button class="chip${i === 0 ? " active" : ""}" data-category="${c}">${c}</button>`)
+    .map((c, i) => {
+      const n = c === "Все" ? WORKS.length : WORKS.filter(w => w.category === c).length;
+      return `<button class="chip${i === 0 ? " active" : ""}" data-category="${c}">${c} · ${n}</button>`;
+    })
     .join("");
 
   filtersEl.addEventListener("click", e => {
