@@ -535,14 +535,6 @@ a { color: var(--emerald); text-decoration: none; }
   margin-top: 26px;
 }
 
-.contacts__footnote {
-  margin-top: 22px;
-  font-size: 12px;
-  line-height: 1.5;
-  color: var(--ink-soft);
-  opacity: 0.75;
-}
-
 .map-iframe {
   display: block;
   width: 100%;
