@@ -387,33 +387,11 @@
             <p class="contacts__footnote">* Instagram принадлежит Meta Platforms Inc., деятельность которой признана экстремистской и запрещена на территории РФ</p>
           </div>
 
-          <div class="contacts__map reveal" aria-hidden="true">
-            <svg class="map" viewBox="0 0 360 300">
-              <rect width="360" height="300" rx="18" fill="#F3EBDF"/>
-              <!-- кварталы -->
-              <g stroke="#E3D7C6" stroke-width="10">
-                <path d="M0 70 H360"/><path d="M0 150 H360"/><path d="M0 235 H360"/>
-                <path d="M80 0 V300"/><path d="M190 0 V300"/><path d="M290 0 V300"/>
-              </g>
-              <g stroke="#EFE6D6" stroke-width="4">
-                <path d="M0 40 H360"/><path d="M0 110 H360"/><path d="M0 195 H360"/><path d="M0 268 H360"/>
-                <path d="M40 0 V300"/><path d="M135 0 V300"/><path d="M240 0 V300"/><path d="M325 0 V300"/>
-              </g>
-              <!-- главная дорога -->
-              <path d="M0 185 C90 175 220 195 360 172" stroke="#E8B4B8" stroke-width="9" fill="none" stroke-linecap="round"/>
-              <!-- парк -->
-              <circle cx="60" cy="245" r="26" fill="#2D5A3D" opacity="0.18"/>
-              <circle cx="315" cy="60" r="30" fill="#2D5A3D" opacity="0.18"/>
-              <!-- метка -->
-              <g class="map__pin">
-                <circle cx="180" cy="150" r="34" fill="#E8B4B8" opacity="0.25"/>
-                <path d="M180 112 c-14 0 -24 10 -24 23 c0 17 20 33 22.5 34.7 a2 2 0 0 0 3 0 C184 168 204 152 204 135 c0 -13 -10 -23 -24 -23z" fill="#2D5A3D"/>
-                <circle cx="180" cy="135" r="10" fill="#FBF6EF"/>
-                <circle cx="180" cy="132" r="4.5" fill="#E8B4B8"/>
-              </g>
-              <text x="180" y="212" text-anchor="middle" font-family="Manrope, sans-serif" font-size="13" font-weight="600" fill="#3B2F2A">просп. Металлургов, 5</text>
-              <text x="180" y="230" text-anchor="middle" font-family="Manrope, sans-serif" font-size="11" fill="#8A7A70">«Море цветов» — мы здесь</text>
-            </svg>
+          <div class="contacts__map reveal">
+            <iframe class="map-iframe"
+                    src="https://yandex.ru/map-widget/v1/?ll=44.522433%2C48.763939&mode=search&oid=141671958806&ol=biz&z=16"
+                    width="100%" height="420" frameborder="0" allowfullscreen loading="lazy"
+                    title="«Море цветов» на Яндекс.Картах — просп. Металлургов, 5, Волгоград"></iframe>
           </div>
         </div>
       </div>

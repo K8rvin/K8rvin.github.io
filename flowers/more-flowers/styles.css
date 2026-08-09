@@ -543,18 +543,13 @@ a { color: var(--emerald); text-decoration: none; }
   opacity: 0.75;
 }
 
-.map {
+.map-iframe {
+  display: block;
   width: 100%;
-  height: auto;
+  height: 420px;
+  border: none;
   border-radius: 22px;
   box-shadow: var(--shadow);
-}
-
-.map__pin { animation: pinFloat 4s ease-in-out infinite; }
-
-@keyframes pinFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
 }
 
 /* ---------- Футер ---------- */
