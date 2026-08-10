@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>СВЕТАРХ — архитектура света: парящие потолки и световые линии</title>
+  <meta name="description" content="Студия световых решений и натяжных потолков. Парящие потолки, световые линии, трековые системы, сценарии освещения. Проектируем и монтируем под ключ.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#hero" class="logo" aria-label="СВЕТАРХ — на главную">
+        <svg class="logo__mark" width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+          <path d="M3 21 L15 5 L27 21" stroke="#4CC9F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8 25 L22 25" stroke="#FFB347" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span class="logo__text">СВЕТАРХ</span>
+      </a>
+
+      <nav class="nav" id="site-nav" aria-label="Основная навигация">
+        <a href="#scenes" class="nav__link">Сценарии</a>
+        <a href="#solutions" class="nav__link">Решения</a>
+        <a href="#portfolio" class="nav__link">Портфолио</a>
+        <a href="#process" class="nav__link">Процесс</a>
+        <a href="#prices" class="nav__link">Цены</a>
+        <a href="#contacts" class="nav__link">Контакты</a>
+        <a href="tel:+79090939400" class="btn btn--ghost nav__cta">+7 909 093-94-00</a>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== 1. Hero ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__scene" aria-hidden="true">
+        <svg class="hero-svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="hWall" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#101a2c"/>
+              <stop offset="1" stop-color="#07090f"/>
+            </linearGradient>
+            <linearGradient id="hFloor" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#0b111e"/>
+              <stop offset="1" stop-color="#04060b"/>
+            </linearGradient>
+            <linearGradient id="hWash" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#4cc9f0" stop-opacity=".34"/>
+              <stop offset="1" stop-color="#4cc9f0" stop-opacity="0"/>
+            </linearGradient>
+            <radialGradient id="hAmb" cx="50%" cy="18%" r="65%">
+              <stop offset="0" stop-color="#4cc9f0" stop-opacity=".22"/>
+              <stop offset="60%" stop-color="#4cc9f0" stop-opacity=".05"/>
+              <stop offset="100%" stop-color="#4cc9f0" stop-opacity="0"/>
+            </radialGradient>
+            <filter id="hBlur14" x="-60%" y="-60%" width="220%" height="220%">
+              <feGaussianBlur stdDeviation="14"/>
+            </filter>
+            <filter id="hBlur30" x="-80%" y="-80%" width="260%" height="260%">
+              <feGaussianBlur stdDeviation="30"/>
+            </filter>
+          </defs>
+
+          <!-- комната -->
+          <rect x="0" y="0" width="1440" height="620" fill="url(#hWall)"/>
+          <polygon points="0,0 300,110 300,620 0,800" fill="#080d18"/>
+          <polygon points="1440,0 1140,110 1140,620 1440,800" fill="#060a13"/>
+          <polygon points="0,900 1440,900 1440,620 0,620" fill="url(#hFloor)"/>
+          <path d="M300 620 L60 900 M1140 620 L1380 900 M720 620 L720 900" stroke="#141d31" stroke-width="1.5" opacity=".5"/>
+
+          <!-- мягкий общий свет -->
+          <rect class="hero-amb" x="0" y="0" width="1440" height="900" fill="url(#hAmb)"/>
+
+          <!-- парящий потолок -->
+          <g class="hero-slab">
+            <polygon points="380,60 1060,60 985,255 455,255" fill="#0d1424"/>
+            <polygon points="380,60 1060,60 1052,78 388,78" fill="#131d33"/>
+            <ellipse cx="720" cy="292" rx="330" ry="26" fill="#000" opacity=".5" filter="url(#hBlur30)"/>
+            <!-- свечение по периметру (мягкое) -->
+            <g class="hero-glow-soft" filter="url(#hBlur14)">
+              <path d="M455 255 L985 255" stroke="#4cc9f0" stroke-width="7" stroke-linecap="round"/>
+              <path d="M380 60 L455 255" stroke="#4cc9f0" stroke-width="7" stroke-linecap="round"/>
+              <path d="M1060 60 L985 255" stroke="#4cc9f0" stroke-width="7" stroke-linecap="round"/>
+              <path d="M500 118 L940 118" stroke="#4cc9f0" stroke-width="6" stroke-linecap="round"/>
+              <path d="M530 186 L910 186" stroke="#ffb347" stroke-width="6" stroke-linecap="round"/>
+            </g>
+            <!-- чёткие световые линии (рисуются при загрузке) -->
+            <g class="hero-lines">
+              <path class="gp gp-1" pathLength="1" d="M455 255 L985 255" stroke="#bdf0ff" stroke-width="2.5" stroke-linecap="round"/>
+              <path class="gp gp-2" pathLength="1" d="M380 60 L455 255" stroke="#9be9ff" stroke-width="2" stroke-linecap="round"/>
+              <path class="gp gp-3" pathLength="1" d="M1060 60 L985 255" stroke="#9be9ff" stroke-width="2" stroke-linecap="round"/>
+              <path class="gp gp-4" pathLength="1" d="M500 118 L940 118" stroke="#d8f6ff" stroke-width="2" stroke-linecap="round"/>
+              <path class="gp gp-5" pathLength="1" d="M530 186 L910 186" stroke="#ffd9a3" stroke-width="2" stroke-linecap="round"/>
+            </g>
+            <!-- световая заливка стены -->
+            <rect class="hero-wash" x="470" y="255" width="500" height="365" fill="url(#hWash)"/>
+          </g>
+
+          <!-- отражение на полу -->
+          <ellipse class="hero-refl" cx="720" cy="640" rx="300" ry="20" fill="#4cc9f0" opacity=".14" filter="url(#hBlur30)"/>
+
+          <!-- силуэт дивана -->
+          <g fill="#04060c">
+            <rect x="150" y="700" width="330" height="58" rx="14"/>
+            <rect x="150" y="660" width="46" height="70" rx="12"/>
+            <rect x="434" y="660" width="46" height="70" rx="12"/>
+            <rect x="186" y="668" width="120" height="40" rx="10" fill="#0a0f1b"/>
+            <rect x="316" y="668" width="120" height="40" rx="10" fill="#0a0f1b"/>
+          </g>
+          <!-- торшер -->
+          <g>
+            <path d="M1260 880 L1260 560" stroke="#131c30" stroke-width="5" stroke-linecap="round"/>
+            <circle class="hero-lamp-glow" cx="1260" cy="540" r="26" fill="#ffb347" opacity=".35" filter="url(#hBlur14)"/>
+            <circle class="hero-lamp" cx="1260" cy="540" r="9" fill="#ffd9a3"/>
+          </g>
+        </svg>
+        <div class="hero__shade"></div>
+      </div>
+
+      <div class="container hero__content">
+        <p class="hero__eyebrow reveal">Студия световых решений и натяжных потолков</p>
+        <h1 class="hero__title reveal">Архитектура<br>света</h1>
+        <p class="hero__sub reveal">Парящие потолки, световые линии, сценарии освещения.<br>Проектируем и монтируем под ключ.</p>
+        <div class="hero__actions reveal">
+          <a href="#cta" class="btn btn--ice">Обсудить проект</a>
+          <a href="#portfolio" class="btn btn--ghost">Смотреть портфолио</a>
+        </div>
+        <div class="hero__meta reveal">
+          <div><b>12 лет</b><span>в световом дизайне</span></div>
+          <div><b>400+</b><span>реализованных проектов</span></div>
+          <div><b>1–2 дня</b><span>монтаж без пыли</span></div>
+        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true"><span></span></div>
+    </section>
+
+    <!-- ===== 2. Сценарии света ===== -->
+    <section class="section scenes" id="scenes">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__tag">Интерактив</p>
+          <h2 class="section__title">Сценарии света</h2>
+          <p class="section__lead">Одна комната — три настроения. Переключите режим и поиграйте с яркостью.</p>
+        </div>
+
+        <div class="scene-wrap reveal">
+          <div class="scene scene--cold" id="room-scene">
+            <svg class="scene-svg" viewBox="0 0 1200 720" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs>
+                <filter id="scBlur12" x="-60%" y="-60%" width="220%" height="220%">
+                  <feGaussianBlur stdDeviation="12"/>
+                </filter>
+                <linearGradient id="scWash" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="currentColor" stop-opacity=".3"/>
+                  <stop offset="1" stop-color="currentColor" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="scFloor" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#0a0f1a"/>
+                  <stop offset="1" stop-color="#04060b"/>
+                </linearGradient>
+              </defs>
+
+              <!-- комната -->
+              <rect class="sc-wall" x="180" y="60" width="840" height="460"/>
+              <polygon class="sc-wall-side" points="0,0 180,60 180,520 0,720"/>
+              <polygon class="sc-wall-side" points="1200,0 1020,60 1020,520 1200,720"/>
+              <polygon points="0,720 1200,720 1020,520 180,520" fill="url(#scFloor)"/>
+              <path d="M180 520 L40 720 M1020 520 L1160 720" stroke="#141d31" stroke-width="1.5" opacity=".4"/>
+
+              <!-- окно -->
+              <g class="sc-window">
+                <rect class="sc-win-glow" x="700" y="140" width="220" height="260" filter="url(#scBlur12)"/>
+                <rect class="sc-win" x="700" y="140" width="220" height="260" rx="4"/>
+                <path d="M810 140 L810 400 M700 270 L920 270" stroke="#0a0e17" stroke-width="6"/>
+              </g>
+
+              <!-- потолок и парящая плита -->
+              <polygon class="sc-ceiling" points="0,0 1200,0 1020,60 180,60"/>
+              <polygon points="300,6 900,6 962,50 238,50" fill="#0e1424"/>
+              <g class="sc-soft" filter="url(#scBlur12)">
+                <path d="M238 50 L962 50" stroke-width="8" stroke-linecap="round"/>
+                <path d="M360 18 L840 18" stroke-width="7" stroke-linecap="round"/>
+                <path d="M410 36 L790 36" stroke-width="7" stroke-linecap="round"/>
+              </g>
+              <g class="sc-lines">
+                <path class="sc-g" pathLength="1" d="M238 50 L962 50" stroke-width="2.5" stroke-linecap="round"/>
+                <path class="sc-g" pathLength="1" d="M360 18 L840 18" stroke-width="2" stroke-linecap="round"/>
+                <path class="sc-g" pathLength="1" d="M410 36 L790 36" stroke-width="2" stroke-linecap="round"/>
+              </g>
+              <rect class="sc-wash" x="250" y="50" width="700" height="470" fill="url(#scWash)"/>
+
+              <!-- телевизор -->
+              <g class="sc-tv">
+                <rect class="sc-tv-glow" x="300" y="250" width="220" height="130" filter="url(#scBlur12)"/>
+                <rect x="300" y="250" width="220" height="130" rx="6" fill="#04060c" stroke="#1a2438" stroke-width="2"/>
+                <rect class="sc-tv-screen" x="310" y="260" width="200" height="110" rx="4"/>
+                <path d="M410 380 L410 410 M360 410 L460 410" stroke="#1a2438" stroke-width="5" stroke-linecap="round"/>
+              </g>
+
+              <!-- диван -->
+              <g fill="#04060c">
+                <rect x="430" y="600" width="340" height="52" rx="12"/>
+                <rect x="430" y="562" width="44" height="62" rx="10"/>
+                <rect x="726" y="562" width="44" height="62" rx="10"/>
+                <rect x="466" y="568" width="122" height="38" rx="9" fill="#0a0f1b"/>
+                <rect x="598" y="568" width="122" height="38" rx="9" fill="#0a0f1b"/>
+              </g>
+              <path class="sc-sofa-line" d="M430 600 L770 600" stroke-width="2"/>
+
+              <!-- торшер -->
+              <g>
+                <path d="M130 700 L130 470" stroke="#131c30" stroke-width="5" stroke-linecap="round"/>
+                <circle class="sc-lamp-glow" cx="130" cy="452" r="24" filter="url(#scBlur12)"/>
+                <circle class="sc-lamp" cx="130" cy="452" r="8"/>
+              </g>
+            </svg>
+            <div class="scene__shade" aria-hidden="true"></div>
+          </div>
+
+          <div class="scene-ui">
+            <div class="scene-modes" role="tablist" aria-label="Режимы освещения">
+              <button class="mode-btn is-active" type="button" data-mode="cold" role="tab" aria-selected="true">Холодный день</button>
+              <button class="mode-btn" type="button" data-mode="warm" role="tab" aria-selected="false">Тёплый вечер</button>
+              <button class="mode-btn" type="button" data-mode="cinema" role="tab" aria-selected="false">Кинотеатр</button>
+            </div>
+            <p class="scene-desc" id="mode-desc">Рабочий ритм. Ровный свет 5000 К — как дневной, только лучше.</p>
+            <div class="scene-bright">
+              <label for="bright-range">Яркость</label>
+              <input type="range" id="bright-range" min="8" max="100" value="90" step="1">
+              <output id="bright-out" for="bright-range">90%</output>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. Решения ===== -->
+    <section class="section solutions" id="solutions">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__tag">Что мы делаем</p>
+          <h2 class="section__title">Решения</h2>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card__scene card__scene--float" aria-hidden="true">
+              <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice">
+                <polygon points="30,20 290,20 262,86 58,86" fill="#0e1526"/>
+                <path class="card-line" pathLength="1" d="M58 86 L262 86" stroke="#4cc9f0" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M58 92 L262 92" stroke="#4cc9f0" stroke-width="10" stroke-linecap="round" opacity=".3" filter="blur(6px)"/>
+                <rect x="70" y="92" width="180" height="50" fill="#4cc9f0" opacity=".08"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Парящий потолок</h3>
+            <p class="card__text">Световая щель по периметру — полотно отрывается от стен и левитирует в воздухе.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__scene card__scene--lines" aria-hidden="true">
+              <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice">
+                <rect x="0" y="0" width="320" height="150" fill="#0a0f1c"/>
+                <path class="card-line" pathLength="1" d="M20 30 L220 30 L290 96" stroke="#4cc9f0" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                <path class="card-line" pathLength="1" d="M60 120 L160 60" stroke="#ffb347" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="290" cy="96" r="14" fill="#4cc9f0" opacity=".3" filter="blur(6px)"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Световые линии</h3>
+            <p class="card__text">Врезные неоновые линии любой геометрии — рисуем светом по потолку и стенам.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__scene card__scene--shadow" aria-hidden="true">
+              <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice">
+                <rect x="0" y="0" width="320" height="96" fill="#0e1526"/>
+                <rect x="0" y="96" width="320" height="14" fill="#04060c"/>
+                <rect x="0" y="110" width="320" height="40" fill="#0a0f1a"/>
+                <path class="card-line" pathLength="1" d="M0 96 L320 96" stroke="#4cc9f0" stroke-width="1.5" opacity=".9"/>
+                <rect x="0" y="98" width="320" height="10" fill="#4cc9f0" opacity=".18" filter="blur(4px)"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Теневой профиль</h3>
+            <p class="card__text">Идеальный теневой зазор вместо багета — потолок заканчивается чёткой линией.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__scene card__scene--track" aria-hidden="true">
+              <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice">
+                <rect x="0" y="0" width="320" height="150" fill="#0a0f1c"/>
+                <path d="M30 34 L290 34" stroke="#1c2942" stroke-width="6" stroke-linecap="round"/>
+                <g>
+                  <circle cx="90" cy="34" r="7" fill="#26334f"/>
+                  <path d="M90 41 L78 120 L102 120 Z" fill="#4cc9f0" opacity=".16"/>
+                  <circle cx="160" cy="34" r="7" fill="#26334f"/>
+                  <path d="M160 41 L148 120 L172 120 Z" fill="#ffb347" opacity=".18"/>
+                  <circle cx="230" cy="34" r="7" fill="#26334f"/>
+                  <path d="M230 41 L218 120 L242 120 Z" fill="#4cc9f0" opacity=".16"/>
+                </g>
+              </svg>
+            </div>
+            <h3 class="card__title">Трековые системы</h3>
+            <p class="card__text">Магнитные треки и поворотные споты — акцентный свет двигается за вашей жизнью.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. Портфолио ===== -->
+    <section class="section portfolio" id="portfolio">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__tag">Реализовано</p>
+          <h2 class="section__title">Портфолио</h2>
+          <p class="section__lead">Наведите курсор — свет отвечает.</p>
+        </div>
+
+        <div class="pf-grid">
+          <article class="pf-card reveal">
+            <div class="pf-scene pf-scene--1" aria-hidden="true">
+              <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice">
+                <rect width="400" height="260" fill="#0a0f1a"/>
+                <polygon points="60,30 340,30 310,120 90,120" fill="#0e1526"/>
+                <path class="pf-line" d="M90 120 L310 120" stroke="#4cc9f0" stroke-width="2.5" stroke-linecap="round"/>
+                <path class="pf-line" d="M130 60 L270 60" stroke="#4cc9f0" stroke-width="2" stroke-linecap="round"/>
+                <rect x="150" y="150" width="100" height="70" rx="4" fill="#04060c" stroke="#1a2438"/>
+                <path d="M40 260 L60 30 M360 260 L340 30" stroke="#141d31" stroke-width="1.5"/>
+              </svg>
+              <div class="pf-glow pf-glow--ice"></div>
+            </div>
+            <div class="pf-info">
+              <h3>Пентхаус на набережной</h3>
+              <p>Парящий потолок, 38 м.п. световых линий</p>
+            </div>
+          </article>
+
+          <article class="pf-card reveal">
+            <div class="pf-scene pf-scene--2" aria-hidden="true">
+              <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice">
+                <rect width="400" height="260" fill="#0c0a08"/>
+                <polygon points="50,26 350,26 322,104 78,104" fill="#141008"/>
+                <path class="pf-line" d="M78 104 L322 104" stroke="#ffb347" stroke-width="2.5" stroke-linecap="round"/>
+                <circle class="pf-line" cx="200" cy="150" r="46" stroke="#ffb347" stroke-width="2" fill="none"/>
+                <rect x="80" y="190" width="240" height="40" rx="10" fill="#04060c"/>
+              </svg>
+              <div class="pf-glow pf-glow--amber"></div>
+            </div>
+            <div class="pf-info">
+              <h3>Квартира в ЖК «Сити»</h3>
+              <p>Тёплые сценарии, световое кольцо над кухней</p>
+            </div>
+          </article>
+
+          <article class="pf-card reveal">
+            <div class="pf-scene pf-scene--3" aria-hidden="true">
+              <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice">
+                <rect width="400" height="260" fill="#0a0f1a"/>
+                <path class="pf-line" d="M30 40 L250 40 L370 130" stroke="#4cc9f0" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                <path class="pf-line" d="M60 90 L320 90" stroke="#4cc9f0" stroke-width="2" stroke-linecap="round"/>
+                <path d="M0 260 L400 260 L400 200 L0 200 Z" fill="#04060c"/>
+                <path d="M120 200 L120 130 M280 200 L280 130" stroke="#141d31" stroke-width="2"/>
+              </svg>
+              <div class="pf-glow pf-glow--ice"></div>
+            </div>
+            <div class="pf-info">
+              <h3>Лофт на заводе</h3>
+              <p>Линии под бетоном, треки на шинопроводе</p>
+            </div>
+          </article>
+
+          <article class="pf-card reveal">
+            <div class="pf-scene pf-scene--4" aria-hidden="true">
+              <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice">
+                <rect width="400" height="260" fill="#090c14"/>
+                <polygon points="0,0 400,0 330,80 70,80" fill="#0e1526"/>
+                <path class="pf-line" d="M70 80 L330 80" stroke="#4cc9f0" stroke-width="2.5" stroke-linecap="round"/>
+                <path class="pf-line" d="M110 40 L290 40" stroke="#ffb347" stroke-width="2" stroke-linecap="round"/>
+                <rect x="240" y="110" width="120" height="110" rx="4" fill="#0d1a2b"/>
+                <path d="M250 120 L350 120 M250 150 L350 150" stroke="#16283f" stroke-width="2"/>
+              </svg>
+              <div class="pf-glow pf-glow--mix"></div>
+            </div>
+            <div class="pf-info">
+              <h3>Дом в соснах</h3>
+              <p>Два контура: периметр и акцент над террасой</p>
+            </div>
+          </article>
+
+          <article class="pf-card reveal">
+            <div class="pf-scene pf-scene--5" aria-hidden="true">
+              <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice">
+                <rect width="400" height="260" fill="#0b0a08"/>
+                <rect x="0" y="0" width="400" height="70" fill="#120e06"/>
+                <path class="pf-line" d="M0 70 L400 70" stroke="#ffb347" stroke-width="2.5"/>
+                <rect x="60" y="120" width="280" height="90" rx="8" fill="#04060c"/>
+                <path class="pf-line" d="M60 118 L340 118" stroke="#ffd9a3" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="120" cy="95" r="5" fill="#ffb347"/><circle cx="200" cy="95" r="5" fill="#ffb347"/><circle cx="280" cy="95" r="5" fill="#ffb347"/>
+              </svg>
+              <div class="pf-glow pf-glow--amber"></div>
+            </div>
+            <div class="pf-info">
+              <h3>Кухня-гостиная 40 м²</h3>
+              <p>Свет над островом, диммирование по зонам</p>
+            </div>
+          </article>
+
+          <article class="pf-card reveal">
+            <div class="pf-scene pf-scene--6" aria-hidden="true">
+              <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice">
+                <rect width="400" height="260" fill="#0a0f1a"/>
+                <path class="pf-line" d="M40 30 L40 230" stroke="#4cc9f0" stroke-width="2" stroke-linecap="round"/>
+                <path class="pf-line" d="M40 30 L360 30" stroke="#4cc9f0" stroke-width="2" stroke-linecap="round"/>
+                <path class="pf-line" d="M120 80 L120 180 L280 180" stroke="#4cc9f0" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+                <rect x="180" y="200" width="180" height="34" rx="8" fill="#04060c"/>
+                <circle cx="330" cy="120" r="30" stroke="#1c2942" stroke-width="2" fill="none"/>
+              </svg>
+              <div class="pf-glow pf-glow--ice"></div>
+            </div>
+            <div class="pf-info">
+              <h3>Кабинет архитектора</h3>
+              <p>Свет переходит с потолка на стену</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. Процесс ===== -->
+    <section class="section process" id="process">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__tag">Как мы работаем</p>
+          <h2 class="section__title">Процесс</h2>
+        </div>
+
+        <div class="steps reveal" id="steps">
+          <svg class="steps__line" viewBox="0 0 1200 8" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 4 L1200 4" stroke="#141d31" stroke-width="2"/>
+            <path class="steps__ignite" pathLength="1" d="M0 4 L1200 4" stroke="#4cc9f0" stroke-width="2"/>
+          </svg>
+          <ol class="steps__list">
+            <li class="step">
+              <span class="step__num">01</span>
+              <h3>Визит на замер</h3>
+              <p>Инженер приезжает с приборами, фиксирует геометрию и электрику.</p>
+            </li>
+            <li class="step">
+              <span class="step__num">02</span>
+              <h3>Световой проект в 3D</h3>
+              <p>Показываем, как загорится ваша квартира, ещё до монтажа.</p>
+            </li>
+            <li class="step">
+              <span class="step__num">03</span>
+              <h3>Производство профиля</h3>
+              <p>Гнём и красим профиль на собственном производстве.</p>
+            </li>
+            <li class="step">
+              <span class="step__num">04</span>
+              <h3>Монтаж за 1–2 дня</h3>
+              <p>Чистый монтаж без пыли. Включаем свет и настраиваем сценарии.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. Цены ===== -->
+    <section class="section prices" id="prices">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__tag">Честно и сдержанно</p>
+          <h2 class="section__title">Цены</h2>
+        </div>
+
+        <div class="price-table reveal" role="table" aria-label="Прайс-лист">
+          <div class="price-row" role="row">
+            <div class="price-row__name" role="cell">Парящий потолок<span>профиль + подсветка + монтаж</span></div>
+            <div class="price-row__value" role="cell">от 2 900 ₽/м.п.</div>
+          </div>
+          <div class="price-row" role="row">
+            <div class="price-row__name" role="cell">Световая линия<span>врезная, с диммером</span></div>
+            <div class="price-row__value" role="cell">от 3 400 ₽/м.п.</div>
+          </div>
+          <div class="price-row" role="row">
+            <div class="price-row__name" role="cell">Полотно с монтажом<span>премиальные фактуры MSD / Descor</span></div>
+            <div class="price-row__value" role="cell">от 890 ₽/м²</div>
+          </div>
+          <div class="price-row price-row--free" role="row">
+            <div class="price-row__name" role="cell">Световой проект в 3D<span>визуализация до начала работ</span></div>
+            <div class="price-row__value" role="cell">0 ₽ <em>при заказе</em></div>
+          </div>
+        </div>
+        <p class="prices__note reveal">Точную смету фиксируем в договоре после замера — цена не меняется в процессе.</p>
+      </div>
+    </section>
+
+    <!-- ===== 7. Почему мы ===== -->
+    <section class="section why" id="why">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__tag">Почему мы</p>
+          <h2 class="section__title">Свет — это инженерия</h2>
+        </div>
+
+        <div class="why-grid">
+          <article class="why-item reveal">
+            <div class="why-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none">
+                <path d="M6 32 V16 L14 22 V16 L22 22 V16 L34 28 V32 Z" stroke="#4CC9F0" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M4 32 H36" stroke="#FFB347" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Собственное производство профиля</h3>
+            <p>Не ждём поставок: гнём алюминий под ваш проект за 3–5 дней, любые радиусы и углы.</p>
+          </article>
+
+          <article class="why-item reveal">
+            <div class="why-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none">
+                <rect x="12" y="5" width="16" height="30" rx="4" stroke="#4CC9F0" stroke-width="2"/>
+                <path d="M17 30 H23" stroke="#FFB347" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="20" cy="14" r="3" stroke="#4CC9F0" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3>Диммеры и управление со смартфона</h3>
+            <p>Яркость и температура света — в приложении, голосом или по расписанию.</p>
+          </article>
+
+          <article class="why-item reveal">
+            <div class="why-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none">
+                <path d="M20 4 L33 9 V19 C33 28 27 33 20 36 C13 33 7 28 7 19 V9 Z" stroke="#4CC9F0" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M14 19 L18 23 L26 15" stroke="#FFB347" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Гарантия 5 лет на свет, 15 на полотно</h3>
+            <p>Светодиоды с запасом по току не деградируют годами — отвечаем за это договором.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 8. Отзывы ===== -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__tag">Отзывы</p>
+          <h2 class="section__title">«Выглядит как в журнале»</h2>
+        </div>
+
+        <div class="carousel reveal" id="carousel">
+          <div class="carousel__viewport">
+            <div class="carousel__track" id="reviews-track">
+              <blockquote class="review">
+                <p>«Гости спрашивают, где мы купили такой потолок. Никто не верит, что это натяжной — свет делает его похожим на архитектуру из журнала».</p>
+                <footer><b>Марина и Олег</b><span>квартира 96 м², парящий потолок + линии</span></footer>
+              </blockquote>
+              <blockquote class="review">
+                <p>«Как дизайнер я боюсь подрядчиков, которые “упрощают” проект. Здесь сделали ровно по визуализации — щель 5 мм по всему периметру, без единого срыва».</p>
+                <footer><b>Анна Вертова</b><span>дизайнер интерьеров, 4 совместных проекта</span></footer>
+              </blockquote>
+              <blockquote class="review">
+                <p>«Вечером включаю “кинотеатр” с телефона — комната гаснет, остаётся тонкая линия. Это лучшая часть ремонта, честно».</p>
+                <footer><b>Дмитрий</b><span>лофт 74 м², треки + сценарии</span></footer>
+              </blockquote>
+              <blockquote class="review">
+                <p>«Замер в среду, проект в пятницу, монтаж за один день. Убрали за собой так, что мы сразу занесли мебель».</p>
+                <footer><b>Екатерина</b><span>дом 140 м², два контура подсветки</span></footer>
+              </blockquote>
+            </div>
+          </div>
+          <div class="carousel__controls">
+            <button class="carousel__btn" id="rev-prev" type="button" aria-label="Предыдущий отзыв">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M15 5 L8 12 L15 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="carousel__dots" id="rev-dots" role="tablist" aria-label="Слайды отзывов"></div>
+            <button class="carousel__btn" id="rev-next" type="button" aria-label="Следующий отзыв">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M9 5 L16 12 L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 9. Финальный CTA ===== -->
+    <section class="section cta" id="cta">
+      <div class="container cta__inner">
+        <div class="cta__text reveal">
+          <h2 class="section__title">Расскажите<br>о вашей квартире</h2>
+          <p class="section__lead">Пришлите план или пару фото — за день предложим световую схему и смету. Или просто позвоните: <a href="tel:+79090939400" class="cta__phone">+7 909 093-94-00</a></p>
+          <ul class="cta__bullets">
+            <li>Замер и световой проект — бесплатно при заказе</li>
+            <li>Смета фиксируется в договоре</li>
+            <li>Монтаж за 1–2 дня, без пыли</li>
+          </ul>
+        </div>
+
+        <div class="cta__form-wrap reveal">
+          <form class="lead-form" id="lead-form" novalidate>
+            <h3 class="lead-form__title">Обсудить проект</h3>
+            <label class="field">
+              <span>Ваше имя</span>
+              <input type="text" name="name" id="f-name" placeholder="Как к вам обращаться" autocomplete="name" required>
+            </label>
+            <label class="field">
+              <span>Телефон</span>
+              <input type="tel" name="phone" id="f-phone" placeholder="+7 ___ ___-__-__" autocomplete="tel" required>
+            </label>
+            <label class="field">
+              <span>Что хотите</span>
+              <textarea name="wish" id="f-wish" rows="3" placeholder="Например: парящий потолок в гостиной, линии в коридоре"></textarea>
+            </label>
+            <button type="submit" class="btn btn--ice lead-form__submit">Получить световую схему</button>
+            <p class="lead-form__note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+          </form>
+
+          <div class="form-success" id="form-success" hidden>
+            <svg class="form-success__icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <circle cx="32" cy="32" r="29" stroke="#4CC9F0" stroke-width="2"/>
+              <path d="M20 33 L28 41 L44 24" stroke="#FFB347" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3>Заявка принята</h3>
+            <p>Перезвоним в течение 30 минут в рабочее время — обсудим ваш свет.</p>
+            <button type="button" class="btn btn--ghost" id="form-again">Отправить ещё одну</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== 10. Футер ===== -->
+  <footer class="footer" id="contacts">
+    <div class="container footer__inner">
+      <div class="footer__col footer__col--brand">
+        <a href="#hero" class="logo">
+          <svg class="logo__mark" width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+            <path d="M3 21 L15 5 L27 21" stroke="#4CC9F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 25 L22 25" stroke="#FFB347" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="logo__text">СВЕТАРХ</span>
+        </a>
+        <p>Студия световых решений и натяжных потолков. Потолок, который светится.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Контакты</h4>
+        <a href="tel:+79090939400" class="footer__phone">+7 909 093-94-00</a>
+        <p>Москва, Складочная 1, стр. 18<br>шоурум и производство</p>
+        <p class="footer__showroom">Показ-рум работает по записи</p>
+      </div>
+      <div class="footer__col">
+        <h4>Мы на связи</h4>
+        <div class="socials">
+          <a href="#" class="socials__link" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M21 4 L3 11.4 L8.5 13.2 L10 19 L13 15 L17.5 18.4 Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#" class="socials__link" aria-label="ВКонтакте">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M3 7 C3.6 12 7 16.4 12.5 17 H13 V13.2 C15 13.5 16.6 14.9 17.4 17 H21 C20 14.2 17.9 12.4 16.3 11.7 C17.9 10.8 19.7 8.8 20.2 7 H17 C16.3 9.1 14.6 11 13 11.2 V7 H10 V14.6 C7.8 13.7 6.1 10.9 5.9 7 Z" fill="currentColor"/></svg>
+          </a>
+          <a href="#" class="socials__link" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3.5 A8.5 8.5 0 0 0 4.8 15.6 L3.5 20.5 L8.5 19.2 A8.5 8.5 0 1 0 12 3.5 Z" stroke="currentColor" stroke-width="1.6"/><path d="M9 8.5 C9.4 12 12 14.6 15.5 15 L16.3 13.4 L14.2 12.3 L13.4 13.1 C12.2 12.5 11.4 11.7 10.9 10.6 L11.7 9.8 L10.6 7.7 Z" fill="currentColor"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© <span id="year">2026</span> СВЕТАРХ. Демо-проект портфолио.</span>
+      <a href="#hero">Наверх ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

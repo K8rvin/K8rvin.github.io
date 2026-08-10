@@ -250,4 +250,24 @@ const WORKS = [
     style: "Яркий, семейный, быстрый заказ",
     path: "cleaning/sunny-day/",
   },
+
+  // --- Натяжные потолки ---
+  {
+    category: "Натяжные потолки",
+    title: "СкайДизайн",
+    style: "Светлый, технологичный, конфигуратор",
+    path: "stretch-ceilings/sky-design/",
+  },
+  {
+    category: "Натяжные потолки",
+    title: "СВЕТАРХ",
+    style: "Тёмный дизайнерский, архитектура света",
+    path: "stretch-ceilings/light-lines/",
+  },
+  {
+    category: "Натяжные потолки",
+    title: "Потолок за один день",
+    style: "Яркий, конверсионный, честная цена",
+    path: "stretch-ceilings/one-day/",
+  },
 ];
