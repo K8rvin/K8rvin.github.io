@@ -230,4 +230,24 @@ const WORKS = [
     style: "Скандинавский минимализм, без стресса",
     path: "vet-clinic/calm-paws/",
   },
+
+  // --- Клининг ---
+  {
+    category: "Клининг",
+    title: "PureLab",
+    style: "Лаборатория чистоты, технологичный",
+    path: "cleaning/purelab/",
+  },
+  {
+    category: "Клининг",
+    title: "Клининг-консьерж",
+    style: "Тёмный премиум, отельный сервис",
+    path: "cleaning/concierge/",
+  },
+  {
+    category: "Клининг",
+    title: "Солнечный день",
+    style: "Яркий, семейный, быстрый заказ",
+    path: "cleaning/sunny-day/",
+  },
 ];
