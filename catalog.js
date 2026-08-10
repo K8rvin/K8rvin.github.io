@@ -210,4 +210,24 @@ const WORKS = [
     style: "Редакционный, истории проектов",
     path: "renovation/magazine/",
   },
+
+  // --- Ветклиника ---
+  {
+    category: "Ветклиника",
+    title: "VET·OS",
+    style: "Цифровая клиника, hi-tech",
+    path: "vet-clinic/vet-os/",
+  },
+  {
+    category: "Ветклиника",
+    title: "Лапы и Хвосты",
+    style: "Яркий, игривый, эмоциональный",
+    path: "vet-clinic/paws-play/",
+  },
+  {
+    category: "Ветклиника",
+    title: "Спокойные лапы",
+    style: "Скандинавский минимализм, без стресса",
+    path: "vet-clinic/calm-paws/",
+  },
 ];

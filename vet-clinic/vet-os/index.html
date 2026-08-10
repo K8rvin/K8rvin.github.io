@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VET·OS — Ветеринария нового поколения</title>
+  <meta name="description" content="Цифровая ветеринарная клиника: запись онлайн за 30 секунд, медкарта питомца в телефоне, своя лаборатория — анализы за 40 минут.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- SVG defs: градиенты для всей страницы -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="g-mint" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#2EE6A8"/><stop offset="1" stop-color="#5AA9FF"/>
+      </linearGradient>
+      <linearGradient id="g-blue" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#5AA9FF"/><stop offset="1" stop-color="#2EE6A8"/>
+      </linearGradient>
+      <linearGradient id="g-av1" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#2EE6A8"/><stop offset="1" stop-color="#0E8F6A"/>
+      </linearGradient>
+      <linearGradient id="g-av2" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#5AA9FF"/><stop offset="1" stop-color="#2B5EA8"/>
+      </linearGradient>
+      <linearGradient id="g-av3" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#8A7CFF"/><stop offset="1" stop-color="#4A3FB8"/>
+      </linearGradient>
+      <linearGradient id="g-av4" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#FF8FB1"/><stop offset="1" stop-color="#B84A6E"/>
+      </linearGradient>
+      <radialGradient id="g-lamp" cx="0.5" cy="0.2" r="0.9">
+        <stop offset="0" stop-color="#2EE6A8" stop-opacity="0.5"/><stop offset="1" stop-color="#2EE6A8" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+  </svg>
+
+  <!-- ===== ШАПКА ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="VET·OS — на главную">
+        <svg class="logo__mark" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
+          <rect x="1.5" y="1.5" width="29" height="29" rx="9" fill="none" stroke="url(#g-mint)" stroke-width="2"/>
+          <path d="M7 16h4l2.5-6 4 12 2.5-6H25" fill="none" stroke="#2EE6A8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="logo__text">VET<em>·</em>OS</span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#booking" class="nav__link">Запись</a>
+        <a href="#services" class="nav__link">Услуги</a>
+        <a href="#clinic" class="nav__link">Клиника</a>
+        <a href="#doctors" class="nav__link">Врачи</a>
+        <a href="#reviews" class="nav__link">Отзывы</a>
+        <a href="tel:+79090939400" class="btn btn--ghost nav__phone">
+          <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.3 0 .7-.2 1l-2.3 2.1z" fill="currentColor"/></svg>
+          <span class="mono">+7 909 093-94-00</span>
+        </a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== 1. HERO ===== -->
+    <section class="hero">
+      <div class="hero__grid-bg" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--mint" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--blue" aria-hidden="true"></div>
+
+      <!-- Кардиограмма-пульс: фоновая линия внизу hero -->
+      <div class="hero__ecg" aria-hidden="true">
+        <svg viewBox="0 0 1200 140" preserveAspectRatio="none">
+          <path class="ecg-base" d="M0 70 L120 70 L140 70 L152 30 L166 110 L178 70 L300 70 L312 46 L326 94 L338 70 L470 70 L482 18 L498 122 L512 70 L640 70 L652 48 L664 92 L676 70 L810 70 L822 30 L836 110 L848 70 L970 70 L982 44 L996 96 L1008 70 L1200 70"/>
+          <path class="ecg-run" d="M0 70 L120 70 L140 70 L152 30 L166 110 L178 70 L300 70 L312 46 L326 94 L338 70 L470 70 L482 18 L498 122 L512 70 L640 70 L652 48 L664 92 L676 70 L810 70 L822 30 L836 110 L848 70 L970 70 L982 44 L996 96 L1008 70 L1200 70"/>
+        </svg>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <div class="hero__badge mono">
+            <span class="hero__badge-dot"></span>
+            ЦИФРОВАЯ КЛИНИКА · v2.0 ONLINE
+          </div>
+          <h1 class="hero__title">
+            Ветеринария<br>нового <span class="text-gradient">поколения</span>
+          </h1>
+          <p class="hero__subtitle">
+            Запись онлайн за 30 секунд. Медкарта питомца в телефоне.
+            Своя лаборатория — анализы за 40 минут.
+          </p>
+          <div class="hero__actions">
+            <a href="#booking" class="btn btn--mint btn--lg">
+              Записаться онлайн
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="tel:+79090939400" class="btn btn--ghost btn--lg">
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.3 0 .7-.2 1l-2.3 2.1z" fill="currentColor"/></svg>
+              Позвонить 24/7
+            </a>
+          </div>
+          <div class="hero__metrics mono">
+            <div class="hero__metric"><b>40 мин</b><span>анализы</span></div>
+            <div class="hero__metric-sep"></div>
+            <div class="hero__metric"><b>24/7</b><span>на связи</span></div>
+            <div class="hero__metric-sep"></div>
+            <div class="hero__metric"><b>12 400+</b><span>питомцев</span></div>
+          </div>
+        </div>
+
+        <!-- Медкарта питомца: живой дашборд -->
+        <div class="medcard reveal" id="medcard">
+          <div class="medcard__head">
+            <div class="medcard__patient">
+              <svg class="medcard__avatar" viewBox="0 0 64 64" width="52" height="52" aria-hidden="true">
+                <circle cx="32" cy="32" r="30" fill="#131C33"/>
+                <circle cx="32" cy="32" r="30" fill="none" stroke="url(#g-mint)" stroke-width="1.5" opacity="0.7"/>
+                <path d="M18 26 L15 12 L27 19 Z" fill="#2EE6A8" opacity="0.9"/>
+                <path d="M46 26 L49 12 L37 19 Z" fill="#2EE6A8" opacity="0.9"/>
+                <circle cx="32" cy="34" r="15" fill="#1C2A4A"/>
+                <circle cx="26" cy="32" r="2.2" fill="#2EE6A8"/>
+                <circle cx="38" cy="32" r="2.2" fill="#2EE6A8"/>
+                <path d="M29.5 39 Q32 41.5 34.5 39" fill="none" stroke="#5AA9FF" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M32 36.5 v2" stroke="#5AA9FF" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+              <div>
+                <div class="medcard__name">Барсик</div>
+                <div class="medcard__meta mono">КОТ · 4 ГОДА · ID #A-7741</div>
+              </div>
+            </div>
+            <div class="medcard__status mono"><span class="pulse-dot"></span>LIVE</div>
+          </div>
+
+          <div class="medcard__pulse">
+            <div class="medcard__pulse-head mono">
+              <span>ПУЛЬС</span>
+              <b><span id="heart-rate">128</span> УД/МИН</b>
+            </div>
+            <svg viewBox="0 0 260 56" preserveAspectRatio="none" aria-hidden="true">
+              <path class="ecg-base ecg-base--card" d="M0 30 L30 30 L38 30 L44 12 L50 46 L56 30 L86 30 L92 22 L98 38 L104 30 L134 30 L142 6 L150 52 L158 30 L188 30 L194 20 L200 40 L206 30 L236 30 L242 14 L248 44 L254 30 L260 30"/>
+              <path class="ecg-run ecg-run--card" d="M0 30 L30 30 L38 30 L44 12 L50 46 L56 30 L86 30 L92 22 L98 38 L104 30 L134 30 L142 6 L150 52 L158 30 L188 30 L194 20 L200 40 L206 30 L236 30 L242 14 L248 44 L254 30 L260 30"/>
+            </svg>
+          </div>
+
+          <div class="medcard__rows">
+            <div class="medcard__row">
+              <span class="medcard__row-label">Прививки</span>
+              <div class="vaccines">
+                <span class="vaccine vaccine--done mono" title="Бешенство">V1</span>
+                <span class="vaccine vaccine--done mono" title="Панлейкопения">V2</span>
+                <span class="vaccine vaccine--done mono" title="Калицивироз">V3</span>
+                <span class="vaccine vaccine--next mono" title="Ревакцинация">V4</span>
+              </div>
+            </div>
+            <div class="medcard__row">
+              <span class="medcard__row-label">Следующий визит</span>
+              <span class="medcard__row-value mono" id="next-visit">—</span>
+            </div>
+            <div class="medcard__row">
+              <span class="medcard__row-label">Здоровье</span>
+              <div class="health-bar"><i style="width:92%"></i></div>
+              <span class="medcard__row-value mono">92%</span>
+            </div>
+          </div>
+          <div class="medcard__scanline" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2. ПЛАШКА СТАТУСА ===== -->
+    <div class="statusbar" id="statusbar">
+      <div class="container statusbar__inner mono">
+        <div class="statusbar__item">
+          <span class="pulse-dot"></span>
+          <span>Сейчас свободно <b id="free-doctors-count">3</b> врача из 7</span>
+        </div>
+        <div class="statusbar__sep" aria-hidden="true"></div>
+        <div class="statusbar__item">
+          <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span>Ближайшее окно: <b id="nearest-slot">сегодня 16:40</b></span>
+        </div>
+        <div class="statusbar__sep" aria-hidden="true"></div>
+        <div class="statusbar__item statusbar__item--wide">
+          <svg viewBox="0 0 32 32" width="16" height="16" aria-hidden="true"><path d="M7 16h4l2.5-6 4 12 2.5-6H25" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Лаборатория работает · результаты в Telegram</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 3. ОНЛАЙН-ЗАПИСЬ ===== -->
+    <section class="section booking" id="booking">
+      <div class="container">
+        <div class="section__head reveal">
+          <div class="section__tag mono">МОДУЛЬ 01 / BOOKING</div>
+          <h2 class="section__title">Онлайн-запись <span class="text-gradient">за 30 секунд</span></h2>
+          <p class="section__subtitle">Врач → день → время → питомец. Без звонков и ожидания на линии.</p>
+        </div>
+
+        <div class="booking__widget glass reveal" id="booking-widget">
+          <!-- Шаги -->
+          <div class="booking__steps mono" id="booking-steps">
+            <div class="bstep is-active" data-step="1"><i>1</i><span>Врач</span></div>
+            <div class="bstep" data-step="2"><i>2</i><span>День и время</span></div>
+            <div class="bstep" data-step="3"><i>3</i><span>Питомец</span></div>
+            <div class="bstep" data-step="4"><i>4</i><span>Готово</span></div>
+          </div>
+
+          <div class="booking__body" id="booking-body">
+            <!-- Шаг 1: врач -->
+            <div class="booking__pane is-active" data-pane="1">
+              <h3 class="booking__pane-title">Выберите врача</h3>
+              <div class="booking__doctors" id="doctor-list"></div>
+            </div>
+            <!-- Шаг 2: день и слот -->
+            <div class="booking__pane" data-pane="2">
+              <h3 class="booking__pane-title">День и время</h3>
+              <div class="booking__days" id="day-list"></div>
+              <div class="booking__slots-wrap">
+                <div class="booking__slots-label mono">СВОБОДНЫЕ ОКНА <span id="slots-doctor-name"></span></div>
+                <div class="booking__slots" id="slot-list"></div>
+              </div>
+            </div>
+            <!-- Шаг 3: тип питомца -->
+            <div class="booking__pane" data-pane="3">
+              <h3 class="booking__pane-title">Кто ваш питомец?</h3>
+              <div class="booking__pets" id="pet-list"></div>
+              <div class="booking__summary" id="booking-summary"></div>
+            </div>
+          </div>
+
+          <!-- Экран успеха -->
+          <div class="booking__success" id="booking-success" hidden>
+            <div class="booking__success-grid">
+              <div class="qr" id="qr-grid" aria-label="QR-код записи"></div>
+              <div class="booking__success-info">
+                <div class="booking__success-badge mono">ЗАПИСЬ ПОДТВЕРЖДЕНА</div>
+                <h3>Ждём вас, <span id="success-pet">питомец</span>!</h3>
+                <div class="booking__success-rows mono" id="success-details"></div>
+                <p class="booking__success-note">Покажите этот код на ресепшен — или просто назовите номер записи. Напомним в Telegram за 2 часа.</p>
+                <div class="booking__success-actions">
+                  <button class="btn btn--ghost" id="booking-again">Записать ещё одного питомца</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Подвал виджета -->
+          <div class="booking__footer" id="booking-footer">
+            <button class="btn btn--ghost btn--sm" id="booking-back" disabled>← Назад</button>
+            <div class="booking__hint mono" id="booking-hint">Выберите врача, чтобы продолжить</div>
+            <button class="btn btn--mint" id="booking-next" disabled>Далее →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. УСЛУГИ ===== -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section__head reveal">
+          <div class="section__tag mono">МОДУЛЬ 02 / SERVICES</div>
+          <h2 class="section__title">Услуги — как <span class="text-gradient">модули системы</span></h2>
+          <p class="section__subtitle">Каждая услуга — подключаемый модуль. Наведите, чтобы увидеть время и цену.</p>
+        </div>
+        <div class="services__grid" id="services-grid"><!-- JS --></div>
+      </div>
+    </section>
+
+    <!-- ===== 5. КЛИНИКА ВНУТРИ ===== -->
+    <section class="section clinic" id="clinic">
+      <div class="container">
+        <div class="section__head reveal">
+          <div class="section__tag mono">МОДУЛЬ 03 / FACILITY</div>
+          <h2 class="section__title">Клиника <span class="text-gradient">внутри</span></h2>
+          <p class="section__subtitle">Оборудование уровня человеческих клиник. Листайте — покажем каждое помещение.</p>
+        </div>
+
+        <div class="slider reveal" id="rooms-slider">
+          <div class="slider__viewport">
+            <div class="slider__track" id="rooms-track">
+
+              <div class="room glass">
+                <svg class="room__scene" viewBox="0 0 640 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <rect width="640" height="300" fill="#0E1628"/>
+                  <path d="M0 250 H640" stroke="#1C2A4A" stroke-width="2"/>
+                  <path d="M60 250 V300 M580 250 V300" stroke="#1C2A4A" stroke-width="2"/>
+                  <ellipse cx="320" cy="130" rx="240" ry="120" fill="url(#g-lamp)"/>
+                  <!-- операционная лампа -->
+                  <line x1="320" y1="0" x2="320" y2="60" stroke="#2EE6A8" stroke-width="3" opacity="0.8"/>
+                  <circle cx="320" cy="78" r="26" fill="#131C33" stroke="#2EE6A8" stroke-width="2.5"/>
+                  <circle cx="320" cy="78" r="10" fill="#2EE6A8" opacity="0.9"/>
+                  <circle cx="280" cy="88" r="14" fill="#131C33" stroke="#5AA9FF" stroke-width="2"/>
+                  <circle cx="360" cy="88" r="14" fill="#131C33" stroke="#5AA9FF" stroke-width="2"/>
+                  <!-- операционный стол -->
+                  <rect x="220" y="170" width="200" height="22" rx="10" fill="#1C2A4A" stroke="#2EE6A8" stroke-width="1.5"/>
+                  <rect x="300" y="192" width="40" height="58" fill="#131C33"/>
+                  <rect x="270" y="248" width="100" height="8" rx="4" fill="#1C2A4A"/>
+                  <!-- монитор -->
+                  <rect x="470" y="120" width="110" height="72" rx="8" fill="#0C1220" stroke="#5AA9FF" stroke-width="2"/>
+                  <path d="M480 156 h16 l6 -14 8 26 6 -12 h14 l5 -8 7 18 5 -10 h24" fill="none" stroke="#2EE6A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <line x1="525" y1="192" x2="525" y2="230" stroke="#1C2A4A" stroke-width="4"/>
+                  <!-- наркозный аппарат -->
+                  <rect x="70" y="150" width="70" height="100" rx="8" fill="#131C33" stroke="#2B3D66" stroke-width="2"/>
+                  <circle cx="105" cy="178" r="14" fill="none" stroke="#5AA9FF" stroke-width="2"/>
+                  <path d="M105 178 L112 170" stroke="#5AA9FF" stroke-width="2" stroke-linecap="round"/>
+                  <rect x="84" y="204" width="42" height="8" rx="4" fill="#2EE6A8" opacity="0.5"/>
+                  <rect x="84" y="218" width="42" height="8" rx="4" fill="#5AA9FF" opacity="0.5"/>
+                </svg>
+                <div class="room__info">
+                  <h3>Операционная</h3>
+                  <div class="room__tags mono">
+                    <span>Наркозный аппарат Dräger</span><span>Монитор жизненных функций</span><span>Лампа бестеневая LED</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="room glass">
+                <svg class="room__scene" viewBox="0 0 640 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <rect width="640" height="300" fill="#0E1628"/>
+                  <path d="M0 250 H640" stroke="#1C2A4A" stroke-width="2"/>
+                  <!-- анализатор -->
+                  <rect x="60" y="110" width="170" height="140" rx="12" fill="#131C33" stroke="#2EE6A8" stroke-width="2"/>
+                  <rect x="80" y="130" width="130" height="46" rx="6" fill="#0C1220"/>
+                  <path d="M88 158 h20 l6 -12 8 22 6 -10 h18 l5 -7 7 15 5 -8 h38" fill="none" stroke="#2EE6A8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="100" cy="205" r="9" fill="#2EE6A8" opacity="0.85"/>
+                  <circle cx="126" cy="205" r="9" fill="#5AA9FF" opacity="0.85"/>
+                  <circle cx="152" cy="205" r="9" fill="#1C2A4A" stroke="#5AA9FF" stroke-width="1.5"/>
+                  <rect x="80" y="228" width="130" height="8" rx="4" fill="#1C2A4A"/>
+                  <!-- колбы -->
+                  <path d="M320 120 h14 v34 l22 50 a10 10 0 0 1 -9 14 h-40 a10 10 0 0 1 -9 -14 l22 -50 v-34 z" fill="#131C33" stroke="#5AA9FF" stroke-width="2"/>
+                  <path d="M306 192 l14 -32 h14 l14 32 a10 10 0 0 1 -9 12 h-24 a10 10 0 0 1 -9 -12z" fill="#2EE6A8" opacity="0.35"/>
+                  <path d="M400 140 h12 v26 l18 42 a9 9 0 0 1 -8 13 h-32 a9 9 0 0 1 -8 -13 l18 -42 v-26 z" fill="#131C33" stroke="#2EE6A8" stroke-width="2"/>
+                  <path d="M388 198 l12 -28 h12 l12 28 a9 9 0 0 1 -8 11 h-20 a9 9 0 0 1 -8 -11z" fill="#5AA9FF" opacity="0.4"/>
+                  <!-- центрифуга -->
+                  <ellipse cx="530" cy="170" rx="52" ry="26" fill="#131C33" stroke="#2B3D66" stroke-width="2"/>
+                  <rect x="478" y="170" width="104" height="60" rx="10" fill="#131C33" stroke="#2B3D66" stroke-width="2"/>
+                  <ellipse cx="530" cy="230" rx="52" ry="18" fill="#0C1220" stroke="#2B3D66" stroke-width="2"/>
+                  <circle cx="530" cy="170" r="12" fill="#2EE6A8" opacity="0.7"/>
+                  <!-- пузырьки -->
+                  <circle cx="330" cy="140" r="3" fill="#2EE6A8" opacity="0.7"/>
+                  <circle cx="338" cy="128" r="2" fill="#2EE6A8" opacity="0.5"/>
+                  <circle cx="410" cy="150" r="2.5" fill="#5AA9FF" opacity="0.7"/>
+                </svg>
+                <div class="room__info">
+                  <h3>Лаборатория</h3>
+                  <div class="room__tags mono">
+                    <span>Биохимия за 40 минут</span><span>Общий анализ крови</span><span>ПЦР-диагностика</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="room glass">
+                <svg class="room__scene" viewBox="0 0 640 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <rect width="640" height="300" fill="#0E1628"/>
+                  <path d="M0 250 H640" stroke="#1C2A4A" stroke-width="2"/>
+                  <!-- боксы стационара -->
+                  <g stroke="#2B3D66" stroke-width="2" fill="#131C33">
+                    <rect x="60" y="90" width="150" height="110" rx="10"/>
+                    <rect x="240" y="90" width="150" height="110" rx="10"/>
+                    <rect x="420" y="90" width="150" height="110" rx="10"/>
+                  </g>
+                  <g stroke="#2B3D66" stroke-width="1.5" opacity="0.8">
+                    <line x1="85" y1="90" x2="85" y2="200"/><line x1="110" y1="90" x2="110" y2="200"/><line x1="135" y1="90" x2="135" y2="200"/><line x1="160" y1="90" x2="160" y2="200"/><line x1="185" y1="90" x2="185" y2="200"/>
+                    <line x1="265" y1="90" x2="265" y2="200"/><line x1="290" y1="90" x2="290" y2="200"/><line x1="315" y1="90" x2="315" y2="200"/><line x1="340" y1="90" x2="340" y2="200"/><line x1="365" y1="90" x2="365" y2="200"/>
+                    <line x1="445" y1="90" x2="445" y2="200"/><line x1="470" y1="90" x2="470" y2="200"/><line x1="495" y1="90" x2="495" y2="200"/><line x1="520" y1="90" x2="520" y2="200"/><line x1="545" y1="90" x2="545" y2="200"/>
+                  </g>
+                  <!-- кот в боксе -->
+                  <circle cx="135" cy="160" r="22" fill="#1C2A4A"/>
+                  <path d="M120 148 L116 132 L130 142 Z M150 148 L154 132 L140 142 Z" fill="#2EE6A8" opacity="0.8"/>
+                  <circle cx="128" cy="158" r="2.4" fill="#2EE6A8"/><circle cx="142" cy="158" r="2.4" fill="#2EE6A8"/>
+                  <!-- собака в боксе -->
+                  <ellipse cx="315" cy="165" rx="26" ry="18" fill="#1C2A4A"/>
+                  <ellipse cx="300" cy="146" rx="7" ry="12" fill="#5AA9FF" opacity="0.7"/>
+                  <ellipse cx="330" cy="146" rx="7" ry="12" fill="#5AA9FF" opacity="0.7"/>
+                  <circle cx="308" cy="160" r="2.4" fill="#2EE6A8"/><circle cx="322" cy="160" r="2.4" fill="#2EE6A8"/>
+                  <!-- капельница -->
+                  <line x1="495" y1="60" x2="495" y2="118" stroke="#2EE6A8" stroke-width="2" opacity="0.8"/>
+                  <rect x="482" y="40" width="26" height="34" rx="6" fill="#131C33" stroke="#2EE6A8" stroke-width="1.8"/>
+                  <rect x="486" y="52" width="18" height="18" rx="4" fill="#2EE6A8" opacity="0.35"/>
+                  <circle cx="495" cy="130" r="2.5" fill="#2EE6A8"/>
+                  <!-- мониторы над боксами -->
+                  <g class="mono">
+                    <rect x="92" y="212" width="86" height="22" rx="5" fill="#0C1220" stroke="#2B3D66"/>
+                    <path d="M100 223 h10 l4 -7 5 13 4 -6 h10" fill="none" stroke="#2EE6A8" stroke-width="1.6" stroke-linecap="round"/>
+                    <rect x="272" y="212" width="86" height="22" rx="5" fill="#0C1220" stroke="#2B3D66"/>
+                    <path d="M280 223 h10 l4 -7 5 13 4 -6 h10" fill="none" stroke="#5AA9FF" stroke-width="1.6" stroke-linecap="round"/>
+                    <rect x="452" y="212" width="86" height="22" rx="5" fill="#0C1220" stroke="#2B3D66"/>
+                    <path d="M460 223 h10 l4 -7 5 13 4 -6 h10" fill="none" stroke="#2EE6A8" stroke-width="1.6" stroke-linecap="round"/>
+                  </g>
+                </svg>
+                <div class="room__info">
+                  <h3>Стационар</h3>
+                  <div class="room__tags mono">
+                    <span>Индивидуальные боксы</span><span>Инфузоматы</span><span>Мониторинг 24/7</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="slider__controls">
+            <button class="slider__btn" id="rooms-prev" aria-label="Предыдущее помещение">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="slider__dots" id="rooms-dots"></div>
+            <button class="slider__btn" id="rooms-next" aria-label="Следующее помещение">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. ТЕХНОЛОГИИ ===== -->
+    <section class="section tech" id="tech">
+      <div class="container">
+        <div class="section__head reveal">
+          <div class="section__tag mono">МОДУЛЬ 04 / TECH</div>
+          <h2 class="section__title">Технологии, которые <span class="text-gradient">лечат быстрее</span></h2>
+        </div>
+        <div class="tech__grid">
+          <div class="tech-card glass reveal">
+            <div class="tech-card__icon">
+              <svg viewBox="0 0 48 48" width="40" height="40" aria-hidden="true">
+                <path d="M18 6h12v12l8 18a6 6 0 0 1-5.4 9H15.4A6 6 0 0 1 10 36l8-18z" fill="none" stroke="url(#g-mint)" stroke-width="2.4" stroke-linejoin="round"/>
+                <path d="M15 32h18" stroke="#2EE6A8" stroke-width="2.4" stroke-linecap="round"/>
+                <circle cx="21" cy="38" r="2" fill="#5AA9FF"/><circle cx="28" cy="36" r="1.5" fill="#2EE6A8"/>
+              </svg>
+            </div>
+            <div class="tech-card__num mono">01</div>
+            <h3>Своя лаборатория — 40 минут</h3>
+            <p>Биохимия, ОАК и ПЦР без отправки в сторонние лаборатории. Результат приходит вам в Telegram ещё до конца приёма.</p>
+          </div>
+          <div class="tech-card glass reveal">
+            <div class="tech-card__icon">
+              <svg viewBox="0 0 48 48" width="40" height="40" aria-hidden="true">
+                <rect x="6" y="8" width="36" height="26" rx="5" fill="none" stroke="url(#g-mint)" stroke-width="2.4"/>
+                <path d="M12 21h7l3-7 5 13 3-6h6" fill="none" stroke="#5AA9FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20 40h8" stroke="#2EE6A8" stroke-width="2.4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="tech-card__num mono">02</div>
+            <h3>УЗИ экспертного класса</h3>
+            <p>Аппарат уровня перинатальных центров: видим сердце плода у кошки и камни от 1 мм. Заключение — сразу на экране.</p>
+          </div>
+          <div class="tech-card glass reveal">
+            <div class="tech-card__icon">
+              <svg viewBox="0 0 48 48" width="40" height="40" aria-hidden="true">
+                <rect x="12" y="4" width="24" height="40" rx="6" fill="none" stroke="url(#g-mint)" stroke-width="2.4"/>
+                <path d="M17 18c4-3 10-3 14 0M17 25c4-3 10-3 14 0" stroke="#5AA9FF" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <path d="M19 31h10" stroke="#2EE6A8" stroke-width="2.2" stroke-linecap="round"/>
+                <circle cx="24" cy="38" r="1.8" fill="#2EE6A8"/>
+              </svg>
+            </div>
+            <div class="tech-card__num mono">03</div>
+            <h3>Медкарта в Telegram</h3>
+            <p>Прививки, анализы, назначения и напоминания — всё в боте. Питомец не потеряет документы, даже если вы смените телефон.</p>
+          </div>
+          <div class="tech-card glass reveal">
+            <div class="tech-card__icon">
+              <svg viewBox="0 0 48 48" width="40" height="40" aria-hidden="true">
+                <rect x="5" y="10" width="28" height="24" rx="6" fill="none" stroke="url(#g-mint)" stroke-width="2.4"/>
+                <path d="M33 20l10-6v20l-10-6" fill="none" stroke="#5AA9FF" stroke-width="2.4" stroke-linejoin="round"/>
+                <circle cx="15" cy="20" r="3" fill="#2EE6A8"/>
+                <path d="M11 29c1.5-4 6.5-4 8 0" fill="none" stroke="#2EE6A8" stroke-width="2.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="tech-card__num mono">04</div>
+            <h3>Видео-консультации</h3>
+            <p>Врач на экране за 5 минут: оценим состояние, скажем, нужно ли ехать. 70% вопросов решаем дистанционно.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 7. ВРАЧИ ===== -->
+    <section class="section doctors" id="doctors">
+      <div class="container">
+        <div class="section__head reveal">
+          <div class="section__tag mono">МОДУЛЬ 05 / TEAM</div>
+          <h2 class="section__title">Врачи, которым <span class="text-gradient">доверяют</span></h2>
+        </div>
+        <div class="doctors__grid" id="doctors-grid"><!-- JS --></div>
+      </div>
+    </section>
+
+    <!-- ===== 8. ОТЗЫВЫ ===== -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="section__head reveal">
+          <div class="section__tag mono">МОДУЛЬ 06 / FEEDBACK</div>
+          <h2 class="section__title">Отзывы: главное — <span class="text-gradient">скорость</span></h2>
+        </div>
+        <div class="reviews__carousel reveal" id="reviews-carousel">
+          <div class="reviews__viewport">
+            <div class="reviews__track" id="reviews-track"><!-- JS --></div>
+          </div>
+          <div class="slider__controls">
+            <button class="slider__btn" id="rev-prev" aria-label="Предыдущий отзыв">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="slider__dots" id="rev-dots"></div>
+            <button class="slider__btn" id="rev-next" aria-label="Следующий отзыв">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Разделитель-кардиограмма -->
+    <div class="ecg-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path class="ecg-base ecg-base--thin" d="M0 30 L200 30 L214 30 L224 10 L236 50 L246 30 L460 30 L472 14 L484 46 L494 30 L760 30 L772 8 L786 52 L796 30 L1200 30"/>
+        <path class="ecg-run ecg-run--thin" d="M0 30 L200 30 L214 30 L224 10 L236 50 L246 30 L460 30 L472 14 L484 46 L494 30 L760 30 L772 8 L786 52 L796 30 L1200 30"/>
+      </svg>
+    </div>
+
+    <!-- ===== 9. ФИНАЛЬНЫЙ CTA ===== -->
+    <section class="section final-cta" id="final-cta">
+      <div class="final-cta__glow" aria-hidden="true"></div>
+      <div class="container final-cta__inner reveal">
+        <h2 class="final-cta__title">Запишись сейчас —<br><span class="text-gradient">примем сегодня</span></h2>
+        <p class="final-cta__subtitle">Ближайшее свободное окно — <b class="mono" id="cta-nearest-slot">сегодня 16:40</b>. Пока вы думаете, питомец уже мог бы быть на приёме.</p>
+        <div class="final-cta__actions">
+          <a href="#booking" class="btn btn--mint btn--lg">Записаться онлайн</a>
+          <a href="tel:+79090939400" class="btn btn--ghost btn--lg">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.3 0 .7-.2 1l-2.3 2.1z" fill="currentColor"/></svg>
+            <span class="mono">+7 909 093-94-00</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== 10. ФУТЕР ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col footer__col--brand">
+        <a href="#top" class="logo">
+          <svg class="logo__mark" viewBox="0 0 32 32" width="26" height="26" aria-hidden="true">
+            <rect x="1.5" y="1.5" width="29" height="29" rx="9" fill="none" stroke="url(#g-mint)" stroke-width="2"/>
+            <path d="M7 16h4l2.5-6 4 12 2.5-6H25" fill="none" stroke="#2EE6A8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="logo__text">VET<em>·</em>OS</span>
+        </a>
+        <p>Медицина для питомца — как операционная система: точно, быстро, всё в одном месте.</p>
+      </div>
+      <div class="footer__col">
+        <div class="footer__title mono">КЛИНИКА</div>
+        <p>г. Москва, ул. Льва Толстого, 16<br>Ежедневно, круглосуточно</p>
+        <a href="tel:+79090939400" class="footer__phone mono">+7 909 093-94-00</a>
+        <span class="footer__note mono">ТЕЛЕФОН 24/7</span>
+      </div>
+      <div class="footer__col">
+        <div class="footer__title mono">МЫ В СЕТИ</div>
+        <div class="footer__socials">
+          <a href="#" class="social" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path d="M21.9 4.6 19 19.3c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.3.3-.5.5-.9.5l.3-4.7L18.5 7c.4-.3-.1-.5-.6-.2L7.6 13.2 3 11.8c-1-.3-1-1 .2-1.4l17.4-6.7c.8-.3 1.5.2 1.3.9z" fill="currentColor"/></svg>
+          </a>
+          <a href="#" class="social" aria-label="ВКонтакте">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12.9 17.5c-5.4 0-8.5-3.7-8.6-9.9h2.7c.1 4.5 2.1 6.5 3.7 6.9V7.6h2.5v3.9c1.6-.3 3.2-2 3.7-3.9h2.5c-.4 2.4-2.1 4.1-3.3 4.9 1.2.6 3.2 2.2 3.9 5h-2.8c-.6-2-2.2-3.5-4.4-3.7v3.7z" fill="currentColor"/></svg>
+          </a>
+          <a href="#" class="social" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path d="M22 12s0-3.3-.4-4.8a2.5 2.5 0 0 0-1.8-1.8C18.3 5 12 5 12 5s-6.3 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2C2 8.7 2 12 2 12s0 3.3.4 4.8c.2.9.9 1.6 1.8 1.8 1.5.4 7.8.4 7.8.4s6.3 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.5.4-4.8.4-4.8zM10 15.3V8.7l6 3.3z" fill="currentColor"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom mono">
+      <span>© <span id="year">2026</span> VET·OS — ветеринария нового поколения</span>
+      <span class="footer__status"><span class="pulse-dot"></span>СИСТЕМА РАБОТАЕТ · UPTIME 99.98%</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Спокойные лапы — ветеринарная клиника, где тихо</title>
+  <meta name="description" content="Ветеринарная клиника без стресса: приём по записи, раздельные зоны для кошек и собак, веб-камера в стационаре. Принимаем с 2009 года.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== Шапка ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="Спокойные лапы — на главную">
+        <svg class="logo__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5" opacity="0.35"/>
+          <ellipse cx="14.5" cy="16" rx="3" ry="4" fill="#D98E6A"/>
+          <ellipse cx="25.5" cy="16" rx="3" ry="4" fill="#D98E6A"/>
+          <ellipse cx="9.5" cy="23.5" rx="2.4" ry="3.2" fill="#D98E6A" transform="rotate(-18 9.5 23.5)"/>
+          <ellipse cx="30.5" cy="23.5" rx="2.4" ry="3.2" fill="#D98E6A" transform="rotate(18 30.5 23.5)"/>
+          <path d="M20 21.5c4.2 0 7 2.8 7 6a4.5 4.5 0 0 1-4.5 4.5c-1.4 0-2-.6-2.5-.6s-1.1.6-2.5.6A4.5 4.5 0 0 1 13 27.5c0-3.2 2.8-6 7-6Z" fill="#D98E6A"/>
+        </svg>
+        <span class="logo__text">Спокойные&nbsp;лапы</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a class="nav__link" href="#why">Почему мы</a>
+        <a class="nav__link" href="#booking">Запись</a>
+        <a class="nav__link" href="#prices">Услуги и цены</a>
+        <a class="nav__link" href="#doctors">Врачи</a>
+        <a class="nav__link" href="#contacts">Контакты</a>
+      </nav>
+
+      <div class="header__actions">
+        <div class="on-duty" id="on-duty" title="Расписание приёма обновляется по текущему времени">
+          <span class="on-duty__dot" aria-hidden="true"></span>
+          <span class="on-duty__text" id="on-duty-text">Сейчас принимает: …</span>
+        </div>
+        <a class="btn btn--ghost header__call" href="tel:+79090939400">+7 909 093-94-00</a>
+        <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== 1. Hero ===== -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <span class="badge">
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.4"/><path d="M8 4.5V8l2.4 1.6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            Принимаем с 2009 года
+          </span>
+          <h1 class="hero__title">Ветеринарная клиника, где&nbsp;<em>тихо</em></h1>
+          <p class="hero__subtitle">Приём по записи — никаких очередей. Отдельные зоны для кошек и собак. Врач, которому вы доверяете.</p>
+          <div class="hero__cta">
+            <a href="#booking" class="btn btn--primary btn--lg">Выбрать врача</a>
+            <a href="tel:+79090939400" class="btn btn--ghost btn--lg">Позвонить</a>
+          </div>
+          <ul class="hero__facts">
+            <li><strong>16 лет</strong> тихой практики</li>
+            <li><strong>24 000+</strong> спокойных приёмов</li>
+            <li><strong>0 минут</strong> ожидания в очереди</li>
+          </ul>
+        </div>
+
+        <div class="hero__art reveal" aria-hidden="true">
+          <!-- Кот, свернувшийся на светлом пледе -->
+          <svg class="hero__cat" viewBox="0 0 520 440" fill="none" role="img">
+            <defs>
+              <radialGradient id="glow" cx="50%" cy="42%" r="60%">
+                <stop offset="0%" stop-color="#FBF4EE"/>
+                <stop offset="100%" stop-color="#F6F5F2" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="blanket" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#F1EAE2"/>
+                <stop offset="100%" stop-color="#E4DACD"/>
+              </linearGradient>
+              <linearGradient id="catbody" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#E9B18C"/>
+                <stop offset="100%" stop-color="#D98E6A"/>
+              </linearGradient>
+            </defs>
+            <ellipse cx="260" cy="230" rx="245" ry="205" fill="url(#glow)"/>
+            <!-- мягкая тень -->
+            <ellipse cx="262" cy="352" rx="185" ry="30" fill="#33424F" opacity="0.10"/>
+            <!-- плед -->
+            <path d="M86 318c0-52 78-96 176-96s172 44 172 96c0 30-40 52-88 62-54 12-118 12-172 0-46-10-88-32-88-62Z" fill="url(#blanket)"/>
+            <path d="M112 300c34-26 90-42 150-42" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+            <path d="M120 330c40 22 96 32 142 32" stroke="#D9CDBE" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+            <path d="M96 316c-14 10-22 20-22 30 10 2 22-2 30-10" stroke="#D9CDBE" stroke-width="3" stroke-linecap="round"/>
+            <path d="M428 316c14 10 22 20 22 30-10 2-22-2-30-10" stroke="#D9CDBE" stroke-width="3" stroke-linecap="round"/>
+            <!-- тело кота калачиком -->
+            <g class="cat-breath">
+              <path d="M148 296c-8-66 40-118 112-118 66 0 118 44 118 104 0 20-6 34-18 44-30 24-78 34-120 30-46-4-86-26-92-60Z" fill="url(#catbody)"/>
+              <!-- полоски -->
+              <path d="M300 190c10 8 18 18 24 30M330 214c8 12 14 26 16 40M214 196c-8 10-14 22-16 34" stroke="#C97B52" stroke-width="6" stroke-linecap="round" opacity="0.55"/>
+              <!-- хвост вокруг тела -->
+              <path d="M150 296c26 30 74 44 124 40 40-4 74-18 90-40" stroke="#C97B52" stroke-width="26" stroke-linecap="round"/>
+              <path d="M360 300c10-8 14-16 14-26" stroke="#B96B45" stroke-width="26" stroke-linecap="round"/>
+            </g>
+            <!-- голова -->
+            <g class="cat-head">
+              <path d="M176 238c-6-40 22-72 62-72s70 30 66 70c-3 30-30 48-64 48s-58-18-64-46Z" fill="#EDBC98"/>
+              <!-- уши -->
+              <path d="M188 200 178 158l38 22Z" fill="#EDBC98"/>
+              <path d="M290 196 304 156l-42 20Z" fill="#EDBC98"/>
+              <path d="M192 192 186 168l24 14Z" fill="#D98E6A"/>
+              <path d="M286 188 296 166l-26 12Z" fill="#D98E6A"/>
+              <!-- закрытые глаза — кот спит -->
+              <path d="M206 232c6 5 14 5 20 0M254 232c6 5 14 5 20 0" stroke="#33424F" stroke-width="4" stroke-linecap="round"/>
+              <!-- нос и рот -->
+              <path d="M238 244c3-2 7-2 10 0-1 3-3 5-5 5s-4-2-5-5Z" fill="#C97B52"/>
+              <path d="M243 250v6m0 0c-3 3-7 3-10 1m10-1c3 3 7 3 10 1" stroke="#33424F" stroke-width="3" stroke-linecap="round"/>
+              <!-- усы -->
+              <path d="M196 246c-14-2-26-1-36 3M198 256c-12 2-22 6-30 12M284 246c14-2 26-1 36 3M282 256c12 2 22 6 30 12" stroke="#C4A68F" stroke-width="2.5" stroke-linecap="round"/>
+            </g>
+            <!-- «z-z-z» сна -->
+            <g class="cat-zzz" fill="#33424F" opacity="0.5">
+              <text x="322" y="150" font-family="Manrope, sans-serif" font-size="26" font-weight="600">z</text>
+              <text x="346" y="124" font-family="Manrope, sans-serif" font-size="34" font-weight="600">z</text>
+              <text x="376" y="92" font-family="Manrope, sans-serif" font-size="44" font-weight="600">z</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="hero__wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path d="M0 60C240 20 480 0 720 0s480 20 720 60v30H0Z" fill="#F6F5F2"/></svg>
+      </div>
+    </section>
+
+    <!-- ===== 2. Почему у нас спокойно ===== -->
+    <section class="section why" id="why">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Наш подход</span>
+          <h2 class="section__title">Почему у нас спокойно</h2>
+          <p class="section__lead">Мы выстроили клинику вокруг одной идеи: питомец не должен бояться врача. Всё остальное — детали, которые мы продумали за вас.</p>
+        </div>
+        <div class="why__grid">
+          <article class="card reveal">
+            <div class="card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="#33424F" stroke-width="2" stroke-linecap="round">
+                <rect x="8" y="10" width="32" height="30" rx="4"/>
+                <path d="M8 19h32M16 6v8M32 6v8"/>
+                <path d="M17 30l5 5 9-10" stroke="#D98E6A" stroke-width="2.5"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Только по записи</h3>
+            <p class="card__text">У каждого пациента — своё время. В клинике никогда не бывает больше двух гостей одновременно.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="#33424F" stroke-width="2" stroke-linecap="round">
+                <path d="M24 8v32"/>
+                <path d="M10 16c2-2 5-2 7 0M10 26c2 2 5 2 7 0M6 10v28" />
+                <path d="M31 14c3 0 5 2 5 5s-2 5-5 5M36 10v20" />
+                <circle cx="33" cy="34" r="4" stroke="#D98E6A" stroke-width="2.5"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Раздельные зоны кошек и собак</h3>
+            <p class="card__text">Кошки не слышат собак, собаки не видят кошек. Отдельные входы, коридоры и смотровые.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="#33424F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M24 40S10 31 10 20a8 8 0 0 1 14-5 8 8 0 0 1 14 5c0 11-14 20-14 20Z"/>
+                <path d="M16 22h6l2-4 3 8 2-4h5" stroke="#D98E6A" stroke-width="2.5"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Безболезненные методики</h3>
+            <p class="card__text">Современная анестезия, мягкая фиксация и паузы, когда питомцу нужно передохнуть.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="#33424F" stroke-width="2" stroke-linecap="round">
+                <circle cx="17" cy="15" r="5"/>
+                <path d="M8 38c0-6 4-10 9-10s9 4 9 10"/>
+                <circle cx="33" cy="18" r="3.4" stroke="#D98E6A" stroke-width="2.5"/>
+                <path d="M27 38c0-4.6 2.7-7.6 6-7.6S39 33.4 39 38" stroke="#D98E6A" stroke-width="2.5"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Хозяин рядом на приёме</h3>
+            <p class="card__text">Вы присутствуете на осмотре и всегда знаете, что происходит с вашим питомцем и почему.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. Запись к врачу ===== -->
+    <section class="section booking" id="booking">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Запись онлайн</span>
+          <h2 class="section__title">Выберите своего врача</h2>
+          <p class="section__lead">Три спокойных шага: врач → день → время. Подтвердим запись сообщением в течение 15 минут.</p>
+        </div>
+
+        <div class="booking__widget reveal" id="booking-widget">
+          <!-- Шаги -->
+          <ol class="booking__steps" id="booking-steps">
+            <li class="booking__step is-active" data-step="1"><span>1</span>Врач</li>
+            <li class="booking__step" data-step="2"><span>2</span>День</li>
+            <li class="booking__step" data-step="3"><span>3</span>Время</li>
+            <li class="booking__step" data-step="4"><span>4</span>Готово</li>
+          </ol>
+
+          <!-- Шаг 1: врачи -->
+          <div class="booking__pane is-active" id="pane-doctors">
+            <div class="booking__doctors" id="booking-doctors"><!-- JS --></div>
+          </div>
+
+          <!-- Шаг 2: дни -->
+          <div class="booking__pane" id="pane-days">
+            <button class="booking__back" data-back="1" type="button">← Выбрать другого врача</button>
+            <p class="booking__hint" id="days-hint"></p>
+            <div class="booking__days" id="booking-days"><!-- JS --></div>
+          </div>
+
+          <!-- Шаг 3: слоты -->
+          <div class="booking__pane" id="pane-slots">
+            <button class="booking__back" data-back="2" type="button">← Выбрать другой день</button>
+            <p class="booking__hint" id="slots-hint"></p>
+            <div class="booking__slots" id="booking-slots"><!-- JS --></div>
+            <form class="booking__form" id="booking-form" novalidate>
+              <div class="booking__fields">
+                <label class="field">
+                  <span class="field__label">Ваше имя</span>
+                  <input class="field__input" type="text" id="bk-name" name="name" placeholder="Анна" autocomplete="name">
+                </label>
+                <label class="field">
+                  <span class="field__label">Телефон</span>
+                  <input class="field__input" type="tel" id="bk-phone" name="phone" placeholder="+7 ___ ___-__-__" autocomplete="tel">
+                </label>
+              </div>
+              <p class="booking__error" id="booking-error" role="alert"></p>
+              <button class="btn btn--primary btn--lg booking__submit" type="submit">Подтвердить запись</button>
+            </form>
+          </div>
+
+          <!-- Шаг 4: подтверждение -->
+          <div class="booking__pane" id="pane-done">
+            <div class="booking__done">
+              <svg class="booking__done-icon" viewBox="0 0 72 72" fill="none" aria-hidden="true">
+                <circle cx="36" cy="36" r="33" stroke="#D98E6A" stroke-width="2.5"/>
+                <path d="M23 37l9 9 17-19" stroke="#33424F" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <h3 class="booking__done-title">Запись создана</h3>
+              <p class="booking__done-text" id="done-text"></p>
+              <p class="booking__done-note">Мы отправим подтверждение и памятку о визите сообщением. Если что-то изменится — просто позвоните.</p>
+              <button class="btn btn--ghost" id="booking-restart" type="button">Записать ещё одного питомца</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. Услуги и цены ===== -->
+    <section class="section prices" id="prices">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Услуги и цены</span>
+          <h2 class="section__title">Меню заботы</h2>
+          <p class="section__lead">Прозрачно, как в меню хорошего ресторана: вы заранее знаете состав, время и стоимость.</p>
+        </div>
+
+        <div class="prices__tabs reveal" id="prices-tabs" role="tablist">
+          <button class="prices__tab is-active" type="button" role="tab" data-group="diagnostics" aria-selected="true">Диагностика</button>
+          <button class="prices__tab" type="button" role="tab" data-group="therapy" aria-selected="false">Терапия</button>
+          <button class="prices__tab" type="button" role="tab" data-group="surgery" aria-selected="false">Хирургия</button>
+          <button class="prices__tab" type="button" role="tab" data-group="prevention" aria-selected="false">Профилактика</button>
+        </div>
+
+        <div class="prices__menu reveal" id="prices-menu"><!-- JS --></div>
+        <p class="prices__note reveal">Точную стоимость врач называет до начала любых манипуляций. Без «допов» и сюрпризов в чеке.</p>
+      </div>
+    </section>
+
+    <!-- ===== 5. Как проходит визит ===== -->
+    <section class="section visit" id="visit">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Маршрут визита</span>
+          <h2 class="section__title">Как проходит визит</h2>
+        </div>
+        <ol class="visit__timeline">
+          <li class="visit__step reveal">
+            <span class="visit__num">01</span>
+            <h3 class="visit__name">Записались</h3>
+            <p class="visit__text">Онлайн или по телефону. Напомним накануне и подскажем, как подготовить питомца.</p>
+          </li>
+          <li class="visit__step reveal">
+            <span class="visit__num">02</span>
+            <h3 class="visit__name">Встретили вас и питомца</h3>
+            <p class="visit__text">Администратор проводит в нужную зону — кошачью или собачью. Кофе для вас, вода для питомца.</p>
+          </li>
+          <li class="visit__step reveal">
+            <span class="visit__num">03</span>
+            <h3 class="visit__name">Осмотр и план лечения</h3>
+            <p class="visit__text">40 минут врач только с вами. Объясняем каждый шаг и согласовываем план и бюджет заранее.</p>
+          </li>
+          <li class="visit__step reveal">
+            <span class="visit__num">04</span>
+            <h3 class="visit__name">Отчёт и рекомендации</h3>
+            <p class="visit__text">В тот же вечер присылаем заключение, назначения и памятку в мессенджер. Остаёмся на связи.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== 6. Стационар и гостиница ===== -->
+    <section class="section hotel" id="hotel">
+      <div class="container hotel__inner">
+        <div class="hotel__content reveal">
+          <span class="section__tag">Стационар и гостиница</span>
+          <h2 class="section__title">Если питомцу нужно побыть у нас</h2>
+          <p class="section__lead">После операций или на время вашего отъезда — питомец живёт в уютном боксе под круглосуточным наблюдением.</p>
+          <ul class="hotel__list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#D98E6A" stroke-width="2" stroke-linecap="round"><rect x="3" y="6" width="18" height="14" rx="3"/><path d="M3 12h18M9 6v14"/></svg>
+              <div><strong>Уютные боксы</strong><span>Тёплые лежанки, приглушённый свет и тишина. Кошки и собаки — в разных комнатах.</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#D98E6A" stroke-width="2" stroke-linecap="round"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3"/></svg>
+              <div><strong>Веб-камера для хозяина</strong><span>Личная ссылка на трансляцию из бокса — заглядывайте к питомцу в любой момент.</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#D98E6A" stroke-width="2" stroke-linecap="round"><path d="M4 5h16v11H8l-4 4V5Z"/><path d="M8 9h8M8 12.5h5"/></svg>
+              <div><strong>Отчёты дважды в день</strong><span>Утром и вечером — фото, самочувствие, аппетит и планы на день в ваш мессенджер.</span></div>
+            </li>
+          </ul>
+          <a href="#booking" class="btn btn--primary">Забронировать бокс</a>
+        </div>
+
+        <div class="hotel__visual reveal" aria-hidden="true">
+          <!-- Имитация окна веб-камеры стационара -->
+          <div class="webcam">
+            <div class="webcam__bar">
+              <span class="webcam__rec"></span>
+              <span class="webcam__label">Бокс №3 · кот Барсик</span>
+              <span class="webcam__clock" id="webcam-clock">--:--</span>
+            </div>
+            <div class="webcam__view">
+              <svg viewBox="0 0 360 220" fill="none">
+                <rect x="0" y="0" width="360" height="220" fill="#EFEAE2"/>
+                <rect x="24" y="120" width="312" height="76" rx="10" fill="#E2D8CA"/>
+                <rect x="24" y="120" width="312" height="14" rx="7" fill="#D9CDBE"/>
+                <ellipse cx="180" cy="196" rx="150" ry="10" fill="#33424F" opacity="0.08"/>
+                <!-- спящий питомец в боксе -->
+                <g class="cat-breath">
+                  <path d="M120 158c-4-34 22-56 58-56s62 22 62 50c0 22-28 32-60 32s-56-10-60-26Z" fill="#D98E6A"/>
+                  <path d="M212 108c6 5 11 12 14 20M144 112c-5 7-8 14-9 22" stroke="#C97B52" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+                  <circle cx="128" cy="140" r="22" fill="#E9B18C"/>
+                  <path d="M112 128l-4-14 16 6Z" fill="#E9B18C"/>
+                  <path d="M142 124l6-14 10 14Z" fill="#E9B18C"/>
+                  <path d="M118 142c4 3 8 3 12 0" stroke="#33424F" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M122 152c24 8 60 8 92-2" stroke="#C97B52" stroke-width="10" stroke-linecap="round"/>
+                </g>
+              </svg>
+            </div>
+            <div class="webcam__foot">
+              <span class="webcam__status"><span class="on-duty__dot" aria-hidden="true"></span>Трансляция идёт</span>
+              <span class="webcam__hint">Ссылку на камеру получает только хозяин</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 7. Врачи ===== -->
+    <section class="section doctors" id="doctors">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Команда</span>
+          <h2 class="section__title">Врачи, которым доверяют</h2>
+        </div>
+        <div class="doctors__grid" id="doctors-grid"><!-- JS --></div>
+      </div>
+    </section>
+
+    <!-- ===== 8. Отзывы ===== -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Отзывы</span>
+          <h2 class="section__title">Тихие слова благодарности</h2>
+        </div>
+        <div class="reviews__carousel reveal" id="reviews-carousel">
+          <button class="reviews__arrow reviews__arrow--prev" id="rev-prev" type="button" aria-label="Предыдущий отзыв">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 5l-7 7 7 7"/></svg>
+          </button>
+          <div class="reviews__viewport">
+            <div class="reviews__track" id="reviews-track"><!-- JS --></div>
+          </div>
+          <button class="reviews__arrow reviews__arrow--next" id="rev-next" type="button" aria-label="Следующий отзыв">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+        <div class="reviews__dots" id="reviews-dots"><!-- JS --></div>
+      </div>
+    </section>
+
+    <!-- ===== 9. Контакты ===== -->
+    <section class="section contacts" id="contacts">
+      <div class="container contacts__inner">
+        <div class="contacts__info reveal">
+          <span class="section__tag">Контакты</span>
+          <h2 class="section__title">Мы рядом и на связи</h2>
+          <ul class="contacts__list">
+            <li>
+              <span class="contacts__label">Адрес</span>
+              <span class="contacts__value">Москва, ул. Тихая, 12<br>вход с тихого двора, есть парковка</span>
+            </li>
+            <li>
+              <span class="contacts__label">Режим работы</span>
+              <span class="contacts__value">Ежедневно 9:00–21:00<br>приём — строго по записи</span>
+            </li>
+            <li>
+              <span class="contacts__label">Телефон</span>
+              <a class="contacts__value contacts__phone" href="tel:+79090939400">+7 909 093-94-00</a>
+            </li>
+          </ul>
+          <div class="contacts__actions">
+            <a href="tel:+79090939400" class="btn btn--primary">Позвонить</a>
+            <a href="https://t.me/calmpaws" class="btn btn--ghost" target="_blank" rel="noopener">Написать в Telegram</a>
+          </div>
+        </div>
+
+        <form class="contacts__form reveal" id="contact-form" novalidate>
+          <h3 class="contacts__form-title">Записаться на приём</h3>
+          <p class="contacts__form-lead">Оставьте контакты — перезвоним в течение 15 минут и подберём удобное время.</p>
+          <label class="field">
+            <span class="field__label">Ваше имя</span>
+            <input class="field__input" type="text" id="cf-name" name="name" placeholder="Анна" autocomplete="name">
+          </label>
+          <label class="field">
+            <span class="field__label">Телефон</span>
+            <input class="field__input" type="tel" id="cf-phone" name="phone" placeholder="+7 ___ ___-__-__" autocomplete="tel">
+          </label>
+          <label class="field">
+            <span class="field__label">Кто ваш питомец?</span>
+            <input class="field__input" type="text" id="cf-pet" name="pet" placeholder="Кот Барсик, 5 лет">
+          </label>
+          <p class="booking__error" id="contact-error" role="alert"></p>
+          <button class="btn btn--primary btn--lg contacts__submit" type="submit">Перезвоните мне</button>
+          <p class="contacts__form-note">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.</p>
+          <div class="contacts__success" id="contact-success" hidden>
+            <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="22" stroke="#D98E6A" stroke-width="2"/><path d="M15 25l6 6 12-13" stroke="#33424F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <strong>Спасибо! Заявка принята.</strong>
+            <span>Перезвоним в течение 15 минут в тихое время дня.</span>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== 10. Футер ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="logo__text">Спокойные лапы</span>
+        <p>Ветеринарная клиника без стресса.<br>Тишина, порядок, забота — с 2009 года.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Навигация в подвале">
+        <a href="#why">Почему мы</a>
+        <a href="#booking">Запись</a>
+        <a href="#prices">Цены</a>
+        <a href="#doctors">Врачи</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <div class="footer__contacts">
+        <a href="tel:+79090939400">+7 909 093-94-00</a>
+        <span>Москва, ул. Тихая, 12</span>
+        <span>Ежедневно 9:00–21:00</span>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© 2009–2025 Клиника «Спокойные лапы». Демо-проект портфолио.</span>
+      <span>Сделано спокойно и с любовью.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
