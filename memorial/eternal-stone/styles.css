@@ -154,9 +154,9 @@ a { color: var(--gold-soft); text-decoration: none; }
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding-bottom: 4vh;
+  padding-bottom: 2vh;
 }
-.hero-monument svg { height: min(72vh, 640px); width: auto; filter: drop-shadow(0 30px 50px rgba(0,0,0,0.6)); }
+.hero-monument svg { height: min(46vh, 440px); width: auto; filter: drop-shadow(0 30px 50px rgba(0,0,0,0.6)); }
 .hero-floor {
   position: absolute;
   left: 0; right: 0; bottom: 0;
@@ -189,6 +189,19 @@ a { color: var(--gold-soft); text-decoration: none; }
   text-align: center;
   padding-top: 120px;
   padding-bottom: 90px;
+}
+/* мягкая тёмная дымка за текстом: приглушает контуры стелы, не плашка */
+.hero-content::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: -70px -90px -50px;
+  background: radial-gradient(ellipse 62% 58% at 50% 46%,
+    rgba(18, 19, 21, 0.92) 30%,
+    rgba(18, 19, 21, 0.6) 58%,
+    rgba(18, 19, 21, 0) 78%);
+  filter: blur(14px);
+  pointer-events: none;
 }
 .hero-eyebrow {
   font-size: 14px;
@@ -971,6 +984,10 @@ a { color: var(--gold-soft); text-decoration: none; }
 @media (max-width: 760px) {
   body { font-size: 17px; }
   .section { padding: 78px 0; }
+  .hero { align-items: flex-start; }
+  .hero-content { padding-top: 104px; padding-bottom: 40px; }
+  .hero-content::before { inset: -46px -34px -60px; }
+  .hero-monument svg { height: min(28vh, 250px); }
   .main-nav {
     display: none;
     position: absolute;
