@@ -270,4 +270,24 @@ const WORKS = [
     style: "Яркий, конверсионный, честная цена",
     path: "stretch-ceilings/one-day/",
   },
+
+  // --- Химчистка мебели ---
+  {
+    category: "Химчистка мебели",
+    title: "FreshClean",
+    style: "Свежий, технологичный, до/после",
+    path: "furniture-cleaning/fresh-clean/",
+  },
+  {
+    category: "Химчистка мебели",
+    title: "Здоровый дом",
+    style: "Заботливый, про здоровье семьи",
+    path: "furniture-cleaning/healthy-home/",
+  },
+  {
+    category: "Химчистка мебели",
+    title: "КУТЮР",
+    style: "Тёмный премиум, деликатные ткани",
+    path: "furniture-cleaning/premium-care/",
+  },
 ];

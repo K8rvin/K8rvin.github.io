@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Здоровый дом — химчистка матрасов и мебели на дому</title>
+<meta name="description" content="Химчистка матрасов и мебели на дому. Убираем пылевых клещей, аллергены и запахи. Безопасно для детей с первого дня жизни.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== ШАПКА ===== -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a class="logo" href="#top" aria-label="Здоровый дом — на главную">
+      <svg class="logo__icon" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true">
+        <circle cx="20" cy="20" r="18" fill="#DCEEF5"/>
+        <path d="M11 24c0-5 4-9 9-9s9 4 9 9" fill="none" stroke="#2E6E8E" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M13 27.5h14" stroke="#E07856" stroke-width="2.4" stroke-linecap="round"/>
+        <circle cx="20" cy="11.5" r="2" fill="#E07856"/>
+      </svg>
+      <span class="logo__text">Здоровый<em>дом</em></span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="#mites" class="nav__link">Что в матрасе</a>
+      <a href="#how" class="nav__link">Как мы чистим</a>
+      <a href="#calc" class="nav__link">Калькулятор</a>
+      <a href="#prices" class="nav__link">Цены</a>
+      <a href="#reviews" class="nav__link">Отзывы</a>
+      <a href="#lead" class="btn btn--small nav__cta">Записаться</a>
+    </nav>
+
+    <a class="header__phone" href="tel:+79090939400">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z" fill="#2E6E8E"/></svg>
+      <span>+7 909 093-94-00</span>
+    </a>
+
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ===== 1. HERO ===== -->
+<section class="hero">
+  <div class="container hero__grid">
+    <div class="hero__content">
+      <div class="slots-badge" id="slotsBadge">
+        <span class="slots-badge__dot" aria-hidden="true"></span>
+        Сегодня свободно <strong id="slotsCount">2 окна</strong> — успейте записаться
+      </div>
+      <h1 class="hero__title">Чистый дом начинается с&nbsp;того, на&nbsp;чём вы&nbsp;спите</h1>
+      <p class="hero__subtitle">Химчистка матрасов и мебели на дому. Убираем пылевых клещей, аллергены и запахи. Безопасно для детей с первого дня жизни.</p>
+      <div class="hero__actions">
+        <a href="#calc" class="btn btn--accent btn--big">Позаботиться о здоровье</a>
+        <a href="tel:+79090939400" class="btn btn--ghost btn--big">Позвонить</a>
+      </div>
+      <ul class="hero__trust">
+        <li>Выезд и осмотр — бесплатно</li>
+        <li>Сохнет за 4 часа</li>
+        <li>Гипоаллергенная химия</li>
+      </ul>
+    </div>
+
+    <div class="hero__scene" aria-hidden="true">
+      <svg class="hero__svg" viewBox="0 0 520 420" role="img" aria-label="Уютная спальня с чистой кроватью и солнцем">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#EAF6FB"/><stop offset="1" stop-color="#DCEEF5"/>
+          </linearGradient>
+          <linearGradient id="sunG" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#FFD98A"/><stop offset="1" stop-color="#F7B45C"/>
+          </linearGradient>
+          <linearGradient id="bedG" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F3F8FA"/>
+          </linearGradient>
+          <linearGradient id="blanketG" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#BFE0EE"/><stop offset="1" stop-color="#9CCBDF"/>
+          </linearGradient>
+        </defs>
+        <!-- фон-окно -->
+        <rect x="40" y="30" width="440" height="330" rx="26" fill="url(#sky)"/>
+        <!-- солнце -->
+        <g class="hero-sun">
+          <circle cx="380" cy="105" r="42" fill="url(#sunG)"/>
+          <g stroke="#F7B45C" stroke-width="4" stroke-linecap="round" opacity=".7">
+            <line x1="380" y1="40" x2="380" y2="52"/>
+            <line x1="380" y1="158" x2="380" y2="170"/>
+            <line x1="315" y1="105" x2="327" y2="105"/>
+            <line x1="433" y1="105" x2="445" y2="105"/>
+            <line x1="334" y1="59" x2="343" y2="68"/>
+            <line x1="417" y1="142" x2="426" y2="151"/>
+            <line x1="426" y1="59" x2="417" y2="68"/>
+            <line x1="343" y1="142" x2="334" y2="151"/>
+          </g>
+        </g>
+        <!-- облака -->
+        <g fill="#FFFFFF" opacity=".9">
+          <ellipse cx="140" cy="90" rx="38" ry="16"/>
+          <ellipse cx="172" cy="82" rx="30" ry="13"/>
+          <ellipse cx="115" cy="82" rx="24" ry="11"/>
+          <ellipse cx="250" cy="140" rx="26" ry="11" opacity=".7"/>
+          <ellipse cx="272" cy="133" rx="20" ry="9" opacity=".7"/>
+        </g>
+        <!-- пол -->
+        <rect x="40" y="300" width="440" height="60" rx="26" fill="#EFE4D3"/>
+        <!-- кровать -->
+        <g class="hero-bed">
+          <rect x="92" y="190" width="26" height="140" rx="10" fill="#C9A87C"/>
+          <rect x="352" y="215" width="22" height="115" rx="9" fill="#C9A87C"/>
+          <rect x="100" y="200" width="270" height="105" rx="22" fill="url(#bedG)" stroke="#E4EDF1" stroke-width="2"/>
+          <rect x="100" y="200" width="270" height="34" rx="17" fill="#FFFFFF" stroke="#E4EDF1" stroke-width="2"/>
+          <path d="M150 234h220v71H150z" fill="none"/>
+          <path d="M146 234c60 14 150 14 224 0v71H146z" fill="url(#blanketG)"/>
+          <rect x="118" y="188" width="86" height="34" rx="14" fill="#FFFFFF" stroke="#E4EDF1" stroke-width="2" transform="rotate(-4 161 205)"/>
+          <rect x="214" y="188" width="86" height="34" rx="14" fill="#FFFFFF" stroke="#E4EDF1" stroke-width="2" transform="rotate(3 257 205)"/>
+          <path d="M120 300c26 10 58 10 84 0" stroke="#E07856" stroke-width="4" stroke-linecap="round" fill="none" opacity=".55"/>
+        </g>
+        <!-- растение -->
+        <g class="hero-plant">
+          <rect x="412" y="286" width="46" height="42" rx="10" fill="#E8B48F"/>
+          <path d="M435 288c-2-26-14-40-26-46 2 20 12 36 26 46z" fill="#7FB069"/>
+          <path d="M435 288c4-30 16-46 30-54-2 24-14 44-30 54z" fill="#6A9E58"/>
+          <path d="M435 288c0-34 6-52 14-62 4 26-2 50-14 62z" fill="#8FBE78"/>
+        </g>
+        <!-- блики свежести -->
+        <g class="hero-sparkles" fill="#FFFFFF">
+          <path d="M70 150l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/>
+          <path d="M450 200l2.4 6.4 6.4 2.4-6.4 2.4-2.4 6.4-2.4-6.4-6.4-2.4 6.4-2.4z"/>
+          <path d="M300 70l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" opacity=".8"/>
+        </g>
+      </svg>
+      <!-- рассеивающиеся частички пыли -->
+      <div class="dust" id="dustLayer" aria-hidden="true"></div>
+    </div>
+  </div>
+  <div class="hero__wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0 48c240 40 480 40 720 12s480-44 720-20v40H0z" fill="#DCEEF5"/></svg>
+  </div>
+</section>
+
+<!-- ===== 2. ЧТО ЖИВЁТ В МАТРАСЕ ===== -->
+<section class="section section--blue" id="mites">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <span class="eyebrow">Невидимые соседи</span>
+      <h2>Что живёт в вашем матрасе</h2>
+      <p class="section__lead">Мы не будем вас пугать. Просто честно покажем, с кем вы спите каждую ночь — и как это мягко убрать.</p>
+    </div>
+
+    <div class="mites__grid">
+      <article class="mite-card" data-reveal>
+        <div class="mite-card__art">
+          <svg viewBox="0 0 120 110" aria-hidden="true">
+            <ellipse cx="60" cy="62" rx="34" ry="30" fill="#C9A2E0"/>
+            <ellipse cx="60" cy="58" rx="30" ry="26" fill="#DDBBED"/>
+            <g stroke="#C9A2E0" stroke-width="5" stroke-linecap="round">
+              <path d="M30 55 16 46"/><path d="M30 66 14 66"/><path d="M32 77 20 86"/>
+              <path d="M90 55l14-9"/><path d="M90 66l16 0"/><path d="M88 77l12 9"/>
+            </g>
+            <circle cx="50" cy="52" r="4" fill="#2F3235"/><circle cx="70" cy="52" r="4" fill="#2F3235"/>
+            <circle cx="51.5" cy="50.5" r="1.3" fill="#fff"/><circle cx="71.5" cy="50.5" r="1.3" fill="#fff"/>
+            <path d="M52 66q8 7 16 0" stroke="#2F3235" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+            <circle cx="43" cy="62" r="4" fill="#EFB7D8" opacity=".8"/><circle cx="77" cy="62" r="4" fill="#EFB7D8" opacity=".8"/>
+          </svg>
+        </div>
+        <h3>Пылевые клещи</h3>
+        <p>Микроскопические и безобидные сами по себе, но продукты их жизнедеятельности — главный домашний аллерген.</p>
+      </article>
+
+      <article class="mite-card" data-reveal>
+        <div class="mite-card__art">
+          <svg viewBox="0 0 120 110" aria-hidden="true">
+            <g fill="#F2C14E">
+              <circle cx="60" cy="56" r="16"/>
+              <circle cx="34" cy="42" r="10"/><circle cx="86" cy="40" r="9"/>
+              <circle cx="38" cy="76" r="8"/><circle cx="84" cy="74" r="11"/>
+            </g>
+            <g fill="#F8DA8C">
+              <circle cx="56" cy="51" r="5"/><circle cx="32" cy="39" r="3.4"/><circle cx="84" cy="37" r="3"/><circle cx="82" cy="71" r="3.6"/>
+            </g>
+            <path d="M52 60q8 6 16 0" stroke="#2F3235" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+            <circle cx="55" cy="53" r="2.6" fill="#2F3235"/><circle cx="65" cy="53" r="2.6" fill="#2F3235"/>
+          </svg>
+        </div>
+        <h3>Аллергены и пыль</h3>
+        <p>Пыльца, перхоть, споры — всё это годами оседает в наполнителе и поднимается в воздух при каждом движении.</p>
+      </article>
+
+      <article class="mite-card" data-reveal>
+        <div class="mite-card__art">
+          <svg viewBox="0 0 120 110" aria-hidden="true">
+            <path d="M30 78c-8-22 4-44 26-48 20-4 40 8 42 28 2 18-10 32-30 34-16 2-34 0-38-14z" fill="#BFD7E4"/>
+            <path d="M42 70c-4-12 3-26 16-29 12-3 25 4 27 15 2 10-6 19-18 20-10 1-22 0-25-6z" fill="#D6E8F1"/>
+            <circle cx="54" cy="56" r="3.4" fill="#2F3235"/><circle cx="72" cy="56" r="3.4" fill="#2F3235"/>
+            <path d="M56 68q7 5 14 0" stroke="#2F3235" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+            <g fill="#A9C6D8" opacity=".9">
+              <circle cx="34" cy="34" r="3"/><circle cx="90" cy="30" r="2.4"/><circle cx="100" cy="56" r="2.8"/><circle cx="24" cy="60" r="2.2"/>
+            </g>
+          </svg>
+        </div>
+        <h3>Запахи и влага</h3>
+        <p>За ночь матрас впитывает до 300 мл влаги. Влажная среда — дом для бактерий и источник затхлого запаха.</p>
+      </article>
+    </div>
+
+    <div class="mites__stats" data-reveal>
+      <div class="stat">
+        <div class="stat__num">до 2 млн</div>
+        <div class="stat__label">пылевых клещей живёт<br>в одном старом матрасе</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num">×2 веса</div>
+        <div class="stat__label">матрас удваивает вес за 10 лет<br>за счёт пыли и аллергенов</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num">8 часов</div>
+        <div class="stat__label">вы спите на матрасе каждые<br>сутки — это треть жизни</div>
+      </div>
+    </div>
+
+    <div class="center" data-reveal>
+      <a href="#how" class="btn btn--primary btn--big">Узнать, как мы это убираем</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3. КОМУ ОСОБЕННО НУЖНО ===== -->
+<section class="section" id="who">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <span class="eyebrow">Кому особенно нужно</span>
+      <h2>Чистый сон важен каждому.<br>Но некоторым — особенно</h2>
+    </div>
+    <div class="who__grid">
+      <article class="who-card" data-reveal>
+        <div class="who-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><circle cx="24" cy="20" r="11" fill="#F7C59F"/><circle cx="20" cy="18" r="1.6" fill="#2F3235"/><circle cx="28" cy="18" r="1.6" fill="#2F3235"/><path d="M20 24q4 3 8 0" stroke="#2F3235" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M10 42c0-7 6-12 14-12s14 5 14 12" fill="#9CCBDF"/><path d="M15 9l4 4M33 9l-4 4" stroke="#E07856" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Детям-аллергикам</h3>
+        <p>Меньше аллергенов в кровати — меньше обострений, спокойные ночи и утро без красных глаз.</p>
+      </article>
+      <article class="who-card" data-reveal>
+        <div class="who-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="13" fill="#FBE3B4"/><circle cx="19" cy="21" r="1.8" fill="#2F3235"/><circle cx="29" cy="21" r="1.8" fill="#2F3235"/><ellipse cx="24" cy="29" rx="3.4" ry="2.6" fill="#2F3235"/><g stroke="#B9CDD9" stroke-width="2.2" stroke-linecap="round" fill="none"><path d="M40 12c3-2 6-1 6 2s-3 4-6 2"/><path d="M42 30c3-1 5 1 4 3.5S42 37 40 35"/></g></svg>
+        </div>
+        <h3>Всем, кто чихает по утрам</h3>
+        <p>Если день начинается с «апчхи», заложенного носа и тяжёлой головы — причина часто прямо под вами.</p>
+      </article>
+      <article class="who-card" data-reveal>
+        <div class="who-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><ellipse cx="24" cy="30" rx="12" ry="10" fill="#E8B48F"/><circle cx="15" cy="16" r="5" fill="#E8B48F"/><circle cx="33" cy="16" r="5" fill="#E8B48F"/><circle cx="15" cy="16" r="2.2" fill="#F7D9C4"/><circle cx="33" cy="16" r="2.2" fill="#F7D9C4"/><ellipse cx="24" cy="32" rx="5" ry="4" fill="#F7D9C4"/><circle cx="24" cy="28.5" r="1.6" fill="#2F3235"/><path d="M21.5 33q2.5 2 5 0" stroke="#2F3235" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Домам с животными</h3>
+        <p>Шерсть, перхоть и следы лап на диване — уберём аллергены, а любимцев оставим.</p>
+      </article>
+      <article class="who-card" data-reveal>
+        <div class="who-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M24 6c6 6 12 8 12 16a12 12 0 11-24 0c0-8 6-10 12-16z" fill="#BFE0EE"/><path d="M18 24c0 4 2.5 7 6 7" stroke="#2E6E8E" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="24" cy="18" r="2.4" fill="#2E6E8E"/></svg>
+        </div>
+        <h3>Новорождённым и их родителям</h3>
+        <p>Гипоаллергенная химия, безопасная с первого дня жизни. Чистая кроватка — спокойная мама.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 4. КАК МЫ ЧИСТИМ ===== -->
+<section class="section section--blue" id="how">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <span class="eyebrow">Технология</span>
+      <h2>Как мы чистим — 4 бережных шага</h2>
+      <p class="section__lead">Профессиональная экстракторная чистка прямо у вас дома. Тихо, аккуратно и безопасно для всей семьи.</p>
+    </div>
+
+    <ol class="steps">
+      <li class="step" data-reveal>
+        <div class="step__num">1</div>
+        <div class="step__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M14 10h20v10c0 8-4 12-10 12s-10-4-10-12z" fill="#9CCBDF"/><path d="M24 32v8" stroke="#2E6E8E" stroke-width="3" stroke-linecap="round"/><path d="M16 42h16" stroke="#2E6E8E" stroke-width="3" stroke-linecap="round"/><circle cx="20" cy="18" r="2" fill="#fff"/><circle cx="27" cy="22" r="2.4" fill="#fff"/><circle cx="22" cy="26" r="1.6" fill="#fff"/></svg>
+        </div>
+        <h3>Глубокая экстракция аллергенов</h3>
+        <p>Мощный экстрактор вымывает пыль, клещей и аллергены из глубины наполнителя, а не только с поверхности.</p>
+      </li>
+      <li class="step" data-reveal>
+        <div class="step__num">2</div>
+        <div class="step__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M24 6l14 5v10c0 10-6 17-14 21-8-4-14-11-14-21V11z" fill="#BFE0EE"/><path d="M17 24l5 5 9-10" stroke="#2E6E8E" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Антибактериальная обработка</h3>
+        <p>Сертифицированный гипоаллергенный состав уничтожает бактерии и не оставляет раздражающих следов.</p>
+      </li>
+      <li class="step" data-reveal>
+        <div class="step__num">3</div>
+        <div class="step__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><g stroke="#7FB069" stroke-width="3" stroke-linecap="round" fill="none"><path d="M10 18h20a5 5 0 005-5 5 5 0 00-5-5"/><path d="M10 26h26a5 5 0 015 5 5 5 0 01-5 5h-4"/><path d="M10 34h14"/></g><circle cx="38" cy="38" r="2.4" fill="#7FB069"/></svg>
+        </div>
+        <h3>Нейтрализация запахов</h3>
+        <p>Не маскируем, а разрушаем молекулы запаха: пот, табак, животные, детские «сюрпризы».</p>
+      </li>
+      <li class="step" data-reveal>
+        <div class="step__num">4</div>
+        <div class="step__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><circle cx="24" cy="22" r="10" fill="#F7C59F"/><g stroke="#E07856" stroke-width="2.6" stroke-linecap="round"><path d="M24 6v4M24 34v4M8 22h4M36 22h4M12.7 10.7l2.8 2.8M32.5 30.5l2.8 2.8M35.3 10.7l-2.8 2.8M15.5 30.5l-2.8 2.8"/></g><path d="M20 22q4 4 8 0" stroke="#2F3235" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Ускоренная сушка</h3>
+        <p>Турбосушка и вентиляция: через 4 часа матрас полностью сухой и готов к чистому сну.</p>
+      </li>
+    </ol>
+
+    <div class="how__note" data-reveal>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.4 7.2 16.9l.9-5.4L4.2 7.7l5.4-.8z" fill="#F2C14E"/></svg>
+      <p>Используем только <strong>гипоаллергенную химию европейских брендов</strong> с сертификатами безопасности. Составы одобрены для детских учреждений и медицинских организаций.</p>
+    </div>
+  </div>
+
+  <!-- воздух становится чище -->
+  <div class="air-strip" aria-hidden="true">
+    <div class="air-strip__inner">
+      <span class="air-strip__label air-strip__label--left">пыльный воздух</span>
+      <div class="air-strip__flow" id="airFlow"></div>
+      <span class="air-strip__label air-strip__label--right">чистый воздух</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. КАЛЬКУЛЯТОР ===== -->
+<section class="section" id="calc">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <span class="eyebrow">Калькулятор</span>
+      <h2>Посчитайте стоимость за 20 секунд</h2>
+    </div>
+
+    <div class="calc" data-reveal>
+      <div class="calc__left">
+        <p class="calc__step-title">1. Что чистим?</p>
+        <div class="calc__cats" id="calcCats" role="tablist" aria-label="Категория чистки">
+          <button class="calc-cat is-active" data-cat="mattress" role="tab" aria-selected="true">
+            <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="4" y="12" width="32" height="18" rx="6" fill="#BFE0EE"/><rect x="4" y="12" width="32" height="7" rx="3.5" fill="#fff"/><path d="M10 24h20" stroke="#2E6E8E" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 4"/></svg>
+            Матрас
+          </button>
+          <button class="calc-cat" data-cat="sofa" role="tab" aria-selected="false">
+            <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 18a4 4 0 014-4h16a4 4 0 014 4v8H8z" fill="#BFE0EE"/><rect x="4" y="22" width="32" height="9" rx="4.5" fill="#9CCBDF"/><rect x="6" y="30" width="4" height="5" rx="2" fill="#2E6E8E"/><rect x="30" y="30" width="4" height="5" rx="2" fill="#2E6E8E"/></svg>
+            Диван
+          </button>
+          <button class="calc-cat" data-cat="armchair" role="tab" aria-selected="false">
+            <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M12 12a6 6 0 0112 0v10H12z" fill="#BFE0EE" transform="translate(2 2)"/><rect x="10" y="22" width="20" height="9" rx="4.5" fill="#9CCBDF"/><rect x="12" y="30" width="3.6" height="5" rx="1.8" fill="#2E6E8E"/><rect x="24.4" y="30" width="3.6" height="5" rx="1.8" fill="#2E6E8E"/></svg>
+            Кресло
+          </button>
+          <button class="calc-cat" data-cat="crib" role="tab" aria-selected="false">
+            <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="6" y="10" width="28" height="16" rx="4" fill="#BFE0EE"/><g stroke="#2E6E8E" stroke-width="2" stroke-linecap="round"><path d="M11 26v6M29 26v6M6 14h28M14 14v8M20 14v8M26 14v8"/></g></svg>
+            Детская кроватка
+          </button>
+          <button class="calc-cat" data-cat="pillow" role="tab" aria-selected="false">
+            <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 12c6-3 18-3 24 0 2 5 2 11 0 16-6 3-18 3-24 0-2-5-2-11 0-16z" fill="#fff" stroke="#9CCBDF" stroke-width="2"/><path d="M13 20h14" stroke="#BFE0EE" stroke-width="2" stroke-linecap="round"/></svg>
+            Подушки
+          </button>
+        </div>
+
+        <p class="calc__step-title">2. Параметры</p>
+        <div class="calc__opts" id="calcOpts" role="radiogroup" aria-label="Параметры"></div>
+
+        <div class="calc__qty">
+          <p class="calc__step-title">3. Количество</p>
+          <div class="qty">
+            <button class="qty__btn" id="qtyMinus" aria-label="Уменьшить количество">−</button>
+            <span class="qty__val" id="qtyVal">1</span>
+            <button class="qty__btn" id="qtyPlus" aria-label="Увеличить количество">+</button>
+          </div>
+          <p class="calc__hint">При чистке от 2 предметов — скидка 10%</p>
+        </div>
+      </div>
+
+      <div class="calc__right">
+        <div class="calc__summary">
+          <p class="calc__sum-label" id="calcDesc">Матрас двуспальный × 1</p>
+          <div class="calc__price">
+            <span class="calc__old" id="calcOld" hidden></span>
+            <span class="calc__total" id="calcTotal">3 400 ₽</span>
+          </div>
+          <p class="calc__discount" id="calcDisc" hidden>Скидка 10% применена</p>
+          <ul class="calc__includes">
+            <li>Выезд и осмотр — бесплатно</li>
+            <li>Гипоаллергенная химия включена</li>
+            <li>Сушка до 4 часов</li>
+          </ul>
+          <a href="#lead" class="btn btn--accent btn--big calc__cta">Записаться на чистку</a>
+          <p class="calc__micro">Или позвоните: <a href="tel:+79090939400">+7 909 093-94-00</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. ДО / ПОСЛЕ ===== -->
+<section class="section section--blue" id="before-after">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <span class="eyebrow">Наглядно</span>
+      <h2>Один матрас. До и после чистки</h2>
+      <p class="section__lead">Потяните ползунок и посмотрите, что уходит вместе с пылью.</p>
+    </div>
+
+    <div class="ba" id="baWrap" data-reveal>
+      <div class="ba__stage">
+        <!-- ДО -->
+        <div class="ba__layer ba__layer--before">
+          <svg viewBox="0 0 800 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="800" height="460" fill="#E8E1D4"/>
+            <rect x="120" y="110" width="560" height="240" rx="34" fill="#CFC8B8"/>
+            <rect x="120" y="110" width="560" height="60" rx="30" fill="#DCD5C5"/>
+            <ellipse cx="260" cy="260" rx="70" ry="34" fill="#B7AE9C" opacity=".8"/>
+            <ellipse cx="480" cy="300" rx="90" ry="40" fill="#B7AE9C" opacity=".7"/>
+            <ellipse cx="580" cy="200" rx="46" ry="24" fill="#C2B9A6" opacity=".8"/>
+            <ellipse cx="350" cy="180" rx="40" ry="20" fill="#C2B9A6" opacity=".7"/>
+            <g fill="#A79E8C">
+              <circle cx="200" cy="170" r="5"/><circle cx="310" cy="300" r="6"/><circle cx="530" cy="250" r="5"/><circle cx="620" cy="290" r="6"/><circle cx="420" cy="230" r="4"/><circle cx="250" cy="320" r="4"/><circle cx="600" cy="160" r="4"/><circle cx="170" cy="280" r="5"/>
+            </g>
+            <g stroke="#B7AE9C" stroke-width="3" stroke-linecap="round" opacity=".9">
+              <path d="M180 210c20-10 40-10 60 0M450 340c24-12 48-12 72 0M560 150c16-8 32-8 48 0"/>
+            </g>
+            <text x="400" y="425" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" fill="#8A8172">пыль, пятна, аллергены</text>
+          </svg>
+          <span class="ba__tag ba__tag--before">До</span>
+        </div>
+        <!-- ПОСЛЕ -->
+        <div class="ba__layer ba__layer--after" id="baAfter">
+          <svg viewBox="0 0 800 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="800" height="460" fill="#DCEEF5"/>
+            <rect x="120" y="110" width="560" height="240" rx="34" fill="#FFFFFF"/>
+            <rect x="120" y="110" width="560" height="60" rx="30" fill="#F3FAFD"/>
+            <rect x="120" y="110" width="560" height="240" rx="34" fill="none" stroke="#CBE3EE" stroke-width="3"/>
+            <g fill="#FFFFFF">
+              <path d="M250 150l4 11 11 4-11 4-4 11-4-11-11-4 11-4z"/>
+              <path d="M560 260l3.4 9 9 3.4-9 3.4-3.4 9-3.4-9-9-3.4 9-3.4z"/>
+              <path d="M420 180l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" opacity=".85"/>
+            </g>
+            <g stroke="#EAF5FA" stroke-width="3" stroke-linecap="round">
+              <path d="M180 220c24-12 48-12 72 0M440 300c28-14 56-14 84 0M300 330c20-10 40-10 60 0"/>
+            </g>
+            <text x="400" y="425" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" fill="#2E6E8E">чисто, свежо, безопасно</text>
+          </svg>
+          <span class="ba__tag ba__tag--after">После</span>
+        </div>
+        <!-- ползунок -->
+        <div class="ba__handle" id="baHandle" role="slider" tabindex="0" aria-label="Ползунок сравнения до и после" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+          <div class="ba__line"></div>
+          <div class="ba__knob">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 6l-5 6 5 6M15 6l5 6-5 6" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="families" data-reveal>
+      <div class="families__num"><span id="familiesCounter">0</span></div>
+      <p class="families__label">семей уже дышат легче<br>после нашей чистки</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. ЦЕНЫ ===== -->
+<section class="section" id="prices">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <span class="eyebrow">Цены</span>
+      <h2>Честные цены без сюрпризов</h2>
+      <p class="section__lead">Выезд и осмотр — бесплатно. Точную стоимость называем до начала работ.</p>
+    </div>
+    <div class="prices__wrap" data-reveal>
+      <table class="prices">
+        <thead>
+          <tr><th>Услуга</th><th>Что входит</th><th class="prices__cost">Цена</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Матрас односпальный</td><td>Две стороны, экстракция, антибактериально</td><td class="prices__cost">от 2 500 ₽</td></tr>
+          <tr><td>Матрас двуспальный</td><td>Две стороны, экстракция, антибактериально</td><td class="prices__cost">от 3 400 ₽</td></tr>
+          <tr><td>Диван 3-местный</td><td>Сиденья, спинка, подлокотники</td><td class="prices__cost">от 3 400 ₽</td></tr>
+          <tr><td>Кресло</td><td>Полная чистка + нейтрализация запахов</td><td class="prices__cost">от 1 500 ₽</td></tr>
+          <tr><td>Детская кроватка</td><td>Матрас + бортики, детская химия</td><td class="prices__cost">от 1 500 ₽</td></tr>
+          <tr><td>Подушка</td><td>Глубокая экстракция, сушка</td><td class="prices__cost">от 400 ₽</td></tr>
+        </tbody>
+      </table>
+      <div class="prices__note">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#2E6E8E"/><path d="M8 12.5l2.6 2.6L16 9.5" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Выезд мастера и осмотр — <strong>бесплатно</strong>, даже если вы откажетесь от чистки
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. МЫ БЕРЕЖЁМ ВАШ ДОМ ===== -->
+<section class="section section--blue" id="care">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <span class="eyebrow">Гарантии</span>
+      <h2>Мы бережём ваш дом</h2>
+    </div>
+    <div class="badges">
+      <div class="badge" data-reveal>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4c7 7 14 9 14 19a14 14 0 11-28 0c0-10 7-12 14-19z" fill="#BFE0EE"/><path d="M18 24l4 4 8-9" stroke="#2E6E8E" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Гипоаллергенная химия</h3>
+        <p>Сертифицированные составы, безопасные для детей с первого дня жизни</p>
+      </div>
+      <div class="badge" data-reveal>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="18" fill="#fff" stroke="#E07856" stroke-width="3"/><path d="M15 15l18 18" stroke="#E07856" stroke-width="3" stroke-linecap="round"/><path d="M20 20c2-2 6-2 8 0s2 6 0 8-6 2-8 0-2-6 0-8z" fill="none" stroke="#2F3235" stroke-width="2"/></svg>
+        <h3>Без хлора</h3>
+        <p>Никакой агрессивной химии и резких запахов после чистки</p>
+      </div>
+      <div class="badge" data-reveal>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="18" fill="#DCEEF5"/><path d="M24 12v12l8 5" stroke="#2E6E8E" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Сохнет за 4 часа</h3>
+        <p>Вечером чистим — ночью вы уже спите на сухом чистом матрасе</p>
+      </div>
+      <div class="badge" data-reveal>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="6" width="28" height="36" rx="4" fill="#fff" stroke="#9CCBDF" stroke-width="2.6"/><path d="M16 14h16M16 21h16M16 28h10" stroke="#B9CDD9" stroke-width="2.4" stroke-linecap="round"/><circle cx="31" cy="33" r="6" fill="#E07856"/><path d="M28.6 33l1.8 1.8 3.2-3.6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Документы и чек</h3>
+        <p>Договор, акт и чек — официально, с гарантией результата</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. ОТЗЫВЫ ===== -->
+<section class="section" id="reviews">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <span class="eyebrow">Отзывы</span>
+      <h2>Истории семей, которые уже дышат легче</h2>
+    </div>
+
+    <div class="carousel" data-reveal>
+      <div class="carousel__viewport" id="revViewport">
+        <div class="carousel__track" id="revTrack">
+          <article class="review">
+            <div class="review__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            <p class="review__text">«Сын аллергик, каждое утро начиналось с чихания. После чистки матраса и кроватки — тишина. Уже месяц ни одного "апчхи" за завтраком. Жалею только, что не сделала этого раньше».</p>
+            <div class="review__author">
+              <span class="review__avatar" style="--av:#E8B48F">МК</span>
+              <div><strong>Марина К.</strong><span>мама Тимофея, 4 года</span></div>
+            </div>
+          </article>
+          <article class="review">
+            <div class="review__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            <p class="review__text">«Две кошки, один диван и вечный насморк у мужа. Мастер приехал вовремя, всё объяснил, показал, что вытащил из дивана — это было впечатляюще. Запах "кошачьего домика" исчез полностью».</p>
+            <div class="review__author">
+              <span class="review__avatar" style="--av:#9CCBDF">ОС</span>
+              <div><strong>Ольга и Сергей</strong><span>диван + два кресла</span></div>
+            </div>
+          </article>
+          <article class="review">
+            <div class="review__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            <p class="review__text">«Готовили комнату для новорождённой. Почистили кроватку, матрас и наше спальное место детской гипоаллергенной химией. Никакого запаха, документы и сертификаты показали сразу. Очень деликатно».</p>
+            <div class="review__author">
+              <span class="review__avatar" style="--av:#DDBBED">АВ</span>
+              <div><strong>Анна В.</strong><span>ожидали малышку</span></div>
+            </div>
+          </article>
+          <article class="review">
+            <div class="review__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            <p class="review__text">«Матрасу 9 лет, думал — только выбросить. Оказалось, его можно вернуть к жизни. После чистки сплю заметно глубже, перестал просыпаться с заложенным носом. Спасибо за честную работу».</p>
+            <div class="review__author">
+              <span class="review__avatar" style="--av:#BFE0EE">ДП</span>
+              <div><strong>Дмитрий П.</strong><span>матрас + 4 подушки</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="carousel__controls">
+        <button class="carousel__btn" id="revPrev" aria-label="Предыдущий отзыв">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 5l-7 7 7 7" stroke="#2E6E8E" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="carousel__dots" id="revDots" role="tablist" aria-label="Навигация по отзывам"></div>
+        <button class="carousel__btn" id="revNext" aria-label="Следующий отзыв">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 5l7 7-7 7" stroke="#2E6E8E" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. ФИНАЛЬНЫЙ CTA ===== -->
+<section class="section section--cta" id="lead">
+  <div class="container">
+    <div class="lead" data-reveal>
+      <div class="lead__text">
+        <h2>Запишитесь на чистку — подарите семье чистый воздух</h2>
+        <p>Оставьте заявку, перезвоним за 10 минут, подберём удобное окно и ответим на все вопросы. Выезд и осмотр — бесплатно.</p>
+        <div class="slots-badge slots-badge--lead">
+          <span class="slots-badge__dot" aria-hidden="true"></span>
+          Сегодня свободно <strong id="slotsCount2">2 окна</strong>
+        </div>
+        <a class="lead__phone" href="tel:+79090939400">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z" fill="#2E6E8E"/></svg>
+          +7 909 093-94-00
+        </a>
+      </div>
+
+      <div class="lead__form-wrap">
+        <form class="lead-form" id="leadForm" novalidate>
+          <h3 class="lead-form__title">Заявка на чистку</h3>
+          <label class="field">
+            <span class="field__label">Ваше имя</span>
+            <input type="text" name="name" id="leadName" placeholder="Как к вам обращаться" autocomplete="name" required>
+          </label>
+          <label class="field">
+            <span class="field__label">Телефон</span>
+            <input type="tel" name="phone" id="leadPhone" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+          </label>
+          <label class="field">
+            <span class="field__label">Что будем чистить?</span>
+            <select name="service" id="leadService">
+              <option value="mattress">Матрас</option>
+              <option value="divan">Диван</option>
+              <option value="kreslo">Кресло</option>
+              <option value="krovatka">Детская кроватка</option>
+              <option value="podushki">Подушки</option>
+              <option value="vse">Несколько предметов</option>
+            </select>
+          </label>
+          <label class="check">
+            <input type="checkbox" id="leadAgree" checked required>
+            <span>Соглашаюсь с обработкой персональных данных</span>
+          </label>
+          <button type="submit" class="btn btn--accent btn--big lead-form__submit">Позаботиться о здоровье</button>
+          <p class="lead-form__error" id="leadError" role="alert" hidden>Заполните имя и телефон — и мы сразу перезвоним</p>
+        </form>
+
+        <div class="lead-success" id="leadSuccess" hidden>
+          <div class="lead-success__icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#DCEEF5"/><path d="M20 33l8 8 16-18" stroke="#2E6E8E" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Заявка принята!</h3>
+          <p>Спасибо за доверие. Перезвоним в течение 10 минут, чтобы подобрать удобное время. А пока — откройте окно и вдохните свежий воздух.</p>
+          <button class="btn btn--primary" id="leadAgain" type="button">Отправить ещё одну заявку</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== 11. ФУТЕР ===== -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="logo logo--footer" href="#top">
+        <svg class="logo__icon" viewBox="0 0 40 40" width="32" height="32" aria-hidden="true">
+          <circle cx="20" cy="20" r="18" fill="#DCEEF5"/>
+          <path d="M11 24c0-5 4-9 9-9s9 4 9 9" fill="none" stroke="#2E6E8E" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M13 27.5h14" stroke="#E07856" stroke-width="2.4" stroke-linecap="round"/>
+          <circle cx="20" cy="11.5" r="2" fill="#E07856"/>
+        </svg>
+        <span class="logo__text">Здоровый<em>дом</em></span>
+      </a>
+      <p>Химчистка матрасов и мебели на дому с заботой о здоровье вашей семьи.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Контакты</h4>
+      <a href="tel:+79090939400" class="footer__phone">+7 909 093-94-00</a>
+      <p>Ежедневно с 8:00 до 22:00<br>Выезд по городу и области</p>
+    </div>
+    <div class="footer__col">
+      <h4>Мы на связи</h4>
+      <div class="socials">
+        <a href="#" aria-label="Telegram" class="socials__link"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M21 4L3 11.2l5.4 1.9L10 19l3.2-3.6 4.6 3.2z" fill="#fff"/></svg></a>
+        <a href="#" aria-label="WhatsApp" class="socials__link"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 3a9 9 0 00-7.8 13.5L3 21l4.6-1.2A9 9 0 1012 3zm4.2 11.2c-.6 1.5-1.7 2-2.7 1.6-2.5-.9-4.6-2.9-5.6-5.5-.3-1 .2-2 1.3-2.4.5-.2 1 0 1.2.5l.7 1.4c.2.4 0 .8-.3 1.1-.3.3-.4.6-.2 1 .6 1.2 1.7 2.2 2.9 2.7.4.2.7 0 1-.3.3-.3.7-.4 1.1-.2l1.4.7c.4.2.6.7.4 1.2z" fill="#fff" transform="scale(.92) translate(1 1)"/></svg></a>
+        <a href="#" aria-label="ВКонтакте" class="socials__link"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M3 7c.6 5.4 3.4 9.4 8.6 10.4.4 0 .6-.2.6-.6v-2.4c0-.4.3-.6.6-.5 1.5.3 2.8 1.3 3.7 2.6.2.3.5.5.9.5h2.6c.5 0 .8-.6.5-1-1.3-2-3-3.6-3-3.6s1.6-2 3-4.6c.2-.4-.1-.8-.6-.8h-2.7c-.4 0-.6.2-.8.5-1 1.9-2.4 3.6-2.4 3.6s-.5-.4-.5-2.2V7.5c0-.5-.2-.7-.7-.7H7.4c-.4 0-.6.3-.5.6 0 0 1 .2 1.1 1.1v2.6c0 .5-.3.6-.8.3C5.7 10.6 4.6 8.7 4 7.2 3.9 6.9 3.6 6.8 3 7z" fill="#fff" transform="scale(.9) translate(1.3 1.3)"/></svg></a>
+      </div>
+      <p>Пишите — отвечаем быстро</p>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">
+      <p>© 2024 «Здоровый дом». Демо-проект портфолио.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
