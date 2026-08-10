@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Налоговый навигатор — бухгалтерия для ИП на автопилоте</title>
+  <meta name="description" content="Онлайн-бухгалтерия для ИП и самозанятых: отчёты, налоги, взносы и документы — берём на себя. Без штрафов, с гарантией в договоре.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a href="#top" class="logo">
+        <span class="logo__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M12 2 3 7v2h18V7L12 2Z" fill="currentColor"/><path d="M5 11v7M9.5 11v7M14.5 11v7M19 11v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M3 20h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </span>
+        <span class="logo__text">Налоговый<em>навигатор</em></span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#calculator" class="nav__link">Калькулятор</a>
+        <a href="#calendar" class="nav__link">Дедлайны</a>
+        <a href="#tariffs" class="nav__link">Тарифы</a>
+        <a href="#faq" class="nav__link">Вопросы</a>
+        <a href="#lead" class="btn btn--primary btn--sm nav__cta">Рассчитать режим</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__grid"></div>
+        <div class="hero__glow hero__glow--blue"></div>
+        <div class="hero__glow hero__glow--green"></div>
+      </div>
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <div class="hero__badge">
+            <span class="hero__badge-dot"></span>
+            Онлайн-бухгалтерия для ИП и самозанятых
+          </div>
+          <h1 class="hero__title">Бухгалтерия для ИП — <span class="accent">на&nbsp;автопилоте</span></h1>
+          <p class="hero__subtitle">Отчёты, налоги, взносы и документы — берём на себя. Без штрафов, с&nbsp;гарантией в&nbsp;договоре.</p>
+          <div class="hero__actions">
+            <a href="#calculator" class="btn btn--primary btn--lg">Рассчитать мой режим</a>
+            <a href="tel:+79090939400" class="btn btn--ghost btn--lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z" fill="currentColor"/></svg>
+              +7 909 093-94-00
+            </a>
+          </div>
+          <ul class="hero__trust">
+            <li><span class="check">✓</span> подключаем за 1 день</li>
+            <li><span class="check">✓</span> штрафы — за наш счёт</li>
+            <li><span class="check">✓</span> все регионы РФ</li>
+          </ul>
+        </div>
+
+        <!-- Дашборд-иллюстрация -->
+        <div class="hero__dashboard reveal" aria-hidden="true">
+          <div class="dash">
+            <div class="dash__head">
+              <div class="dash__avatar">ИП</div>
+              <div class="dash__who">
+                <strong>ИП Соколова А. В.</strong>
+                <span>УСН «Доходы» · Москва</span>
+              </div>
+              <span class="dash__live"><i></i>автопилот</span>
+            </div>
+            <div class="dash__statuses">
+              <div class="dash__row dash__row--done">
+                <span class="dash__icon">✓</span>
+                <span class="dash__label">Декларация УСН</span>
+                <span class="dash__value dash__value--green">сдана</span>
+              </div>
+              <div class="dash__row dash__row--done">
+                <span class="dash__icon">✓</span>
+                <span class="dash__label">Фиксированные взносы</span>
+                <span class="dash__value dash__value--green">оплачены</span>
+              </div>
+              <div class="dash__row">
+                <span class="dash__icon dash__icon--clock">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </span>
+                <span class="dash__label">Авансовый платёж УСН</span>
+                <span class="dash__value dash__value--blue" id="dash-days">12 дней</span>
+              </div>
+            </div>
+            <div class="dash__chart">
+              <div class="dash__chart-head">
+                <span>Налоговая нагрузка</span>
+                <strong class="mono">−38%</strong>
+              </div>
+              <svg class="dash__spark" viewBox="0 0 260 72" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="sparkFill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#1D4ED8" stop-opacity=".22"/>
+                    <stop offset="100%" stop-color="#1D4ED8" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0 58 L26 52 L52 55 L78 44 L104 47 L130 36 L156 39 L182 28 L208 31 L234 20 L260 16 L260 72 L0 72 Z" fill="url(#sparkFill)"/>
+                <path class="dash__spark-line" d="M0 58 L26 52 L52 55 L78 44 L104 47 L130 36 L156 39 L182 28 L208 31 L234 20 L260 16" fill="none" stroke="#1D4ED8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="dash__footer">
+              <span class="dash__chip dash__chip--green">0 ₽ штрафов за 3 года</span>
+              <span class="dash__chip">отчёты: 24/24 в срок</span>
+            </div>
+          </div>
+          <div class="dash__card-float">
+            <span class="dash__card-float-icon">✓</span>
+            <div><strong>Уведомление</strong><span>Отчёт принят ФНС</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Счётчики ===== -->
+    <section class="stats">
+      <div class="container stats__grid">
+        <div class="stat reveal">
+          <div class="stat__num mono"><span class="counter" data-target="1840">0</span>+</div>
+          <div class="stat__label">ИП на обслуживании</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat__num mono"><span class="counter" data-target="9612">0</span></div>
+          <div class="stat__label">отчётов сдано в этом году</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat__num mono"><span class="counter" data-target="99.7" data-decimals="1">0</span>%</div>
+          <div class="stat__label">отчётов — точно в срок</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat__num mono stat__num--green"><span class="counter" data-target="0">0</span> ₽</div>
+          <div class="stat__label">штрафов у клиентов за 3 года</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Калькулятор ===== -->
+    <section class="section" id="calculator">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Калькулятор режима</span>
+          <h2>Какой налоговый режим <span class="accent">выгоднее вам</span></h2>
+          <p>Двигайте ползунки — сравнение УСН 6%, УСН 15%, патента и НПД пересчитается мгновенно.</p>
+        </div>
+        <div class="calc reveal">
+          <div class="calc__controls">
+            <div class="calc__field">
+              <label for="calc-income">Доход в месяц</label>
+              <div class="calc__range-row">
+                <input type="range" id="calc-income" min="50000" max="3000000" step="10000" value="350000">
+                <output class="mono" id="calc-income-out">350 000 ₽</output>
+              </div>
+            </div>
+            <div class="calc__field">
+              <label for="calc-expenses">Расходы в месяц</label>
+              <div class="calc__range-row">
+                <input type="range" id="calc-expenses" min="0" max="2000000" step="10000" value="120000">
+                <output class="mono" id="calc-expenses-out">120 000 ₽</output>
+              </div>
+            </div>
+            <div class="calc__field">
+              <span class="calc__label">Сотрудники</span>
+              <div class="seg" id="calc-employees">
+                <button type="button" class="seg__btn is-active" data-value="no">Нет</button>
+                <button type="button" class="seg__btn" data-value="yes">Есть</button>
+              </div>
+            </div>
+            <div class="calc__field">
+              <label for="calc-activity">Регион и вид деятельности</label>
+              <select id="calc-activity" class="calc__select">
+                <option value="services" data-patent="80400" data-npd="4">Услуги населению — Москва и МО</option>
+                <option value="it" data-patent="60000" data-npd="6">IT и digital — любой регион</option>
+                <option value="trade" data-patent="126000" data-npd="6">Торговля — регионы РФ</option>
+                <option value="beauty" data-patent="59400" data-npd="4">Красота и здоровье — СПб</option>
+              </select>
+            </div>
+          </div>
+          <div class="calc__result">
+            <div class="calc__table" id="calc-table" role="table" aria-label="Сравнение налоговых режимов">
+              <div class="calc__thead" role="row">
+                <span role="columnheader">Режим</span>
+                <span role="columnheader">Платежи в год</span>
+                <span role="columnheader">В месяц</span>
+              </div>
+              <!-- строки генерируются JS -->
+            </div>
+            <div class="calc__saving" id="calc-saving"></div>
+            <a href="#lead" class="btn btn--primary btn--block">Получить разбор бесплатно</a>
+            <p class="calc__note">Расчёт демонстрационный: учтены фиксированные взносы ИП 2025 г. и стандартные ставки. Точный разбор сделает бухгалтер.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Календарь дедлайнов ===== -->
+    <section class="section section--gray" id="calendar">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Календарь отчётности</span>
+          <h2>Ближайшие дедлайны — <span class="accent">под контролем</span></h2>
+          <p>Даты считаются от сегодняшнего дня. Мы подаём всё заранее — вы просто видите статусы.</p>
+        </div>
+        <div class="deadlines" id="deadlines">
+          <!-- карточки генерируются JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Свой бухгалтер vs аутсорс ===== -->
+    <section class="section" id="compare">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Сравнение</span>
+          <h2>Свой бухгалтер <span class="accent">vs аутсорс</span></h2>
+        </div>
+        <div class="vs reveal">
+          <div class="vs__head">
+            <span class="vs__crit">Критерий</span>
+            <span class="vs__side">Штатный бухгалтер</span>
+            <span class="vs__side vs__side--win">Налоговый навигатор</span>
+          </div>
+          <div class="vs__row">
+            <span class="vs__crit">Стоимость в год</span>
+            <span class="vs__cell vs__cell--lose mono">от 720 000 ₽</span>
+            <span class="vs__cell vs__cell--win mono">от 35 880 ₽</span>
+          </div>
+          <div class="vs__row">
+            <span class="vs__crit">Ответственность</span>
+            <span class="vs__cell vs__cell--lose">моральная, ошибки — ваши</span>
+            <span class="vs__cell vs__cell--win">финансовая, в договоре</span>
+          </div>
+          <div class="vs__row">
+            <span class="vs__crit">Отпуска и больничные</span>
+            <span class="vs__cell vs__cell--lose">28 дней учёт стоит</span>
+            <span class="vs__cell vs__cell--win">команда без перерывов</span>
+          </div>
+          <div class="vs__row">
+            <span class="vs__crit">Софт и ЭДО</span>
+            <span class="vs__cell vs__cell--lose mono">+60 000 ₽/год на вас</span>
+            <span class="vs__cell vs__cell--win">включён в тариф</span>
+          </div>
+          <div class="vs__row">
+            <span class="vs__crit">Штрафы за ошибки</span>
+            <span class="vs__cell vs__cell--lose">платите вы</span>
+            <span class="vs__cell vs__cell--win">платим мы</span>
+          </div>
+          <div class="vs__verdict">
+            <span>Итог: аутсорс дешевле минимум в 20 раз — и отвечает деньгами.</span>
+            <a href="#lead" class="btn btn--primary btn--sm">Перейти на аутсорс</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Тарифы ===== -->
+    <section class="section section--gray" id="tariffs">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Тарифы</span>
+          <h2>Прозрачные цены, <span class="accent">без доплат</span></h2>
+        </div>
+        <div class="plans">
+          <article class="plan reveal">
+            <h3 class="plan__name">Самозанятый</h3>
+            <div class="plan__price">от <span class="mono">990</span> ₽/мес</div>
+            <ul class="plan__list">
+              <li>Контроль лимита 2,4 млн ₽</li>
+              <li>Чеки и «Мой налог» под контролем</li>
+              <li>Напоминания об уплате НПД</li>
+              <li>Ответы бухгалтера в чате</li>
+            </ul>
+            <a href="#lead" class="btn btn--outline btn--block">Выбрать</a>
+          </article>
+          <article class="plan plan--featured reveal">
+            <div class="plan__badge">Популярный</div>
+            <h3 class="plan__name">ИП без сотрудников</h3>
+            <div class="plan__price">от <span class="mono">2 990</span> ₽/мес</div>
+            <ul class="plan__list">
+              <li>Вся отчётность УСН / патент</li>
+              <li>Расчёт налогов и взносов</li>
+              <li>Счета, акты, ЭДО</li>
+              <li>Личный бухгалтер на связи</li>
+              <li>Календарь дедлайнов в приложении</li>
+            </ul>
+            <a href="#lead" class="btn btn--primary btn--block">Выбрать</a>
+          </article>
+          <article class="plan reveal">
+            <h3 class="plan__name">ИП с сотрудниками</h3>
+            <div class="plan__price">от <span class="mono">5 990</span> ₽/мес</div>
+            <ul class="plan__list">
+              <li>Всё из тарифа «без сотрудников»</li>
+              <li>Расчёт зарплаты и взносов</li>
+              <li>Кадровые документы</li>
+              <li>Отчёты в ПФР и ФСС (СЭДО)</li>
+              <li>6-НДФЛ и персучёт</li>
+            </ul>
+            <a href="#lead" class="btn btn--outline btn--block">Выбрать</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Как это работает ===== -->
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Процесс</span>
+          <h2>Как это <span class="accent">работает</span></h2>
+        </div>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__num mono">01</span>
+            <h3>Подключаем за 1 день</h3>
+            <p>Подписываем договор онлайн, забираем доступы и документы у прошлого бухгалтера.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num mono">02</span>
+            <h3>Передаёте документы в мессенджер</h3>
+            <p>Фото чека или скан — прямо в чат. Никаких папок и поездок в офис.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num mono">03</span>
+            <h3>Ведём учёт и сдаём отчёты</h3>
+            <p>Считаем налоги, готовим платёжки, сдаём декларации до дедлайна.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num mono">04</span>
+            <h3>Вы видите статусы в приложении</h3>
+            <p>«Сдано», «оплачено», «осталось 12 дней» — всё как в дашборде навигатора.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Гарантии ===== -->
+    <section class="section section--gray" id="guarantees">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Гарантии</span>
+          <h2>Отвечаем <span class="accent">деньгами и договором</span></h2>
+        </div>
+        <div class="badges">
+          <div class="badge reveal">
+            <span class="badge__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.5 12 2.5 2.5 4.5-4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>Штрафы за наш счёт</h3>
+            <p>Ошиблись — платим штрафы и пени из своих средств.</p>
+          </div>
+          <div class="badge reveal">
+            <span class="badge__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M7 3h7l4 4v14H7V3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 3v4h4M10 12h5M10 16h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Ответственность в договоре</h3>
+            <p>Финансовая ответственность прописана пунктом 4.2 — проверьте сами.</p>
+          </div>
+          <div class="badge reveal">
+            <span class="badge__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Ошибка = месяц бесплатно</h3>
+            <p>Нашли неточность в учёте — следующий месяц обслуживания за 0 ₽.</p>
+          </div>
+          <div class="badge reveal">
+            <span class="badge__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M21 12a8 8 0 0 1-8 8H5l-2 2V12a8 8 0 0 1 8-8h2a8 8 0 0 1 8 8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 12h.01M13 12h.01M17 12h.01" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Личный бухгалтер на связи</h3>
+            <p>Отвечает в мессенджере в рабочее время в течение 15 минут.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Отзывы ===== -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Отзывы</span>
+          <h2>Предприниматели <span class="accent">уже на автопилоте</span></h2>
+        </div>
+        <div class="carousel reveal" id="carousel">
+          <div class="carousel__track" id="carousel-track">
+            <figure class="review">
+              <blockquote>«Раньше каждый квартал неделю разбиралась с отчётами. Теперь просто получаю “сдано ✓” в чате. Экономлю около 10 часов в месяц».</blockquote>
+              <figcaption>
+                <span class="review__avatar" data-hue="215">АК</span>
+                <div><strong>Анна Ковалёва</strong><span>ИП, студия маникюра · Казань</span></div>
+                <span class="review__save mono">−10 ч/мес</span>
+              </figcaption>
+            </figure>
+            <figure class="review">
+              <blockquote>«Перешёл от “бухгалтера по знакомству” — оказалось, два года переплачивал налог. Ребята пересчитали режим, экономия 84 000 ₽ в год».</blockquote>
+              <figcaption>
+                <span class="review__avatar" data-hue="160">ДС</span>
+                <div><strong>Дмитрий Савельев</strong><span>ИП, интернет-магазин · Екатеринбург</span></div>
+                <span class="review__save mono">−84 000 ₽/год</span>
+              </figcaption>
+            </figure>
+            <figure class="review">
+              <blockquote>«Как самозанятой мне хватало и “Моего налога”, но с ростом оборота страшно было вылететь за лимит. Теперь лимит следят за меня».</blockquote>
+              <figcaption>
+                <span class="review__avatar" data-hue="280">МР</span>
+                <div><strong>Мария Ромашкина</strong><span>Самозанятая, репетитор · Новосибирск</span></div>
+                <span class="review__save mono">−6 ч/мес</span>
+              </figcaption>
+            </figure>
+            <figure class="review">
+              <blockquote>«Нанял двух сотрудников и утонул в 6-НДФЛ. Передал всё сюда — за месяц навели порядок, штраф за прошлый квартал закрыли сами».</blockquote>
+              <figcaption>
+                <span class="review__avatar" data-hue="20">ИТ</span>
+                <div><strong>Игорь Ткаченко</strong><span>ИП, автосервис · Краснодар</span></div>
+                <span class="review__save mono">−15 ч/мес</span>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="carousel__nav">
+            <button class="carousel__btn" id="carousel-prev" aria-label="Назад">←</button>
+            <div class="carousel__dots" id="carousel-dots"></div>
+            <button class="carousel__btn" id="carousel-next" aria-label="Вперёд">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section section--gray" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head reveal">
+          <span class="section__tag">FAQ</span>
+          <h2>Частые <span class="accent">вопросы</span></h2>
+        </div>
+        <div class="faq reveal">
+          <details class="faq__item">
+            <summary>Я уже работаю с другим бухгалтером. Сложно перейти?<span class="faq__chevron"></span></summary>
+            <div class="faq__body">Нет. Мы сами запросим документы и базу у прежнего бухгалтера, проверим учёт на ошибки и подключим вас за 1 рабочий день. Перерыва в отчётности не будет.</div>
+          </details>
+          <details class="faq__item">
+            <summary>ИП только открылся, отчётов ещё нет. Вы мне подойдёте?<span class="faq__chevron"></span></summary>
+            <div class="faq__body">Да, это лучший момент: поможем выбрать режим (калькулятор выше — первый шаг), встанем на учёт в ФСС/ПФР при необходимости и сразу настроим календарь дедлайнов.</div>
+          </details>
+          <details class="faq__item">
+            <summary>А если дохода не было — нужно ли сдавать «нулёвки»?<span class="faq__chevron"></span></summary>
+            <div class="faq__body">Нужно: нулевая декларация обязательна, иначе штраф и блокировка счёта. На любом тарифе сдаём нулёвки без доплаты.</div>
+          </details>
+          <details class="faq__item">
+            <summary>Работаете с патентом?<span class="faq__chevron"></span></summary>
+            <div class="faq__body">Да. Рассчитаем стоимость патента в вашем регионе, поможем с заявлением, будем вести книгу доходов и следить за лимитом 60 млн ₽.</div>
+          </details>
+          <details class="faq__item">
+            <summary>Нужна ли мне онлайн-касса?<span class="faq__chevron"></span></summary>
+            <div class="faq__body">Зависит от режима и клиентов: самозанятым и ряду ИП на патенте касса не нужна, при расчётах с физлицами на УСН — обычно нужна. На бесплатной консультации ответим точно для вашего случая.</div>
+          </details>
+          <details class="faq__item">
+            <summary>Как обмениваться документами? Нужен ЭДО?<span class="faq__chevron"></span></summary>
+            <div class="faq__body">Достаточно мессенджера: присылаете фото или сканы. Если нужен юридически значимый ЭДО с контрагентами — подключим, он уже включён в тариф.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Финальный CTA + форма ===== -->
+    <section class="section cta" id="lead">
+      <div class="container">
+        <div class="cta__card reveal">
+          <div class="cta__text">
+            <h2>Получите бесплатный разбор <span class="accent">вашего режима</span></h2>
+            <p>Бухгалтер посчитает ваш налог на каждом режиме, найдёт переплаты и вернётся с цифрами в течение рабочего дня.</p>
+            <ul class="cta__list">
+              <li><span class="check">✓</span> разбор по вашим реальным цифрам</li>
+              <li><span class="check">✓</span> план перехода, если уже есть бухгалтер</li>
+              <li><span class="check">✓</span> никакого спама — один звонок</li>
+            </ul>
+            <a href="tel:+79090939400" class="cta__phone mono">+7 909 093-94-00</a>
+          </div>
+          <div class="cta__form-wrap">
+            <form class="form" id="lead-form" novalidate>
+              <h3 class="form__title">Заявка на разбор</h3>
+              <label class="form__field">
+                <span>Имя</span>
+                <input type="text" name="name" id="form-name" placeholder="Как к вам обращаться" required>
+              </label>
+              <label class="form__field">
+                <span>Телефон</span>
+                <input type="tel" name="phone" id="form-phone" placeholder="+7 ___ ___-__-__" required>
+              </label>
+              <label class="form__field">
+                <span>Оборот в месяц</span>
+                <select name="turnover" id="form-turnover" required>
+                  <option value="" disabled selected>Выберите диапазон</option>
+                  <option value="to100">до 100 000 ₽</option>
+                  <option value="100-500">100–500 тыс. ₽</option>
+                  <option value="500-2m">0,5–2 млн ₽</option>
+                  <option value="2m+">более 2 млн ₽</option>
+                </select>
+              </label>
+              <p class="form__error" id="form-error" hidden>Заполните имя и телефон — иначе мы не сможем связаться.</p>
+              <button type="submit" class="btn btn--primary btn--block btn--lg">Получить разбор бесплатно</button>
+              <p class="form__policy">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.</p>
+            </form>
+            <div class="form-success" id="form-success" hidden>
+              <span class="form-success__icon">
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="2"/><path d="m7.5 12.5 3 3 6-6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <h3>Заявка принята!</h3>
+              <p>Бухгалтер свяжется с вами в течение рабочего дня и пришлёт разбор по вашим цифрам.</p>
+              <p class="mono form-success__id" id="form-success-id"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Футер ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col footer__col--brand">
+        <a href="#top" class="logo logo--footer">
+          <span class="logo__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M12 2 3 7v2h18V7L12 2Z" fill="currentColor"/><path d="M5 11v7M9.5 11v7M14.5 11v7M19 11v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M3 20h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+          <span class="logo__text">Налоговый<em>навигатор</em></span>
+        </a>
+        <p>Сложное — простыми цифрами. Работаем со всеми регионами РФ.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Контакты</h4>
+        <a href="tel:+79090939400" class="footer__phone mono">+7 909 093-94-00</a>
+        <p>Пн–Пт, 9:00–19:00 МСК</p>
+      </div>
+      <div class="footer__col">
+        <h4>Мы на связи</h4>
+        <div class="footer__socials">
+          <a href="#" aria-label="Telegram" class="footer__social">TG</a>
+          <a href="#" aria-label="WhatsApp" class="footer__social">WA</a>
+          <a href="#" aria-label="VK" class="footer__social">VK</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© 2026 Налоговый навигатор. Демо-проект портфолио.</span>
+      <a href="#top">Наверх ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

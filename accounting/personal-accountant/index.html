@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Свой бухгалтер — личный бухгалтер для самозанятых и микробизнеса</title>
+<meta name="description" content="Ведём налоги самозанятых и малого ИП. Отвечаем за 15 минут, объясняем человеческим языком. Ваш личный бухгалтер — всегда в мессенджере.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header" id="top">
+  <div class="wrap header__inner">
+    <a class="logo" href="#top">
+      <svg class="logo__mark" viewBox="0 0 40 40" width="38" height="38" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" fill="#6B8F71"/>
+        <path d="M11 21.5c2.5-1 4.5-3.4 4.5-6.5 0-.4.5-.6.8-.3 2 2 1.6 5.3-.6 7.4 2.8-.3 4.9-2.1 6-4.6.2-.4.8-.4.9.1.7 2.7-.4 5.9-3.1 7.6 2.3.6 4.6-.2 6.3-2 .3-.3.8-.1.8.3.1 4.6-3.6 8.5-8.3 8.2-4.1-.2-7.4-3.3-8.2-7.1-.2-.7.4-1.4 1.2-1.1z" fill="#FDF8F0" opacity=".95"/>
+        <circle cx="15" cy="27" r="2.1" fill="#D97B4F"/>
+      </svg>
+      <span class="logo__text">Свой<em>бухгалтер</em></span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#team" class="nav__link">Команда</a>
+      <a href="#services" class="nav__link">Что берём на себя</a>
+      <a href="#calculator" class="nav__link">Калькулятор</a>
+      <a href="#pricing" class="nav__link">Тарифы</a>
+      <a href="#faq" class="nav__link">Частые страхи</a>
+      <a href="tel:+79090939400" class="btn btn--small btn--terra nav__cta">Позвонить</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- ===== 1. HERO ===== -->
+<section class="hero">
+  <div class="hero__decor" aria-hidden="true">
+    <div class="blob blob--olive"></div>
+    <div class="blob blob--terra"></div>
+    <div class="blob blob--cream"></div>
+    <svg class="hero__squiggle" viewBox="0 0 220 60" aria-hidden="true">
+      <path d="M4 40 C 40 10, 70 55, 105 30 S 170 5, 216 34" fill="none" stroke="#D97B4F" stroke-width="4" stroke-linecap="round" opacity=".55"/>
+    </svg>
+  </div>
+  <div class="wrap hero__inner">
+    <div class="hero__content">
+      <div class="online-badge" id="onlineBadge">
+        <span class="online-badge__dot"></span>
+        <span id="onlineBadgeText">Сейчас на связи: Марина, бухгалтер</span>
+      </div>
+      <h1 class="hero__title">Ваш личный бухгалтер — <span class="hero__title-accent">всегда в&nbsp;мессенджере</span></h1>
+      <p class="hero__sub">Ведём налоги самозанятых и малого ИП. Отвечаем за 15 минут, объясняем человеческим языком — без «деклараций» и канцелярита.</p>
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn--terra btn--big">Написать бухгалтеру
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#calculator" class="btn btn--ghost btn--big">Посчитать свой налог</a>
+      </div>
+      <div class="hero__counter">
+        <div class="hero__counter-num"><span id="calmCounter">0</span></div>
+        <div class="hero__counter-text">самозанятых и мастеров<br>уже спят спокойно</div>
+      </div>
+      <p class="hero-note">не бот и не колл-центр — отвечает живой человек</p>
+    </div>
+
+    <div class="hero__visual">
+      <div class="sticker sticker--hero">отвечаем<br>за 15 минут!</div>
+      <div class="phone">
+        <div class="phone__notch"></div>
+        <div class="phone__screen">
+          <div class="chat-head">
+            <div class="chat-head__ava">
+              <svg viewBox="0 0 48 48" width="40" height="40" aria-hidden="true">
+                <circle cx="24" cy="24" r="24" fill="#D97B4F"/>
+                <circle cx="24" cy="19" r="8" fill="#FDF8F0"/>
+                <path d="M9 42c2-8 8-11 15-11s13 3 15 11" fill="#FDF8F0"/>
+                <path d="M14 15c1-5 5-8 10-8s9 3 10 8c-2-2-5-3-10-3s-8 1-10 3z" fill="#4A4038"/>
+              </svg>
+            </div>
+            <div>
+              <div class="chat-head__name">Марина, ваш бухгалтер</div>
+              <div class="chat-head__status" id="chatStatus">в сети</div>
+            </div>
+          </div>
+          <div class="chat-body" id="heroChat">
+            <div class="chat-msg chat-msg--in">Марина, привет! А мне нужно сдавать что-то в этом месяце? 🙈<span class="chat-msg__time">12:04</span></div>
+            <div class="chat-typing" id="heroTyping"><span></span><span></span><span></span></div>
+            <div class="chat-msg chat-msg--out" id="heroAnswer" hidden>Нет, я всё сдала за вас ✓ Отчётность чистая, спите спокойно ☕<span class="chat-msg__time">12:19</span></div>
+            <div class="chat-msg chat-msg--in" id="heroThanks" hidden>Спасибо! Вы спасли ❤️<span class="chat-msg__time">12:19</span></div>
+          </div>
+          <div class="chat-input">
+            <span class="chat-input__placeholder">Написать сообщение…</span>
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3.7 11.3 20 4.2c.6-.3 1.2.3 1 .9l-5.4 15c-.2.6-1 .7-1.3.2l-3-5.1-5.5-2.6c-.6-.3-.6-1.1-.1-1.3z" fill="#6B8F71"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="hero__shadow" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2. КОМАНДА ===== -->
+<section class="section team" id="team">
+  <div class="wrap">
+    <p class="section__kicker reveal">знакомьтесь</p>
+    <h2 class="section__title reveal">Ваша команда — <span class="hl">живые люди</span>,<br class="br-desk"> а не «оператор № 12»</h2>
+    <p class="section__lead reveal">У каждого клиента есть свой бухгалтер, который знает вашу историю и отвечает лично — в том чате, где вам удобно.</p>
+    <div class="team__grid">
+      <article class="team-card reveal">
+        <div class="team-card__ava">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <circle cx="60" cy="60" r="58" fill="#F3E4D3"/>
+            <path d="M28 108c4-22 16-30 32-30s28 8 32 30" fill="#D97B4F"/>
+            <circle cx="60" cy="52" r="24" fill="#F6CFAE"/>
+            <path d="M34 50c0-18 12-28 26-28s26 10 26 28c-3-8-10-12-26-12s-23 4-26 12z" fill="#4A4038"/>
+            <path d="M36 46c-2 14 0 26 6 34-8-2-12-14-10-28zm48 0c2 14 0 26-6 34 8-2 12-14 10-28z" fill="#4A4038"/>
+            <circle cx="51" cy="52" r="2.6" fill="#33302B"/><circle cx="69" cy="52" r="2.6" fill="#33302B"/>
+            <path d="M52 63c3 3.5 13 3.5 16 0" fill="none" stroke="#33302B" stroke-width="2.4" stroke-linecap="round"/>
+            <circle cx="42" cy="59" r="3.4" fill="#EDA98B" opacity=".7"/><circle cx="78" cy="59" r="3.4" fill="#EDA98B" opacity=".7"/>
+          </svg>
+        </div>
+        <h3 class="team-card__name">Марина</h3>
+        <p class="team-card__role">ведущий бухгалтер, 12 лет в налогах</p>
+        <p class="team-card__power"><span class="team-card__bolt">⚡</span> Суперсила: разбирает письма ФНС за минуту</p>
+        <p class="team-card__reply">Ответит лично — обычно в течение 15 минут</p>
+      </article>
+      <article class="team-card reveal">
+        <div class="team-card__ava">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <circle cx="60" cy="60" r="58" fill="#E4EBE0"/>
+            <path d="M28 108c4-22 16-30 32-30s28 8 32 30" fill="#6B8F71"/>
+            <circle cx="60" cy="52" r="24" fill="#F3C49E"/>
+            <path d="M36 52c-2-20 10-30 24-30 16 0 26 12 24 30-4-10-8-14-24-14s-20 4-24 14z" fill="#7A4B2B"/>
+            <path d="M84 44c6 4 8 12 6 20l-6-2zm-48 0c-6 4-8 12-6 20l6-2z" fill="#7A4B2B"/>
+            <circle cx="51" cy="52" r="2.6" fill="#33302B"/><circle cx="69" cy="52" r="2.6" fill="#33302B"/>
+            <circle cx="51" cy="52" r="6.5" fill="none" stroke="#33302B" stroke-width="1.8"/>
+            <circle cx="69" cy="52" r="6.5" fill="none" stroke="#33302B" stroke-width="1.8"/>
+            <path d="M57.5 52h5" stroke="#33302B" stroke-width="1.8"/>
+            <path d="M53 64c3 3 11 3 14 0" fill="none" stroke="#33302B" stroke-width="2.4" stroke-linecap="round"/>
+            <circle cx="42" cy="60" r="3.2" fill="#EDA98B" opacity=".7"/><circle cx="78" cy="60" r="3.2" fill="#EDA98B" opacity=".7"/>
+          </svg>
+        </div>
+        <h3 class="team-card__name">Ольга</h3>
+        <p class="team-card__role">бухгалтер по самозанятым и НПД</p>
+        <p class="team-card__power"><span class="team-card__bolt">⚡</span> Суперсила: объясняет налоги на пальцах и с котиками</p>
+        <p class="team-card__reply">Ответит лично — обычно в течение 15 минут</p>
+      </article>
+      <article class="team-card reveal">
+        <div class="team-card__ava">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <circle cx="60" cy="60" r="58" fill="#F1E7D8"/>
+            <path d="M28 108c4-22 16-30 32-30s28 8 32 30" fill="#3F5B8C"/>
+            <circle cx="60" cy="52" r="24" fill="#EDBE97"/>
+            <path d="M37 46c1-14 11-22 23-22s22 8 23 22c-4-6-12-9-23-9s-19 3-23 9z" fill="#2E2925"/>
+            <path d="M44 62c2 8 8 14 16 14s14-6 16-14c-4 4-9 6-16 6s-12-2-16-6z" fill="#EDBE97"/>
+            <circle cx="51" cy="52" r="2.6" fill="#33302B"/><circle cx="69" cy="52" r="2.6" fill="#33302B"/>
+            <path d="M52 63c3 3.5 13 3.5 16 0" fill="none" stroke="#33302B" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M47 44h9m8 0h9" stroke="#2E2925" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="42" cy="59" r="3.2" fill="#EDA98B" opacity=".6"/><circle cx="78" cy="59" r="3.2" fill="#EDA98B" opacity=".6"/>
+          </svg>
+        </div>
+        <h3 class="team-card__name">Тимур</h3>
+        <p class="team-card__role">бухгалтер по ИП и онлайн-кассам</p>
+        <p class="team-card__power"><span class="team-card__bolt">⚡</span> Суперсила: знает «Мой налог» и 1С как свои пять пальцев</p>
+        <p class="team-card__reply">Ответит лично — обычно в течение 15 минут</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3. КОМУ ПОМОГАЕМ ===== -->
+<section class="section section--tint audience" id="audience">
+  <div class="wrap">
+    <p class="section__kicker reveal">кому помогаем</p>
+    <h2 class="section__title reveal">Мы говорим с вами <span class="hl">на одном языке</span></h2>
+    <div class="audience__grid">
+      <article class="aud-card reveal">
+        <div class="aud-card__icon">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="6" width="32" height="36" rx="6" fill="#fff" stroke="#6B8F71" stroke-width="2.5"/><path d="M16 16h16M16 23h16M16 30h9" stroke="#D97B4F" stroke-width="2.5" stroke-linecap="round"/><circle cx="33" cy="33" r="8" fill="#6B8F71"/><path d="m29.5 33 2.5 2.5 4.5-4.5" stroke="#FDF8F0" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Самозанятым</h3>
+        <p>НПД, чеки, лимит 2,4 млн — следим, чтобы ничего не «вылетело», и напоминаем обо всём заранее.</p>
+      </article>
+      <article class="aud-card reveal">
+        <div class="aud-card__icon">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6c3 5 9 6 9 13a9 9 0 1 1-18 0c0-7 6-8 9-13z" fill="#fff" stroke="#6B8F71" stroke-width="2.5" stroke-linejoin="round"/><path d="M20 38c1 3 7 3 8 0" stroke="#D97B4F" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M24 14c1.5 3 4.5 4 4.5 8a4.5 4.5 0 1 1-9 0c0-4 3-5 4.5-8z" fill="#D97B4F" opacity=".25"/></svg>
+        </div>
+        <h3>Мастерам красоты</h3>
+        <p>Маникюр, брови, волосы: работайте с клиентами, а не с бумажками. Кассу и чеки берём на себя.</p>
+      </article>
+      <article class="aud-card reveal">
+        <div class="aud-card__icon">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="14" width="34" height="24" rx="5" fill="#fff" stroke="#6B8F71" stroke-width="2.5"/><circle cx="24" cy="26" r="7" fill="none" stroke="#D97B4F" stroke-width="2.5"/><circle cx="24" cy="26" r="2.4" fill="#D97B4F"/><path d="M16 14l3-5h10l3 5" fill="none" stroke="#6B8F71" stroke-width="2.5" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Репетиторам и фотографам</h3>
+        <p>Разовые заказы, предоплаты, возвраты — подскажем, как оформить каждый чек правильно.</p>
+      </article>
+      <article class="aud-card reveal">
+        <div class="aud-card__icon">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 20 24 8l16 12" fill="none" stroke="#6B8F71" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="12" y="20" width="24" height="20" rx="3" fill="#fff" stroke="#6B8F71" stroke-width="2.5"/><path d="M18 34v-6m6 6v-10m6 10v-8" stroke="#D97B4F" stroke-width="2.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Микро-ИП до 10 млн</h3>
+        <p>УСН, патент, взносы, сотрудник-другой — ведём всё под ключ и предупреждаем о платежах.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 4. ЧТО БЕРЁМ НА СЕБЯ ===== -->
+<section class="section services" id="services">
+  <div class="wrap services__inner">
+    <div class="services__text">
+      <p class="section__kicker reveal">что берём на себя</p>
+      <h2 class="section__title reveal">Всё скучное — нам.<br>Всё интересное — <span class="hl">вам</span></h2>
+      <p class="section__lead reveal">Просто пишете в чат «так, у меня вопрос» — и дальше всё делаем мы.</p>
+      <p class="hand-note">можно голосовым — мы не боимся ☺</p>
+    </div>
+    <ul class="services__list">
+      <li class="svc reveal"><span class="svc__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h8l4 4v14H7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M15 3v4h4M10 12h5m-5 4h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><div><b>Регистрация ИП и самозанятости</b><span>подберём режим и оформим за пару дней</span></div></li>
+      <li class="svc reveal"><span class="svc__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><div><b>Налоги и взносы</b><span>считаем, напоминаем и платим вовремя</span></div></li>
+      <li class="svc reveal"><span class="svc__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m8.5 12 2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Декларации и отчётность</b><span>сдаём за вас — вы только ставите «ок» в чате</span></div></li>
+      <li class="svc reveal"><span class="svc__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><div><b>Ответы на письма ФНС</b><span>читаем страшные конверты и отвечаем сами</span></div></li>
+      <li class="svc reveal"><span class="svc__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 17.5h6M8 7h8v6H8z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span><div><b>Онлайн-касса</b><span>подключим, настроим и научим за один созвон</span></div></li>
+      <li class="svc reveal"><span class="svc__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3.5-7.1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M21 3.5v5h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Спросить совет в любой момент</b><span>«а можно ли мне…» — да, можно просто спросить</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 5. КАЛЬКУЛЯТОР ===== -->
+<section class="section section--tint calc" id="calculator">
+  <div class="wrap">
+    <p class="section__kicker reveal">посчитайте сами</p>
+    <h2 class="section__title reveal">Какой режим вам выгоднее — <span class="hl">за 20 секунд</span></h2>
+    <p class="section__lead reveal">Двигайте ползунки — посчитаем налог по-честному: НПД 4%/6%, УСН «доходы» 6%, УСН «доходы минус расходы» 15% и патент.</p>
+    <div class="calc__card reveal">
+      <div class="calc__controls">
+        <div class="calc__field">
+          <label for="incomeRange">Доход в месяц <output id="incomeOut">80 000 ₽</output></label>
+          <input type="range" id="incomeRange" min="20000" max="500000" step="5000" value="80000">
+        </div>
+        <div class="calc__field">
+          <label for="expenseRange">Расходы в месяц <output id="expenseOut">15 000 ₽</output></label>
+          <input type="range" id="expenseRange" min="0" max="350000" step="5000" value="15000">
+        </div>
+        <div class="calc__field">
+          <label for="b2bRange">Доля дохода от компаний <output id="b2bOut">20%</output></label>
+          <input type="range" id="b2bRange" min="0" max="100" step="5" value="20">
+          <p class="calc__hint">на НПД с юрлиц налог 6%, с физлиц — 4%</p>
+        </div>
+      </div>
+      <div class="calc__results" id="calcResults">
+        <div class="calc-row" data-regime="npd">
+          <div class="calc-row__head"><span>Самозанятость (НПД)</span><b id="taxNpd">0 ₽</b></div>
+          <div class="calc-row__bar"><span id="barNpd"></span></div>
+          <p class="calc-row__note" id="noteNpd"></p>
+        </div>
+        <div class="calc-row" data-regime="usn6">
+          <div class="calc-row__head"><span>УСН «доходы» 6%</span><b id="taxUsn6">0 ₽</b></div>
+          <div class="calc-row__bar"><span id="barUsn6"></span></div>
+          <p class="calc-row__note" id="noteUsn6"></p>
+        </div>
+        <div class="calc-row" data-regime="usn15">
+          <div class="calc-row__head"><span>УСН «доходы − расходы» 15%</span><b id="taxUsn15">0 ₽</b></div>
+          <div class="calc-row__bar"><span id="barUsn15"></span></div>
+          <p class="calc-row__note" id="noteUsn15"></p>
+        </div>
+        <div class="calc-row" data-regime="patent">
+          <div class="calc-row__head"><span>Патент (фикс)</span><b id="taxPatent">0 ₽</b></div>
+          <div class="calc-row__bar"><span id="barPatent"></span></div>
+          <p class="calc-row__note" id="notePatent"></p>
+        </div>
+        <div class="calc__verdict" id="calcVerdict"></div>
+      </div>
+    </div>
+    <p class="calc__disclaimer reveal">Это демо-расчёт без страховых взносов и региональных льгот. Точную цифру посчитает ваш бухгалтер — <a href="#contact">просто напишите</a>.</p>
+  </div>
+</section>
+
+<!-- ===== 6. ТАРИФЫ ===== -->
+<section class="section pricing" id="pricing">
+  <div class="wrap">
+    <p class="section__kicker reveal">тарифы</p>
+    <h2 class="section__title reveal">Сколько стоит <span class="hl">спокойствие</span></h2>
+    <p class="section__lead reveal">Без скрытых доплат «за каждое письмо». Всё включено, цена фиксируется в договоре.</p>
+    <div class="pricing__grid">
+      <article class="price-card reveal">
+        <h3 class="price-card__name">Самозанятый</h3>
+        <p class="price-card__for">для тех, кто на НПД</p>
+        <p class="price-card__price">от <b>1 900 ₽</b><span>/мес</span></p>
+        <ul class="price-card__list">
+          <li>Напоминания о налоге и лимите 2,4 млн</li>
+          <li>Проверка чеков и доходов</li>
+          <li>Ответы в чате за 15 минут</li>
+          <li>Помощь с письмами ФНС</li>
+        </ul>
+        <a href="#contact" class="btn btn--ghost btn--full">Выбрать</a>
+      </article>
+      <article class="price-card price-card--hit reveal">
+        <div class="price-card__tag">частый выбор</div>
+        <h3 class="price-card__name">Мастер</h3>
+        <p class="price-card__for">самозанятость или ИП без сотрудников</p>
+        <p class="price-card__price">от <b>3 900 ₽</b><span>/мес</span></p>
+        <ul class="price-card__list">
+          <li>Всё из тарифа «Самозанятый»</li>
+          <li>Онлайн-касса под ключ</li>
+          <li>Сдача деклараций за вас</li>
+          <li>Подбор и смена налогового режима</li>
+          <li>Личный бухгалтер в мессенджере</li>
+        </ul>
+        <a href="#contact" class="btn btn--terra btn--full">Выбрать</a>
+      </article>
+      <article class="price-card reveal">
+        <h3 class="price-card__name">ИП + сотрудники</h3>
+        <p class="price-card__for">микробизнес до 10 млн оборота</p>
+        <p class="price-card__price">от <b>6 900 ₽</b><span>/мес</span></p>
+        <ul class="price-card__list">
+          <li>Всё из тарифа «Мастер»</li>
+          <li>Зарплата, взносы и кадры до 3 человек</li>
+          <li>Отчётность в ФНС и фонды</li>
+          <li>Сверки с налоговой каждый квартал</li>
+        </ul>
+        <a href="#contact" class="btn btn--ghost btn--full">Выбрать</a>
+      </article>
+    </div>
+    <p class="hand-note hand-note--center reveal">не нашли свой случай? напишите — соберём тариф под вас</p>
+  </div>
+</section>
+
+<!-- ===== 7. ДИАЛОГИ ===== -->
+<section class="section section--tint dialogs" id="dialogs">
+  <div class="wrap">
+    <p class="section__kicker reveal">вместо отзывов</p>
+    <h2 class="section__title reveal">Живые диалоги <span class="hl">из нашего чата</span></h2>
+    <p class="section__lead reveal">Настоящие переписки с клиентами (имена изменили, эмоции — нет).</p>
+    <div class="carousel reveal" id="dialogCarousel">
+      <button class="carousel__btn carousel__btn--prev" id="dlgPrev" aria-label="Предыдущий диалог">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="m14 6-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="carousel__viewport">
+        <div class="carousel__track" id="dlgTrack">
+          <div class="carousel__slide">
+            <div class="phone phone--mini">
+              <div class="phone__notch"></div>
+              <div class="phone__screen">
+                <div class="chat-head chat-head--mini"><div class="chat-head__ava chat-head__ava--client">А</div><div><div class="chat-head__name">Анна, кондитер</div><div class="chat-head__status">самозанятая</div></div></div>
+                <div class="chat-body">
+                  <div class="chat-msg chat-msg--in">Пришло письмо из ФНС, я в панике 😰<span class="chat-msg__time">10:12</span></div>
+                  <div class="chat-msg chat-msg--out">Спокойно 🙂 Это уведомление о взносах, не штраф. Уже ответила за вас — платить ничего не нужно ✓<span class="chat-msg__time">10:24</span></div>
+                  <div class="chat-msg chat-msg--in">Фух… спасибо, вы спасли! ❤️<span class="chat-msg__time">10:25</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel__slide">
+            <div class="phone phone--mini">
+              <div class="phone__notch"></div>
+              <div class="phone__screen">
+                <div class="chat-head chat-head--mini"><div class="chat-head__ava chat-head__ava--client">Д</div><div><div class="chat-head__name">Дмитрий, репетитор</div><div class="chat-head__status">самозанятый</div></div></div>
+                <div class="chat-body">
+                  <div class="chat-msg chat-msg--in">Можно мне брать оплату от языковой школы? Это же юрлицо 🤔<span class="chat-msg__time">18:40</span></div>
+                  <div class="chat-msg chat-msg--out">Можно! Просто налог будет 6% вместо 4%. Чек сформируем за минуту — сейчас покажу как ☕<span class="chat-msg__time">18:52</span></div>
+                  <div class="chat-msg chat-msg--in">Всё понятно, спасибо! Вы золото 🙌<span class="chat-msg__time">18:54</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel__slide">
+            <div class="phone phone--mini">
+              <div class="phone__notch"></div>
+              <div class="phone__screen">
+                <div class="chat-head chat-head--mini"><div class="chat-head__ava chat-head__ava--client">К</div><div><div class="chat-head__name">Ксения, мастер маникюра</div><div class="chat-head__status">ИП на патенте</div></div></div>
+                <div class="chat-body">
+                  <div class="chat-msg chat-msg--in">Кажется, я забыла оплатить налог в прошлом месяце 😬<span class="chat-msg__time">09:03</span></div>
+                  <div class="chat-msg chat-msg--out">Бывает, не страшно. Пени уже посчитала — 214 ₽. Оплатите по кнопке в «Мой налог», дальше я всё закрою ✓<span class="chat-msg__time">09:17</span></div>
+                  <div class="chat-msg chat-msg--in">Оплатила! Спасибо, что не ругаете 😅❤️<span class="chat-msg__time">09:21</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel__btn carousel__btn--next" id="dlgNext" aria-label="Следующий диалог">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="m10 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="carousel__dots" id="dlgDots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. СТРАХИ / FAQ ===== -->
+<section class="section faq" id="faq">
+  <div class="wrap wrap--narrow">
+    <p class="section__kicker reveal">частые страхи</p>
+    <h2 class="section__title reveal">Спросить — <span class="hl">не страшно</span></h2>
+    <div class="faq__list">
+      <details class="faq-item reveal">
+        <summary>А если придёт письмо из налоговой?<span class="faq-item__chev"></span></summary>
+        <div class="faq-item__body"><p>Пришлите нам фото конверта — и выдохните. Мы прочитаем, переведём с канцелярского на человеческий и ответим за вас. В 9 случаях из 10 это просто уведомление, а не штраф.</p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Я уже накосячил с налогами. Поможете?<span class="faq-item__chev"></span></summary>
+        <div class="faq-item__body"><p>Поможем, и без нравоучений. Разберём период, посчитаем недоимку и пени, подадим уточнёнки. Чем раньше навести порядок, тем дешевле это стоит — пени растут каждый день.</p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>А если налоги вырастут?<span class="faq-item__chev"></span></summary>
+        <div class="faq-item__body"><p>Мы следим за изменениями закона и заранее предупредим, если что-то поменяется именно для вас. Подберём другой режим или льготу — внезапных сюрпризов не будет.</p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>А можно просто спросить, без договора?<span class="faq-item__chev"></span></summary>
+        <div class="faq-item__body"><p>Конечно. Первый вопрос — бесплатно и ни к чему не обязывает. Напишите в телеграм или позвоните: спросите про свой случай, а мы честно скажем, нужен ли вам вообще бухгалтер.</p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>А если захочу расторгнуть договор?<span class="faq-item__chev"></span></summary>
+        <div class="faq-item__body"><p>Расторгаем в любой момент без штрафов и удержаний. Передадим все документы и базу, подскажем, что сдавать дальше. Мы держим не договором, а тем, что с нами спокойно.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. CTA + ФОРМА ===== -->
+<section class="section cta" id="contact">
+  <div class="cta__decor" aria-hidden="true">
+    <div class="blob blob--olive blob--cta1"></div>
+    <div class="blob blob--terra blob--cta2"></div>
+  </div>
+  <div class="wrap wrap--narrow">
+    <div class="cta__card reveal">
+      <div class="sticker sticker--cta">первый вопрос — бесплатно</div>
+      <h2 class="cta__title">Напишите — просто спросим,<br>как у вас дела с налогами</h2>
+      <p class="cta__sub">Без оценки и без продажи. Если вам бухгалтер не нужен — честно скажем об этом.</p>
+      <form class="cta__form" id="leadForm" novalidate>
+        <div class="cta__form-row">
+          <div class="cta__field">
+            <label for="leadName">Как вас зовут</label>
+            <input type="text" id="leadName" name="name" placeholder="Например, Оксана" required autocomplete="name">
+          </div>
+          <div class="cta__field">
+            <label for="leadContact">Телефон или телеграм</label>
+            <input type="text" id="leadContact" name="contact" placeholder="+7 ___ ___-__-__ или @ник" required autocomplete="tel">
+          </div>
+        </div>
+        <div class="cta__field">
+          <label for="leadAbout">Пара слов о вас <span class="cta__optional">(необязательно)</span></label>
+          <input type="text" id="leadAbout" name="about" placeholder="Например: пеку торты, самозанятая второй год">
+        </div>
+        <p class="cta__error" id="leadError" hidden>Заполните, пожалуйста, имя и контакт — иначе мы не сможем ответить ☺</p>
+        <button type="submit" class="btn btn--terra btn--big btn--full">Написать бухгалтеру</button>
+        <p class="cta__privacy">Нажимая кнопку, вы соглашаетесь на обработку персональных данных. Никакого спама — только ответ по делу.</p>
+      </form>
+      <div class="cta__success" id="leadSuccess" hidden>
+        <svg viewBox="0 0 80 80" width="72" height="72" aria-hidden="true">
+          <circle cx="40" cy="40" r="37" fill="#6B8F71"/>
+          <path d="m25 41 10 10 20-22" fill="none" stroke="#FDF8F0" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>Принято! Уже пишем вам ☕</h3>
+        <p id="leadSuccessText">Марина ответит в течение 15 минут в рабочее время (09:00–21:00). Если сейчас ночь — первым делом утром.</p>
+        <a class="btn btn--ghost" href="tel:+79090939400">Или позвоните сразу: +7 909 093-94-00</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== 10. FOOTER ===== -->
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__col footer__col--brand">
+      <a class="logo logo--footer" href="#top">
+        <svg class="logo__mark" viewBox="0 0 40 40" width="34" height="34" aria-hidden="true">
+          <circle cx="20" cy="20" r="19" fill="#FDF8F0"/>
+          <path d="M11 21.5c2.5-1 4.5-3.4 4.5-6.5 0-.4.5-.6.8-.3 2 2 1.6 5.3-.6 7.4 2.8-.3 4.9-2.1 6-4.6.2-.4.8-.4.9.1.7 2.7-.4 5.9-3.1 7.6 2.3.6 4.6-.2 6.3-2 .3-.3.8-.1.8.3.1 4.6-3.6 8.5-8.3 8.2-4.1-.2-7.4-3.3-8.2-7.1-.2-.7.4-1.4 1.2-1.1z" fill="#6B8F71" opacity=".95"/>
+          <circle cx="15" cy="27" r="2.1" fill="#D97B4F"/>
+        </svg>
+        <span class="logo__text">Свой<em>бухгалтер</em></span>
+      </a>
+      <p class="footer__motto">Свой человек в цифрах.<br>Отвечаем лично, как друг.</p>
+    </div>
+    <div class="footer__col">
+      <p class="footer__head">Связаться</p>
+      <a href="tel:+79090939400" class="footer__link">+7 909 093-94-00</a>
+      <a href="https://t.me/svoy_buhgalter" class="footer__link" target="_blank" rel="noopener">Телеграм: @svoy_buhgalter</a>
+    </div>
+    <div class="footer__col">
+      <p class="footer__head">Режим работы</p>
+      <p class="footer__text">Пн–Сб, 09:00–21:00<br>Вопрос «срочно, письмо из ФНС» — в любой день</p>
+    </div>
+    <div class="footer__col">
+      <p class="footer__head">Навигация</p>
+      <a href="#team" class="footer__link">Команда</a>
+      <a href="#pricing" class="footer__link">Тарифы</a>
+      <a href="#faq" class="footer__link">Частые страхи</a>
+    </div>
+  </div>
+  <div class="wrap footer__bottom">
+    <span>© 2026 «Свой бухгалтер». Демо-проект для портфолио.</span>
+    <span class="footer__hand">ответим лично ✎</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

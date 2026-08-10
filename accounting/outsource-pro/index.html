@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Аутсорс.Про — бухгалтерская и налоговая функция под ключ</title>
+  <meta name="description" content="Учёт, отчётность, аудит и налоговая оптимизация для бизнеса с оборотом от 50 млн ₽. Финансовый директор, главбух и налоговый консультант — за цену одного сотрудника.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#hero" class="logo" aria-label="Аутсорс.Про — на главную">
+        <span class="logo__mark">А·П</span>
+        <span class="logo__text">Аутсорс<em>.Про</em></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#symptoms" class="nav__link">Симптомы</a>
+        <a href="#services" class="nav__link">Услуги</a>
+        <a href="#cases" class="nav__link">Кейсы</a>
+        <a href="#tariffs" class="nav__link">Тарифы</a>
+        <a href="#team" class="nav__link">Команда</a>
+        <a href="#reviews" class="nav__link">Отзывы</a>
+      </nav>
+      <div class="header__contacts">
+        <a href="tel:+79090939400" class="header__phone">+7 909 093-94-00</a>
+        <a href="#cta" class="btn btn--outline btn--sm header__cta">Запросить аудит</a>
+      </div>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__grid-bg" aria-hidden="true"></div>
+    <svg class="hero__chart" viewBox="0 0 1440 520" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="heroLineGrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#C0A062" stop-opacity="0.15"/>
+          <stop offset="0.6" stop-color="#C0A062" stop-opacity="0.9"/>
+          <stop offset="1" stop-color="#E8CE9A" stop-opacity="1"/>
+        </linearGradient>
+        <linearGradient id="heroAreaGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#C0A062" stop-opacity="0.16"/>
+          <stop offset="1" stop-color="#C0A062" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <path class="hero__area" d="M0,470 C180,455 320,430 470,400 C620,370 720,330 880,280 C1040,230 1230,150 1440,90 L1440,520 L0,520 Z" fill="url(#heroAreaGrad)"/>
+      <path class="hero__line" d="M0,470 C180,455 320,430 470,400 C620,370 720,330 880,280 C1040,230 1230,150 1440,90" fill="none" stroke="url(#heroLineGrad)" stroke-width="2"/>
+      <circle class="hero__pulse" cx="1440" cy="90" r="5" fill="#E8CE9A"/>
+    </svg>
+    <div class="container hero__inner">
+      <p class="hero__eyebrow reveal">Бухгалтерский аутсорсинг премиум-класса</p>
+      <h1 class="hero__title reveal">Бухгалтерская и налоговая функция <span class="gold">под ключ</span></h1>
+      <p class="hero__subtitle reveal">Учёт, отчётность, аудит и оптимизация для бизнеса с оборотом от&nbsp;50&nbsp;млн&nbsp;₽. Финансовая ответственность — в&nbsp;договоре.</p>
+      <div class="hero__actions reveal">
+        <a href="#cta" class="btn btn--gold-outline">Запросить аудит учёта</a>
+        <a href="tel:+79090939400" class="btn btn--ghost">+7 909 093-94-00</a>
+      </div>
+      <div class="hero__badges reveal">
+        <div class="badge">
+          <svg viewBox="0 0 24 24" class="badge__icon" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 7h6v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Средняя экономия клиента — <strong>1,2&nbsp;млн&nbsp;₽/год</strong></span>
+        </div>
+        <div class="badge">
+          <svg viewBox="0 0 24 24" class="badge__icon" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.2 7.8-8 9-4.8-1.2-8-4.5-8-9V6l8-3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>SLA <strong>99,9%</strong> — сроки закреплены в договоре</span>
+        </div>
+        <div class="badge badge--dynamic" id="nextStartBadge">
+          <svg viewBox="0 0 24 24" class="badge__icon" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span>Экспресс-аудит: ближайший старт — <strong id="nextStartDate">понедельник</strong></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Симптомы ===== -->
+  <section class="section symptoms" id="symptoms">
+    <div class="container">
+      <p class="section__eyebrow reveal">Диагностика</p>
+      <h2 class="section__title reveal">Симптомы, что вам пора к нам</h2>
+      <div class="symptoms__grid">
+        <article class="symptom-card reveal">
+          <span class="symptom-card__num">01</span>
+          <h3>Бухгалтер на полставки не успевает</h3>
+          <p>Первичка копится, отчётность сдаётся в последний день, а вопросы остаются без ответов неделями.</p>
+        </article>
+        <article class="symptom-card reveal">
+          <span class="symptom-card__num">02</span>
+          <h3>Налоговая нагрузка растёт</h3>
+          <p>Вы платите всё больше, но никто не может объяснить, почему и что с этим законно можно сделать.</p>
+        </article>
+        <article class="symptom-card reveal">
+          <span class="symptom-card__num">03</span>
+          <h3>Нет управленческой отчётности</h3>
+          <p>Решения принимаются «на глаз»: нет P&amp;L, cash-flow и понимания, где бизнес теряет деньги.</p>
+        </article>
+        <article class="symptom-card reveal">
+          <span class="symptom-card__num">04</span>
+          <h3>Страшно при каждом письме ФНС</h3>
+          <p>Любое требование инспекции — стресс. Вы не уверены, что учёт выдержит проверку.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-divider container" aria-hidden="true"></div>
+
+  <!-- ===== Услуги ===== -->
+  <section class="section services" id="services">
+    <div class="container">
+      <p class="section__eyebrow reveal">Услуги</p>
+      <h2 class="section__title reveal">Финансовый директор, главбух и налоговый консультант — за цену одного сотрудника</h2>
+      <div class="services__grid">
+        <article class="service-card reveal">
+          <div class="service-card__head">
+            <span class="service-card__index">01</span>
+            <h3>Бухгалтерский учёт под ключ</h3>
+          </div>
+          <p>Полное ведение учёта: первичка, банк, зарплата, отчётность. Отвечаем за сроки и качество по SLA.</p>
+          <ul class="service-card__list">
+            <li>Постановка учёта и учётной политики</li>
+            <li>Вся отчётность ФНС, ПФР, ФСС</li>
+            <li>Сопровождение проверок и требований</li>
+          </ul>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__head">
+            <span class="service-card__index">02</span>
+            <h3>Налоговая оптимизация <span class="service-card__tag">законная</span></h3>
+          </div>
+          <p>Структурируем бизнес и сделки так, чтобы платить ровно столько, сколько требует закон, — и ни рублем больше.</p>
+          <ul class="service-card__list">
+            <li>Выбор и смена налогового режима</li>
+            <li>Налоговое планирование на год вперёд</li>
+            <li>Защита позиций при спорах с ФНС</li>
+          </ul>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__head">
+            <span class="service-card__index">03</span>
+            <h3>Аудит текущего учёта</h3>
+          </div>
+          <p>Находим ошибки, переплаты и риски до того, как их найдёт налоговая. Экспресс-аудит — за 5 рабочих дней.</p>
+          <ul class="service-card__list">
+            <li>Карта рисков с оценкой в рублях</li>
+            <li>Проверка НДС, прибыли, зарплатных налогов</li>
+            <li>План исправления с приоритетами</li>
+          </ul>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__head">
+            <span class="service-card__index">04</span>
+            <h3>CFO-as-a-Service</h3>
+          </div>
+          <p>Управленческая отчётность, бюджеты и казначейство — финансовая функция уровня крупной компании.</p>
+          <ul class="service-card__list">
+            <li>P&amp;L, cash-flow, баланс — ежемесячно</li>
+            <li>Бюджетирование и платёжный календарь</li>
+            <li>Unit-экономика и контроль маржи</li>
+          </ul>
+        </article>
+      </div>
+
+      <!-- ===== Калькулятор налогового режима ===== -->
+      <div class="calc reveal" id="calc">
+        <div class="calc__intro">
+          <h3 class="calc__title">Калькулятор налоговой нагрузки</h3>
+          <p class="calc__hint">Демо-расчёт: сравните режимы для вашего оборота. Точную модель построим на экспресс-аудите.</p>
+        </div>
+        <div class="calc__body">
+          <div class="calc__controls">
+            <label class="calc__field">
+              <span class="calc__label">Выручка в год, млн ₽</span>
+              <input type="range" id="calcRevenue" min="10" max="300" step="5" value="80">
+              <span class="calc__value" id="calcRevenueValue">80 млн ₽</span>
+            </label>
+            <label class="calc__field">
+              <span class="calc__label">Доля расходов, %</span>
+              <input type="range" id="calcExpense" min="0" max="90" step="5" value="60">
+              <span class="calc__value" id="calcExpenseValue">60%</span>
+            </label>
+            <div class="calc__field">
+              <span class="calc__label">С кем работаете</span>
+              <div class="calc__toggle" id="calcClients" role="group" aria-label="Тип клиентов">
+                <button type="button" class="calc__toggle-btn is-active" data-clients="b2b">С юрлицами (B2B)</button>
+                <button type="button" class="calc__toggle-btn" data-clients="b2c">С физлицами (B2C)</button>
+              </div>
+            </div>
+          </div>
+          <div class="calc__results">
+            <div class="calc-row" data-regime="usn6">
+              <div class="calc-row__name">УСН «Доходы» <span>6% с выручки</span></div>
+              <div class="calc-row__bar"><i id="barUsn6"></i></div>
+              <div class="calc-row__sum" id="sumUsn6">—</div>
+            </div>
+            <div class="calc-row" data-regime="usn15">
+              <div class="calc-row__name">УСН «Доходы − расходы» <span>15% с разницы</span></div>
+              <div class="calc-row__bar"><i id="barUsn15"></i></div>
+              <div class="calc-row__sum" id="sumUsn15">—</div>
+            </div>
+            <div class="calc-row" data-regime="npd">
+              <div class="calc-row__name">НПД (самозанятость) <span id="npdRate">4–6%, лимит 2,4 млн ₽/год</span></div>
+              <div class="calc-row__bar"><i id="barNpd"></i></div>
+              <div class="calc-row__sum" id="sumNpd">—</div>
+            </div>
+            <div class="calc-row" data-regime="patent">
+              <div class="calc-row__name">Патент <span>фиксированный платёж</span></div>
+              <div class="calc-row__bar"><i id="barPatent"></i></div>
+              <div class="calc-row__sum" id="sumPatent">—</div>
+            </div>
+          </div>
+        </div>
+        <p class="calc__verdict" id="calcVerdict">Оптимальный режим определяется структурой вашего бизнеса.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Кейсы ===== -->
+  <section class="section section--dark cases" id="cases">
+    <div class="container">
+      <p class="section__eyebrow reveal">Кейсы</p>
+      <h2 class="section__title reveal">Измеримый эффект: до и после</h2>
+      <div class="cases__grid">
+        <article class="case-card reveal">
+          <p class="case-card__industry">Производство</p>
+          <h3 class="case-card__title">Снизили налоговую нагрузку на 18%</h3>
+          <div class="case-card__compare">
+            <div class="case-card__bar">
+              <span class="case-card__bar-label">До</span>
+              <div class="bar bar--before" style="--w:100%"><i></i></div>
+              <span class="case-card__bar-value">9,4% от выручки</span>
+            </div>
+            <div class="case-card__bar">
+              <span class="case-card__bar-label">После</span>
+              <div class="bar bar--after" style="--w:77%"><i></i></div>
+              <span class="case-card__bar-value">7,7% от выручки</span>
+            </div>
+          </div>
+          <p class="case-card__note">Разделили ОСНО-направление и УСН-направление, пересобрали договорную схему. Экономия — 5,6 млн ₽ в год.</p>
+        </article>
+        <article class="case-card reveal">
+          <p class="case-card__industry">Ритейл</p>
+          <h3 class="case-card__title">Нашли 2,4 млн ₽ зависшего НДС</h3>
+          <div class="case-card__compare">
+            <div class="case-card__bar">
+              <span class="case-card__bar-label">До</span>
+              <div class="bar bar--before" style="--w:100%"><i></i></div>
+              <span class="case-card__bar-value">вычеты не заявлены</span>
+            </div>
+            <div class="case-card__bar">
+              <span class="case-card__bar-label">После</span>
+              <div class="bar bar--after" style="--w:18%"><i></i></div>
+              <span class="case-card__bar-value">возмещено 2,4 млн ₽</span>
+            </div>
+          </div>
+          <p class="case-card__note">Сверили книгу покупок с контрагентами за 3 года, подали уточнённые декларации, деньги вернулись на счёт.</p>
+        </article>
+        <article class="case-card reveal">
+          <p class="case-card__industry">IT</p>
+          <h3 class="case-card__title">Учёт с нуля за 2 недели</h3>
+          <div class="case-card__compare">
+            <div class="case-card__bar">
+              <span class="case-card__bar-label">До</span>
+              <div class="bar bar--before" style="--w:100%"><i></i></div>
+              <span class="case-card__bar-value">учёт «в тетради»</span>
+            </div>
+            <div class="case-card__bar">
+              <span class="case-card__bar-label">После</span>
+              <div class="bar bar--after" style="--w:24%"><i></i></div>
+              <span class="case-card__bar-value">запуск за 14 дней</span>
+            </div>
+          </div>
+          <p class="case-card__note">Настроили 1С, банк-клиент и документооборот. Первая отчётность сдана без замечаний инспекции.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Карта рисков ===== -->
+  <section class="section riskmap" id="riskmap">
+    <div class="container">
+      <p class="section__eyebrow reveal">Иллюстрация аудита</p>
+      <h2 class="section__title reveal">Карта рисков — что вы получите через 5 дней</h2>
+      <p class="section__lead reveal">Фрагмент реальной карты рисков (данные обезличены). Каждая находка оценивается в рублях и получает план устранения.</p>
+      <div class="riskmap__filters reveal" id="riskFilters" role="group" aria-label="Фильтр по уровню риска">
+        <button type="button" class="risk-filter is-active" data-level="all">Все находки</button>
+        <button type="button" class="risk-filter" data-level="high">Высокий риск</button>
+        <button type="button" class="risk-filter" data-level="mid">Средний</button>
+        <button type="button" class="risk-filter" data-level="low">Низкий</button>
+      </div>
+      <div class="riskmap__table-wrap reveal">
+        <table class="risk-table">
+          <thead>
+            <tr>
+              <th>Участок учёта</th>
+              <th>Находка</th>
+              <th>Уровень</th>
+              <th class="risk-table__sum">Оценка, ₽</th>
+              <th>Срок устранения</th>
+            </tr>
+          </thead>
+          <tbody id="riskTableBody">
+            <tr data-level="high">
+              <td>НДС</td>
+              <td>Разрывы с контрагентами по книге покупок</td>
+              <td><span class="risk-badge risk-badge--high">Высокий</span></td>
+              <td class="risk-table__sum">1 150 000</td>
+              <td>10 дней</td>
+            </tr>
+            <tr data-level="high">
+              <td>Налог на прибыль</td>
+              <td>Расходы без подтверждающих документов</td>
+              <td><span class="risk-badge risk-badge--high">Высокий</span></td>
+              <td class="risk-table__sum">780 000</td>
+              <td>15 дней</td>
+            </tr>
+            <tr data-level="mid">
+              <td>Зарплата и взносы</td>
+              <td>Серая часть ФОТ — риск доначислений</td>
+              <td><span class="risk-badge risk-badge--mid">Средний</span></td>
+              <td class="risk-table__sum">420 000</td>
+              <td>30 дней</td>
+            </tr>
+            <tr data-level="mid">
+              <td>Договоры</td>
+              <td>Отсутствуют акты сверки за 2 квартала</td>
+              <td><span class="risk-badge risk-badge--mid">Средний</span></td>
+              <td class="risk-table__sum">—</td>
+              <td>7 дней</td>
+            </tr>
+            <tr data-level="low">
+              <td>Кадры</td>
+              <td>Не обновлены локальные нормативные акты</td>
+              <td><span class="risk-badge risk-badge--low">Низкий</span></td>
+              <td class="risk-table__sum">30 000</td>
+              <td>5 дней</td>
+            </tr>
+            <tr data-level="low">
+              <td>Первичка</td>
+              <td>Дубли счетов-фактур в учётной системе</td>
+              <td><span class="risk-badge risk-badge--low">Низкий</span></td>
+              <td class="risk-table__sum">—</td>
+              <td>3 дня</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="riskmap__empty" id="riskEmpty" hidden>По выбранному уровню находок нет.</p>
+      </div>
+      <p class="riskmap__footnote reveal">Итого потенциальные потери клиента: <strong>2 380 000 ₽</strong> — все устранены до камеральной проверки.</p>
+    </div>
+  </section>
+
+  <!-- ===== Как выглядит работа ===== -->
+  <section class="section section--dark process" id="process">
+    <div class="container">
+      <p class="section__eyebrow reveal">Процесс</p>
+      <h2 class="section__title reveal">Как выглядит работа с нами</h2>
+      <ol class="process__steps">
+        <li class="step reveal">
+          <span class="step__num">1</span>
+          <h3>Экспресс-аудит <span class="step__days">5 дней</span></h3>
+          <p>Погружаемся в учёт, выгрузки и договоры. Находим риски и переплаты.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__num">2</span>
+          <h3>Карта рисков и план</h3>
+          <p>Фиксируем находки в рублях, согласуем приоритеты и дорожную карту.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__num">3</span>
+          <h3>Ведение учёта по SLA</h3>
+          <p>Берём учёт на себя: сроки и качество закреплены в договоре, ответственность застрахована.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__num">4</span>
+          <h3>Ежемесячный отчёт собственнику</h3>
+          <p>P&amp;L, cash-flow и ключевые риски — одним документом, без бухгалтерского жаргона.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== Цифры доверия ===== -->
+  <section class="section stats" id="stats">
+    <div class="container">
+      <div class="stats__grid">
+        <div class="stat reveal">
+          <span class="stat__num"><span class="counter" data-target="87">0</span></span>
+          <span class="stat__label">клиентов на обслуживании</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num"><span class="counter" data-target="340">0</span> <small>млн ₽</small></span>
+          <span class="stat__label">сэкономлено клиентам</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num"><span class="counter" data-target="0">0</span></span>
+          <span class="stat__label">штрафов за 3 года работы</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num"><span class="counter" data-target="12">0</span></span>
+          <span class="stat__label">отраслей в портфеле</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-divider container" aria-hidden="true"></div>
+
+  <!-- ===== Тарифы ===== -->
+  <section class="section tariffs" id="tariffs">
+    <div class="container">
+      <p class="section__eyebrow reveal">Тарифы</p>
+      <h2 class="section__title reveal">Три уровня финансовой функции</h2>
+      <div class="tariffs__grid">
+        <article class="tariff-card reveal">
+          <h3 class="tariff-card__name">Учёт</h3>
+          <p class="tariff-card__price">от 45 000 ₽<span>/мес</span></p>
+          <ul class="tariff-card__list">
+            <li>До 200 документов в месяц</li>
+            <li>Вся обязательная отчётность</li>
+            <li>Зарплата до 15 сотрудников</li>
+            <li>Ответы на требования ФНС</li>
+          </ul>
+          <a href="#cta" class="btn btn--outline tariff-card__btn">Обсудить задачу</a>
+        </article>
+        <article class="tariff-card tariff-card--featured reveal">
+          <p class="tariff-card__flag">Выбор большинства клиентов</p>
+          <h3 class="tariff-card__name">Учёт + налоги</h3>
+          <p class="tariff-card__price">от 90 000 ₽<span>/мес</span></p>
+          <ul class="tariff-card__list">
+            <li>Всё из тарифа «Учёт»</li>
+            <li>Налоговое планирование на год</li>
+            <li>Оптимизация структуры бизнеса</li>
+            <li>Сопровождение проверок</li>
+          </ul>
+          <a href="#cta" class="btn btn--gold tariff-card__btn">Запросить аудит</a>
+        </article>
+        <article class="tariff-card reveal">
+          <h3 class="tariff-card__name">Финансовая функция</h3>
+          <p class="tariff-card__price">индивидуально</p>
+          <ul class="tariff-card__list">
+            <li>Всё из тарифа «Учёт + налоги»</li>
+            <li>Управленческая отчётность, бюджеты</li>
+            <li>Казначейство и платёжный календарь</li>
+            <li>Выделенный финансовый директор</li>
+          </ul>
+          <a href="#cta" class="btn btn--outline tariff-card__btn">Запросить расчёт</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Команда ===== -->
+  <section class="section section--dark team" id="team">
+    <div class="container">
+      <p class="section__eyebrow reveal">Команда</p>
+      <h2 class="section__title reveal">Партнёры, которые ведут ваш учёт</h2>
+      <div class="team__grid">
+        <article class="team-card reveal">
+          <div class="team-card__avatar" aria-hidden="true"><span>АС</span></div>
+          <h3>Алексей Соколов</h3>
+          <p class="team-card__role">Налоговый консультант</p>
+          <p class="team-card__bio">Бывший налоговый консультант Big4. 12 лет в налоговом структурировании холдингов и сделок.</p>
+        </article>
+        <article class="team-card reveal">
+          <div class="team-card__avatar" aria-hidden="true"><span>МК</span></div>
+          <h3>Марина Ковалёва</h3>
+          <p class="team-card__role">Главный бухгалтер</p>
+          <p class="team-card__bio">Главбух с опытом 15 лет. Вела учёт производственных и торговых компаний с оборотом до 3 млрд ₽.</p>
+        </article>
+        <article class="team-card reveal">
+          <div class="team-card__avatar" aria-hidden="true"><span>ДВ</span></div>
+          <h3>Дмитрий Волгин</h3>
+          <p class="team-card__role">Аудитор</p>
+          <p class="team-card__bio">Аудитор, член СРО. Провёл более 200 аудитов и налоговых due diligence для среднего бизнеса.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Отзывы ===== -->
+  <section class="section reviews" id="reviews">
+    <div class="container">
+      <p class="section__eyebrow reveal">Отзывы</p>
+      <h2 class="section__title reveal">Что говорят собственники</h2>
+      <div class="carousel reveal" id="carousel">
+        <div class="carousel__viewport">
+          <div class="carousel__track" id="carouselTrack">
+            <blockquote class="review">
+              <p class="review__text">«За первый же аудит нашли переплату по НДС на 1,8 млн. Теперь раз в месяц получаю отчёт на трёх страницах и понимаю, что происходит с деньгами».</p>
+              <footer class="review__author">
+                <span class="review__name">Игорь Панов</span>
+                <span class="review__meta">Собственник, производство металлоконструкций</span>
+              </footer>
+            </blockquote>
+            <blockquote class="review">
+              <p class="review__text">«Раньше каждое письмо из налоговой было катастрофой. Сейчас всеми требованиями занимаются они — я даже не открываю конверты. Штрафов нет уже третий год».</p>
+              <footer class="review__author">
+                <span class="review__name">Елена Маркина</span>
+                <span class="review__meta">Генеральный директор, сеть розничных магазинов</span>
+              </footer>
+            </blockquote>
+            <blockquote class="review">
+              <p class="review__text">«Перешли от бухгалтера на полставки к полноценной финансовой функции за те же деньги. Появились бюджеты, платёжный календарь и спокойный сон».</p>
+              <footer class="review__author">
+                <span class="review__name">Тимур Галеев</span>
+                <span class="review__meta">Сооснователь, IT-интегратор</span>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+        <div class="carousel__controls">
+          <button type="button" class="carousel__btn" id="carouselPrev" aria-label="Предыдущий отзыв">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="carousel__dots" id="carouselDots"></div>
+          <button type="button" class="carousel__btn" id="carouselNext" aria-label="Следующий отзыв">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Финальный CTA ===== -->
+  <section class="section section--dark cta" id="cta">
+    <div class="container cta__inner">
+      <div class="cta__text reveal">
+        <h2 class="section__title">Запросите экспресс-аудит</h2>
+        <p class="cta__lead">Покажем карту ваших рисков за 5 дней. Оставьте контакты — перезвоним в течение рабочего дня и согласуем старт.</p>
+        <p class="cta__start" id="ctaStart">Ближайший старт аудита — <strong>понедельник</strong></p>
+        <ul class="cta__points">
+          <li>Финансовая ответственность — в договоре</li>
+          <li>NDA по умолчанию</li>
+          <li>Аудит не обязывает к переходу на обслуживание</li>
+        </ul>
+        <a href="tel:+79090939400" class="cta__phone">+7 909 093-94-00</a>
+      </div>
+      <form class="form reveal" id="auditForm" novalidate>
+        <h3 class="form__title">Заявка на экспресс-аудит</h3>
+        <label class="form__field">
+          <span>Имя</span>
+          <input type="text" name="name" id="formName" placeholder="Как к вам обращаться" autocomplete="name" required>
+        </label>
+        <label class="form__field">
+          <span>Телефон</span>
+          <input type="tel" name="phone" id="formPhone" placeholder="+7 ___ ___-__-__" autocomplete="tel" required>
+        </label>
+        <label class="form__field">
+          <span>Годовой оборот</span>
+          <select name="revenue" id="formRevenue" required>
+            <option value="" disabled selected>Выберите диапазон</option>
+            <option value="50-150">50–150 млн ₽</option>
+            <option value="150-500">150–500 млн ₽</option>
+            <option value="500+">Более 500 млн ₽</option>
+          </select>
+        </label>
+        <label class="form__field">
+          <span>Компания</span>
+          <input type="text" name="company" id="formCompany" placeholder="Название или отрасль" autocomplete="organization" required>
+        </label>
+        <p class="form__error" id="formError" hidden>Заполните все поля: нам нужны они, чтобы подготовиться к разговору.</p>
+        <button type="submit" class="btn btn--gold form__submit">Запросить аудит учёта</button>
+        <p class="form__privacy">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.</p>
+      </form>
+      <div class="form-success" id="formSuccess" hidden>
+        <svg viewBox="0 0 64 64" class="form-success__icon" aria-hidden="true">
+          <circle cx="32" cy="32" r="30" fill="none" stroke="#C0A062" stroke-width="2"/>
+          <path d="M20 33l8 8 16-16" fill="none" stroke="#C0A062" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>Заявка принята</h3>
+        <p>Партнёр практики свяжется с вами в течение рабочего дня и согласует старт экспресс-аудита.</p>
+        <p class="form-success__start" id="successStart">Ближайший старт — <strong>понедельник</strong></p>
+        <button type="button" class="btn btn--outline" id="formReset">Отправить ещё одну заявку</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Футер ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col footer__col--brand">
+        <a href="#hero" class="logo logo--footer">
+          <span class="logo__mark">А·П</span>
+          <span class="logo__text">Аутсорс<em>.Про</em></span>
+        </a>
+        <p class="footer__tagline">Финансовая функция под ключ для растущего бизнеса.</p>
+      </div>
+      <div class="footer__col">
+        <p class="footer__head">Контакты</p>
+        <a href="tel:+79090939400" class="footer__link">+7 909 093-94-00</a>
+        <a href="mailto:audit@outsource-pro.ru" class="footer__link">audit@outsource-pro.ru</a>
+        <p class="footer__text">Офис в центре: Москва, Мясницкая ул., 13, стр. 2</p>
+      </div>
+      <div class="footer__col">
+        <p class="footer__head">Мы на связи</p>
+        <div class="footer__socials">
+          <a href="#" class="social" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 4L3.6 11.3c-.8.3-.8 1.4.1 1.6l4.3 1.3 1.6 5c.2.7 1 .9 1.5.4l2.3-2.2 4.4 3.2c.6.4 1.4.1 1.6-.6L21.9 5.2c.2-.9-.6-1.6-1.4-1.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#" class="social" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 00-7.8 13.5L3 21l4.6-1.2A9 9 0 1012 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 9.5c.5 2.5 3 5 5.5 5.5l1-1.5-2-1-1 .5c-.8-.5-1.5-1.2-2-2l.5-1-1-2L9 9.5z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#" class="social" aria-label="VK">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7c2 6 5 9.5 9 10V7M3 7h4l2 5M12 7c3-.3 6-1.5 8-3-.5 4-2.5 6.5-4.5 7.5 2 .8 3.8 2.5 4.5 5.5-2.5-1-5-3-6.5-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <p class="footer__text">Пн–Пт, 9:00–19:00 МСК</p>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© <span id="footerYear">2026</span> Аутсорс.Про. Бухгалтерский и налоговый аутсорсинг.</p>
+      <p class="footer__disclaimer">Демо-сайт портфолио. Данные кейсов обезличены.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

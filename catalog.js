@@ -310,4 +310,24 @@ const WORKS = [
     style: "Дерзкий, молодёжный, побег из города",
     path: "glamping/escape/",
   },
+
+  // --- Бухгалтерия для ИП ---
+  {
+    category: "Бухгалтерия для ИП",
+    title: "Налоговый навигатор",
+    style: "Технологичный, калькулятор режима",
+    path: "accounting/tax-navigator/",
+  },
+  {
+    category: "Бухгалтерия для ИП",
+    title: "Свой бухгалтер",
+    style: "Тёплый, человечный, в мессенджере",
+    path: "accounting/personal-accountant/",
+  },
+  {
+    category: "Бухгалтерия для ИП",
+    title: "Аутсорс.Про",
+    style: "Строгий B2B-премиум, функция под ключ",
+    path: "accounting/outsource-pro/",
+  },
 ];
