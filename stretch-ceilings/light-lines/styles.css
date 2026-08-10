@@ -91,12 +91,17 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 100;
+  /* постоянный затемняющий градиент + blur: световые линии сцены
+     не проходят за пунктами меню и не читаются как зачёркивание */
+  background: linear-gradient(180deg, rgba(7, 9, 15, .95) 0%, rgba(7, 9, 15, .82) 55%, rgba(7, 9, 15, 0) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   transition: background .5s, box-shadow .5s, backdrop-filter .5s;
 }
 .header.is-scrolled {
-  background: rgba(7, 9, 15, .78);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(7, 9, 15, .88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   box-shadow: 0 1px 0 rgba(76, 201, 240, .12), 0 12px 40px rgba(0, 0, 0, .45);
 }
 .header__inner {
@@ -223,6 +228,10 @@ body.is-lit .hero-lamp-glow { opacity: .35; }
   line-height: 1.04;
   letter-spacing: -.01em;
   margin-bottom: 26px;
+  /* запас справа под свисание последнего глифа, чтобы градиентный
+     клип (background-clip: text) не обрезал букву «а» */
+  padding-right: .18em;
+  margin-right: -.18em;
   background: linear-gradient(120deg, #ffffff 30%, #a8e6ff 70%, #4cc9f0 100%);
   -webkit-background-clip: text;
   background-clip: text;
