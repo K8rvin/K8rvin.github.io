@@ -996,6 +996,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 800; line-height: 1
   gap: 12px;
   animation: stepIn 0.5s var(--spring);
 }
+.order__success[hidden] { display: none; }
 .order__success-icon { font-size: 64px; animation: successPop 0.7s var(--spring); }
 @keyframes successPop {
   0% { transform: scale(0) rotate(-30deg); }

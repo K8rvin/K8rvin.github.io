@@ -961,3 +961,9 @@ input[type="range"]::-moz-range-thumb {
   .macaron-fab { padding: 10px 12px; }
   .macaron-icon { width: 44px; }
 }
+
+/* фикс: атрибут hidden не должен проигрывать display */
+.field-error[hidden] { display: none; }
+
+/* фикс: атрибут hidden не должен проигрывать display */
+.form-success[hidden] { display: none; }

@@ -725,3 +725,6 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 500; line-height: 1.12;
   .booking__slots { grid-template-columns: repeat(2, 1fr); }
   .hero__cta .btn { width: 100%; }
 }
+
+/* фикс: атрибут hidden не должен проигрывать display */
+.contacts__success[hidden] { display: none; }

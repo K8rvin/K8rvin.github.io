@@ -1106,3 +1106,6 @@ body.modal-open { overflow: hidden; }
   .lunch__price { font-size: 44px; }
   .lunch__card, .lunch__week { padding: 24px; }
 }
+
+/* фикс: атрибут hidden не должен проигрывать display */
+.booking__success[hidden] { display: none; }

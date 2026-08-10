@@ -991,3 +991,6 @@ ul, ol { list-style: none; }
   .cta__phone { font-size: 20px; }
   .price-banner { flex-direction: column; gap: 14px; }
 }
+
+/* фикс: атрибут hidden не должен проигрывать display */
+.cta__success[hidden] { display: none; }
