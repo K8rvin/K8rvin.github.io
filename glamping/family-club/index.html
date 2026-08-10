@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Солнечная Поляна — загородный клуб для всей семьи</title>
+<meta name="description" content="Выходные под ключ для всей семьи: домики с завтраком, баня, детская площадка, сапы и велосипеды. Заехали в пятницу с чемоданом — всё остальное уже готово.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== ШАПКА ===== -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a class="logo" href="#top" aria-label="Солнечная Поляна — на главную">
+      <svg class="logo__mark" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+        <circle cx="30" cy="13" r="7" fill="#F2B84B"/>
+        <path d="M30 2v3M38 13h3M30 24v-3M22 13h-3M35.8 5.2l2.1-2.1M35.8 20.8l2.1 2.1M24.2 5.2l-2.1-2.1" stroke="#F2B84B" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M6 40V27l12-9 12 9v13" fill="#fff" stroke="#5E8C61" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M3 27l15-11.5L33 27" stroke="#5E8C61" stroke-width="3" stroke-linecap="round"/>
+        <rect x="15" y="30" width="6" height="10" rx="1.5" fill="#8A6D4F"/>
+      </svg>
+      <span class="logo__text">Солнечная <b>Поляна</b></span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="#packages" class="nav__link">Пакеты</a>
+      <a href="#calendar" class="nav__link">Календарь</a>
+      <a href="#activities" class="nav__link">Активности</a>
+      <a href="#houses" class="nav__link">Домики</a>
+      <a href="#food" class="nav__link">Питание</a>
+      <a href="#reviews" class="nav__link">Отзывы</a>
+      <a href="#contacts" class="nav__link">Контакты</a>
+      <a href="tel:+79090939400" class="btn btn--grass nav__call">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+        +7 909 093-94-00
+      </a>
+    </nav>
+
+    <a href="tel:+79090939400" class="btn btn--grass btn--sm header__call">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+      <span>+7 909 093-94-00</span>
+    </a>
+
+    <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ===== 1. HERO ===== -->
+<section class="hero">
+  <div class="hero__scene" aria-hidden="true">
+    <svg viewBox="0 0 1440 830" preserveAspectRatio="xMidYMax slice">
+      <defs>
+        <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#FFF3D2"/>
+          <stop offset="0.55" stop-color="#FDF6E4"/>
+          <stop offset="1" stop-color="#FBF6EC"/>
+        </linearGradient>
+      </defs>
+
+      <rect width="1440" height="830" fill="url(#skyGrad)"/>
+
+      <!-- солнце -->
+      <g transform="translate(1180,140)">
+        <circle class="scene-sun-glow" r="118" fill="#F6C65C" opacity="0.22"/>
+        <g class="scene-sun-rays" stroke="#F2B84B" stroke-width="8" stroke-linecap="round">
+          <line y1="-92" y2="-122"/>
+          <line y1="-92" y2="-122" transform="rotate(30)"/>
+          <line y1="-92" y2="-122" transform="rotate(60)"/>
+          <line y1="-92" y2="-122" transform="rotate(90)"/>
+          <line y1="-92" y2="-122" transform="rotate(120)"/>
+          <line y1="-92" y2="-122" transform="rotate(150)"/>
+          <line y1="-92" y2="-122" transform="rotate(180)"/>
+          <line y1="-92" y2="-122" transform="rotate(210)"/>
+          <line y1="-92" y2="-122" transform="rotate(240)"/>
+          <line y1="-92" y2="-122" transform="rotate(270)"/>
+          <line y1="-92" y2="-122" transform="rotate(300)"/>
+          <line y1="-92" y2="-122" transform="rotate(330)"/>
+        </g>
+        <circle r="64" fill="#F2B84B"/>
+        <circle r="52" fill="#F6C65C"/>
+      </g>
+
+      <!-- облака -->
+      <g transform="translate(230,112)"><g class="cloud-anim cloud-anim--1" fill="#FFFFFF" opacity="0.95">
+        <ellipse cx="0" cy="0" rx="72" ry="26"/><ellipse cx="58" cy="-18" rx="52" ry="24"/><ellipse cx="118" cy="2" rx="62" ry="24"/>
+      </g></g>
+      <g transform="translate(720,72)"><g class="cloud-anim cloud-anim--2" fill="#FFFFFF" opacity="0.85">
+        <ellipse cx="0" cy="0" rx="56" ry="20"/><ellipse cx="46" cy="-14" rx="42" ry="19"/><ellipse cx="92" cy="2" rx="48" ry="18"/>
+      </g></g>
+      <g transform="translate(1060,300)"><g class="cloud-anim cloud-anim--3" fill="#FFFFFF" opacity="0.8">
+        <ellipse cx="0" cy="0" rx="44" ry="16"/><ellipse cx="36" cy="-10" rx="32" ry="14"/><ellipse cx="72" cy="2" rx="36" ry="14"/>
+      </g></g>
+
+      <!-- птицы -->
+      <g class="bird bird--1" transform="translate(560,150)" stroke="#8FA58A" stroke-width="3" stroke-linecap="round" fill="none">
+        <path d="M0 0 Q8 -8 16 0 Q24 -8 32 0"/>
+      </g>
+      <g class="bird bird--2" transform="translate(655,118) scale(0.7)" stroke="#8FA58A" stroke-width="3" stroke-linecap="round" fill="none">
+        <path d="M0 0 Q8 -8 16 0 Q24 -8 32 0"/>
+      </g>
+
+      <!-- дальний холм -->
+      <path d="M0 430 C 240 360 480 340 720 400 C 960 460 1200 350 1440 410 L1440 830 L0 830 Z" fill="#D8E7C2"/>
+
+      <!-- домики на холме -->
+      <g transform="translate(285,372)">
+        <g class="smoke" transform="translate(95,-46)" fill="#FFFFFF">
+          <circle class="smoke-puff smoke-puff--1" r="6" cy="0"/>
+          <circle class="smoke-puff smoke-puff--2" r="8" cy="-16"/>
+          <circle class="smoke-puff smoke-puff--3" r="10" cy="-34"/>
+        </g>
+        <rect x="88" y="-38" width="14" height="30" fill="#B08968"/>
+        <rect x="0" y="0" width="120" height="86" rx="6" fill="#FFFDF6"/>
+        <polygon points="-12,4 60,-46 132,4" fill="#5E8C61"/>
+        <rect x="50" y="34" width="22" height="52" rx="4" fill="#8A6D4F"/>
+        <rect x="12" y="22" width="24" height="24" rx="4" fill="#F7D774" stroke="#C9A23F" stroke-width="2"/>
+        <rect x="84" y="22" width="24" height="24" rx="4" fill="#F7D774" stroke="#C9A23F" stroke-width="2"/>
+      </g>
+      <g transform="translate(585,422) scale(0.85)">
+        <rect x="82" y="-34" width="13" height="26" fill="#B08968"/>
+        <rect x="0" y="0" width="112" height="80" rx="6" fill="#FFFDF6"/>
+        <polygon points="-11,4 56,-42 123,4" fill="#E8A15C"/>
+        <rect x="46" y="32" width="20" height="48" rx="4" fill="#8A6D4F"/>
+        <rect x="11" y="20" width="22" height="22" rx="4" fill="#F7D774" stroke="#C9A23F" stroke-width="2"/>
+        <rect x="79" y="20" width="22" height="22" rx="4" fill="#F7D774" stroke="#C9A23F" stroke-width="2"/>
+      </g>
+      <g transform="translate(1015,386) scale(0.95)">
+        <rect x="86" y="-36" width="13" height="28" fill="#B08968"/>
+        <rect x="0" y="0" width="116" height="82" rx="6" fill="#FFFDF6"/>
+        <polygon points="-11,4 58,-44 127,4" fill="#D97E5D"/>
+        <rect x="48" y="32" width="21" height="50" rx="4" fill="#8A6D4F"/>
+        <rect x="12" y="21" width="23" height="23" rx="4" fill="#F7D774" stroke="#C9A23F" stroke-width="2"/>
+        <rect x="82" y="21" width="23" height="23" rx="4" fill="#F7D774" stroke="#C9A23F" stroke-width="2"/>
+      </g>
+
+      <!-- средний холм -->
+      <path d="M0 540 C 260 470 520 450 800 520 C 1060 584 1250 500 1440 530 L1440 830 L0 830 Z" fill="#BED8A2"/>
+
+      <!-- деревья -->
+      <g transform="translate(160,468)">
+        <rect x="-7" y="0" width="14" height="48" rx="4" fill="#8A6D4F"/>
+        <circle cx="0" cy="-30" r="34" fill="#5E8C61"/>
+        <circle cx="-25" cy="-8" r="24" fill="#6FA073"/>
+        <circle cx="25" cy="-8" r="24" fill="#7BA878"/>
+      </g>
+      <g transform="translate(1330,470) scale(1.1)">
+        <rect x="-7" y="0" width="14" height="48" rx="4" fill="#8A6D4F"/>
+        <circle cx="0" cy="-30" r="34" fill="#5E8C61"/>
+        <circle cx="-25" cy="-8" r="24" fill="#7BA878"/>
+        <circle cx="25" cy="-8" r="24" fill="#6FA073"/>
+      </g>
+      <g transform="translate(845,498)" fill="#6FA073">
+        <polygon points="0,-56 22,-16 -22,-16"/>
+        <polygon points="0,-38 26,4 -26,4"/>
+        <rect x="-5" y="4" width="10" height="18" fill="#8A6D4F"/>
+      </g>
+
+      <!-- забор -->
+      <g transform="translate(690,512)" stroke="#B08968" stroke-width="6" stroke-linecap="round">
+        <line x1="0" y1="0" x2="0" y2="26"/><line x1="34" y1="-3" x2="34" y2="23"/><line x1="68" y1="-4" x2="68" y2="22"/>
+        <line x1="-8" y1="7" x2="76" y2="2" stroke-width="5"/><line x1="-8" y1="19" x2="76" y2="14" stroke-width="5"/>
+      </g>
+
+      <!-- передний холм -->
+      <path d="M0 660 C 300 590 560 580 880 650 C 1140 706 1300 640 1440 660 L1440 830 L0 830 Z" fill="#9CC483"/>
+
+      <!-- речка -->
+      <path d="M -30 748 C 220 700 420 806 700 780 C 980 754 1120 712 1470 772" stroke="#A9D6E8" stroke-width="96" fill="none" stroke-linecap="round"/>
+      <path class="river-ripples" d="M -30 748 C 220 700 420 806 700 780 C 980 754 1120 712 1470 772" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round" stroke-dasharray="26 34" opacity="0.55"/>
+
+      <!-- сапборд на речке -->
+      <g transform="translate(700,766) rotate(-6)">
+        <g class="sup-anim">
+          <ellipse cx="0" cy="0" rx="30" ry="7" fill="#F2B84B"/>
+          <circle cx="2" cy="-26" r="6" fill="#F2C49B"/>
+          <path d="M2 -20 L0 -6" stroke="#5E8C61" stroke-width="6" stroke-linecap="round"/>
+          <path d="M-8 -24 L12 -10" stroke="#8A6D4F" stroke-width="3" stroke-linecap="round"/>
+        </g>
+      </g>
+
+      <!-- качели с детьми -->
+      <g transform="translate(1215,652)" stroke-linecap="round">
+        <g stroke="#8A6D4F" stroke-width="8">
+          <line x1="-84" y1="0" x2="-64" y2="-108"/><line x1="-44" y1="0" x2="-64" y2="-108"/>
+          <line x1="44" y1="0" x2="64" y2="-108"/><line x1="84" y1="0" x2="64" y2="-108"/>
+          <line x1="-64" y1="-108" x2="64" y2="-108"/>
+        </g>
+        <g class="swing-anim">
+          <g stroke="#6E5940" stroke-width="4">
+            <line x1="-30" y1="-104" x2="-30" y2="-26"/><line x1="30" y1="-104" x2="30" y2="-26"/>
+          </g>
+          <rect x="-44" y="-28" width="88" height="10" rx="5" fill="#A9805B"/>
+          <!-- ребёнок 1 -->
+          <circle cx="-18" cy="-72" r="12" fill="#F2C49B"/>
+          <path d="M-29 -74 a12 12 0 0 1 22 -2 l-22 2Z" fill="#6E5940"/>
+          <rect x="-30" y="-60" width="24" height="30" rx="10" fill="#F2B84B"/>
+          <path d="M-26 -32 L-31 -10 M-12 -32 L-9 -10" stroke="#4A7350" stroke-width="6"/>
+          <!-- ребёнок 2 -->
+          <circle cx="18" cy="-70" r="11" fill="#F2C49B"/>
+          <path d="M8 -73 a11 11 0 0 1 20 0 l-20 0Z" fill="#3D332A"/>
+          <rect x="7" y="-59" width="22" height="29" rx="10" fill="#5E8C61"/>
+          <path d="M11 -32 L7 -10 M25 -32 L29 -10" stroke="#8A6D4F" stroke-width="6"/>
+        </g>
+      </g>
+
+      <!-- кусты и цветы -->
+      <g>
+        <ellipse cx="90" cy="700" rx="46" ry="20" fill="#7BA878"/>
+        <ellipse cx="1130" cy="672" rx="40" ry="16" fill="#7BA878"/>
+        <ellipse cx="470" cy="668" rx="36" ry="14" fill="#86B58F"/>
+      </g>
+      <g fill="#F2B84B">
+        <circle cx="180" cy="726" r="5"/><circle cx="240" cy="706" r="5"/><circle cx="410" cy="700" r="5"/>
+        <circle cx="1020" cy="700" r="5"/><circle cx="1090" cy="716" r="5"/><circle cx="1360" cy="700" r="5"/>
+      </g>
+      <g fill="#FFFFFF">
+        <circle cx="210" cy="740" r="4"/><circle cx="330" cy="692" r="4"/><circle cx="980" cy="716" r="4"/><circle cx="1300" cy="712" r="4"/>
+      </g>
+      <g fill="#E89AAF">
+        <circle cx="150" cy="744" r="4"/><circle cx="450" cy="722" r="4"/><circle cx="1160" cy="726" r="4"/><circle cx="1250" cy="694" r="4"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="container hero__content">
+    <span class="hero__pill reveal">Выходные под ключ · без сюрпризов и доплат</span>
+    <h1 class="hero__title reveal">Загородный клуб <span class="hero__title-accent">для всей семьи</span></h1>
+    <p class="hero__sub reveal">Домики с завтраком, баня, детская площадка, сапы и велосипеды. Всё включено — приезжайте просто отдыхать.</p>
+    <div class="hero__cta reveal">
+      <a href="#packages" class="btn btn--grass btn--lg">Подобрать выходные</a>
+      <a href="#calendar" class="btn btn--ghost btn--lg">Свободные даты</a>
+    </div>
+    <ul class="hero__points reveal">
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        Заезд в пятницу с 16:00
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        Завтраки уже включены
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        Дети заняты целый день
+      </li>
+    </ul>
+  </div>
+
+  <div class="container hero__stats reveal">
+    <div class="hero__stat">
+      <span class="hero__stat-num"><span id="familiesCounter">0</span></span>
+      <span class="hero__stat-label">семей отдохнуло этим летом</span>
+    </div>
+    <div class="hero__stat">
+      <span class="hero__stat-num">8</span>
+      <span class="hero__stat-label">тёплых домиков в соснах</span>
+    </div>
+    <div class="hero__stat">
+      <span class="hero__stat-num">12</span>
+      <span class="hero__stat-label">активностей круглый год</span>
+    </div>
+    <div class="hero__stat">
+      <span class="hero__stat-num">4,9</span>
+      <span class="hero__stat-label">средняя оценка гостей</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2. ПАКЕТЫ ===== -->
+<section class="section packages" id="packages">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__tag">Выходные под ключ</span>
+      <h2 class="section__title">Три готовых пакета — выбирайте и приезжайте</h2>
+      <p class="section__lead">Никаких доплат на месте: жильё, еда, баня и развлечения уже внутри пакета.</p>
+    </div>
+
+    <div class="packages__grid">
+      <!-- Пакет 1 -->
+      <article class="pack pack--hit reveal" data-pack="Семейные выходные">
+        <span class="pack__badge">Хит продаж</span>
+        <div class="pack__top">
+          <h3 class="pack__name">Семейные выходные</h3>
+          <p class="pack__for">2 взрослых + 1–2 ребёнка · пт–вс, 2 ночи</p>
+        </div>
+        <div class="pack__price"><b>24 800 ₽</b><span>за весь пакет</span></div>
+        <ul class="pack__list">
+          <li>Домик «Семейный на 4» на две ночи</li>
+          <li>Домашние завтраки для всей семьи</li>
+          <li>Дровяная баня (2 часа) и купель</li>
+        </ul>
+        <div class="pack__more">
+          <ul class="pack__list">
+            <li>Сапборды и велосипеды без лимита</li>
+            <li>Детская площадка и вечерние настолки</li>
+            <li>Мангальная зона: дрова и розжиг включены</li>
+            <li>Поздний выезд в воскресенье до 17:00</li>
+          </ul>
+        </div>
+        <button class="pack__toggle" type="button" aria-expanded="false">
+          <span class="pack__toggle-text">Что ещё входит</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <button class="btn btn--grass pack__btn" type="button" data-book-pack="Семейные выходные">Забронировать пакет</button>
+      </article>
+
+      <!-- Пакет 2 -->
+      <article class="pack reveal" data-pack="Романтика">
+        <div class="pack__top">
+          <h3 class="pack__name">Романтика</h3>
+          <p class="pack__for">для двоих · пт–вс, 2 ночи</p>
+        </div>
+        <div class="pack__price"><b>18 400 ₽</b><span>за весь пакет</span></div>
+        <ul class="pack__list">
+          <li>Домик с камином на две ночи</li>
+          <li>Завтраки подаём прямо в домик</li>
+          <li>Баня и купель в приватное время</li>
+        </ul>
+        <div class="pack__more">
+          <ul class="pack__list">
+            <li>Пледы и лежаки для встречи заката</li>
+            <li>Велосипеды и прогулочный маршрут к речке</li>
+            <li>Поздний выезд до 20:00</li>
+            <li>Проектор и плёнка для вечера у камина</li>
+          </ul>
+        </div>
+        <button class="pack__toggle" type="button" aria-expanded="false">
+          <span class="pack__toggle-text">Что ещё входит</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <button class="btn btn--grass pack__btn" type="button" data-book-pack="Романтика">Забронировать пакет</button>
+      </article>
+
+      <!-- Пакет 3 -->
+      <article class="pack reveal" data-pack="Компания друзей">
+        <div class="pack__top">
+          <h3 class="pack__name">Компания друзей</h3>
+          <p class="pack__for">до 8 гостей · пт–вс, 2 ночи</p>
+        </div>
+        <div class="pack__price"><b>39 900 ₽</b><span>за весь пакет</span></div>
+        <ul class="pack__list">
+          <li>Большой дом на 8 на две ночи</li>
+          <li>Завтраки на всю компанию</li>
+          <li>Баня на дровах (3 часа) и купель</li>
+        </ul>
+        <div class="pack__more">
+          <ul class="pack__list">
+            <li>Мангал, дрова и розжиг включены</li>
+            <li>Верёвочный парк — проход для каждого</li>
+            <li>Настольные игры и проектор в гостиной</li>
+            <li>Поздний выезд в воскресенье до 17:00</li>
+          </ul>
+        </div>
+        <button class="pack__toggle" type="button" aria-expanded="false">
+          <span class="pack__toggle-text">Что ещё входит</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <button class="btn btn--grass pack__btn" type="button" data-book-pack="Компания друзей">Забронировать пакет</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3. КАЛЕНДАРЬ ===== -->
+<section class="section calendar-sec" id="calendar">
+  <div class="container calendar-sec__grid">
+    <div class="calendar-sec__intro reveal">
+      <span class="section__tag">Календарь заездов</span>
+      <h2 class="section__title">Выберите свои выходные</h2>
+      <p class="section__lead">Выходные подсвечены жёлтым. Нажмите на дату заезда, затем на дату выезда — сразу покажем, сколько домиков свободно.</p>
+      <ul class="calendar-sec__legend">
+        <li><i class="dot dot--many"></i> свободно от 4 домиков</li>
+        <li><i class="dot dot--few"></i> осталось 1–3 домика</li>
+        <li><i class="dot dot--none"></i> всё занято</li>
+      </ul>
+      <div class="calendar-sec__note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 7 12 12 15.5 14"/></svg>
+        <p>Заезд — с 16:00 в пятницу, выезд — до 17:00 в воскресенье. В будни свободно почти всегда.</p>
+      </div>
+    </div>
+
+    <div class="cal reveal" id="calWidget">
+      <div class="cal__head">
+        <button class="cal__nav" id="calPrev" type="button" aria-label="Предыдущий месяц">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <h3 class="cal__month" id="calMonth">Месяц</h3>
+        <button class="cal__nav" id="calNext" type="button" aria-label="Следующий месяц">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+      <div class="cal__weekdays">
+        <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span class="is-we">Сб</span><span class="is-we">Вс</span>
+      </div>
+      <div class="cal__grid" id="calGrid"></div>
+      <p class="cal__hint" id="calHint">Нажмите на дату заезда — выходные подсвечены жёлтым.</p>
+      <div class="cal__result" id="calResult" hidden>
+        <div class="cal__result-text">
+          <b id="calResultDates"></b>
+          <span id="calResultFree"></span>
+        </div>
+        <button class="btn btn--yellow" id="calBook" type="button">Забронировать эти даты</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 4. АКТИВНОСТИ ===== -->
+<section class="section activities" id="activities">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__tag">Чем заняться</span>
+      <h2 class="section__title">Скучно не будет никому</h2>
+      <p class="section__lead">Всё оборудование выдаём бесплатно — просто подойдите на ресепшен.</p>
+    </div>
+
+    <div class="activities__grid">
+      <article class="act reveal">
+        <div class="act__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c1 3-3.5 5-3.5 9a5.5 5.5 0 0 0 11 0c0-2.2-1-3.8-2.2-4.8.3 2.1-.8 3.3-2 3.3.6-2.6-1-5.7-3.3-7.5Z"/><path d="M9 18.5c-1.5 1-2 2-2 2.5M15 18.5c1.5 1 2 2 2 2.5"/></svg></div>
+        <h3>Баня и купель</h3>
+        <p>Дровяная баня у речки, ледяная купель и лавки на тёплой веранде.</p>
+      </article>
+      <article class="act reveal">
+        <div class="act__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16.5c4.5-6 13.5-6 18 0-4.5 3-13.5 3-18 0Z"/><path d="M8.5 3.5 12 11"/><circle cx="8" cy="3" r="1.4"/></svg></div>
+        <h3>Сапборды</h3>
+        <p>Спокойная речка в двух минутах, доски и жилеты всех размеров.</p>
+      </article>
+      <article class="act reveal">
+        <div class="act__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="3.4"/><circle cx="18" cy="17" r="3.4"/><path d="M6 17 9.8 8.5h5L18 17M9.8 8.5 8.4 5.5H11"/></svg></div>
+        <h3>Велосипеды</h3>
+        <p>Взрослые и детские велики, лесные маршруты на 3, 7 и 12 км.</p>
+      </article>
+      <article class="act reveal">
+        <div class="act__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V6a2 2 0 0 1 4 0v3l8 5.5V21"/><path d="M4 11h4M4 15h4"/><path d="M13 21h7"/></svg></div>
+        <h3>Детская площадка</h3>
+        <p>Качели, горки, песочница и батут — в тени деревьев и на виду.</p>
+      </article>
+      <article class="act reveal">
+        <div class="act__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19 9 7l4 6.5L16 9l5 10Z"/><circle cx="9" cy="4.5" r="1.5"/><path d="M7 12h4"/></svg></div>
+        <h3>Верёвочный парк</h3>
+        <p>Три трассы от 4 лет, страховка и инструктор включены.</p>
+      </article>
+      <article class="act reveal">
+        <div class="act__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="9" cy="9" r="1.2" fill="currentColor"/><circle cx="15" cy="15" r="1.2" fill="currentColor"/><circle cx="15" cy="9" r="1.2" fill="currentColor"/><circle cx="9" cy="15" r="1.2" fill="currentColor"/></svg></div>
+        <h3>Настольные игры</h3>
+        <p>Библиотека из 50 игр в общей гостиной — спасение в дождь.</p>
+      </article>
+      <article class="act reveal">
+        <div class="act__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12c3-4.2 8.5-4.2 12 0-3.5 4.2-9 4.2-12 0Z"/><path d="M16 12l4.5-3.5v7L16 12Z"/><circle cx="7.5" cy="11.5" r="1" fill="currentColor"/></svg></div>
+        <h3>Рыбалка</h3>
+        <p>Окунь и плотва с берега, снасти и стульчики — на ресепшене.</p>
+      </article>
+      <article class="act act--winter reveal">
+        <span class="act__winter-badge">зимой</span>
+        <div class="act__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="14" r="7"/><circle cx="12" cy="14" r="2.6"/><path d="M12 2v3M9 3.5 12 5l3-1.5"/></svg></div>
+        <h3>Тюбинг</h3>
+        <p>Своя горка, ватрушки и горячий чай с мёдом после катания.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. ДОМИКИ ===== -->
+<section class="section houses" id="houses">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__tag">Где мы спим</span>
+      <h2 class="section__title">Восемь домиков — четыре формата</h2>
+      <p class="section__lead">Печь и тёплый пол, мягкие одеяла, чайник и трава для чая в каждом домике.</p>
+    </div>
+
+    <div class="houses__grid">
+      <!-- Домик 1 -->
+      <article class="house reveal" data-pack="Семейные выходные">
+        <div class="house__pic">
+          <svg viewBox="0 0 360 220" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="360" height="220" fill="#FFF3D2"/>
+            <circle cx="300" cy="42" r="26" fill="#F2B84B"/>
+            <path d="M0 150 C 90 120 200 116 360 148 L360 220 L0 220 Z" fill="#BED8A2"/>
+            <path d="M0 178 C 120 156 240 156 360 180 L360 220 L0 220 Z" fill="#9CC483"/>
+            <g transform="translate(118,66)">
+              <rect x="86" y="6" width="12" height="24" fill="#B08968"/>
+              <rect x="0" y="26" width="124" height="86" rx="6" fill="#FFFDF6"/>
+              <polygon points="-12,30 62,-22 136,30" fill="#5E8C61"/>
+              <rect x="14" y="48" width="26" height="26" rx="4" fill="#F7D774" stroke="#C9A23F" stroke-width="2"/>
+              <rect x="84" y="48" width="26" height="26" rx="4" fill="#F7D774" stroke="#C9A23F" stroke-width="2"/>
+              <rect x="52" y="64" width="22" height="48" rx="4" fill="#8A6D4F"/>
+            </g>
+            <g transform="translate(52,120)">
+              <rect x="-5" y="0" width="10" height="34" fill="#8A6D4F"/>
+              <circle cx="0" cy="-18" r="26" fill="#5E8C61"/><circle cx="-18" cy="-2" r="17" fill="#6FA073"/><circle cx="18" cy="-2" r="17" fill="#7BA878"/>
+            </g>
+            <g transform="translate(300,128)" fill="#4A7350">
+              <polygon points="0,-40 17,-10 -17,-10"/><polygon points="0,-26 20,6 -20,6"/>
+            </g>
+            <circle cx="90" cy="196" r="4" fill="#F2B84B"/><circle cx="120" cy="202" r="4" fill="#fff"/><circle cx="250" cy="198" r="4" fill="#E89AAF"/>
+          </svg>
+        </div>
+        <div class="house__body">
+          <h3 class="house__name">Семейный на 4</h3>
+          <p class="house__meta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M15.5 3.1a4 4 0 0 1 0 7.8"/></svg>
+            4 гостя · 38 м²
+          </p>
+          <ul class="house__chips"><li>Терраса</li><li>Детская кровать</li><li>Мини-кухня</li></ul>
+          <div class="house__foot">
+            <span class="house__price">9 800 ₽<i>/сутки</i></span>
+            <button class="btn btn--outline btn--sm house__btn" type="button" data-book-pack="Семейные выходные">Выбрать даты</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Домик 2 -->
+      <article class="house reveal" data-pack="Романтика">
+        <div class="house__pic">
+          <svg viewBox="0 0 360 220" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="360" height="220" fill="#FFF3D2"/>
+            <circle cx="56" cy="44" r="24" fill="#F2B84B"/>
+            <path d="M0 146 C 110 118 230 116 360 150 L360 220 L0 220 Z" fill="#BED8A2"/>
+            <path d="M0 180 C 130 158 250 158 360 182 L360 220 L0 220 Z" fill="#9CC483"/>
+            <g transform="translate(124,72)">
+              <rect x="82" y="4" width="12" height="24" fill="#B08968"/>
+              <rect x="0" y="24" width="112" height="82" rx="6" fill="#FFFDF6"/>
+              <polygon points="-11,28 56,-20 123,28" fill="#D97E5D"/>
+              <rect x="13" y="44" width="30" height="30" rx="4" fill="#F7D774" stroke="#C9A23F" stroke-width="2"/>
+              <path d="M13 59h30M28 44v30" stroke="#C9A23F" stroke-width="2"/>
+              <rect x="74" y="58" width="22" height="48" rx="4" fill="#8A6D4F"/>
+            </g>
+            <g transform="translate(296,124)">
+              <rect x="-5" y="0" width="10" height="34" fill="#8A6D4F"/>
+              <circle cx="0" cy="-18" r="26" fill="#5E8C61"/><circle cx="-18" cy="-2" r="17" fill="#7BA878"/><circle cx="18" cy="-2" r="17" fill="#6FA073"/>
+            </g>
+            <g transform="translate(60,132)" fill="#4A7350">
+              <polygon points="0,-38 16,-10 -16,-10"/><polygon points="0,-25 19,5 -19,5"/>
+            </g>
+            <circle cx="150" cy="200" r="4" fill="#F2B84B"/><circle cx="200" cy="204" r="4" fill="#fff"/><circle cx="280" cy="200" r="4" fill="#E89AAF"/>
+          </svg>
+        </div>
+        <div class="house__body">
+          <h3 class="house__name">Для двоих</h3>
+          <p class="house__meta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M15.5 3.1a4 4 0 0 1 0 7.8"/></svg>
+            2 гостя · 26 м²
+          </p>
+          <ul class="house__chips"><li>Камин</li><li>Панорамное окно</li><li>Купель рядом</li></ul>
+          <div class="house__foot">
+            <span class="house__price">7 200 ₽<i>/сутки</i></span>
+            <button class="btn btn--outline btn--sm house__btn" type="button" data-book-pack="Романтика">Выбрать даты</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Домик 3 -->
+      <article class="house reveal" data-pack="Компания друзей">
+        <div class="house__pic">
+          <svg viewBox="0 0 360 220" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="360" height="220" fill="#FFF3D2"/>
+            <circle cx="302" cy="40" r="26" fill="#F2B84B"/>
+            <path d="M0 148 C 100 118 220 114 360 148 L360 220 L0 220 Z" fill="#BED8A2"/>
+            <path d="M0 182 C 120 158 240 158 360 182 L360 220 L0 220 Z" fill="#9CC483"/>
+            <g transform="translate(86,58)">
+              <rect x="20" y="8" width="12" height="24" fill="#B08968"/>
+              <rect x="150" y="8" width="12" height="24" fill="#B08968"/>
+              <rect x="0" y="30" width="188" height="84" rx="6" fill="#FFFDF6"/>
+              <polygon points="-12,34 94,-26 200,34" fill="#E8A15C"/>
+              <rect x="14" y="52" width="24" height="24" rx="4" fill="#F7D774" stroke="#C9A23F" stroke-width="2"/>
+              <rect x="56" y="52" width="24" height="24" rx="4" fill="#F7D774" stroke="#C9A23F" stroke-width="2"/>
+              <rect x="108" y="52" width="24" height="24" rx="4" fill="#F7D774" stroke="#C9A23F" stroke-width="2"/>
+              <rect x="150" y="52" width="24" height="24" rx="4" fill="#F7D774" stroke="#C9A23F" stroke-width="2"/>
+              <rect x="84" y="66" width="22" height="48" rx="4" fill="#8A6D4F"/>
+            </g>
+            <g transform="translate(48,124)">
+              <rect x="-5" y="0" width="10" height="34" fill="#8A6D4F"/>
+              <circle cx="0" cy="-18" r="26" fill="#5E8C61"/><circle cx="-18" cy="-2" r="17" fill="#6FA073"/><circle cx="18" cy="-2" r="17" fill="#7BA878"/>
+            </g>
+            <g transform="translate(316,126)" fill="#4A7350">
+              <polygon points="0,-42 18,-10 -18,-10"/><polygon points="0,-27 21,6 -21,6"/>
+            </g>
+            <circle cx="100" cy="200" r="4" fill="#F2B84B"/><circle cx="160" cy="204" r="4" fill="#fff"/><circle cx="270" cy="198" r="4" fill="#E89AAF"/>
+          </svg>
+        </div>
+        <div class="house__body">
+          <h3 class="house__name">Большой на 8</h3>
+          <p class="house__meta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M15.5 3.1a4 4 0 0 1 0 7.8"/></svg>
+            8 гостей · 72 м²
+          </p>
+          <ul class="house__chips"><li>3 спальни</li><li>Своя мангальная зона</li><li>Проектор</li></ul>
+          <div class="house__foot">
+            <span class="house__price">16 500 ₽<i>/сутки</i></span>
+            <button class="btn btn--outline btn--sm house__btn" type="button" data-book-pack="Компания друзей">Выбрать даты</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Домик 4 -->
+      <article class="house reveal" data-pack="Семейные выходные">
+        <div class="house__pic">
+          <svg viewBox="0 0 360 220" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="360" height="220" fill="#FFF3D2"/>
+            <circle cx="60" cy="42" r="24" fill="#F2B84B"/>
+            <path d="M0 140 C 100 114 230 112 360 144 L360 220 L0 220 Z" fill="#BED8A2"/>
+            <path d="M0 172 C 120 152 240 152 360 174 L360 220 L0 220 Z" fill="#9CC483"/>
+            <path d="M -20 208 C 80 186 200 214 380 196" stroke="#A9D6E8" stroke-width="34" fill="none" stroke-linecap="round"/>
+            <g transform="translate(122,66)">
+              <rect x="88" y="4" width="12" height="24" fill="#B08968"/>
+              <rect x="0" y="24" width="120" height="84" rx="6" fill="#FFFDF6"/>
+              <polygon points="-12,28 60,-22 132,28" fill="#4A7350"/>
+              <rect x="14" y="46" width="26" height="26" rx="4" fill="#F7D774" stroke="#C9A23F" stroke-width="2"/>
+              <rect x="80" y="46" width="26" height="26" rx="4" fill="#F7D774" stroke="#C9A23F" stroke-width="2"/>
+              <rect x="50" y="62" width="22" height="46" rx="4" fill="#8A6D4F"/>
+              <rect x="-14" y="108" width="148" height="8" rx="3" fill="#B08968"/>
+            </g>
+            <g transform="translate(296,120)">
+              <rect x="-5" y="0" width="10" height="34" fill="#8A6D4F"/>
+              <circle cx="0" cy="-18" r="26" fill="#5E8C61"/><circle cx="-18" cy="-2" r="17" fill="#7BA878"/><circle cx="18" cy="-2" r="17" fill="#6FA073"/>
+            </g>
+            <ellipse cx="66" cy="200" rx="20" ry="5" fill="#F2B84B" transform="rotate(-6 66 200)"/>
+            <circle cx="150" cy="192" r="4" fill="#F2B84B"/><circle cx="230" cy="186" r="4" fill="#fff"/>
+          </svg>
+        </div>
+        <div class="house__body">
+          <h3 class="house__name">Домик у речки</h3>
+          <p class="house__meta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M15.5 3.1a4 4 0 0 1 0 7.8"/></svg>
+            5 гостей · 40 м²
+          </p>
+          <ul class="house__chips"><li>Терраса у воды</li><li>Сапы у порога</li><li>Гамак</li></ul>
+          <div class="house__foot">
+            <span class="house__price">11 400 ₽<i>/сутки</i></span>
+            <button class="btn btn--outline btn--sm house__btn" type="button" data-book-pack="Семейные выходные">Выбрать даты</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. ПИТАНИЕ ===== -->
+<section class="section food" id="food">
+  <div class="container food__grid">
+    <div class="food__text reveal">
+      <span class="section__tag">Что мы едим</span>
+      <h2 class="section__title">Едим как дома, только вкуснее</h2>
+      <p class="section__lead">Кухня — наша гордость: готовим сами из фермерских продуктов соседних хозяйств.</p>
+
+      <div class="food__item">
+        <div class="food__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10h11v5a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4Z"/><path d="M16 11h1.6a2.4 2.4 0 0 1 0 4.8H16"/><path d="M8.5 3.5c0 1-.8 1.4-.8 2.4M12 3.5c0 1-.8 1.4-.8 2.4"/></svg>
+        </div>
+        <div>
+          <h3>Домашние завтраки включены</h3>
+          <p>Сырники, каши на молоке, блины и свежий хлеб. Подаём в общей гостиной до 11:00 — в воскресенье до полудня.</p>
+        </div>
+      </div>
+
+      <div class="food__item">
+        <div class="food__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16a8 8 0 0 1 16 0Z"/><path d="M3 19h18"/><path d="M12 5.5V8"/><circle cx="12" cy="4.5" r="1.2"/></svg>
+        </div>
+        <div>
+          <h3>Ужин по заказу</h3>
+          <p>Щи, котлеты, запечённая форель. Закажите до 16:00 — привезём горячим прямо в домик.</p>
+        </div>
+      </div>
+
+      <div class="food__item">
+        <div class="food__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11h14"/><path d="M7 11l-2.5 9M17 11l2.5 9"/><path d="M9 11v3.5M12 11v4.5M15 11v3.5"/><path d="M12 2.5c.6 1.8-2 3-2 5.2a2.8 2.8 0 0 0 5.6 0c0-1.1-.5-1.9-1.1-2.4.2 1-.4 1.7-1 1.7.3-1.3-.5-2.9-1.5-4.5Z"/></svg>
+        </div>
+        <div>
+          <h3>Мангальная зона с дровами</h3>
+          <p>Мангалы, уголь, розжиг и решётки — бесплатно. Маринады и шампуры ждут на ресепшене.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="food__pic reveal" aria-hidden="true">
+      <div class="food__card">
+        <svg viewBox="0 0 420 380">
+          <defs>
+            <linearGradient id="foodBg" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#FBE3AE"/>
+              <stop offset="1" stop-color="#F7D48C"/>
+            </linearGradient>
+          </defs>
+          <rect width="420" height="380" rx="28" fill="url(#foodBg)"/>
+          <circle cx="352" cy="56" r="30" fill="#F2B84B"/>
+          <!-- стол -->
+          <ellipse cx="210" cy="316" rx="180" ry="26" fill="#E8A15C" opacity="0.45"/>
+          <!-- тарелка с блинами -->
+          <ellipse cx="150" cy="288" rx="96" ry="26" fill="#FFFFFF"/>
+          <ellipse cx="150" cy="282" rx="78" ry="20" fill="#FDF3D8"/>
+          <ellipse cx="150" cy="266" rx="62" ry="15" fill="#F2C879"/>
+          <ellipse cx="150" cy="256" rx="58" ry="14" fill="#F6D38A"/>
+          <ellipse cx="150" cy="247" rx="54" ry="13" fill="#F2C879"/>
+          <ellipse cx="150" cy="241" rx="40" ry="9" fill="#F6D38A"/>
+          <circle cx="150" cy="234" r="9" fill="#E89AAF"/>
+          <circle cx="138" cy="238" r="7" fill="#D97E5D"/>
+          <!-- чайник -->
+          <g transform="translate(296,214)">
+            <path d="M-40 22 a40 40 0 0 1 80 0 l0 26 a6 6 0 0 1 -6 6 l-68 0 a6 6 0 0 1 -6 -6 Z" fill="#5E8C61"/>
+            <path d="M-40 30 q-22 4 -26 22 q16 -2 26 -10 Z" fill="#5E8C61"/>
+            <path d="M-24 20 q24 -26 48 0" fill="none" stroke="#4A7350" stroke-width="7" stroke-linecap="round"/>
+            <circle cx="0" cy="14" r="6" fill="#F2B84B"/>
+            <path d="M40 34 q14 2 12 14" fill="none" stroke="#4A7350" stroke-width="6" stroke-linecap="round"/>
+          </g>
+          <!-- пар -->
+          <g stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" opacity="0.85" fill="none">
+            <path class="steam steam--1" d="M276 190 q6 -12 0 -24"/>
+            <path class="steam steam--2" d="M298 186 q6 -12 0 -24"/>
+            <path class="steam steam--3" d="M320 190 q6 -12 0 -24"/>
+          </g>
+          <!-- чашка -->
+          <g transform="translate(76,236)">
+            <path d="M-18 0 h36 v14 a14 14 0 0 1 -14 14 h-8 a14 14 0 0 1 -14 -14 Z" fill="#FFFDF6"/>
+            <path d="M18 2 h6 a7 7 0 0 1 0 14 h-6" fill="none" stroke="#FFFDF6" stroke-width="5"/>
+          </g>
+          <!-- варенье -->
+          <g transform="translate(340,288)">
+            <ellipse cx="0" cy="16" rx="26" ry="8" fill="#C96F5B"/>
+            <rect x="-26" y="0" width="52" height="16" rx="6" fill="#D97E5D"/>
+            <ellipse cx="0" cy="0" rx="26" ry="8" fill="#E89AAF"/>
+          </g>
+        </svg>
+        <span class="food__sticker">Завтрак включён в каждый пакет</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. КАК ПРОХОДЯТ ВЫХОДНЫЕ ===== -->
+<section class="section timeline" id="weekend">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__tag">Как проходят выходные</span>
+      <h2 class="section__title">Заехали в пятницу с чемоданом — всё остальное уже готово</h2>
+    </div>
+
+    <div class="timeline__grid">
+      <article class="day reveal">
+        <header class="day__head"><span class="day__name">Пятница</span><span class="day__label">заезд</span></header>
+        <ul class="day__events">
+          <li>
+            <span class="day__time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7.5 12 12 15 13.5"/></svg>16:00</span>
+            <p>Заезд, приветственный чай с травами и печеньем</p>
+          </li>
+          <li>
+            <span class="day__time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7.5 12 12 15 13.5"/></svg>17:00</span>
+            <p>Дровяная баня и ледяная купель</p>
+          </li>
+          <li>
+            <span class="day__time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7.5 12 12 15 13.5"/></svg>19:30</span>
+            <p>Ужин и настольные игры в общей гостиной</p>
+          </li>
+        </ul>
+      </article>
+
+      <article class="day day--sat reveal">
+        <header class="day__head"><span class="day__name">Суббота</span><span class="day__label">активный день</span></header>
+        <ul class="day__events">
+          <li>
+            <span class="day__time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7.5 12 12 15 13.5"/></svg>09:00</span>
+            <p>Домашний завтрак: сырники, каши, блины</p>
+          </li>
+          <li>
+            <span class="day__time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7.5 12 12 15 13.5"/></svg>11:00</span>
+            <p>Сапборды и велосипеды, лесной маршрут</p>
+          </li>
+          <li>
+            <span class="day__time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7.5 12 12 15 13.5"/></svg>14:00</span>
+            <p>Пикник у речки — корзинка уже собрана</p>
+          </li>
+          <li>
+            <span class="day__time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7.5 12 12 15 13.5"/></svg>17:00</span>
+            <p>Верёвочный парк и детская анимация</p>
+          </li>
+          <li>
+            <span class="day__time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7.5 12 12 15 13.5"/></svg>19:00</span>
+            <p>Мангал и вечерний костёр с маршмеллоу</p>
+          </li>
+        </ul>
+      </article>
+
+      <article class="day reveal">
+        <header class="day__head"><span class="day__name">Воскресенье</span><span class="day__label">выезд</span></header>
+        <ul class="day__events">
+          <li>
+            <span class="day__time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7.5 12 12 15 13.5"/></svg>до 12:00</span>
+            <p>Спим сколько хотим — поздний завтрак</p>
+          </li>
+          <li>
+            <span class="day__time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7.5 12 12 15 13.5"/></svg>13:00</span>
+            <p>Прогулка, рыбалка и гамаки у воды</p>
+          </li>
+          <li>
+            <span class="day__time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7.5 12 12 15 13.5"/></svg>17:00</span>
+            <p>Выезд. Вещи можно оставить на ресепшене</p>
+          </li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. ОТЗЫВЫ ===== -->
+<section class="section reviews" id="reviews">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__tag">Отзывы</span>
+      <h2 class="section__title">Семейные истории наших гостей</h2>
+    </div>
+
+    <div class="carousel reveal" id="carousel">
+      <div class="carousel__track" id="carouselTrack">
+        <blockquote class="review">
+          <div class="review__stars" aria-label="Оценка 5 из 5">
+            <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg>
+          </div>
+          <p class="review__text">«Впервые за год дети сами отпустили планшеты: с утра бежали на качели, днём плавали на сапах. А мы впервые просто сидели на террасе и пили чай, пока они заняты. Завтраки — как у бабушки в деревне».</p>
+          <footer class="review__author">
+            <span class="review__avatar" style="--av:#F2B84B">АС</span>
+            <span><b>Анна и Сергей</b><i>дети 5 и 8 лет · пакет «Семейные выходные»</i></span>
+          </footer>
+        </blockquote>
+
+        <blockquote class="review">
+          <div class="review__stars" aria-label="Оценка 5 из 5">
+            <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg>
+          </div>
+          <p class="review__text">«Домик с камином, баня в приватное время и завтрак, который приносят прямо в тёплую постель. Выехали в воскресенье поздно вечером — два дня ощущались как целая неделя отпуска».</p>
+          <footer class="review__author">
+            <span class="review__avatar" style="--av:#5E8C61">ОП</span>
+            <span><b>Ольга и Павел</b><i>пакет «Романтика»</i></span>
+          </footer>
+        </blockquote>
+
+        <blockquote class="review">
+          <div class="review__stars" aria-label="Оценка 5 из 5">
+            <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg>
+          </div>
+          <p class="review__text">«Ехали компанией из семи человек: большой дом, мангал, баня, верёвочный парк. Всё было готово к заезду — даже уголь и розжиг. Ни разу ничего не пришлось докупать, это редкость».</p>
+          <footer class="review__author">
+            <span class="review__avatar" style="--av:#E8A15C">ДК</span>
+            <span><b>Дмитрий и компания</b><i>7 друзей · пакет «Компания друзей»</i></span>
+          </footer>
+        </blockquote>
+
+        <blockquote class="review">
+          <div class="review__stars" aria-label="Оценка 5 из 5">
+            <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg>
+          </div>
+          <p class="review__text">«Сын до сих пор всем рассказывает про верёвочный парк и утку на речке. Отдельное спасибо за детский велосипед — не пришлось везти свой в багажнике. Вернёмся зимой на тюбинг!»</p>
+          <footer class="review__author">
+            <span class="review__avatar" style="--av:#D97E5D">М</span>
+            <span><b>Марина</b><i>сын 6 лет · «Домик у речки»</i></span>
+          </footer>
+        </blockquote>
+      </div>
+
+      <div class="carousel__controls">
+        <button class="carousel__btn" id="carPrev" type="button" aria-label="Предыдущий отзыв">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="carousel__dots" id="carDots"></div>
+        <button class="carousel__btn" id="carNext" type="button" aria-label="Следующий отзыв">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. CTA + ФОРМА ===== -->
+<section class="section booking" id="booking">
+  <div class="container booking__grid">
+    <div class="booking__text reveal">
+      <span class="section__tag section__tag--light">Бронирование</span>
+      <h2 class="section__title">Заезжайте в пятницу с чемоданом — всё остальное уже готово</h2>
+      <p class="section__lead">Оставьте заявку — перезвоним в течение 20 минут, подтвердим домик и ответим на вопросы. Или просто позвоните:</p>
+      <a href="tel:+79090939400" class="booking__phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+        +7 909 093-94-00
+      </a>
+      <ul class="booking__points">
+        <li>Предоплата — только после подтверждения дат</li>
+        <li>Бесплатная отмена за 5 дней до заезда</li>
+        <li>Можно с собакой — у нас своя площадка для выгула</li>
+      </ul>
+    </div>
+
+    <div class="form-card reveal" id="formCard">
+      <form class="form" id="bookForm" novalidate>
+        <h3 class="form__title">Оставить заявку</h3>
+        <label class="form__field">
+          <span>Имя</span>
+          <input type="text" name="name" id="fName" placeholder="Как к вам обращаться" autocomplete="name" required>
+        </label>
+        <label class="form__field">
+          <span>Телефон</span>
+          <input type="tel" name="phone" id="fPhone" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+        </label>
+        <div class="form__row">
+          <label class="form__field">
+            <span>Даты</span>
+            <input type="text" name="dates" id="fDates" placeholder="Например: 15–17 августа">
+          </label>
+          <label class="form__field">
+            <span>Гостей</span>
+            <select name="guests" id="fGuests">
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4" selected>4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8 и больше</option>
+            </select>
+          </label>
+        </div>
+        <label class="form__field">
+          <span>Пакет</span>
+          <select name="pack" id="fPack">
+            <option value="" selected>Ещё выбираю</option>
+            <option value="Семейные выходные">Семейные выходные</option>
+            <option value="Романтика">Романтика</option>
+            <option value="Компания друзей">Компания друзей</option>
+          </select>
+        </label>
+        <p class="form__error" id="formError" hidden>Заполните имя и телефон, чтобы мы могли перезвонить.</p>
+        <button class="btn btn--yellow btn--lg form__submit" type="submit">Забронировать выходные</button>
+        <p class="form__note">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.</p>
+      </form>
+
+      <div class="form-success" id="formSuccess" hidden>
+        <span class="form-success__check">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </span>
+        <h3>Заявка отправлена!</h3>
+        <p id="formSuccessText">Перезвоним в течение 20 минут и подтвердим бронь. Если хотите быстрее — позвоните нам: <a href="tel:+79090939400">+7 909 093-94-00</a>.</p>
+        <button class="btn btn--outline" id="formAgain" type="button">Заполнить ещё раз</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== 10. ФУТЕР ===== -->
+<footer class="footer" id="contacts">
+  <div class="container footer__grid">
+    <div class="footer__col footer__col--about">
+      <a class="logo logo--footer" href="#top">
+        <svg class="logo__mark" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+          <circle cx="30" cy="13" r="7" fill="#F2B84B"/>
+          <path d="M6 40V27l12-9 12 9v13" fill="#fff" stroke="#5E8C61" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M3 27l15-11.5L33 27" stroke="#5E8C61" stroke-width="3" stroke-linecap="round"/>
+          <rect x="15" y="30" width="6" height="10" rx="1.5" fill="#8A6D4F"/>
+        </svg>
+        <span class="logo__text">Солнечная <b>Поляна</b></span>
+      </a>
+      <p>Семейный загородный клуб в 68 км от Москвы. Выходные под ключ: домики, баня, активности для детей и родителей.</p>
+    </div>
+
+    <div class="footer__col">
+      <h4>Как нас найти</h4>
+      <p class="footer__addr">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        Московская обл., Истринский р-н,<br>дер. Лужки, ул. Речная, 3
+      </p>
+      <p>По Новорижскому шоссе 68 км от МКАД, поворот на дер. Лужки — дальше по жёлтым указателям «Солнечная Поляна». От Москвы около часа.</p>
+    </div>
+
+    <div class="footer__col">
+      <h4>Связь</h4>
+      <a class="footer__link" href="tel:+79090939400">+7 909 093-94-00</a>
+      <a class="footer__link" href="mailto:privet@polyana-club.ru">privet@polyana-club.ru</a>
+      <p>Приём звонков — ежедневно<br>с 9:00 до 21:00</p>
+    </div>
+
+    <div class="footer__col">
+      <h4>Мы в соцсетях</h4>
+      <div class="footer__socials">
+        <a href="#" aria-label="ВКонтакте" title="ВКонтакте">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.9 17.4c-5.9 0-9.3-4-9.4-10.8h3c.1 5 2.3 7.1 4 7.5V6.6h2.8v4.3c1.7-.2 3.5-2.2 4.1-4.3h2.8c-.4 2.7-2.2 4.6-3.4 5.5 1.2.6 3.2 2.4 4 5.3h-3.1c-.6-2.1-2.2-3.7-4.5-4v4Z"/></svg>
+        </a>
+        <a href="#" aria-label="Telegram" title="Telegram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 4.6 18.7 18c-.2 1-.8 1.2-1.6.8l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.5L18 7.2c.4-.3-.1-.5-.6-.2L7.2 12.7 2.8 11.3c-1-.3-1-.9.2-1.4l17-6.4c.8-.3 1.5.2 1.6 1.1Z"/></svg>
+        </a>
+        <a href="#" aria-label="YouTube" title="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12s0-3.3-.4-4.8a2.5 2.5 0 0 0-1.8-1.8C18.3 5 12 5 12 5s-6.3 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2C2 8.7 2 12 2 12s0 3.3.4 4.8c.2.9.9 1.6 1.8 1.8 1.5.4 7.8.4 7.8.4s6.3 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.5.4-4.8.4-4.8Zm-12 3.3V8.7l5.7 3.3-5.7 3.3Z"/></svg>
+        </a>
+      </div>
+      <p>Прямые эфиры из бани<br>и рецепты наших сырников</p>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <span>© 2026 Загородный клуб «Солнечная Поляна»</span>
+    <span>Демо-сайт для портфолио</span>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

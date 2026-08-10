@@ -290,4 +290,24 @@ const WORKS = [
     style: "Тёмный премиум, деликатные ткани",
     path: "furniture-cleaning/premium-care/",
   },
+
+  // --- Глэмпинг ---
+  {
+    category: "Глэмпинг",
+    title: "Nord Forest",
+    style: "Атмосферный премиум, лес и тишина",
+    path: "glamping/nord-forest/",
+  },
+  {
+    category: "Глэмпинг",
+    title: "Солнечная Поляна",
+    style: "Семейный загородный клуб",
+    path: "glamping/family-club/",
+  },
+  {
+    category: "Глэмпинг",
+    title: "ESCAPE",
+    style: "Дерзкий, молодёжный, побег из города",
+    path: "glamping/escape/",
+  },
 ];

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nord Forest — глэмпинг в сосновом лесу у озера</title>
+<meta name="description" content="Купольные домики и барнхаусы в сосновом лесу у озера. Камин, купель под открытым небом, никаких соседей. Тишину можно купить.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <a class="logo" href="#top" aria-label="Nord Forest">
+      <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M16 3 L25 19 H19 L27 29 H5 L13 19 H7 Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+        <line x1="16" y1="29" x2="16" y2="24" stroke="currentColor" stroke-width="1.4"/>
+      </svg>
+      <span class="logo__text">Nord&nbsp;Forest</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#booking" class="nav__link">Бронирование</a>
+      <a href="#houses" class="nav__link">Домики</a>
+      <a href="#included" class="nav__link">Что входит</a>
+      <a href="#atmosphere" class="nav__link">Атмосфера</a>
+      <a href="#reviews" class="nav__link">Отзывы</a>
+      <a href="#route" class="nav__link">Как добраться</a>
+    </nav>
+    <div class="header__right">
+      <a class="header__phone" href="tel:+79090939400">+7 909 093-94-00</a>
+      <a href="#booking" class="btn btn--amber btn--sm header__cta">Выбрать даты</a>
+      <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero__scene" aria-hidden="true">
+    <svg class="hero__svg" viewBox="0 0 1440 810" preserveAspectRatio="xMidYMax slice">
+      <defs>
+        <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#060d0a"/>
+          <stop offset=".55" stop-color="#0b1512"/>
+          <stop offset="1" stop-color="#12201a"/>
+        </linearGradient>
+        <linearGradient id="lakeGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#152720"/>
+          <stop offset="1" stop-color="#0a120f"/>
+        </linearGradient>
+        <radialGradient id="moonGlow" cx=".5" cy=".5" r=".5">
+          <stop offset="0" stop-color="#efeae2" stop-opacity=".9"/>
+          <stop offset=".35" stop-color="#efeae2" stop-opacity=".28"/>
+          <stop offset="1" stop-color="#efeae2" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="windowGlow" cx=".5" cy=".5" r=".5">
+          <stop offset="0" stop-color="#e8a24d" stop-opacity=".95"/>
+          <stop offset="1" stop-color="#e8a24d" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+
+      <rect width="1440" height="810" fill="url(#skyGrad)"/>
+
+      <!-- звёзды -->
+      <g id="stars" class="stars"></g>
+
+      <!-- луна -->
+      <circle cx="1140" cy="130" r="90" fill="url(#moonGlow)"/>
+      <circle cx="1140" cy="130" r="34" fill="#efeae2" opacity=".85"/>
+      <circle cx="1130" cy="122" r="6" fill="#dcd4c6" opacity=".5"/>
+      <circle cx="1152" cy="140" r="4" fill="#dcd4c6" opacity=".4"/>
+
+      <!-- дальние сосны -->
+      <g fill="#0d1814" opacity=".9" class="pines pines--far">
+        <path d="M0 620 L40 470 L80 620 Z"/><path d="M60 620 L110 430 L160 620 Z"/>
+        <path d="M140 620 L185 480 L230 620 Z"/><path d="M220 620 L275 420 L330 620 Z"/>
+        <path d="M310 620 L355 470 L400 620 Z"/><path d="M380 620 L435 440 L490 620 Z"/>
+        <path d="M470 620 L515 480 L560 620 Z"/><path d="M540 620 L595 425 L650 620 Z"/>
+        <path d="M630 620 L675 470 L720 620 Z"/><path d="M700 620 L755 435 L810 620 Z"/>
+        <path d="M790 620 L835 480 L880 620 Z"/><path d="M860 620 L915 425 L970 620 Z"/>
+        <path d="M950 620 L995 470 L1040 620 Z"/><path d="M1020 620 L1075 440 L1130 620 Z"/>
+        <path d="M1110 620 L1155 475 L1200 620 Z"/><path d="M1180 620 L1235 430 L1290 620 Z"/>
+        <path d="M1270 620 L1315 475 L1360 620 Z"/><path d="M1340 620 L1395 445 L1450 620 Z"/>
+      </g>
+
+      <!-- туман (движущиеся слои) -->
+      <g class="fog">
+        <ellipse class="fog__layer fog__layer--1" cx="360" cy="600" rx="420" ry="60" fill="#efeae2" opacity=".05"/>
+        <ellipse class="fog__layer fog__layer--2" cx="900" cy="640" rx="520" ry="70" fill="#efeae2" opacity=".07"/>
+        <ellipse class="fog__layer fog__layer--3" cx="1300" cy="580" rx="380" ry="50" fill="#efeae2" opacity=".04"/>
+      </g>
+
+      <!-- озеро -->
+      <rect x="0" y="690" width="1440" height="120" fill="url(#lakeGrad)"/>
+      <g class="lake-glints" opacity=".5">
+        <rect class="glint" x="1050" y="720" width="120" height="2" rx="1" fill="#e8a24d" opacity=".25"/>
+        <rect class="glint glint--2" x="980" y="745" width="70" height="2" rx="1" fill="#efeae2" opacity=".18"/>
+        <rect class="glint glint--3" x="1130" y="765" width="90" height="2" rx="1" fill="#e8a24d" opacity=".2"/>
+        <rect class="glint" x="300" y="735" width="80" height="2" rx="1" fill="#efeae2" opacity=".12"/>
+      </g>
+
+      <!-- купольный домик -->
+      <g class="dome-house" transform="translate(560,480)">
+        <ellipse cx="90" cy="212" rx="130" ry="14" fill="#000" opacity=".35"/>
+        <path d="M -40 210 A 130 130 0 0 1 220 210 Z" fill="#1c2b24" stroke="#2c4238" stroke-width="2"/>
+        <path d="M -40 210 A 130 130 0 0 1 220 210" fill="none" stroke="#33503f" stroke-width="1.4" opacity=".7"/>
+        <path d="M 20 210 A 130 130 0 0 1 160 210 M -10 210 A 130 130 0 0 1 190 80 M 90 210 A 60 130 0 0 1 90 80" fill="none" stroke="#33503f" stroke-width="1.2" opacity=".6"/>
+        <!-- окно с тёплым светом -->
+        <circle cx="90" cy="150" r="52" fill="url(#windowGlow)" class="window-light"/>
+        <circle cx="90" cy="150" r="30" fill="#f0b45e" class="window-core"/>
+        <circle cx="90" cy="150" r="30" fill="none" stroke="#0b1512" stroke-width="3"/>
+        <path d="M 60 150 h 60 M 90 120 v 60" stroke="#0b1512" stroke-width="3"/>
+        <!-- дверь -->
+        <path d="M 28 210 v -44 a 22 22 0 0 1 44 0 v 44 Z" fill="#101c17" stroke="#2c4238" stroke-width="1.6"/>
+        <circle cx="62" cy="190" r="2.4" fill="#e8a24d"/>
+        <!-- терраса -->
+        <rect x="-70" y="206" width="320" height="8" rx="3" fill="#26392f"/>
+        <rect x="-58" y="214" width="6" height="16" fill="#1c2b24"/>
+        <rect x="228" y="214" width="6" height="16" fill="#1c2b24"/>
+      </g>
+
+      <!-- костёр на берегу -->
+      <g class="firepit" transform="translate(880,700)">
+        <ellipse cx="0" cy="8" rx="34" ry="7" fill="#000" opacity=".4"/>
+        <circle cx="0" cy="-6" r="26" fill="url(#windowGlow)" class="fire-glow"/>
+        <path d="M -16 6 L 16 6 M -12 0 L 12 6 M 12 0 L -12 6" stroke="#3a2a18" stroke-width="4" stroke-linecap="round"/>
+        <path class="flame flame--1" d="M 0 4 C -7 -6 -4 -16 0 -24 C 4 -16 7 -6 0 4 Z" fill="#e8a24d"/>
+        <path class="flame flame--2" d="M 0 2 C -4 -4 -2 -10 0 -15 C 2 -10 4 -4 0 2 Z" fill="#f4cf8a"/>
+      </g>
+
+      <!-- передние сосны -->
+      <g fill="#08110d" class="pines pines--near">
+        <path d="M-20 810 L70 500 L160 810 Z"/><path d="M120 810 L195 560 L270 810 Z"/>
+        <path d="M1230 810 L1310 520 L1390 810 Z"/><path d="M1350 810 L1420 580 L1490 810 Z"/>
+        <path d="M380 810 L440 600 L500 810 Z" opacity=".9"/>
+      </g>
+    </svg>
+    <div class="hero__vignette"></div>
+  </div>
+
+  <div class="hero__content container">
+    <p class="hero__eyebrow reveal">Глэмпинг в сосновом лесу · Карелия</p>
+    <h1 class="hero__title reveal">Тишину можно <em>купить</em></h1>
+    <p class="hero__subtitle reveal">Купольные домики и барнхаусы у озера. Камин, купель под открытым небом, никаких соседей. Город отменяется на два дня.</p>
+    <div class="hero__actions reveal">
+      <a href="#booking" class="btn btn--amber btn--lg">Выбрать даты</a>
+      <a href="#houses" class="btn btn--ghost btn--lg">Посмотреть домики</a>
+    </div>
+    <div class="hero__meta reveal">
+      <span class="hero__meta-item">2 часа от города</span>
+      <span class="hero__meta-dot"></span>
+      <span class="hero__meta-item">7 домиков на 12 гектаров леса</span>
+      <span class="hero__meta-dot"></span>
+      <span class="hero__meta-item">Тихие часы после 23:00</span>
+    </div>
+  </div>
+
+  <a href="#booking" class="hero__scroll" aria-label="Листайте вниз">
+    <span class="hero__scroll-line"></span>
+  </a>
+</section>
+
+<!-- ============ BOOKING ============ -->
+<section class="booking section" id="booking">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="section__eyebrow">Бронирование</p>
+      <h2 class="section__title">Выберите домик и даты</h2>
+      <p class="availability" id="availability"><span class="availability__pulse"></span><span id="availabilityText">Проверяем ближайшие выходные…</span></p>
+    </div>
+
+    <div class="booking__grid reveal">
+      <div class="booking__left">
+        <!-- выбор домика -->
+        <div class="booking__step">
+          <h3 class="booking__step-title"><span class="booking__step-num">1</span> Домик</h3>
+          <div class="house-select" id="houseSelect" role="tablist" aria-label="Выбор домика"></div>
+        </div>
+
+        <!-- календарь -->
+        <div class="booking__step">
+          <h3 class="booking__step-title"><span class="booking__step-num">2</span> Даты <span class="booking__hint">— выберите заезд и выезд</span></h3>
+          <div class="calendar" id="calendar"></div>
+          <div class="calendar__legend">
+            <span><i class="dot dot--free"></i>свободно</span>
+            <span><i class="dot dot--selected"></i>ваши ночи</span>
+            <span><i class="dot dot--busy"></i>занято</span>
+          </div>
+        </div>
+
+        <!-- гости -->
+        <div class="booking__step">
+          <h3 class="booking__step-title"><span class="booking__step-num">3</span> Гости</h3>
+          <div class="guests" id="guests">
+            <button class="guests__btn" data-dir="-1" aria-label="Меньше гостей">−</button>
+            <div class="guests__value"><strong id="guestsCount">2</strong><span id="guestsLabel">гостя</span></div>
+            <button class="guests__btn" data-dir="1" aria-label="Больше гостей">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- итог -->
+      <aside class="booking__summary">
+        <div class="summary-card" id="summaryCard">
+          <h3 class="summary-card__title">Ваша перезагрузка</h3>
+          <dl class="summary-card__rows">
+            <div class="summary-card__row"><dt>Домик</dt><dd id="sumHouse">—</dd></div>
+            <div class="summary-card__row"><dt>Заезд</dt><dd id="sumCheckin">—</dd></div>
+            <div class="summary-card__row"><dt>Выезд</dt><dd id="sumCheckout">—</dd></div>
+            <div class="summary-card__row"><dt>Гости</dt><dd id="sumGuests">2 гостя</dd></div>
+            <div class="summary-card__row summary-card__row--calc"><dt id="sumCalc">Выберите даты</dt><dd id="sumTotal">—</dd></div>
+          </dl>
+          <div class="summary-card__breakdown" id="sumBreakdown" hidden></div>
+          <button class="btn btn--amber btn--block" id="bookBtn" disabled>Забронировать</button>
+          <p class="summary-card__note">Предоплата не нужна — платите при заезде. Бесплатная отмена за 5 дней.</p>
+        </div>
+
+        <!-- экран успеха -->
+        <div class="success-card" id="successCard" hidden>
+          <svg class="success-card__icon" viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M20 33 L28.5 41.5 L45 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3 class="success-card__title">Домик забронирован</h3>
+          <p class="success-card__text" id="successText"></p>
+          <p class="success-card__sub">Мы позвоним в течение часа, чтобы подтвердить детали. Если хотите быстрее — позвоните сами: <a href="tel:+79090939400">+7 909 093-94-00</a></p>
+          <button class="btn btn--ghost btn--block" id="successReset">Выбрать другие даты</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOUSES ============ -->
+<section class="houses section" id="houses">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="section__eyebrow">Домики</p>
+      <h2 class="section__title">Три способа молчать</h2>
+      <p class="section__lead">Каждый домик стоит так, чтобы из окна не было видно других гостей — только сосны, озеро и небо.</p>
+    </div>
+
+    <div class="houses__grid">
+      <article class="house-card reveal">
+        <div class="house-card__art house-card__art--dome">
+          <svg viewBox="0 0 400 240" aria-hidden="true">
+            <rect width="400" height="240" fill="#0b1512"/>
+            <circle cx="330" cy="45" r="40" fill="#efeae2" opacity=".08"/>
+            <circle cx="330" cy="45" r="16" fill="#efeae2" opacity=".7"/>
+            <g fill="#efeae2" opacity=".5"><circle cx="60" cy="40" r="1.4"/><circle cx="120" cy="70" r="1"/><circle cx="180" cy="30" r="1.2"/><circle cx="250" cy="60" r="1"/><circle cx="90" cy="100" r="1"/></g>
+            <g fill="#0d1814"><path d="M-10 240 L35 120 L80 240 Z"/><path d="M320 240 L365 110 L410 240 Z"/></g>
+            <ellipse cx="200" cy="215" rx="120" ry="40" fill="#101c17"/>
+            <path d="M110 205 A 90 90 0 0 1 290 205 Z" fill="#1c2b24" stroke="#2c4238" stroke-width="2"/>
+            <path d="M140 205 A 90 90 0 0 1 260 205 M 200 205 A 45 90 0 0 1 200 115" fill="none" stroke="#33503f" stroke-width="1.2" opacity=".7"/>
+            <circle cx="200" cy="165" r="34" fill="#e8a24d" opacity=".18" class="art-glow"/>
+            <circle cx="200" cy="165" r="20" fill="#f0b45e"/>
+            <path d="M180 165 h40 M200 145 v40" stroke="#0b1512" stroke-width="2.6"/>
+          </svg>
+        </div>
+        <div class="house-card__body">
+          <h3 class="house-card__name">Купол у озера</h3>
+          <p class="house-card__feat">Панорамная крыша для звёзд и первый береговой ряд</p>
+          <ul class="house-card__specs">
+            <li>2 гостя</li><li>32 м²</li><li>Купель на дровах</li>
+          </ul>
+          <div class="house-card__foot">
+            <span class="house-card__price">от 14 000 ₽<small>/ночь</small></span>
+            <button class="btn btn--ghost btn--sm house-card__btn" data-house="lake">Выбрать</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="house-card reveal">
+        <div class="house-card__art house-card__art--barn">
+          <svg viewBox="0 0 400 240" aria-hidden="true">
+            <rect width="400" height="240" fill="#0b1512"/>
+            <g fill="#efeae2" opacity=".5"><circle cx="50" cy="50" r="1.2"/><circle cx="140" cy="35" r="1"/><circle cx="230" cy="65" r="1.3"/><circle cx="310" cy="40" r="1"/><circle cx="360" cy="80" r="1.1"/></g>
+            <g fill="#0d1814"><path d="M-10 240 L30 130 L70 240 Z"/><path d="M340 240 L380 120 L420 240 Z"/><path d="M60 240 L95 145 L130 240 Z"/></g>
+            <ellipse cx="200" cy="218" rx="130" ry="36" fill="#101c17"/>
+            <path d="M130 205 V 140 L 200 95 L 270 140 V 205 Z" fill="#221a10" stroke="#3a2f1e" stroke-width="2"/>
+            <path d="M120 142 L 200 92 L 280 142" fill="none" stroke="#3a2f1e" stroke-width="4"/>
+            <rect x="185" y="160" width="30" height="45" fill="#101c17" stroke="#3a2f1e" stroke-width="1.6"/>
+            <rect x="145" y="150" width="24" height="22" fill="#f0b45e" class="art-window"/>
+            <rect x="231" y="150" width="24" height="22" fill="#f0b45e" class="art-window"/>
+            <path d="M145 161 h24 M157 150 v22 M231 161 h24 M243 150 v22" stroke="#221a10" stroke-width="2"/>
+            <path d="M238 118 v-18 h14 v16" fill="none" stroke="#3a2f1e" stroke-width="3"/>
+            <circle cx="245" cy="94" r="4" fill="#efeae2" opacity=".25" class="art-smoke"/>
+          </svg>
+        </div>
+        <div class="house-card__body">
+          <h3 class="house-card__name">Барнхаус в лесу</h3>
+          <p class="house-card__feat">Камин на дровах, второй свет и вид на вековые сосны</p>
+          <ul class="house-card__specs">
+            <li>4 гостя</li><li>56 м²</li><li>Баня рядом</li>
+          </ul>
+          <div class="house-card__foot">
+            <span class="house-card__price">от 18 000 ₽<small>/ночь</small></span>
+            <button class="btn btn--ghost btn--sm house-card__btn" data-house="barn">Выбрать</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="house-card reveal">
+        <div class="house-card__art house-card__art--hill">
+          <svg viewBox="0 0 400 240" aria-hidden="true">
+            <rect width="400" height="240" fill="#0b1512"/>
+            <g fill="#efeae2" opacity=".55"><circle cx="70" cy="45" r="1.4"/><circle cx="150" cy="70" r="1"/><circle cx="210" cy="35" r="1.2"/><circle cx="290" cy="55" r="1"/><circle cx="350" cy="30" r="1.3"/><circle cx="110" cy="95" r="1"/></g>
+            <path d="M0 240 Q 200 150 400 240 Z" fill="#101c17"/>
+            <g fill="#0d1814"><path d="M30 240 L65 150 L100 240 Z"/><path d="M300 240 L335 155 L370 240 Z"/></g>
+            <path d="M130 200 A 70 70 0 0 1 270 200 Z" fill="#1c2b24" stroke="#2c4238" stroke-width="2"/>
+            <path d="M200 200 A 70 70 0 0 1 200 130 M 155 200 A 70 70 0 0 1 245 165" fill="none" stroke="#33503f" stroke-width="1.2" opacity=".7"/>
+            <circle cx="200" cy="172" r="30" fill="#e8a24d" opacity=".16" class="art-glow"/>
+            <rect x="176" y="152" width="48" height="34" rx="4" fill="#f0b45e"/>
+            <path d="M176 169 h48 M200 152 v34" stroke="#0b1512" stroke-width="2.4"/>
+            <path d="M262 200 q 20 -26 44 -30" fill="none" stroke="#e8a24d" stroke-width="2" opacity=".5" stroke-dasharray="2 5"/>
+          </svg>
+        </div>
+        <div class="house-card__body">
+          <h3 class="house-card__name">Купол на холме</h3>
+          <p class="house-card__feat">Самый высокий домик — рассвет над озером прямо из кровати</p>
+          <ul class="house-card__specs">
+            <li>3 гостя</li><li>38 м²</li><li>Терраса с мангалью</li>
+          </ul>
+          <div class="house-card__foot">
+            <span class="house-card__price">от 16 000 ₽<small>/ночь</small></span>
+            <button class="btn btn--ghost btn--sm house-card__btn" data-house="hill">Выбрать</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INCLUDED ============ -->
+<section class="included section" id="included">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="section__eyebrow">Что входит</p>
+      <h2 class="section__title">Всё уже ждёт вас</h2>
+    </div>
+    <div class="included__grid">
+      <div class="included__item reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="14" width="32" height="26" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M24 34 c-4 -5 -2 -9 0 -13 c2 4 4 8 0 13 Z" fill="#E8A24D"/><path d="M14 40 h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <h3>Камин и дрова</h3>
+        <p>Неограниченная поленница и растопка к вашему заезду</p>
+      </div>
+      <div class="included__item reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="30" rx="16" ry="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 30 v6 c0 4 7 8 16 8 s16 -4 16 -8 v-6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M18 18 c0 -4 3 -4 3 -8 M27 18 c0 -4 3 -4 3 -8" fill="none" stroke="#E8A24D" stroke-width="2" stroke-linecap="round"/></svg>
+        <h3>Купель под небом</h3>
+        <p>Горячая купель на дровах у каждого домика</p>
+      </div>
+      <div class="included__item reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 22 h28 l-4 10 h-20 Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14 32 l-4 10 M34 32 l4 10 M24 32 v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16 q2 -4 0 -8 M24 16 q2 -4 0 -8 M32 16 q2 -4 0 -8" fill="none" stroke="#E8A24D" stroke-width="2" stroke-linecap="round"/></svg>
+        <h3>Мангальная зона</h3>
+        <p>Угли, решётки, шампуры и специи — только берите мясо</p>
+      </div>
+      <div class="included__item reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 30 a14 10 0 0 1 28 0" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 30 h32 M24 20 v-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="12" r="2.4" fill="#E8A24D"/><path d="M14 38 h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <h3>Завтрак в домик</h3>
+        <p>Корзина с фермерским завтраком к двери к 9:00</p>
+      </div>
+      <div class="included__item reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 40 v-20 l12 -9 l12 9 v20" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 40 v-12 h8 v12" fill="none" stroke="currentColor" stroke-width="2"/><path d="M33 12 c3 -3 3 -6 1 -9" fill="none" stroke="#E8A24D" stroke-width="2" stroke-linecap="round"/></svg>
+        <h3>Баня</h3>
+        <p>Дровяная баня у озера — 2 часа в каждый день заезда</p>
+      </div>
+      <div class="included__item reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 34 q16 -10 32 0 q-16 8 -32 0 Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M24 12 v18" stroke="#E8A24D" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="10" r="2.5" fill="#E8A24D"/></svg>
+        <h3>Сапборды</h3>
+        <p>Доски и вёсла на берегу — выход на рассвете бесценен</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ATMOSPHERE SLIDER ============ -->
+<section class="atmosphere section" id="atmosphere">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="section__eyebrow">Атмосфера</p>
+      <h2 class="section__title">Один день из тишины</h2>
+    </div>
+  </div>
+  <div class="slider reveal" id="slider">
+    <div class="slider__track" id="sliderTrack">
+      <figure class="slide" data-scene="morning">
+        <div class="slide__scene slide__scene--morning">
+          <div class="parallax" data-depth="0.05"><div class="scene-sun"></div></div>
+          <div class="parallax" data-depth="0.12"><div class="scene-fog scene-fog--a"></div></div>
+          <div class="parallax" data-depth="0.2"><div class="scene-fog scene-fog--b"></div><div class="scene-pines"></div></div>
+        </div>
+        <figcaption><span class="slide__num">01</span><h3>Утро в тумане</h3><p>Озеро дымится, лес просыпается — и никаких будильников</p></figcaption>
+      </figure>
+      <figure class="slide" data-scene="tub">
+        <div class="slide__scene slide__scene--tub">
+          <div class="parallax" data-depth="0.05"><div class="scene-stars"></div></div>
+          <div class="parallax" data-depth="0.14"><div class="scene-tub"></div></div>
+          <div class="parallax" data-depth="0.22"><div class="scene-steam"></div></div>
+        </div>
+        <figcaption><span class="slide__num">02</span><h3>Купель под звёздами</h3><p>+38° в воде, −5° снаружи и млечный путь над головой</p></figcaption>
+      </figure>
+      <figure class="slide" data-scene="breakfast">
+        <div class="slide__scene slide__scene--breakfast">
+          <div class="parallax" data-depth="0.05"><div class="scene-glow"></div></div>
+          <div class="parallax" data-depth="0.14"><div class="scene-table"></div></div>
+          <div class="parallax" data-depth="0.22"><div class="scene-pines scene-pines--light"></div></div>
+        </div>
+        <figcaption><span class="slide__num">03</span><h3>Завтрак на террасе</h3><p>Корзина у двери: сырники, фермерский сыр, кофе в турке</p></figcaption>
+      </figure>
+      <figure class="slide" data-scene="fire">
+        <div class="slide__scene slide__scene--fire">
+          <div class="parallax" data-depth="0.05"><div class="scene-stars scene-stars--sparse"></div></div>
+          <div class="parallax" data-depth="0.14"><div class="scene-firelight"></div></div>
+          <div class="parallax" data-depth="0.22"><div class="scene-fire"></div></div>
+        </div>
+        <figcaption><span class="slide__num">04</span><h3>Костёр вечером</h3><p>Треск дров, тёплый плед и разговоры до полуночи</p></figcaption>
+      </figure>
+    </div>
+    <div class="slider__controls container">
+      <button class="slider__arrow" id="slidePrev" aria-label="Назад">←</button>
+      <div class="slider__dots" id="sliderDots"></div>
+      <button class="slider__arrow" id="slideNext" aria-label="Вперёд">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="reviews section" id="reviews">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="section__eyebrow">Отзывы</p>
+      <h2 class="section__title">Говорят те, кто перезагрузился</h2>
+    </div>
+    <div class="reviews__carousel reveal" id="reviewsCarousel">
+      <button class="reviews__arrow" id="revPrev" aria-label="Предыдущий отзыв">←</button>
+      <div class="reviews__viewport">
+        <blockquote class="review" id="reviewCard">
+          <p class="review__text" id="reviewText"></p>
+          <footer class="review__foot">
+            <span class="review__author" id="reviewAuthor"></span>
+            <span class="review__meta" id="reviewMeta"></span>
+          </footer>
+          <div class="review__stars" aria-label="5 из 5">★★★★★</div>
+        </blockquote>
+      </div>
+      <button class="reviews__arrow" id="revNext" aria-label="Следующий отзыв">→</button>
+    </div>
+    <div class="reviews__dots" id="reviewDots"></div>
+  </div>
+</section>
+
+<!-- ============ ROUTE ============ -->
+<section class="route section" id="route">
+  <div class="container route__grid">
+    <div class="route__info reveal">
+      <p class="section__eyebrow">Как добраться</p>
+      <h2 class="section__title">2 часа — и город отменяется</h2>
+      <p class="section__lead">От города — по трассе М-18, затем 8 километров лесной дороги. Дорогу чистим круглый год, встретим у поворота, если заблудитесь.</p>
+      <ul class="route__list">
+        <li><strong>На машине:</strong> 140 км по М-18, навигатор «Nord Forest» — доведёт до ворот</li>
+        <li><strong>Трансфер по запросу:</strong> заберём от дома на комфортабельном минивэне, 3 500 ₽ в одну сторону</li>
+        <li><strong>На поезде:</strong> до станции Лодейное Поле, дальше наш трансфер 25 минут</li>
+      </ul>
+      <a class="btn btn--amber" href="tel:+79090939400">Заказать трансфер</a>
+    </div>
+    <div class="route__map reveal">
+      <svg viewBox="0 0 520 420" aria-label="Стилизованная карта">
+        <rect width="520" height="420" rx="18" fill="#0b1512"/>
+        <g fill="#0f1d17">
+          <path d="M-10 0 L40 90 L90 0 Z"/><path d="M60 0 L115 105 L170 0 Z"/><path d="M140 0 L195 95 L250 0 Z"/>
+          <path d="M230 0 L285 100 L340 0 Z"/><path d="M330 0 L385 95 L440 0 Z"/><path d="M430 0 L485 100 L540 0 Z"/>
+        </g>
+        <path d="M0 340 Q 120 300 200 330 T 400 320 Q 470 315 520 335 L 520 420 L 0 420 Z" fill="#122a22"/>
+        <path d="M0 348 Q 120 308 200 338 T 400 328 Q 470 323 520 343" fill="none" stroke="#2a5243" stroke-width="2" opacity=".6"/>
+        <!-- дорога -->
+        <path id="routePath" d="M60 385 C 130 340 150 300 230 275 S 380 220 430 130" fill="none" stroke="#E8A24D" stroke-width="3" stroke-dasharray="10 8" stroke-linecap="round"/>
+        <circle class="route__car" id="routeCar" r="6" fill="#EFEAE2"/>
+        <!-- город -->
+        <g transform="translate(60,385)">
+          <circle r="10" fill="none" stroke="#EFEAE2" stroke-width="2"/>
+          <text y="34" text-anchor="middle" fill="#EFEAE2" font-size="14" font-family="Manrope,sans-serif" opacity=".8">Город</text>
+        </g>
+        <!-- глэмпинг -->
+        <g transform="translate(430,130)">
+          <circle r="22" fill="#E8A24D" opacity=".18"><animate attributeName="r" values="18;26;18" dur="3s" repeatCount="indefinite"/></circle>
+          <path d="M-8 8 L0 -8 L8 8 Z" fill="#E8A24D"/>
+          <rect x="-2" y="8" width="4" height="6" fill="#E8A24D"/>
+          <text y="40" text-anchor="middle" fill="#EFEAE2" font-size="14" font-family="Manrope,sans-serif">Nord Forest</text>
+        </g>
+        <!-- компас -->
+        <g transform="translate(470,60)" opacity=".7">
+          <circle r="18" fill="none" stroke="#EFEAE2" stroke-width="1.2"/>
+          <path d="M0 -12 L4 4 L0 1 L-4 4 Z" fill="#E8A24D"/>
+          <text y="-24" text-anchor="middle" fill="#EFEAE2" font-size="12" font-family="Manrope,sans-serif">С</text>
+        </g>
+      </svg>
+      <p class="route__map-caption">Ладожское озеро — 400 метров от ближайшего купола</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final-cta section">
+  <div class="container">
+    <div class="final-cta__box reveal">
+      <div class="final-cta__glow" aria-hidden="true"></div>
+      <div class="final-cta__content">
+        <h2 class="final-cta__title">Ближайшая тишина — уже в эти выходные</h2>
+        <p class="final-cta__text">Проверьте свободные даты — это займёт три клика. Или просто позвоните, подберём домик вместе.</p>
+        <div class="final-cta__actions">
+          <a href="#booking" class="btn btn--amber btn--lg">Выбрать даты</a>
+          <a href="tel:+79090939400" class="btn btn--ghost btn--lg">+7 909 093-94-00</a>
+        </div>
+      </div>
+      <div class="final-cta__dates" id="quickDates" aria-label="Ближайшие свободные окна"></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__col">
+      <a class="logo logo--footer" href="#top">
+        <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M16 3 L25 19 H19 L27 29 H5 L13 19 H7 Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+          <line x1="16" y1="29" x2="16" y2="24" stroke="currentColor" stroke-width="1.4"/>
+        </svg>
+        <span class="logo__text">Nord&nbsp;Forest</span>
+      </a>
+      <p class="footer__tag">Тишину можно купить. Хотя бы на два дня.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Контакты</h4>
+      <p>Ленинградская область,<br>Подпорожский район, урочище Сосновый Мыс</p>
+      <a href="tel:+79090939400">+7 909 093-94-00</a>
+    </div>
+    <div class="footer__col">
+      <h4>Мы на связи</h4>
+      <div class="footer__socials">
+        <a href="#" aria-label="Telegram" title="Telegram"><svg viewBox="0 0 24 24"><path d="M21 4 L3 11.5 L9 13.5 L10.5 20 L13.5 15.5 L18 18 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></a>
+        <a href="#" aria-label="VK" title="VK"><svg viewBox="0 0 24 24"><path d="M4 7 h3 c0 5 2.5 7 4 7.5 V7 h3 v4.5 c1.8 -0.5 3.5 -2.5 4 -4.5 h3 c-0.6 2.8 -2.6 5 -4 5.8 c1.6 0.8 3.8 3 4.5 6.2 h-3.2 c-0.6 -2.2 -2.2 -4 -4.3 -4.7 V19 h-3 c-4 0 -7.5 -6 -8 -12 Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></a>
+        <a href="#" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 3 a9 9 0 0 0 -7.8 13.5 L3 21 l4.6 -1.2 A9 9 0 1 0 12 3 Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 8.5 c0 4 2.5 6.5 6.5 6.5 l0.5 -2 l-2.5 -1 l-1 1 c-1.2 -0.6 -2 -1.4 -2.5 -2.5 l1 -1 l-1 -2.5 Z" fill="currentColor"/></svg></a>
+      </div>
+    </div>
+    <div class="footer__col">
+      <h4>Тихие часы</h4>
+      <p>После 23:00 на территории — тишина. Мы бережём главный продукт: звук леса и воды.</p>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <span>© 2026 Nord Forest. Демо-проект портфолио.</span>
+    <span>Сделано в сосновом лесу</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

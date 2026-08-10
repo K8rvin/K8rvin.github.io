@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESCAPE — глэмпинг в 90 минутах от города | Город на паузе</title>
+<meta name="description" content="Молодёжный глэмпинг ESCAPE: купола, костёр, баня на дровах, винил и сапы. Собери побег из города за 3 клика.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Manrope:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🔥</text></svg>">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="#hero" class="logo">ESCAPE<span class="logo-star">*</span></a>
+    <nav class="nav" id="nav">
+      <a href="#quiz" class="nav-link">Квиз</a>
+      <a href="#houses" class="nav-link">Домики</a>
+      <a href="#booking" class="nav-link">Бронь</a>
+      <a href="#vibe" class="nav-link">Вайб</a>
+      <a href="#events" class="nav-link">События</a>
+      <a href="#reviews" class="nav-link">Отзывы</a>
+    </nav>
+    <a href="tel:+79090939400" class="btn btn-small btn-lime header-phone">
+      <svg viewBox="0 0 24 24" class="ic"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z" fill="currentColor"/></svg>
+      +7 909 093-94-00
+    </a>
+    <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <a href="#quiz" class="mm-link">Квиз</a>
+    <a href="#houses" class="mm-link">Домики</a>
+    <a href="#booking" class="mm-link">Бронь</a>
+    <a href="#vibe" class="mm-link">Вайб</a>
+    <a href="#events" class="mm-link">События</a>
+    <a href="#reviews" class="mm-link">Отзывы</a>
+    <a href="tel:+79090939400" class="btn btn-lime mm-phone">Позвонить: +7 909 093-94-00</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ===== 1. HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero-stars" aria-hidden="true">
+    <span class="st s1"></span><span class="st s2"></span><span class="st s3"></span><span class="st s4"></span>
+    <span class="st s5"></span><span class="st s6"></span><span class="st s7"></span><span class="st s8"></span>
+  </div>
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <div class="hero-stickers" aria-hidden="true">
+        <span class="sticker st-lime rot-l">без дресс-кода</span>
+        <span class="sticker st-pink rot-r">с собаками можно</span>
+        <span class="sticker st-orange rot-l2">заезд в пт до ночи</span>
+      </div>
+      <h1 class="hero-title">ГОРОД<br>НА <span class="hl">ПАУЗЕ</span></h1>
+      <p class="hero-sub">Глэмпинг в 90 минутах от города. Купола, костёр, баня на дровах, свои люди.</p>
+      <div class="hero-cta">
+        <a href="#quiz" class="btn btn-lime btn-big">
+          Собрать выходные
+          <svg viewBox="0 0 24 24" class="ic"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#houses" class="btn btn-ghost">Смотреть домики</a>
+      </div>
+      <p class="hero-note">Бронь с телефона — 3 клика. Заехать можно уже в эту пятницу.</p>
+    </div>
+
+    <div class="hero-scene" aria-hidden="true">
+      <svg class="scene" viewBox="0 0 640 460" preserveAspectRatio="xMidYMax meet">
+        <defs>
+          <radialGradient id="fireGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#FF7A29" stop-opacity=".55"/>
+            <stop offset="55%" stop-color="#FF7A29" stop-opacity=".18"/>
+            <stop offset="100%" stop-color="#FF7A29" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="domeGlow" cx="50%" cy="80%" r="70%">
+            <stop offset="0%" stop-color="#C6F24E" stop-opacity=".5"/>
+            <stop offset="100%" stop-color="#C6F24E" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="domeBody" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#2B1D45"/>
+            <stop offset="100%" stop-color="#1B1230"/>
+          </linearGradient>
+        </defs>
+
+        <!-- звёзды -->
+        <g class="stars">
+          <circle class="tw t1" cx="60" cy="50" r="2.4" fill="#fff"/>
+          <circle class="tw t2" cx="150" cy="26" r="1.7" fill="#fff"/>
+          <circle class="tw t3" cx="250" cy="66" r="2.1" fill="#C6F24E"/>
+          <circle class="tw t1" cx="340" cy="30" r="1.6" fill="#fff"/>
+          <circle class="tw t2" cx="430" cy="60" r="2.2" fill="#fff"/>
+          <circle class="tw t3" cx="540" cy="36" r="1.8" fill="#FF4DA6"/>
+          <circle class="tw t1" cx="600" cy="90" r="1.5" fill="#fff"/>
+          <circle class="tw t2" cx="40" cy="120" r="1.5" fill="#fff"/>
+        </g>
+
+        <!-- луна -->
+        <g class="moon">
+          <circle cx="545" cy="88" r="30" fill="#F2ECDC"/>
+          <circle cx="534" cy="80" r="26" fill="#150E21"/>
+        </g>
+
+        <!-- гирлянда -->
+        <g class="garland">
+          <path d="M10 36 Q 320 150 630 30" fill="none" stroke="#43315F" stroke-width="3"/>
+          <circle class="bulb b1" cx="72" cy="62" r="7"/>
+          <circle class="bulb b2" cx="150" cy="82" r="7"/>
+          <circle class="bulb b3" cx="232" cy="95" r="7"/>
+          <circle class="bulb b1" cx="318" cy="96" r="7"/>
+          <circle class="bulb b2" cx="404" cy="88" r="7"/>
+          <circle class="bulb b3" cx="488" cy="72" r="7"/>
+          <circle class="bulb b1" cx="566" cy="52" r="7"/>
+        </g>
+
+        <!-- земля -->
+        <path d="M0 380 Q 160 336 330 364 T 640 352 V 460 H 0 Z" fill="#0E0918"/>
+        <path d="M0 404 Q 200 380 400 398 T 640 390 V 460 H 0 Z" fill="#0A0613"/>
+
+        <!-- купол большой -->
+        <g class="dome" transform="translate(78,232)">
+          <ellipse cx="88" cy="150" rx="120" ry="26" fill="#0A0613"/>
+          <path d="M8 150 A 80 80 0 0 1 168 150 Z" fill="url(#domeBody)" stroke="#0B0712" stroke-width="5"/>
+          <path d="M8 150 A 80 80 0 0 1 168 150" fill="none" stroke="#3A2960" stroke-width="2"/>
+          <path d="M48 150 A 40 40 0 0 1 128 150" fill="none" stroke="#3A2960" stroke-width="2"/>
+          <line x1="88" y1="70" x2="88" y2="150" stroke="#3A2960" stroke-width="2"/>
+          <path class="door-glow" d="M66 150 a 22 26 0 0 1 44 0 Z" fill="#C6F24E"/>
+          <path d="M66 150 a 22 26 0 0 1 44 0 Z" fill="none" stroke="#0B0712" stroke-width="4"/>
+          <ellipse class="dome-light" cx="88" cy="152" rx="60" ry="14" fill="url(#domeGlow)"/>
+        </g>
+
+        <!-- купол маленький -->
+        <g class="dome" transform="translate(470,262)">
+          <ellipse cx="62" cy="112" rx="88" ry="20" fill="#0A0613"/>
+          <path d="M6 112 A 56 56 0 0 1 118 112 Z" fill="url(#domeBody)" stroke="#0B0712" stroke-width="5"/>
+          <path class="door-glow d2" d="M46 112 a 16 19 0 0 1 32 0 Z" fill="#FF4DA6"/>
+          <path d="M46 112 a 16 19 0 0 1 32 0 Z" fill="none" stroke="#0B0712" stroke-width="4"/>
+        </g>
+
+        <!-- шалаш -->
+        <g class="tent" transform="translate(268,300)">
+          <path d="M4 84 L52 6 L100 84 Z" fill="#231739" stroke="#0B0712" stroke-width="5" stroke-linejoin="round"/>
+          <path class="door-glow d3" d="M40 84 L52 58 L64 84 Z" fill="#FFB347"/>
+          <path d="M40 84 L52 58 L64 84 Z" fill="none" stroke="#0B0712" stroke-width="3"/>
+        </g>
+
+        <!-- костёр -->
+        <g class="fire" transform="translate(386,362)">
+          <circle class="fire-halo" cx="0" cy="-20" r="95" fill="url(#fireGlow)"/>
+          <g class="smokes">
+            <circle class="smoke sm1" cx="0" cy="-96" r="10"/>
+            <circle class="smoke sm2" cx="6" cy="-110" r="8"/>
+            <circle class="smoke sm3" cx="-6" cy="-104" r="7"/>
+          </g>
+          <g class="sparks">
+            <circle class="spark sp1" cx="-8" cy="-30" r="2.6" fill="#FFE66D"/>
+            <circle class="spark sp2" cx="6" cy="-26" r="2.2" fill="#FF7A29"/>
+            <circle class="spark sp3" cx="0" cy="-36" r="2" fill="#FFE66D"/>
+            <circle class="spark sp4" cx="12" cy="-22" r="1.8" fill="#FF4DA6"/>
+            <circle class="spark sp5" cx="-14" cy="-24" r="2" fill="#FFB347"/>
+          </g>
+          <g class="logs">
+            <rect x="-34" y="-10" width="68" height="12" rx="6" fill="#6B3B1E" stroke="#0B0712" stroke-width="3" transform="rotate(10)"/>
+            <rect x="-34" y="-10" width="68" height="12" rx="6" fill="#7A4622" stroke="#0B0712" stroke-width="3" transform="rotate(-12)"/>
+          </g>
+          <g class="flames">
+            <path class="flame f1" d="M0 -8 C -30 -26 -24 -64 0 -88 C 24 -64 30 -26 0 -8 Z" fill="#FF7A29"/>
+            <path class="flame f2" d="M0 -8 C -20 -24 -15 -50 0 -66 C 15 -50 20 -24 0 -8 Z" fill="#FFB347"/>
+            <path class="flame f3" d="M0 -8 C -11 -20 -8 -36 0 -46 C 8 -36 11 -20 0 -8 Z" fill="#FFE66D"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2. БЕГУЩАЯ СТРОКА ===== -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-chunk">КУПОЛА&nbsp;&nbsp;•&nbsp;&nbsp;КОСТЁР&nbsp;&nbsp;•&nbsp;&nbsp;БАНЯ&nbsp;&nbsp;•&nbsp;&nbsp;ВИНИЛ&nbsp;&nbsp;•&nbsp;&nbsp;САПЫ&nbsp;&nbsp;•&nbsp;&nbsp;КИНО ПОД ЗВЁЗДАМИ&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+    <span class="marquee-chunk">КУПОЛА&nbsp;&nbsp;•&nbsp;&nbsp;КОСТЁР&nbsp;&nbsp;•&nbsp;&nbsp;БАНЯ&nbsp;&nbsp;•&nbsp;&nbsp;ВИНИЛ&nbsp;&nbsp;•&nbsp;&nbsp;САПЫ&nbsp;&nbsp;•&nbsp;&nbsp;КИНО ПОД ЗВЁЗДАМИ&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+  </div>
+</div>
+
+<!-- ===== 3. КВИЗ ===== -->
+<section class="section quiz-section" id="quiz">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="tag tag-pink">квиз за 20 секунд</span>
+      <h2 class="section-title">СОБЕРИ СВОЙ <span class="hl">ПОБЕГ</span></h2>
+      <p class="section-sub">Три вопроса — и мы скажем, какой купол твой и что делать у костра.</p>
+    </div>
+
+    <div class="quiz-card reveal">
+      <div class="quiz-top">
+        <div class="quiz-progress-label" id="quizStepLabel">Вопрос 1 из 3</div>
+        <div class="quiz-bar"><div class="quiz-bar-fill" id="quizBarFill"></div></div>
+      </div>
+
+      <div class="quiz-body" id="quizBody">
+        <h3 class="quiz-question" id="quizQuestion">Кто едет?</h3>
+        <div class="quiz-options" id="quizOptions"></div>
+      </div>
+
+      <div class="quiz-loading" id="quizLoading" hidden>
+        <div class="quiz-spinner"></div>
+        <p class="quiz-loading-text">Собираем твой вайб<span class="dots"><i>.</i><i>.</i><i>.</i></span></p>
+      </div>
+
+      <div class="quiz-result" id="quizResult" hidden>
+        <div class="quiz-burst" id="quizBurst" aria-hidden="true"></div>
+        <span class="tag tag-lime">твой побег готов</span>
+        <h3 class="quiz-result-title" id="qrTitle">Купол с купелью</h3>
+        <p class="quiz-result-sub" id="qrSub"></p>
+        <ul class="quiz-program" id="qrProgram"></ul>
+        <div class="quiz-result-foot">
+          <div class="quiz-price" id="qrPrice"></div>
+          <div class="quiz-result-actions">
+            <button class="btn btn-lime" id="qrBook">Это моё — забронировать</button>
+            <button class="btn btn-ghost btn-small" id="qrRestart">Пройти заново</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 4. ДОМИКИ ===== -->
+<section class="section" id="houses">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="tag tag-orange">4 слота на выбор</span>
+      <h2 class="section-title">ГДЕ БУДЕШЬ <span class="hl">СПАТЬ</span><span class="title-note">(если вообще будешь)</span></h2>
+    </div>
+
+    <div class="houses-grid">
+      <article class="house-card reveal">
+        <div class="house-window">
+          <svg viewBox="0 0 120 90" class="house-ic">
+            <path d="M14 78 A 46 46 0 0 1 106 78 Z" fill="#2B1D45" stroke="#0B0712" stroke-width="5"/>
+            <path d="M46 78 a 14 17 0 0 1 28 0 Z" fill="#C6F24E" stroke="#0B0712" stroke-width="4"/>
+            <circle class="tw t1" cx="24" cy="18" r="3" fill="#fff"/>
+            <circle class="tw t2" cx="92" cy="12" r="2.4" fill="#C6F24E"/>
+          </svg>
+          <span class="price-tag rot-r">6 900 ₽/ночь</span>
+        </div>
+        <h3 class="house-name">Купол Стандарт</h3>
+        <p class="house-feature">Панорамное окно на звёзды — засыпаешь под Млечный Путь.</p>
+        <ul class="house-meta">
+          <li>2 гостя</li>
+          <li>Пледы и обогрев</li>
+          <li>Завтрак в купол</li>
+        </ul>
+        <button class="btn btn-ghost house-pick" data-house="standart">Выбрать слот</button>
+      </article>
+
+      <article class="house-card reveal hot">
+        <span class="hot-badge rot-l">хит выходных</span>
+        <div class="house-window">
+          <svg viewBox="0 0 120 90" class="house-ic">
+            <path d="M14 78 A 46 46 0 0 1 106 78 Z" fill="#2B1D45" stroke="#0B0712" stroke-width="5"/>
+            <path d="M46 78 a 14 17 0 0 1 28 0 Z" fill="#FF4DA6" stroke="#0B0712" stroke-width="4"/>
+            <ellipse cx="98" cy="72" rx="16" ry="8" fill="#7A4622" stroke="#0B0712" stroke-width="4"/>
+            <path class="steam" d="M92 58 q 3 -6 0 -12" stroke="#C6F24E" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path class="steam s2" d="M102 58 q 3 -6 0 -12" stroke="#C6F24E" stroke-width="3" fill="none" stroke-linecap="round"/>
+          </svg>
+          <span class="price-tag rot-l">9 900 ₽/ночь</span>
+        </div>
+        <h3 class="house-name">Купол с купелью</h3>
+        <p class="house-feature">Горячая купель под открытым небом. Пар, звёзды, тишина.</p>
+        <ul class="house-meta">
+          <li>2–3 гостя</li>
+          <li>Купель 40° всю ночь</li>
+          <li>Халаты и свечи</li>
+        </ul>
+        <button class="btn btn-ghost house-pick" data-house="kupel">Выбрать слот</button>
+      </article>
+
+      <article class="house-card reveal">
+        <div class="house-window">
+          <svg viewBox="0 0 120 90" class="house-ic">
+            <path d="M18 78 L60 14 L102 78 Z" fill="#2B1D45" stroke="#0B0712" stroke-width="5" stroke-linejoin="round"/>
+            <path d="M48 78 L60 54 L72 78 Z" fill="#FFB347" stroke="#0B0712" stroke-width="4" stroke-linejoin="round"/>
+            <circle cx="60" cy="34" r="6" fill="#C6F24E" stroke="#0B0712" stroke-width="3"/>
+          </svg>
+          <span class="price-tag rot-r">12 900 ₽/ночь</span>
+        </div>
+        <h3 class="house-name">Лофт-шалаш</h3>
+        <p class="house-feature">Два яруса, винил и проектор. База для банды до шести человек.</p>
+        <ul class="house-meta">
+          <li>4–6 гостей</li>
+          <li>Проигрыватель + пластинки</li>
+          <li>Своя зона костра</li>
+        </ul>
+        <button class="btn btn-ghost house-pick" data-house="loft">Выбрать слот</button>
+      </article>
+
+      <article class="house-card reveal">
+        <div class="house-window">
+          <svg viewBox="0 0 120 90" class="house-ic">
+            <path d="M14 78 L44 30 L74 78 Z" fill="#2B1D45" stroke="#0B0712" stroke-width="5" stroke-linejoin="round"/>
+            <path d="M58 78 L82 42 L106 78 Z" fill="#231739" stroke="#0B0712" stroke-width="5" stroke-linejoin="round"/>
+            <path d="M36 78 L44 62 L52 78 Z" fill="#FF7A29" stroke="#0B0712" stroke-width="4" stroke-linejoin="round"/>
+          </svg>
+          <span class="price-tag rot-l">3 900 ₽/ночь</span>
+        </div>
+        <h3 class="house-name">Тент-лагерь</h3>
+        <p class="house-feature">Своя поляна у общего костра. Минимум стен — максимум вайба.</p>
+        <ul class="house-meta">
+          <li>2–4 гостя</li>
+          <li>Тёплые спальники</li>
+          <li>Ближе всех к сапам</li>
+        </ul>
+        <button class="btn btn-ghost house-pick" data-house="tent">Выбрать слот</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. БРОНЬ ЗА 3 КЛИКА ===== -->
+<section class="section booking-section" id="booking">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="tag tag-lime">без звонков и переписок</span>
+      <h2 class="section-title">БРОНЬ ЗА <span class="hl">3 КЛИКА</span></h2>
+      <p class="section-sub">Даты → домик → гости. Цена считается сразу, без сюрпризов.</p>
+    </div>
+
+    <div class="booking-grid reveal">
+      <div class="booking-steps">
+        <div class="bk-step">
+          <div class="bk-step-head"><span class="bk-num">01</span><h3>Когда рвём из города?</h3></div>
+          <div class="chips" id="bkDates"></div>
+        </div>
+        <div class="bk-step">
+          <div class="bk-step-head"><span class="bk-num">02</span><h3>Какой слот?</h3></div>
+          <div class="chips" id="bkHouses"></div>
+        </div>
+        <div class="bk-step">
+          <div class="bk-step-head"><span class="bk-num">03</span><h3>Сколько вас?</h3></div>
+          <div class="chips" id="bkGuests"></div>
+        </div>
+      </div>
+
+      <aside class="booking-total">
+        <div class="bt-card" id="btCard">
+          <span class="tag tag-orange">твой побег</span>
+          <div class="bt-lines" id="btLines"></div>
+          <div class="bt-price-row">
+            <span>Итого</span>
+            <span class="bt-price" id="btPrice">0 ₽</span>
+          </div>
+          <button class="btn btn-lime btn-big bt-submit" id="btSubmit">Это моё</button>
+          <p class="bt-note">Ничего не спишем — менеджер перезвонит и подтвердит.</p>
+        </div>
+
+        <div class="bt-success" id="btSuccess" hidden>
+          <div class="bt-success-emoji">🔥</div>
+          <h3 class="bt-success-title">Ловим вайб!</h3>
+          <p class="bt-success-text" id="btSuccessText"></p>
+          <a href="tel:+79090939400" class="btn btn-orange">Позвонить нам</a>
+          <button class="btn btn-ghost btn-small" id="btAgain">Выбрать другое</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. ВАЙБ-СЕКЦИИ ===== -->
+<section class="section" id="vibe">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="tag tag-pink">что будет</span>
+      <h2 class="section-title">ВАЙБ <span class="hl">ВКЛЮЧЁН</span> В ЦЕНУ</h2>
+    </div>
+
+    <div class="vibe-grid">
+      <article class="vibe-card reveal">
+        <div class="vibe-ic-wrap">
+          <svg viewBox="0 0 48 48" class="vibe-ic"><path d="M24 8 C 14 18 12 28 24 38 C 36 28 34 18 24 8 Z" fill="#FF7A29" stroke="#0B0712" stroke-width="3"/><path d="M24 20 C 19 25 19 30 24 34 C 29 30 29 25 24 20 Z" fill="#FFE66D"/><rect x="10" y="36" width="28" height="6" rx="3" fill="#6B3B1E" stroke="#0B0712" stroke-width="2.4" transform="rotate(6 24 39)"/></svg>
+        </div>
+        <h3>Костёр и маршмеллоу</h3>
+        <p>Общий огонь каждый вечер. Маршмеллоу, палочки и гитара — на месте.</p>
+        <span class="vibe-tag">каждый вечер</span>
+      </article>
+
+      <article class="vibe-card reveal">
+        <div class="vibe-ic-wrap">
+          <svg viewBox="0 0 48 48" class="vibe-ic"><rect x="6" y="10" width="36" height="24" rx="4" fill="#2B1D45" stroke="#0B0712" stroke-width="3"/><path d="M21 17 L32 22 L21 27 Z" fill="#C6F24E"/><line x1="14" y1="40" x2="34" y2="40" stroke="#0B0712" stroke-width="3" stroke-linecap="round"/><circle class="tw t1" cx="40" cy="8" r="2" fill="#fff"/></svg>
+        </div>
+        <h3>Кино под звёздами</h3>
+        <p>Проектор, экран между сосен, пледы и попкорн, прожаренный на костре.</p>
+        <span class="vibe-tag">пятница</span>
+      </article>
+
+      <article class="vibe-card reveal">
+        <div class="vibe-ic-wrap">
+          <svg viewBox="0 0 48 48" class="vibe-ic"><path d="M10 34 h28 v6 h-28 Z" fill="#7A4622" stroke="#0B0712" stroke-width="3"/><path class="steam" d="M18 28 q 3 -6 0 -12 q -3 -6 0 -10" stroke="#FF4DA6" stroke-width="3" fill="none" stroke-linecap="round"/><path class="steam s2" d="M28 28 q 3 -6 0 -12 q -3 -6 0 -10" stroke="#C6F24E" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Баня и прорубь</h3>
+        <p>Настоящая дровяная баня и ледяная купель. Жар → лёд → апельсиновый чай.</p>
+        <span class="vibe-tag">суббота</span>
+      </article>
+
+      <article class="vibe-card reveal">
+        <div class="vibe-ic-wrap">
+          <svg viewBox="0 0 48 48" class="vibe-ic"><circle cx="24" cy="24" r="16" fill="#14101F" stroke="#0B0712" stroke-width="3"/><circle cx="24" cy="24" r="9" fill="none" stroke="#FF4DA6" stroke-width="2"/><circle cx="24" cy="24" r="3.4" fill="#C6F24E"/><rect x="33" y="8" width="4" height="16" rx="2" fill="#FFB347" transform="rotate(24 35 16)"/></svg>
+        </div>
+        <h3>Виниловые вечера</h3>
+        <p>Приноси свою пластинку — поставим на общем проигрывателе у костра.</p>
+        <span class="vibe-tag">по четвергам и пт</span>
+      </article>
+
+      <article class="vibe-card reveal">
+        <div class="vibe-ic-wrap">
+          <svg viewBox="0 0 48 48" class="vibe-ic"><ellipse cx="24" cy="34" rx="18" ry="5" fill="#2B1D45" stroke="#0B0712" stroke-width="3"/><line x1="24" y1="8" x2="24" y2="30" stroke="#FFB347" stroke-width="3.4" stroke-linecap="round"/><path d="M20 8 q 4 -4 8 0" stroke="#FFB347" stroke-width="3.4" fill="none" stroke-linecap="round"/><circle cx="38" cy="10" r="4" fill="#FF7A29"/></svg>
+        </div>
+        <h3>Сапы на рассвете</h3>
+        <p>Выход на воду в 6:00. Туман, чай из термоса и лучшие фото за неделю.</p>
+        <span class="vibe-tag">суббота, 6:00</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. МЕРОПРИЯТИЯ ===== -->
+<section class="section events-section" id="events">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="tag tag-orange">лента событий</span>
+      <h2 class="section-title">БЛИЖАЙШИЕ <span class="hl">ТУСЫ</span></h2>
+      <p class="section-sub">Вход для гостей — свободный. Приходи, даже если «просто на часик».</p>
+    </div>
+    <div class="events-track" id="eventsTrack"></div>
+  </div>
+</section>
+
+<!-- ===== 8. ОТЗЫВЫ ===== -->
+<section class="section" id="reviews">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="tag tag-lime">скрины из переписок</span>
+      <h2 class="section-title">ЛЮДИ <span class="hl">ГОВОРЯТ</span></h2>
+    </div>
+
+    <div class="rev-carousel reveal">
+      <button class="rev-btn rev-prev" id="revPrev" aria-label="Назад">
+        <svg viewBox="0 0 24 24" class="ic"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="rev-viewport" id="revViewport">
+        <div class="rev-track" id="revTrack"></div>
+      </div>
+      <button class="rev-btn rev-next" id="revNext" aria-label="Вперёд">
+        <svg viewBox="0 0 24 24" class="ic"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+    <div class="rev-dots" id="revDots"></div>
+  </div>
+</section>
+
+<!-- ===== 9. ФИНАЛЬНЫЙ CTA ===== -->
+<section class="section final-cta" id="final">
+  <div class="container">
+    <div class="final-card reveal">
+      <div class="final-stickers" aria-hidden="true">
+        <span class="sticker st-pink rot-r">горит!</span>
+      </div>
+      <h2 class="final-title">БЛИЖАЙШИЕ ВЫХОДНЫЕ —<br>ОСТАЛОСЬ <span class="hl-pink" id="domeLeft">2</span> <span id="domeWord">КУПОЛА</span></h2>
+
+      <div class="dome-meter">
+        <div class="dome-meter-label"><span>Занято на эти выходные</span><span id="domeCount">10 из 12</span></div>
+        <div class="dome-meter-bar"><div class="dome-meter-fill" id="domeBar"></div></div>
+      </div>
+
+      <div class="final-actions">
+        <a href="#booking" class="btn btn-lime btn-big">Забрать свой купол</a>
+        <a href="tel:+79090939400" class="btn btn-ghost">Или просто позвонить</a>
+      </div>
+      <p class="final-note">Каждую пятницу кто-то бронирует последний слот в 17:40. Не будь тем, кто остался в городе.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== 10. ФУТЕР ===== -->
+<footer class="footer" id="contacts">
+  <div class="container footer-grid">
+    <div class="f-col">
+      <a href="#hero" class="logo f-logo">ESCAPE<span class="logo-star">*</span></a>
+      <p class="f-text">Молодёжный глэмпинг в 90 минутах от города. Приезжай за вайбом — останешься ради костра.</p>
+      <span class="sticker st-lime rot-l f-dogs">с собаками можно 🐾</span>
+    </div>
+    <div class="f-col">
+      <h4 class="f-title">Связь</h4>
+      <a href="tel:+79090939400" class="f-link f-phone">+7 909 093-94-00</a>
+      <a href="https://t.me/escape_glamp" class="f-link" target="_blank" rel="noopener">Телеграм-канал: @escape_glamp</a>
+      <p class="f-text">Отвечаем с 10:00 до последнего угля.</p>
+    </div>
+    <div class="f-col">
+      <h4 class="f-title">Как добраться</h4>
+      <p class="f-text">90 минут от МКАД по трассе М-4, поворот на «Озёрное». После брони пришлём точную геометку и пин-код от шлагбаума.</p>
+      <p class="f-text">Трансфер из города по пятницам — 800 ₽/чел.</p>
+    </div>
+  </div>
+  <div class="container f-bottom">
+    <span>© <span id="year">2026</span> ESCAPE — демо-проект для портфолио</span>
+    <span>Сделано с огнём 🔥</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
