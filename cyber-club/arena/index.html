@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARENA — киберспортивная арена. RTX 4070, 240 Гц, пинг 5 мс</title>
+  <meta name="description" content="Киберспортивная арена: RTX 4070, мониторы 240 Гц, пинг 5 мс. Бронируй машину онлайн — приходи и садись. Турниры, VIP-кабины, 24/7.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Chakra+Petch:wght@500;600;700&family=JetBrains+Mono:wght@400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== SCANLINE / FX OVERLAYS ===== -->
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="ARENA — на главную">
+        <svg class="logo__mark" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
+          <path d="M16 3 29 27H3Z" fill="none" stroke="#00E5FF" stroke-width="2"/>
+          <path d="M16 12 22 24H10Z" fill="#E100FF" opacity="0.85"/>
+        </svg>
+        <span class="logo__text">ARENA<i>.CLUB</i></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#map" class="nav__link">Карта зала</a>
+        <a href="#rigs" class="nav__link">Железо</a>
+        <a href="#prices" class="nav__link">Тарифы</a>
+        <a href="#tournaments" class="nav__link">Турниры</a>
+        <a href="#vibe" class="nav__link">Атмосфера</a>
+      </nav>
+      <div class="header__right">
+        <a href="tel:+79090939400" class="btn btn--ghost header__phone">
+          <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z" fill="currentColor"/></svg>
+          <span>+7 909 093-94-00</span>
+        </a>
+        <a href="#map" class="btn btn--primary header__cta">Забронировать ПК</a>
+        <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== 1. HERO ===== -->
+    <section class="hero">
+      <!-- Сцена: ряды ПК с RGB-подсветкой -->
+      <div class="hero__scene" aria-hidden="true">
+        <div class="hero__glow hero__glow--cyan"></div>
+        <div class="hero__glow hero__glow--magenta"></div>
+        <svg class="hero__rows" viewBox="0 0 1440 520" preserveAspectRatio="xMidYMax slice">
+          <defs>
+            <linearGradient id="rgbline" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#00E5FF"/>
+              <stop offset="0.5" stop-color="#E100FF"/>
+              <stop offset="1" stop-color="#00E5FF"/>
+            </linearGradient>
+            <linearGradient id="floorfade" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#08090D" stop-opacity="0"/>
+              <stop offset="1" stop-color="#08090D"/>
+            </linearGradient>
+          </defs>
+          <g id="pcRowsFar"></g>
+          <g id="pcRowsNear"></g>
+          <rect x="0" y="380" width="1440" height="140" fill="url(#floorfade)"/>
+        </svg>
+        <div class="hero__grid-floor"></div>
+      </div>
+
+      <!-- HUD-элементы по краям -->
+      <div class="hud hud--tl" aria-hidden="true"><span>SYS.ONLINE</span><span class="hud__val" id="hudClock">00:00:00</span></div>
+      <div class="hud hud--tr" aria-hidden="true"><span>PING</span><span class="hud__val hud__val--cyan" id="hudPing">5 MS</span></div>
+      <div class="hud hud--bl" aria-hidden="true"><span>FPS</span><span class="hud__val hud__val--magenta" id="hudFps">240</span></div>
+      <div class="hud hud--br" aria-hidden="true"><span>SESSION</span><span class="hud__val">24/7</span></div>
+
+      <div class="container hero__content">
+        <div class="hero__badge reveal">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          <span>Сейчас свободно <b class="mono" id="freeCountHero">14</b> из <span class="mono">40</span> машин</span>
+        </div>
+        <h1 class="hero__title reveal">ТВОЯ<br>АРЕНА<br><span class="hero__title-accent">ЖДЁТ</span></h1>
+        <p class="hero__sub reveal">RTX 4070, 240 Гц, пинг 5 мс. Бронируй машину онлайн — приходи и садись.</p>
+        <div class="hero__actions reveal">
+          <a href="#map" class="btn btn--primary btn--xl">Забронировать ПК</a>
+          <a href="#tournaments" class="btn btn--outline btn--xl">Турниры</a>
+        </div>
+        <div class="hero__meta reveal mono">
+          <span>1440P</span><span>/</span><span>240 HZ</span><span>/</span><span>FIBER 1 GBIT</span><span>/</span><span>5 MS</span>
+        </div>
+      </div>
+      <a class="hero__scroll-hint" href="#map" aria-label="Листай вниз"><span></span></a>
+    </section>
+
+    <!-- ===== MARQUEE ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>RTX 4070 ✦ 240 HZ ✦ ПИНГ 5 МС ✦ КРЕСЛА, А НЕ СТУЛЬЯ ✦ ТУРНИРЫ КАЖДУЮ НЕДЕЛЮ ✦ 24/7 ✦ ДУШ И КУХНЯ ✦ </span>
+        <span>RTX 4070 ✦ 240 HZ ✦ ПИНГ 5 МС ✦ КРЕСЛА, А НЕ СТУЛЬЯ ✦ ТУРНИРЫ КАЖДУЮ НЕДЕЛЮ ✦ 24/7 ✦ ДУШ И КУХНЯ ✦ </span>
+      </div>
+    </div>
+
+    <!-- ===== 2. КАРТА ЗАЛА ===== -->
+    <section class="section map-section" id="map">
+      <div class="container">
+        <div class="section__head reveal">
+          <div class="section__tag mono">[ 01 / ЗАЛ ]</div>
+          <h2 class="section__title">ВЫБЕРИ <span class="accent-cyan">МЕСТО</span><br>КАК В КИНО</h2>
+          <p class="section__sub">Живая схема зала: кликай по станциям, собери пятёрку для тиммейтов — и бронируй в три клика.</p>
+        </div>
+
+        <div class="map-layout reveal">
+          <div class="map-board">
+            <div class="map-board__hud mono">
+              <span>HALL.MAP // ARENA-01</span>
+              <span id="mapStatus">FREE: <b class="mono" id="freeCountMap">14</b></span>
+            </div>
+            <div class="map-board__screen mono">ЭКРАН / ТУРНИРНАЯ СЦЕНА</div>
+            <svg id="hallMap" viewBox="0 0 900 560" role="group" aria-label="Интерактивная карта зала"></svg>
+            <div class="map-legend">
+              <span><i class="dot dot--free"></i>Свободно</span>
+              <span><i class="dot dot--occupied"></i>Занято</span>
+              <span><i class="dot dot--selected"></i>Выбрано</span>
+              <span><i class="dot dot--vip"></i>VIP-кабина</span>
+            </div>
+          </div>
+
+          <aside class="booking-panel" id="bookingPanel">
+            <div class="booking-panel__head">
+              <h3>БРОНЬ В 3 КЛИКА</h3>
+              <span class="booking-panel__step mono" id="bookingStep">ШАГ 1/3</span>
+            </div>
+
+            <div class="station-card" id="stationCard" hidden>
+              <div class="station-card__top">
+                <span class="station-card__name mono" id="stName">S-07</span>
+                <span class="station-card__tier" id="stTier">STANDARD</span>
+              </div>
+              <ul class="station-card__specs" id="stSpecs"></ul>
+              <div class="station-card__price mono"><span id="stPrice">150</span> ₽/час</div>
+            </div>
+
+            <div class="booking-panel__empty" id="bookingEmpty">
+              <svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><path d="M4 5h16v11H4z" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M9 20h6M12 16v4" stroke="currentColor" stroke-width="1.4"/><path d="M7 8.5 9.5 11 7 13.5M11 13.5h5" stroke="#00E5FF" stroke-width="1.4" fill="none" stroke-linecap="round"/></svg>
+              <p>Кликни по свободному месту на схеме — покажем конфиг и цену.</p>
+            </div>
+
+            <div class="booking-panel__body" id="bookingBody" hidden>
+              <div class="team-progress">
+                <div class="team-progress__label mono"><span>СОБЕРИ ПЯТЁРКУ</span><span id="teamCount">0/5</span></div>
+                <div class="team-progress__bar"><i id="teamBar"></i></div>
+                <p class="team-progress__hint" id="teamHint">5 мест рядом — скидка 10% на всю пачку</p>
+              </div>
+
+              <div class="selected-seats mono" id="selectedSeats"></div>
+
+              <div class="hours-picker">
+                <span class="hours-picker__label">ШАГ 2 — СКОЛЬКО ЧАСОВ?</span>
+                <div class="hours-picker__controls">
+                  <button type="button" class="hours-btn" id="hoursMinus" aria-label="Меньше часов">−</button>
+                  <span class="hours-picker__value mono" id="hoursValue">3</span>
+                  <button type="button" class="hours-btn" id="hoursPlus" aria-label="Больше часов">+</button>
+                </div>
+                <div class="hours-quick" id="hoursQuick">
+                  <button type="button" data-h="2">2 ч</button>
+                  <button type="button" data-h="3">3 ч</button>
+                  <button type="button" data-h="5">5 ч</button>
+                  <button type="button" data-h="10">Ночь</button>
+                </div>
+              </div>
+
+              <div class="booking-total mono">
+                <div class="booking-total__row"><span id="totalLine">3 места × 3 ч</span><span id="totalSum">1 350 ₽</span></div>
+                <div class="booking-total__row booking-total__row--discount" id="discountRow" hidden><span>Скидка пятёрки −10%</span><span id="discountSum">−0 ₽</span></div>
+                <div class="booking-total__row booking-total__row--final"><span>ИТОГО</span><span id="finalSum">1 350 ₽</span></div>
+              </div>
+
+              <button type="button" class="btn btn--primary btn--block" id="bookBtn">Шаг 3 — Забронировать места</button>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. ЖЕЛЕЗО ===== -->
+    <section class="section rigs" id="rigs">
+      <div class="container">
+        <div class="section__head reveal">
+          <div class="section__tag mono">[ 02 / ЖЕЛЕЗО ]</div>
+          <h2 class="section__title">ТРИ УРОВНЯ <span class="accent-magenta">МОЩИ</span></h2>
+          <p class="section__sub">Никаких «офисных коробок». Каждая станция собрана под турнирную нагрузку.</p>
+        </div>
+        <div class="rigs__grid">
+          <article class="rig-card reveal">
+            <div class="rig-card__tier mono">STANDARD</div>
+            <h3 class="rig-card__name">Боевая станция</h3>
+            <ul class="rig-card__specs">
+              <li><b>RTX 4060</b><span>GPU</span></li>
+              <li><b>165 Гц</b><span>24.5" IPS</span></li>
+              <li><b>Ryzen 5 7600</b><span>CPU</span></li>
+              <li><b>32 GB DDR5</b><span>RAM</span></li>
+            </ul>
+            <div class="rig-card__price mono"><b>150</b> ₽/час</div>
+            <a href="#map" class="btn btn--outline btn--block rig-card__btn">Выбрать на карте</a>
+          </article>
+
+          <article class="rig-card rig-card--pro reveal">
+            <div class="rig-card__flag mono">ХИТ АРЕНЫ</div>
+            <div class="rig-card__tier mono">PRO</div>
+            <h3 class="rig-card__name">Турнирная машина</h3>
+            <ul class="rig-card__specs">
+              <li><b>RTX 4070</b><span>GPU</span></li>
+              <li><b>240 Гц</b><span>25" Fast IPS</span></li>
+              <li><b>Ryzen 7 7800X3D</b><span>CPU</span></li>
+              <li><b>64 GB DDR5</b><span>RAM</span></li>
+            </ul>
+            <div class="rig-card__price mono"><b>250</b> ₽/час</div>
+            <a href="#map" class="btn btn--primary btn--block rig-card__btn">Выбрать на карте</a>
+          </article>
+
+          <article class="rig-card rig-card--vip reveal">
+            <div class="rig-card__tier mono">VIP-КАБИНА</div>
+            <h3 class="rig-card__name">Ложа капитана</h3>
+            <ul class="rig-card__specs">
+              <li><b>RTX 4080</b><span>GPU</span></li>
+              <li><b>360 Гц</b><span>27" OLED</span></li>
+              <li><b>i9-14900K</b><span>CPU</span></li>
+              <li><b>Кресло премиум</b><span>+ диван для тима</span></li>
+            </ul>
+            <div class="rig-card__price mono"><b>450</b> ₽/час</div>
+            <a href="#map" class="btn btn--outline btn--block rig-card__btn">Выбрать на карте</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. ТАРИФЫ — ТАБЛО ===== -->
+    <section class="section prices" id="prices">
+      <div class="container">
+        <div class="section__head reveal">
+          <div class="section__tag mono">[ 03 / ТАРИФЫ ]</div>
+          <h2 class="section__title">ТАБЛО <span class="accent-cyan">ЦЕН</span></h2>
+        </div>
+        <div class="scoreboard reveal">
+          <div class="scoreboard__row">
+            <div class="scoreboard__label"><b>ЧАС ДНЁМ</b><span>пн–пт до 17:00</span></div>
+            <div class="scoreboard__digits mono" data-count="150">0</div>
+            <div class="scoreboard__unit mono">₽/час</div>
+          </div>
+          <div class="scoreboard__row">
+            <div class="scoreboard__label"><b>ЧАС ВЕЧЕРОМ</b><span>17:00–22:00 и выходные</span></div>
+            <div class="scoreboard__digits mono" data-count="200">0</div>
+            <div class="scoreboard__unit mono">₽/час</div>
+          </div>
+          <div class="scoreboard__row scoreboard__row--hot">
+            <div class="scoreboard__label"><b>НОЧНОЙ ПАКЕТ</b><span>22:00 – 8:00, вся ночь</span><i class="scoreboard__flag mono">ВЫГОДНО</i></div>
+            <div class="scoreboard__digits mono" data-count="900">0</div>
+            <div class="scoreboard__unit mono">₽/пакет</div>
+          </div>
+          <div class="scoreboard__row">
+            <div class="scoreboard__label"><b>АБОНЕМЕНТ 30 Ч</b><span>действует 60 дней</span></div>
+            <div class="scoreboard__digits mono" data-count="3900">0</div>
+            <div class="scoreboard__unit mono">₽</div>
+          </div>
+          <div class="scoreboard__row scoreboard__row--happy">
+            <div class="scoreboard__label"><b>СЧАСТЛИВЫЕ ЧАСЫ</b><span>будни до 16:00</span></div>
+            <div class="scoreboard__digits mono scoreboard__digits--percent" data-count="30">0</div>
+            <div class="scoreboard__unit mono">−%  скидка</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. ТУРНИРЫ ===== -->
+    <section class="section tournaments" id="tournaments">
+      <div class="container">
+        <div class="section__head reveal">
+          <div class="section__tag mono">[ 04 / ТУРНИРЫ ]</div>
+          <h2 class="section__title">СЕТКА <span class="accent-magenta">БЛИЖАЙШИХ</span> БОЁВ</h2>
+          <p class="section__sub">Призовые, трансляция на большом экране, столы для команд. Регистрация — за 2 минуты.</p>
+        </div>
+        <div class="tour-grid">
+          <article class="tour-card reveal">
+            <div class="tour-card__game mono">CS2</div>
+            <h3>ARENA CLASH #12</h3>
+            <div class="tour-card__meta mono"><span>23 АВГ / 18:00</span><span>5×5</span></div>
+            <div class="tour-card__prize"><span>Призовой фонд</span><b class="mono">50 000 ₽</b></div>
+            <div class="bracket" aria-hidden="true">
+              <svg viewBox="0 0 220 90"><path d="M10 15h40M10 45h40M10 75h40M50 15v30M50 30h30M50 75v-30M80 30v30M80 45h30M110 45h20" stroke="#00E5FF" stroke-width="1.6" fill="none" opacity="0.8"/><rect x="130" y="38" width="26" height="14" fill="none" stroke="#E100FF" stroke-width="1.6"/><rect x="162" y="38" width="48" height="14" fill="#E100FF" opacity="0.18"/><text x="186" y="48.5" fill="#E100FF" font-size="8" text-anchor="middle" font-family="monospace">WIN</text></svg>
+            </div>
+            <button type="button" class="btn btn--outline btn--block js-register" data-tour="ARENA CLASH #12 (CS2)">Зарегистрировать команду</button>
+          </article>
+
+          <article class="tour-card reveal">
+            <div class="tour-card__game mono">DOTA 2</div>
+            <h3>MID OR FEED CUP</h3>
+            <div class="tour-card__meta mono"><span>30 АВГ / 17:00</span><span>5×5</span></div>
+            <div class="tour-card__prize"><span>Призовой фонд</span><b class="mono">70 000 ₽</b></div>
+            <div class="bracket" aria-hidden="true">
+              <svg viewBox="0 0 220 90"><path d="M10 15h40M10 45h40M10 75h40M50 15v30M50 30h30M50 75v-30M80 30v30M80 45h30M110 45h20" stroke="#00E5FF" stroke-width="1.6" fill="none" opacity="0.8"/><rect x="130" y="38" width="26" height="14" fill="none" stroke="#E100FF" stroke-width="1.6"/><rect x="162" y="38" width="48" height="14" fill="#E100FF" opacity="0.18"/><text x="186" y="48.5" fill="#E100FF" font-size="8" text-anchor="middle" font-family="monospace">WIN</text></svg>
+            </div>
+            <button type="button" class="btn btn--outline btn--block js-register" data-tour="MID OR FEED CUP (Dota 2)">Зарегистрировать команду</button>
+          </article>
+
+          <article class="tour-card reveal">
+            <div class="tour-card__game mono">VALORANT</div>
+            <h3>SPIKE RUSH NIGHT</h3>
+            <div class="tour-card__meta mono"><span>06 СЕН / 19:00</span><span>5×5</span></div>
+            <div class="tour-card__prize"><span>Призовой фонд</span><b class="mono">35 000 ₽</b></div>
+            <div class="bracket" aria-hidden="true">
+              <svg viewBox="0 0 220 90"><path d="M10 15h40M10 45h40M10 75h40M50 15v30M50 30h30M50 75v-30M80 30v30M80 45h30M110 45h20" stroke="#00E5FF" stroke-width="1.6" fill="none" opacity="0.8"/><rect x="130" y="38" width="26" height="14" fill="none" stroke="#E100FF" stroke-width="1.6"/><rect x="162" y="38" width="48" height="14" fill="#E100FF" opacity="0.18"/><text x="186" y="48.5" fill="#E100FF" font-size="8" text-anchor="middle" font-family="monospace">WIN</text></svg>
+            </div>
+            <button type="button" class="btn btn--outline btn--block js-register" data-tour="SPIKE RUSH NIGHT (Valorant)">Зарегистрировать команду</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. ПОЧЕМУ У НАС ТОП ===== -->
+    <section class="section why">
+      <div class="container">
+        <div class="section__head reveal">
+          <div class="section__tag mono">[ 05 / ПРЕИМУЩЕСТВА ]</div>
+          <h2 class="section__title">ПОЧЕМУ У НАС <span class="accent-cyan">ТОП</span></h2>
+        </div>
+        <div class="why__grid">
+          <div class="why-card reveal">
+            <div class="why-card__icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 24h10l4-12 8 24 4-12h10" fill="none" stroke="#00E5FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Пинг 5 мс, оптика</h3>
+            <p>Собственный гигабитный канал и прямые маршруты до серверов. Лаги — не про нас.</p>
+            <span class="why-card__stat mono">5 MS</span>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-card__icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="10" width="36" height="24" rx="2" fill="none" stroke="#E100FF" stroke-width="2.5"/><path d="M18 40h12M24 34v6" stroke="#E100FF" stroke-width="2.5"/><path d="M12 22h24" stroke="#00E5FF" stroke-width="2"/></svg>
+            </div>
+            <h3>240+ Гц мониторы</h3>
+            <p>Fast IPS и OLED-панели с мгновенным откликом. Каждый фрейм — на своём месте.</p>
+            <span class="why-card__stat mono">360 HZ MAX</span>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-card__icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M14 8v18h18v6h6v8" fill="none" stroke="#00E5FF" stroke-width="2.5" stroke-linecap="round"/><path d="M14 8h8v10h-8" fill="none" stroke="#E100FF" stroke-width="2.5"/></svg>
+            </div>
+            <h3>Кресла, а не стулья</h3>
+            <p>Игровые кресла с поясничной поддержкой. Спина скажет спасибо после восьми часов катки.</p>
+            <span class="why-card__stat mono">COMFORT+</span>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-card__icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M18 6h12v6l4 8v20a2 2 0 0 1-2 2H16a2 2 0 0 1-2-2V20l4-8z" fill="none" stroke="#E100FF" stroke-width="2.5" stroke-linejoin="round"/><path d="M14 26h20" stroke="#00E5FF" stroke-width="2.5"/></svg>
+            </div>
+            <h3>Душ, кухня, энергетики</h3>
+            <p>Всё для долгих сессий: душ, микроволновка, холодильник с энергетиками и снеки.</p>
+            <span class="why-card__stat mono">24/7</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 7. АТМОСФЕРА — СЛАЙДЕР ===== -->
+    <section class="section vibe" id="vibe">
+      <div class="container">
+        <div class="section__head reveal">
+          <div class="section__tag mono">[ 06 / АТМОСФЕРА ]</div>
+          <h2 class="section__title">ЗАГЛЯНИ <span class="accent-magenta">ВНУТРЬ</span></h2>
+        </div>
+        <div class="vibe-slider reveal" id="vibeSlider">
+          <div class="vibe-slider__viewport">
+            <div class="vibe-slide is-active" data-slide="0">
+              <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" aria-label="Зал в неоне">
+                <rect width="800" height="400" fill="#0B0D13"/>
+                <path d="M0 400 320 180h160l320 220z" fill="#11141B"/>
+                <g stroke="#00E5FF" stroke-width="1" opacity="0.35"><path d="M320 180 0 400M400 180 400 400M480 180 800 400M360 180 180 400M440 180 620 400"/></g>
+                <g opacity="0.9">
+                  <rect x="180" y="230" width="70" height="44" rx="3" fill="#11141B" stroke="#00E5FF" stroke-width="1.5"/>
+                  <rect x="365" y="230" width="70" height="44" rx="3" fill="#11141B" stroke="#E100FF" stroke-width="1.5"/>
+                  <rect x="550" y="230" width="70" height="44" rx="3" fill="#11141B" stroke="#00E5FF" stroke-width="1.5"/>
+                  <rect x="186" y="236" width="58" height="30" fill="#00E5FF" opacity="0.22"/>
+                  <rect x="371" y="236" width="58" height="30" fill="#E100FF" opacity="0.22"/>
+                  <rect x="556" y="236" width="58" height="30" fill="#00E5FF" opacity="0.22"/>
+                </g>
+                <g class="vibe-glow"><circle cx="215" cy="285" r="26" fill="#00E5FF" opacity="0.14"/><circle cx="400" cy="285" r="26" fill="#E100FF" opacity="0.14"/><circle cx="585" cy="285" r="26" fill="#00E5FF" opacity="0.14"/></g>
+                <text x="400" y="120" text-anchor="middle" fill="#fff" font-size="30" font-weight="800" font-family="Unbounded, sans-serif" opacity="0.92">MAIN HALL</text>
+                <text x="400" y="146" text-anchor="middle" fill="#00E5FF" font-size="12" font-family="monospace">40 STATIONS // RGB SYNC</text>
+              </svg>
+              <div class="vibe-slide__caption"><b>Зал в неоне</b><span>40 станций с синхронной RGB-подсветкой</span></div>
+            </div>
+            <div class="vibe-slide" data-slide="1">
+              <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" aria-label="VIP-кабина">
+                <rect width="800" height="400" fill="#0D0A14"/>
+                <rect x="230" y="90" width="340" height="240" rx="10" fill="#14101F" stroke="#E100FF" stroke-width="2"/>
+                <rect x="250" y="115" width="140" height="80" rx="4" fill="#E100FF" opacity="0.2"/>
+                <rect x="250" y="115" width="140" height="80" rx="4" fill="none" stroke="#E100FF" stroke-width="1.5"/>
+                <rect x="410" y="115" width="140" height="80" rx="4" fill="#00E5FF" opacity="0.14"/>
+                <rect x="410" y="115" width="140" height="80" rx="4" fill="none" stroke="#00E5FF" stroke-width="1.5"/>
+                <path d="M300 260c0-30 40-30 40 0v50h-40z" fill="#1E1830" stroke="#E100FF" stroke-width="1.5"/>
+                <path d="M460 260c0-30 40-30 40 0v50h-40z" fill="#1E1830" stroke="#00E5FF" stroke-width="1.5"/>
+                <circle cx="400" cy="70" r="18" fill="none" stroke="#E100FF" stroke-width="2" opacity="0.8"/>
+                <text x="400" y="368" text-anchor="middle" fill="#fff" font-size="26" font-weight="800" font-family="Unbounded, sans-serif" opacity="0.92">VIP LOUNGE</text>
+              </svg>
+              <div class="vibe-slide__caption"><b>VIP-кабина</b><span>Отдельная комната, диван, RTX 4080 и 360 Гц</span></div>
+            </div>
+            <div class="vibe-slide" data-slide="2">
+              <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" aria-label="Турнирный экран">
+                <rect width="800" height="400" fill="#08090D"/>
+                <rect x="130" y="50" width="540" height="240" rx="8" fill="#0F1420" stroke="#00E5FF" stroke-width="2"/>
+                <rect x="150" y="70" width="500" height="200" rx="4" fill="#05070C"/>
+                <text x="400" y="150" text-anchor="middle" fill="#00E5FF" font-size="44" font-weight="800" font-family="monospace">16 : 12</text>
+                <text x="400" y="185" text-anchor="middle" fill="#fff" font-size="16" font-family="monospace" opacity="0.8">MAP 3 // OVERTIME</text>
+                <rect x="150" y="250" width="230" height="6" fill="#00E5FF" opacity="0.8"/>
+                <rect x="420" y="250" width="230" height="6" fill="#E100FF" opacity="0.8"/>
+                <g fill="#11141B" stroke="#2A2F3E"><rect x="220" y="320" width="80" height="46" rx="4"/><rect x="360" y="320" width="80" height="46" rx="4"/><rect x="500" y="320" width="80" height="46" rx="4"/></g>
+                <circle cx="260" cy="343" r="12" fill="#00E5FF" opacity="0.3"/><circle cx="400" cy="343" r="12" fill="#E100FF" opacity="0.3"/><circle cx="540" cy="343" r="12" fill="#00E5FF" opacity="0.3"/>
+              </svg>
+              <div class="vibe-slide__caption"><b>Турнирный экран</b><span>5-метровый экран и кастерская зона на финалах</span></div>
+            </div>
+          </div>
+          <div class="vibe-slider__controls">
+            <button type="button" class="vibe-btn" id="vibePrev" aria-label="Предыдущий слайд">←</button>
+            <div class="vibe-dots" id="vibeDots"></div>
+            <button type="button" class="vibe-btn" id="vibeNext" aria-label="Следующий слайд">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 8. ОТЗЫВЫ — АЧИВКИ ===== -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="section__head reveal">
+          <div class="section__tag mono">[ 07 / ОТЗЫВЫ ]</div>
+          <h2 class="section__title">АЧИВКИ <span class="accent-cyan">ИГРОКОВ</span></h2>
+        </div>
+        <div class="reviews-carousel reveal">
+          <button type="button" class="vibe-btn reviews-carousel__arrow" id="revPrev" aria-label="Предыдущий отзыв">←</button>
+          <div class="reviews-carousel__viewport">
+            <div class="reviews-track" id="reviewsTrack">
+              <article class="review-card">
+                <div class="review-card__header mono"><span class="review-card__ach">ACHIEVEMENT UNLOCKED</span><span class="review-card__xp">+250 XP</span></div>
+                <div class="review-card__body">
+                  <div class="review-card__avatar" style="--av:#00E5FF">N</div>
+                  <div><b>n0va</b><span class="mono">FACEIT 10 LVL · CS2</span></div>
+                </div>
+                <p>«Гонял тут перед мейджором две недели. Пинг реально 5, моники 240 — после домашних 60 Гц как в другой игре оказался».</p>
+                <div class="review-card__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+              </article>
+              <article class="review-card">
+                <div class="review-card__header mono"><span class="review-card__ach">ACHIEVEMENT UNLOCKED</span><span class="review-card__xp">+180 XP</span></div>
+                <div class="review-card__body">
+                  <div class="review-card__avatar" style="--av:#E100FF">M</div>
+                  <div><b>Мира</b><span class="mono">IMMORTAL · VALORANT</span></div>
+                </div>
+                <p>«Брали VIP-кабину на всю пятёрку. Диван, свой кондей, никто не мешает колить. Ночной пакет окупился за три катки».</p>
+                <div class="review-card__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+              </article>
+              <article class="review-card">
+                <div class="review-card__header mono"><span class="review-card__ach">ACHIEVEMENT UNLOCKED</span><span class="review-card__xp">+320 XP</span></div>
+                <div class="review-card__body">
+                  <div class="review-card__avatar" style="--av:#7CFFB2">K</div>
+                  <div><b>k1llerqueen</b><span class="mono">8K MMR · DOTA 2</span></div>
+                </div>
+                <p>«Выиграли тут кубок по доте. Организация как на лан-финалах: отдельные столы, экран, кастер. Теперь это наша база».</p>
+                <div class="review-card__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+              </article>
+              <article class="review-card">
+                <div class="review-card__header mono"><span class="review-card__ach">ACHIEVEMENT UNLOCKED</span><span class="review-card__xp">+150 XP</span></div>
+                <div class="review-card__body">
+                  <div class="review-card__avatar" style="--av:#FFC24B">D</div>
+                  <div><b>Дэн_2077</b><span class="mono">ГЛОБАЛ · CS2</span></div>
+                </div>
+                <p>«Забронировал с телефона в автобусе, через 20 минут уже сидел за машиной. Место ждало именно то, что выбрал на схеме».</p>
+                <div class="review-card__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+              </article>
+            </div>
+          </div>
+          <button type="button" class="vibe-btn reviews-carousel__arrow" id="revNext" aria-label="Следующий отзыв">→</button>
+        </div>
+        <div class="vibe-dots reviews-dots" id="revDots"></div>
+      </div>
+    </section>
+
+    <!-- ===== 9. ФИНАЛЬНЫЙ CTA ===== -->
+    <section class="final-cta">
+      <div class="final-cta__bg" aria-hidden="true"></div>
+      <div class="container final-cta__inner reveal">
+        <div class="final-cta__tag mono">GG WP // SEE YOU IN GAME</div>
+        <h2 class="final-cta__title">СЕГОДНЯ ВЕЧЕРОМ<br>СВОБОДНО <span class="mono accent-cyan" id="freeCountFinal">14</span> МАШИН</h2>
+        <p>Пока ты думаешь, кто-то уже занимает твоё место. Бронь держим 15 минут.</p>
+        <div class="final-cta__actions">
+          <a href="#map" class="btn btn--primary btn--xl">Забронировать ПК</a>
+          <a href="tel:+79090939400" class="btn btn--ghost btn--xl">+7 909 093-94-00</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== 10. FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col footer__col--brand">
+        <a href="#top" class="logo"><span class="logo__text">ARENA<i>.CLUB</i></span></a>
+        <p>Не компьютерный клуб — тренировочная база чемпионов.</p>
+        <div class="footer__badge mono">ONLINE · 24/7</div>
+      </div>
+      <div class="footer__col">
+        <h4 class="mono">КОНТАКТЫ</h4>
+        <address>
+          <p>г. Москва, ул. Киберспортивная, 7<br>ТЦ «Орбита», 3 этаж</p>
+          <a href="tel:+79090939400">+7 909 093-94-00</a>
+        </address>
+      </div>
+      <div class="footer__col">
+        <h4 class="mono">НАВИГАЦИЯ</h4>
+        <nav class="footer__nav" aria-label="Навигация в подвале">
+          <a href="#map">Карта зала</a>
+          <a href="#rigs">Железо</a>
+          <a href="#prices">Тарифы</a>
+          <a href="#tournaments">Турниры</a>
+        </nav>
+      </div>
+      <div class="footer__col">
+        <h4 class="mono">СООБЩЕСТВО</h4>
+        <div class="footer__socials">
+          <a href="#" aria-label="Discord"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M19.6 5.1A17 17 0 0 0 15.4 4l-.2.4a15 15 0 0 0-6.4 0L8.6 4a17 17 0 0 0-4.2 1.1C1.7 9 1 12.8 1.3 16.5A17 17 0 0 0 6.5 19l.8-1.3c-.6-.2-1.2-.5-1.7-.9l.4-.3a12 12 0 0 0 10 0l.4.3c-.5.4-1.1.7-1.7.9L15.5 19a17 17 0 0 0 5.2-2.5c.4-4.2-.7-7.9-1.1-11.4zM8.7 14.4c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2zm6.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2z" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Telegram"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M21.9 4.6 18.8 19c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.3.3-.5.5-.9.5l.3-4.6L18 6.9c.4-.3-.1-.5-.6-.2L7.1 13.2 2.6 11.8c-1-.3-1-1 .2-1.4l17.6-6.8c.8-.3 1.5.2 1.5 1z" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="VK"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12.8 18.4c-5.9 0-9.3-4-9.4-10.8h3c.1 5 2.3 7.1 4 7.5V7.6h2.8v4.3c1.7-.2 3.4-2.1 4-4.3h2.8c-.3 2.7-1.7 4.7-2.7 5.5 1 .6 2.6 2.3 3.2 5.3h-3.1c-.5-2.2-1.9-3.9-3.8-4.1v4.1h-.8z" fill="currentColor"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom mono">
+      <span>© 2025 ARENA.CLUB — тренировочная база чемпионов</span>
+      <span>MADE FOR FRAGS</span>
+    </div>
+  </footer>
+
+  <!-- ===== MODAL: УСПЕХ БРОНИ ===== -->
+  <div class="modal" id="bookingModal" hidden role="dialog" aria-modal="true" aria-labelledby="bookingModalTitle">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__window">
+      <button type="button" class="modal__close" data-close aria-label="Закрыть">×</button>
+      <div class="modal__icon modal__icon--ok">
+        <svg viewBox="0 0 48 48" width="44" height="44"><circle cx="24" cy="24" r="21" fill="none" stroke="#00E5FF" stroke-width="2"/><path d="M14 24.5 21 31l13-14" fill="none" stroke="#00E5FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h3 id="bookingModalTitle">МЕСТА ЗАБРОНИРОВАНЫ</h3>
+      <p class="modal__text mono" id="bookingSummary">S-07, S-08 · 3 ч · 1 350 ₽</p>
+      <p class="modal__sub">Бронь держим 15 минут. Покажи этот экран админу — сядешь без очереди.</p>
+      <button type="button" class="btn btn--primary btn--block" data-close>Отлично, еду!</button>
+    </div>
+  </div>
+
+  <!-- ===== MODAL: РЕГИСТРАЦИЯ КОМАНДЫ ===== -->
+  <div class="modal" id="registerModal" hidden role="dialog" aria-modal="true" aria-labelledby="registerModalTitle">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__window">
+      <button type="button" class="modal__close" data-close aria-label="Закрыть">×</button>
+
+      <form class="reg-form" id="regForm" novalidate>
+        <h3 id="registerModalTitle">РЕГИСТРАЦИЯ КОМАНДЫ</h3>
+        <p class="modal__sub">Турнир: <b class="accent-cyan" id="regTourName">ARENA CLASH #12</b></p>
+        <label class="field">
+          <span>Название команды</span>
+          <input type="text" name="team" placeholder="Например, CYBER WOLVES" required maxlength="30">
+        </label>
+        <label class="field">
+          <span>Ник капитана</span>
+          <input type="text" name="captain" placeholder="Твой игровой ник" required maxlength="24">
+        </label>
+        <label class="field">
+          <span>Телефон или Telegram</span>
+          <input type="text" name="contact" placeholder="+7 ___ ___-__-__ или @nick" required maxlength="40">
+        </label>
+        <button type="submit" class="btn btn--primary btn--block">Отправить заявку</button>
+        <p class="reg-form__note">Демо-режим: заявка никуда не отправляется.</p>
+      </form>
+
+      <div class="form-success" id="regSuccess" hidden>
+        <div class="modal__icon modal__icon--ok">
+          <svg viewBox="0 0 48 48" width="44" height="44"><circle cx="24" cy="24" r="21" fill="none" stroke="#E100FF" stroke-width="2"/><path d="M14 24.5 21 31l13-14" fill="none" stroke="#E100FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>ЗАЯВКА ПРИНЯТА</h3>
+        <p class="modal__sub">Слот для команды <b id="regSuccessTeam">CYBER WOLVES</b> зарезервирован. Организатор свяжется за день до турнира.</p>
+        <button type="button" class="btn btn--primary btn--block" data-close>Понял, готовимся</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

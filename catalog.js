@@ -350,4 +350,24 @@ const WORKS = [
     style: "Светлая подкаст-студия, аренда по часам",
     path: "recording-studio/podcast/",
   },
+
+  // --- Компьютерный клуб ---
+  {
+    category: "Компьютерный клуб",
+    title: "ARENA.CLUB",
+    style: "Неоновая кибер-арена, карта зала",
+    path: "cyber-club/arena/",
+  },
+  {
+    category: "Компьютерный клуб",
+    title: "МЕРИДИАН",
+    style: "Премиум-лаундж, приватные кабины",
+    path: "cyber-club/lounge/",
+  },
+  {
+    category: "Компьютерный клуб",
+    title: "RUSH",
+    style: "Яркий, молодёжный, ночь в клубе",
+    path: "cyber-club/rush/",
+  },
 ];

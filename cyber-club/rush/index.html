@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RUSH — компьютерный клуб 24/7 | 60 ₽/час, 2 минуты от универа</title>
+  <meta name="description" content="Компьютерный клуб RUSH: 60 ₽/час днём, ночные пакеты со скидкой, PS5-зона, турниры по CS2. 2 минуты от универа. Бронь за 3 клика.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F0C1D'/%3E%3Cpath d='M14 14h22a12 12 0 0 1 5 22l9 14H38l-8-13h-4v13H14V14zm12 10v6h9a3 3 0 0 0 0-6h-9z' fill='%23C6F24E'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Archivo+Black&family=Manrope:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#top" class="logo" aria-label="RUSH — на главную">
+        <span class="logo-bolt" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="currentColor"/></svg>
+        </span>
+        RUSH<span class="logo-dot">.</span>
+        <span class="logo-badge">24/7</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#booking" class="nav-link">Бронь</a>
+        <a href="#tariffs" class="nav-link">Тарифы</a>
+        <a href="#map" class="nav-link">Карта зала</a>
+        <a href="#events" class="nav-link">Ивенты</a>
+        <a href="#reviews" class="nav-link">Отзывы</a>
+        <a href="tel:+79090939400" class="btn btn-lime btn-sm nav-phone">Позвонить</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+79090939400" class="btn btn-lime btn-sm header-phone">Позвонить</a>
+        <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="hero-kicker reveal">тиммейты уже в дискорде — осталось собраться офлайн</p>
+          <h1 class="hero-title reveal">СОБИРАЙ<br><span class="hl">ПАТИ</span> И ГО<br>В КЛУБ</h1>
+          <p class="hero-sub reveal">Компьютерный клуб 24/7. 60 ₽/час днём, ночной пакет со скидкой. 2 минуты от универа.</p>
+          <div class="hero-cta reveal">
+            <a href="#booking" class="btn btn-lime btn-lg">Забронировать места</a>
+            <a href="tel:+79090939400" class="btn btn-ghost btn-lg">Позвонить</a>
+          </div>
+          <div class="hero-chip reveal" id="heroChip">
+            <span class="live-dot" aria-hidden="true"></span>
+            Сейчас свободно <b id="freeNowHero">—</b>
+          </div>
+        </div>
+
+        <div class="hero-scene-wrap" aria-hidden="true">
+          <svg class="hero-scene" viewBox="0 0 640 460" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="glowLime" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#C6F24E" stop-opacity=".5"/>
+                <stop offset="100%" stop-color="#C6F24E" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="glowPink" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#FF4DA6" stop-opacity=".45"/>
+                <stop offset="100%" stop-color="#FF4DA6" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="glowBlue" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#38BDF8" stop-opacity=".4"/>
+                <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="floorFade" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#C6F24E" stop-opacity=".18"/>
+                <stop offset="100%" stop-color="#0F0C1D" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+
+            <!-- атмосферные световые пятна -->
+            <circle cx="120" cy="90" r="150" fill="url(#glowPink)"/>
+            <circle cx="520" cy="70" r="140" fill="url(#glowLime)"/>
+            <circle cx="330" cy="230" r="170" fill="url(#glowBlue)"/>
+
+            <!-- пол с отражением -->
+            <rect x="0" y="330" width="640" height="130" fill="url(#floorFade)"/>
+
+            <!-- задний ряд мониторов -->
+            <g class="desk-row" style="animation-delay:-1.2s">
+              <line x1="30" y1="150" x2="610" y2="150" stroke="#2A2545" stroke-width="6" stroke-linecap="round"/>
+              <g>
+                <rect x="60"  y="106" width="56" height="38" rx="5" fill="#1A1533" stroke="#3A3560" stroke-width="2"/>
+                <rect class="screen" x="66"  y="112" width="44" height="26" rx="3"/>
+                <circle cx="88" cy="178" r="14" fill="#16122B" stroke="#3A3560" stroke-width="2"/>
+              </g>
+              <g>
+                <rect x="180" y="106" width="56" height="38" rx="5" fill="#1A1533" stroke="#3A3560" stroke-width="2"/>
+                <rect class="screen" x="186" y="112" width="44" height="26" rx="3"/>
+                <circle cx="208" cy="178" r="14" fill="#16122B" stroke="#3A3560" stroke-width="2"/>
+              </g>
+              <g>
+                <rect x="300" y="106" width="56" height="38" rx="5" fill="#1A1533" stroke="#3A3560" stroke-width="2"/>
+                <rect class="screen" x="306" y="112" width="44" height="26" rx="3"/>
+                <circle cx="328" cy="178" r="14" fill="#16122B" stroke="#3A3560" stroke-width="2"/>
+              </g>
+              <g>
+                <rect x="420" y="106" width="56" height="38" rx="5" fill="#1A1533" stroke="#3A3560" stroke-width="2"/>
+                <rect class="screen" x="426" y="112" width="44" height="26" rx="3"/>
+                <circle cx="448" cy="178" r="14" fill="#16122B" stroke="#3A3560" stroke-width="2"/>
+              </g>
+              <g>
+                <rect x="540" y="106" width="56" height="38" rx="5" fill="#1A1533" stroke="#3A3560" stroke-width="2"/>
+                <rect class="screen" x="546" y="112" width="44" height="26" rx="3"/>
+                <circle cx="568" cy="178" r="14" fill="#16122B" stroke="#3A3560" stroke-width="2"/>
+              </g>
+            </g>
+
+            <!-- передний ряд мониторов (крупнее) -->
+            <g class="desk-row" style="animation-delay:-2.6s">
+              <line x1="10" y1="268" x2="630" y2="268" stroke="#332D55" stroke-width="8" stroke-linecap="round"/>
+              <g>
+                <rect x="30" y="204" width="86" height="58" rx="7" fill="#1A1533" stroke="#4A4480" stroke-width="3"/>
+                <rect class="screen" x="39" y="213" width="68" height="40" rx="4"/>
+                <rect x="64" y="262" width="18" height="8" rx="2" fill="#3A3560"/>
+                <circle cx="73" cy="308" r="20" fill="#16122B" stroke="#4A4480" stroke-width="3"/>
+              </g>
+              <g>
+                <rect x="170" y="204" width="86" height="58" rx="7" fill="#1A1533" stroke="#4A4480" stroke-width="3"/>
+                <rect class="screen" x="179" y="213" width="68" height="40" rx="4"/>
+                <rect x="204" y="262" width="18" height="8" rx="2" fill="#3A3560"/>
+                <circle cx="213" cy="308" r="20" fill="#16122B" stroke="#4A4480" stroke-width="3"/>
+              </g>
+              <g>
+                <rect x="310" y="204" width="86" height="58" rx="7" fill="#1A1533" stroke="#4A4480" stroke-width="3"/>
+                <rect class="screen" x="319" y="213" width="68" height="40" rx="4"/>
+                <rect x="344" y="262" width="18" height="8" rx="2" fill="#3A3560"/>
+                <circle cx="353" cy="308" r="20" fill="#16122B" stroke="#4A4480" stroke-width="3"/>
+              </g>
+              <g>
+                <rect x="450" y="204" width="86" height="58" rx="7" fill="#1A1533" stroke="#4A4480" stroke-width="3"/>
+                <rect class="screen" x="459" y="213" width="68" height="40" rx="4"/>
+                <rect x="484" y="262" width="18" height="8" rx="2" fill="#3A3560"/>
+                <circle cx="493" cy="308" r="20" fill="#16122B" stroke="#4A4480" stroke-width="3"/>
+              </g>
+            </g>
+
+            <!-- силуэты гостей в креслах, ближний план -->
+            <g class="desk-row" style="animation-delay:-.4s">
+              <circle cx="140" cy="392" r="26" fill="#100D22" stroke="#3A3560" stroke-width="3"/>
+              <circle cx="330" cy="398" r="30" fill="#100D22" stroke="#3A3560" stroke-width="3"/>
+              <circle cx="520" cy="392" r="26" fill="#100D22" stroke="#3A3560" stroke-width="3"/>
+            </g>
+          </svg>
+
+          <!-- стикеры -->
+          <div class="hero-stickers">
+            <span class="sticker sticker-pink st-1">с едой можно 🍕</span>
+            <span class="sticker sticker-blue st-2">есть PS5 🎮</span>
+            <span class="sticker sticker-white st-3">первая ночь −30%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= БЕГУЩАЯ СТРОКА ================= -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-chunk">CS2 <i>✦</i> DOTA 2 <i>✦</i> VALORANT <i>✦</i> PS5 <i>✦</i> НОЧНЫЕ ПАКЕТЫ <i>✦</i> ТУРНИРЫ <i>✦</i> 60 ₽/ЧАС <i>✦</i> 24/7 <i>✦</i> </span><span class="marquee-chunk">CS2 <i>✦</i> DOTA 2 <i>✦</i> VALORANT <i>✦</i> PS5 <i>✦</i> НОЧНЫЕ ПАКЕТЫ <i>✦</i> ТУРНИРЫ <i>✦</i> 60 ₽/ЧАС <i>✦</i> 24/7 <i>✦</i> </span>
+      </div>
+    </div>
+
+    <!-- ================= БРОНЬ В 3 КЛИКА ================= -->
+    <section class="section booking" id="booking">
+      <div class="container">
+        <p class="kicker reveal">бронь в 3 клика</p>
+        <h2 class="section-title reveal">ЗАНЯТЬ МЕСТА —<br><span class="hl hl-blue">ПРОЩЕ ПРОСТОГО</span></h2>
+        <p class="section-sub reveal">Чем больше патти — тем дешевле час. Скидка за компанию считается сама.</p>
+
+        <div class="booking-card reveal" id="bookingCard">
+          <div class="booking-form">
+            <div class="bstep">
+              <div class="bstep-head">
+                <span class="bstep-num">1</span>
+                <h3>Сколько вас?</h3>
+              </div>
+              <div class="chips" role="group" aria-label="Сколько вас">
+                <button type="button" class="chip" data-group="people" data-value="1">Один</button>
+                <button type="button" class="chip is-active" data-group="people" data-value="2">Двое</button>
+                <button type="button" class="chip" data-group="people" data-value="5">Патти из пяти</button>
+              </div>
+              <p class="bstep-hint" id="peopleHint">Вдвоём — скидка 10% на всё</p>
+            </div>
+
+            <div class="bstep">
+              <div class="bstep-head">
+                <span class="bstep-num">2</span>
+                <h3>Когда?</h3>
+              </div>
+              <div class="chips" role="group" aria-label="Когда">
+                <button type="button" class="chip is-active" data-group="when" data-value="today">Сегодня вечером</button>
+                <button type="button" class="chip" data-group="when" data-value="tomorrow">Завтра днём</button>
+                <button type="button" class="chip" data-group="when" data-value="weekend">Выходные</button>
+              </div>
+              <p class="bstep-hint" id="whenHint">Вечер будни — 90 ₽/час с места</p>
+            </div>
+
+            <div class="bstep">
+              <div class="bstep-head">
+                <span class="bstep-num">3</span>
+                <h3>Сколько часов?</h3>
+              </div>
+              <div class="chips" role="group" aria-label="Сколько часов">
+                <button type="button" class="chip" data-group="hours" data-value="2">2 часа</button>
+                <button type="button" class="chip is-active" data-group="hours" data-value="3">3 часа</button>
+                <button type="button" class="chip" data-group="hours" data-value="5">5 часов</button>
+                <button type="button" class="chip" data-group="hours" data-value="10">Вся ночь</button>
+              </div>
+              <p class="bstep-hint" id="hoursHint">Три катки и ещё останется</p>
+            </div>
+          </div>
+
+          <aside class="booking-price">
+            <p class="price-label">Итого за всех</p>
+            <p class="price-old" id="priceOld">540 ₽</p>
+            <p class="price-now" id="priceNow">486 ₽</p>
+            <p class="price-per" id="pricePer">243 ₽ с человека</p>
+            <p class="price-save" id="priceSave">Скидка за компанию −10%: экономите 54 ₽</p>
+            <button type="button" class="btn btn-lime btn-lg btn-go" id="bookGo">Го!</button>
+            <p class="price-note">Платите в клубе. Место держим 30 минут.</p>
+          </aside>
+        </div>
+
+        <div class="booking-success" id="bookingSuccess" hidden>
+          <div class="success-check" aria-hidden="true">
+            <svg viewBox="0 0 64 64" width="44" height="44"><circle cx="32" cy="32" r="30" fill="none" stroke="currentColor" stroke-width="5"/><path d="M19 33.5 28 42l17-19" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Бронь принята!</h3>
+          <p class="success-summary" id="successSummary">Вас двое, сегодня вечером, 3 часа — 486 ₽.</p>
+          <p class="success-sub">Место держим 30 минут. Подтверждение прилетит в телеграм — просто приходите.</p>
+          <div class="success-actions">
+            <a href="https://t.me/rush_cyberclub" target="_blank" rel="noopener" class="btn btn-blue">Написать в телеграм</a>
+            <a href="tel:+79090939400" class="btn btn-ghost">Позвонить</a>
+            <button type="button" class="btn btn-ghost" id="bookAgain">Забронировать ещё</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ТАРИФЫ ================= -->
+    <section class="section tariffs" id="tariffs">
+      <div class="container">
+        <p class="kicker reveal">тарифы</p>
+        <h2 class="section-title reveal">ЦЕНЫ БЕЗ <span class="hl hl-pink">ПРИКОЛОВ</span></h2>
+        <p class="section-sub reveal">Студенту хватит на катку даже до стипендии.</p>
+
+        <div class="tariff-grid">
+          <article class="tariff-card reveal">
+            <p class="tariff-slot">SLOT 01</p>
+            <h3 class="tariff-name">Час днём</h3>
+            <p class="tariff-price">60 <span>₽/час</span></p>
+            <p class="tariff-time">8:00 — 18:00, каждый день</p>
+            <ul class="tariff-list">
+              <li>Для каток после пар</li>
+              <li>Любая зона зала</li>
+              <li>Энергетики из автомата</li>
+            </ul>
+            <a href="#booking" class="btn btn-ghost tariff-btn">Выбрать</a>
+          </article>
+
+          <article class="tariff-card reveal">
+            <p class="tariff-slot">SLOT 02</p>
+            <h3 class="tariff-name">Час вечером</h3>
+            <p class="tariff-price">90 <span>₽/час</span></p>
+            <p class="tariff-time">18:00 — 22:00, будни</p>
+            <ul class="tariff-list">
+              <li>Прайм-тайм с патти</li>
+              <li>Скидка за компанию до −25%</li>
+              <li>С едой можно</li>
+            </ul>
+            <a href="#booking" class="btn btn-ghost tariff-btn">Выбрать</a>
+          </article>
+
+          <article class="tariff-card tariff-hot reveal">
+            <p class="tariff-badge">выбирают чаще</p>
+            <p class="tariff-slot">SLOT 03</p>
+            <h3 class="tariff-name">Ночной пакет</h3>
+            <p class="tariff-price">349 <span>₽</span></p>
+            <p class="tariff-time">22:00 — 8:00, вся ночь</p>
+            <ul class="tariff-list">
+              <li>10 часов за цену четырёх</li>
+              <li>Первая ночь −30%</li>
+              <li>Кресло, что не убивает спину</li>
+            </ul>
+            <a href="#booking" class="btn btn-lime tariff-btn">Выбрать</a>
+          </article>
+
+          <article class="tariff-card reveal">
+            <p class="tariff-slot">SLOT 04</p>
+            <h3 class="tariff-name">Студенческий</h3>
+            <p class="tariff-price">50 <span>₽/час</span></p>
+            <p class="tariff-time">По студенческому, будни до 18:00</p>
+            <ul class="tariff-list">
+              <li>Просто покажи студбилет</li>
+              <li>Работает весь семестр</li>
+              <li>Диплом сдашь потом</li>
+            </ul>
+            <a href="#booking" class="btn btn-ghost tariff-btn">Выбрать</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ЧТО ВНУТРИ ================= -->
+    <section class="section inside" id="inside">
+      <div class="container">
+        <p class="kicker reveal">что внутри</p>
+        <h2 class="section-title reveal">ЖЕЛЕЗО, КОТОРОЕ <span class="hl">ТЯНЕТ</span></h2>
+
+        <div class="inside-grid">
+          <div class="inside-card reveal rot-l">
+            <svg class="inside-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="12" width="36" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="20" cy="22" r="5" fill="none" stroke="currentColor" stroke-width="3"/><path d="M6 38h24M6 42h16" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M34 16h4v8h-4" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+            <h3>RTX 4060</h3>
+            <p>40 машин, CS2 на 300+ FPS</p>
+          </div>
+          <div class="inside-card reveal rot-r">
+            <svg class="inside-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="8" width="36" height="24" rx="3" fill="none" stroke="currentColor" stroke-width="3"/><path d="M18 38h12M24 32v6" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M12 16l6 4-6 4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3>Моники 165 Гц</h3>
+            <p>Видишь врага раньше врага</p>
+          </div>
+          <div class="inside-card reveal rot-l">
+            <svg class="inside-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M14 8h20v14H14z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M12 22h24v8a4 4 0 0 1-4 4H16a4 4 0 0 1-4-4v-8z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M18 34v8M30 34v8M14 42h20" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+            <h3>Кресла</h3>
+            <p>Спина скажет спасибо после 10 часов</p>
+          </div>
+          <div class="inside-card reveal rot-r">
+            <svg class="inside-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M16 10h16l-2 30H18L16 10z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M15 18h18" stroke="currentColor" stroke-width="3"/><path d="M25 20l-5 8h6l-4 8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3>Энергетики</h3>
+            <p>Автомат прямо в зале, 24/7</p>
+          </div>
+          <div class="inside-card reveal rot-l">
+            <svg class="inside-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M10 18h28a6 6 0 0 1 6 6v6a6 6 0 0 1-10 4.5L30 30H18l-4 4.5A6 6 0 0 1 4 30v-6a6 6 0 0 1 6-8z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M14 22v6M11 25h6" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="32" cy="23" r="1.8" fill="currentColor"/><circle cx="36" cy="27" r="1.8" fill="currentColor"/></svg>
+            <h3>PS5-зона</h3>
+            <p>Два дивана, большой экран, FIFA до утра</p>
+          </div>
+          <div class="inside-card reveal rot-r">
+            <svg class="inside-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="8" width="32" height="32" rx="6" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="17" cy="17" r="3" fill="currentColor"/><circle cx="31" cy="17" r="3" fill="currentColor"/><circle cx="24" cy="24" r="3" fill="currentColor"/><circle cx="17" cy="31" r="3" fill="currentColor"/><circle cx="31" cy="31" r="3" fill="currentColor"/></svg>
+            <h3>Настолки</h3>
+            <p>Мафия, Уно и Дурак — когда пальцы устали</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ТУРНИРЫ И ИВЕНТЫ ================= -->
+    <section class="section events" id="events">
+      <div class="container">
+        <p class="kicker reveal">тусковка</p>
+        <h2 class="section-title reveal">ИВЕНТЫ ЭТОЙ <span class="hl hl-blue">НЕДЕЛИ</span></h2>
+        <p class="section-sub reveal">Даты считаются от сегодня — приходи в ближайший вечер.</p>
+
+        <div class="events-track">
+          <article class="event-card reveal" data-dow="5">
+            <div class="event-date">
+              <span class="event-weekday">пт</span>
+              <span class="event-day">—</span>
+              <span class="event-month">—</span>
+            </div>
+            <h3>Турнир по CS2</h3>
+            <p>Призовой фонд 10 000 ₽. Сбор тимов в 19:00, миксы — на месте.</p>
+            <a href="#booking" class="btn btn-lime btn-sm event-btn">Хочу участвовать</a>
+          </article>
+
+          <article class="event-card reveal" data-dow="6">
+            <div class="event-date">
+              <span class="event-weekday">сб</span>
+              <span class="event-day">—</span>
+              <span class="event-month">—</span>
+            </div>
+            <h3>Вечер настолок</h3>
+            <p>Мафия, Бункер и Уно. Вход свободный, чай с печеньками — с нас.</p>
+            <a href="#booking" class="btn btn-lime btn-sm event-btn">Хочу участвовать</a>
+          </article>
+
+          <article class="event-card reveal" data-dow="0">
+            <div class="event-date">
+              <span class="event-weekday">вс</span>
+              <span class="event-day">—</span>
+              <span class="event-month">—</span>
+            </div>
+            <h3>Смотрим мажор</h3>
+            <p>Большой экран, весь зал болеет, комментируем громче кастеров.</p>
+            <a href="#booking" class="btn btn-lime btn-sm event-btn">Хочу участвовать</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= КАРТА ЗАЛА ================= -->
+    <section class="section map" id="map">
+      <div class="container">
+        <p class="kicker reveal">карта зала</p>
+        <h2 class="section-title reveal">ГДЕ СЕСТЬ — <span class="hl hl-pink">ВЫБИРАЙ</span></h2>
+        <p class="section-sub reveal">Схема живая: зелёные места свободны, серые — уже гоняют катки.</p>
+
+        <div class="map-wrap reveal">
+          <div class="map-svg-box">
+            <svg id="hallMap" viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Схема зала компьютерного клуба">
+              <!-- контур помещения -->
+              <rect x="14" y="14" width="872" height="470" rx="20" fill="#14102A" stroke="#3A3560" stroke-width="4"/>
+              <!-- вход -->
+              <rect x="410" y="480" width="90" height="10" rx="5" fill="#0F0C1D"/>
+              <text x="455" y="512" class="map-label map-door" text-anchor="middle">ВХОД</text>
+
+              <!-- зоны (JS дорисует места) -->
+              <g class="zone" data-zone="standard" tabindex="0" role="button" aria-label="Обычная зона">
+                <rect class="zone-bg" x="34" y="40" width="556" height="212" rx="14"/>
+                <text x="56" y="72" class="map-label">ОБЫЧНАЯ ЗОНА</text>
+                <text x="56" y="92" class="map-count" id="count-standard">—</text>
+                <g class="seats" id="seats-standard"></g>
+              </g>
+
+              <g class="zone" data-zone="pro" tabindex="0" role="button" aria-label="PRO-зона">
+                <rect class="zone-bg" x="610" y="40" width="252" height="212" rx="14"/>
+                <text x="632" y="72" class="map-label">PRO-ЗОНА</text>
+                <text x="632" y="92" class="map-count" id="count-pro">—</text>
+                <g class="seats" id="seats-pro"></g>
+              </g>
+
+              <g class="zone" data-zone="ps5" tabindex="0" role="button" aria-label="PS5-зона">
+                <rect class="zone-bg" x="34" y="278" width="290" height="186" rx="14"/>
+                <text x="56" y="310" class="map-label">PS5-ЗОНА</text>
+                <text x="56" y="330" class="map-count" id="count-ps5">—</text>
+                <g class="seats" id="seats-ps5"></g>
+              </g>
+
+              <!-- бар -->
+              <g class="map-deco" aria-hidden="true">
+                <rect x="640" y="300" width="222" height="120" rx="14" fill="#1A1533" stroke="#3A3560" stroke-width="3"/>
+                <text x="751" y="352" class="map-label" text-anchor="middle">БАР</text>
+                <text x="751" y="380" class="map-label map-label-dim" text-anchor="middle">энергетики • снеки</text>
+              </g>
+            </svg>
+          </div>
+
+          <aside class="map-side">
+            <div class="map-legend">
+              <span class="legend-item"><i class="legend-dot legend-free"></i>свободно</span>
+              <span class="legend-item"><i class="legend-dot legend-busy"></i>занято</span>
+              <span class="legend-item"><i class="legend-dot legend-pick"></i>твоё место</span>
+            </div>
+            <div class="zone-panel" id="zonePanel">
+              <h3 id="zoneName">Обычная зона</h3>
+              <p class="zone-free" id="zoneFree">—</p>
+              <p class="zone-desc" id="zoneDesc">Классика: RTX 4060, 165 Гц, рядом с баром.</p>
+              <p class="zone-price" id="zonePrice">60 ₽/час</p>
+              <a href="#booking" class="btn btn-lime zone-btn" id="zoneBook">Забронировать эту зону</a>
+              <p class="zone-hint" id="zoneHint">Кликни по свободному месту на схеме — выберем его для тебя.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ОТЗЫВЫ ================= -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <p class="kicker reveal">отзывы</p>
+        <h2 class="section-title reveal">СКРИНЫ ИЗ <span class="hl">ДИСКОРДА</span></h2>
+        <p class="section-sub reveal">Не мы придумали — сами написали в общий чат.</p>
+
+        <div class="carousel reveal" id="reviewsCarousel">
+          <button type="button" class="car-btn car-prev" id="revPrev" aria-label="Предыдущий отзыв">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+
+          <div class="car-viewport" id="revViewport">
+            <div class="car-track" id="revTrack">
+              <article class="review">
+                <div class="rev-head">
+                  <div class="rev-ava" style="--ava:#C6F24E">Д</div>
+                  <div class="rev-meta">
+                    <p class="rev-name">d1ma_aim <span class="rev-tag">CLUB</span></p>
+                    <p class="rev-time">сегодня в 06:12</p>
+                  </div>
+                </div>
+                <p class="rev-text">гнали катки до 6 утра, топ. кресла реально не убивают спину — ушёл человеком, а не креветкой</p>
+                <div class="rev-reacts"><span>🔥 12</span><span>😂 4</span><span>💯 7</span></div>
+              </article>
+
+              <article class="review">
+                <div class="rev-head">
+                  <div class="rev-ava" style="--ava:#FF4DA6">К</div>
+                  <div class="rev-meta">
+                    <p class="rev-name">ksuuuha <span class="rev-tag">CLUB</span></p>
+                    <p class="rev-time">вчера в 23:47</p>
+                  </div>
+                </div>
+                <p class="rev-text">смотрели мажор всем залом, админы раздали печеньки. вайб 10/10, приду ещё</p>
+                <div class="rev-reacts"><span>❤️ 18</span><span>🍪 9</span></div>
+              </article>
+
+              <article class="review">
+                <div class="rev-head">
+                  <div class="rev-ava" style="--ava:#38BDF8">В</div>
+                  <div class="rev-meta">
+                    <p class="rev-name">valera_prod <span class="rev-tag">CLUB</span></p>
+                    <p class="rev-time">вчера в 02:03</p>
+                  </div>
+                </div>
+                <p class="rev-text">взяли ночной пакет на пятерых — вышло дешевле, чем сходить в кино. математика на нашей стороне</p>
+                <div class="rev-reacts"><span>🤑 15</span><span>🔥 6</span></div>
+              </article>
+
+              <article class="review">
+                <div class="rev-head">
+                  <div class="rev-ava" style="--ava:#C6F24E">М</div>
+                  <div class="rev-meta">
+                    <p class="rev-name">m4rio <span class="rev-tag">CLUB</span></p>
+                    <p class="rev-time">позавчера в 04:20</p>
+                  </div>
+                </div>
+                <p class="rev-text">PS5-зона огонь, в фифу резались до утра. энергетики в автомате спасают жизни</p>
+                <div class="rev-reacts"><span>⚽ 8</span><span>😴 3</span></div>
+              </article>
+
+              <article class="review">
+                <div class="rev-head">
+                  <div class="rev-ava" style="--ava:#FF4DA6">Т</div>
+                  <div class="rev-meta">
+                    <p class="rev-name">t1mmy <span class="rev-tag">CLUB</span></p>
+                    <p class="rev-time">позавчера в 19:31</p>
+                  </div>
+                </div>
+                <p class="rev-text">забронировал за 2 минуты прямо с пар, к вечеру места уже ждали. так держать</p>
+                <div class="rev-reacts"><span>👍 21</span><span>🔥 5</span></div>
+              </article>
+            </div>
+          </div>
+
+          <button type="button" class="car-btn car-next" id="revNext" aria-label="Следующий отзыв">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+        <div class="car-dots" id="revDots" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ================= ФИНАЛЬНЫЙ CTA ================= -->
+    <section class="section final-cta" id="cta">
+      <div class="container">
+        <div class="cta-card reveal">
+          <span class="sticker sticker-pink cta-sticker">го сегодня?</span>
+          <p class="cta-live"><span class="live-dot" aria-hidden="true"></span>прямо сейчас</p>
+          <h2 class="cta-title">СЕГОДНЯ ВЕЧЕРОМ<br>СВОБОДНО <span class="hl" id="freeNowCta">—</span></h2>
+          <p class="cta-sub">Собери патти в дискорде и приходите — 2 минуты от универа. Первым пятерым — скидка за компанию −25%.</p>
+          <div class="cta-actions">
+            <a href="#booking" class="btn btn-lime btn-lg">Забронировать места</a>
+            <a href="tel:+79090939400" class="btn btn-ghost btn-lg">+7 (909) 093-94-00</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= ФУТЕР ================= -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="logo">
+          <span class="logo-bolt" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="currentColor"/></svg>
+          </span>
+          RUSH<span class="logo-dot">.</span>
+        </a>
+        <p>Компьютерный клуб, где ночь — это ивент. Дёшево, весело, с друзьями.</p>
+        <p class="footer-hours">Работаем <b>24/7</b></p>
+      </div>
+      <div class="footer-col">
+        <h4>Как найти</h4>
+        <p>ул. Студенческая, 12<br>2 минуты от универа</p>
+        <p>Ближайший вход — со двора,<br>вывеска с молнией</p>
+      </div>
+      <div class="footer-col">
+        <h4>Связь</h4>
+        <p><a href="tel:+79090939400" class="footer-link">+7 (909) 093-94-00</a></p>
+        <p><a href="https://t.me/rush_cyberclub" target="_blank" rel="noopener" class="footer-link">Телеграм-канал: @rush_cyberclub</a></p>
+        <p class="footer-note">Отвечаем быстрее, чем грузится катка</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year">2026</span> RUSH. Демо-лендинг для портфолио.</p>
+      <a href="#top" class="footer-top">Наверх ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

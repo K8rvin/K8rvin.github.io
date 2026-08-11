@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>МЕРИДИАН — компьютерный лаундж для своих</title>
+<meta name="description" content="VIP-кабины, RTX 4080, консоли PS5, кухня и бар. Бронь онлайн — без очередей и соседей за спиной.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== ШАПКА ===== -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="#hero" class="logo" aria-label="МЕРИДИАН — на главную">
+      <svg class="logo-mark" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
+        <circle cx="16" cy="16" r="14" fill="none" stroke="#C9A96E" stroke-width="1.2"/>
+        <path d="M16 2 L16 30 M2 16 L30 16" stroke="#C9A96E" stroke-width="0.8" opacity="0.7"/>
+        <ellipse cx="16" cy="16" rx="14" ry="6" fill="none" stroke="#C9A96E" stroke-width="0.8" opacity="0.7"/>
+        <circle cx="16" cy="16" r="3" fill="#C9A96E"/>
+      </svg>
+      <span class="logo-text">МЕРИДИАН<span class="logo-sub">computer lounge</span></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="#map" class="nav-link">Карта зала</a>
+      <a href="#spaces" class="nav-link">Пространства</a>
+      <a href="#packages" class="nav-link">Пакеты</a>
+      <a href="#hardware" class="nav-link">Железо</a>
+      <a href="#reviews" class="nav-link">Отзывы</a>
+      <a href="#contacts" class="nav-link">Контакты</a>
+    </nav>
+    <a href="tel:+79090939400" class="header-phone">
+      <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z" fill="currentColor"/></svg>
+      +7 909 093-94-00
+    </a>
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Мобильная навигация" hidden>
+    <a href="#map" class="mobile-link">Карта зала</a>
+    <a href="#spaces" class="mobile-link">Пространства</a>
+    <a href="#packages" class="mobile-link">Пакеты</a>
+    <a href="#hardware" class="mobile-link">Железо</a>
+    <a href="#reviews" class="mobile-link">Отзывы</a>
+    <a href="#contacts" class="mobile-link">Контакты</a>
+    <a href="tel:+79090939400" class="mobile-link mobile-phone">+7 909 093-94-00</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ===== 1. HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero-scene" aria-hidden="true">
+    <svg class="hero-svg" viewBox="0 0 900 700" preserveAspectRatio="xMidYMax slice">
+      <defs>
+        <radialGradient id="warmGlow" cx="50%" cy="30%" r="70%">
+          <stop offset="0%" stop-color="#E8C88A" stop-opacity="0.55"/>
+          <stop offset="45%" stop-color="#C9A96E" stop-opacity="0.14"/>
+          <stop offset="100%" stop-color="#C9A96E" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="coneLight" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#E8C88A" stop-opacity="0.30"/>
+          <stop offset="100%" stop-color="#E8C88A" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="screenGlow" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#7FB8C9" stop-opacity="0.9"/>
+          <stop offset="100%" stop-color="#2E5A6B" stop-opacity="0.55"/>
+        </linearGradient>
+        <linearGradient id="floorFade" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#1C1F29"/>
+          <stop offset="100%" stop-color="#121318"/>
+        </linearGradient>
+      </defs>
+
+      <!-- стены и пол кабины -->
+      <rect x="60" y="60" width="780" height="470" rx="14" fill="#171A22" stroke="#C9A96E" stroke-opacity="0.28" stroke-width="1.5"/>
+      <rect x="60" y="530" width="780" height="130" fill="url(#floorFade)"/>
+      <line x1="60" y1="530" x2="840" y2="530" stroke="#C9A96E" stroke-opacity="0.35" stroke-width="1"/>
+      <!-- плинтус-подсветка -->
+      <line x1="78" y1="516" x2="822" y2="516" stroke="#E8C88A" stroke-opacity="0.4" stroke-width="2"/>
+
+      <!-- световой конус сверху -->
+      <polygon points="400,60 500,60 640,530 260,530" fill="url(#coneLight)"/>
+      <ellipse cx="450" cy="230" rx="330" ry="240" fill="url(#warmGlow)"/>
+      <rect x="416" y="60" width="68" height="6" rx="3" fill="#E8C88A" opacity="0.85"/>
+
+      <!-- дверь кабины -->
+      <rect x="700" y="190" width="112" height="340" rx="4" fill="#14161D" stroke="#C9A96E" stroke-opacity="0.35"/>
+      <rect x="716" y="210" width="80" height="140" rx="3" fill="none" stroke="#C9A96E" stroke-opacity="0.22"/>
+      <rect x="716" y="366" width="80" height="140" rx="3" fill="none" stroke="#C9A96E" stroke-opacity="0.22"/>
+      <circle cx="712" cy="372" r="4" fill="#C9A96E" opacity="0.8"/>
+
+      <!-- стол -->
+      <rect x="120" y="380" width="430" height="12" rx="4" fill="#232633"/>
+      <rect x="150" y="392" width="10" height="138" fill="#1B1E27"/>
+      <rect x="510" y="392" width="10" height="138" fill="#1B1E27"/>
+
+      <!-- два монитора -->
+      <rect x="160" y="270" width="150" height="92" rx="5" fill="#0D0F14" stroke="#2A2E3B"/>
+      <rect x="168" y="278" width="134" height="76" rx="3" fill="url(#screenGlow)" opacity="0.85"/>
+      <rect x="228" y="362" width="14" height="18" fill="#1B1E27"/>
+      <rect x="350" y="270" width="150" height="92" rx="5" fill="#0D0F14" stroke="#2A2E3B"/>
+      <rect x="358" y="278" width="134" height="76" rx="3" fill="url(#screenGlow)" opacity="0.7"/>
+      <rect x="418" y="362" width="14" height="18" fill="#1B1E27"/>
+
+      <!-- кресла -->
+      <rect x="186" y="430" width="98" height="110" rx="18" fill="#1E222C" stroke="#C9A96E" stroke-opacity="0.25"/>
+      <rect x="200" y="540" width="70" height="8" rx="4" fill="#181B24"/>
+      <rect x="376" y="430" width="98" height="110" rx="18" fill="#1E222C" stroke="#C9A96E" stroke-opacity="0.25"/>
+      <rect x="390" y="540" width="70" height="8" rx="4" fill="#181B24"/>
+
+      <!-- тёплая настольная лампа -->
+      <rect x="566" y="300" width="6" height="80" fill="#232633"/>
+      <circle cx="569" cy="292" r="12" fill="#E8C88A" opacity="0.9"/>
+      <circle cx="569" cy="292" r="30" fill="#E8C88A" opacity="0.14"/>
+
+      <!-- мягкий отблеск на полу -->
+      <ellipse cx="450" cy="560" rx="300" ry="46" fill="#C9A96E" opacity="0.07"/>
+    </svg>
+  </div>
+  <div class="hero-scrim" aria-hidden="true"></div>
+
+  <div class="container hero-content">
+    <p class="hero-eyebrow reveal">приватный компьютерный клуб · 24/7</p>
+    <h1 class="hero-title reveal">Компьютерный лаундж<br>для <em>своих</em></h1>
+    <p class="hero-sub reveal">VIP-кабины, RTX 4080, консоли PS5, кухня и бар.<br>Бронь онлайн — без очередей и соседей за спиной.</p>
+    <div class="hero-actions reveal">
+      <a href="#map" class="btn btn-outline-gold">Забронировать кабину</a>
+      <a href="tel:+79090939400" class="btn btn-ghost">+7 909 093-94-00</a>
+    </div>
+    <div class="hero-badge reveal" role="status">
+      <span class="badge-dot" aria-hidden="true"></span>
+      <span id="freeBadge">Сейчас свободны 3 кабины из 6</span>
+    </div>
+  </div>
+
+  <a class="hero-scroll" href="#stats" aria-label="Листайте вниз">
+    <span></span>
+  </a>
+</section>
+
+<!-- ===== СТАТИСТИКА ===== -->
+<section class="stats" id="stats">
+  <div class="container stats-grid">
+    <div class="stat reveal">
+      <div class="stat-num"><span id="nightsCounter">0</span></div>
+      <div class="stat-label">ночей сыграно<br>в этом месяце</div>
+    </div>
+    <div class="stat reveal">
+      <div class="stat-num">6</div>
+      <div class="stat-label">приватных кабин<br>с дверью и светом</div>
+    </div>
+    <div class="stat reveal">
+      <div class="stat-num">16</div>
+      <div class="stat-label">станций на RTX 4080<br>и мониторах 360 Гц</div>
+    </div>
+    <div class="stat reveal">
+      <div class="stat-num">24/7</div>
+      <div class="stat-label">кухня, бар и душ —<br>в любое время</div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider" aria-hidden="true"><span></span><i></i><span></span></div>
+
+<!-- ===== 2. КАРТА ЛАУНДЖА ===== -->
+<section class="section" id="map">
+  <div class="container">
+    <p class="eyebrow reveal">центральный элемент</p>
+    <h2 class="section-title reveal">Карта лаунджа</h2>
+    <p class="section-sub reveal">Выберите кабину или зону на схеме — увидите оснащение и цену.<br>Бронирование занимает три клика.</p>
+
+    <div class="map-layout">
+      <div class="map-canvas reveal">
+        <svg id="loungeMap" viewBox="0 0 800 560" role="group" aria-label="Интерактивная схема лаунджа">
+          <!-- контур помещения -->
+          <rect x="10" y="10" width="780" height="540" rx="12" fill="#14161D" stroke="#C9A96E" stroke-opacity="0.3" stroke-width="1.5"/>
+          <text x="400" y="42" class="map-caption" text-anchor="middle">— ряд VIP-кабин —</text>
+
+          <!-- Кабины: статусы проставит JS -->
+          <g class="zone" data-zone="cabin1" tabindex="0" role="button" aria-label="Кабина 1, 2 места">
+            <rect class="zone-bg" x="25" y="56" width="120" height="104" rx="6"/>
+            <text class="zone-title" x="85" y="96" text-anchor="middle">Кабина 1</text>
+            <text class="zone-sub" x="85" y="118" text-anchor="middle">2 места</text>
+            <text class="zone-status" x="85" y="140" text-anchor="middle"></text>
+            <circle class="zone-dot" cx="133" cy="70" r="5"/>
+          </g>
+          <g class="zone" data-zone="cabin2" tabindex="0" role="button" aria-label="Кабина 2, 2 места">
+            <rect class="zone-bg" x="151" y="56" width="120" height="104" rx="6"/>
+            <text class="zone-title" x="211" y="96" text-anchor="middle">Кабина 2</text>
+            <text class="zone-sub" x="211" y="118" text-anchor="middle">2 места</text>
+            <text class="zone-status" x="211" y="140" text-anchor="middle"></text>
+            <circle class="zone-dot" cx="259" cy="70" r="5"/>
+          </g>
+          <g class="zone" data-zone="cabin3" tabindex="0" role="button" aria-label="Кабина 3, 4 места">
+            <rect class="zone-bg" x="277" y="56" width="120" height="104" rx="6"/>
+            <text class="zone-title" x="337" y="96" text-anchor="middle">Кабина 3</text>
+            <text class="zone-sub" x="337" y="118" text-anchor="middle">4 места</text>
+            <text class="zone-status" x="337" y="140" text-anchor="middle"></text>
+            <circle class="zone-dot" cx="385" cy="70" r="5"/>
+          </g>
+          <g class="zone" data-zone="cabin4" tabindex="0" role="button" aria-label="Кабина 4, 4 места">
+            <rect class="zone-bg" x="403" y="56" width="120" height="104" rx="6"/>
+            <text class="zone-title" x="463" y="96" text-anchor="middle">Кабина 4</text>
+            <text class="zone-sub" x="463" y="118" text-anchor="middle">4 места</text>
+            <text class="zone-status" x="463" y="140" text-anchor="middle"></text>
+            <circle class="zone-dot" cx="511" cy="70" r="5"/>
+          </g>
+          <g class="zone" data-zone="cabin5" tabindex="0" role="button" aria-label="Кабина 5, 6 мест">
+            <rect class="zone-bg" x="529" y="56" width="120" height="104" rx="6"/>
+            <text class="zone-title" x="589" y="96" text-anchor="middle">Кабина 5</text>
+            <text class="zone-sub" x="589" y="118" text-anchor="middle">6 мест</text>
+            <text class="zone-status" x="589" y="140" text-anchor="middle"></text>
+            <circle class="zone-dot" cx="637" cy="70" r="5"/>
+          </g>
+          <g class="zone" data-zone="cabin6" tabindex="0" role="button" aria-label="Кабина 6, 6 мест">
+            <rect class="zone-bg" x="655" y="56" width="120" height="104" rx="6"/>
+            <text class="zone-title" x="715" y="96" text-anchor="middle">Кабина 6</text>
+            <text class="zone-sub" x="715" y="118" text-anchor="middle">6 мест</text>
+            <text class="zone-status" x="715" y="140" text-anchor="middle"></text>
+            <circle class="zone-dot" cx="763" cy="70" r="5"/>
+          </g>
+
+          <!-- коридор -->
+          <line x1="25" y1="182" x2="775" y2="182" stroke="#C9A96E" stroke-opacity="0.14" stroke-dasharray="2 7"/>
+
+          <!-- Боевой зал -->
+          <g class="zone" data-zone="arena" tabindex="0" role="button" aria-label="Боевой зал, 10 станций">
+            <rect class="zone-bg" x="25" y="200" width="360" height="150" rx="8"/>
+            <text class="zone-title" x="205" y="230" text-anchor="middle">Боевой зал</text>
+            <text class="zone-sub" x="205" y="250" text-anchor="middle">10 станций в ряд · для своей пятёрки</text>
+            <g class="zone-deco">
+              <rect x="45" y="270" width="56" height="16" rx="3"/><rect x="111" y="270" width="56" height="16" rx="3"/><rect x="177" y="270" width="56" height="16" rx="3"/><rect x="243" y="270" width="56" height="16" rx="3"/><rect x="309" y="270" width="56" height="16" rx="3"/>
+              <rect x="45" y="300" width="56" height="16" rx="3"/><rect x="111" y="300" width="56" height="16" rx="3"/><rect x="177" y="300" width="56" height="16" rx="3"/><rect x="243" y="300" width="56" height="16" rx="3"/><rect x="309" y="300" width="56" height="16" rx="3"/>
+            </g>
+            <text class="zone-status" x="205" y="338" text-anchor="middle"></text>
+            <circle class="zone-dot" cx="369" cy="216" r="5"/>
+          </g>
+
+          <!-- PS5-зона -->
+          <g class="zone" data-zone="ps5" tabindex="0" role="button" aria-label="Консольная зона PS5">
+            <rect class="zone-bg" x="415" y="200" width="360" height="150" rx="8"/>
+            <text class="zone-title" x="595" y="230" text-anchor="middle">Консольная зона</text>
+            <text class="zone-sub" x="595" y="250" text-anchor="middle">2 × PS5 · экран 65" · диваны</text>
+            <g class="zone-deco">
+              <rect x="520" y="266" width="150" height="52" rx="4"/>
+              <rect x="530" y="275" width="130" height="34" rx="2" class="deco-screen"/>
+              <rect x="455" y="288" width="46" height="30" rx="12"/>
+              <rect x="690" y="288" width="46" height="30" rx="12"/>
+            </g>
+            <text class="zone-status" x="595" y="338" text-anchor="middle"></text>
+            <circle class="zone-dot" cx="759" cy="216" r="5"/>
+          </g>
+
+          <!-- Лаундж с диванами -->
+          <g class="zone zone-quiet" data-zone="lounge" tabindex="0" role="button" aria-label="Лаундж с диванами">
+            <rect class="zone-bg" x="25" y="380" width="360" height="152" rx="8"/>
+            <text class="zone-title" x="205" y="410" text-anchor="middle">Лаундж</text>
+            <text class="zone-sub" x="205" y="430" text-anchor="middle">диваны · настолки · кальянная карта</text>
+            <g class="zone-deco">
+              <rect x="55" y="450" width="120" height="40" rx="14"/>
+              <rect x="235" y="450" width="120" height="40" rx="14"/>
+              <circle cx="205" cy="472" r="16"/>
+            </g>
+            <text class="zone-status" x="205" y="518" text-anchor="middle"></text>
+            <circle class="zone-dot" cx="369" cy="396" r="5"/>
+          </g>
+
+          <!-- Кухня и бар -->
+          <g class="zone zone-quiet" data-zone="bar" tabindex="0" role="button" aria-label="Кухня и бар">
+            <rect class="zone-bg" x="415" y="380" width="360" height="152" rx="8"/>
+            <text class="zone-title" x="595" y="410" text-anchor="middle">Кухня и бар</text>
+            <text class="zone-sub" x="595" y="430" text-anchor="middle">шеф до 4 утра · подача в кабину</text>
+            <g class="zone-deco">
+              <rect x="455" y="452" width="280" height="18" rx="6"/>
+              <circle cx="495" cy="496" r="10"/><circle cx="555" cy="496" r="10"/><circle cx="615" cy="496" r="10"/><circle cx="675" cy="496" r="10"/>
+            </g>
+            <text class="zone-status" x="595" y="524" text-anchor="middle"></text>
+            <circle class="zone-dot" cx="759" cy="396" r="5"/>
+          </g>
+        </svg>
+
+        <div class="map-legend">
+          <span><i class="lg lg-free"></i>свободно</span>
+          <span><i class="lg lg-busy"></i>занято</span>
+          <span><i class="lg lg-open"></i>общая зона</span>
+        </div>
+      </div>
+
+      <!-- Панель бронирования -->
+      <aside class="booking reveal" aria-label="Панель бронирования">
+        <div class="booking-empty" id="bookingEmpty">
+          <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true">
+            <rect x="6" y="8" width="36" height="24" rx="3" fill="none" stroke="#C9A96E" stroke-width="1.4"/>
+            <path d="M18 40h12M24 32v8" stroke="#C9A96E" stroke-width="1.4" stroke-linecap="round"/>
+            <circle cx="24" cy="20" r="5" fill="none" stroke="#C9A96E" stroke-width="1.4"/>
+          </svg>
+          <p>Нажмите на кабину или зону на схеме —<br>покажем оснащение и цену.</p>
+          <p class="booking-hint" id="bookingHint">Сейчас свободны 3 кабины из 6</p>
+        </div>
+
+        <div class="booking-body" id="bookingBody" hidden>
+          <p class="booking-kicker" id="bkType">VIP-кабина</p>
+          <h3 class="booking-name" id="bkName">Кабина 1</h3>
+          <p class="booking-status" id="bkStatus">Свободна сейчас</p>
+
+          <ul class="booking-equip" id="bkEquip"></ul>
+
+          <div class="booking-price-row">
+            <span>Тариф</span>
+            <strong id="bkPrice">700 ₽/час</strong>
+          </div>
+
+          <div class="booking-hours">
+            <span class="booking-hours-label">Часов</span>
+            <div class="hours-stepper">
+              <button type="button" id="bkMinus" aria-label="Меньше часов">−</button>
+              <span id="bkHours">2</span>
+              <button type="button" id="bkPlus" aria-label="Больше часов">+</button>
+            </div>
+          </div>
+
+          <div class="booking-total">
+            <span>Итого</span>
+            <strong id="bkTotal">1 400 ₽</strong>
+          </div>
+
+          <label class="booking-phone">
+            <span>Телефон для подтверждения</span>
+            <input type="tel" id="bkPhone" placeholder="+7 ___ ___-__-__" autocomplete="tel">
+          </label>
+
+          <button type="button" class="btn btn-gold booking-submit" id="bkSubmit">Забронировать</button>
+          <p class="booking-note">Бронь в 3 клика: кабина → часы → подтверждение.</p>
+        </div>
+
+        <div class="booking-success" id="bkSuccess" hidden>
+          <svg viewBox="0 0 64 64" width="56" height="56" aria-hidden="true">
+            <circle cx="32" cy="32" r="29" fill="none" stroke="#C9A96E" stroke-width="1.6"/>
+            <path d="M20 33l8 8 16-17" fill="none" stroke="#C9A96E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3>Бронь принята</h3>
+          <p id="bkSuccessText">Кабина 1 · сегодня 19:00–21:00 · 1 400 ₽</p>
+          <p class="booking-success-sub">Администратор подтвердит бронь по телефону в течение 10 минут.</p>
+          <button type="button" class="btn btn-outline-gold" id="bkAgain">Выбрать другую кабину</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider" aria-hidden="true"><span></span><i></i><span></span></div>
+
+<!-- ===== 3. ПРОСТРАНСТВА ===== -->
+<section class="section" id="spaces">
+  <div class="container">
+    <p class="eyebrow reveal">три сценария вечера</p>
+    <h2 class="section-title reveal">Пространства</h2>
+
+    <div class="cards-3">
+      <article class="space-card reveal">
+        <div class="space-scene scene-cabin" aria-hidden="true">
+          <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice">
+            <rect x="30" y="30" width="340" height="160" rx="10" fill="#161922" stroke="#C9A96E" stroke-opacity="0.4"/>
+            <polygon points="170,30 230,30 300,190 100,190" fill="#E8C88A" opacity="0.10"/>
+            <ellipse cx="200" cy="110" rx="150" ry="80" fill="#C9A96E" opacity="0.10"/>
+            <rect x="80" y="120" width="240" height="8" rx="3" fill="#232633"/>
+            <rect x="105" y="66" width="82" height="50" rx="4" fill="#0D0F14" stroke="#2A2E3B"/>
+            <rect x="110" y="71" width="72" height="40" rx="2" fill="#5E93A6" opacity="0.75"/>
+            <rect x="213" y="66" width="82" height="50" rx="4" fill="#0D0F14" stroke="#2A2E3B"/>
+            <rect x="218" y="71" width="72" height="40" rx="2" fill="#5E93A6" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="space-body">
+          <h3>VIP-кабина</h3>
+          <p>От 2 до 6 мест, своё железо, дверь, которая закрывается. Шумоизоляция, свой свет, подача из бара.</p>
+          <div class="space-price">от 700 ₽/час</div>
+          <a href="#map" class="space-link">Выбрать на карте →</a>
+        </div>
+      </article>
+
+      <article class="space-card reveal">
+        <div class="space-scene scene-arena" aria-hidden="true">
+          <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice">
+            <rect x="30" y="30" width="340" height="160" rx="10" fill="#161922" stroke="#C9A96E" stroke-opacity="0.4"/>
+            <g fill="#0D0F14" stroke="#2A2E3B">
+              <rect x="55" y="70" width="56" height="36" rx="3"/><rect x="125" y="70" width="56" height="36" rx="3"/><rect x="195" y="70" width="56" height="36" rx="3"/><rect x="265" y="70" width="56" height="36" rx="3"/>
+            </g>
+            <g fill="#5E93A6" opacity="0.65">
+              <rect x="60" y="75" width="46" height="26" rx="2"/><rect x="130" y="75" width="46" height="26" rx="2"/><rect x="200" y="75" width="46" height="26" rx="2"/><rect x="270" y="75" width="46" height="26" rx="2"/>
+            </g>
+            <rect x="45" y="118" width="310" height="8" rx="3" fill="#232633"/>
+            <ellipse cx="200" cy="180" rx="170" ry="26" fill="#C9A96E" opacity="0.08"/>
+          </svg>
+        </div>
+        <div class="space-body">
+          <h3>Боевой зал</h3>
+          <p>10 станций в ряд — своя пятёрка плечом к плечу. Командный канал связи и турнирный режим.</p>
+          <div class="space-price">от 400 ₽/час</div>
+          <a href="#map" class="space-link">Выбрать на карте →</a>
+        </div>
+      </article>
+
+      <article class="space-card reveal">
+        <div class="space-scene scene-ps5" aria-hidden="true">
+          <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice">
+            <rect x="30" y="30" width="340" height="160" rx="10" fill="#161922" stroke="#C9A96E" stroke-opacity="0.4"/>
+            <rect x="110" y="55" width="180" height="100" rx="6" fill="#0D0F14" stroke="#2A2E3B"/>
+            <rect x="120" y="64" width="160" height="82" rx="3" fill="#5E93A6" opacity="0.7"/>
+            <rect x="70" y="150" width="90" height="34" rx="14" fill="#1E222C" stroke="#C9A96E" stroke-opacity="0.3"/>
+            <rect x="240" y="150" width="90" height="34" rx="14" fill="#1E222C" stroke="#C9A96E" stroke-opacity="0.3"/>
+            <ellipse cx="200" cy="195" rx="150" ry="18" fill="#C9A96E" opacity="0.08"/>
+          </svg>
+        </div>
+        <div class="space-body">
+          <h3>Консольная зона</h3>
+          <p>Две PS5, экран 65" и глубокие диваны. FIFA, Mortal Kombat и «ещё один матч» до утра.</p>
+          <div class="space-price">900 ₽/час</div>
+          <a href="#map" class="space-link">Выбрать на карте →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider" aria-hidden="true"><span></span><i></i><span></span></div>
+
+<!-- ===== 4. СЕРВИС ===== -->
+<section class="section" id="service">
+  <div class="container">
+    <p class="eyebrow reveal">уровень бизнес-лаунджа</p>
+    <h2 class="section-title reveal">Сервис</h2>
+
+    <div class="service-grid">
+      <div class="service-item reveal">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 14h24v4a12 12 0 0 1-24 0v-4z" fill="none" stroke="#C9A96E" stroke-width="1.5"/><path d="M32 16h3a4 4 0 0 1 0 8h-3" fill="none" stroke="#C9A96E" stroke-width="1.5"/><path d="M14 6c0 2-2 2-2 4M20 6c0 2-2 2-2 4M26 6c0 2-2 2-2 4" stroke="#C9A96E" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <h3>Кухня и бар в зал</h3>
+        <p>Шеф до 4 утра, барная карта, подача прямо в кабину — не отрываясь от катки.</p>
+      </div>
+      <div class="service-item reveal">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="10" r="5" fill="none" stroke="#C9A96E" stroke-width="1.5"/><path d="M20 15v6M12 34c0-8 16-8 16 0M8 24h24" fill="none" stroke="#C9A96E" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <h3>Душ и локеры</h3>
+        <p>После ночи в лаундже — свежим на работу. Полотенца и косметика на месте.</p>
+      </div>
+      <div class="service-item reveal">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M7 26l3-10a4 4 0 0 1 4-3h12a4 4 0 0 1 4 3l3 10" fill="none" stroke="#C9A96E" stroke-width="1.5"/><rect x="5" y="26" width="30" height="6" rx="2" fill="none" stroke="#C9A96E" stroke-width="1.5"/><circle cx="12" cy="32" r="3" fill="none" stroke="#C9A96E" stroke-width="1.5"/><circle cx="28" cy="32" r="3" fill="none" stroke="#C9A96E" stroke-width="1.5"/></svg>
+        <h3>Парковка</h3>
+        <p>Закрытый двор, шлагбаум, видеонаблюдение. Место гарантируем при брони.</p>
+      </div>
+      <div class="service-item reveal">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 30V14l14-8 14 8v16" fill="none" stroke="#C9A96E" stroke-width="1.5" stroke-linejoin="round"/><path d="M14 30v-8h12v8" fill="none" stroke="#C9A96E" stroke-width="1.5" stroke-linejoin="round"/><path d="M6 30h28" stroke="#C9A96E" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <h3>Буткемпы под ключ</h3>
+        <p>Проживание рядом, питание, расписание тренировок и аналитик — для команд до 10 человек.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider" aria-hidden="true"><span></span><i></i><span></span></div>
+
+<!-- ===== 5. ПАКЕТЫ ===== -->
+<section class="section" id="packages">
+  <div class="container">
+    <p class="eyebrow reveal">готовые сценарии</p>
+    <h2 class="section-title reveal">Пакеты</h2>
+
+    <div class="cards-3">
+      <article class="package-card reveal">
+        <p class="package-tag">22:00 — 8:00</p>
+        <h3>Ночь в лаундже</h3>
+        <p class="package-desc">Кабина на всю ночь, безлимитный чай и кофе, завтрак в 7 утра. Душ и локер включены.</p>
+        <div class="package-price">4 900 ₽ <span>/ ночь</span></div>
+        <ul class="package-list">
+          <li>Кабина до 4 мест</li>
+          <li>Чай, кофе, снеки без лимита</li>
+          <li>Завтрак и душ утром</li>
+        </ul>
+        <a href="#cta" class="btn btn-outline-gold package-btn">Оставить заявку</a>
+      </article>
+
+      <article class="package-card package-featured reveal">
+        <p class="package-tag">для компании</p>
+        <h3>День рождения</h3>
+        <p class="package-desc">Кабина на 6 мест, торт от нашего шефа, оформление и плейлист именинника. Фотограф на час — в подарок.</p>
+        <div class="package-price">14 900 ₽ <span>/ вечер</span></div>
+        <ul class="package-list">
+          <li>Кабина 6 мест на 4 часа</li>
+          <li>Торт и оформление</li>
+          <li>PS5-зона +1 час в подарок</li>
+        </ul>
+        <a href="#cta" class="btn btn-gold package-btn">Оставить заявку</a>
+      </article>
+
+      <article class="package-card reveal">
+        <p class="package-tag">3 дня · команда</p>
+        <h3>Буткемп</h3>
+        <p class="package-desc">Три дня тренировок: свой ряд станций, проживание в апартаментах рядом, питание и разбор демок.</p>
+        <div class="package-price">89 000 ₽ <span>/ команда</span></div>
+        <ul class="package-list">
+          <li>Ряд из 5–10 станций</li>
+          <li>Проживание и питание</li>
+          <li>Аналитик и сервер для скримов</li>
+        </ul>
+        <a href="#cta" class="btn btn-outline-gold package-btn">Оставить заявку</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider" aria-hidden="true"><span></span><i></i><span></span></div>
+
+<!-- ===== 6. ЖЕЛЕЗО ===== -->
+<section class="section" id="hardware">
+  <div class="container">
+    <p class="eyebrow reveal">без компромиссов</p>
+    <h2 class="section-title reveal">Железо</h2>
+    <p class="section-sub reveal">Одинаковая конфигурация на каждой станции — привыкнете один раз.</p>
+
+    <div class="hw-table-wrap reveal">
+      <table class="hw-table">
+        <thead>
+          <tr><th>Компонент</th><th>Конфигурация</th><th>Примечание</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Видеокарта</td><td>NVIDIA RTX 4080 16 ГБ</td><td>DLSS 3, запас на любой тайтл</td></tr>
+          <tr><td>Процессор</td><td>Intel Core i7-14700K</td><td>стабильные 400+ FPS в CS 2</td></tr>
+          <tr><td>Монитор</td><td>27" · 360 Гц · 1 мс</td><td>Fast IPS, калибровка раз в месяц</td></tr>
+          <tr><td>Память</td><td>32 ГБ DDR5-6000</td><td>двухканал, низкие тайминги</td></tr>
+          <tr><td>Периферия</td><td>Logitech G Pro X Superlight 2</td><td>коврики Artisan, свитчи на выбор</td></tr>
+          <tr><td>Наушники</td><td>Beyerdynamic MMX 300</td><td>закрытые, с шумодавом на микрофоне</td></tr>
+          <tr><td>Кресла</td><td>Эргономика уровня Herman Miller</td><td>поясничная поддержка, 4D-подлокотники</td></tr>
+          <tr><td>Сеть</td><td>1 Гбит/с · ping до MSK — 2 мс</td><td>резервный канал, свой сервер CS 2</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider" aria-hidden="true"><span></span><i></i><span></span></div>
+
+<!-- ===== 7. АТМОСФЕРА ===== -->
+<section class="section" id="atmosphere">
+  <div class="container">
+    <p class="eyebrow reveal">editorial</p>
+    <h2 class="section-title reveal">Атмосфера</h2>
+
+    <div class="atmo-grid">
+      <figure class="atmo-item atmo-tall reveal">
+        <div class="atmo-scene atmo-cabin" aria-hidden="true">
+          <svg viewBox="0 0 400 520" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="520" fill="#15181F"/>
+            <polygon points="160,0 240,0 340,520 60,520" fill="#E8C88A" opacity="0.09"/>
+            <ellipse cx="200" cy="240" rx="180" ry="200" fill="#C9A96E" opacity="0.10"/>
+            <rect x="90" y="180" width="220" height="130" rx="8" fill="#0D0F14" stroke="#2A2E3B"/>
+            <rect x="100" y="190" width="200" height="110" rx="4" fill="#5E93A6" opacity="0.65"/>
+            <rect x="60" y="330" width="280" height="12" rx="4" fill="#232633"/>
+            <rect x="120" y="380" width="160" height="110" rx="20" fill="#1E222C" stroke="#C9A96E" stroke-opacity="0.3"/>
+            <line x1="40" y1="470" x2="360" y2="470" stroke="#C9A96E" stroke-opacity="0.25"/>
+          </svg>
+        </div>
+        <figcaption><span>01</span>Кабина 5 · тёплый свет, свой плейлист</figcaption>
+      </figure>
+
+      <figure class="atmo-item reveal">
+        <div class="atmo-scene atmo-bar" aria-hidden="true">
+          <svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="240" fill="#15181F"/>
+            <rect x="0" y="150" width="400" height="14" fill="#232633"/>
+            <g fill="#C9A96E" opacity="0.55">
+              <rect x="60" y="90" width="14" height="60" rx="4"/><rect x="95" y="70" width="14" height="80" rx="4"/><rect x="130" y="100" width="14" height="50" rx="4"/>
+              <rect x="230" y="80" width="14" height="70" rx="4"/><rect x="265" y="105" width="14" height="45" rx="4"/><rect x="300" y="75" width="14" height="75" rx="4"/>
+            </g>
+            <ellipse cx="200" cy="120" rx="210" ry="110" fill="#C9A96E" opacity="0.07"/>
+            <circle cx="330" cy="50" r="16" fill="#E8C88A" opacity="0.8"/>
+            <circle cx="330" cy="50" r="34" fill="#E8C88A" opacity="0.12"/>
+          </svg>
+        </div>
+        <figcaption><span>02</span>Бар · шеф до четырёх утра</figcaption>
+      </figure>
+
+      <figure class="atmo-item reveal">
+        <div class="atmo-scene atmo-tour" aria-hidden="true">
+          <svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="240" fill="#15181F"/>
+            <rect x="70" y="40" width="260" height="120" rx="8" fill="#0D0F14" stroke="#C9A96E" stroke-opacity="0.5"/>
+            <rect x="80" y="50" width="240" height="100" rx="4" fill="#5E93A6" opacity="0.55"/>
+            <text x="200" y="112" text-anchor="middle" font-size="34" fill="#E8C88A" opacity="0.9" font-family="Georgia, serif">3 : 2</text>
+            <g fill="#1E222C" stroke="#C9A96E" stroke-opacity="0.3">
+              <circle cx="110" cy="205" r="16"/><circle cx="160" cy="205" r="16"/><circle cx="210" cy="205" r="16"/><circle cx="260" cy="205" r="16"/><circle cx="310" cy="205" r="16"/>
+            </g>
+          </svg>
+        </div>
+        <figcaption><span>03</span>Турнирный вечер · финал на большом экране</figcaption>
+      </figure>
+
+      <figure class="atmo-item atmo-wide reveal">
+        <div class="atmo-scene atmo-night" aria-hidden="true">
+          <svg viewBox="0 0 800 240" preserveAspectRatio="xMidYMid slice">
+            <rect width="800" height="240" fill="#14161D"/>
+            <g stroke="#C9A96E" stroke-opacity="0.3">
+              <line x1="0" y1="200" x2="800" y2="200"/>
+            </g>
+            <g fill="#0D0F14" stroke="#2A2E3B">
+              <rect x="90" y="90" width="110" height="70" rx="5"/><rect x="240" y="90" width="110" height="70" rx="5"/><rect x="450" y="90" width="110" height="70" rx="5"/><rect x="600" y="90" width="110" height="70" rx="5"/>
+            </g>
+            <g fill="#5E93A6" opacity="0.55">
+              <rect x="98" y="98" width="94" height="54" rx="3"/><rect x="248" y="98" width="94" height="54" rx="3"/><rect x="458" y="98" width="94" height="54" rx="3"/><rect x="608" y="98" width="94" height="54" rx="3"/>
+            </g>
+            <rect x="60" y="176" width="680" height="10" rx="4" fill="#232633"/>
+            <ellipse cx="400" cy="120" rx="420" ry="130" fill="#C9A96E" opacity="0.06"/>
+          </svg>
+        </div>
+        <figcaption><span>04</span>Ночная смена · город спит, мы — нет</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider" aria-hidden="true"><span></span><i></i><span></span></div>
+
+<!-- ===== 8. ОТЗЫВЫ ===== -->
+<section class="section" id="reviews">
+  <div class="container">
+    <p class="eyebrow reveal">гости говорят</p>
+    <h2 class="section-title reveal">Отзывы</h2>
+
+    <div class="carousel reveal" id="carousel">
+      <div class="carousel-track" id="revTrack">
+        <blockquote class="review">
+          <p class="review-text">«Провели корпоратив на двадцать человек: арендовали весь боевой зал и PS5-зону. Кухня подавала прямо к станциям, администратор решал вопросы раньше, чем мы их озвучивали. Ушли в четыре утра — и вернёмся».</p>
+          <footer class="review-author"><strong>Игорь С.</strong><span>HR-директор, IT-компания · корпоратив</span></footer>
+        </blockquote>
+        <blockquote class="review">
+          <p class="review-text">«Буткемп команды на три дня: жили в апартаментах в соседнем подъезде, тренировались по расписанию, питание без заморочек. Ping и железо — как на буткемпах в Европе, только дешевле и ближе».</p>
+          <footer class="review-author"><strong>Дмитрий «fade» К.</strong><span>капитан CS 2-состава · буткемп</span></footer>
+        </blockquote>
+        <blockquote class="review">
+          <p class="review-text">«Отмечал тридцатилетие в кабине на шестерых. Торт принесли вовремя, музыка наша, никто не смотрит через плечо. После полуночи перебрались на диваны к PS5. Лучший формат для взрослой компании».</p>
+          <footer class="review-author"><strong>Антон М.</strong><span>продакт-менеджер · день рождения</span></footer>
+        </blockquote>
+        <blockquote class="review">
+          <p class="review-text">«Работаю допоздна и забегаю на ночную смену пару раз в месяц. Своя кабина, тишина, кофе без лимита. Утром душ — и сразу на встречу. Это не компьютерный клуб, это лаундж в полном смысле слова».</p>
+          <footer class="review-author"><strong>Марат В.</strong><span>постоянный гость · «Ночь в лаундже»</span></footer>
+        </blockquote>
+      </div>
+      <div class="carousel-controls">
+        <button type="button" class="carousel-btn" id="revPrev" aria-label="Предыдущий отзыв">←</button>
+        <div class="carousel-dots" id="revDots"></div>
+        <button type="button" class="carousel-btn" id="revNext" aria-label="Следующий отзыв">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider" aria-hidden="true"><span></span><i></i><span></span></div>
+
+<!-- ===== 9. ФИНАЛЬНЫЙ CTA ===== -->
+<section class="section cta" id="cta">
+  <div class="container cta-inner">
+    <p class="eyebrow reveal">ваш вечер уже ждёт</p>
+    <h2 class="section-title reveal">Ближайшая свободная кабина — <span class="cta-slot" id="nearestSlot">сегодня в 19:00</span></h2>
+    <p class="section-sub reveal">Оставьте телефон — администратор закрепит кабину за вами<br>и пришлёт подтверждение в течение 10 минут.</p>
+
+    <form class="cta-form reveal" id="ctaForm" novalidate>
+      <input type="text" id="ctaName" placeholder="Имя" autocomplete="name">
+      <input type="tel" id="ctaPhone" placeholder="+7 ___ ___-__-__" autocomplete="tel" required>
+      <button type="submit" class="btn btn-gold">Забронировать</button>
+      <p class="cta-alt">или позвоните: <a href="tel:+79090939400">+7 909 093-94-00</a></p>
+    </form>
+
+    <div class="cta-success reveal" id="ctaSuccess" hidden>
+      <svg viewBox="0 0 64 64" width="56" height="56" aria-hidden="true">
+        <circle cx="32" cy="32" r="29" fill="none" stroke="#C9A96E" stroke-width="1.6"/>
+        <path d="M20 33l8 8 16-17" fill="none" stroke="#C9A96E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h3>Заявка принята</h3>
+      <p id="ctaSuccessText">Администратор перезвонит в течение 10 минут и подтвердит бронь.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== 10. ФУТЕР ===== -->
+<footer class="footer" id="contacts">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <a href="#hero" class="logo footer-logo">
+        <svg class="logo-mark" viewBox="0 0 32 32" width="26" height="26" aria-hidden="true">
+          <circle cx="16" cy="16" r="14" fill="none" stroke="#C9A96E" stroke-width="1.2"/>
+          <path d="M16 2 L16 30 M2 16 L30 16" stroke="#C9A96E" stroke-width="0.8" opacity="0.7"/>
+          <ellipse cx="16" cy="16" rx="14" ry="6" fill="none" stroke="#C9A96E" stroke-width="0.8" opacity="0.7"/>
+          <circle cx="16" cy="16" r="3" fill="#C9A96E"/>
+        </svg>
+        <span class="logo-text">МЕРИДИАН<span class="logo-sub">computer lounge</span></span>
+      </a>
+      <p class="footer-note">Компьютерный лаундж для взрослых геймеров.<br>Приватность, железо и сервис без очередей.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Контакты</h4>
+      <p>Москва, ул. Тверская, 17<br>вход со двора, 3 этаж</p>
+      <p><a href="tel:+79090939400" class="footer-phone">+7 909 093-94-00</a></p>
+      <p class="footer-muted">Работаем 24/7 · вход по предварительной брони</p>
+    </div>
+    <div class="footer-col">
+      <h4>Мы на связи</h4>
+      <div class="socials">
+        <a href="#" class="social" aria-label="Telegram">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path d="M21.9 4.6L19 19.3c-.2 1-.8 1.2-1.6.8l-4.4-3.3-2.1 2.1c-.2.2-.4.4-.9.4l.3-4.5 8.2-7.4c.4-.3-.1-.5-.6-.2L7.8 13.4 3.5 12c-.9-.3-.9-.9.2-1.4l16.9-6.5c.8-.3 1.5.2 1.3.5z" fill="currentColor"/></svg>
+        </a>
+        <a href="#" class="social" aria-label="ВКонтакте">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12.7 18c-5 0-7.9-3.4-8-9.2h2.5c.1 4.3 2 6.1 3.5 6.5V8.8h2.3v3.7c1.5-.2 3-1.9 3.5-3.7h2.3c-.4 2.3-1.9 4-3 4.7 1.1.5 2.9 2 3.6 4.5h-2.6c-.5-1.7-1.9-3-3.8-3.3v3.3h-.3z" fill="currentColor"/></svg>
+        </a>
+        <a href="#" class="social" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path d="M23 8.2s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.3-1C16.6 4.6 12 4.6 12 4.6s-4.6 0-7.8.3c-.4.1-1.4.1-2.3 1-.7.7-.9 2.3-.9 2.3S.8 10.1.8 12v1.8c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.6.3 7.6.3s4.6 0 7.8-.4c.4-.1 1.4-.1 2.3-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8V12c0-1.9-.2-3.8-.2-3.8zM9.9 15.1V8.6l6.2 3.3-6.2 3.2z" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span id="year">2025</span> МЕРИДИАН · компьютерный лаундж</span>
+    <span>Демо-проект для портфолио</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
