@@ -330,4 +330,24 @@ const WORKS = [
     style: "Строгий B2B-премиум, функция под ключ",
     path: "accounting/outsource-pro/",
   },
+
+  // --- Студия звукозаписи ---
+  {
+    category: "Студия звукозаписи",
+    title: "Премиум Саунд",
+    style: "Тёмный иммерсивный, для артистов",
+    path: "recording-studio/premium-sound/",
+  },
+  {
+    category: "Студия звукозаписи",
+    title: "Первый трек",
+    style: "Яркий, дерзкий, трек за час",
+    path: "recording-studio/first-track/",
+  },
+  {
+    category: "Студия звукозаписи",
+    title: "ГОЛОС",
+    style: "Светлая подкаст-студия, аренда по часам",
+    path: "recording-studio/podcast/",
+  },
 ];

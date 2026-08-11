@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ГОЛОС — подкаст-студия с видео. Пришёл с идеей — ушёл с готовым выпуском</title>
+  <meta name="description" content="Подкаст-студия с видео: 3 камеры 4K, свет, звук, оператор, монтаж. Аренда комнаты от 1 900 ₽/час — всё включено.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== Шапка ===== -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="logo" href="#top" aria-label="ГОЛОС — подкаст-студия">
+        <span class="logo__mark">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <rect x="9" y="2" width="6" height="12" rx="3"/>
+            <path d="M5 10a7 7 0 0 0 14 0M12 17v4M8 21h8"/>
+          </svg>
+        </span>
+        <span class="logo__text">ГОЛОС<em>podcast studio</em></span>
+      </a>
+
+      <div class="live-pill" id="livePill" title="Студии на записи прямо сейчас">
+        <span class="live-pill__dot"></span>
+        <span>сейчас записывается: <b id="liveCount">2</b> <span id="liveWord">студии</span></span>
+      </div>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#booking">Бронирование</a>
+        <a href="#pricing">Тарифы</a>
+        <a href="#rooms">Комнаты</a>
+        <a href="#business">Для бизнеса</a>
+        <a href="#reviews">Отзывы</a>
+        <a class="nav__phone" href="tel:+79090939400">+7 909 093-94-00</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy reveal">
+          <div class="hero__tag">Подкаст-студия в центре города</div>
+          <h1>Пришёл с идеей — <span class="accent">ушёл с готовым выпуском</span></h1>
+          <p class="hero__sub">Подкаст-студия с видео. 3 камеры, свет, звук, монтаж. От <b>1&nbsp;900&nbsp;₽/час</b> — всё включено.</p>
+          <div class="hero__cta">
+            <a class="btn btn--coral btn--lg" href="#booking">Забронировать комнату</a>
+            <a class="btn btn--ghost btn--lg" href="tel:+79090939400">Позвонить в студию</a>
+          </div>
+          <ul class="hero__facts">
+            <li><b>250+</b> выпусков записано</li>
+            <li><b>3 дня</b> до готового файла</li>
+            <li><b>0 ₽</b> за оборудование сверху</li>
+          </ul>
+        </div>
+
+        <div class="hero__scene reveal" aria-hidden="true">
+          <div class="rec-badge">
+            <span class="rec-badge__dot"></span>REC <span class="rec-badge__time" id="recTime">00:00</span>
+          </div>
+          <!-- Светлая студия: софтбоксы, стол, два микрофона -->
+          <svg class="hero__svg" viewBox="0 0 640 460" role="img" aria-label="Светлая студия с двумя микрофонами">
+            <defs>
+              <linearGradient id="wallGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#FDFCFB"/><stop offset="1" stop-color="#F1EFEA"/>
+              </linearGradient>
+              <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#E9E6E0"/><stop offset="1" stop-color="#DCD8D0"/>
+              </linearGradient>
+              <linearGradient id="softGlow" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#FFF4D6"/><stop offset="1" stop-color="#FFE9B8"/>
+              </linearGradient>
+              <linearGradient id="tableGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#2A4A73"/><stop offset="1" stop-color="#1E3A5F"/>
+              </linearGradient>
+            </defs>
+
+            <rect x="0" y="0" width="640" height="330" fill="url(#wallGrad)"/>
+            <rect x="0" y="330" width="640" height="130" fill="url(#floorGrad)"/>
+
+            <!-- акустические панели на стене -->
+            <g fill="#EAE7E1">
+              <rect x="250" y="46" width="30" height="120" rx="6"/>
+              <rect x="288" y="46" width="30" height="120" rx="6"/>
+              <rect x="326" y="46" width="30" height="120" rx="6"/>
+              <rect x="364" y="46" width="30" height="120" rx="6"/>
+            </g>
+            <!-- неоновая надпись -->
+            <rect x="392" y="60" width="118" height="52" rx="26" fill="#fff" stroke="#E4E1DA" stroke-width="2"/>
+            <text x="451" y="93" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="800" font-size="22" fill="#1E3A5F">ON AIR</text>
+
+            <!-- левый софтбокс -->
+            <g>
+              <line x1="96" y1="130" x2="96" y2="330" stroke="#B9B4A9" stroke-width="6" stroke-linecap="round"/>
+              <path d="M60 330 h72" stroke="#B9B4A9" stroke-width="6" stroke-linecap="round"/>
+              <rect x="52" y="36" width="88" height="100" rx="10" fill="#2B3242"/>
+              <rect x="60" y="44" width="72" height="84" rx="8" fill="url(#softGlow)"/>
+            </g>
+            <!-- правый софтбокс -->
+            <g>
+              <line x1="560" y1="140" x2="560" y2="330" stroke="#B9B4A9" stroke-width="6" stroke-linecap="round"/>
+              <path d="M524 330 h72" stroke="#B9B4A9" stroke-width="6" stroke-linecap="round"/>
+              <rect x="516" y="46" width="88" height="100" rx="10" fill="#2B3242"/>
+              <rect x="524" y="54" width="72" height="84" rx="8" fill="url(#softGlow)"/>
+            </g>
+
+            <!-- стол -->
+            <rect x="150" y="300" width="340" height="18" rx="9" fill="url(#tableGrad)"/>
+            <rect x="176" y="318" width="14" height="96" rx="6" fill="#16304F"/>
+            <rect x="450" y="318" width="14" height="96" rx="6" fill="#16304F"/>
+
+            <!-- кружки -->
+            <rect x="205" y="282" width="24" height="18" rx="4" fill="#FF5C39"/>
+            <path d="M229 286 h8 a6 6 0 0 1 0 12 h-8" fill="none" stroke="#FF5C39" stroke-width="4"/>
+            <rect x="412" y="282" width="24" height="18" rx="4" fill="#fff" stroke="#E0DCD4" stroke-width="2"/>
+            <path d="M436 286 h8 a6 6 0 0 1 0 12 h-8" fill="none" stroke="#E0DCD4" stroke-width="4"/>
+
+            <!-- микрофон слева -->
+            <g class="mic">
+              <path d="M286 300 L262 232" stroke="#3A3F4B" stroke-width="7" stroke-linecap="round"/>
+              <circle cx="286" cy="300" r="9" fill="#3A3F4B"/>
+              <rect x="246" y="184" width="34" height="54" rx="17" fill="#1E3A5F"/>
+              <rect x="252" y="192" width="22" height="6" rx="3" fill="#5C7CA3"/>
+              <rect x="252" y="204" width="22" height="6" rx="3" fill="#5C7CA3"/>
+              <rect x="252" y="216" width="22" height="6" rx="3" fill="#5C7CA3"/>
+              <circle class="mic__led" cx="263" cy="229" r="3.4" fill="#FF5C39"/>
+            </g>
+            <!-- микрофон справа -->
+            <g class="mic">
+              <path d="M354 300 L378 232" stroke="#3A3F4B" stroke-width="7" stroke-linecap="round"/>
+              <circle cx="354" cy="300" r="9" fill="#3A3F4B"/>
+              <rect x="360" y="184" width="34" height="54" rx="17" fill="#171A1F"/>
+              <rect x="366" y="192" width="22" height="6" rx="3" fill="#6B7280"/>
+              <rect x="366" y="204" width="22" height="6" rx="3" fill="#6B7280"/>
+              <rect x="366" y="216" width="22" height="6" rx="3" fill="#6B7280"/>
+              <circle class="mic__led" cx="377" cy="229" r="3.4" fill="#FF5C39"/>
+            </g>
+
+            <!-- звуковая волна -->
+            <g class="wave" stroke="#FF5C39" stroke-width="4" stroke-linecap="round">
+              <line x1="300" y1="212" x2="300" y2="236"/>
+              <line x1="312" y1="204" x2="312" y2="244"/>
+              <line x1="324" y1="196" x2="324" y2="252"/>
+              <line x1="336" y1="204" x2="336" y2="244"/>
+              <line x1="348" y1="214" x2="348" y2="234"/>
+            </g>
+          </svg>
+          <div class="hero__scene-caption">Ты говоришь — мы делаем из этого контент уровня медиа</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Бронирование ===== -->
+    <section class="section booking" id="booking">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Бронирование</span>
+          <h2>Выбери комнату, дату и час</h2>
+          <p>Свободные слоты подсвечены. Цена считается сразу — без сюрпризов.</p>
+        </div>
+
+        <div class="booking__card reveal">
+          <div class="booking__steps">
+            <div class="booking__col">
+              <div class="booking__label"><span class="step-num">1</span> Комната</div>
+              <div class="room-picker" id="roomPicker" role="radiogroup" aria-label="Выбор комнаты"></div>
+            </div>
+
+            <div class="booking__col">
+              <div class="booking__label"><span class="step-num">2</span> Дата</div>
+              <div class="date-strip" id="dateStrip" role="radiogroup" aria-label="Выбор даты"></div>
+            </div>
+
+            <div class="booking__col">
+              <div class="booking__label"><span class="step-num">3</span> Слот по часам</div>
+              <div class="slot-grid" id="slotGrid" role="radiogroup" aria-label="Выбор времени"></div>
+              <div class="slot-legend">
+                <span><i class="dot dot--free"></i> свободно</span>
+                <span><i class="dot dot--busy"></i> занято</span>
+                <span><i class="dot dot--picked"></i> выбрано</span>
+              </div>
+            </div>
+
+            <div class="booking__summary">
+              <div class="booking__price-row">
+                <span id="summaryText">Выберите комнату и слот</span>
+                <span class="booking__price" id="priceOut">— ₽</span>
+              </div>
+              <button class="btn btn--coral btn--lg booking__submit" id="bookBtn" disabled>Забронировать</button>
+              <p class="booking__note">Предоплата не нужна — оплата на месте после записи.</p>
+            </div>
+          </div>
+
+          <!-- экран успеха -->
+          <div class="booking__success" id="bookSuccess" hidden>
+            <div class="success__icon">
+              <svg viewBox="0 0 52 52" width="46" height="46"><circle cx="26" cy="26" r="24" fill="none" stroke="#1E3A5F" stroke-width="3"/><path fill="none" stroke="#FF5C39" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M14 27l8 8 16-16"/></svg>
+            </div>
+            <h3>Комната забронирована!</h3>
+            <p id="successText">Видео-студия, завтра в 18:00. Мы подтвердим бронь по SMS и всё подготовим к вашему приходу.</p>
+            <button class="btn btn--ghost" id="bookAgain">Забронировать ещё слот</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Что в часе ===== -->
+    <section class="section" id="included">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Всё включено</span>
+          <h2>Что входит в один час</h2>
+          <p>Никаких доплат за технику и людей — цена в прайсе финальная.</p>
+        </div>
+        <div class="included__grid">
+          <div class="inc-card reveal">
+            <div class="inc-card__icon"><svg viewBox="0 0 32 32" fill="none" stroke="#1E3A5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="14" rx="3"/><path d="M21 14l8-4v12l-8-4"/><circle cx="12" cy="16" r="3.4"/><circle cx="12" cy="16" r="0.6" fill="#FF5C39" stroke="none"/></svg></div>
+            <h3>3 камеры 4K</h3>
+            <p>Общий план и два портрета — как в телеэфире.</p>
+          </div>
+          <div class="inc-card reveal">
+            <div class="inc-card__icon"><svg viewBox="0 0 32 32" fill="none" stroke="#1E3A5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="13" y="3" width="6" height="12" rx="3"/><path d="M8 13a8 8 0 0 0 16 0M16 21v5M11 29h10"/><circle cx="16" cy="9" r="0.6" fill="#FF5C39" stroke="none"/></svg></div>
+            <h3>Звук: петлички и пушки</h3>
+            <p>Чистый голос без шума улицы и эха комнаты.</p>
+          </div>
+          <div class="inc-card reveal">
+            <div class="inc-card__icon"><svg viewBox="0 0 32 32" fill="none" stroke="#1E3A5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="13" r="6"/><path d="M16 3v3M16 20v3M5 13h3M24 13h3M8.2 5.2l2.1 2.1M21.7 18.7l2.1 2.1M23.8 5.2l-2.1 2.1M10.3 18.7l-2.1 2.1M12 29h8"/></svg></div>
+            <h3>Свет</h3>
+            <p>Софтбоксы и контровый свет, выставленные до вас.</p>
+          </div>
+          <div class="inc-card reveal">
+            <div class="inc-card__icon"><svg viewBox="0 0 32 32" fill="none" stroke="#1E3A5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="10" r="5"/><path d="M5 27c1.5-6 6-8 11-8s9.5 2 11 8"/><path d="M24 6l4-2v12l-4-2" stroke="#FF5C39"/></svg></div>
+            <h3>Оператор</h3>
+            <p>Следит за кадром и звуком всю запись — вы просто говорите.</p>
+          </div>
+          <div class="inc-card reveal">
+            <div class="inc-card__icon"><svg viewBox="0 0 32 32" fill="none" stroke="#1E3A5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="24" height="16" rx="3"/><path d="M10 26h12M13 13l6 3-6 3z" fill="#FF5C39" stroke="#FF5C39"/></svg></div>
+            <h3>Чистовой монтаж</h3>
+            <p>Склейки, цвет, чистка звука и титры — через 3 дня готово.</p>
+          </div>
+          <div class="inc-card reveal">
+            <div class="inc-card__icon"><svg viewBox="0 0 32 32" fill="none" stroke="#1E3A5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="24" height="24" rx="6"/><circle cx="13" cy="13" r="3.4"/><path d="M4 23l7-6 6 5 5-4 6 5" stroke="#FF5C39"/></svg></div>
+            <h3>Обложка выпуска</h3>
+            <p>Кадр из записи оформим в обложку для платформ.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Тарифы ===== -->
+    <section class="section section--tint" id="pricing">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Тарифы</span>
+          <h2>Предсказуемая цена</h2>
+          <p>От разового выпуска до подкаста под ключ.</p>
+        </div>
+        <div class="pricing__grid">
+          <div class="price-card reveal">
+            <h3>Разовый час</h3>
+            <p class="price-card__desc">Попробовать формат или записать один выпуск.</p>
+            <div class="price-card__price"><span class="num">1 900</span> ₽/час</div>
+            <ul>
+              <li>Любая комната в свободный слот</li>
+              <li>Оператор и оборудование включены</li>
+              <li>Монтаж выпуска — 3 дня</li>
+            </ul>
+            <a href="#booking" class="btn btn--ghost btn--block">Выбрать слот</a>
+          </div>
+
+          <div class="price-card price-card--hot reveal">
+            <div class="price-card__flag">выгоднее всего</div>
+            <h3>Абонемент 4 часа</h3>
+            <p class="price-card__desc">Для регулярного подкаста: выпуск каждую неделю.</p>
+            <div class="price-card__price"><span class="num">6 460</span> ₽<span class="price-card__old">7 600 ₽</span></div>
+            <div class="price-card__save">−15% · 1 615 ₽/час</div>
+            <ul>
+              <li>4 часа в любые комнаты за месяц</li>
+              <li>Закреплённый слот за вами</li>
+              <li>Перенос записи за 12 часов</li>
+            </ul>
+            <a href="#booking" class="btn btn--coral btn--block">Взять абонемент</a>
+          </div>
+
+          <div class="price-card reveal">
+            <h3>Подкаст под ключ</h3>
+            <p class="price-card__desc">От идеи до публикации — ведём весь цикл сами.</p>
+            <div class="price-card__price">от <span class="num">49 000</span> ₽/мес</div>
+            <ul>
+              <li>4 выпуска в месяц с монтажом</li>
+              <li>Сценарии, обложки, описания</li>
+              <li>Публикация на все платформы</li>
+            </ul>
+            <a href="#business" class="btn btn--ghost btn--block">Обсудить проект</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Комнаты ===== -->
+    <section class="section" id="rooms">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Комнаты</span>
+          <h2>Три пространства под ваш формат</h2>
+          <p>Наведите на карточку — подсветим оборудование комнаты.</p>
+        </div>
+        <div class="rooms__grid">
+
+          <article class="room-card reveal">
+            <div class="room-card__visual room-card__visual--a">
+              <svg viewBox="0 0 320 170" aria-hidden="true">
+                <rect width="320" height="170" fill="#F1EFEA"/>
+                <g fill="#E4E1DA"><rect x="30" y="24" width="14" height="70" rx="4"/><rect x="52" y="24" width="14" height="70" rx="4"/><rect x="254" y="24" width="14" height="70" rx="4"/><rect x="276" y="24" width="14" height="70" rx="4"/></g>
+                <rect x="90" y="118" width="140" height="12" rx="6" fill="#1E3A5F"/>
+                <g class="eq eq--mic"><rect x="128" y="70" width="22" height="38" rx="11" fill="#1E3A5F"/><path d="M139 108v10" stroke="#1E3A5F" stroke-width="5"/></g>
+                <g class="eq eq--mic"><rect x="172" y="70" width="22" height="38" rx="11" fill="#171A1F"/><path d="M183 108v10" stroke="#171A1F" stroke-width="5"/></g>
+                <g class="eq eq--light"><rect x="96" y="20" width="40" height="30" rx="6" fill="#FFE9B8" stroke="#E0DCD4" stroke-width="2"/></g>
+              </svg>
+            </div>
+            <div class="room-card__body">
+              <h3>Аудио-рум</h3>
+              <p class="room-card__cap">до 2 гостей · 12 м²</p>
+              <p class="room-card__desc">Уютная комната для разговорного подкаста без видео.</p>
+              <ul class="eq-list">
+                <li>2 микрофона Shure</li>
+                <li>Петлички</li>
+                <li>Мягкий свет</li>
+                <li>Шумоизоляция</li>
+              </ul>
+              <div class="room-card__foot"><span class="room-card__price">1 900 ₽/час</span><a class="room-card__link" href="#booking" data-room="audio">Забронировать</a></div>
+            </div>
+          </article>
+
+          <article class="room-card reveal">
+            <div class="room-card__visual room-card__visual--b">
+              <svg viewBox="0 0 320 170" aria-hidden="true">
+                <rect width="320" height="170" fill="#EDEBE6"/>
+                <rect x="40" y="20" width="240" height="90" rx="10" fill="#1E3A5F"/>
+                <rect x="50" y="30" width="220" height="70" rx="6" fill="#274a77"/>
+                <g class="eq eq--cam"><rect x="146" y="118" width="28" height="18" rx="4" fill="#171A1F"/><path d="M160 136v14M148 150h24" stroke="#171A1F" stroke-width="4"/><circle cx="160" cy="127" r="5" fill="#3A3F4B"/></g>
+                <g class="eq eq--light"><rect x="66" y="36" width="34" height="24" rx="5" fill="#FFE9B8"/><rect x="220" y="36" width="34" height="24" rx="5" fill="#FFE9B8"/></g>
+                <g class="eq eq--mic"><rect x="120" y="66" width="16" height="26" rx="8" fill="#F6F5F3"/><rect x="184" y="66" width="16" height="26" rx="8" fill="#F6F5F3"/></g>
+                <circle cx="160" cy="65" r="16" fill="#FF5C39" opacity="0.9"/><path d="M156 59l12 6-12 6z" fill="#fff"/>
+              </svg>
+            </div>
+            <div class="room-card__body">
+              <h3>Видео-студия</h3>
+              <p class="room-card__cap">до 4 гостей · 28 м²</p>
+              <p class="room-card__desc">Полный цикл: три камеры 4K, кино-свет, фон на выбор.</p>
+              <ul class="eq-list">
+                <li>3 камеры 4K</li>
+                <li>4 микрофона-пушки</li>
+                <li>Софтбоксы + контровый</li>
+                <li>Декорации и фоны</li>
+              </ul>
+              <div class="room-card__foot"><span class="room-card__price">2 900 ₽/час</span><a class="room-card__link" href="#booking" data-room="video">Забронировать</a></div>
+            </div>
+          </article>
+
+          <article class="room-card reveal">
+            <div class="room-card__visual room-card__visual--c">
+              <svg viewBox="0 0 320 170" aria-hidden="true">
+                <rect width="320" height="170" fill="#171A1F"/>
+                <rect x="56" y="22" width="208" height="110" rx="10" fill="#23272F"/>
+                <g class="eq eq--screen"><rect x="70" y="34" width="86" height="86" rx="6" fill="#1E3A5F"/><rect x="164" y="34" width="86" height="86" rx="6" fill="#3A2A55"/></g>
+                <g class="eq eq--screen" stroke="#FF5C39" stroke-width="3" stroke-linecap="round"><path d="M80 100l10-14 8 8 10-18 8 10 10-16 8 12 10-6"/><path d="M174 60h66M174 74h50M174 88h58"/></g>
+                <g class="eq eq--mic"><rect x="152" y="122" width="16" height="24" rx="8" fill="#F6F5F3"/></g>
+                <g class="eq eq--light"><rect x="20" y="60" width="8" height="50" rx="4" fill="#FF5C39"/><rect x="292" y="60" width="8" height="50" rx="4" fill="#5C7CA3"/></g>
+              </svg>
+            </div>
+            <div class="room-card__body">
+              <h3>Стримерская</h3>
+              <p class="room-card__cap">1–2 ведущих · 16 м²</p>
+              <p class="room-card__desc">RGB-свет, два монитора и вывод прямого эфира на любую платформу.</p>
+              <ul class="eq-list">
+                <li>2 камеры + захват экрана</li>
+                <li>RGB-подсветка сцен</li>
+                <li>Стрим-клавиатура</li>
+                <li>Интернет 1 Гбит/с</li>
+              </ul>
+              <div class="room-card__foot"><span class="room-card__price">2 400 ₽/час</span><a class="room-card__link" href="#booking" data-room="stream">Забронировать</a></div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Для бизнеса ===== -->
+    <section class="section section--dark" id="business">
+      <div class="container business__inner">
+        <div class="business__copy reveal">
+          <span class="eyebrow eyebrow--light">Для бизнеса</span>
+          <h2>Корпоративный подкаст за неделю</h2>
+          <p>Запускаем подкаст компании под ключ: от позиционирования до продвижения. Вы приводите экспертов — мы делаем остальное.</p>
+          <ul class="business__list">
+            <li><b>День 1–2.</b> Сценарий, формат, рубрики, дизайн обложки</li>
+            <li><b>День 3–4.</b> Запись пилотных выпусков в видео-студии</li>
+            <li><b>День 5–6.</b> Монтаж, звук, титры, нарезки для соцсетей</li>
+            <li><b>День 7.</b> Публикация на платформах и план продвижения</li>
+          </ul>
+          <button class="btn btn--coral btn--lg" id="bizBtn">Получить предложение</button>
+        </div>
+        <div class="business__panel reveal" aria-hidden="true">
+          <div class="biz-stat"><span class="num">38</span><p>корпоративных подкастов запущено</p></div>
+          <div class="biz-stat"><span class="num">7</span><p>дней от брифа до первого выпуска</p></div>
+          <div class="biz-stat"><span class="num">12</span><p>платформ публикации подключим</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Как проходит запись ===== -->
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Процесс</span>
+          <h2>Как проходит запись</h2>
+        </div>
+        <ol class="steps">
+          <li class="step reveal"><span class="step__num">01</span><h3>Забронировали</h3><p>Выбрали комнату и слот онлайн — подтверждение за минуту.</p></li>
+          <li class="step reveal"><span class="step__num">02</span><h3>Пришли — всё настроено</h3><p>Свет, камеры и звук ждут вас. Проверка за 5 минут — и в эфир.</p></li>
+          <li class="step reveal"><span class="step__num">03</span><h3>Записали с оператором</h3><p>Оператор следит за кадром и звуком, вы — только за разговором.</p></li>
+          <li class="step reveal"><span class="step__num">04</span><h3>Забрали выпуск через 3 дня</h3><p>Готовое видео, аудио, обложка и нарезки приходят вам на почту.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Клиенты студии ===== -->
+    <section class="section section--tint" id="clients">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Клиенты студии</span>
+          <h2>Подкасты, записанные у нас</h2>
+        </div>
+        <div class="covers__grid">
+          <div class="cover cover--1 reveal"><span class="cover__tag">технологии</span><h3>Код и кофе</h3><p>142 выпуска</p></div>
+          <div class="cover cover--2 reveal"><span class="cover__tag">бизнес</span><h3>Точка роста</h3><p>87 выпусков</p></div>
+          <div class="cover cover--3 reveal"><span class="cover__tag">наука</span><h3>Просто о сложном</h3><p>64 выпуска</p></div>
+          <div class="cover cover--4 reveal"><span class="cover__tag">психология</span><h3>В голове</h3><p>51 выпуск</p></div>
+          <div class="cover cover--5 reveal"><span class="cover__tag">маркетинг</span><h3>Без бюджета</h3><p>39 выпусков</p></div>
+          <div class="cover cover--6 reveal"><span class="cover__tag">спорт</span><h3>На дистанции</h3><p>28 выпусков</p></div>
+          <div class="cover cover--7 reveal"><span class="cover__tag">кино</span><h3>Кадр за кадром</h3><p>22 выпуска</p></div>
+          <div class="cover cover--8 reveal"><span class="cover__tag">финансы</span><h3>Деньги спят</h3><p>17 выпусков</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Отзывы ===== -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Отзывы</span>
+          <h2>Что говорят подкастеры</h2>
+        </div>
+        <div class="carousel reveal">
+          <button class="carousel__btn carousel__btn--prev" id="revPrev" aria-label="Предыдущий отзыв">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
+          </button>
+          <div class="carousel__viewport">
+            <div class="carousel__track" id="revTrack">
+              <figure class="review">
+                <blockquote>«Пришли с одним микрофоном-записалкой в голове, ушли с видеоподкастом, который не стыдно показать рекламодателю. Оператор сам подсказал, как сесть к свету».</blockquote>
+                <figcaption><b>Антон Вербицкий</b><span>подкаст «Код и кофе»</span></figcaption>
+              </figure>
+              <figure class="review">
+                <blockquote>«Записали сезон из 12 выпусков по абонементу. Слот закрепили за нами, перенос один раз понадобился — решили за минуту в чате. Цена ни разу не "всплыла"».</blockquote>
+                <figcaption><b>Мария Климова</b><span>HR-директор, корпоративный подкаст</span></figcaption>
+              </figure>
+              <figure class="review">
+                <blockquote>«Я эксперт, а не технарь. Здесь я просто сажусь и говорю — камеры, звук и монтаж не моя забота. Через три дня получаю выпуск лучше, чем у коллег со студией в аренде за городом».</blockquote>
+                <figcaption><b>Игорь Савельев</b><span>финансовый консультант</span></figcaption>
+              </figure>
+              <figure class="review">
+                <blockquote>«Стримерская — огонь. Запустили эфир за 10 минут после входа, картинка как у топовых каналов. Теперь стримим отсюда каждую неделю».</blockquote>
+                <figcaption><b>Даша и Тимур</b><span>канал «Кадр за кадром»</span></figcaption>
+              </figure>
+            </div>
+          </div>
+          <button class="carousel__btn carousel__btn--next" id="revNext" aria-label="Следующий отзыв">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+        <div class="carousel__dots" id="revDots"></div>
+      </div>
+    </section>
+
+    <!-- ===== Финальный CTA ===== -->
+    <section class="final-cta">
+      <div class="container final-cta__inner reveal">
+        <div class="final-cta__pulse"><span class="live-pill__dot"></span> ближайшее свободное окно</div>
+        <h2>Ближайшее свободное окно — <span id="nearestSlot">сегодня в 18:00</span></h2>
+        <p>Забронируйте сейчас — и уже через три дня у вас готовый выпуск.</p>
+        <div class="final-cta__btns">
+          <a class="btn btn--coral btn--lg" href="#booking" id="nearestBtn">Занять это окно</a>
+          <a class="btn btn--light btn--lg" href="tel:+79090939400">+7 909 093-94-00</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Футер ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <a class="logo logo--footer" href="#top">
+          <span class="logo__mark"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v4M8 21h8"/></svg></span>
+          <span class="logo__text">ГОЛОС<em>podcast studio</em></span>
+        </a>
+        <p>Ты говоришь — мы делаем из этого контент уровня медиа.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Контакты</h4>
+        <p>Москва, ул. Примерная, 12, стр. 3</p>
+        <p><a href="tel:+79090939400">+7 909 093-94-00</a></p>
+        <p>Ежедневно с 10:00 до 22:00</p>
+      </div>
+      <div class="footer__col">
+        <h4>Мы в соцсетях</h4>
+        <div class="socials">
+          <a href="#top" aria-label="Telegram"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M21.9 4.6l-3.1 14.7c-.23 1.02-.84 1.27-1.7.79l-4.7-3.46-2.27 2.18c-.25.25-.46.46-.95.46l.34-4.8L18.2 7.9c.38-.34-.08-.53-.6-.19L6.8 13.6 2.16 12.15c-1-.31-1.02-1 .21-1.48l18.1-6.98c.84-.31 1.57.19 1.43.91z"/></svg></a>
+          <a href="#top" aria-label="ВКонтакте"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.9 18c-5.7 0-8.97-3.9-9.1-10.4h2.86c.1 4.77 2.2 6.79 3.86 7.2V7.6h2.7v4.11c1.64-.18 3.37-2.05 3.95-4.11h2.7c-.43 2.58-2.23 4.49-3.5 5.28 1.27.6 3.3 2.16 4.08 5.12h-2.97c-.64-2-2.24-3.55-4.44-3.76V18h-.14z"/></svg></a>
+          <a href="#top" aria-label="YouTube"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23 8s-.22-1.56-.9-2.25c-.86-.9-1.82-.9-2.26-.96C16.7 4.55 12 4.55 12 4.55s-4.7 0-7.84.24c-.44.06-1.4.06-2.26.96C1.22 6.44 1 8 1 8S.78 9.84.78 11.67v1.7C.78 15.2 1 17.04 1 17.04s.22 1.56.9 2.25c.86.9 2 .87 2.5.97 1.82.17 7.6.24 7.6.24s4.71-.01 7.85-.25c.44-.06 1.4-.06 2.26-.96.68-.69.9-2.25.9-2.25s.22-1.84.22-3.67v-1.7C23.22 9.84 23 8 23 8zM9.8 15.02V8.4l6.13 3.32-6.13 3.3z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom"><div class="container">© 2026 Студия «ГОЛОС». Демо-проект для портфолио.</div></div>
+  </footer>
+
+  <!-- ===== Модалка: предложение для бизнеса ===== -->
+  <div class="modal" id="bizModal" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="bizModalTitle">
+      <button class="modal__close" data-close aria-label="Закрыть">×</button>
+      <form class="modal__form" id="bizForm">
+        <h3 id="bizModalTitle">Получить предложение</h3>
+        <p>Расскажите о компании — за день подготовим план запуска и смету.</p>
+        <label>Ваше имя<input type="text" name="name" required placeholder="Как к вам обращаться"></label>
+        <label>Телефон<input type="tel" name="phone" required placeholder="+7 ___ ___-__-__"></label>
+        <label>О проекте<textarea name="about" rows="3" placeholder="Чем занимается компания, о чём хотите рассказывать"></textarea></label>
+        <button class="btn btn--coral btn--block btn--lg" type="submit">Отправить заявку</button>
+      </form>
+      <div class="modal__success" id="bizSuccess" hidden>
+        <div class="success__icon">
+          <svg viewBox="0 0 52 52" width="46" height="46"><circle cx="26" cy="26" r="24" fill="none" stroke="#1E3A5F" stroke-width="3"/><path fill="none" stroke="#FF5C39" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M14 27l8 8 16-16"/></svg>
+        </div>
+        <h3>Заявка отправлена!</h3>
+        <p>Спасибо! Перезвоним в течение рабочего дня и пришлём предложение.</p>
+        <button class="btn btn--ghost" data-close>Закрыть</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

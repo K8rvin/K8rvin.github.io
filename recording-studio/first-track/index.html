@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ПЕРВЫЙ ТРЕК — запиши трек за час | Студия звукозаписи</title>
+  <meta name="description" content="Молодёжная студия звукозаписи. Бит + запись + сведение = твой релиз. От 2 500 ₽, без опыта — звукарь всё сделает.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Manrope:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="logo" href="#top">ПЕРВЫЙ<em>ТРЕК</em></a>
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#quiz">Вайб-квиз</a>
+        <a href="#packages">Пакеты</a>
+        <a href="#how">Как это работает</a>
+        <a href="#beats">Биты</a>
+        <a href="#reviews">Отзывы</a>
+      </nav>
+      <a class="btn btn--lime header__phone" href="tel:+79090939400">+7 909 093-94-00</a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== 1. HERO ===== -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <div class="hero__stickers">
+            <span class="sticker sticker--lime sticker--tilt-l">без опыта можно</span>
+            <span class="sticker sticker--pink sticker--tilt-r">вокалист на час</span>
+            <span class="sticker sticker--white sticker--tilt-l2">биты в подарок</span>
+          </div>
+          <h1 class="hero__title">ЗАПИШИ <span class="hl">ТРЕК</span> ЗА&nbsp;ЧАС</h1>
+          <p class="hero__sub">Бит + запись + сведение = твой релиз. От&nbsp;2&nbsp;500&nbsp;₽, без опыта — звукарь всё сделает.</p>
+          <div class="hero__cta">
+            <a class="btn btn--violet btn--big" href="#booking">Хочу трек</a>
+            <a class="btn btn--ghost" href="#quiz">Узнать свой вайб</a>
+          </div>
+          <p class="hero__meta">приходишь с голосовыми в телефоне — уходишь с треком для стриминга</p>
+        </div>
+
+        <div class="hero__scene" aria-hidden="true">
+          <div class="hero__vinyl vinyl">
+            <div class="vinyl__label"></div>
+          </div>
+          <svg class="hero__mic" viewBox="0 0 120 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="10" width="60" height="100" rx="30" fill="#7C3AED" stroke="#141414" stroke-width="5"/>
+            <line x1="42" y1="30" x2="78" y2="30" stroke="#BEF264" stroke-width="5" stroke-linecap="round"/>
+            <line x1="42" y1="48" x2="78" y2="48" stroke="#BEF264" stroke-width="5" stroke-linecap="round"/>
+            <line x1="42" y1="66" x2="78" y2="66" stroke="#BEF264" stroke-width="5" stroke-linecap="round"/>
+            <line x1="42" y1="84" x2="78" y2="84" stroke="#BEF264" stroke-width="5" stroke-linecap="round"/>
+            <path d="M18 80 v14 a42 42 0 0 0 84 0 v-14" stroke="#141414" stroke-width="6" stroke-linecap="round" fill="none"/>
+            <line x1="60" y1="136" x2="60" y2="180" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+            <line x1="34" y1="184" x2="86" y2="184" stroke="#141414" stroke-width="8" stroke-linecap="round"/>
+          </svg>
+          <div class="hero__wave wave wave--hero">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <svg class="hero__note hero__note--1" viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="18" cy="64" rx="14" ry="10" transform="rotate(-20 18 64)" fill="#F472B6" stroke="#141414" stroke-width="4"/>
+            <path d="M30 60 V12 h22 v10 H38" fill="none" stroke="#141414" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <svg class="hero__note hero__note--2" viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="18" cy="64" rx="14" ry="10" transform="rotate(-20 18 64)" fill="#BEF264" stroke="#141414" stroke-width="4"/>
+            <path d="M30 60 V14" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+            <path d="M30 14 q20 4 18 22" fill="none" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2. MARQUEE ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <div class="marquee__group">
+          <span>ЗАПИСЬ</span><i>•</i><span>СВЕДЕНИЕ</span><i>•</i><span>БИТЫ</span><i>•</i><span>ОБУЧЕНИЕ</span><i>•</i><span>РЕЛИЗ НА ПЛОЩАДКИ</span><i>•</i>
+        </div>
+        <div class="marquee__group">
+          <span>ЗАПИСЬ</span><i>•</i><span>СВЕДЕНИЕ</span><i>•</i><span>БИТЫ</span><i>•</i><span>ОБУЧЕНИЕ</span><i>•</i><span>РЕЛИЗ НА ПЛОЩАДКИ</span><i>•</i>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 3. QUIZ ===== -->
+    <section class="quiz section" id="quiz">
+      <div class="container">
+        <h2 class="section__title reveal">Какой у тебя <span class="hl hl--pink">вайб?</span></h2>
+        <p class="section__sub reveal">3 вопроса — и скажем, какой пакет твой. Честно и без занудства.</p>
+
+        <div class="quiz__box reveal">
+          <div class="quiz__progress" id="quizProgress">
+            <span class="quiz__dot is-active"></span>
+            <span class="quiz__dot"></span>
+            <span class="quiz__dot"></span>
+          </div>
+
+          <div class="quiz__step" data-step="0">
+            <h3 class="quiz__q">Что поёшь (или читаешь)?</h3>
+            <div class="quiz__opts">
+              <button class="quiz__opt" data-q="style" data-v="rap">🎤 Рэп</button>
+              <button class="quiz__opt" data-q="style" data-v="pop">✨ Поп</button>
+              <button class="quiz__opt" data-q="style" data-v="rock">🎸 Рок</button>
+              <button class="quiz__opt" data-q="style" data-v="electro">⚡ Электроника</button>
+            </div>
+          </div>
+
+          <div class="quiz__step" data-step="1" hidden>
+            <h3 class="quiz__q">Какой у тебя опыт?</h3>
+            <div class="quiz__opts">
+              <button class="quiz__opt" data-q="exp" data-v="first">🌱 Первый раз вообще</button>
+              <button class="quiz__opt" data-q="exp" data-v="some">📱 Что-то писал(а) на телефон</button>
+              <button class="quiz__opt" data-q="exp" data-v="released">🚀 Уже выпускал(а) треки</button>
+            </div>
+          </div>
+
+          <div class="quiz__step" data-step="2" hidden>
+            <h3 class="quiz__q">Зачем тебе трек?</h3>
+            <div class="quiz__opts">
+              <button class="quiz__opt" data-q="goal" data-v="release">🏆 Релиз на площадки</button>
+              <button class="quiz__opt" data-q="goal" data-v="content">📲 Контент для соцсетей</button>
+              <button class="quiz__opt" data-q="goal" data-v="self">💜 Для себя, попробовать</button>
+            </div>
+          </div>
+
+          <div class="quiz__result" id="quizResult" hidden>
+            <div class="quiz__burst" aria-hidden="true">🔥</div>
+            <p class="quiz__result-tag" id="quizTag">твой вайб найден</p>
+            <h3 class="quiz__result-title" id="quizResultTitle"></h3>
+            <p class="quiz__result-text" id="quizResultText"></p>
+            <p class="quiz__result-price" id="quizResultPrice"></p>
+            <div class="quiz__result-actions">
+              <a class="btn btn--violet" href="#booking" id="quizBookBtn">Забронировать</a>
+              <button class="btn btn--ghost" id="quizRestart" type="button">Пройти заново</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. PACKAGES ===== -->
+    <section class="packages section" id="packages">
+      <div class="container">
+        <h2 class="section__title reveal">Пакеты <span class="hl">«трек под ключ»</span></h2>
+        <p class="section__sub reveal">Выбирай сундук. Внутри — всё, чтобы уйти с готовым треком.</p>
+
+        <div class="packages__grid">
+          <article class="pack reveal">
+            <div class="pack__chest">🎁</div>
+            <h3 class="pack__name">ДЕМКА</h3>
+            <p class="pack__price">2 500 ₽</p>
+            <ul class="pack__list">
+              <li>1 час в студии</li>
+              <li>Запись вокала</li>
+              <li>Минимальная обработка</li>
+              <li>Бит из бит-стора в подарок</li>
+            </ul>
+            <p class="pack__for">для первого раза и контента</p>
+            <a class="btn btn--ghost pack__btn" href="#booking" data-package="Демка">Взять демку</a>
+          </article>
+
+          <article class="pack pack--hot reveal">
+            <div class="pack__badge">ХИТ 🔥</div>
+            <div class="pack__chest">💎</div>
+            <h3 class="pack__name">РЕЛИЗ</h3>
+            <p class="pack__price">6 900 ₽</p>
+            <ul class="pack__list">
+              <li>2 часа в студии</li>
+              <li>Запись + сведение + мастеринг</li>
+              <li>Готовый файл для стриминга</li>
+              <li>Поможем залить на площадки</li>
+            </ul>
+            <p class="pack__for">если хочешь настоящий релиз</p>
+            <a class="btn btn--lime pack__btn" href="#booking" data-package="Релиз">Взять релиз</a>
+          </article>
+
+          <article class="pack reveal">
+            <div class="pack__chest">👑</div>
+            <h3 class="pack__name">ПРОДЮС</h3>
+            <p class="pack__price">14 900 ₽</p>
+            <ul class="pack__list">
+              <li>Аранжировка под тебя</li>
+              <li>Запись + сведение + мастеринг</li>
+              <li>Продюсер ведёт за руку</li>
+              <li>Обложка и релиз на площадках</li>
+            </ul>
+            <p class="pack__for">для тех, кто идёт до конца</p>
+            <a class="btn btn--ghost pack__btn" href="#booking" data-package="Продюс">Взять продюс</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. HOW IT WORKS ===== -->
+    <section class="how section" id="how">
+      <div class="container">
+        <h2 class="section__title reveal">Как рождается <span class="hl hl--pink">трек</span></h2>
+        <div class="how__line reveal">
+          <div class="how__step">
+            <div class="how__icon">💡</div>
+            <p class="how__num">01</p>
+            <p class="how__text">Пришёл с идеей</p>
+          </div>
+          <div class="how__step">
+            <div class="how__icon">🎧</div>
+            <p class="how__num">02</p>
+            <p class="how__text">Подобрали бит</p>
+          </div>
+          <div class="how__step">
+            <div class="how__icon">🎙️</div>
+            <p class="how__num">03</p>
+            <p class="how__text">Записали дубли</p>
+          </div>
+          <div class="how__step">
+            <div class="how__icon">🎛️</div>
+            <p class="how__num">04</p>
+            <p class="how__text">Сведение</p>
+          </div>
+          <div class="how__step">
+            <div class="how__icon">📲</div>
+            <p class="how__num">05</p>
+            <p class="how__text">Файл у тебя в телефоне</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== COUNTER STRIP ===== -->
+    <section class="stats">
+      <div class="container stats__inner reveal">
+        <div class="stat">
+          <p class="stat__num"><span class="counter" data-target="1284">0</span></p>
+          <p class="stat__label">треков записано</p>
+        </div>
+        <div class="stat">
+          <p class="stat__num"><span class="counter" data-target="97">0</span>%</p>
+          <p class="stat__label">приходят снова</p>
+        </div>
+        <div class="stat">
+          <p class="stat__num"><span class="counter" data-target="60">0</span> мин</p>
+          <p class="stat__label">и трек готов</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. BEAT STORE ===== -->
+    <section class="beats section" id="beats">
+      <div class="container">
+        <h2 class="section__title reveal">Бит-стор: <span class="hl">минуса и биты</span></h2>
+        <p class="section__sub reveal">Жми ▶ — волна оживёт. Понравился — забирай, первый бит в подарок к записи.</p>
+
+        <div class="beats__grid" id="beatsGrid">
+          <article class="beat reveal" data-beat="Ночной город">
+            <div class="beat__top">
+              <button class="beat__play" type="button" aria-label="Слушать бит «Ночной город»">▶</button>
+              <div class="beat__wave wave"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+            <h3 class="beat__name">«Ночной город»</h3>
+            <p class="beat__meta"><span class="tag tag--violet">трэп</span><span class="tag">140 bpm</span></p>
+            <button class="btn btn--ghost beat__pick" type="button">Выбрать</button>
+          </article>
+
+          <article class="beat reveal" data-beat="Лето в наушниках">
+            <div class="beat__top">
+              <button class="beat__play" type="button" aria-label="Слушать бит «Лето в наушниках»">▶</button>
+              <div class="beat__wave wave"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+            <h3 class="beat__name">«Лето в наушниках»</h3>
+            <p class="beat__meta"><span class="tag tag--pink">поп</span><span class="tag">100 bpm</span></p>
+            <button class="btn btn--ghost beat__pick" type="button">Выбрать</button>
+          </article>
+
+          <article class="beat reveal" data-beat="Гараж">
+            <div class="beat__top">
+              <button class="beat__play" type="button" aria-label="Слушать бит «Гараж»">▶</button>
+              <div class="beat__wave wave"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+            <h3 class="beat__name">«Гараж»</h3>
+            <p class="beat__meta"><span class="tag tag--lime">рок</span><span class="tag">120 bpm</span></p>
+            <button class="btn btn--ghost beat__pick" type="button">Выбрать</button>
+          </article>
+
+          <article class="beat reveal" data-beat="Неон">
+            <div class="beat__top">
+              <button class="beat__play" type="button" aria-label="Слушать бит «Неон»">▶</button>
+              <div class="beat__wave wave"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+            <h3 class="beat__name">«Неон»</h3>
+            <p class="beat__meta"><span class="tag tag--violet">синтвейв</span><span class="tag">110 bpm</span></p>
+            <button class="btn btn--ghost beat__pick" type="button">Выбрать</button>
+          </article>
+
+          <article class="beat reveal" data-beat="Пыльный луп">
+            <div class="beat__top">
+              <button class="beat__play" type="button" aria-label="Слушать бит «Пыльный луп»">▶</button>
+              <div class="beat__wave wave"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+            <h3 class="beat__name">«Пыльный луп»</h3>
+            <p class="beat__meta"><span class="tag tag--pink">лоуфай</span><span class="tag">85 bpm</span></p>
+            <button class="btn btn--ghost beat__pick" type="button">Выбрать</button>
+          </article>
+
+          <article class="beat reveal" data-beat="Ракета">
+            <div class="beat__top">
+              <button class="beat__play" type="button" aria-label="Слушать бит «Ракета»">▶</button>
+              <div class="beat__wave wave"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+            <h3 class="beat__name">«Ракета»</h3>
+            <p class="beat__meta"><span class="tag tag--lime">драм-н-бейс</span><span class="tag">174 bpm</span></p>
+            <button class="btn btn--ghost beat__pick" type="button">Выбрать</button>
+          </article>
+        </div>
+        <p class="beats__chosen" id="beatsChosen" hidden></p>
+      </div>
+    </section>
+
+    <!-- ===== 7. WORKS ===== -->
+    <section class="works section" id="works">
+      <div class="container">
+        <h2 class="section__title reveal">Записано <span class="hl hl--pink">у нас</span></h2>
+        <p class="section__sub reveal">Обложки треков, которые начались с «а давай попробую».</p>
+        <div class="works__grid">
+          <div class="work work--g1 reveal"><div class="work__wave wave"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><p class="work__name">LIL МАЯК — «Первый»</p></div>
+          <div class="work work--g2 reveal"><div class="work__wave wave"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><p class="work__name">Соня В. — «Не сплю»</p></div>
+          <div class="work work--g3 reveal"><div class="work__wave wave"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><p class="work__name">КЕДЫ — «Двор»</p></div>
+          <div class="work work--g4 reveal"><div class="work__wave wave"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><p class="work__name">Тима Блогер — «Дисс на понедельник»</p></div>
+          <div class="work work--g5 reveal"><div class="work__wave wave"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><p class="work__name">Алиса 404 — «Глюк»</p></div>
+          <div class="work work--g6 reveal"><div class="work__wave wave"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><p class="work__name">ДУЭТ «ВАЙБ» — «До утра»</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 8. REVIEWS ===== -->
+    <section class="reviews section" id="reviews">
+      <div class="container">
+        <h2 class="section__title reveal">Что пишут <span class="hl">в личку</span></h2>
+        <p class="section__sub reveal">Реальные скрины. Ну почти реальные 😄</p>
+
+        <div class="reviews__carousel reveal" id="carousel">
+          <div class="reviews__track" id="reviewsTrack">
+            <div class="chat">
+              <div class="chat__head"><span class="chat__ava">Д</span><div><p class="chat__who">Даня, 19</p><p class="chat__time">вчера, 23:41</p></div></div>
+              <div class="chat__msg chat__msg--in">бро, трек залетел 🔥🔥</div>
+              <div class="chat__msg chat__msg--in">уже 4к прослушиваний за неделю, я в шоке</div>
+              <div class="chat__msg chat__msg--out">Так держать! Ждём на следующий 💜</div>
+            </div>
+            <div class="chat">
+              <div class="chat__head"><span class="chat__ava">М</span><div><p class="chat__who">Милана, 17</p><p class="chat__time">2 дня назад</p></div></div>
+              <div class="chat__msg chat__msg--in">я боялась что буду тупить, но звукарь всё объяснил как человеку 😭</div>
+              <div class="chat__msg chat__msg--in">записали за час!!! я артистка теперь официально</div>
+              <div class="chat__msg chat__msg--out">Официально-официально 🎤</div>
+            </div>
+            <div class="chat">
+              <div class="chat__head"><span class="chat__ava">К</span><div><p class="chat__who">Кирилл, 24</p><p class="chat__time">на прошлой неделе</p></div></div>
+              <div class="chat__msg chat__msg--in">пришёл с голосовыми в телефоне, ушёл с релизом на площадках 😎</div>
+              <div class="chat__msg chat__msg--in">биты в подарок — это вообще легально?? 😂</div>
+              <div class="chat__msg chat__msg--out">Легально. Это наша фишка 🎁</div>
+            </div>
+            <div class="chat">
+              <div class="chat__head"><span class="chat__ava">А</span><div><p class="chat__who">Ася, 21</p><p class="chat__time">сегодня, 14:02</p></div></div>
+              <div class="chat__msg chat__msg--in">записала кавер для тиктока — 200к просмотров 🤯</div>
+              <div class="chat__msg chat__msg--in">забронируйте мне субботу ещё раз пожжалуйста</div>
+              <div class="chat__msg chat__msg--out">Уже держим слот на 17:00 😉</div>
+            </div>
+          </div>
+          <div class="reviews__controls">
+            <button class="reviews__arrow" id="revPrev" type="button" aria-label="Предыдущий отзыв">←</button>
+            <div class="reviews__dots" id="revDots"></div>
+            <button class="reviews__arrow" id="revNext" type="button" aria-label="Следующий отзыв">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 9. FINAL CTA + BOOKING ===== -->
+    <section class="cta section" id="booking">
+      <div class="container cta__inner">
+        <div class="cta__stickers" aria-hidden="true">
+          <span class="sticker sticker--pink sticker--tilt-r">пока не передумал</span>
+          <span class="sticker sticker--lime sticker--tilt-l">твой трек ждёт</span>
+        </div>
+        <h2 class="cta__title reveal">Ближайшая запись — <span class="hl">завтра в 17:00</span></h2>
+        <p class="cta__sub reveal">Забронируй слот — или просто позвони, обсудим.</p>
+
+        <div class="booking reveal" id="bookingWidget">
+          <form class="booking__form" id="bookingForm" novalidate>
+            <div class="booking__row">
+              <p class="booking__label">День</p>
+              <div class="booking__days" id="bookingDays">
+                <button type="button" class="chip is-active" data-day="today">Сегодня</button>
+                <button type="button" class="chip" data-day="tomorrow">Завтра</button>
+                <button type="button" class="chip" data-day="sat">Суббота</button>
+                <button type="button" class="chip" data-day="sun">Воскресенье</button>
+              </div>
+            </div>
+            <div class="booking__row">
+              <p class="booking__label">Время</p>
+              <div class="booking__slots" id="bookingSlots"></div>
+            </div>
+            <div class="booking__row booking__row--fields">
+              <label class="field">
+                <span class="field__label">Как тебя зовут</span>
+                <input class="field__input" id="bookName" type="text" name="name" placeholder="Например, Лил Маяк" autocomplete="name">
+              </label>
+              <label class="field">
+                <span class="field__label">Телефон</span>
+                <input class="field__input" id="bookPhone" type="tel" name="phone" placeholder="+7 ___ ___-__-__" autocomplete="tel">
+              </label>
+              <label class="field">
+                <span class="field__label">Пакет</span>
+                <select class="field__input" id="bookPackage" name="package">
+                  <option value="Демка">Демка — 2 500 ₽</option>
+                  <option value="Релиз" selected>Релиз — 6 900 ₽</option>
+                  <option value="Продюс">Продюс — 14 900 ₽</option>
+                  <option value="Пока не знаю">Пока не знаю</option>
+                </select>
+              </label>
+            </div>
+            <p class="booking__error" id="bookingError" hidden></p>
+            <button class="btn btn--violet btn--big booking__submit" type="submit">Забронировать слот</button>
+            <p class="booking__alt">или <a href="tel:+79090939400">позвони: +7 909 093-94-00</a></p>
+          </form>
+
+          <div class="booking__success" id="bookingSuccess" hidden>
+            <div class="booking__success-emoji">🎉</div>
+            <h3 class="booking__success-title">Слот забронирован!</h3>
+            <p class="booking__success-text" id="bookingSuccessText"></p>
+            <p class="booking__success-note">Это демо-портфолио — заявка никуда не улетела, но на настоящей студии тебе бы уже перезвонили 😉</p>
+            <button class="btn btn--ghost" id="bookingAgain" type="button">Выбрать другое время</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== 10. FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <a class="logo logo--footer" href="#top">ПЕРВЫЙ<em>ТРЕК</em></a>
+        <p class="footer__tag">твой первый трек за час</p>
+      </div>
+      <div class="footer__col">
+        <p class="footer__head">Связь</p>
+        <a class="footer__link" href="tel:+79090939400">+7 909 093-94-00</a>
+        <a class="footer__link" href="#" onclick="return false;">Telegram: @firsttrack_studio</a>
+      </div>
+      <div class="footer__col">
+        <p class="footer__head">Где мы</p>
+        <p class="footer__text">ул. Битная, 13, вход с торца</p>
+        <p class="footer__text">студия открыта до 23:00 🌙</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2026 «Первый трек». Демо-лендинг для портфолио.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
