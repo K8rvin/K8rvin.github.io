@@ -33,20 +33,45 @@ $$(".nav__link", nav).forEach((link) =>
 );
 
 /* ============================================================
-   HUD: часы, пинг, FPS
+   HUD: часы, пинг, FPS — тикают только пока hero на экране
    ============================================================ */
 const hudClock = $("#hudClock");
 const hudPing = $("#hudPing");
 const hudFps = $("#hudFps");
+const heroEl = $(".hero");
 
-setInterval(() => {
-  const d = new Date();
-  hudClock.textContent = [d.getHours(), d.getMinutes(), d.getSeconds()]
-    .map((v) => String(v).padStart(2, "0")).join(":");
-}, 1000);
+let hudTimers = [];
+function startHud() {
+  if (hudTimers.length) return;
+  hudTimers = [
+    setInterval(() => {
+      const d = new Date();
+      hudClock.textContent = [d.getHours(), d.getMinutes(), d.getSeconds()]
+        .map((v) => String(v).padStart(2, "0")).join(":");
+    }, 1000),
+    setInterval(() => { hudPing.textContent = (4 + Math.floor(Math.random() * 3)) + " MS"; }, 2400),
+    setInterval(() => { hudFps.textContent = String(236 + Math.floor(Math.random() * 9)); }, 1600),
+  ];
+}
+function stopHud() {
+  hudTimers.forEach(clearInterval);
+  hudTimers = [];
+}
+startHud();
 
-setInterval(() => { hudPing.textContent = (4 + Math.floor(Math.random() * 3)) + " MS"; }, 2400);
-setInterval(() => { hudFps.textContent = String(236 + Math.floor(Math.random() * 9)); }, 1600);
+/* ============================================================
+   Пауза бесконечных анимаций вне вьюпорта
+   ============================================================ */
+const animPauser = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    entry.target.classList.toggle("is-paused", !entry.isIntersecting);
+    if (entry.target === heroEl) entry.isIntersecting ? startHud() : stopHud();
+  });
+}, { threshold: 0 });
+[".hero", ".marquee", ".vibe-slider"].forEach((sel) => {
+  const el = $(sel);
+  if (el) animPauser.observe(el);
+});
 
 /* ============================================================
    HERO: ряды ПК с RGB-подсветкой (генерация SVG)

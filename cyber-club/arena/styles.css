@@ -48,7 +48,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .scanlines {
   position: fixed; inset: 0; z-index: 90; pointer-events: none;
   background: repeating-linear-gradient(to bottom, transparent 0 3px, rgba(0, 0, 0, .14) 3px 4px);
-  mix-blend-mode: multiply; opacity: .5;
+  opacity: .5;
 }
 .noise {
   position: fixed; inset: 0; z-index: 89; pointer-events: none; opacity: .05;
@@ -121,9 +121,10 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   background: radial-gradient(1200px 600px at 70% -10%, rgba(225, 0, 255, .08), transparent 60%), var(--bg);
 }
 .hero__scene { position: absolute; inset: 0; pointer-events: none; }
-.hero__glow { position: absolute; border-radius: 50%; filter: blur(90px); }
-.hero__glow--cyan { width: 480px; height: 480px; left: -140px; top: 12%; background: rgba(0, 229, 255, .13); animation: breathe 7s ease-in-out infinite; }
-.hero__glow--magenta { width: 520px; height: 520px; right: -160px; bottom: -10%; background: rgba(225, 0, 255, .12); animation: breathe 9s ease-in-out infinite reverse; }
+/* Свечения без filter: blur — радиальный градиент даёт ту же неоновую ауру бесплатно для композитора */
+.hero__glow { position: absolute; border-radius: 50%; will-change: transform, opacity; }
+.hero__glow--cyan { width: 560px; height: 560px; left: -160px; top: 10%; background: radial-gradient(circle, rgba(0, 229, 255, .17) 0%, rgba(0, 229, 255, .06) 45%, transparent 70%); animation: breathe 7s ease-in-out infinite; }
+.hero__glow--magenta { width: 620px; height: 620px; right: -190px; bottom: -14%; background: radial-gradient(circle, rgba(225, 0, 255, .16) 0%, rgba(225, 0, 255, .055) 45%, transparent 70%); animation: breathe 9s ease-in-out infinite reverse; }
 @keyframes breathe { 50% { transform: scale(1.18); opacity: .75; } }
 
 .hero__rows { position: absolute; inset: auto 0 0 0; width: 100%; height: min(52vh, 520px); }
@@ -148,8 +149,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   position: absolute; z-index: 5;
   display: flex; flex-direction: column; gap: 2px;
   font-family: var(--font-mono); font-size: 11px; letter-spacing: .12em; color: var(--text-dim);
-  padding: 12px 14px; border: 1px solid var(--line); background: rgba(8, 9, 13, .5);
-  backdrop-filter: blur(4px);
+  padding: 12px 14px; border: 1px solid var(--line); background: rgba(8, 9, 13, .68);
 }
 .hud::before { content: ""; position: absolute; top: -1px; left: -1px; width: 10px; height: 10px; border-top: 2px solid var(--cyan); border-left: 2px solid var(--cyan); }
 .hud::after { content: ""; position: absolute; bottom: -1px; right: -1px; width: 10px; height: 10px; border-bottom: 2px solid var(--magenta); border-right: 2px solid var(--magenta); }
@@ -227,6 +227,16 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 @keyframes revealIn {
   from { opacity: 0; transform: translateY(34px); }
   to { opacity: 1; transform: none; }
+}
+
+/* ---------- Пауза анимаций вне вьюпорта (класс ставит IntersectionObserver) ---------- */
+.hero.is-paused .pc-glow,
+.hero.is-paused .hero__glow,
+.hero.is-paused .pulse-dot,
+.hero.is-paused .hero__scroll-hint span,
+.marquee.is-paused .marquee__track,
+.vibe-slider.is-paused .vibe-glow {
+  animation-play-state: paused;
 }
 
 /* ---------- Hall map ---------- */
@@ -533,7 +543,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 /* ---------- Modals ---------- */
 .modal { position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; padding: 20px; }
 .modal[hidden] { display: none; }
-.modal__backdrop { position: absolute; inset: 0; background: rgba(4, 5, 8, .8); backdrop-filter: blur(8px); animation: fadeIn .3s; }
+.modal__backdrop { position: absolute; inset: 0; background: rgba(4, 5, 8, .86); animation: fadeIn .3s; }
 .modal__window {
   position: relative; width: min(460px, 100%); background: var(--graphite);
   border: 1px solid rgba(0, 229, 255, .35); border-radius: 14px; padding: 34px 30px;
@@ -596,7 +606,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   .nav {
     position: fixed; inset: 72px 0 auto 0; z-index: 110;
     flex-direction: column; gap: 0;
-    background: rgba(8, 9, 13, .97); backdrop-filter: blur(16px);
+    background: rgba(8, 9, 13, .97);
     border-bottom: 1px solid var(--line);
     padding: 10px 20px 18px;
     transform: translateY(-115%); transition: transform .4s var(--ease);
